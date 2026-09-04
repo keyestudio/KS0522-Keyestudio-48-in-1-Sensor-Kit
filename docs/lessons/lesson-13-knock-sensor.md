@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-12-hall-magnetic-sensor.md) | [Course index](../README.md) | [Next lesson →](lesson-14-digital-tilt-switch.md) |
-| --- | --- | --- |
-
 ![Project 13: Knock Sensor illustration](../media/cef729e5b57059bc14518b0e2fdd2817.png)
 
 ## Description
@@ -74,6 +71,3 @@ digitalWrite(Led,HIGH);
 Done wiring and powered up as above, upload well the code, then knock at the sensor, you will see both D13 led on the V4.0 board and D1 led on the sensor are turned on.
 
 ---
-
-| [← Previous lesson](lesson-12-hall-magnetic-sensor.md) | [Course index](../README.md) | [Next lesson →](lesson-14-digital-tilt-switch.md) |
-| --- | --- | --- |

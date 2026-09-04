@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-09-line-tracking-sensor.md) | [Course index](../README.md) | [Next lesson →](lesson-11-photo-interrupter.md) |
-| --- | --- | --- |
-
 ![Project 10: Infrared Obstacle Avoidance illustration](../media/54ab9db703340471fd9c3151934b85e7.png)
 
 ## Description
@@ -86,6 +83,3 @@ If we put a foam block in front of the sensor, this time when sensor detects the
 ![Example Result illustration](../media/da4468fead816d42b2ac43b29716b91f.png)
 
 ---
-
-| [← Previous lesson](lesson-09-line-tracking-sensor.md) | [Course index](../README.md) | [Next lesson →](lesson-11-photo-interrupter.md) |
-| --- | --- | --- |

@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-44-triaxial-digital-acceleration-detection.md) | [Course index](../README.md) | [Next lesson →](lesson-46-ultrasonic-ranger.md) |
-| --- | --- | --- |
-
 ![Project 45: Micro Servo illustration](../media/12c59bd3ab0733beb6ff7802305d4384.jpeg)
 
 ## Introduction
@@ -138,6 +135,3 @@ Powered up, upload well the Program B to the board, first servo will turn to the
 ![Example Result illustration](../media/de50d502cb8ed1feb5935d16584cfd63.png)
 
 ---
-
-| [← Previous lesson](lesson-44-triaxial-digital-acceleration-detection.md) | [Course index](../README.md) | [Next lesson →](lesson-46-ultrasonic-ranger.md) |
-| --- | --- | --- |

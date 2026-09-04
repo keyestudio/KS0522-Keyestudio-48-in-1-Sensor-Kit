@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-21-photocell.md) | [Course index](../README.md) | [Next lesson →](lesson-23-water-level.md) |
-| --- | --- | --- |
-
 ![Project 22: Analog Sound illustration](../media/a494bbec73f7c8ff91b3133c9d2798a7.jpeg)
 
 ## Description
@@ -59,6 +56,3 @@ Done wiring and powered up, upload well the code, then open the serial monitor a
 ![Example Result illustration](../media/4d753036151413a1bdda3c0b283b8551.png)
 
 ---
-
-| [← Previous lesson](lesson-21-photocell.md) | [Course index](../README.md) | [Next lesson →](lesson-23-water-level.md) |
-| --- | --- | --- |

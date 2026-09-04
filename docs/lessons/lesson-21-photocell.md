@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-20-analog-rotation.md) | [Course index](../README.md) | [Next lesson →](lesson-22-analog-sound.md) |
-| --- | --- | --- |
-
 ![Project 21: Photocell illustration](../media/8eed60793fd64a7c0b9a9b2a2fc1ef67.png)
 
 ## Description
@@ -69,6 +66,3 @@ Done wiring and powered up, upload well the code, then open the serial monitor, 
 ![Example Result illustration](../media/85621deb4c66d6e53697cd0ef90cb6e2.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-20-analog-rotation.md) | [Course index](../README.md) | [Next lesson →](lesson-22-analog-sound.md) |
-| --- | --- | --- |

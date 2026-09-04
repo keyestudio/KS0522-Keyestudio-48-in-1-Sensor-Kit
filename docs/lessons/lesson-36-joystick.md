@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-35-pulse-rate-monitor.md) | [Course index](../README.md) | [Next lesson →](lesson-37-rotary-encoder.md) |
-| --- | --- | --- |
-
 ![Project 36: Joystick illustration](../media/310a620a28ae6ebeeee7294bdc7a2bb0.png)
 
 ## Description
@@ -77,6 +74,3 @@ Wiring well and uploading the code, open the serial monitor on Arduino software,
 ![Example Result illustration](../media/6b3a1bd089cafce0f1db02f405ab5035.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-35-pulse-rate-monitor.md) | [Course index](../README.md) | [Next lesson →](lesson-37-rotary-encoder.md) |
-| --- | --- | --- |

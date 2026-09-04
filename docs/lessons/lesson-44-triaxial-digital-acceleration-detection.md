@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-43-optical-proximity-detection.md) | [Course index](../README.md) | [Next lesson →](lesson-45-micro-servo.md) |
-| --- | --- | --- |
-
 ![Project 44: Triaxial Digital Acceleration Detection illustration](../media/2a26949601eb888348b798711fe1151e.jpeg)
 
 ## Introduction
@@ -202,6 +199,3 @@ Done uploading the code and open the serial monitor, it will display the triaxia
 ![Example Result illustration](../media/03421d279e2e961d7b40f645b7576d73.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-43-optical-proximity-detection.md) | [Course index](../README.md) | [Next lesson →](lesson-45-micro-servo.md) |
-| --- | --- | --- |

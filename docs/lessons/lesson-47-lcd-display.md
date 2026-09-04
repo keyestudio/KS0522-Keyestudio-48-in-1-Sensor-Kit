@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-46-ultrasonic-ranger.md) | [Course index](../README.md) | [Next lesson →](lesson-48-dot-matrix.md) |
-| --- | --- | --- |
-
 ![Project 47: LCD Display illustration](../media/1aa1fd551e180d013633c1fe857c24a6.jpeg)
 
 ## Description
@@ -121,6 +118,3 @@ If using the 8-bit connection, you will see other characters are displayed on th
 ![Example Result illustration](../media/61002a13397f8041574b375b0032da26.png)
 
 ---
-
-| [← Previous lesson](lesson-46-ultrasonic-ranger.md) | [Course index](../README.md) | [Next lesson →](lesson-48-dot-matrix.md) |
-| --- | --- | --- |

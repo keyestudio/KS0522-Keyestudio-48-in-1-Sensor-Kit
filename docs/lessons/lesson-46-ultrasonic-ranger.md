@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-45-micro-servo.md) | [Course index](../README.md) | [Next lesson →](lesson-47-lcd-display.md) |
-| --- | --- | --- |
-
 ![Project 46: Ultrasonic Ranger illustration](../media/c170155a5fb03abdc10866e25e3670b2.jpeg)
 
 ## Description
@@ -113,6 +110,3 @@ After upload well the code to V4.0 board, then open the serial monitor. When pla
 ![Example Result illustration](../media/dcd49cc72e7a9f993083af7625d240db.png)
 
 ---
-
-| [← Previous lesson](lesson-45-micro-servo.md) | [Course index](../README.md) | [Next lesson →](lesson-47-lcd-display.md) |
-| --- | --- | --- |

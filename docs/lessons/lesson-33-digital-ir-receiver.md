@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-32-ultraviolet-light.md) | [Course index](../README.md) | [Next lesson →](lesson-34-digital-ir-transmitter.md) |
-| --- | --- | --- |
-
 ![Project 33: Digital IR Receiver illustration](../media/f64f21b6ca681f928c3318bd2d33a017.png)
 
 ## Description
@@ -84,6 +81,3 @@ Done wiring and uploading the code, then control the IR receiver module by an in
 ![Example Result illustration](../media/4bb52e2957e3aaeace252021e7084c95.png)
 
 ---
-
-| [← Previous lesson](lesson-32-ultraviolet-light.md) | [Course index](../README.md) | [Next lesson →](lesson-34-digital-ir-transmitter.md) |
-| --- | --- | --- |

@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-38-single-relay.md) | [Course index](../README.md) | [Next lesson →](lesson-40-temperature-and-humidity-display.md) |
-| --- | --- | --- |
-
 ![Project 39: Linear Temperature illustration](../media/9a9b328cb85401dce3932f047f0979e0.png)
 
 ## Introduction
@@ -82,6 +79,3 @@ You will see the current temperature value shown below. The value may be slight 
 ![Example Result illustration](../media/8331a0416c8006161b3227e170a3b033.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-38-single-relay.md) | [Course index](../README.md) | [Next lesson →](lesson-40-temperature-and-humidity-display.md) |
-| --- | --- | --- |

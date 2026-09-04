@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-05-buzzer-beeps.md) | [Course index](../README.md) | [Next lesson →](lesson-07-digital-push-button.md) |
-| --- | --- | --- |
-
 ![Project 6: Passive Buzzer illustration](../media/1bd2e3afebf5a0d3712fe42092b0a1b4.png)
 
 ## Description
@@ -80,6 +77,3 @@ Done uploading the code to board, the buzzer will make a sound.
 ![Example Result illustration](../media/9b29eccd437694e479a836b7da66d500.png)
 
 ---
-
-| [← Previous lesson](lesson-05-buzzer-beeps.md) | [Course index](../README.md) | [Next lesson →](lesson-07-digital-push-button.md) |
-| --- | --- | --- |

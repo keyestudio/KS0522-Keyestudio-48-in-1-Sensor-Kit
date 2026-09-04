@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-02-rgb-led.md) | [Course index](../README.md) | [Next lesson →](lesson-04-traffic-light.md) |
-| --- | --- | --- |
-
 ![Project 3: 3W LED illustration](../media/0b1110577bfde7df3b6aec41d5b21b28.png)
 
 ## Description
@@ -89,6 +86,3 @@ Done wiring and powered up, upload well the code, both D13 led and the led on th
 ![Example Result illustration](../media/edeb5b089be0300c719652badfd269e7.png)
 
 ---
-
-| [← Previous lesson](lesson-02-rgb-led.md) | [Course index](../README.md) | [Next lesson →](lesson-04-traffic-light.md) |
-| --- | --- | --- |

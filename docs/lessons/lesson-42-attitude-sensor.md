@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-41-magical-light-cup.md) | [Course index](../README.md) | [Next lesson →](lesson-43-optical-proximity-detection.md) |
-| --- | --- | --- |
-
 ![Project 42: Attitude Sensor illustration](../media/8eb8d16c5e76e50a6609678130a9ee29.jpeg)
 
 ## Introduction
@@ -211,6 +208,3 @@ After uploading the code, open the serial monitor and set the baud rate to 9600.
 ![Example Result illustration](../media/935c7035ef43f54ca65eaa49bbaf5e98.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-41-magical-light-cup.md) | [Course index](../README.md) | [Next lesson →](lesson-43-optical-proximity-detection.md) |
-| --- | --- | --- |

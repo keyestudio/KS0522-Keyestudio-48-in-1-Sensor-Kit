@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-18-pir-motion-sensor.md) | [Course index](../README.md) | [Next lesson →](lesson-20-analog-rotation.md) |
-| --- | --- | --- |
-
 ![Project 19: Analog Temperature illustration](../media/8269d6536e383bcc592da1ae98bc3661.png)
 
 ## Description
@@ -96,6 +93,3 @@ Done wiring and powered up as the above figure, upload well the code to the boar
 ![Example Result illustration](../media/005b4c639460eba8158f99637f03686b.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-18-pir-motion-sensor.md) | [Course index](../README.md) | [Next lesson →](lesson-20-analog-rotation.md) |
-| --- | --- | --- |

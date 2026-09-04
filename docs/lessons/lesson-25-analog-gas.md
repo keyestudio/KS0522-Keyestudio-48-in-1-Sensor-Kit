@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-24-soil-moisture.md) | [Course index](../README.md) | [Next lesson →](lesson-26-analog-alcohol.md) |
-| --- | --- | --- |
-
 ![Project 25: Analog Gas illustration](../media/36f00d2a934c497f390b49c4113c7c04.png)
 
 ## Description
@@ -63,6 +60,3 @@ Done wiring and powered up, upload well the code, then open the serial monitor a
 ![Example Result illustration](../media/cbf777feb6231d76347bc632f87d0e8e.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-24-soil-moisture.md) | [Course index](../README.md) | [Next lesson →](lesson-26-analog-alcohol.md) |
-| --- | --- | --- |

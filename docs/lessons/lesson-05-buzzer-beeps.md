@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-04-traffic-light.md) | [Course index](../README.md) | [Next lesson →](lesson-06-passive-buzzer.md) |
-| --- | --- | --- |
-
 ![Project 5: Buzzer Beeps illustration](../media/88c349b0602dfa2e166faabc13cb2f20.png)
 
 ## Description
@@ -60,6 +57,3 @@ Done uploading the code to board, the buzzer will make a sound.
 ![Example Result illustration](../media/109e3287bff29d1d1fb88369d6705ad3.png)
 
 ---
-
-| [← Previous lesson](lesson-04-traffic-light.md) | [Course index](../README.md) | [Next lesson →](lesson-06-passive-buzzer.md) |
-| --- | --- | --- |

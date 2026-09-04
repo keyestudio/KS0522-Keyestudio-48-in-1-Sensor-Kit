@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-28-analog-ceramic-vibration.md) | [Course index](../README.md) | [Next lesson →](lesson-30-pressure-detection.md) |
-| --- | --- | --- |
-
 ![Project 29: Voltage Detection illustration](../media/41967398a781944fd64ebd49a9c746fa.jpeg)
 
 ## Description
@@ -92,6 +89,3 @@ Done as the above wiring, compile and upload the code, powered-on, then open the
 ![Example Result illustration](../media/af699a83a891ea99d193d5b53bd27fa1.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-28-analog-ceramic-vibration.md) | [Course index](../README.md) | [Next lesson →](lesson-30-pressure-detection.md) |
-| --- | --- | --- |

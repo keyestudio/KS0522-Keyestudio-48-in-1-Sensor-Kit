@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-34-digital-ir-transmitter.md) | [Course index](../README.md) | [Next lesson →](lesson-36-joystick.md) |
-| --- | --- | --- |
-
 ![Project 35: Pulse Rate Monitor illustration](../media/0ec440cd93e00e956357ece654ce2a9c.png)
 
 ## Description
@@ -74,6 +71,3 @@ You can copy and paste the data to the excel, finally it will generate the corre
 ![Example Result illustration](../media/215ab9a6174f9798a291bacb907eaf89.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-34-digital-ir-transmitter.md) | [Course index](../README.md) | [Next lesson →](lesson-36-joystick.md) |
-| --- | --- | --- |

@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-47-lcd-display.md) | [Course index](../README.md) | [Course resources →](../README.md) |
-| --- | --- | --- |
-
 ![Project 48: Dot Matrix illustration](../media/10e87958bbef207075643ae4f5481457.jpeg)
 
 ## Introduction
@@ -148,6 +145,3 @@ The first converted number is controlling the first row of LED on and off, and s
 ![Settings Method illustration](../media/3ba4bb34ddf3ef182c5aa5bc7a309605.png)
 
 ---
-
-| [← Previous lesson](lesson-47-lcd-display.md) | [Course index](../README.md) | [Course resources →](../README.md) |
-| --- | --- | --- |

@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Course setup](../00-course-overview-and-setup.md) | [Course index](../README.md) | [Next lesson →](lesson-02-rgb-led.md) |
-| --- | --- | --- |
-
 ![Project 1: White LED illustration](../media/6819f1c2047a7bb2b58e9cf0d7d3a617.jpeg)
 
 ## Description
@@ -69,5 +66,3 @@ Done wiring and powered up, upload well the code, you will see the LED module em
 
 ---
 
-| [← Course setup](../00-course-overview-and-setup.md) | [Course index](../README.md) | [Next lesson →](lesson-02-rgb-led.md) |
-| --- | --- | --- |

@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-07-digital-push-button.md) | [Course index](../README.md) | [Next lesson →](lesson-09-line-tracking-sensor.md) |
-| --- | --- | --- |
-
 ![Project 8: Collision Flash illustration](../media/29c4641406064a4f1df5d59aefbca480.png)
 
 ## Description
@@ -76,6 +73,3 @@ Wire it up well and then upload the code to the board.
 When the object crashes the switch of sensor, both the led on the sensor and led 13 on the board are turned on.
 
 ---
-
-| [← Previous lesson](lesson-07-digital-push-button.md) | [Course index](../README.md) | [Next lesson →](lesson-09-line-tracking-sensor.md) |
-| --- | --- | --- |

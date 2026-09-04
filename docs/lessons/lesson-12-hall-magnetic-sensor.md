@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-11-photo-interrupter.md) | [Course index](../README.md) | [Next lesson →](lesson-13-knock-sensor.md) |
-| --- | --- | --- |
-
 ![Project 12: Hall Magnetic Sensor illustration](../media/c3d4d513b72ac04fad7e4f3015bfb1ed.png)
 
 ## Description
@@ -79,6 +76,3 @@ But if put a magnetic ball close to the hall module, you will see the D13 indica
 ![Example Result illustration](../media/c3c4044f2205dd1ff162ef7e211d2b2c.png)
 
 ---
-
-| [← Previous lesson](lesson-11-photo-interrupter.md) | [Course index](../README.md) | [Next lesson →](lesson-13-knock-sensor.md) |
-| --- | --- | --- |

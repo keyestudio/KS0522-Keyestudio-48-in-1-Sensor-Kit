@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-25-analog-gas.md) | [Course index](../README.md) | [Next lesson →](lesson-27-steam-sensor.md) |
-| --- | --- | --- |
-
 ![Project 26: Analog Alcohol illustration](../media/288162cf02f2968eda57b437292a42dd.png)
 
 ## Description
@@ -64,6 +61,3 @@ Done wiring and powered up, upload well the code, then open the serial monitor a
 ![Example Result illustration](../media/97565d8ba7691b30a7aa96efc6c7728b.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-25-analog-gas.md) | [Course index](../README.md) | [Next lesson →](lesson-27-steam-sensor.md) |
-| --- | --- | --- |

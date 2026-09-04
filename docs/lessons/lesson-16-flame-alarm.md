@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-15-capacitive-touch.md) | [Course index](../README.md) | [Next lesson →](lesson-17-reed-switch.md) |
-| --- | --- | --- |
-
 ![Project 16: Flame Alarm illustration](../media/35c5a2593df5d4e76865158e790feada.png)
 
 ## Description
@@ -88,6 +85,3 @@ Then if you put a lighter close to the sensor, when the sensor detects the flame
 ![Example Result illustration](../media/2ee5a36673d2cbeb934ca2af29dab607.png)
 
 ---
-
-| [← Previous lesson](lesson-15-capacitive-touch.md) | [Course index](../README.md) | [Next lesson →](lesson-17-reed-switch.md) |
-| --- | --- | --- |

@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-22-analog-sound.md) | [Course index](../README.md) | [Next lesson →](lesson-24-soil-moisture.md) |
-| --- | --- | --- |
-
 ![Project 23: Water Level illustration](../media/23f40997b8634be91aed7311eca2dfbb.jpeg)
 
 ## Description
@@ -100,6 +97,3 @@ Furthermore, you can set an alarm value and connect a buzzer to make an alarm.
 The LED can’t light up when water level haven’t reach alarm value. If water level reaches the alarm value, LED will be turned on and buzzer will sound to make an alarm.
 
 ---
-
-| [← Previous lesson](lesson-22-analog-sound.md) | [Course index](../README.md) | [Next lesson →](lesson-24-soil-moisture.md) |
-| --- | --- | --- |

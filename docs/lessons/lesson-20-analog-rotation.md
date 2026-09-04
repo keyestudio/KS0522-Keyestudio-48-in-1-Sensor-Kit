@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-19-analog-temperature.md) | [Course index](../README.md) | [Next lesson →](lesson-21-photocell.md) |
-| --- | --- | --- |
-
 ![Project 20: Analog Rotation illustration](../media/7a7fffa705c4a50e87455e6d378eb837.png)
 
 ## Description
@@ -59,6 +56,3 @@ Done wiring and powered up, upload well the code, then open the serial monitor a
 ![Example Result illustration](../media/bc7b15c3245b7cfd91b0ef4b0aeb8e7e.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-19-analog-temperature.md) | [Course index](../README.md) | [Next lesson →](lesson-21-photocell.md) |
-| --- | --- | --- |

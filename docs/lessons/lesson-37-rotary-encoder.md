@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-36-joystick.md) | [Course index](../README.md) | [Next lesson →](lesson-38-single-relay.md) |
-| --- | --- | --- |
-
 ![Project 37: Rotary Encoder illustration](../media/df622003846058dd3cf442518f655af2.png)
 
 ## Introduction
@@ -104,6 +101,3 @@ If you continue to rotate the encoder module, one LED module becomes off while a
 ![Example Result illustration](../media/4c1455602dc8ab6d61f5ab2e2d5dd67c.png)
 
 ---
-
-| [← Previous lesson](lesson-36-joystick.md) | [Course index](../README.md) | [Next lesson →](lesson-38-single-relay.md) |
-| --- | --- | --- |

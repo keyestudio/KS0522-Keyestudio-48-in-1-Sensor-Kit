@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-13-knock-sensor.md) | [Course index](../README.md) | [Next lesson →](lesson-15-capacitive-touch.md) |
-| --- | --- | --- |
-
 ![Project 14: Digital Tilt Switch illustration](../media/45a40bdcc098c1c4e0efb8246447173c.png)
 
 ## Description
@@ -68,6 +65,3 @@ Then tilt the sensor, you will see the led on the sensor is turned on. Shown as 
 ![Example Result illustration](../media/6c4a144c26675a100bffa806c532736c.png)
 
 ---
-
-| [← Previous lesson](lesson-13-knock-sensor.md) | [Course index](../README.md) | [Next lesson →](lesson-15-capacitive-touch.md) |
-| --- | --- | --- |

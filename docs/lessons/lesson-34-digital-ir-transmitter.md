@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-33-digital-ir-receiver.md) | [Course index](../README.md) | [Next lesson →](lesson-35-pulse-rate-monitor.md) |
-| --- | --- | --- |
-
 ![Project 34: Digital IR Transmitter illustration](../media/9fe876a8c857650226cbe2f8a9bead59.png)
 
 ## Description
@@ -150,6 +147,3 @@ When IR Receiver module receives the infrared signal from IR Transmitter, D1 led
 ![Result illustration](../media/4d73a7178e89de72df7e82a147778ae9.png)
 
 ---
-
-| [← Previous lesson](lesson-33-digital-ir-receiver.md) | [Course index](../README.md) | [Next lesson →](lesson-35-pulse-rate-monitor.md) |
-| --- | --- | --- |

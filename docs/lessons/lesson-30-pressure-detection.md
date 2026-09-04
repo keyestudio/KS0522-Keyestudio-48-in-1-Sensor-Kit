@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-29-voltage-detection.md) | [Course index](../README.md) | [Next lesson →](lesson-31-ambient-light.md) |
-| --- | --- | --- |
-
 ![Project 30: Pressure Detection illustration](../media/313f11bf4a7f52ac903c78976fe1e633.jpeg)
 
 ## Description
@@ -90,6 +87,3 @@ Then, press the sensor with your hand tightly, the value shown on the monitor is
 ![Example Result illustration](../media/e055d2749b14c62b92c22496a3d1f96a.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-29-voltage-detection.md) | [Course index](../README.md) | [Next lesson →](lesson-31-ambient-light.md) |
-| --- | --- | --- |

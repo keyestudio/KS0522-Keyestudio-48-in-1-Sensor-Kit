@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-06-passive-buzzer.md) | [Course index](../README.md) | [Next lesson →](lesson-08-collision-flash.md) |
-| --- | --- | --- |
-
 ![Project 7: Digital Push Button illustration](../media/a8707354e54ea51bb92584f791ae79e5.png)
 
 ## Description
@@ -90,6 +87,3 @@ When you push the digital button, the Led 13 on V4.0 board will be on. When rele
 ![Example Result illustration](../media/ac03d3fa1c0f5de7dae18c6e64406e60.png)
 
 ---
-
-| [← Previous lesson](lesson-06-passive-buzzer.md) | [Course index](../README.md) | [Next lesson →](lesson-08-collision-flash.md) |
-| --- | --- | --- |

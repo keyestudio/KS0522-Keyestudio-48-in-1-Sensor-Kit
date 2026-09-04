@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-31-ambient-light.md) | [Course index](../README.md) | [Next lesson →](lesson-33-digital-ir-receiver.md) |
-| --- | --- | --- |
-
 ![Project 32: Ultraviolet Light illustration](../media/15613ff0e8f059a9034e923ab5c2be24.jpeg)
 
 ## Description
@@ -93,6 +90,3 @@ If shine UV light to the sensor, the data on serial monitor is changing shown as
 ![Example Result illustration](../media/610d2325395cd3b44ce3c18e05595518.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-31-ambient-light.md) | [Course index](../README.md) | [Next lesson →](lesson-33-digital-ir-receiver.md) |
-| --- | --- | --- |

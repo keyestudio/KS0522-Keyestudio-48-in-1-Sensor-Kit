@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-08-collision-flash.md) | [Course index](../README.md) | [Next lesson →](lesson-10-infrared-obstacle-avoidance.md) |
-| --- | --- | --- |
-
 ![Project 9: Line -tracking Sensor illustration](../media/c476ef922ab6a8d31cb68f3ab3fa2ced.png)
 
 ## Description
@@ -68,6 +65,3 @@ void loop()
 Done uploading the code to board, open the serial monitor and set the baud rate as 9600, then you can see the data from the sensor.
 
 ---
-
-| [← Previous lesson](lesson-08-collision-flash.md) | [Course index](../README.md) | [Next lesson →](lesson-10-infrared-obstacle-avoidance.md) |
-| --- | --- | --- |

@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-42-attitude-sensor.md) | [Course index](../README.md) | [Next lesson →](lesson-44-triaxial-digital-acceleration-detection.md) |
-| --- | --- | --- |
-
 ![Project 43: Optical Proximity Detection illustration](../media/4085d5742012b8647b52c537b82974ff.jpeg)
 
 ## Introduction
@@ -225,6 +222,3 @@ Tested by Arduino-1.8.2 version software, then open serial monitor, you can see 
 ![Example Result illustration](../media/607fe1d8c324c14c06492d96d60eb0ca.png)
 
 ---
-
-| [← Previous lesson](lesson-42-attitude-sensor.md) | [Course index](../README.md) | [Next lesson →](lesson-44-triaxial-digital-acceleration-detection.md) |
-| --- | --- | --- |

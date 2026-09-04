@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-14-digital-tilt-switch.md) | [Course index](../README.md) | [Next lesson →](lesson-16-flame-alarm.md) |
-| --- | --- | --- |
-
 ![Project 15: Capacitive Touch illustration](../media/bceabc7d4302bd41ae380e179a281314.png)
 
 ## Description
@@ -68,6 +65,3 @@ Done wiring and powered up, upload well the code, then touch the sensor with you
 ![Example Result illustration](../media/31a751feed0f21236458b93eed14af9f.png)
 
 ---
-
-| [← Previous lesson](lesson-14-digital-tilt-switch.md) | [Course index](../README.md) | [Next lesson →](lesson-16-flame-alarm.md) |
-| --- | --- | --- |

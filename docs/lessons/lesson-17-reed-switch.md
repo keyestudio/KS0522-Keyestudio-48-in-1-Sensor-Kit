@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-16-flame-alarm.md) | [Course index](../README.md) | [Next lesson →](lesson-18-pir-motion-sensor.md) |
-| --- | --- | --- |
-
 ![Project 17: Reed Switch illustration](../media/e580999515f6522eb603ea723bf62173.png)
 
 ## Description
@@ -92,6 +89,3 @@ Then we put some magnetic balls close to the sensor. When the sensor detects the
 ![Example Result illustration](../media/ecbec914abc799076513f5c61149b004.png)
 
 ---
-
-| [← Previous lesson](lesson-16-flame-alarm.md) | [Course index](../README.md) | [Next lesson →](lesson-18-pir-motion-sensor.md) |
-| --- | --- | --- |

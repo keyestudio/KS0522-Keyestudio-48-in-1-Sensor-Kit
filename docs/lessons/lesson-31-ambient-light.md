@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-30-pressure-detection.md) | [Course index](../README.md) | [Next lesson →](lesson-32-ultraviolet-light.md) |
-| --- | --- | --- |
-
 ![Project 31: Ambient Light illustration](../media/3eda1bbb84995dc2195a0406f1b0c196.jpeg)
 
 ## Description
@@ -67,6 +64,3 @@ Then cover the sensor with your hand or a paper, the light becomes weak, finally
 ![Example Result illustration](../media/846828c9af69a9823ca7218157cc181e.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-30-pressure-detection.md) | [Course index](../README.md) | [Next lesson →](lesson-32-ultraviolet-light.md) |
-| --- | --- | --- |

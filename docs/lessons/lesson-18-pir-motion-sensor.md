@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-17-reed-switch.md) | [Course index](../README.md) | [Next lesson →](lesson-19-analog-temperature.md) |
-| --- | --- | --- |
-
 ![Project 18: PIR Motion Sensor illustration](../media/ce608db25742f19fdf6eceda756a59d9.png)
 
 ## Description
@@ -97,6 +94,3 @@ If no detecting the movement, D13 indicator on V4.0 board will be off, and "No o
 ![Example Result illustration](../media/9b6209c8ce5b4be73f8378d21b639d28.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-17-reed-switch.md) | [Course index](../README.md) | [Next lesson →](lesson-19-analog-temperature.md) |
-| --- | --- | --- |

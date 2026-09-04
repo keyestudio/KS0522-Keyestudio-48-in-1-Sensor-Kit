@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-10-infrared-obstacle-avoidance.md) | [Course index](../README.md) | [Next lesson →](lesson-12-hall-magnetic-sensor.md) |
-| --- | --- | --- |
-
 ![Project 11: Photo Interrupter illustration](../media/8b0f7b3ba3e139eeaeba9bb7f86a946a.png)
 
 ## Description
@@ -81,6 +78,3 @@ When pick up a paper on groove joint of module, the signal is interrupted, and l
 ![Example Result illustration](../media/3ecb941fafc71843148e0e19b6ceda57.png)
 
 ---
-
-| [← Previous lesson](lesson-10-infrared-obstacle-avoidance.md) | [Course index](../README.md) | [Next lesson →](lesson-12-hall-magnetic-sensor.md) |
-| --- | --- | --- |

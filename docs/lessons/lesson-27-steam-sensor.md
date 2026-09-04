@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-26-analog-alcohol.md) | [Course index](../README.md) | [Next lesson →](lesson-28-analog-ceramic-vibration.md) |
-| --- | --- | --- |
-
 ![Project 27: Steam Sensor illustration](../media/d19ac9430f793cdbedde891ee92671e7.jpeg)
 
 ## Description
@@ -80,6 +77,3 @@ Due to the limited condition, you can put a drop of water on the sensor, the moi
 ![Example Result illustration](../media/80e9b3e19db4bec337f3254545a58e9e.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-26-analog-alcohol.md) | [Course index](../README.md) | [Next lesson →](lesson-28-analog-ceramic-vibration.md) |
-| --- | --- | --- |

@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-23-water-level.md) | [Course index](../README.md) | [Next lesson →](lesson-25-analog-gas.md) |
-| --- | --- | --- |
-
 ![Project 24: Soil Moisture illustration](../media/d1041a8e2cbfca69c5d8bbd9ba7d4f92.jpeg)
 
 ## Description
@@ -77,6 +74,3 @@ Done wiring and powered up, upload well the code, then open the serial monitor a
 ![Example Result illustration](../media/cb240ae7199f877c17b9ac3a4d9d6ced.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-23-water-level.md) | [Course index](../README.md) | [Next lesson →](lesson-25-analog-gas.md) |
-| --- | --- | --- |

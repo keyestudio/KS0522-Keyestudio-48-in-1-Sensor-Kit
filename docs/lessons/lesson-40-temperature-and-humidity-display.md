@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-39-linear-temperature.md) | [Course index](../README.md) | [Next lesson →](lesson-41-magical-light-cup.md) |
-| --- | --- | --- |
-
 ![Project 40: Temperature and Humidity Display illustration](../media/e164737761b08de30da9358b47511d62.png)
 
 ## Introduction
@@ -102,6 +99,3 @@ Then open the serial monitor and set the baud rate as 9600, finally you will see
 ![Example Result illustration](../media/dffe8c9a0b348f7f4f12cbfe95c090f3.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-39-linear-temperature.md) | [Course index](../README.md) | [Next lesson →](lesson-41-magical-light-cup.md) |
-| --- | --- | --- |

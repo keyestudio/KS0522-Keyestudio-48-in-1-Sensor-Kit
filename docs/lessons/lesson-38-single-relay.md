@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-37-rotary-encoder.md) | [Course index](../README.md) | [Next lesson →](lesson-39-linear-temperature.md) |
-| --- | --- | --- |
-
 ![Project 38: Single Relay illustration](../media/e0b4485cfd4ccebd974d81f19239dde3.png)
 
 ## Introduction
@@ -90,6 +87,3 @@ Wire it up well, powered up, then upload the above code to the board, you will s
 When the relay is turned on, external LED is on. If relay is turned off, external LED is off.
 
 ---
-
-| [← Previous lesson](lesson-37-rotary-encoder.md) | [Course index](../README.md) | [Next lesson →](lesson-39-linear-temperature.md) |
-| --- | --- | --- |

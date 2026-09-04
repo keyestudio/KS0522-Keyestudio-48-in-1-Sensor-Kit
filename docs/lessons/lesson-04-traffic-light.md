@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-03-3w-led.md) | [Course index](../README.md) | [Next lesson →](lesson-05-buzzer-beeps.md) |
-| --- | --- | --- |
-
 ![Project 4: Traffic Light illustration](../media/a20653cffac8985dc4919614540ac367.jpeg)
 
 ## Description
@@ -82,6 +79,3 @@ Done uploading the code, powered up, three LEDs on the module will automatically
 ![Example Result illustration](../media/6dd1ff8660b0a62795bd53fc6b6ff591.png)
 
 ---
-
-| [← Previous lesson](lesson-03-3w-led.md) | [Course index](../README.md) | [Next lesson →](lesson-05-buzzer-beeps.md) |
-| --- | --- | --- |

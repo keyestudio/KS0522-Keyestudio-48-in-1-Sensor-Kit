@@ -17,16 +17,39 @@
 
 # -- Project information -----------------------------------------------------
 
-project = '48 in 1 Sensor Kit'
-copyright = 'keyestudio WiKi'
-author = 'keyestudio'
+project = 'keyestudio WiKi'
+copyright = 'keyestudio , WiKi'
+author = 'keyestudio WiKi'
+copyright = 'Shenzhen keyestudio Technology Co., Ltd'
 
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ["myst_parser"]
+extensions = ['myst_parser','sphinx_copybutton']
+
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.txt': 'markdown',
+    '.md': 'markdown',
+}
+
+myst_enable_extensions = [
+    "amsmath",
+    "attrs_inline",
+    "colon_fence",
+    "deflist",
+    "dollarmath",
+    "fieldlist",
+    "html_admonition",
+    "html_image",
+    "replacements",
+    "smartquotes",
+    "strikethrough",
+    "substitution",
+    "tasklist",
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

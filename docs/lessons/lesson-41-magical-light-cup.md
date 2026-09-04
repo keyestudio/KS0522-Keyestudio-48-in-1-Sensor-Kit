@@ -3,9 +3,6 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-40-temperature-and-humidity-display.md) | [Course index](../README.md) | [Next lesson →](lesson-42-attitude-sensor.md) |
-| --- | --- | --- |
-
 ![Project 41: Magical Light Cup illustration](../media/dc3acff676b2611f440643f1657b42e7.png)
 
 ## Introduction
@@ -87,6 +84,3 @@ Wire it up as the above diagram and upload well the code to the board, then you 
 ![Example Result illustration](../media/cfc57515b967d19fcda65ea50bda76f1.png)
 
 ---
-
-| [← Previous lesson](lesson-40-temperature-and-humidity-display.md) | [Course index](../README.md) | [Next lesson →](lesson-42-attitude-sensor.md) |
-| --- | --- | --- |

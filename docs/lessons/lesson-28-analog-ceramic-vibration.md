@@ -3,10 +3,7 @@
 > **Kit:** Keyestudio 48-in-1 Sensor Kit  
 > **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-| [← Previous lesson](lesson-27-steam-sensor.md) | [Course index](../README.md) | [Next lesson →](lesson-29-voltage-detection.md) |
-| --- | --- | --- |
-
-![Project 28: Analog Ceramic Vibration illustration](../media/2cf5c2793157816a2346a730ad064955.jpeg)
+![](../media/2cf5c2793157816a2346a730ad064955.jpeg)
 
 ## Description
 
@@ -74,6 +71,3 @@ When vibrating the ceramic chip, you will see the data change as the figure show
 ![Example Result illustration](../media/4be72e831696d59b36082aa45d77a04d.jpeg)
 
 ---
-
-| [← Previous lesson](lesson-27-steam-sensor.md) | [Course index](../README.md) | [Next lesson →](lesson-29-voltage-detection.md) |
-| --- | --- | --- |
