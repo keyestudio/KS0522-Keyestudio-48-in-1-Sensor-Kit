@@ -94,7 +94,7 @@ It contains everything needed to support the micro controller; simply connect it
 
 ## Arduino IDE and Driver Installation
 
-![Arduino IDE installation illustration](media/ide.png)
+![image-20260908110236895](media/image-20260908110236895.png)
 
 > **Setup guide:** [Install the Arduino IDE, drivers, libraries, and first sketch](https://getting-started-with-arduino.readthedocs.io/en/latest/Arduino%20IDE%20Tutorial.html).
 
