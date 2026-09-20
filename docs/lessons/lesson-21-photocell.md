@@ -1,45 +1,37 @@
-# Lesson 21: Photocell
+# Lektion 21: Fotowiderstand
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor-Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 21: Photocell illustration](../media/8eed60793fd64a7c0b9a9b2a2fc1ef67.png)
+![Projekt 21: Fotowiderstand Illustration](../media/8eed60793fd64a7c0b9a9b2a2fc1ef67.png)
 
-## Description
+## Beschreibung
 
-Photocell is commonly seen in our daily life and is mainly used in intelligent
-switch, also in common electronic design. To make it easier and more effective,
-we supply the corresponding modules.
+Fotowiderstände kommen in unserem Alltag häufig vor und werden hauptsächlich in intelligenten Schaltkreisen sowie im allgemeinen Elektronikdesign eingesetzt. Um die Verwendung zu vereinfachen und effektiver zu machen, liefern wir entsprechende Module.
 
-Photocell is a semiconductor. It has features of high sensitivity, quick
-response, spectral characteristic and R-value consistence, maintaining high
-stability and reliability in environment extremely such as high temperature and
-high humidity.
+Der Fotowiderstand ist ein Halbleiter. Er zeichnet sich durch hohe Empfindlichkeit, schnelle Reaktion, spektrale Eigenschaften und konstante R-Werte aus und behält hohe Stabilität und Zuverlässigkeit auch unter extremen Umgebungsbedingungen wie hoher Temperatur und hoher Luftfeuchtigkeit.
 
-It’s widely used in automatic control switch fields like cameras, garden solar
-lights, lawn lamps, money detectors, quartz clocks, music cups, gift boxes, mini
-night lights, sound and light control switches, etc.
+Er wird weit verbreitet in automatischen Steuerungsfeldern eingesetzt, z. B. in Kameras, solarbetriebenen Gartenleuchten, Rasenlampen, Geldscheinprüfern, Quarzuhren, Musikbechern, Geschenkboxen, kleinen Nachtlichtern, Licht- und Ton-Steuerschaltern usw.
 
-## Specification
+## Spezifikation
 
-- Interface type: analog
+- Schnittstellentyp: analog
 
-- Working voltage: 5V
+- Betriebsspannung: 5V
 
-- Size: 30*20mm
+- Größe: 30*20mm
 
-- Weight: 3g
+- Gewicht: 3g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Connect the S pin of module to Analog A0 of V4.0 board, connect the negative pin
-to GND port, positive pin to 5V port.
+Verbinden Sie den S-Pin des Moduls mit dem analogen Anschluss A0 der V4.0-Platine, verbinden Sie den Negativ-Pin mit dem GND-Anschluss, den Positiv-Pin mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/28a1990cd088d6f0301f02d217cef301.jpeg)
+![Anschlussdiagramm Abbildung](../media/28a1990cd088d6f0301f02d217cef301.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -57,12 +49,12 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/78268e9cb1dbc127e7ae3299d3a35a45.png)
+![Beispielergebnis Abbildung](../media/78268e9cb1dbc127e7ae3299d3a35a45.png)
 
-Done wiring and powered up, upload well the code, then open the serial monitor, if cover the photocell on the sensor with your hand, you will see the analog value decrease.
+Nachdem die Verdrahtung abgeschlossen und die Platine mit Strom versorgt ist, laden Sie den Code hoch und öffnen dann den seriellen Monitor. Wenn Sie den Fotowiderstand auf dem Sensor mit Ihrer Hand abdecken, sehen Sie, dass der analoge Wert abnimmt.
 
-![Example Result illustration](../media/85621deb4c66d6e53697cd0ef90cb6e2.jpeg)
+![Beispielergebnis Abbildung](../media/85621deb4c66d6e53697cd0ef90cb6e2.jpeg)
 
 ---

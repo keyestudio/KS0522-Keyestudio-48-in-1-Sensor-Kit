@@ -1,69 +1,69 @@
-# Lesson 44: Triaxial Digital Acceleration Detection
+# Lektion 44: Dreiachsige digitale Beschleunigungserkennung
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1-Sensorkit  
+> **Board:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P-Board
 
-![Project 44: Triaxial Digital Acceleration Detection illustration](../media/2a26949601eb888348b798711fe1151e.jpeg)
+![Projekt 44: Dreiachsige digitale Beschleunigungsdetektion (Abbildung)](../media/2a26949601eb888348b798711fe1151e.jpeg)
 
-## Introduction
+## Einführung
 
-MMA8452Q is a smart low-power, three-axis, capacitive micromachine acceleration sensor with 12-bit resolution.
+MMA8452Q ist ein intelligenter, stromsparender, dreiachsiger kapazitiver mikroelektromechanischer Beschleunigungssensor mit 12-Bit-Auflösung.
 
-This acceleration sensor has a rich embedded performance, featured with flexible user programmable options and two interruption pins configuration.
+Dieser Beschleunigungssensor bietet umfangreiche integrierte Funktionen, zeichnet sich durch flexible, benutzerprogrammierbare Optionen und eine Konfiguration mit zwei Interrupt-Pins aus.
 
-The embedded interruption function can save the overall power consumption and remove the burden of constantly polling the data in the main processor.
+Die integrierte Interrupt-Funktion kann den Gesamtenergieverbrauch reduzieren und die Last des ständigen Abfragens von Daten im Hauptprozessor entfernen.
 
-Besides, MMA8452Q has a user optional range of ±2g / ±4g/ ±8g, which can output high-pass filtering data and non-filtered data in real time.
+Außerdem bietet die MMA8452Q eine wählbare Messbereichsoption von ±2g / ±4g / ±8g, die sowohl hochpassgefilterte Daten als auch ungefilterte Daten in Echtzeit ausgeben kann.
 
-This device can configure an embedded function to generate an inertial wake-up interrupt signal, which enables MMA8452Q to maintain a low-power mode in the static state while monitoring the event.
+Dieses Bauteil kann so konfiguriert werden, dass es ein Trägheits-Weck-Interrupt-Signal erzeugt, wodurch die MMA8452Q im Ruhezustand einen Niedrigenergie-Modus aufrechterhalten kann, während sie gleichzeitig Ereignisse überwacht.
 
-## Performance Parameters
+## Leistungsparameter
 
-- Power Supply Voltage：1.95 V to 3.6 V
+- Versorgungsspannung：1.95 V bis 3.6 V
 
-- Interface Voltage：1.6 V to 3.6 V
+- Schnittstellen-Spannung：1.6 V bis 3.6 V
 
-- ±2g/±4g/±8g Optional dynamic range
+- ±2g/±4g/±8g wählbarer Messbereich
 
-- Output data rate (ODR) range: 1.56Hz to 800Hz
+- Ausgangsdatensatzrate (ODR) Bereich: 1.56Hz bis 800Hz
 
-- Noise：99μg/√Hz
+- Rauschen：99μg/√Hz
 
-- 12 bits and 8 bits digital outputs;
+- 12-Bit- und 8-Bit-Digitalausgänge;
 
-- I2C digital output interface (up to 2.25MHz when the pull-up resistor is 4.7kΩ);
+- I2C-Digitalausgangsschnittstelle (bis zu 2.25MHz, wenn der Pull-up-Widerstand 4.7kΩ beträgt);
 
-- Two programmable interruption pins applied to six interruption sources;
+- Zwei programmierbare Interrupt-Pins, angewendet auf sechs Interrupt-Quellen;
 
-- Three motion detection embedded channels: free fall detection, pulse detection, shaking detection;
+- Drei eingebettete Bewegungserkennungs-Kanäle: Freifallerkennung, Impulserkennung, Erschütterungserkennung;
 
-- Direction (transverse/longitudinal) detection with setting lag compensation;
+- Richtungs- (quer/längs) Erkennung mit einstellbarer Verzögerungskompensation;
 
-- Automatic arousal and auto-dormant ODR can be automatically altered;
+- Automatische Weck- und Auto-Dormant-Funktionen; die ODR kann automatisch geändert werden;
 
-- High-pass filtering data can be exported in real time;
+- Hochpassgefilterte Daten können in Echtzeit ausgegeben werden;
 
-- Power consumption: 6μA – 165μA
+- Stromverbrauch: 6μA – 165μA
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Firstly you need to prepare the following parts:
+Zunächst müssen Sie die folgenden Teile vorbereiten:
 
-- V4.0 Board*1
+- V4.0-Board*1
 
-- MMA8452Q sensor*1
+- MMA8452Q Sensor*1
 
-- USB Cable*1
+- USB-Kabel*1
 
-- Jumper Wire*4
+- Jumper-Kabel*4
 
-Connect the SCL pin to Analog A5 port, SDA pin to Analog A4 port; Connect positive pin to 3V3 port, negative pin to GND port.
+Verbinden Sie den SCL-Pin mit dem Analogen Anschluss A5, den SDA-Pin mit dem Analogen Anschluss A4; verbinden Sie den Plus-Pin mit dem 3V3-Anschluss und den Minus-Pin mit dem GND-Anschluss.
 
-![Connection Diagram illustration](../media/fdd68f7da45d46e65f42918eac68a2f3.jpeg)
+![Anschlussdiagramm (Abbildung)](../media/fdd68f7da45d46e65f42918eac68a2f3.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the code below to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 #include <Wire.h> // Must include Wire library for I2C
@@ -188,14 +188,14 @@ void printOrientation()
 }
 ```
 
-Note: before compiling the code, do remember to place the library into libraries directory of Arduino IDE. Otherwise, compiling will fail.
+Hinweis: Bevor Sie den Code kompilieren, denken Sie daran, die Bibliothek in das Verzeichnis libraries der Arduino IDE zu kopieren. Andernfalls schlägt die Kompilierung fehl.
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/9f81d233c0387bc32d25951abd3a407c.png)
+![Beispielergebnis (Abbildung)](../media/9f81d233c0387bc32d25951abd3a407c.png)
 
-Done uploading the code and open the serial monitor, it will display the triaxial acceleration of sensor and its status shown below.
+Nachdem Sie den Code hochgeladen und den seriellen Monitor geöffnet haben, werden die dreiachsigen Beschleunigungswerte des Sensors und dessen Status wie unten angezeigt.
 
-![Example Result illustration](../media/03421d279e2e961d7b40f645b7576d73.jpeg)
+![Beispielergebnis (Abbildung)](../media/03421d279e2e961d7b40f645b7576d73.jpeg)
 
 ---

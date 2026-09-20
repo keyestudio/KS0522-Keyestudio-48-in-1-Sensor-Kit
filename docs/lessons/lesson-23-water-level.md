@@ -1,57 +1,57 @@
-# Lesson 23: Water Level
+# Lektion 23: Wasserstand
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P-Board
 
-![Project 23: Water Level illustration](../media/23f40997b8634be91aed7311eca2dfbb.jpeg)
+![Projekt 23: Wasserstand Abbildung](../media/23f40997b8634be91aed7311eca2dfbb.jpeg)
 
-## Description
+## Beschreibung
 
-Keyestudio water sensor is easy- to-use, portable and cost-effective, designed to identify and detect water level and water drop.
+Der Keyestudio-Wassersensor ist einfach zu bedienen, tragbar und kostengünstig und wurde entwickelt, um den Wasserstand und Wassertropfen zu erkennen.
 
-This small sensor can measure the volume of water drop or water quantity through an array of traces of exposed parallel wires.
+Dieser kleine Sensor kann das Volumen eines Wassertropfens oder die Wassermenge über ein Array von freiliegenden parallelen Leiterbahnen messen.
 
-## Features
+## Eigenschaften
 
-- smooth conversion between water quantity and analog quantity;
+- sanfte Umwandlung zwischen Wassermenge und analogem Wert;
 
-- strong flexibility, outputting basic analog value;
+- hohe Flexibilität, Ausgabe eines grundlegenden Analogwerts;
 
-- low power consumption and high sensitivity;
+- geringer Stromverbrauch und hohe Empfindlichkeit;
 
-- directly connect to microprocessor or other logic circuits, suitable for a variety of development boards and controllers such as Arduino controller, STC single-chip microcomputer, AVR single-chip microcomputer and more.
+- direkter Anschluss an Mikroprozessoren oder andere Logikschaltungen, geeignet für verschiedene Entwicklungsboards und Controller wie Arduino, STC-Mikrocontroller, AVR-Mikrocontroller und mehr.
 
-## Specifications
+## Spezifikationen
 
-- Operating voltage: DC5V
+- Betriebsspannung: DC5V
 
-- Operating current: ﹤20mA
+- Betriebsstrom: ﹤20mA
 
-- Sensor type: Analog
+- Sensortyp: Analog
 
-- Detection area: 40mm x16mm
+- Erfassungsbereich: 40mm x16mm
 
-- Production process: FR4 double-side tinned
+- Produktionsverfahren: FR4 doppelseitig verzinnt
 
-- Shape design: Anti-skid semi-lunar recess
+- Formdesign: Anti-Rutsch halbmondförmige Vertiefung
 
-- Working Temperature: 10℃-30℃
+- Arbeitstemperatur: 10℃-30℃
 
-- Working Humidity: 10%-90% without condensation
+- Arbeitsfeuchtigkeit: 10%-90% ohne Kondensation
 
-- Weight: 3g
+- Gewicht: 3g
 
-- Dimensions: 65mm x 20mm x 8mm
+- Abmessungen: 65mm x 20mm x 8mm
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Connect the S pin of module to Analog A0 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinden Sie den S-Pin des Moduls mit Analog A0 des V4.0 Boards, verbinden Sie den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/92810e41aea313a15735eecb3a168e2f.jpeg)
+![Anschlussdiagramm Abbildung](../media/92810e41aea313a15735eecb3a168e2f.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -80,20 +80,20 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/ca727c75f4d4e454c95258d77afdf10e.png)
+![Beispielergebnis Abbildung](../media/ca727c75f4d4e454c95258d77afdf10e.png)
 
-After the above steps are done, let’s do a test on lower water level and check what happens?
+Nachdem die obigen Schritte abgeschlossen sind, testen wir den niedrigen Wasserstand und schauen, was passiert?
 
-Upload well the code to V4.0 board, then open the serial monitor and set the baud rate as 9600.
+Laden Sie den Code erfolgreich auf das V4.0 Board hoch, öffnen Sie dann den seriellen Monitor und stellen Sie die Baudrate auf 9600 ein.
 
-When place the sensor into the water at different level, you will see the value change correspondingly.
+Wenn Sie den Sensor auf unterschiedlichen Pegeln ins Wasser tauchen, sehen Sie, wie sich der Wert entsprechend ändert.
 
-![Example Result illustration](../media/8070cf2260fef39e5ec5e18b7a1849cf.jpeg)
+![Beispielergebnis Abbildung](../media/8070cf2260fef39e5ec5e18b7a1849cf.jpeg)
 
-Furthermore, you can set an alarm value and connect a buzzer to make an alarm.
+Außerdem können Sie einen Alarmwert einstellen und einen Summer anschließen, um einen Alarm auszulösen.
 
-The LED can’t light up when water level haven’t reach alarm value. If water level reaches the alarm value, LED will be turned on and buzzer will sound to make an alarm.
+Die LED leuchtet nicht, wenn der Wasserstand den Alarmwert noch nicht erreicht hat. Erreicht der Wasserstand den Alarmwert, wird die LED eingeschaltet und der Summer ertönt, um Alarm zu geben.
 
 ---

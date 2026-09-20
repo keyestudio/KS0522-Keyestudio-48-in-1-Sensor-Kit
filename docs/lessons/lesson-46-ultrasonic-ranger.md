@@ -1,78 +1,78 @@
-# Lesson 46: Ultrasonic Ranger
+# Lektion 46: Ultraschall-Entfernungsmesser
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 46: Ultrasonic Ranger illustration](../media/c170155a5fb03abdc10866e25e3670b2.jpeg)
+![Projekt 46: Ultraschall-Entfernungsmesser Abbildung](../media/c170155a5fb03abdc10866e25e3670b2.jpeg)
 
-## Description
+## Beschreibung
 
-As the ultrasonic has strong directivity, slow energy consumption and far spread distance in the media, so it is commonly used in the measurement of distance, such as range finder and position measuring instrument.
+Da Ultraschall im Medium eine starke Richtwirkung, geringen Energieverlust und große Reichweite hat, wird er häufig zur Abstandsmessung verwendet, z. B. in Entfernungsmessern und Positionsmessgeräten.
 
-Ultrasonic detector module can provide 2cm-450cm non-contact sensing distance, and its ranging accuracy is up to 3mm, very good to meet the normal requirements.
+Das Ultraschall-Detektormodul kann einen berührungslosen Messbereich von 2cm–450cm bereitstellen, mit einer Messgenauigkeit von bis zu 3mm, was für normale Anforderungen sehr gut geeignet ist.
 
-The module includes an ultrasonic transmitter and receiver as well as the corresponding control circuit.
+Das Modul enthält einen Ultraschallsender und -empfänger sowie die entsprechende Steuerschaltung.
 
-## Working Schematics
+## Funktionsschema
 
-The HC-SR04 measurement sequence is shown below:
+Die Messsequenz des HC-SR04 ist unten dargestellt:
 
-![Working Schematics illustration](../media/a7b0fc57b2e387962071da618153ad68.jpeg)
+![Funktionsschema Abbildung](../media/a7b0fc57b2e387962071da618153ad68.jpeg)
 
-1\. First pull down the TRIG, and then trigger it with at least 10us high level signal;
+1\. Zuerst TRIG auf LOW ziehen, und dann mit einem mindestens 10us langen High-Pegel-Signal auslösen;
 
-2\. After triggering, the module will automatically transmit eight 40KHZ square waves, and automatically detect whether there is a signal to return.
+2\. Nach dem Auslösen sendet das Modul automatisch acht 40KHZ-Rechteckwellen und prüft automatisch, ob ein Signal zurückkommt.
 
-3\. If there is a signal returned back, through the ECHO to output a high level, the duration time of high level is actually the time from emission to reception of ultrasonic.
+3\. Wenn ein Signal zurückkehrt, gibt ECHO ein HIGH-Signal aus; die Dauer des High-Pegels ist die Zeit vom Senden bis zum Empfang des Ultraschalls.
 $$
-Test Distance = High Level Duration * 340m/s * 0.5
+Messdistanz = Dauer\ des\ High\text{-}Pegels * 340\ m/s * 0{,}5
 $$
 
-## Parameters
+## Parameter
 
-- Working voltage: 5 V DC
+- Betriebsspannung: 5 V DC
 
-- Working current：15mA
+- Betriebsstrom: 15mA
 
-- Detecting range：2-450cm
+- Messbereich: 2-450cm
 
-- Detecting angle：15 degrees
+- Erfassungswinkel: 15 Grad
 
-- Input trigger pulse：10us TTL Level
+- Eingangsauslösepuls: 10 µs TTL-Pegel
 
-- Output echo signal： output TTL level signal(HIGH)，proportional to range.
+- Ausgangs-Echo-Signal: TTL-Pegelausgang (HIGH), proportional zur Entfernung.
 
-## Pinout Diagram
+## Pinbelegung
 
-![Pinout Diagram illustration](../media/c03e563bcd19796b483156724bae174a.png)
+![Pinbelegung Abbildung](../media/c03e563bcd19796b483156724bae174a.png)
 
-## Connection Diagram
+## Anschlussdiagramm
 
-First, you need to prepare the following components:
+Zuerst müssen Sie die folgenden Komponenten vorbereiten:
 
-- V4.0 board\*1
+- V4.0-Board\*1
 
-- Ultrasonic sensor\*1
+- Ultraschallsensor\*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper wire\*4
+- Jumperkabel\*4
 
-Next, please refer to the following connection table:
+Als Nächstes beachten Sie bitte die folgende Verbindungstabelle:
 
-![Connection Diagram illustration](../media/e708c019b57984a07feb241672793982.jpeg)
+![Anschlussdiagramm Abbildung](../media/e708c019b57984a07feb241672793982.jpeg)
 
-Note: D4、D5 are the digital pin 4 and pin 5.
+Hinweis: D4 und D5 sind die digitalen Pins 4 und 5.
 
-You can refer to the connection diagram shown below:
+Sie können sich am folgenden Anschlussdiagramm orientieren:
 
-![Connection Diagram illustration](../media/b5b964743eac977e687c454b64e061fa.jpeg)
+![Anschlussdiagramm Illustration](../media/b5b964743eac977e687c454b64e061fa.jpeg)
 
-After connecting well, you can use it to measure the distance, displaying the distance value on the monitor.
+Nach dem korrekten Anschluss können Sie damit Entfernungen messen; der Entfernungswert wird im Monitor angezeigt.
 
-## Test Code
+## Testcode
 
-Copy and paste the test code below to Arduino software
+Kopieren Sie den folgenden Testcode und fügen Sie ihn in die Arduino-Software ein.
 
 ```c
 ///////////////////////////////////////////////////////////////////////////////
@@ -99,14 +99,14 @@ delay(50);
 ///////////////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/0dcff2ae88366ce40190b77f25d271d7.png)
+![Beispielergebnis Abbildung](../media/0dcff2ae88366ce40190b77f25d271d7.png)
 
-After upload well the code to V4.0 board, then open the serial monitor. When place an object in front of the ultrasonic sensor (from near and far), it will detect the distance of object. The value will be displayed on the monitor shown below.
+Nachdem Sie den Code erfolgreich auf das V4.0-Board hochgeladen haben, öffnen Sie den seriellen Monitor. Wenn Sie ein Objekt vor den Ultraschallsensor halten (näher und weiter entfernt), erkennt er die Entfernung des Objekts. Der Wert wird im Monitor wie unten angezeigt.
 
-![Example Result illustration](../media/1dbca5dc233994f6923601d942fadba6.png)
+![Beispielergebnis Abbildung](../media/1dbca5dc233994f6923601d942fadba6.png)
 
-![Example Result illustration](../media/dcd49cc72e7a9f993083af7625d240db.png)
+![Beispielergebnis Abbildung](../media/dcd49cc72e7a9f993083af7625d240db.png)
 
 ---

@@ -1,53 +1,53 @@
-# Lesson 40: Temperature and Humidity Display
+# Lektion 40: Temperatur- und Feuchtigkeitsanzeige
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 40: Temperature and Humidity Display illustration](../media/e164737761b08de30da9358b47511d62.png)
+![Projekt 40: Temperatur- und Feuchtigkeitsanzeige Illustration](../media/e164737761b08de30da9358b47511d62.png)
 
-## Introduction
+## Einführung
 
-This DHT11 sensor features calibrated digital signal output with the temperature and humidity sensor complex. Its technology ensures high reliability and excellent long-term stability.
+Dieser DHT11-Sensor bietet kalibrierte digitale Signalausgabe in einem kombinierten Temperatur- und Feuchtesensor. Seine Technologie gewährleistet hohe Zuverlässigkeit und ausgezeichnete Langzeitstabilität.
 
-A high-performance 8-bit microcontroller is connected on the sensor. This sensor includes a resistive element and a sense of wet NTC temperature measuring devices.
+Auf dem Sensor ist ein leistungsfähiger 8-Bit-Mikrocontroller integriert. Der Sensor enthält ein resistives Element und einen NTC-Temperaturfühler zur Feuchtemessung.
 
-It has advantages of excellent quality, fast response, anti-interference ability and high cost performance.
+Er zeichnet sich durch hohe Qualität, schnelle Reaktionszeit, Störfestigkeit und ein gutes Preis-Leistungs-Verhältnis aus.
 
-Each DHT11 sensor features extremely accurate calibration data of humidity calibration chamber. The calibration coefficients stored in the OTP program memory, internal sensors detect signals in the process, and we should call these calibration coefficients.
+Jeder DHT11-Sensor verfügt über äußerst präzise Kalibrierungsdaten aus einer Feuchte-Kalibrierkammer. Die Kalibrierkoeffizienten sind im OTP-Programmspeicher abgelegt; interne Sensoren erkennen Signale während des Betriebs und nutzen diese Kalibrierkoeffizienten.
 
-The single-wire serial interface system is integrated to make it quick and easy. Qualities of small size, low power, and 20-meter signal transmission distance make it a wide applied application or even the most demanding one.
+Eine einadrige serielle Schnittstelle ist integriert, was die Handhabung schnell und einfach macht. Kompakte Bauform, geringer Energieverbrauch und eine Signalübertragungsreichweite von bis zu 20 Metern machen ihn vielseitig einsetzbar, auch in anspruchsvollen Anwendungen.
 
-## Specification
+## Technische Daten
 
-- Supply Voltage: +5 V
+- Versorgungsspannung: +5 V
 
-- Temperature range: 0-50 °C error of ± 2 °C
+- Temperaturbereich: 0–50 °C, Messfehler ±2 °C
 
-- Humidity: 20-90% RH ± 5% RH error
+- Feuchtigkeit: 20–90 % RH, Messfehler ±5 % RH
 
-- Interface: Digital
+- Schnittstelle: Digital
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Firstly you need to prepare the following parts before testing.
+Bereiten Sie vor dem Testen zunächst die folgenden Teile vor.
 
-- V4.0 Board\*1
+- V4.0 Platine\*1
 
-- DHT11 sensor\*1
+- DHT11-Sensor\*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*3
+- Jumperkabel\*3
 
-Then follow the wiring diagram, connect the Signal pin of sensor to Digital 4 port of V4.0 board, negative pin to GND port, positive pin to 5V port.
+Befolgen Sie dann das Anschlussdiagramm: Verbinden Sie den Signal-Pin des Sensors mit dem Digital 4-Port der V4.0-Platine, den negativen Pin mit GND und den positiven Pin mit 5V.
 
-![Connection Diagram illustration](../media/d10a0556ea9e4a8314ee21f8f58ff236.jpeg)
+![Anschlussdiagramm Illustration](../media/d10a0556ea9e4a8314ee21f8f58ff236.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Please download the [DHT11Lib](https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib) firstly. Or [visit the website](http://playground.arduino.cc/Main/DHTLib)
+Bitte laden Sie zuerst die [DHT11Lib](https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib) herunter. Oder [besuchen Sie die Website](http://playground.arduino.cc/Main/DHTLib)
 
-Copy and paste the code below to Arduino software.
+Kopieren Sie den folgenden Code und fügen Sie ihn in die Arduino-Software ein.
 
 ```c
 #include <dht.h>
@@ -88,14 +88,14 @@ void loop() {
 }
 ```
 
-## Example Result
+## Beispielergebnis
 
-Wire it up well and upload the above code to V4.0 board.
+Verdrahten Sie alles korrekt und laden Sie den obigen Code auf die V4.0-Platine hoch.
 
-![Example Result illustration](../media/cdbb75de748e3e2eb6f709b8f469193d.png)
+![Beispielergebnis Illustration](../media/cdbb75de748e3e2eb6f709b8f469193d.png)
 
-Then open the serial monitor and set the baud rate as 9600, finally you will see the current temperature and humidity value.
+Öffnen Sie dann den seriellen Monitor und stellen Sie die Baudrate auf 9600 ein; schließlich sehen Sie die aktuellen Temperatur- und Feuchtigkeitswerte.
 
-![Example Result illustration](../media/dffe8c9a0b348f7f4f12cbfe95c090f3.jpeg)
+![Beispielergebnis Illustration](../media/dffe8c9a0b348f7f4f12cbfe95c090f3.jpeg)
 
 ---

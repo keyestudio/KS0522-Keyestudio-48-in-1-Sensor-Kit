@@ -1,48 +1,47 @@
-# Lesson 24: Soil Moisture
+# Lektion 24: Bodenfeuchtigkeit
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor-Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 24: Soil Moisture illustration](../media/d1041a8e2cbfca69c5d8bbd9ba7d4f92.jpeg)
+![Projekt 24: Bodenfeuchte Illustration](../media/d1041a8e2cbfca69c5d8bbd9ba7d4f92.jpeg)
 
-## Description
+## Beschreibung
 
-This is a simple soil humidity sensor aimed to detect the soil humidity. If the soil is in lack of water, the analog value output by the sensor will decrease, otherwise, it will increase.
+Dies ist ein einfacher Bodenfeuchtesensor, der darauf ausgelegt ist, die Bodenfeuchte zu erkennen. Wenn dem Boden Wasser fehlt, nimmt der vom Sensor ausgegebene analoge Wert ab, andernfalls steigt er an.
 
-If you use this sensor to make an automatic watering device, it can detect whether your botany is thirsty to prevent it from withering when you go out.
+Wenn Sie diesen Sensor verwenden, um eine automatische Bewässerungseinrichtung zu bauen, kann er erkennen, ob Ihre Pflanzen Durst haben, und verhindert so, dass sie verwelken, wenn Sie unterwegs sind.
 
-Combine this sensor with Arduino controller can make your plant more comfortable and your garden more smarter.
+Die Kombination dieses Sensors mit einem Arduino-Controller kann Ihre Pflanzen komfortabler versorgen und Ihren Garten intelligenter machen.
 
-The soil humidity sensor module is not as complicated as you might think, so if you need to detect the soil in your project, it will be your best choice.
+Das Bodenfeuchtesensormodul ist nicht so kompliziert, wie Sie vielleicht denken. Wenn Sie in Ihrem Projekt den Bodenfeuchtigkeitsgehalt messen müssen, ist es die beste Wahl.
 
-The sensor is set with two probes which are inserted into the soil. If the current goes through the soil, the sensor will get resistance value by reading the current changes between the two probes, then convert the resistance value into moisture content.
+Der Sensor ist mit zwei Sonden ausgestattet, die in den Boden gesteckt werden. Fließt Strom durch den Boden, ermittelt der Sensor den Widerstand, indem er die Stromänderungen zwischen den beiden Sonden misst, und wandelt dann den Widerstandswert in einen Feuchtigkeitswert um.
 
-The higher moisture (less resistance), the higher conductivity the soil has.
+Je feuchter (geringerer Widerstand), desto höher die Leitfähigkeit des Bodens.
 
-The surface of the sensor has undergone metallization process to prolong its service life. Insert it into the soil and then use the AD converter to read it. With the help of this sensor, the plant can remind of you: I need water.
+Die Oberfläche des Sensors wurde metallisiert, um seine Lebensdauer zu verlängern. Stecken Sie ihn in die Erde und lesen Sie ihn anschließend mit dem A/D-Wandler aus. Mit Hilfe dieses Sensors kann die Pflanze Sie daran erinnern: Ich brauche Wasser.
 
-## Specification
+## Spezifikation
 
-- Power Supply Voltage: 3.3V or 5V
+- Versorgungsspannung: 3.3V oder 5V
 
-- Working Current: ≤ 20mA
+- Betriebsstrom: ≤ 20mA
 
-- Output Voltage: 0-2.3V (When the sensor is totally immersed in water, the voltage will be 2.3V)
-  The higher humidity, the higher the output voltage.
+- Ausgangsspannung: 0-2.3V (wenn der Sensor vollständig in Wasser eingetaucht ist, beträgt die Spannung 2.3V). Je höher die Feuchtigkeit, desto höher die Ausgangsspannung.
 
-- Sensor type: Analog output
+- Sensortyp: Analoger Ausgang
 
-- Interface: Pin1- signal, Pin2- GND, Pin3 - VCC
+- Schnittstelle: Pin1 - Signal, Pin2 - GND, Pin3 - VCC
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Connect the S pin of module to Analog A0 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinden Sie den S-Pin des Moduls mit dem Analog A0 des V4.0-Boards, verbinden Sie den negativen Pin mit GND und den positiven Pin mit 5V.
 
-![Connection Diagram illustration](../media/b1685a438f171f4bbb3cd8d1b1782bb1.jpeg)
+![Anschlussdiagramm Illustration](../media/b1685a438f171f4bbb3cd8d1b1782bb1.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -65,12 +64,12 @@ void loop(){
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/1200f0f53ca0758afc505c475ce75e68.png)
+![Beispielergebnis Illustration](../media/1200f0f53ca0758afc505c475ce75e68.png)
 
-Done wiring and powered up, upload well the code, then open the serial monitor and set the baud rate as 57600, you will see the value. When the sensor detects the moisture, the value will make corresponding changes. Shown below.
+Nachdem die Verkabelung abgeschlossen und die Stromversorgung eingeschaltet ist, laden Sie den Code hoch, öffnen Sie den seriellen Monitor und stellen Sie die Baudrate auf 57600 ein. Sie werden dann den Wert sehen. Wenn der Sensor Feuchtigkeit erkennt, ändert sich der Wert entsprechend. Siehe unten.
 
-![Example Result illustration](../media/cb240ae7199f877c17b9ac3a4d9d6ced.jpeg)
+![Beispielergebnis Illustration](../media/cb240ae7199f877c17b9ac3a4d9d6ced.jpeg)
 
 ---

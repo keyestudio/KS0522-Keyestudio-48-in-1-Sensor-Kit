@@ -1,62 +1,62 @@
-# Lesson 30: Pressure Detection
+# Lektion 30: Druckerkennung
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P Board
 
-![Project 30: Pressure Detection illustration](../media/313f11bf4a7f52ac903c78976fe1e633.jpeg)
+![Projekt 30: Druckerkennung Illustration](../media/313f11bf4a7f52ac903c78976fe1e633.jpeg)
 
-## Description
+## Beschreibung
 
-This sensor adopts the new flexible nano pressure sensitive material with ultra thin film pad. It has the functions of water-proof and pressure detection.
+Dieser Sensor verwendet neues flexibles nano-druckempfindliches Material mit ultra-dünner Folienauflage. Er ist wasserdicht und zur Druckerkennung geeignet.
 
-When the sensor detects the outside pressure, the resistance of sensor will make a change.
+Wenn der Sensor äußeren Druck erkennt, ändert sich sein Widerstand.
 
-So using the circuit, it can convert the pressure signal that senses pressure change into the corresponding electric signal output.
+Durch die Schaltung kann das vom Sensor erfasste Drucksignal in ein entsprechendes elektrisches Ausgangssignal umgewandelt werden.
 
-In this way, we can get the conditions of pressure changes by detecting the signal changes.
+Auf diese Weise können wir durch Erfassen der Signaländerungen die Druckverhältnisse ermitteln.
 
-## Parameters
+## Parameter
 
-- Working Voltage：DC 3.3V—5V
+- Betriebsspannung：DC 3.3V—5V
 
-- Range：0-10KG
+- Messbereich：0-10KG
 
-- Thickness：＜0.25mm
+- Dicke：＜0.25mm
 
-- Response Point：＜20g
+- Ansprechpunkt：＜20g
 
-- Repeatability：＜±5.8%（50% load）
+- Wiederholbarkeit：＜±5.8%（50% Belastung）
 
-- Accuracy：±2.5%（85% range interval）
+- Genauigkeit：±2.5%（85% Bereichsintervall）
 
-- Durability：＞100 thousand times
+- Lebensdauer：＞100.000 Mal
 
-- Initial Resistance：＞100MΩ(no load)
+- Anfangswiderstand：＞100MΩ（ohne Last）
 
-- Response Time：＜1ms
+- Ansprechzeit：＜1ms
 
-- Recovery Time：＜15ms
+- Erholzeit：＜15ms
 
-- Working Temperature：﹣20℃—60℃
+- Betriebstemperatur：﹣20℃—60℃
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Firstly you need to prepare the following parts before connection.
+Zuerst müssen Sie die folgenden Teile vor dem Anschließen bereitlegen.
 
-- V4.0 Board\*1
+- V4.0-Board\*1
 
-- Pressure sensor\*1
+- Drucksensor\*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*3
+- Jumperkabel\*3
 
-Connect the S pin of module to Analog A0 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
-![Connection Diagram illustration](../media/3325303180f71db75d9e13acc5036d8f.jpeg)
+Verbinden Sie den S-Pin des Moduls mit dem analogen A0 des V4.0-Boards, den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
+![Anschlussdiagramm Illustration](../media/3325303180f71db75d9e13acc5036d8f.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the code below to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -76,14 +76,14 @@ void loop()
 ///////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-Wiring well and uploading the code, open the serial monitor on Arduino software.
+Bei korrekter Verdrahtung und nach dem Hochladen des Codes öffnen Sie den seriellen Monitor in der Arduino-Software.
 
-Then, press the sensor with your hand tightly, the value shown on the monitor is increasing.
+Drücken Sie dann den Sensor fest mit der Hand; der im Monitor angezeigte Wert steigt an.
 
-![Example Result illustration](../media/a6c4be8596a0048cb5f3b2f1612241bd.png)
+![Beispielergebnis Illustration](../media/a6c4be8596a0048cb5f3b2f1612241bd.png)
 
-![Example Result illustration](../media/e055d2749b14c62b92c22496a3d1f96a.jpeg)
+![Beispielergebnis Illustration](../media/e055d2749b14c62b92c22496a3d1f96a.jpeg)
 
 ---

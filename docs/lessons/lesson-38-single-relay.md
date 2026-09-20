@@ -1,61 +1,61 @@
-# Lesson 38: Single Relay
+# Lektion 38: Einzelrelais
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 38: Single Relay illustration](../media/e0b4485cfd4ccebd974d81f19239dde3.png)
+![Projekt 38: Einzelrelais Abbildung](../media/e0b4485cfd4ccebd974d81f19239dde3.png)
 
-## Introduction
+## Einführung
 
-This single relay module can be used in interactive projects. This module uses SONGLE 5v high-quality relay. It can also be used to control lighting, electrical and other equipment.
+Dieses Einzelrelais-Modul kann in interaktiven Projekten verwendet werden. Das Modul verwendet ein hochwertiges SONGLE 5V-Relais. Es kann auch zum Steuern von Beleuchtung, elektrischen Geräten und anderer Ausrüstung verwendet werden.
 
-The modular design makes it easy to use with Arduino board. It can be controlled through digital IO port, such as solenoid valves, lamps, motors and other high current or high voltage devices.
+Das modulare Design macht die Verwendung mit einer Arduino-Platine einfach. Es kann über einen digitalen I/O-Anschluss gesteuert werden, zum Beispiel Magnetventile, Lampen, Motoren und andere Geräte mit hohem Strom oder hoher Spannung.
 
-## Specification
+## Spezifikation
 
-- Type: Digital
+- Typ: Digital
 
-- Rated current: 10A (NO) 5A (NC)
+- Nennstrom: 10A (NO) 5A (NC)
 
-- Maximum switching voltage: 150VAC 24VDC
+- Maximale Schaltspannung: 150VAC 24VDC
 
-- Digital interface
+- Digitales Interface
 
-- Control signal: TTL level
+- Steuersignal: TTL-Pegel
 
-- Rated load: 8A 150VAC (NO), 10A 24VDC (NO), 5A 250VAC (NO/NC), 5A 24VDC (NO/NC)
+- Nennbelastung: 8A 150VAC (NO), 10A 24VDC (NO), 5A 250VAC (NO/NC), 5A 24VDC (NO/NC)
 
-- Maximum switching power: AC1200VA DC240W (NO), AC625VA DC120W (NC)
+- Maximale Schaltleistung: AC1200VA DC240W (NO), AC625VA DC120W (NC)
 
-- Contact action time: 10ms
+- Kontakt-Schaltzeit: 10ms
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Firstly you need to prepare the following parts before connection.
+Zuerst müssen Sie vor dem Anschluss die folgenden Teile vorbereiten.
 
-- V4.0 Board\*1
+- V4.0 Platine\*1
 
-- Relay module\*1
+- Relaismodul\*1
 
-- LED module \*1
+- LED-Modul \*1
 
-- Breadboard \*1
+- Steckbrett \*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*9
+- Jumperkabel\*9
 
-Here we use the single relay module to control an LED module on or off.
+Hier verwenden wir das Einzelrelais-Modul, um ein LED-Modul ein- oder auszuschalten.
 
-For relay module, connect the Signal pin to Digital port 8 of V4.0 board, then connect its positive pin to anode row of breadboard, lead off the row to 5V port of V4.0 board. Connect its negative pin to cathode row of breadboard, lead off the row to GND port of V4.0 board.
+Beim Relaismodul verbinden Sie den Signal-Pin mit dem digitalen Port 8 der V4.0-Platine, dann verbinden Sie seinen positiven Pin mit der Anodenreihe des Steckbretts und führen diese Reihe zum 5V-Anschluss der V4.0-Platine. Verbinden Sie seinen negativen Pin mit der Kathodenreihe des Steckbretts und führen diese Reihe zum GND-Anschluss der V4.0-Platine.
 
-For LED module, connect its Signal pin to one terminal block of relay module, another terminal block on the relay is connected to Digital port 13 of V4.0 board. Connect its positive pin to anode row, negative pin to cathode row of breadboard.
+Beim LED-Modul verbinden Sie den Signal-Pin mit einem Klemmenanschluss des Relaismoduls, ein anderer Klemmenanschluss des Relais ist mit dem digitalen Port 13 der V4.0-Platine verbunden. Verbinden Sie seinen positiven Pin mit der Anodenreihe, den negativen Pin mit der Kathodenreihe des Steckbretts.
 
-![Connection Diagram illustration](../media/21cf9b1d5f0843230ee516a0a8be77e1.jpeg)
+![Anschlussdiagramm Abbildung](../media/21cf9b1d5f0843230ee516a0a8be77e1.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the code below to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -76,14 +76,14 @@ void loop()
 ///////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/c751be64bd8acd8c6114598b89586cfa.png)
+![Beispielergebnis Abbildung](../media/c751be64bd8acd8c6114598b89586cfa.png)
 
-This relay module is active at HIGH level.
+Dieses Relaismodul ist bei HIGH-Pegel aktiv.
 
-Wire it up well, powered up, then upload the above code to the board, you will see the relay is turned on（ON connected, NC disconnected）for two seconds, then turned off for two seconds（NC closed,ON disconnected）, repeatedly and circularly.
+Verdrahten Sie alles ordentlich, schalten Sie die Stromversorgung ein und laden Sie dann den obigen Code auf die Platine hoch. Sie werden sehen, dass das Relais für zwei Sekunden eingeschaltet ist (NO geschlossen, NC geöffnet), dann für zwei Sekunden ausgeschaltet ist (NC geschlossen, NO geöffnet), und dies wiederholt sich zyklisch.
 
-When the relay is turned on, external LED is on. If relay is turned off, external LED is off.
+Wenn das Relais eingeschaltet ist, leuchtet die externe LED. Ist das Relais ausgeschaltet, ist die externe LED aus.
 
 ---

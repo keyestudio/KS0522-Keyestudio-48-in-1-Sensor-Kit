@@ -1,29 +1,29 @@
-# Lesson 41: Magical Light Cup
+# Lektion 41: Magischer Lichtbecher
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 41: Magical Light Cup illustration](../media/dc3acff676b2611f440643f1657b42e7.png)
+![Projekt 41: Magischer Lichtbecher Abbildung](../media/dc3acff676b2611f440643f1657b42e7.png)
 
-## Introduction
+## Einführung
 
-Magic light cup module is able to interact with ARDUINO. The principle is based on PWM dimming.
+Das Modul des magischen Lichtbechers kann mit Arduino interagieren. Das Prinzip beruht auf PWM-Dimmung.
 
-The mercury switch on the module can provide a digital signal and trigger PWM regulation. The brightness of two modules will be changed together through the program design, finally you can see the changing effect that two set of cups are pouring the light.
+Der Quecksilberschalter auf dem Modul liefert ein digitales Signal und löst die PWM-Regelung aus. Die Helligkeit von zwei Modulen wird über das Programm gemeinsam verändert, sodass man schließlich den Effekt sehen kann, dass zwei Becher Licht „ausgießen“.
 
-## Specification
+## Technische Daten
 
-- Supply Voltage: 3.3V to 5V
+- Versorgungsspannung: 3.3V bis 5V
 
-- Interface: Digital
+- Schnittstelle: digital
 
-## Connection Diagram
+## Anschlussdiagramm
 
-![Connection Diagram illustration](../media/9d8d534c60a81608741f85c08d4d0bbe.jpeg)
+![Anschlussdiagramm Abbildung](../media/9d8d534c60a81608741f85c08d4d0bbe.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the code below to Arduino software.
+Kopiere den untenstehenden Code in die Arduino-Software.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -75,12 +75,12 @@ delay(5);
 ///////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/f629888f2fedea9442ba74dc8761fcb3.png)
+![Beispielergebnis Abbildung](../media/f629888f2fedea9442ba74dc8761fcb3.png)
 
-Wire it up as the above diagram and upload well the code to the board, then you can see one cap lights up while the other one is off. When tilt these two caps towards the same side, one cap is gradually become bright, another bright cap is gradually off.
+Verdrahte alles wie im obigen Diagramm und lade den Code auf die Platine hoch. Dann siehst du, dass ein Becher leuchtet, während der andere ausgeschaltet ist. Wenn du diese beiden Becher zur gleichen Seite kippst, wird ein Becher allmählich heller, während der andere allmählich dunkler wird.
 
-![Example Result illustration](../media/cfc57515b967d19fcda65ea50bda76f1.png)
+![Beispielergebnis Abbildung](../media/cfc57515b967d19fcda65ea50bda76f1.png)
 
 ---

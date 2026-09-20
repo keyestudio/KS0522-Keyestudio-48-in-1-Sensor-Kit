@@ -1,47 +1,47 @@
-# Lesson 29: Voltage Detection
+# Lektion 29: Spannungsdetektion
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 29: Voltage Detection illustration](../media/41967398a781944fd64ebd49a9c746fa.jpeg)
+![Projekt 29: Spannungsdetektion Abbildung](../media/41967398a781944fd64ebd49a9c746fa.jpeg)
 
-## Description
+## Beschreibung
 
-Since the electronic products are various, the voltage of the power supply is also different. It is indeed necessary to detect it with a suitable voltage detection module or controller.
+Da elektronische Produkte vielfältig sind, variiert auch die Versorgungsspannung. Es ist daher notwendig, diese mit einem geeigneten Spannungsdetektionsmodul oder -controller zu erfassen.
 
-The maximum input voltage of the controller’s analog interface is 5V, which means that the voltage greater than 5V will not be detected.
+Die maximale Eingangsspannung der analogen Schnittstelle des Controllers beträgt 5V, das bedeutet, dass Spannungen größer als 5V nicht gemessen werden können.
 
-However, this voltage detection module can achieve to detect the voltage greater than 5 V.
+Dieses Spannungsdetektionsmodul kann jedoch Spannungen größer als 5 V detektieren.
 
-It is based on a 5:1 resistive voltage divider. With a 5 V analog reference, the input voltage must not exceed 25 V. With a 3.3 V analog reference, the input voltage must not exceed 16.5 V.
+Es basiert auf einem 5:1 Widerstands-Spannungsteiler. Bei einer analogen Referenz von 5 V darf die Eingangsspannung 25 V nicht überschreiten. Bei einer analogen Referenz von 3,3 V darf die Eingangsspannung 16,5 V nicht überschreiten.
 
-The AVR analog-to-digital converter is 10-bit, so the analog resolution is 0.00489 V (5 V / 1023). With the 5:1 divider, the minimum measurable input increment is approximately 0.02445 V.
+Der AVR-Analog-Digital-Wandler ist 10-Bit, daher beträgt die analoge Auflösung 0,00489 V (5 V / 1023). Mit dem 5:1-Teiler ist die minimale messbare Eingangserhöhung ungefähr 0,02445 V.
 
-When connect this sensor to expansion board using 3Pin wire, it can not only easily detect the magnitude of the voltage power and monitor the electric quantity of battery for interactive media works or robot, but also can combine with IIC LCD1602 LCD module to display the voltage or make a voltage monitor.
+Wenn Sie diesen Sensor mit dem Erweiterungsboard über ein 3-poliges Kabel verbinden, kann er nicht nur einfach die Höhe der Versorgungsspannung erfassen und den Ladezustand der Batterie für interaktive Medienprojekte oder Roboter überwachen, sondern auch in Kombination mit einem IIC LCD1602 LCD-Modul die Spannung anzeigen bzw. als Spannungsanzeige fungieren.
 
-## Specification
+## Spezifikation
 
-- Working voltage: 0V-25V DC
+- Betriebsspannung: 0V-25V DC
 
-- Signal type: analog signal
+- Signaltyp: analoges Signal
 
-## Connection Diagram
+## Anschlussdiagramm
 
-First, you need to prepare the following parts before connection:
+Zuerst müssen Sie vor dem Anschluss folgende Teile vorbereiten:
 
-- V4.0 board\*1
+- V4.0-Platine\*1
 
-- Voltage sensor\*1
+- Spannungssensor\*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper wire\*3
+- Jumper-Kabel\*3
 
-Connect the S pin of module to Analog A0 of V4.0 board, connect the negative pin to GND port, NC pin to 5V port.
+Verbinden Sie den S-Pin des Moduls mit dem analogen A0 des V4.0-Boards, verbinden Sie den negativen Pin mit dem GND-Anschluss, den NC-Pin mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/b8754c45901ff42ba9caadce5db01a3a.jpeg)
+![Anschlussdiagramm Abbildung](../media/b8754c45901ff42ba9caadce5db01a3a.jpeg)
 
-## Sample Code
+## Beispielcode
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -80,12 +80,12 @@ Serial.print(val2);      //The serial port prints the value of the variable val2
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/ac8825bb333757bad26785e58651beb7.png)
+![Beispielergebnis Abbildung](../media/ac8825bb333757bad26785e58651beb7.png)
 
-Done as the above wiring, compile and upload the code, powered-on, then open the serial port monitor, it will print out the detected voltage value shown below.
+Nachdem die obige Verkabelung hergestellt wurde, kompilieren und laden Sie den Code hoch, schalten Sie die Stromversorgung ein und öffnen Sie dann den seriellen Monitor; er gibt den detektierten Spannungswert wie unten gezeigt aus.
 
-![Example Result illustration](../media/af699a83a891ea99d193d5b53bd27fa1.jpeg)
+![Beispielergebnis Abbildung](../media/af699a83a891ea99d193d5b53bd27fa1.jpeg)
 
 ---

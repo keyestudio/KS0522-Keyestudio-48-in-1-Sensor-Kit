@@ -1,45 +1,45 @@
-# Lesson 04: Traffic Light
+# Lektion 04: Ampel
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 4: Traffic Light illustration](../media/a20653cffac8985dc4919614540ac367.jpeg)
+![Projekt 4: Ampel Illustration](../media/a20653cffac8985dc4919614540ac367.jpeg)
 
-## Description
+## Beschreibung
 
-When learning the microcontroller, you may usually use three LEDs, namely red, green and yellow lights to simulate the traffic light blinking via external connection.
+Beim Erlernen des Mikrocontrollers verwendet man üblicherweise drei LEDs – nämlich rote, grüne und gelbe Leuchten –, um per externer Verbindung das Blinken einer Ampel zu simulieren.
 
-This time we specially design this module which is very convenient for wiring, and on the module you can see the red, yellow and green LED.
+Für dieses Projekt haben wir ein Modul speziell entworfen, das sehr praktisch zu verdrahten ist. Auf dem Modul sind die rote, gelbe und grüne LED sichtbar.
 
-This module is fully compatible with Arduino microcontroller and Raspberry Pi system.
+Dieses Modul ist vollständig kompatibel mit Arduino-Mikrocontrollern und dem Raspberry Pi.
 
-## Specification
+## Spezifikation
 
-- Working Voltage: 3.3-5v
+- Betriebsspannung: 3.3-5v
 
-- Interface Type: digital
+- Schnittstellentyp: digital
 
 - PH2.54 Socket
 
-## Connection Diagram
+## Anschlussdiagramm
 
-First, you need to prepare the following parts before connection:
+Zuerst müssen Sie vor dem Anschluss die folgenden Teile bereitstellen:
 
-- V4.0 Board\*1
+- V4.0 Platine\*1
 
-- Traffic light module \*1
+- Ampelmodul \*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*4
+- Jumperkabel\*4
 
-Connect the R pin of module to Digital 5 of V4.0 board, connect the Y pin to Digital 4, G pin to Digital 3, GND pin to ground port.
+Verbinden Sie den R-Pin des Moduls mit Digital 5 der V4.0-Platine, den Y-Pin mit Digital 4, den G-Pin mit Digital 3 und den GND-Pin mit dem Masseanschluss.
 
-![Connection Diagram illustration](../media/b6884692ce41d05d4afb167af5b2239d.jpeg)
+![Anschlussdiagramm Abbildung](../media/b6884692ce41d05d4afb167af5b2239d.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -72,10 +72,10 @@ digitalWrite(redled, LOW);// turn off red LED
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-Done uploading the code, powered up, three LEDs on the module will automatically simulate the traffic light on and off, circularly.
+Nachdem der Code hochgeladen und die Stromversorgung aktiviert wurde, simulieren die drei LEDs auf dem Modul automatisch zyklisch das Ein- und Ausschalten einer Ampel.
 
-![Example Result illustration](../media/6dd1ff8660b0a62795bd53fc6b6ff591.png)
+![Beispielergebnis Abbildung](../media/6dd1ff8660b0a62795bd53fc6b6ff591.png)
 
 ---

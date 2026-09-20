@@ -1,49 +1,49 @@
-# Lesson 02: RGB LED
+# Lektion 02: RGB-LED
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor-Kit  
+> **Platine:** Keyestudio V4.0 / Arduino-Uno-kompatible ATmega328P-Platine
 
-![Project 2: RGB LED illustration](../media/de14ae0679267cf87837b7c09934c52e.png)
+![Projekt 2: RGB-LED-Illustration](../media/de14ae0679267cf87837b7c09934c52e.png)
 
-## Description
+## Beschreibung
 
-This is a full-color LED module, which contains 3 basic colors－red, green and blue. They can be seen as separate LED lights.
+Dies ist ein Vollfarben-LED-Modul, das 3 Grundfarben enthält－Rot, Grün und Blau. Sie können als separate LEDs betrachtet werden.
 
-After programming, you can turn them on and off by sequence or can also use PWM analog output to mix three colors to generate different colors.
+Nach dem Programmieren können Sie sie der Reihe nach ein- und ausschalten oder den PWM-Analogausgang verwenden, um die drei Farben zu mischen und verschiedene Farben zu erzeugen.
 
-## Specification
+## Spezifikation
 
-- Color: red, green and blue
+- Farbe: Rot, Grün und Blau
 
-- Brightness: High
+- Helligkeit: Hoch
 
-- Voltage: 5V
+- Spannung: 5V
 
-- Input: digital level
+- Eingang: digitaler Pegel
 
-- Size: 30 \*20mm
+- Größe: 30 \*20mm
 
-- Weight: 3g
+- Gewicht: 3g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-First, you need to prepare the following parts before connection:
+Bereiten Sie vor dem Anschluss zuerst die folgenden Teile vor:
 
-- V4.0 Board\*1
+- V4.0 Platine\*1
 
-- RGB LED module \*1
+- RGB-LED-Modul \*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*4
+- Jumperkabel\*4
 
-Connect the V pin of module to 5V port of V4.0 board, connect the B pin to Digital 11, R pin to Digital 10, G pin to Digital 9.
+Verbinden Sie den V-Pin des Moduls mit dem 5V-Anschluss der V4.0-Platine, verbinden Sie den B-Pin mit Digital 11, den R-Pin mit Digital 10, den G-Pin mit Digital 9.
 
-![Connection Diagram illustration](../media/2c0a9305cd7c7b0c28c51bc2bc24eb39.jpeg)
+![Anschlussdiagramm-Illustration](../media/2c0a9305cd7c7b0c28c51bc2bc24eb39.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 const uint8_t redPin = 11;
@@ -72,10 +72,10 @@ void loop() {
 }
 ```
 
-## Example Result
+## Beispielergebnis
 
-Done wiring and powered up, upload well the code, you will see the RGB LED module emit shiny colors.
+Nachdem die Verkabelung abgeschlossen und die Stromversorgung eingeschaltet ist und der Code erfolgreich hochgeladen wurde, sehen Sie, wie das RGB-LED-Modul leuchtende Farben ausgibt.
 
-![Example Result illustration](../media/0872e5256edf443efcb68218505096ba.png)
+![Beispielergebnis-Illustration](../media/0872e5256edf443efcb68218505096ba.png)
 
 ---

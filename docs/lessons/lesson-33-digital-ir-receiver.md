@@ -1,49 +1,49 @@
-# Lesson 33: Digital IR Receiver
+# Lektion 33: Digitaler IR-Empfänger
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 33: Digital IR Receiver illustration](../media/f64f21b6ca681f928c3318bd2d33a017.png)
+![Projekt 33: Digitaler IR-Empfänger - Abbildung](../media/f64f21b6ca681f928c3318bd2d33a017.png)
 
-## Description
+## Beschreibung
 
-IR is widely used in remote control. With this IR receiver, Arduino project is able to receive command from any IR remoter controllers if you have the right decoder. Well, it will be also easy to make your own IR controller using IR transmitter.
+IR wird häufig in Fernsteuerungen eingesetzt. Mit diesem IR-Empfänger kann ein Arduino-Projekt Befehle von beliebigen IR-Fernbedienungen empfangen, vorausgesetzt, Sie haben den passenden Decoder. Es ist außerdem einfach, mit einem IR-Sender eine eigene IR-Fernbedienung zu bauen.
 
-## Specification
+## Spezifikation
 
-- Power Supply: 5V
+- Stromversorgung: 5V
 
-- Interface: Digital
+- Schnittstelle: Digital
 
-- Modulation Frequency: 38Khz
+- Modulationsfrequenz: 38Khz
 
-- Module Interface Socket: JST PH2.0
+- Modul-Anschlussbuchse: JST PH2.0
 
-- Size: 30*20mm
+- Größe: 30*20mm
 
-- Weight: 4g
+- Gewicht: 4g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Firstly you need to prepare the following parts before connection.
+Bereiten Sie vor dem Anschluss zunächst die folgenden Teile vor.
 
-- V4.0 Board\*1
+- V4.0-Platine\*1
 
-- IR Receiver module\*1
+- IR-Empfängermodul\*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*3
+- Jumper-Kabel\*3
 
-Connect the S pin of module to Digital 11 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinden Sie den S-Pin des Moduls mit Digitalpin 11 der V4.0-Platine, den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/687d429fe6360707f95fb6c5ddfa2ca7.jpeg)
+![Anschlussdiagramm - Abbildung](../media/687d429fe6360707f95fb6c5ddfa2ca7.jpeg)
 
-In the sample code below Digital pin 11 is in use, you may either change your wiring or change the sample code to match.
+Im untenstehenden Beispielcode wird Digitalpin 11 verwendet. Sie können entweder die Verkabelung ändern oder den Beispielcode anpassen, damit er übereinstimmt.
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the code below to Arduino software.
+Kopieren Sie den untenstehenden Code in die Arduino-Software.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -66,18 +66,18 @@ Copy and paste the code below to Arduino software.
 ///////////////////////////////////////////////////////////////
 ```
 
-**Note:** before compiling the code, do remember to place the library into libraries directory of Arduino IDE. Otherwise, compiling will fail.
+**Hinweis:** Bevor Sie den Code kompilieren, denken Sie daran, die Bibliothek in das Verzeichnis libraries der Arduino IDE zu legen. Andernfalls schlägt die Kompilierung fehl.
 
-IR Remote Library Includes some sample codes for sending and receiving.
+Die IR Remote Library enthält einige Beispielcodes zum Senden und Empfangen.
 
 <https://github.com/shirriff/Arduino-IRremote>
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/2692333113be48ffa11c27649d18dcb8.png)
+![Beispielergebnis - Abbildung](../media/2692333113be48ffa11c27649d18dcb8.png)
 
-Done wiring and uploading the code, then control the IR receiver module by an infrared remote control, D1 led will flash.
+Nach dem Verdrahten und Hochladen des Codes steuern Sie das IR-Empfängermodul mit einer Infrarot-Fernbedienung; die D1-LED wird blinken.
 
-![Example Result illustration](../media/4bb52e2957e3aaeace252021e7084c95.png)
+![Beispielergebnis - Abbildung](../media/4bb52e2957e3aaeace252021e7084c95.png)
 
 ---

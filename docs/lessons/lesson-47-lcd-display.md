@@ -1,66 +1,66 @@
-# Lesson 47: LCD Display
+# Lektion 47: LCD-Anzeige
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensorsatz  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P-Board
 
-![Project 47: LCD Display illustration](../media/1aa1fd551e180d013633c1fe857c24a6.jpeg)
+![Projekt 47: LCD-Anzeige Abbildung](../media/1aa1fd551e180d013633c1fe857c24a6.jpeg)
 
-## Description
+## Beschreibung
 
-This project we are going to drive this 0802 LCD display the text combined with V4.0 board.
+In diesem Projekt werden wir dieses 0802-LCD verwenden, um Text mit dem V4.0-Board anzuzeigen.
 
-The display capacity of LCD is 8x2 characters, and operating voltage of the chip is 4.5～5.5V.
+Die Anzeige des LCD hat eine Kapazität von 8x2 Zeichen, und die Betriebsspannung des Chips beträgt 4.5～5.5V.
 
-There are two connection method for 0802 LCD displaying the text, respectively 4-bit and 8-bit connection.
+Es gibt zwei Anschlussarten für das 0802-LCD zur Textanzeige, nämlich 4-Bit- und 8-Bit-Verbindung.
 
-You can refer to the related explanation below.
+Siehe die nachstehende Erklärung.
 
-## Interfaces Explanation
+## Schnittstellen-Erklärung
 
-| **Interface** | **Pin** | **Explanation**                                              |
+| **Schnittstelle** | **Pin** | **Erklärung**                                              |
 | :-----------: | :-----: | ------------------------------------------------------------ |
-|       1       |   VSS   | Logic Power Ground                                           |
-|       2       |   VDD   | Logic Power                                                  |
-|       3       |   V0    | LCD adjustable voltage, connect to the middle pin of 10K potentiometer |
-|       4       |   RS    | Data\\ Command option                                        |
-|       5       |   RW    | read\\write option                                           |
-|       6       |    E    | Enable read\\write, active at HIGH, falling edge lock the data |
-|       7       |   DB0   | Data input/output pin                                        |
-|       8       |   DB1   | Data input/output pin                                        |
-|       9       |   DB2   | Data input/output pin                                        |
-|      10       |   DB3   | Data input/output pin                                        |
-|      11       |   DB4   | Data input/output pin                                        |
-|      12       |   DB5   | Data input/output pin                                        |
-|      13       |   DB6   | Data input/output pin                                        |
-|      14       |   DB7   | Data input/output pin                                        |
-|      15       |  LED-A  | backlight power positive end                                 |
-|      16       |  LED-K  | backlight power negative end                                 |
+|       1       |   VSS   | Logik-Masse                                                 |
+|       2       |   VDD   | Logik-Spannungsversorgung                                   |
+|       3       |   V0    | Einstellbare LCD-Spannung, mit dem mittleren Anschluss des 10K-Potentiometer verbinden |
+|       4       |   RS    | Daten\\ Befehlsauswahl                                       |
+|       5       |   RW    | Lesen\\Schreiboption                                        |
+|       6       |    E    | Aktiviert Lesen\\Schreiben; bei HIGH aktiviert, bei fallender Flanke werden die Daten übernommen |
+|       7       |   DB0   | Daten Ein-/Ausgangspin                                       |
+|       8       |   DB1   | Daten Ein-/Ausgangspin                                       |
+|       9       |   DB2   | Daten Ein-/Ausgangspin                                       |
+|      10       |   DB3   | Daten Ein-/Ausgangspin                                       |
+|      11       |   DB4   | Daten Ein-/Ausgangspin                                       |
+|      12       |   DB5   | Daten Ein-/Ausgangspin                                       |
+|      13       |   DB6   | Daten Ein-/Ausgangspin                                       |
+|      14       |   DB7   | Daten Ein-/Ausgangspin                                       |
+|      15       |  LED-A  | Positive Klemme der Hintergrundbeleuchtung                  |
+|      16       |  LED-K  | Negative Klemme der Hintergrundbeleuchtung                  |
 
-## Hardware Required
+## Benötigte Hardware
 
-Firstly you need to prepare the following parts:
+Zuerst müssen Sie die folgenden Teile vorbereiten:
 
-- V4.0 Board × 1
+- V4.0-Platine × 1
 - 0802 LCD × 1
-- Rotary potentiometer × 1
-- Breadboard × 1
-- USB cable × 1
-- Jumper wires, as needed
-- Dupont wires, as needed
+- Drehpotentiometer × 1
+- Steckbrett × 1
+- USB-Kabel × 1
+- Jumperkabel, nach Bedarf
+- Dupont-Kabel, nach Bedarf
 
-## Connection Diagram
+## Anschlussdiagramm
 
-## 4-bit Connection
+## 4-Bit-Verbindung
 
-![4-bit Connection illustration](../media/6b3c862d4b36726275b67b747e6d5df3.jpeg)
+![4-Bit-Verbindung Abbildung](../media/6b3c862d4b36726275b67b747e6d5df3.jpeg)
 
-## 8-bit Connection
+## 8-Bit-Verbindung
 
-![8-bit Connection illustration](../media/97a92aff5ba45d0f7daaca6307b9a5fd.png)
+![8-Bit-Verbindung Abbildung](../media/97a92aff5ba45d0f7daaca6307b9a5fd.png)
 
-## Source Code
+## Quellcode
 
-## For 4-bit Connection
+## Für 4-Bit-Verbindung
 
 ```C
 //////////////////////////////////////////////////////////
@@ -83,7 +83,7 @@ void loop() {
 //////////////////////////////////////////////////////////
 ```
 
-## For 8-bit Connection
+## Für 8-Bit-Verbindung
 
 ```C
 #include <LiquidCrystal.h>
@@ -105,16 +105,16 @@ void loop() {
 }
 ```
 
-## Example Result
+## Beispielergebnis
 
-Wire it up well, powered up, upload the above code to the board, adjust the backlight of LCD through rotating the potentiometer, finally you can see the character is displayed on the LCD screen.
+Gut verdrahten, mit Strom versorgen, den obigen Code auf das Board hochladen, die Hintergrundbeleuchtung des LCD über das Drehen am Potentiometer einstellen — schließlich sollten die Zeichen auf dem LCD-Bildschirm angezeigt werden.
 
-If you use the 4-bit connection, you should see the LCD display the character "Hello" on the first line, and the second line display the character "world!" shown as below.
+Wenn Sie die 4-Bit-Verbindung verwenden, sollte das LCD in der ersten Zeile "Hallo" und in der zweiten Zeile "Welt!" anzeigen, wie unten dargestellt.
 
-![Example Result illustration](../media/7d2763d65677d2925902ffcc65bf1b12.png)
+![Beispielergebnis Abbildung](../media/7d2763d65677d2925902ffcc65bf1b12.png)
 
-If using the 8-bit connection, you will see other characters are displayed on the LCD. Shown below.
+Bei Verwendung der 8-Bit-Verbindung werden andere Zeichen auf dem LCD angezeigt, wie unten gezeigt.
 
-![Example Result illustration](../media/61002a13397f8041574b375b0032da26.png)
+![Beispielergebnis Abbildung](../media/61002a13397f8041574b375b0032da26.png)
 
 ---

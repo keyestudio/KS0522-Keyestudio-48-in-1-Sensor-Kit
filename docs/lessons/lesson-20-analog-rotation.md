@@ -1,35 +1,35 @@
-# Lesson 20: Analog Rotation
+# Lektion 20: Analoge Drehung
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor-Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P Platine
 
-![Project 20: Analog Rotation illustration](../media/7a7fffa705c4a50e87455e6d378eb837.png)
+![Projekt 20: Analoge Drehung Illustration](../media/7a7fffa705c4a50e87455e6d378eb837.png)
 
-## Description
+## Beschreibung
 
-This analog rotation sensor is Arduino compatible. It is based on a potentiometer. Its voltage can be subdivided into 1024, easy to be connected to Arduino with our sensor shield.
+Dieser analoge Rotationssensor ist mit Arduino kompatibel. Er basiert auf einem Potentiometer. Seine Spannung lässt sich in 1024 Werte unterteilen und er lässt sich einfach mit unserem Sensorshield an das Arduino anschließen.
 
-Combined with other sensors, you can use it to make interesting projects by reading the analog value from the IO port.
+In Kombination mit anderen Sensoren können Sie ihn für interessante Projekte verwenden, indem Sie den analogen Wert vom I/O-Port auslesen.
 
-## Specification
+## Spezifikation
 
-- Supply Voltage: 3.3V to 5V
+- Versorgungsspannung: 3,3 V bis 5 V
 
-- Interface: Analog
+- Schnittstelle: Analog
 
-- Size: 30*20mm
+- Größe: 30 × 20 mm
 
-- Weight: 8g
+- Gewicht: 8 g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Connect the S pin of module to Analog A0 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinden Sie den S‑Pin des Moduls mit Analog A0 der V4.0‑Platine, verbinden Sie den negativen Pin mit dem GND‑Anschluss und den positiven Pin mit dem 5V‑Anschluss.
 
-![Connection Diagram illustration](../media/f8a0c2cca0f3d0935ce0c9a0c4dbe59e.jpeg)
+![Anschlussdiagramm Abbildung](../media/f8a0c2cca0f3d0935ce0c9a0c4dbe59e.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -47,12 +47,12 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/bae047449c10c99449c35a14b22d759c.png)
+![Beispielergebnis Illustration](../media/bae047449c10c99449c35a14b22d759c.png)
 
-Done wiring and powered up, upload well the code, then open the serial monitor and set the baud rate as 9600, finally you will see the analog value. If rotate the knob on the rotation sensor, the value will be changed within 0-1023. Shown below.
+Nachdem die Verkabelung abgeschlossen und die Stromversorgung eingeschaltet ist und der Code erfolgreich hochgeladen wurde, öffnen Sie den seriellen Monitor und stellen Sie die Baudrate auf 9600 ein. Danach sehen Sie den analogen Wert. Wenn Sie den Drehknopf des Rotationssensors drehen, ändert sich der Wert im Bereich 0–1023. Siehe unten.
 
-![Example Result illustration](../media/bc7b15c3245b7cfd91b0ef4b0aeb8e7e.jpeg)
+![Beispielergebnis Illustration](../media/bc7b15c3245b7cfd91b0ef4b0aeb8e7e.jpeg)
 
 ---

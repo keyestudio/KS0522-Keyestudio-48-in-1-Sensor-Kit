@@ -1,92 +1,92 @@
-# Lesson 42: Attitude Sensor
+# Lektion 42: Lage-Sensor
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / mit dem Arduino Uno kompatible ATmega328P-Platine
 
-![Project 42: Attitude Sensor illustration](../media/8eb8d16c5e76e50a6609678130a9ee29.jpeg)
+![Projekt 42: Lage-Sensor Abbildung](../media/8eb8d16c5e76e50a6609678130a9ee29.jpeg)
 
-## Introduction
+## Einführung
 
-**Compatibility notice.** The component list labels this board as APDS-9930, but the following legacy example targets an APDS-9960 and uses `SparkFun_APDS9960`. Check the IC marking on the actual module before uploading this sketch; do not use this example with an APDS-9930 board. APDS-9930 in a single 8 pin package can provide the ambient light sensor which is compatible with I2C interface and infrared LED proximity sensor.
+**Kompatibilitäts-Hinweis.** Die Teileliste bezeichnet diese Platine als APDS-9930, aber das folgende ältere Beispiel richtet sich an einen APDS-9960 und verwendet `SparkFun_APDS9960`. Prüfen Sie die IC-Beschriftung des tatsächlichen Moduls, bevor Sie diesen Sketch hochladen; verwenden Sie dieses Beispiel nicht mit einem APDS-9930-Board. Der APDS-9930 im 8-poligen Gehäuse bietet einen Umgebungslichtsensor, der I2C-kompatibel ist, sowie einen Infrarot-LED-Näherungssensor.
 
-The proximity sensor which is completely adjusted can detect 100mm object, and exempt the factory calibration requirements of terminal equipment as well as sub-components.
+Der Näherungssensor, der vollständig kalibriert ist, kann Objekte in 100 mm Entfernung erkennen und hebt damit die werkseitigen Kalibrieranforderungen von Endgeräten und Unterbaugruppen auf.
 
-From the bright sunlight to the dark room, proximity sensor’s proximity detection function can operate well.
+Vom hellen Sonnenlicht bis zum dunklen Raum funktioniert die Näherungsdetektion zuverlässig.
 
-This module added micro optical lens can provide infrared energy efficient transmission and reception, which can reduce the overall power consumption.
+Dieses Modul fügt eine mikro-optische Linse hinzu, die eine energieeffiziente Übertragung und Empfang von Infrarotenergie ermöglicht und so den Gesamtenergieverbrauch reduziert.
 
-In addition, its internal state machine can make the device into a low power mode, bringing a very low average power consumption.
+Zusätzlich kann seine interne Zustandsmaschine das Gerät in einen Niedrigenergie-Modus versetzen, was zu einem sehr geringen durchschnittlichen Stromverbrauch führt.
 
-## Parameters
+## Parameter
 
-- Working Voltage：DC 3.3-3.8V
+- Betriebsspannung：DC 3.3-3.8V
 
-- Output Current：0-20mA
+- Ausgangsstrom：0-20mA
 
-- Temperature Range：-40℃—85℃
+- Temperaturbereich：-40℃—85℃
 
-## Features
+## Merkmale
 
-1. Optical module integrated with ALS, infrared LED and proximity detector;
+1. Optisches Modul integriert ALS, Infrarot-LED und Näherungsdetektor;
 
-2. Up to 16-bit resolution;
+2. Bis zu 16-Bit Auflösung;
 
-3. High sensitivity of operation in the back of dark glass;
+3. Hohe Empfindlichkeit auch bei dunklem Glas;
 
-4. 0.01lux low lumen performance;
+4. 0.01 lux niedrige Lichtleistung;
 
-5. Proximity detection, fully calibrated to 100 mm detection;
+5. Näherungserkennung, werkseitig vollständig auf 100 mm Detektion kalibriert;
 
-6. Integrate infrared LED and synchronous LED driver;
+6. Integrierte Infrarot-LED und synchroner LED-Treiber;
 
-7. Eliminate factory calibration for proximity sensors;
+7. Keine werkseitige Kalibrierung für Näherungssensoren erforderlich;
 
-8. Programmable waiting timer, waiting state’s power consumption- 90μA (typical value);
+8. Programmierbarer Warte-Timer, Leistungsaufnahme im Wartezustand – 90μA (typischer Wert);
 
-9. Programmable range is from 2.7milliseconds to 8 seconds;
+9. Programmierbarer Bereich von 2,7 Millisekunden bis 8 Sekunden;
 
-10. Compatible with I2C interface, up to 400kHz (I2C fast mode);
+10. Kompatibel mit I2C-Schnittstelle, bis zu 400 kHz (I2C-Fast-Mode);
 
-11. Dedicated interruption pin;
+11. Dedizierter Interrupt-Pin;
 
-12. Sleep mode power - 2.2μA (typical value).
+12. Sleep-Modus Stromverbrauch - 2.2μA (typischer Wert).
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Firstly you need to prepare the following parts:
+Zuerst müssen Sie die folgenden Teile vorbereiten:
 
-- V4.0 Board\*1
+- V4.0 Platine\*1
 
-- Attitude sensor\*1
+- Lage-Sensor\*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*5
+- Jumperkabel\*5
 
-Connect the INT pin of sensor to Digital 2 port of V4.0 board, SCL pin to Analog A5 port, SDA pin to Analog A4 port; Connect 3V3 pin to 3V3 port, GND pin to GND port.
+Verbinden Sie den INT-Pin des Sensors mit dem digitalen Port D2 der V4.0-Platine, den SCL-Pin mit dem analogen Port A5, den SDA-Pin mit dem analogen Port A4; verbinden Sie den 3V3-Pin mit dem 3V3-Anschluss und den GND-Pin mit GND.
 
-![Connection Diagram illustration](../media/c906c4e8a06998118eac5e3b981386d6.jpeg)
+![Anschlussdiagramm Abbildung](../media/c906c4e8a06998118eac5e3b981386d6.jpeg)
 
-## Sample Code
+## Beispielcode
 
-**IMPORTANT**: The APDS-9960 can only accept 3.3V!
+**WICHTIG**: Der APDS-9960 akzeptiert nur 3.3V!
 
-## Hardware Connections
+## Hardware-Verbindungen
 
-| Arduino Pin | APDS-9960 Board | Function  |
+| Arduino Pin | APDS-9960 Board | Funktion  |
 | :---------: | :-------------: | :-------: |
-|    3.3V     |       VCC       |   Power   |
-|     GND     |       GND       |  Ground   |
-|     A4      |       SDA       | I2C Data  |
-|     A5      |       SCL       | I2C Clock |
+|    3.3V     |       VCC       |   Stromversorgung   |
+|     GND     |       GND       |  Masse   |
+|     A4      |       SDA       | I2C-Daten  |
+|     A5      |       SCL       | I2C-Takt |
 |     D2      |       INT       | Interrupt |
 |     D13     |        -        |    LED    |
 
-**Resources:** Include Wire.h and SparkFun_APDS-9960.h
+**Ressourcen:** Einbinden von Wire.h und SparkFun_APDS-9960.h
 
-**Development environment specifics**: Written in Arduino 1.0.5
+**Entwicklungsumgebung:** Geschrieben für Arduino 1.0.5
 
-Copy and paste the code below to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 #include <Wire.h>
@@ -197,14 +197,14 @@ void interruptRoutine() {
 }
 ```
 
-Note: before compiling the code, do remember to place the library into libraries directory of Arduino IDE. Otherwise, compiling will fail.
+Hinweis: Bevor Sie den Code kompilieren, denken Sie daran, die Bibliothek in das Verzeichnis libraries der Arduino-IDE zu legen. Andernfalls schlägt die Kompilierung fehl.
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/2a30729fa77874e4e61f51d2bb8e62c1.png)
+![Beispielergebnis Abbildung](../media/2a30729fa77874e4e61f51d2bb8e62c1.png)
 
-After uploading the code, open the serial monitor and set the baud rate to 9600.
+Nachdem Sie den Code hochgeladen haben, öffnen Sie den seriellen Monitor und stellen Sie die Baudrate auf 9600 ein.
 
-![Example Result illustration](../media/935c7035ef43f54ca65eaa49bbaf5e98.jpeg)
+![Beispielergebnis Abbildung](../media/935c7035ef43f54ca65eaa49bbaf5e98.jpeg)
 
 ---

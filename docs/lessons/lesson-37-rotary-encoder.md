@@ -1,35 +1,35 @@
-# Lesson 37: Rotary Encoder
+# Lektion 37: Drehgeber
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 37: Rotary Encoder illustration](../media/df622003846058dd3cf442518f655af2.png)
+![Projekt 37: Drehgeber Abbildung](../media/df622003846058dd3cf442518f655af2.png)
 
-## Introduction
+## Einführung
 
-The rotary encoder can count the pulse outputting times during the process of rotation in positive and reverse direction.
+Der Drehgeber kann die während der Rotation in Vorwärts- und Rückwärtsrichtung ausgegebenen Pulssignale zählen.
 
-This rotating counting is unlimited, not like potential counting. It can be restored to initial state to count from 0.
+Diese Zählung ist unbegrenzt, im Gegensatz zum Potentiometer. Sie kann auf den Anfangszustand zurückgesetzt werden, um wieder bei 0 zu zählen.
 
-## Specification
+## Spezifikation
 
-- Power Supply: 5V
+- Stromversorgung: 5V
 
-- Interface: Digital
+- Schnittstelle: Digital
 
-- Size: 30\*20mm
+- Größe: 30\*20mm
 
-- Weight: 7g
+- Gewicht: 7g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-![Connection Diagram illustration](../media/1de37f27caa224141230be6bdc95d29b.jpeg)
+![Anschlussdiagramm Abbildung](../media/1de37f27caa224141230be6bdc95d29b.jpeg)
 
-As seen in the diagram, we connect rotary encoder module and two LED modules to the breadboard and V4.0 board.
+Wie im Diagramm zu sehen, verbinden wir das Drehgeber-Modul und zwei LED-Module mit dem Steckbrett und dem V4.0-Board.
 
-Use the rotary encoder module to control two LED modules on and off.
+Verwende das Drehgeber-Modul, um zwei LED-Module ein- und auszuschalten.
 
-## Sample Code
+## Beispielcode
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -92,12 +92,12 @@ void RoteStateChanged() //When CLK  FALLING READ DAT
 ///////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-Wiring well and uploading the above code, you can rotate the encoder module to randomly control two LED modules on and off. When you rotate the encoder module, one LED module is turned on first but another one is off.
+Wenn die Verkabelung korrekt ist und der obenstehende Code hochgeladen wurde, kannst du durch Drehen des Encoders die beiden LED-Module abwechselnd ein- und ausschalten. Beim Drehen wird zunächst ein LED-Modul eingeschaltet, während das andere aus ist.
 
-If you continue to rotate the encoder module, one LED module becomes off while another one is turned on, repeatedly.
+Wenn du weiter drehst, wird das eine LED-Modul ausgeschaltet, während das andere eingeschaltet wird — und das wiederholt sich.
 
-![Example Result illustration](../media/4c1455602dc8ab6d61f5ab2e2d5dd67c.png)
+![Beispielergebnis Abbildung](../media/4c1455602dc8ab6d61f5ab2e2d5dd67c.png)
 
 ---

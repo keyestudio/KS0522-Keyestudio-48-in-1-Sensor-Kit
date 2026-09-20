@@ -1,55 +1,55 @@
-# Lesson 45: Micro Servo
+# Lektion 45: Mikro-Servo
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino-Uno-kompatible ATmega328P-Platine
 
-![Project 45: Micro Servo illustration](../media/12c59bd3ab0733beb6ff7802305d4384.jpeg)
+![Projekt 45: Mikro-Servo Abbildung](../media/12c59bd3ab0733beb6ff7802305d4384.jpeg)
 
-## Introduction
+## Einführung
 
-Servomotor is a position control rotary actuator. It mainly consists of housing, circuit board, core-less motor, gear and position sensor.
+Ein Servomotor ist ein drehbarer Aktuator zur Positionsregelung. Er besteht hauptsächlich aus Gehäuse, Platine, kernlosem Motor, Getriebe und einem Positionssensor.
 
-Included with your servo motor you will find a variety of white motor mounts that connect to the shaft of your servo. You may choose to attach any mount you wish for the circuit. It will serve as a visual aid, making it easier to see the servo spin.
+Zum Lieferumfang Ihres Servomotors gehören verschiedene weiße Motorhalterungen, die an die Welle Ihres Servos angeschlossen werden. Sie können jede gewünschte Halterung anbringen. Sie dient als visuelle Hilfe und macht es einfacher, die Drehung des Servos zu sehen.
 
-The servo has three interfaces,distinguished by brown, red and orange line (different brand may have different color). Brown line is for GND, red one for power 5V, orange one for signal terminal (PWM signal).
+Der Servo hat drei Leitungen, die sich durch braune, rote und orangefarbene Drähte unterscheiden (bei anderen Herstellern können die Farben abweichen). Die braune Leitung ist für GND, die rote für die Versorgung 5V und die orange für das Signalkabel (PWM-Signal).
 
-![Introduction illustration](../media/e7eb9914318b92eff98a4a84a8d1a557.png)
+![Einführung Abbildung](../media/e7eb9914318b92eff98a4a84a8d1a557.png)
 
-The rotation angle of servo is controlled by regulating the duty cycle of the PWM(Pulse-Width Modulation) signal. The standard cycle of the PWM signal is fixed at 20ms (50 Hz), and the pulse width is distributed between 1ms-2ms. The pulse width corresponds to the rotation angle ( 0°～90°) of servo.
+Der Drehwinkel des Servos wird durch Regelung des Tastverhältnisses des PWM (Pulsweitenmodulation)-Signals gesteuert. Der Standardzyklus des PWM-Signals ist auf 20 ms (50 Hz) festgelegt, und die Pulsbreite liegt zwischen 1 ms und 2 ms. Die Pulsbreite entspricht dem Drehwinkel (0°–90°) des Servos.
 
-![Introduction illustration](../media/723671941df8a57cf9246c9916e7b279.png)
+![Einführung Abbildung](../media/723671941df8a57cf9246c9916e7b279.png)
 
-Next, let's learn how to control a servomotor.
+Als Nächstes lernen wir, wie man einen Servomotor steuert.
 
-In this experiment, you only need a servomotor and several jumper wires.
+Für dieses Experiment benötigen Sie nur einen Servomotor und einige Jumperkabel.
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Connection for V4.0 :
+Anschluss für V4.0 :
 
-![Connection Diagram illustration](../media/da1e3590f86a5a8ed27b333742ae49c9.jpeg)
+![Anschlussdiagramm Abbildung](../media/da1e3590f86a5a8ed27b333742ae49c9.jpeg)
 
-Connection for 2560 R3:
+Anschluss für 2560 R3:
 
-![Connection Diagram illustration](../media/1c8bd09408be60254883b910ef4fc9bf.png)
+![Anschlussdiagramm Abbildung](../media/1c8bd09408be60254883b910ef4fc9bf.png)
 
-Connect the motor to digital pin 9.
+Schließen Sie den Motor an digitalen Pin 9 an.
 
-Compile a program to control the motor rotate to the commanded angle, and display the angle on the screen.
+Kompilieren Sie ein Programm, um den Motor auf den angeforderten Winkel zu drehen und den Winkel auf dem Bildschirm anzuzeigen.
 
-## Sample Program
+## Beispielprogramm
 
-There are two ways to control a servomotor with Arduino.
+Es gibt zwei Möglichkeiten, einen Servomotor mit Arduino zu steuern.
 
-One is to use a common digital sensor port of Arduino to produce square wave with different duty cycle to simulate PWM signal and use that signal to control the positioning of the motor.
+Die eine besteht darin, einen normalen digitalen Sensoranschluss des Arduino zu verwenden, um ein Rechtecksignal mit unterschiedlichem Tastverhältnis zu erzeugen, das ein PWM-Signal simuliert, und dieses Signal zur Positionssteuerung des Motors zu nutzen.
 
-Another way is to directly use the Servo function of the Arduino to control the motor.
+Die andere Möglichkeit ist, direkt die Servo-Funktion des Arduino zu verwenden, um den Motor zu steuern.
 
-In this way, the program will be easier but it can only control two-contact motor for the servo function, only digital pin 9 and 10 can be used. The Arduino drive capacity is limited. So if you need to control more than one motor, you will need external power.
+Auf diese Weise wird das Programm einfacher, aber es kann nur Zweileiter-Servomotoren steuern; es können nur die digitalen Pins 9 und 10 verwendet werden. Die Antriebskapazität des Arduino ist begrenzt. Wenn Sie mehr als einen Motor steuern müssen, benötigen Sie daher eine externe Stromversorgung.
 
-## Method 1
+## Methode 1
 
-## Sample Program A
+## Beispielprogramm A
 
 ```c
 //////////////////////////////////////////////////////////
@@ -90,25 +90,25 @@ servopulse(servopin,val);// use the pulse function
 //////////////////////////////////////////////////////////
 ```
 
-## Method 2
+## Methode 2
 
-Let's first take a look at the Arduino built-in servo function and some common statements.
+Sehen wir uns zunächst die eingebaute Servo-Funktion des Arduino und einige gängige Anweisungen an.
 
-1\. **attach（interface**）——select pin for servo, can only use pin 9 or 10.
+1\. **attach（Schnittstelle**）——Wählen Sie den Pin für den Servo; es können nur die Pins 9 oder 10 verwendet werden.
 
-2\. **write（angle）**——used to control the rotate angle of the servo, can set the angle among 0 degree to 180 degree.
+2\. **write（Winkel）**——wird verwendet, um den Drehwinkel des Servos zu steuern; der Winkel kann von 0° bis 180° eingestellt werden.
 
-3\. **read（）**——used to read the angle of the servo, consider it a function to read the value in the write() function.
+3\. **read（）**——liest den Winkel des Servos; betrachten Sie es als Funktion, um den in write() gesetzten Wert auszulesen.
 
-4\. **attached（）**——determine whether the parameter of the servo is sent to the servo pin.
+4\. **attached（）**——prüft, ob die Parameter des Servos an den Servopin gesendet wurden.
 
-5\. **detach（）**—— disconnect the servo and the pin, and the pin(digital pin 9 or 10) can be used for PWM port.
+5\. **detach（）**——trennt den Servo vom Pin, und der Pin (digitaler Pin 9 oder 10) kann als PWM-Ausgang verwendet werden.
 
-**Note:** the written form of the above statements are " servo variable name. specific statement ()", e.g. myservo. Attach (9).
+**Hinweis:** Die Schreibweise der obigen Anweisungen ist "servo-Variablenname.spezifische Anweisung()", z. B. myservo. Attach (9).
 
-Still, connect the servo to pin 9.
+Verbinden Sie weiterhin den Servo mit Pin 9.
 
-## Sample Program B
+## Beispielprogramm B
 
 ```c
 #include <Servo.h>// define a header file. Special attention here, you can call the servo function directly from Arduino's software menu
@@ -124,14 +124,14 @@ myservo.write(90);// set rotating angle of the motor
 }
 ```
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/f02556e0631fb206c114ced29e643016.png)
+![Beispielergebnis Abbildung](../media/f02556e0631fb206c114ced29e643016.png)
 
-Wire it up well, upload the Program A to the board, then click to open the serial monitor of Arduino software, set the baud rate to 9600, and on the upper bar enter a number and click “Send”, you will see the servo rotate to the corresponding angle, and moving angle will be displayed on the monitor. Shown below.
+Verdrahten Sie alles korrekt, laden Sie Programm A auf das Board, öffnen Sie dann den Seriellen Monitor der Arduino-Software, stellen Sie die Baudrate auf 9600, geben Sie in der oberen Leiste eine Zahl ein und klicken Sie auf „Senden“; Sie werden sehen, dass der Servo zum entsprechenden Winkel dreht, und der Drehwinkel im Monitor angezeigt wird. Siehe unten.
 
-Powered up, upload well the Program B to the board, first servo will turn to the angle of 90 degree.
+Bei eingeschalteter Stromversorgung und korrekt hochgeladenem Programm B fährt der Servo zunächst auf einen Winkel von 90°.
 
-![Example Result illustration](../media/de50d502cb8ed1feb5935d16584cfd63.png)
+![Beispielergebnis Abbildung](../media/de50d502cb8ed1feb5935d16584cfd63.png)
 
 ---

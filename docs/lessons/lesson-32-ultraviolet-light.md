@@ -1,54 +1,53 @@
-# Lesson 32: Ultraviolet Light
+# Lektion 32: Ultraviolettes Licht
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor-Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 32: Ultraviolet Light illustration](../media/15613ff0e8f059a9034e923ab5c2be24.jpeg)
+![Projekt 32: Ultraviolettes Licht Illustration](../media/15613ff0e8f059a9034e923ab5c2be24.jpeg)
 
-## Description
+## Beschreibung
 
-Keyestudio GUVA-S12SD ultraviolet sensor is used to detect ultraviolet light. It includes GUVA-S12SD applied to measure ultraviolet index of intelligent wearable device, such as watches, smart phone and outdoor device with UV index detecting.
+Der Keyestudio GUVA-S12SD Ultraviolett-Sensor wird verwendet, um ultraviolettes Licht zu erkennen. Er wird unter anderem eingesetzt, um den UV-Index intelligenter Wearables wie Uhren, Smartphones und Outdoor-Geräte mit UV-Index-Erkennung zu messen.
 
-It can be also used to monitor the intensity of ultraviolet light or used as a
-UV flame detector when disinfecting things by ultraviolet light.
+Er kann auch zur Überwachung der Intensität von UV-Licht oder als UV-Flammendetektor bei der Desinfektion von Gegenständen mit UV-Licht verwendet werden.
 
-## Parameters
+## Parameter
 
-- Size: 15mm×30mm×0.7mm
+- Größe: 15mm×30mm×0.7mm
 
-- Supply Voltage: 2.5V～5V
+- Versorgungsspannung: 2.5V～5V
 
-- Output Signal: Analog Signal
+- Ausgangssignal: Analoges Signal
 
-- Detecting Range of Spectrum: 240-370nm
+- Erkennungsbereich des Spektrums: 240-370nm
 
-- Active Region: 0.076mm2
+- Aktive Fläche: 0.076mm2
 
-- Responsivity: 0.14A/W
+- Empfindlichkeit: 0.14A/W
 
-- Dark Current: 1nA
+- Dunkelstrom: 1nA
 
-- Light Current: 101\~125nA UVA Light, 1mW/cm2
+- Lichtstrom: 101\~125nA UVA-Licht, 1mW/cm2
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Firstly you need to prepare the following parts before connection.
+Zuerst müssen Sie die folgenden Teile vor dem Anschluss vorbereiten.
 
-- V4.0 Board\*1
+- V4.0 Platine\*1
 
-- GUVA-S12SD 3528 Ultraviolet Sensor \*1
+- GUVA-S12SD 3528 Ultraviolett-Sensor \*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*3
+- Jumperkabel\*3
 
-Connect the S pin of module to Analog A0 of V4.0 board, connect the negative pin to GND port, positive pin to 3V3 port.
+Verbinde den S-Pin des Moduls mit dem analogen A0 des V4.0-Boards, den Minuspol mit dem GND-Anschluss und den Pluspol mit dem 3V3-Anschluss.
 
-![Connection Diagram illustration](../media/092ebb11142cfe83507989a5b2de0526.jpeg)
+![Verbindungsdiagramm Illustration](../media/092ebb11142cfe83507989a5b2de0526.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the code below to Arduino software.
+Kopiere den folgenden Code in die Arduino-Software.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -77,16 +76,16 @@ void loop() {
 ///////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/e81338e1f55ff6b55fbfe369f92b54da.png)
+![Beispielergebnis Illustration](../media/e81338e1f55ff6b55fbfe369f92b54da.png)
 
-Wire it up well and upload the program code, then open serial monitor, it will display the data.
+Verdrahte alles korrekt und lade den Programmcode hoch, dann öffne den seriellen Monitor; er zeigt die Daten an.
 
-If shine UV light to the sensor, the data on serial monitor is changing shown as the following picture.
+Wenn UV-Licht auf den Sensor gerichtet wird, ändern sich die Daten im seriellen Monitor, wie in der folgenden Abbildung gezeigt.
 
-![Example Result illustration](../media/3a7f2a608faa9c72aee76d2820f78845.png)
+![Beispielergebnis Illustration](../media/3a7f2a608faa9c72aee76d2820f78845.png)
 
-![Example Result illustration](../media/610d2325395cd3b44ce3c18e05595518.jpeg)
+![Beispielergebnis Illustration](../media/610d2325395cd3b44ce3c18e05595518.jpeg)
 
 ---

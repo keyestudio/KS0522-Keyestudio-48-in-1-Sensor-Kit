@@ -1,51 +1,51 @@
-# Lesson 16: Flame Alarm
+# Lektion 16: Flammenalarm
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensorset  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P Platine
 
-![Project 16: Flame Alarm illustration](../media/35c5a2593df5d4e76865158e790feada.png)
+![Projekt 16: Flammenalarm Illustration](../media/35c5a2593df5d4e76865158e790feada.png)
 
-## Description
+## Beschreibung
 
-This flame sensor can be used to detect fire or other lights with wavelength stands at 760nm \~ 1100nm.
+Dieser Flammensensor kann verwendet werden, um Feuer oder andere Lichtquellen mit einer Wellenlänge von 760nm \~ 1100nm zu erkennen.
 
-In the fire-fighting robot game, the flame plays an important role in the probing, which can be used as the robot's eyes to find fire source.
+Im Feuerwehrroboter-Spiel spielt die Flamme eine wichtige Rolle bei der Erkundung und kann als „Augen“ des Roboters dienen, um die Brandquelle zu finden.
 
-## Specification
+## Spezifikation
 
-1. Supply Voltage: 3.3V to 5V
+1. Versorgungsspannung: 3.3V bis 5V
 
-2. Detection range: 20cm (4.8V) \~ 100cm (1V)
+2. Erkennungsreichweite: 20cm (4.8V) \~ 100cm (1V)
 
-3. Rang of Spectral Bandwidth: 760nm to 1100nm
+3. Bereich der spektralen Bandbreite: 760nm bis 1100nm
 
-4. Operating temperature: -25℃to 85℃
+4. Betriebstemperatur: -25℃ bis 85℃
 
-5. Interface: digital
+5. Schnittstelle: digital
 
-6. Size: 44*16.7mm
+6. Größe: 44*16.7mm
 
-7. Weight: 4g
+7. Gewicht: 4g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-First, you need to prepare the following parts before connection:
+Bereiten Sie vor dem Anschluss zunächst die folgenden Teile vor:
 
-- V4.0 Board*1
+- V4.0-Platine*1
 
-- Flame sensor*1
+- Flammensensor*1
 
-- USB Cable*1
+- USB-Kabel*1
 
-- Jumper Wire*3
+- Jumperkabel*3
 
-Connect the D0 pin of module to Digital 2 of V4.0 board, connect the GND pin to GND port, VCC pin to 5V port.
+Verbinden Sie den D0-Pin des Moduls mit Digital 2 der V4.0-Platine, verbinden Sie den GND-Pin mit dem GND-Anschluss und den VCC-Pin mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/a1ee506fc9921c7616349500c258b733.jpeg)
+![Anschlussdiagramm Illustration](../media/a1ee506fc9921c7616349500c258b733.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -74,14 +74,14 @@ State = digitalRead(flamePin);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-Done wiring and powered up, upload well the code to the board.
+Nachdem die Verkabelung abgeschlossen und die Stromversorgung eingeschaltet ist, laden Sie den Code erfolgreich auf die Platine hoch.
 
-![Example Result illustration](../media/c769453bbd0e1c5fcf6c80cf697030b3.png)
+![Beispielergebnis Illustration](../media/c769453bbd0e1c5fcf6c80cf697030b3.png)
 
-Then if you put a lighter close to the sensor, when the sensor detects the flame, another led on the sensor is turned on.
+Wenn Sie anschließend ein Feuerzeug in die Nähe des Sensors halten, schaltet eine weitere LED auf dem Sensor ein, sobald die Flamme erkannt wird.
 
-![Example Result illustration](../media/2ee5a36673d2cbeb934ca2af29dab607.png)
+![Beispielergebnis Illustration](../media/2ee5a36673d2cbeb934ca2af29dab607.png)
 
 ---

@@ -1,70 +1,70 @@
-# Lesson 43: Optical Proximity Detection
+# Lektion 43: Optische Näherungserkennung
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensorkit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P-Board
 
-![Project 43: Optical Proximity Detection illustration](../media/4085d5742012b8647b52c537b82974ff.jpeg)
+![Projekt 43: Illustration zur optischen Näherungserkennung](../media/4085d5742012b8647b52c537b82974ff.jpeg)
 
-## Introduction
+## Einführung
 
-**Compatibility notice.** The legacy text identifies this module as TMD27713, while the sketch below targets APDS-9930. Confirm the IC marking and use a matching library before uploading.
+**Kompatibilitäts-Hinweis.** Der ursprüngliche Text benennt dieses Modul als TMD27713, während der Sketch unten auf den APDS-9930 abzielt. Prüfen Sie die IC-Beschriftung und verwenden Sie vor dem Hochladen eine passende Bibliothek.
 
-It is a triple sensor integrated with ambient light, proximity sensor and infrared LED.
+Es handelt sich um einen Dreifach-Sensor, der Umgebungslicht, Näherungssensor und eine Infrarot-LED integriert.
 
-For one thing, it is used to detect the current ambient brightness (ALS). It can in accordance with the current ambient brightness automatically adjust the backlight brightness to conform to ambient light by the mean of software adjustment. This way can make backlight brightness soft to protect your vision and to achieve the effect of energy saving.
+Zum einen dient er zur Erfassung der aktuellen Umgebungshelligkeit (ALS). Er kann in Abhängigkeit von der aktuellen Umgebungshelligkeit die Hintergrundbeleuchtungshelligkeit automatisch per Softwareanpassung regulieren. Auf diese Weise wird die Hintergrundbeleuchtung sanfter, was die Augen schont und Energie spart.
 
-For another feature we are referred to as proximity sensor function (PROX). Sensor has been integrated transmitter/receiver and minimized the design, besides, design and installation have no more space restrictions, and for part of a structure is relatively simple.
+Zum anderen verfügt er über eine Näherungsfunktion (PROX). Der Sensor integriert Sender und Empfänger, wodurch das Design minimiert wurde; somit bestehen kaum Platzbeschränkungen bei Design und Montage, und die mechanische Struktur ist relativ einfach.
 
-## Parameters
+## Parameter
 
-- Working voltage：DC 3.3V
+- Betriebsspannung：DC 3.3V
 
-- Detection distance：100mm
+- Erfassungsdistanz：100mm
 
-- Communication way：IIC communication
+- Kommunikationsschnittstelle：I2C-Kommunikation
 
-- Temperature range：-30℃ to 85℃
+- Temperaturbereich：-30℃ bis 85℃
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Firstly you need to prepare the following parts:
+Zuerst benötigen Sie die folgenden Teile:
 
-- V4.0 Board\*1
+- V4.0-Platine\*1
 
-- TMD27713 sensor\*1
+- TMD27713-Sensor\*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*5
+- Jumperkabel\*5
 
-Connect the INT pin of sensor to Digital 2 port of V4.0 board, SCL pin to Analog A5 port, SDA pin to Analog A4 port; Connect VCC pin to 3V3 port, GND pin to GND port.
+Verbinden Sie den INT-Pin des Sensors mit dem Digital 2 Anschluss des V4.0-Boards, den SCL-Pin mit dem Analog A5 Anschluss, den SDA-Pin mit dem Analog A4 Anschluss; Verbinden Sie den VCC-Pin mit dem 3V3-Anschluss, den GND-Pin mit dem GND-Anschluss.
 
-![Connection Diagram illustration](../media/c9319e0f5116f416380d6b3c9ddc608c.jpeg)
+![Anschlussdiagramm-Illustration](../media/c9319e0f5116f416380d6b3c9ddc608c.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Tests the proximity interrupt abilities of the APDS-9930.
+Testet die Näherungs-Interrupt-Fähigkeiten des APDS-9930.
 
-Configures the APDS-9930 over I2C and waits for an external interrupt based on high or low proximity conditions. Move your hand near the sensor and watch the LED on pin 13.
+Konfiguriert den APDS-9930 über I2C und wartet auf einen externen Interrupt, der auf hohen oder niedrigen Näherungsbedingungen basiert. Bewegen Sie Ihre Hand in die Nähe des Sensors und beobachten Sie die LED an Pin 13.
 
-## Hardware Connections
+## Hardware-Verbindungen
 
-**IMPORTANT**: The APDS-9930 can only accept 3.3V!
+**WICHTIG**: Der APDS-9930 akzeptiert nur 3,3 V!
 
-| Arduino Pin | APDS-9930 Board | Function  |
+| Arduino Pin | APDS-9930-Modul | Funktion  |
 | :---------: | :-------------: | :-------: |
-|    3.3V     |       VCC       |   Power   |
-|     GND     |       GND       |  Ground   |
-|     A4      |       SDA       | I2C Data  |
-|     A5      |       SCL       | I2C Clock |
+|    3.3V     |       VCC       | Stromversorgung |
+|     GND     |       GND       |   Masse   |
+|     A4      |       SDA       | I2C-Daten |
+|     A5      |       SCL       | I2C-Takt  |
 |      2      |       INT       | Interrupt |
 |     13      |        -        |    LED    |
 
-**Resources**: Include Wire.h and APDS9930.h
+**Ressourcen**: Wire.h und APDS9930.h einbinden
 
-**Development environment specifics**: Written in Arduino 1.0.5
+**Entwicklungsumgebung**: Geschrieben für Arduino 1.0.5
 
-Copy and paste the code below to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 #include <Wire.h>
@@ -211,14 +211,14 @@ void interruptRoutine() {
 }
 ```
 
-Note: before compiling the code, do remember to place the library into libraries directory of Arduino IDE. Otherwise, compiling will fail.
+Hinweis: Bevor Sie den Code kompilieren, denken Sie daran, die Bibliothek in das Verzeichnis libraries der Arduino-IDE zu legen. Andernfalls schlägt die Kompilierung fehl.
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/f2c369c253c3b5fd8cf2c9df39f1c01a.png)
+![Beispielergebnis-Illustration](../media/f2c369c253c3b5fd8cf2c9df39f1c01a.png)
 
-Tested by Arduino-1.8.2 version software, then open serial monitor, you can see the data as the figure shown below.
+Getestet mit der Arduino-Version 1.8.2; öffnen Sie anschließend den Seriellen Monitor, Sie können die Daten wie in der folgenden Abbildung sehen.
 
-![Example Result illustration](../media/607fe1d8c324c14c06492d96d60eb0ca.png)
+![Beispielergebnis-Illustration](../media/607fe1d8c324c14c06492d96d60eb0ca.png)
 
 ---

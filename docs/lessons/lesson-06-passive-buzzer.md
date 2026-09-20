@@ -1,47 +1,47 @@
-# Lesson 06: Passive Buzzer
+# Lektion 06: Passiver Summer
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P-Board
 
-![Project 6: Passive Buzzer illustration](../media/1bd2e3afebf5a0d3712fe42092b0a1b4.png)
+![Projekt 6: Passiver Summer Abbildung](../media/1bd2e3afebf5a0d3712fe42092b0a1b4.png)
 
-## Description
+## Beschreibung
 
-We can use Arduino to make many interactive works of which the most commonly used is acoustic-optic display. The circuit in this experiment can produce sound.
+Mit Arduino können wir viele interaktive Projekte erstellen, wobei die am häufigsten verwendete Anzeige die akustisch-optische Anzeige ist. Der Schaltkreis in diesem Experiment kann Töne erzeugen.
 
-Normally, the experiment can be done with a buzzer or a speaker, while buzzer is simpler and easier to use.
+Normalerweise kann das Experiment mit einem Summer oder einem Lautsprecher durchgeführt werden, wobei der Summer einfacher und leichter zu verwenden ist.
 
-The buzzer we introduced here is a passive buzzer. It cannot be actuated by itself, but by external pulse frequencies. Different frequencies produce different sounds. You can use Arduino to code the melody of a song, quite fun and simple.
+Der hier vorgestellte Summer ist ein passiver Summer. Er lässt sich nicht selbst ansteuern, sondern wird durch externe Impulsfrequenzen betrieben. Verschiedene Frequenzen erzeugen unterschiedliche Töne. Mit Arduino kannst du die Melodie eines Liedes programmieren — sehr spaßig und einfach.
 
-## Specification
+## Spezifikation
 
-- Working voltage: 3.3-5v
+- Betriebsspannung: 3.3-5v
 
-- Interface type: digital
+- Schnittstellentyp: digital
 
-- Size: 30\*20mm
+- Größe: 30\*20mm
 
-- Weight: 4g
+- Gewicht: 4g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-First, you need to prepare the following parts before connection:
+Vor dem Anschluss bereiten Sie bitte die folgenden Teile vor:
 
-- V4.0 Board*1
+- V4.0-Platine*1
 
-- Passive buzzer module*1
+- Passives Summer-Modul*1
 
-- USB Cable*1
+- USB-Kabel*1
 
-- Jumper Wire*3
+- Jumper-Kabel*3
 
-Connect the S pin of module to Digital 3 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinde den S-Pin des Moduls mit Digital 3 der V4.0-Platine, den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/e9e7ba383738c3b6be85a1f3c97e5385.jpeg)
+![Anschlussdiagramm Abbildung](../media/e9e7ba383738c3b6be85a1f3c97e5385.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -70,10 +70,10 @@ delay(2);//2ms delay
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-Done uploading the code to board, the buzzer will make a sound.
+Nach dem Hochladen des Codes auf die Platine gibt der Summer einen Ton von sich.
 
-![Example Result illustration](../media/9b29eccd437694e479a836b7da66d500.png)
+![Beispielergebnis Abbildung](../media/9b29eccd437694e479a836b7da66d500.png)
 
 ---

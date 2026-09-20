@@ -1,61 +1,61 @@
-# Lesson 10: Infrared Obstacle Avoidance
+# Lektion 10: Infrarot-Hinderniserkennung
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P-Platine
 
-![Project 10: Infrared Obstacle Avoidance illustration](../media/54ab9db703340471fd9c3151934b85e7.png)
+![Projekt 10: Illustration zur Infrarot-Hinderniserkennung](../media/54ab9db703340471fd9c3151934b85e7.png)
 
-## Description
+## Beschreibung
 
-Infrared obstacle detector sensor is equipped with distance adjustment function and is especially designed for wheeled robots.
+Der Infrarot-Hindernisdetektorsensor verfügt über eine Distanz-Einstellfunktion und ist speziell für Radroboter konzipiert.
 
-This sensor has strong adaptability to ambient light and is of high precision.
+Dieser Sensor hat eine hohe Anpassungsfähigkeit an Umgebungslicht und eine hohe Genauigkeit.
 
-It has a pair of infrared transmitting and receiving tube. When infrared ray launched by the transmitter tube encounters an obstacle (its reflector), the infrared ray will be reflected to the receiver tube, thus the indicator will light up, and signal output interface outputs digital signal.
+Er besitzt ein Paar aus Infrarot-Sende- und Empfangsröhre. Wenn der vom Sender ausgesandte Infrarotstrahl auf ein Hindernis (seinen Reflektor) trifft, wird der Strahl an die Empfangsröhre reflektiert, wodurch die Anzeigeleuchte aufleuchtet und die Signalausgangsschnittstelle ein digitales Signal ausgibt.
 
-In addition, you can rotate the potentiometer knob to adjust detection distance (effective distance: 2～40cm, working Voltage: 3.3V-5V ).
+Zusätzlich können Sie den Potentiometerknopf drehen, um die Erkennungsdistanz einzustellen (effektive Distanz: 2～40cm, Betriebsspannung: 3,3V–5V).
 
-Thanks to a wide voltage range, this sensor can work steadily even under fluctuating power supply voltage, and is suitable for various micro-controllers, Arduino controllers and BS2 controllers.
+Dank des weiten Spannungsbereichs kann dieser Sensor auch bei schwankender Versorgungsspannung stabil arbeiten und ist geeignet für verschiedene Mikrocontroller, Arduino-Controller und BS2-Controller.
 
-A robot mounted with this sensor can sense obstacle in the environment.
+Ein Roboter, der mit diesem Sensor ausgestattet ist, kann Hindernisse in der Umgebung wahrnehmen.
 
-## Specification
+## Technische Daten
 
-- Working voltage: DC 3.3V-5V
+- Betriebsspannung: Gleichspannung (DC) 3,3V–5V
 
-- Working current: ≥20mA
+- Betriebsstrom: ≥20 mA
 
-- Working temperature: －10℃ to＋50℃
+- Betriebstemperatur: －10℃ bis＋50℃
 
-- Detection distance: 2-40cm
+- Erkennungsreichweite: 2-40 cm
 
-- IO Interface: 4 wire interfaces (-/+/S/EN)
+- IO-Schnittstelle: 4-adrige Schnittstelle (-/+/S/EN)
 
-- Output signal: TTL voltage
+- Ausgangssignal: TTL-Spannung
 
-- Accommodation mode: Multi-circle resistance regulation
+- Einstellmodus: Mehrgang-Potentiometer
 
-- Effective Angle: 35°
+- Erfassungswinkel: 35°
 
-## Connection Diagram
+## Anschlussdiagramm
 
-First, you need to prepare the following parts before connection:
+Bereite vor der Verbindung zunächst die folgenden Teile vor:
 
-- V4.0 Board\*1
+- V4.0-Platine\*1
 
-- Obstacle detector module \*1
+- Hindernisdetektor-Modul\*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*3
+- Jumperkabel\*3
 
-Connect the Out pin of module to Digital 2 of V4.0 board, connect the V+ pin to 5V port, GND pin to GND port.
+Verbinde den Out-Pin des Moduls mit Digital 2 der V4.0-Platine, den V+-Pin mit dem 5V-Anschluss und den GND-Pin mit dem GND-Anschluss.
 
-![Connection Diagram illustration](../media/48f60a482d777df19bc43a3203479b0c.jpeg)
+![Anschlussdiagramm-Illustration](../media/48f60a482d777df19bc43a3203479b0c.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopiere den folgenden Code in die Arduino-Software.
 
 ```c
 const uint8_t sensorPin = 2;
@@ -72,14 +72,14 @@ void loop() {
 }
 ```
 
-## Example Result
+## Beispielergebnis
 
-Done uploading the code to board, you can see the led on both V4.0 board and obstacle detector sensor is turned on.
+Nachdem der Code auf das Board hochgeladen wurde, leuchtet die LED sowohl auf der V4.0-Platine als auch am Hindernisdetektor-Modul.
 
-![Example Result illustration](../media/44d035dfe09b4c803becd84c95b05956.png)
+![Beispielergebnis-Illustration](../media/44d035dfe09b4c803becd84c95b05956.png)
 
-If we put a foam block in front of the sensor, this time when sensor detects the obstacle, sled on the sensor will be turned on.
+Wenn wir einen Schaumstoffblock vor den Sensor stellen, wird diesmal, sobald der Sensor das Hindernis erkennt, die LED am Sensor eingeschaltet.
 
-![Example Result illustration](../media/da4468fead816d42b2ac43b29716b91f.png)
+![Beispielergebnis-Illustration](../media/da4468fead816d42b2ac43b29716b91f.png)
 
 ---

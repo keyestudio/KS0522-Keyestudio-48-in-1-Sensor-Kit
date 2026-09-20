@@ -1,65 +1,65 @@
-# Lesson 18: PIR Motion Sensor
+# Lektion 18: PIR-Bewegungssensor
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Board:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 18: PIR Motion Sensor illustration](../media/ce608db25742f19fdf6eceda756a59d9.png)
+![Projekt 18: PIR-Bewegungssensor Abbildung](../media/ce608db25742f19fdf6eceda756a59d9.png)
 
-## Description
+## Beschreibung
 
-Pyroelectric infrared motion sensor can detect infrared signals from a moving person or moving animal, and output switching signals.
+Pyroelektrischer Infrarot-Bewegungssensor kann Infrarotsignale einer sich bewegenden Person oder eines sich bewegenden Tieres erfassen und Schaltsignale ausgeben.
 
-It can be applied to a variety of occasions to detect the movement of human body.
+Er kann in verschiedenen Situationen zur Erkennung von Körperbewegungen eingesetzt werden.
 
-Conventional pyroelectric infrared sensors require body pyroelectric infrared detector, professional chip and complex peripheral circuit, so the size is much more bigger, with complex circuit and lower reliability.
+Konventionelle pyroelektrische Infrarotsensoren benötigen einen pyroelektrischen Infrarot-Detektor, einen speziellen Chip und eine komplexe Peripherie, deshalb sind sie deutlich größer, mit komplexer Schaltung und geringerer Zuverlässigkeit.
 
-Now we launch this new pyroelectric infrared motion sensor, specially designed for Arduino.
+Jetzt bringen wir diesen neuen pyroelektrischen Infrarot-Bewegungssensor auf den Markt, speziell für Arduino entworfen.
 
-It uses an integrated digital body pyroelectric infrared sensor, with smaller size, higher reliability, lower power consumption and simpler peripheral circuit.
+Er verwendet einen integrierten digitalen pyroelektrischen Infrarot-Körpersensor, mit kleinerer Größe, höherer Zuverlässigkeit, geringerem Stromverbrauch und einfacherer Peripherie.
 
-## Specification
+## Spezifikation
 
-- Input Voltage: 3.3 \~ 5V, Maximum for 6V
+- Eingangsspannung: 3.3 \~ 5V, maximal 6V
 
-- Working Current: 15uA
+- Betriebstrom: 15uA
 
-- Working Temperature: -20 \~ 85 ℃
+- Betriebstemperatur: -20 \~ 85 ℃
 
-- Output Voltage: High 3V, Low 0V
+- Ausgangsspannung: High 3V, Low 0V
 
-- Output Delay Time (High Level): About 2.3 to 3 Seconds
+- Ausgangsverzögerungszeit (High-Level): Etwa 2,3 bis 3 Sekunden
 
-- Detection Angle: 100 °
+- Erfassungswinkel: 100 °
 
-- Detection Distance: 7 meters
+- Erfassungsreichweite: 7 Meter
 
-- Output Indicator LED (if output HIGH, it will be ON)
+- Ausgangs-LED (wenn Ausgang HIGH ist, leuchtet sie)
 
-- Limit Current for Pin: 100mA
+- Begrenzungsstrom für Pin: 100mA
 
-- Size: 30*20mm
+- Größe: 30*20mm
 
-- Weight: 4g
+- Gewicht: 4g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-First, you need to prepare the following parts before connection:
+Zuerst müssen Sie vor dem Anschluss folgende Teile bereitlegen:
 
-- V4.0 Board*1
+- V4.0-Board*1
 
-- PIR motion sensor*1
+- PIR-Bewegungssensor*1
 
-- USB Cable*1
+- USB-Kabel*1
 
-- Jumper Wire*3
+- Jumper-Kabel*3
 
-Connect the S pin of module to Digital 3 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinden Sie den S-Pin des Moduls mit Digital 3 des V4.0-Boards, den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/01970d510c03a8c7aa3ef0c13ea70cff.jpeg)
+![Anschlussdiagramm Abbildung](../media/01970d510c03a8c7aa3ef0c13ea70cff.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -83,14 +83,14 @@ void loop()
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-Done wiring and powered up, upload well the code, if the sensor detects someone moving nearby, D13 indicator on V4.0 board will light up, and "Somebody is in this area!" is displayed on the serial monitor of Arduino software.
+Nachdem die Verkabelung abgeschlossen und die Stromversorgung eingeschaltet wurde und der Code erfolgreich hochgeladen ist: Wenn der Sensor in der Nähe eine Bewegung erkennt, leuchtet die D13-Anzeige auf dem V4.0-Board und "Jemand ist in diesem Bereich!" wird im seriellen Monitor der Arduino-Software angezeigt.
 
-If no detecting the movement, D13 indicator on V4.0 board will be off, and "No one!" is displayed on the serial monitor.
+Wenn keine Bewegung erkannt wird, ist die D13-Anzeige auf dem V4.0-Board aus und "Niemand!" wird im seriellen Monitor angezeigt.
 
-![Example Result illustration](../media/e25d28654311fa7820a1886a285353e5.png)
+![Beispielergebnis Abbildung](../media/e25d28654311fa7820a1886a285353e5.png)
 
-![Example Result illustration](../media/9b6209c8ce5b4be73f8378d21b639d28.jpeg)
+![Beispielergebnis Abbildung](../media/9b6209c8ce5b4be73f8378d21b639d28.jpeg)
 
 ---

@@ -1,37 +1,37 @@
-# Lesson 05: Buzzer Beeps
+# Lektion 05: Summer-Piepen
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor-Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 5: Buzzer Beeps illustration](../media/88c349b0602dfa2e166faabc13cb2f20.png)
+![Projekt 5: Summer-Piepen Illustration](../media/88c349b0602dfa2e166faabc13cb2f20.png)
 
-## Description
+## Beschreibung
 
-Here is the simplest sound making module. You can use high/low level to drive it. Changing the frequency it buzzes can produce different sounds.
+Hier ist das einfachste Klangmodul. Du kannst es mit hohem oder niedrigem Pegel ansteuern. Durch Ändern der Frequenz, mit der es brummt, lassen sich unterschiedliche Töne erzeugen.
 
-This module is widely used on our daily appliances like PC, refrigerator, phones, etc.
+Dieses Modul wird häufig in Alltagsgeräten wie PC, Kühlschrank, Telefonen usw. verwendet.
 
-In addition, you can create many interesting interactive projects with this small but useful module. Just try it!! You will find the electronic sound it creates so fascinating.
+Außerdem kannst du mit diesem kleinen, aber nützlichen Modul viele interessante interaktive Projekte erstellen. Probier es einfach aus!! Du wirst den von ihm erzeugten elektronischen Klang sehr faszinierend finden.
 
-## Specification
+## Spezifikation
 
-- Working voltage: 3.3-5v
+- Betriebsspannung: 3.3-5v
 
-- Interface type: digital
+- Schnittstellentyp: digital
 
-- Size: 30*20mm
+- Größe: 30*20mm
 
-- Weight: 4g
+- Gewicht: 4g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Connect the S pin of module to Digital 3 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinde den S-Pin des Moduls mit Digital 3 der V4.0-Platine, den Minus-Pin mit dem GND-Anschluss und den Plus-Pin mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/173f2e9a828b0b20d76dc07de57892c1.jpeg)
+![Anschlussdiagramm Illustration](../media/173f2e9a828b0b20d76dc07de57892c1.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopiere den folgenden Code in die Arduino-Software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -50,10 +50,10 @@ int buzzPin =3;    //Connect Buzzer on Digital Pin3
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-Done uploading the code to board, the buzzer will make a sound.
+Nachdem der Code auf die Platine hochgeladen wurde, gibt der Summer einen Ton von sich.
 
-![Example Result illustration](../media/109e3287bff29d1d1fb88369d6705ad3.png)
+![Beispielergebnis Illustration](../media/109e3287bff29d1d1fb88369d6705ad3.png)
 
 ---

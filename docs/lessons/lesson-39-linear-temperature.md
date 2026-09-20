@@ -1,53 +1,53 @@
-# Lesson 39: Linear Temperature
+# Lektion 39: Lineare Temperatur
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P-Board
 
-![Project 39: Linear Temperature illustration](../media/9a9b328cb85401dce3932f047f0979e0.png)
+![Projekt 39: Lineare Temperatur Illustration](../media/9a9b328cb85401dce3932f047f0979e0.png)
 
-## Introduction
+## Einführung
 
-LM35 Linear Temperature Sensor is based on semiconductor LM35 temperature sensor. It can be used to detect ambient air temperature.
+Der LM35 Linear-Temperatursensor basiert auf dem Halbleiter-Temperatursensor LM35. Er kann zur Messung der Umgebungslufttemperatur verwendet werden.
 
-This sensor offers a functional range among 0 degree Celsius to 100 degree Celsius. Sensitivity is 10mV per degree Celsius. The output voltage is proportional to the temperature.
+Der Sensor hat einen Funktionsbereich von 0 °C bis 100 °C. Die Empfindlichkeit beträgt 10 mV pro Grad Celsius. Die Ausgangsspannung ist proportional zur Temperatur.
 
-This sensor is commonly used as a temperature measurement sensor. It includes thermocouples, platinum resistance, thermal resistance and temperature semiconductor chips.
+Als Temperaturmesssensoren werden üblicherweise Thermoelemente, Platin-Widerstandssensoren, Widerstandsthermometer und Halbleiter-Temperatursensoren eingesetzt.
 
-The chip is commonly used in high temperature measurement thermocouples.
+Der Chip wird häufig in Thermoelementen zur Messung hoher Temperaturen verwendet.
 
-Platinum resistance temperature sensor is used in the measurement of 800 degrees Celsius, while the thermal resistance and semiconductor temperature sensor is suitable for measuring the temperature of 100-200 degrees or below, in which the application of a simple semiconductor temperature sensor is good in linearity and high in sensitivity.
+Platin-Widerstandstemperatursensoren werden zur Messung von Temperaturen bis etwa 800 °C eingesetzt, während Wärmewiderstände und Halbleiter-Temperatursensoren für Messungen bis etwa 100–200 °C oder darunter geeignet sind. Bei einfachen Anwendungen bieten Halbleiter-Temperatursensoren eine gute Linearität und hohe Empfindlichkeit.
 
-The LM35 linear temperature sensor can be easily connected to Arduino shield.
+Der LM35 Linear-Temperatursensor kann einfach an ein Arduino-Shield angeschlossen werden.
 
-## Specification
+## Technische Daten
 
-- Sensitivity: 10mV per degree Celsius
+- Empfindlichkeit: 10mV pro Grad Celsius
 
-- Functional range: 0 degree Celsius to 100 degree Celsius
+- Funktionsbereich: 0 Grad Celsius bis 100 Grad Celsius
 
-- Size: 30*20mm
+- Größe: 30*20mm
 
-- Weight: 3g
+- Gewicht: 3g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Firstly you need to prepare the following parts before testing.
+Bereiten Sie zunächst die folgenden Teile vor.
 
 - V4.0 Board\*1
 
-- LM35 temperature sensor\*1
+- LM35-Temperatursensor\*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*3
+- Jumper-Kabel\*3
 
-Then follow the wiring diagram, connect the signal pin of sensor to A0 port of V4.0 board, negative pin to GND port, positive pin to 5V port.
+Befolgen Sie dann das Anschlussdiagramm: Verbinden Sie den Signalausgang des Sensors mit dem A0-Anschluss des V4.0-Boards, den Minuspol mit dem GND-Anschluss und den Pluspol mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/e2f1fc77bb6b54c35bc3d1a8834cbf6b.jpeg)
+![Anschlussdiagramm Illustration](../media/e2f1fc77bb6b54c35bc3d1a8834cbf6b.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the code below to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -68,14 +68,14 @@ void setup()
 ///////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/95d0d43a93fd2bf1e9c7248e80edcedc.png)
+![Beispielergebnis Illustration](../media/95d0d43a93fd2bf1e9c7248e80edcedc.png)
 
-Wire it up as the above diagram and upload well the code to the board, then open the serial monitor and set the baud rate as 9600.
+Verdrahten Sie alles wie im obigen Diagramm, laden Sie den Code auf das Board hoch, öffnen Sie dann den Seriellen Monitor und stellen Sie die Baudrate auf 9600.
 
-You will see the current temperature value shown below. The value may be slight difference due to different place and weather.
+Sie sehen den aktuellen Temperaturwert, wie unten dargestellt. Der Wert kann je nach Ort und Wetter leicht abweichen.
 
-![Example Result illustration](../media/8331a0416c8006161b3227e170a3b033.jpeg)
+![Beispielergebnis Illustration](../media/8331a0416c8006161b3227e170a3b033.jpeg)
 
 ---

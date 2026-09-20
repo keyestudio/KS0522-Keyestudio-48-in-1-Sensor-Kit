@@ -1,51 +1,51 @@
-# Lesson 34: Digital IR Transmitter
+# Lektion 34: Digitaler IR-Sender
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-![Project 34: Digital IR Transmitter illustration](../media/9fe876a8c857650226cbe2f8a9bead59.png)
+![Projekt 34: Digitaler IR-Sender - Abbildung](../media/9fe876a8c857650226cbe2f8a9bead59.png)
 
-## Description
+## Beschreibung
 
-IR transmitter module is designed for IR communication, which is widely used for operating the television device from a short line-of-sight distance.
+Das IR-Sendermodul ist für IR-Kommunikation ausgelegt und wird häufig verwendet, um ein Fernsehgerät aus kurzer Sichtverbindung zu bedienen.
 
-Since infrared (IR) remote control uses light, it requires line of sight to operate the destination device. The signal can, however, be reflected by mirrors, just like any other light sources.
+Da Infrarot (IR)-Fernbedienung Licht verwendet, benötigt sie Sichtverbindung, um das Zielgerät zu bedienen. Das Signal kann jedoch wie andere Lichtquellen von Spiegeln reflektiert werden.
 
-Infrared receivers also tend to have a more or less limited operating angle, which mainly depends on the optical characteristics of the phototransistor.
+Infrarotempfänger haben ebenfalls einen mehr oder weniger begrenzten Betriebswinkel, der hauptsächlich von den optischen Eigenschaften des Phototransistors abhängt.
 
-However, it’s easy to increase the operating angle using a matte transparent object in front of the receiver.
+Den Betriebswinkel kann man jedoch leicht erhöhen, indem man ein mattes, transparentes Objekt vor den Empfänger stellt.
 
-## Specification
+## Spezifikation
 
-- Power Supply: 3-5V
+- Stromversorgung: 3-5V
 
-- Infrared center frequency: 850nm-940nm
+- Infrarot-Zentrumwellenlänge: 850nm-940nm
 
-- Infrared emission angle: about 20 degrees
+- Abstrahlwinkel des Infrarots: etwa 20 Grad
 
-- Infrared emission distance: about 1.3m (5V 38Khz)
+- Abstrahldistanz des Infrarots: etwa 1,3 m (5V 38Khz)
 
-- Interface socket: JST PH2.0
+- Anschlussstecker: JST PH2.0
 
-- Mounting hole: inner diameter is 3.2mm, spacing is 15mm
+- Befestigungsloch: Innen-Ø 3,2mm, Abstand 15mm
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Firstly you need to prepare the following parts before connection.
+Bereiten Sie zunächst die folgenden Teile vor, bevor Sie die Verbindung herstellen.
 
-- V4.0 Board\*1
+- V4.0-Platine\*1
 
-- IR Transmitter module\*1
+- IR-Sendermodul\*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*3
+- Jumperkabel\*3
 
-Connect the S pin of module to Digital 3 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinden Sie den S-Pin des Moduls mit Digital 3 des V4.0-Boards, verbinden Sie den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/31c03e9ad144e1124260ff6e0538fe69.jpeg)
+![Anschlussdiagramm - Abbildung](../media/31c03e9ad144e1124260ff6e0538fe69.jpeg)
 
-## Sample Code 1
+## Beispielcode 1
 
 ```c
 int led = 3;
@@ -60,39 +60,39 @@ void loop() {
 }
 ```
 
-In the darkness of the environment, you are going to see blinking blue light on phone's screen when using camera to shoot the infrared LED.
+In dunkler Umgebung sehen Sie beim Filmen mit der Handykamera ein blinkendes blaues Licht auf dem Bildschirm, wenn die Infrarot-LED leuchtet.
 
-Upload well the above code to the board, the led on the sensor will blink red light.
+Laden Sie den obigen Code auf das Board; die LED am Sensor blinkt rot.
 
-In the following, let’s move on to an interactive example between IR receiver and IR transmitter module.
+Im Folgenden gehen wir zu einem interaktiven Beispiel zwischen IR-Empfänger und IR-Sendermodul über.
 
-## Infrared Remote/Communication
+## Infrarot-Fernbedienung/Kommunikation
 
-## Hardware Required
+## Benötigte Hardware
 
 - Arduino R3 x2
 
-- Digital IR Receiver x1
+- Digitaler IR-Empfänger x1
 
-- IR Transmitter Module x1
+- IR-Sendermodul x1
 
-Note: this experiment needs two microcontroller boards. A breadboard does not replace the second board because it cannot run the receiver sketch.
+Hinweis: Dieses Experiment benötigt zwei Mikrocontroller-Boards. Ein Steckbrett ersetzt nicht das zweite Board, da es den Empfänger-Sketch nicht ausführen kann.
 
-## Two-board communication setup
+## Zwei-Board-Kommunikation
 
-## For IR Transmitter
+## Für IR-Sender
 
-Notice: Arduino-IR remote only supports D3 as transmitter.
+Hinweis: Arduino-IR remote unterstützt nur D3 als Sender.
 
-![For IR Transmitter illustration](../media/08ebf9b37949caf1782e499f49934f1d.png)
+![Für IR-Sender - Abbildung](../media/08ebf9b37949caf1782e499f49934f1d.png)
 
-## For IR Receiver
+## Für IR-Empfänger
 
-Connect the signal pin to D11 port.
+Verbinden Sie den Signaleingang mit dem D11-Port.
 
-![For IR Receiver illustration](../media/687d429fe6360707f95fb6c5ddfa2ca7.jpeg)
+![Für IR-Empfänger - Abbildung](../media/687d429fe6360707f95fb6c5ddfa2ca7.jpeg)
 
-## Upload code 2 to the V4.0 connected with IR Transmitter
+## Laden Sie Code 2 auf das mit dem IR-Sender verbundene V4.0-Board hoch
 
 ```c
  #include <IRremote.h>
@@ -106,7 +106,7 @@ Connect the signal pin to D11 port.
      delay(200); }
 ```
 
-## Upload code 3 to the V4.0 connected with IR Receiver
+## Laden Sie Code 3 auf das mit dem IR-Empfänger verbundene V4.0-Board hoch
 
 ```c
 #include <IRremote.h>
@@ -138,12 +138,12 @@ Connect the signal pin to D11 port.
    }}
 ```
 
-## Result
+## Ergebnis
 
-When IR Receiver module receives the infrared signal from IR Transmitter, D1 led on the IR Receiver module will blink.
+Wenn das IR-Empfängermodul das Infrarotsignal vom IR-Sender empfängt, blinkt die D1-LED am IR-Empfängermodul.
 
-When IR Receiver module receives the infrared signal from IR Transmitter, D1 led on the IR Receiver module will blink.
+Wenn das IR-Empfängermodul das Infrarotsignal vom IR-Sender empfängt, blinkt die D1-LED am IR-Empfängermodul.
 
-![Result illustration](../media/4d73a7178e89de72df7e82a147778ae9.png)
+![Ergebnis - Abbildung](../media/4d73a7178e89de72df7e82a147778ae9.png)
 
 ---

@@ -1,35 +1,35 @@
-# Lesson 22: Analog Sound
+# Lektion 22: Analoger Schall
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P-Board
 
-![Project 22: Analog Sound illustration](../media/a494bbec73f7c8ff91b3133c9d2798a7.jpeg)
+![Projekt 22: Analoger Schall Abbildung](../media/a494bbec73f7c8ff91b3133c9d2798a7.jpeg)
 
-## Description
+## Beschreibung
 
-Analog sound sensor is typically used in detecting the volume of ambient sounds. The sensor comes with a potentiometer, so that you can turn it to adjust the signal gain.
+Der analoge Schall-Sensor wird typischerweise zur Erkennung der Lautstärke der Umgebungsgeräusche verwendet. Der Sensor verfügt über ein Potentiometer, mit dem du die Verstärkung des Signals einstellen kannst.
 
-You can use it to make some interesting and interactive works, such as a voice operated switch.
+Du kannst ihn verwenden, um einige interessante und interaktive Projekte zu erstellen, wie z. B. einen sprachgesteuerten Schalter.
 
-## Specification
+## Spezifikation
 
-- Supply Voltage: 3.3V to 5V
+- Versorgungsspannung: 3.3V bis 5V
 
-- Interface: Analog
+- Schnittstelle: Analog
 
-- Size: 30*20mm
+- Größe: 30*20mm
 
-- Weight: 4g
+- Gewicht: 4g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Connect the S pin of module to Analog A0 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinde den S-Pin des Moduls mit dem analogen A0 des V4.0-Boards, den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/22e1124550d57015a6d2d5782b8febda.jpeg)
+![Anschlussdiagramm Abbildung](../media/22e1124550d57015a6d2d5782b8febda.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopiere und füge den folgenden Code in die Arduino-Software ein.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -49,10 +49,10 @@ delay(50);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-Done wiring and powered up, upload well the code, then open the serial monitor and set the baud rate as 9600, you will see the analog value. When talking toward the micro head, the value will increase. Shown below.
+Nachdem die Verkabelung abgeschlossen und die Stromversorgung eingeschaltet ist und der Code erfolgreich hochgeladen wurde, öffne den Seriellen Monitor und stelle die Baudrate auf 9600 ein. Du wirst dann den analogen Wert sehen. Wenn du in Richtung des Mikrofons sprichst, erhöht sich der Wert. Siehe unten.
 
-![Example Result illustration](../media/4d753036151413a1bdda3c0b283b8551.png)
+![Beispielergebnis Abbildung](../media/4d753036151413a1bdda3c0b283b8551.png)
 
 ---

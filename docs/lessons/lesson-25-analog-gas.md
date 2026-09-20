@@ -1,37 +1,37 @@
-# Lesson 25: Analog Gas
+# Lektion 25: Analoger Gassensor
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 25: Analog Gas illustration](../media/36f00d2a934c497f390b49c4113c7c04.png)
+![Projekt 25: Analoger Gassensor Abbildung](../media/36f00d2a934c497f390b49c4113c7c04.png)
 
-## Description
+## Beschreibung
 
-This analog gas sensor MQ2 is used in gas leakage detecting equipment in both consumer electronics and industrial markets. This sensor is suitable for detecting LPG, I-butane, propane, methane, alcohol, Hydrogen and smoke.
+Dieser analoge Gassensor MQ2 wird in Gasleckage-Erkennungsgeräten sowohl im Consumer- als auch im Industriebereich eingesetzt. Dieser Sensor eignet sich zum Erkennen von LPG, I-Butan, Propan, Methan, Alkohol, Wasserstoff und Rauch.
 
-The detecting scope of this sensor is very wide and it has high sensitivity and quick response.
+Der Erkennungsbereich dieses Sensors ist sehr breit, und er bietet hohe Empfindlichkeit sowie schnelle Reaktionszeiten.
 
-In addition, the sensitivity can be adjusted by rotating the potentiometer on the sensor.
+Zusätzlich kann die Empfindlichkeit durch Drehen des Potentiometers auf dem Sensor eingestellt werden.
 
-## Specification
+## Technische Daten
 
-- Power supply: 5V
+- Stromversorgung: 5V
 
-- Interface type: Analog
+- Schnittstellentyp: Analog
 
-- Simple drive circuit
+- Einfache Ansteuerschaltung
 
-- Stable and long lifespan
+- Stabil und lange Lebensdauer
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Connect the A0 pin of module to Analog A0 of V4.0 board, connect the GND pin to GND port, VCC pin to 5V port.
+Verbinden Sie den A0-Pin des Moduls mit Analog A0 des V4.0-Boards, verbinden Sie den GND-Pin mit dem GND-Anschluss, den VCC-Pin mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/7b2cdff9418f79b2e9e566ce61a7966a.jpeg)
+![Anschlussdiagramm Abbildung](../media/7b2cdff9418f79b2e9e566ce61a7966a.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -51,12 +51,12 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/d440553d52e043d7a91928882d877dd1.png)
+![Beispielergebnis Abbildung](../media/d440553d52e043d7a91928882d877dd1.png)
 
-Done wiring and powered up, upload well the code, then open the serial monitor and set the baud rate as 9600, you will see the analog value. When detecting the gas, the value will make a change.
+Nachdem die Verkabelung abgeschlossen und die Stromversorgung eingeschaltet ist, laden Sie den Code hoch, öffnen Sie dann den seriellen Monitor und stellen Sie die Baudrate auf 9600 ein. Sie sehen den analogen Wert. Beim Erfassen von Gas ändert sich der Wert.
 
-![Example Result illustration](../media/cbf777feb6231d76347bc632f87d0e8e.jpeg)
+![Beispielergebnis Abbildung](../media/cbf777feb6231d76347bc632f87d0e8e.jpeg)
 
 ---

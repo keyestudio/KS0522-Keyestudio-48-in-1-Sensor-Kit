@@ -1,56 +1,56 @@
-# Lesson 48: Dot Matrix
+# Lektion 48: Punktmatrix
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P-Board
 
-![Project 48: Dot Matrix illustration](../media/10e87958bbef207075643ae4f5481457.jpeg)
+![Projekt 48: Punktmatrix Illustration](../media/10e87958bbef207075643ae4f5481457.jpeg)
 
-## Introduction
+## Einführung
 
-What's better than a single LED? Lots of LEDs! A fun way to make a small display is to use an 8x8 matrix.  This module uses HT16K33 chip to drive an 8x8 dot matrix.
+Was ist besser als eine einzelne LED? Viele LEDs! Eine unterhaltsame Möglichkeit, ein kleines Display zu bauen, ist die Verwendung einer 8x8-Matrix. Dieses Modul verwendet den HT16K33-Chip, um eine 8x8-Punktmatrix anzusteuern.
 
-Just need to use the I2C communication port of microcontroller to control the dot matrix, which can save more port resources of microcontroller.  The matrix module comes with a 4Pin header of 2.54mm pin pitch.
+Es reicht, den I2C-Kommunikationsport des Mikrocontrollers zu verwenden, um die Punktmatrix zu steuern, wodurch mehr Portressourcen des Mikrocontrollers eingespart werden können. Das Matrixmodul wird mit einer 4Pin-Stiftleiste mit 2.54mm Pin-Abstand geliefert.
 
-You can connect the module to control board for communication using jumper wires.
+Sie können das Modul mit Jumper-Kabeln an die Steuerplatine für die Kommunikation anschließen.
 
-Besides, it comes with three DIP switches. You can randomly toggle the switch to select the I2C communication address.
+Außerdem ist es mit drei DIP-Schaltern ausgestattet. Sie können die Schalter beliebig umlegen, um die I2C-Kommunikationsadresse auszuwählen.
 
-## The address settings are as shown below
+## Die Adresseneinstellungen sind wie unten dargestellt
 
 |   0x70   |          |          |      |   0x71   |          |          |      |   0x72   |          |          |
 | :------: | :------: | :------: | ---- | :------: | :------: | :------: | ---- | :------: | :------: | :------: |
 | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |
-| 0（OFF） | 0（OFF） | 0（OFF） |      | 1（ON）  | 0（OFF） | 0（OFF） |      | 0（OFF） | 1（ON）  | 0（OFF） |
+| 0（AUS） | 0（AUS） | 0（AUS） |      | 1（EIN） | 0（AUS） | 0（AUS） |      | 0（AUS） | 1（EIN） | 0（AUS） |
 |          |          |          |      |          |          |          |      |          |          |          |
 | **0x73** |          |          |      | **0x74** |          |          |      | **0x75** |          |          |
 | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |
-| 1（ON）  | 1（ON）  | 0（OFF） |      | 0（OFF） | 0（OFF） | 1（ON）  |      | 1（ON）  | 0（OFF） | 1（ON）  |
+| 1（EIN） | 1（EIN） | 0（AUS） |      | 0（AUS） | 0（AUS） | 1（EIN） |      | 1（EIN） | 0（AUS） | 1（EIN） |
 |          |          |          |      |          |          |          |      |          |          |          |
 | **0x76** |          |          |      | **0x77** |          |          |      |          |          |          |
 | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |      |          |          |          |
-| 0（OFF） | 1（ON）  | 1（ON）  |      | 1（ON）  | 1（ON）  | 1（ON）  |      |          |          |          |
+| 0（AUS） | 1（EIN） | 1（EIN） |      | 1（EIN） | 1（EIN） | 1（EIN） |      |          |          |          |
 
-## Technical Details
+## Technische Details
 
-- Interface: 4Pin header
+- Schnittstelle: 4Pin header
 
-- Operating voltage: DC 4.5V-5.5V
+- Betriebsspannung: DC 4.5V-5.5V
 
-- Comes with three DIP switches for address selection
+- Ausgestattet mit drei DIP-Schaltern zur Adressauswahl
 
-- Dimensions：52mm\*34mm\*11mm
+- Abmessungen：52mm\*34mm\*11mm
 
-- Weight：13.2g
+- Gewicht：13.2g
 
-## Hookup Guide
+## Anschlussanleitung
 
-Connect the SCL pin to Analog A5 port, SDA pin to Analog A4 port; Connect VCC pin to 5V port, GND pin to GND port.
+Verbinden Sie den SCL-Pin mit dem analogen A5-Anschluss, den SDA-Pin mit dem analogen A4-Anschluss; verbinden Sie den VCC-Pin mit 5V und den GND-Pin mit GND.
 
-![Hookup Guide illustration](../media/e2c09c1a7851f64ad03a027c1aa25a14.jpeg)
+![Anschlussanleitung Illustration](../media/e2c09c1a7851f64ad03a027c1aa25a14.jpeg)
 
-## Test Code
+## Testcode
 
-Download the library:
+Bibliothek herunterladen:
 
 ```C
 #include <Wire.h>
@@ -82,66 +82,66 @@ void loop() {
 }
 ```
 
-**Note:** before compiling the code, do remember to place the Matrix library folder into directory \\Arduino\\libraries. Otherwise, fail to compile the code.
+**Hinweis:** Bevor Sie den Code kompilieren, denken Sie daran, den Matrix-Bibliotheksordner in das Verzeichnis \\Arduino\\libraries zu legen. Andernfalls schlägt die Kompilierung fehl.
 
-For example: **C:\\Program Files\\Arduino\\libraries**
+Zum Beispiel: **C:\\Program Files\\Arduino\\libraries**
 
-## Test Result
+## Testergebnis
 
-Done uploading the code to the board, power on, you should see the 8\*8 matrix displaying a heart image. Shown below.
+Nachdem der Code auf das Board hochgeladen wurde und das Gerät mit Strom versorgt ist, sollten Sie die 8\*8-Matrix sehen, die ein Herzsymbol anzeigt. Siehe unten.
 
-![Test Result illustration](../media/4a53bb681a3299be450726255f4d56a2.jpeg)
+![Testergebnis Abbildung](../media/4a53bb681a3299be450726255f4d56a2.jpeg)
 
-## Settings Method
+## Einstellmethode
 
-1. Set the communication address. Refer to the address chart.
+1. Setzen Sie die Kommunikationsadresse. Siehe das Adressdiagramm.
 
-The code is set as below.
+Der Code ist wie folgt eingestellt.
 
-![Settings Method illustration](../media/187557b09de67c1236bfd6536b0b95ee.png)
+![Einstellmethode Illustration](../media/187557b09de67c1236bfd6536b0b95ee.png)
 
-![Settings Method illustration](../media/910472d4662d0c1f463f9bedfe4cef74.png)
+![Einstellmethode Illustration](../media/910472d4662d0c1f463f9bedfe4cef74.png)
 
-![Settings Method illustration](../media/165615f73e4c9a49c861f5e17eb333e3.png)
+![Einstellmethode Illustration](../media/165615f73e4c9a49c861f5e17eb333e3.png)
 
-1. Set the display image
+1. Stellen Sie das Anzeigebild ein
 
-You can set the display image in the code shown below.
+Sie können das Anzeigebild im unten gezeigten Code festlegen.
 
-![Settings Method illustration](../media/4a709cb4583c82f469c179dd6b1cfa71.png)
+![Einstellmethode Illustration](../media/4a709cb4583c82f469c179dd6b1cfa71.png)
 
-Place the matrix module as follows:
+Platzieren Sie das Matrix-Modul wie folgt:
 
-![Settings Method illustration](../media/10e87958bbef207075643ae4f5481457.jpeg)
+![Einstellmethode Illustration](../media/10e87958bbef207075643ae4f5481457.jpeg)
 
-Then convert 0x00,0x18,0x24,0x42,0x81,0x99,0x66,0x00 into Binary number:
+Konvertieren Sie dann 0x00,0x18,0x24,0x42,0x81,0x99,0x66,0x00 in Binärzahlen:
 
-- `0x00` corresponds to `0 0 0 0 0 0 0 0`.
+- `0x00` entspricht `0 0 0 0 0 0 0 0`.
 
-- `0x18` corresponds to `0 0 0 1 1 0 0 0`.
+- `0x18` entspricht `0 0 0 1 1 0 0 0`.
 
-- `0x24` corresponds to `0 0 1 0 0 1 0 0`.
+- `0x24` entspricht `0 0 1 0 0 1 0 0`.
 
-- `0x42` corresponds to `0 1 0 0 0 0 1 0`.
+- `0x42` entspricht `0 1 0 0 0 0 1 0`.
 
-- `0x81` corresponds to `1 0 0 0 0 0 0 1`.
+- `0x81` entspricht `1 0 0 0 0 0 0 1`.
 
-- `0x99` corresponds to `1 0 0 1 1 0 0 1`.
+- `0x99` entspricht `1 0 0 1 1 0 0 1`.
 
-- `0x66` corresponds to `0 1 1 0 0 1 1 0`.
+- `0x66` entspricht `0 1 1 0 0 1 1 0`.
 
-- `0x00` corresponds to `0 0 0 0 0 0 0 0`.
+- `0x00` entspricht `0 0 0 0 0 0 0 0`.
 
-The first hexadecimal number controls the first column of LEDs.
+Die erste hexadezimale Zahl steuert die erste Spalte der LEDs.
 
-The second value controls the second column, and so on.
+Der zweite Wert steuert die zweite Spalte, und so weiter.
 
-These settings convert each 8-bit hexadecimal value into its binary representation.
+Diese Einstellungen wandeln jeden 8-Bit-Hexadezimalwert in seine binäre Darstellung um.
 
-The number 0 means LED off, and number 1 means LED on.
+Die Zahl 0 bedeutet LED aus, und die Zahl 1 bedeutet LED an.
 
-The first converted number is controlling the first row of LED on and off, and so on.
+Die erste konvertierte Zahl steuert das Ein- und Ausschalten der ersten LED-Reihe, und so weiter.
 
-![Settings Method illustration](../media/3ba4bb34ddf3ef182c5aa5bc7a309605.png)
+![Einstellmethode Illustration](../media/3ba4bb34ddf3ef182c5aa5bc7a309605.png)
 
 ---

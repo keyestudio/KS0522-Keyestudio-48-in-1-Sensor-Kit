@@ -1,51 +1,51 @@
-# Lesson 19: Analog Temperature
+# Lektion 19: Analoge Temperatur
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor-Kit  
+> **Platine:** Keyestudio V4.0 / mit Arduino Uno kompatible ATmega328P-Platine
 
-![Project 19: Analog Temperature illustration](../media/8269d6536e383bcc592da1ae98bc3661.png)
+![Projekt 19: Analoge Temperatur Abbildung](../media/8269d6536e383bcc592da1ae98bc3661.png)
 
-## Description
+## Beschreibung
 
-This module is based on the working principle of a thermistor (resistance varies with temperature change in the environment).
+Dieses Modul basiert auf dem Funktionsprinzip eines Thermistors (Widerstand ändert sich mit Temperaturänderungen in der Umgebung).
 
-It can sense temperature changes in the surrounding and send the data to the analog IO of Arduino board.
+Es kann Temperaturänderungen in der Umgebung erfassen und die Daten an die analogen IOs des Arduino-Boards senden.
 
-All we need to do is to convert the sensor’s output data into degrees Celsius temperature via simple programming, finally displaying it on the monitor.
+Alles, was wir tun müssen, ist die Ausgangsdaten des Sensors mittels einfacher Programmierung in Grad Celsius umzuwandeln und schließlich auf dem Monitor anzuzeigen.
 
-It's both convenient and effective, thus it is widely applied to gardening, home alarm system and other devices.
+Es ist sowohl praktisch als auch effektiv und wird daher häufig in Gartenanwendungen, Hausalarmsystemen und anderen Geräten eingesetzt.
 
-## Specification
+## Spezifikation
 
-- Interface type: analog
+- Schnittstellentyp: analog
 
-- Working voltage: 5V
+- Betriebsspannung: 5V
 
-- Temperature range: -55℃～315℃
+- Temperaturbereich: -55℃～315℃
 
-- Size: 30\*20mm
+- Größe: 30\*20mm
 
-- Weight: 3g
+- Gewicht: 3g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-First, you need to prepare the following parts before connection:
+Zuerst müssen Sie vor dem Anschluss die folgenden Teile vorbereiten:
 
-- V4.0 Board\*1
+- V4.0-Platine\*1
 
-- Analog temperature sensor\*1
+- Analoger Temperatursensor\*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*3
+- Jumper-Kabel\*3
 
-Connect the S pin of module to Analog A0 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinde den S-Pin des Moduls mit dem analogen A0 des V4.0-Boards, verbinde den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/330d37f05ac235a850d06726284243a5.jpeg)
+![Anschlussdiagramm Abbildung](../media/330d37f05ac235a850d06726284243a5.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopiere und füge den folgenden Code in die Arduino-Software ein.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -60,11 +60,11 @@ Serial.println(sensorValue);
 ////////////////////////////////////////////////////////////////////
 ```
 
-The above code is only for analog value.
+Der obige Code gibt nur den analogen Wert aus.
 
-You can see that the analog value is changing according to the temperature change in the environment. But it’s not very obvious.
+Sie können sehen, dass sich der analoge Wert entsprechend der Temperaturänderung in der Umgebung ändert. Aber das ist nicht sehr deutlich.
 
-Let’s solve this by using the following equation. Then upload the code below to the Arduino board. The value read from the serial port is similar to normal temperature. eg. The temperature right now is 30°C.
+Lösen wir das mit folgender Gleichung. Laden Sie dann den untenstehenden Code auf das Arduino-Board hoch. Der vom seriellen Port gelesene Wert entspricht ungefähr der tatsächlichen Temperatur. z. B.: Die aktuelle Temperatur beträgt 30°C.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -84,12 +84,12 @@ void loop()
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/9ae4e8962bf9d46ceeb3ca0c2e560f43.png)
+![Beispielergebnis Abbildung](../media/9ae4e8962bf9d46ceeb3ca0c2e560f43.png)
 
-Done wiring and powered up as the above figure, upload well the code to the board, then open the serial monitor of Arduino IDE, you will see the current temperature value.
+Nachdem die Verkabelung wie oben vorgenommen und die Stromversorgung eingeschaltet wurde und der Code erfolgreich auf das Board hochgeladen wurde, öffnen Sie den seriellen Monitor der Arduino-IDE; Sie werden den aktuellen Temperaturwert sehen.
 
-![Example Result illustration](../media/005b4c639460eba8158f99637f03686b.jpeg)
+![Beispielergebnis Abbildung](../media/005b4c639460eba8158f99637f03686b.jpeg)
 
 ---

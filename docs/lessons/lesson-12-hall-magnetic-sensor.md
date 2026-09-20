@@ -1,47 +1,47 @@
-# Lesson 12: Hall Magnetic Sensor
+# Lektion 12: Hall-Magnetfeldsensor
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 12: Hall Magnetic Sensor illustration](../media/c3d4d513b72ac04fad7e4f3015bfb1ed.png)
+![Projekt 12: Hall-Magnetfeldsensor Abbildung](../media/c3d4d513b72ac04fad7e4f3015bfb1ed.png)
 
-## Description
+## Beschreibung
 
-This is a magnetic induction sensor. It can sense the magnetic materials within a detection range up to 3cm. The detection range and the strength of magnetic field are proportional. The output is digital on/off.
+Dies ist ein magnetischer Induktionssensor. Er kann magnetische Materialien innerhalb einer Erkennungsreichweite von bis zu 3cm erfassen. Die Erkennungsreichweite und die Stärke des Magnetfeldes sind proportional. Der Ausgang ist digital ein/aus.
 
-This sensor uses the SFE Reed Switch - Magnetic Field Sensor.
+Dieser Sensor verwendet den SFE Reed Switch - Magnetic Field Sensor.
 
-## Specification
+## Spezifikation
 
-- Sensing magnetic materials
+- Erkennt magnetische Materialien
 
-- Detection range: up to 3cm
+- Erfassungsbereich: bis zu 3cm
 
-- Output: digital on/off
+- Ausgang: digital ein/aus
 
-- Size: 30*20mm
+- Größe: 30*20mm
 
-- Weight: 3g
+- Gewicht: 3g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-First, you need to prepare the following parts before connection:
+Bereiten Sie vor dem Anschluss die folgenden Teile vor:
 
-- V4.0 Board\*1
+- V4.0 Platine\*1
 
-- Hall sensor \*1
+- Hallsensor \*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*3
+- Jumper-Kabel\*3
 
-Connect the S pin of module to Digital 3 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinden Sie den S-Pin des Moduls mit Digital 3 der V4.0-Platine, den Minuspol mit dem GND-Anschluss und den Pluspol mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/db4db0c53435ceb1d6caaaf40502247a.jpeg)
+![Verbindungsdiagramm Abbildung](../media/db4db0c53435ceb1d6caaaf40502247a.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -65,14 +65,14 @@ void loop(){
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-Wire it up and upload well the code to board, you will see that D13 indicator on V4.0 board is off, and led on the module is also off.
+Verdrahten Sie alles und laden Sie den Code auf das Board hoch. Sie werden sehen, dass die D13-Anzeige auf der V4.0-Platine aus ist und die LED am Modul ebenfalls aus ist.
 
-![Example Result illustration](../media/102f67e289b5834de7fa80b6e6d99c20.png)
+![Beispielergebnis Abbildung](../media/102f67e289b5834de7fa80b6e6d99c20.png)
 
-But if put a magnetic ball close to the hall module, you will see the D13 indicator on V4.0 board is turned on, and led on the module is also turned on.
+Wenn Sie jedoch einen Magnetball in die Nähe des Hall-Moduls bringen, wird die D13-Anzeige auf der V4.0-Platine eingeschaltet und die LED am Modul leuchtet ebenfalls.
 
-![Example Result illustration](../media/c3c4044f2205dd1ff162ef7e211d2b2c.png)
+![Beispielergebnis Abbildung](../media/c3c4044f2205dd1ff162ef7e211d2b2c.png)
 
 ---

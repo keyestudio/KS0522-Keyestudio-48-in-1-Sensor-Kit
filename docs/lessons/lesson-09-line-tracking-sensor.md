@@ -1,47 +1,47 @@
-# Lesson 09: Line -tracking Sensor
+# Lektion 09: Linienfolgesensor
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor-Kit  
+> **Board:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 9: Line -tracking Sensor illustration](../media/c476ef922ab6a8d31cb68f3ab3fa2ced.png)
+![Projekt 9: Linienfolgesensor Illustration](../media/c476ef922ab6a8d31cb68f3ab3fa2ced.png)
 
-## Description
+## Beschreibung
 
-This Line Tracking Sensor can detect white line in black or black line in white.
+Dieser Linienfolgesensor kann weiße Linien auf schwarzem Untergrund oder schwarze Linien auf weißem Untergrund erkennen.
 
-The single line-tracking signal provides a stable output signal TTL for a more accurate and more stable line. Multi-channel option can be easily achieved by installing required line-tracking robot sensors.
+Das einzelne Linienverfolgungs-Signal liefert ein stabiles TTL-Ausgangssignal für eine genauere und stabilere Linienverfolgung. Eine Mehrkanal-Option kann einfach durch die Installation der benötigten Linienfolgesensoren für Roboter realisiert werden.
 
-## Specification
+## Technische Daten
 
-1. Power supply: +5V
+1. Versorgung: +5V
 
-2. Operating current: \<10mA
+2. Betriebsstrom: \<10mA
 
-3. Operating temperature range: 0°C \~ + 50°C
+3. Betriebstemperaturbereich: 0°C \~ + 50°C
 
-4. Output interface: 3-wire interface (1 - signal, 2 - power, 3 - power supply negative)
+4. Ausgangsschnittstelle: 3-polige Schnittstelle (1 - Signal, 2 - Versorgung, 3 - Versorgung negativ)
 
-5. Output Level: TTL level
+5. Ausgangspegel: TTL-Pegel
 
-## Connection Diagram
+## Anschlussdiagramm
 
-First, you need to prepare the following parts before connection:
+Bereiten Sie vor dem Anschluss zunächst die folgenden Teile vor:
 
 - V4.0 Board\*1
 
-- Line tracking module \*1
+- Linienfolge-Modul \*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*3
+- Jumper-Kabel\*3
 
-Connect the S pin of module to Digital 3 of V4.0 board, connect the GND pin to GND port, V+ pin to 5V port.
+Verbinden Sie den S-Pin des Moduls mit Digital 3 des V4.0-Boards, verbinden Sie den GND-Pin mit dem GND-Anschluss und den V+-Pin mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/6727a1d7d92c3878fc51b8db0502fd14.jpeg)
+![Anschlussdiagramm Abbildung](../media/6727a1d7d92c3878fc51b8db0502fd14.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -58,10 +58,10 @@ void loop()
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/af115c59987fee06447790f1740e3203.jpeg)
+![Beispielergebnis Abbildung](../media/af115c59987fee06447790f1740e3203.jpeg)
 
-Done uploading the code to board, open the serial monitor and set the baud rate as 9600, then you can see the data from the sensor.
+Nachdem der Code auf das Board hochgeladen wurde, öffnen Sie den seriellen Monitor und stellen Sie die Baudrate auf 9600 ein. Dann können Sie die Daten des Sensors sehen.
 
 ---

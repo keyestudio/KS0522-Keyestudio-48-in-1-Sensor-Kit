@@ -1,37 +1,37 @@
-# Lesson 35: Pulse Rate Monitor
+# Lektion 35: Pulsmessgerät
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor-Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 35: Pulse Rate Monitor illustration](../media/0ec440cd93e00e956357ece654ce2a9c.png)
+![Projekt 35: Pulsmessgerät – Illustration](../media/0ec440cd93e00e956357ece654ce2a9c.png)
 
-## Description
+## Beschreibung
 
-This module makes use of a ultra-clear infrared LED and a phototransistor to detect the pulse in your finger. The red LED will flash in time with your pulse.
+Dieses Modul verwendet eine ultraklare Infrarot-LED und einen Phototransistor, um den Puls in Ihrem Finger zu erkennen. Die rote LED blinkt im Takt Ihres Pulses.
 
-Working principle
+Funktionsprinzip
 
-Shine the bright LED onto one side of your finger while the phototransistor on the other side of your finger picks up the amount of transmitted light. The resistance of the phototransistor will vary slightly as the blood pulses through your finger.
+Richten Sie die helle LED auf eine Seite Ihres Fingers, während der Phototransistor auf der anderen Seite die Menge des durchgelassenen Lichts erfasst. Der Widerstand des Phototransistors ändert sich leicht, wenn das Blut durch Ihren Finger pulsiert.
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Firstly you need to prepare the following parts before making a test.
+Bereiten Sie zunächst die folgenden Teile vor, bevor Sie einen Test durchführen.
 
-- V4.0 Board\*1
+- V4.0-Platine*1
 
-- Pulse module\*1
+- Pulsmodul*1
 
-- USB Cable\*1
+- USB-Kabel*1
 
-- Jumper Wire\*3
+- Jumper-Kabel*3
 
-Connect the Signal pin of module to Analog A0 of V4.0 board, the positive pin to 5V port, the negative pin to GND port.
+Verbinden Sie den Signal-Pin des Moduls mit Analog A0 der V4.0-Platine, den positiven Pin mit dem 5V-Anschluss und den negativen Pin mit GND.
 
-![Connection Diagram illustration](../media/fa86e3930b83753af7ad87d0418cd350.jpeg)
+![Anschlussdiagramm – Abbildung](../media/fa86e3930b83753af7ad87d0418cd350.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the code below to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -60,14 +60,14 @@ delay(period);
 ///////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-Wire it up well as the above diagram, then upload well the code to the board and click the icon of serial monitor on the upper right corner of Arduino software. Set the baud rate as 115200, you will see the data is displayed on the monitor.
+Verdrahten Sie alles wie im obigen Diagramm, laden Sie dann den Code auf das Board hoch und klicken Sie in der Arduino-Software oben rechts auf das Symbol des seriellen Monitors. Stellen Sie die Baudrate auf 115200 ein; die Daten werden im Monitor angezeigt.
 
-You can copy and paste the data to the excel, finally it will generate the corresponding picture shown below.
+Sie können die Daten in Excel kopieren und einfügen; schließlich wird das entsprechende unten gezeigte Diagramm erstellt.
 
-![Example Result illustration](../media/3c3a1a0d120f1c68c95095a0fd98fa47.png)
+![Beispielergebnis – Abbildung](../media/3c3a1a0d120f1c68c95095a0fd98fa47.png)
 
-![Example Result illustration](../media/215ab9a6174f9798a291bacb907eaf89.jpeg)
+![Beispielergebnis – Abbildung](../media/215ab9a6174f9798a291bacb907eaf89.jpeg)
 
 ---

@@ -1,53 +1,53 @@
-# Lesson 27: Steam Sensor
+# Lektion 27: Feuchtigkeitssensor
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Board:** Keyestudio V4.0 / Arduino-Uno-kompatibles ATmega328P-Board
 
-![Project 27: Steam Sensor illustration](../media/d19ac9430f793cdbedde891ee92671e7.jpeg)
+![Projekt 27: Feuchtigkeitssensor Abbildung](../media/d19ac9430f793cdbedde891ee92671e7.jpeg)
 
-## Description
+## Beschreibung
 
-Steam sensor is an analog sensor and can be made as a simple rainwater detector and liquid level switch. When humidity on the face of this sensor rises, output voltage will increase.
+Der Feuchtigkeitssensor ist ein analoger Sensor und kann als einfacher Regenwasser-Detektor und Flüssigkeitsstandsschalter verwendet werden. Wenn die Feuchtigkeit an der Oberfläche dieses Sensors zunimmt, steigt die Ausgangsspannung.
 
-Caution: connection parts is non-waterproof, so please don’t put them into water.
+Achtung: Verbindungsteile sind nicht wasserdicht, tauchen Sie sie daher bitte nicht ins Wasser.
 
-## Parameters
+## Parameter
 
-- Working Voltage: 3.3V or 5V
+- Betriebsspannung: 3,3V oder 5V
 
-- Working Current: \<20mA
+- Betriebsstrom: \<20 mA
 
-- Range of Working Temperature: －10℃～＋70℃
+- Arbeitsbereich der Temperatur: －10℃～＋70℃
 
-- Interface Type: Analog Signal Output
+- Schnittstellentyp: Analoger Signalausgang
 
-## Pin Definition
+## Pin-Belegung
 
-- S pin: for Signal Output
+- S-Pin: für Signal-Ausgang
 
-- Positive pin (+): for Power Supply (VCC)
+- Positiver Pin (+): für Stromversorgung (VCC)
 
-- Negative pin (-): for Ground (GND)
+- Negativer Pin (-): für Masse (GND)
 
-## Connection Diagram
+## Verbindungsdiagramm
 
-First, you need to prepare the following parts before connection:
+Zuerst müssen Sie die folgenden Teile vor der Verbindung vorbereiten:
 
-- V4.0 board*1
+- V4.0-Board*1
 
-- Steam sensor*1
+- Feuchtigkeitssensor*1
 
-- USB Cable*1
+- USB-Kabel*1
 
-- Jumper wire*3
+- Jumper-Kabel*3
 
-Connect the S pin of module to Analog A0 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinden Sie den S-Pin des Moduls mit dem analogen Eingang A0 des V4.0-Boards, verbinden Sie den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/8fa51466dbc9650dcaa740bce4dd654e.jpeg)
+![Verbindungsdiagramm Abbildung](../media/8fa51466dbc9650dcaa740bce4dd654e.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -66,14 +66,14 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-![Example Result illustration](../media/c4633c5911c042224d187645db4d0588.png)
+![Beispielergebnis Abbildung](../media/c4633c5911c042224d187645db4d0588.png)
 
-When detecting different degrees of humidity, the sensor will get the feedback of different current value. Shown as the following picture.
+Beim Erfassen unterschiedlicher Feuchtigkeitsgrade liefert der Sensor unterschiedliche Messwerte. Siehe Abbildung unten.
 
-Due to the limited condition, you can put a drop of water on the sensor, the moisture value will be changed on serial monitor of Arduino software.
+Aufgrund begrenzter Möglichkeiten können Sie einen Wassertropfen auf den Sensor geben; der Feuchtigkeitswert ändert sich dann im seriellen Monitor der Arduino-Software.
 
-![Example Result illustration](../media/80e9b3e19db4bec337f3254545a58e9e.jpeg)
+![Beispielergebnis Abbildung](../media/80e9b3e19db4bec337f3254545a58e9e.jpeg)
 
 ---

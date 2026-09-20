@@ -1,43 +1,43 @@
-# Lesson 13: Knock Sensor
+# Lektion 13: Knocksensor
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 13: Knock Sensor illustration](../media/cef729e5b57059bc14518b0e2fdd2817.png)
+![Projekt 13: Knocksensor Illustration](../media/cef729e5b57059bc14518b0e2fdd2817.png)
 
-## Description
+## Beschreibung
 
-This module is a knock sensor. When you knock it, it can send a momentary signal.
+Dieses Modul ist ein Knocksensor. Wenn Sie darauf klopfen, kann er ein momentanes Signal senden.
 
-You can combine it with Arduino to make some interesting experiments, e.g. electronic drum
+Sie können ihn mit Arduino kombinieren, um einige interessante Experimente zu machen, z. B. eine elektronische Trommel.
 
-## Specification
+## Technische Daten
 
-- Working voltage: 5V
+- Arbeitsspannung: 5V
 
-- Size: 30\*20mm
+- Größe: 30\*20mm
 
-- Weight: 3g
+- Gewicht: 3g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-First, you need to prepare the following parts before connection:
+Bereiten Sie vor dem Anschließen zunächst die folgenden Teile vor:
 
-- V4.0 Board\*1
+- V4.0 Platine\*1
 
-- Knock sensor \*1
+- Knocksensor \*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*3
+- Jumperkabel\*3
 
-Connect the S pin of module to Digital 3 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinden Sie den S-Pin des Moduls mit Digital 3 der V4.0-Platine, den Minus-Pin mit dem GND-Anschluss und den Plus-Pin mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/1b9c27f145275e7a38d06763114f1847.jpeg)
+![Anschlussdiagramm Illustration](../media/1b9c27f145275e7a38d06763114f1847.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -64,10 +64,10 @@ digitalWrite(Led,HIGH);
 ////////////////////////////////////////////////////////////////////
 ```
 
-![Sample Code illustration](../media/c3fc14de7267b517a739268ed5b88674.png)
+![Beispielcode-Illustration](../media/c3fc14de7267b517a739268ed5b88674.png)
 
-## Example Result
+## Beispielergebnis
 
-Done wiring and powered up as above, upload well the code, then knock at the sensor, you will see both D13 led on the V4.0 board and D1 led on the sensor are turned on.
+Nachdem die Verkabelung wie oben vorgenommen und die Platine mit Strom versorgt wurde und der Code erfolgreich hochgeladen ist, klopfen Sie auf den Sensor. Sie werden sehen, dass sowohl die D13-LED auf der V4.0-Platine als auch die D1-LED am Sensor aufleuchten.
 
 ---

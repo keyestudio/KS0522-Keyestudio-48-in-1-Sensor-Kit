@@ -1,65 +1,64 @@
-# Lesson 03: 3W LED
+# Lektion 03: 3W-LED
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P-Board
 
-![Project 3: 3W LED illustration](../media/0b1110577bfde7df3b6aec41d5b21b28.png)
+![Projekt 3: 3W-LED Abbildung](../media/0b1110577bfde7df3b6aec41d5b21b28.png)
 
-## Description
+## Beschreibung
 
-This LED module is of high brightness because the lamp beads it carries is 3w.
-You can apply this module to Arduino projects, ideal for Robot or search and
-rescue platform application.
+Dieses LED-Modul hat eine hohe Helligkeit, da die verbauten LED-Chips 3W Leistung haben.
+Sie können dieses Modul in Arduino-Projekten einsetzen, ideal für Roboter- oder Such- und
+Rettungsplattform-Anwendungen.
 
-For example, intelligent robots can use this module for illumination purpose.
-Please note that the LED light can't be exposed directly to human eyes for
-safety concerns.
+Beispielsweise können intelligente Roboter dieses Modul zur Beleuchtung verwenden.
+Bitte beachten Sie aus Sicherheitsgründen, dass das LED-Licht nicht direkt auf menschliche Augen gerichtet werden darf.
 
-## Specification
+## Technische Daten
 
-- Color temperature: 6000\~7000K
+- Farbtemperatur: 6000\~7000K
 
-- Luminous flux: 180\~210lm
+- Lichtstrom: 180\~210lm
 
-- Current: 700\~750mA
+- Strom: 700\~750mA
 
-- Power: 3W
+- Leistung: 3W
 
-- Light angle: 140 degree
+- Abstrahlwinkel: 140 Grad
 
-- Working temperature: -50\~80℃
+- Arbeitstemperatur: -50\~80℃
 
-- Storage temperature: -50\~100℃
+- Lagertemperatur: -50\~100℃
 
-- High power LED module, controlled by IO port microcontroller
+- Hochleistungs-LED-Modul, gesteuert über I/O-Port des Mikrocontrollers
 
-- IO Type: Digital
+- I/O-Typ: Digital
 
-- Supply Voltage: 3.3V to 5V
+- Versorgungsspannung: 3.3V bis 5V
 
-- Size: 40x28mm
+- Größe: 40x28mm
 
-- Weight: 6g
+- Gewicht: 6g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-First, you need to prepare the following parts before connection:
+Bereiten Sie vor dem Anschließen zunächst die folgenden Teile vor:
 
-- V4.0 Board\*1
+- V4.0-Board\*1
 
-- 3W LED module \*1
+- 3W-LED-Modul \*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*3
+- Jumperkabel\*3
 
-Connect the S pin of module to Digital 13 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinden Sie den S-Anschluss des Moduls mit Digital 13 des V4.0-Boards, den negativen Anschluss mit dem GND-Anschluss und den positiven Anschluss mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/7ca6e53405c422f3ae9b04ac572b40ef.jpeg)
+![Anschlussdiagramm Abbildung](../media/7ca6e53405c422f3ae9b04ac572b40ef.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ///////////////////////////////////////////////////////////
@@ -79,10 +78,10 @@ void loop() {
 ///////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-Done wiring and powered up, upload well the code, both D13 led and the led on the module blink for one second then off, circularly.
+Nachdem die Verkabelung abgeschlossen, die Stromversorgung eingeschaltet und der Code erfolgreich hochgeladen wurde, blinken sowohl die D13-LED als auch die LED des Moduls eine Sekunde lang und sind dann eine Sekunde aus, zyklisch.
 
-![Example Result illustration](../media/edeb5b089be0300c719652badfd269e7.png)
+![Beispielergebnis Abbildung](../media/edeb5b089be0300c719652badfd269e7.png)
 
 ---

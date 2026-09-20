@@ -1,47 +1,47 @@
-# Lesson 01: White LED
+# Lektion 01: Weiße LED
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor-Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 1: White LED illustration](../media/6819f1c2047a7bb2b58e9cf0d7d3a617.jpeg)
+![Projekt 1: Weiße LED Abbildung](../media/6819f1c2047a7bb2b58e9cf0d7d3a617.jpeg)
 
-## Description
+## Beschreibung
 
-This white LED light module is ideal for Arduino starters. It can be easily connected to IO/Sensor shield. It enables interaction with light-related works.
+Dieses weiße LED-Lichtmodul ist ideal für Arduino-Einsteiger. Es kann einfach an ein IO/Sensor-Shield angeschlossen werden. Es ermöglicht Interaktionen mit lichtbezogenen Projekten.
 
-Note: You can choose other LED modules to emit different color like yellow, red, green and blue.
+Hinweis: Sie können auch andere LED-Module wählen, um verschiedene Farben wie Gelb, Rot, Grün und Blau auszustrahlen.
 
-## Specification
+## Spezifikation
 
-- White LED module
+- Weißes LED-Modul
 
-- Type: Digital
+- Typ: Digital
 
-- PH2.54 socket
+- PH2.54-Buchse
 
-- Size: 30\*20mm
+- Größe: 30\*20mm
 
-- Weight: 3g
+- Gewicht: 3g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-First, you need to prepare the following parts before connection:
+Bereiten Sie vor dem Anschluss zunächst die folgenden Teile vor:
 
-- V4.0 board\*1
+- V4.0-Platine\*1
 
-- White LED module \*1
+- Weißes LED-Modul \*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper wire\*3
+- Jumperkabel\*3
 
-Connect the S pin of module to Digital 3 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinden Sie den S-Pin des Moduls mit Digital 3 der V4.0-Platine, verbinden Sie den negativen Pin mit dem GND-Port, den positiven Pin mit dem 5V-Port.
 
-![Connection Diagram illustration](../media/cb67155c3b3cf25025edea5ae31d6c5f.jpeg)
+![Anschlussdiagramm Abbildung](../media/cb67155c3b3cf25025edea5ae31d6c5f.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 const uint8_t ledPin = 3;
@@ -58,11 +58,10 @@ void loop() {
 }
 ```
 
-## Example Result
+## Beispielergebnis
 
-Done wiring and powered up, upload well the code, you will see the LED module emit the white light.
+Nach dem Verdrahten, Einschalten und erfolgreichem Hochladen des Codes leuchtet das LED-Modul weiß.
 
-![Example Result illustration](../media/40448f38601a6312bfb1e3764be22158.png)
+![Beispielergebnis Abbildung](../media/40448f38601a6312bfb1e3764be22158.png)
 
 ---
-

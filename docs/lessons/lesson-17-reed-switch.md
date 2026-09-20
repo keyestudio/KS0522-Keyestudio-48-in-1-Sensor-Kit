@@ -1,55 +1,55 @@
-# Lesson 17: Reed Switch
+# Lektion 17: Reed-Schalter
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 17: Reed Switch illustration](../media/e580999515f6522eb603ea723bf62173.png)
+![Projekt 17: Reed-Schalter Illustration](../media/e580999515f6522eb603ea723bf62173.png)
 
-## Description
+## Beschreibung
 
-Reed Switch is a special switch and a main component for reed relay and proximity switch.
+Der Reed-Schalter ist ein spezieller Schalter und eine Hauptkomponente für Reed-Relais und Näherungsschalter.
 
-Reed switch is usually comprised of two soft magnetic materials and metal reed contacts which will disconnect itself when there is no magnetic.
+Ein Reed-Schalter besteht üblicherweise aus zwei weichmagnetischen Materialien und metallischen Kontaktzungen, die sich trennen, wenn kein Magnetfeld vorhanden ist.
 
-In addition, some reed switches are also equipped with another reed acting as the third normally-closed contact. These reed contacts are encapsulated in a glass tube full of inert gases(such as nitrogen and helium) or in a vacuum glass tube.
+Außerdem sind einige Reed-Schalter mit einer zusätzlichen Kontaktzunge als dritten normalerweise geschlossenen Kontakt ausgestattet. Diese Kontaktschaltzungen sind in einem Glasrohr versiegelt, das mit Inertgasen (wie Stickstoff und Helium) gefüllt ist, oder in einem Vakuum-Glasrohr.
 
-The reeds encapsulated in the glass tube are placed in parallel with ends overlapped. Certain amount of space or mutual contact will be reserved to constitute the normally-open or normally-closed contacts of the switch.
+Die im Glasrohr eingeschlossenen Kontaktzungen liegen parallel mit überlappenden Enden. Zwischen ihnen wird ein bestimmter Abstand oder gegenseitiger Kontakt vorgesehen, um die normalerweise offenen oder normalerweise geschlossenen Kontakte des Schalters zu bilden.
 
-Reed switch can be used as for count, limit or other purposes.
+Der Reed-Schalter kann z. B. zum Zählen, als Endschalter oder für andere Zwecke verwendet werden.
 
-For instance, a kind of bike-kilometer is constituted by sticking magnetic to the tire and mounting reed switch aside.
+Beispielsweise wird bei einem Fahrradkilometerzähler ein Magnet am Reifen befestigt und der Reed-Schalter daneben montiert.
 
-You can also mount reed switch on the door for alarming purpose or as switches.
+Man kann den Reed-Schalter auch an einer Tür zur Alarmierung oder als Schalter anbringen.
 
-Reed switch has been widely applied in household appliances, cars, communication, industry, healthcare and security areas.
+Reed-Schalter werden weit verbreitet in Haushaltsgeräten, Fahrzeugen, der Kommunikationstechnik, Industrie, im Gesundheitswesen und im Sicherheitsbereich eingesetzt.
 
-Furthermore, it can also be applied to other sensors and electric devices such as liquidometer, door magnet, reed relay, oil level sensor and proximity sensor(magnetic sensor). It can be used under high-risk environment.
+Darüber hinaus kann er in Verbindung mit anderen Sensoren und elektrischen Geräten eingesetzt werden, z. B. Flüssigkeitsstandsanzeigern, Türmagneten, Reed-Relais, Ölstandssensoren und Näherungssensoren (Magnetsensoren). Er kann in risikoreichen Umgebungen eingesetzt werden.
 
-## Specification
+## Technische Daten
 
-1. Working voltage: DC 3.3V-5V
+1. Betriebsspannung: DC 3.3V-5V
 
-2. Working current: ≥20mA
+2. Betriebsstrom: ≥20mA
 
-3. Working temperature: －10℃ to ＋50℃
+3. Betriebstemperatur: －10℃ bis ＋50℃
 
-4. Detection distance: ≤10mm
+4. Erfassungsabstand: ≤10mm
 
-5. IO Interface: 3 wire interfaces (-/+/S)
+5. IO-Schnittstelle: 3-Draht-Schnittstellen (-/+/S)
 
-6. Size: 30\*20mm
+6. Größe: 30\*20mm
 
-7. Weight: 3g
+7. Gewicht: 3g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Connect the S pin of module to Digital 3 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinde den S-Pin des Moduls mit Digital 3 des V4.0-Boards, den negativen Pin mit dem GND-Port und den positiven Pin mit dem 5V-Port.
 
-![Connection Diagram illustration](../media/ad39b511b42657baed492704a9c84b13.jpeg)
+![Anschlussdiagramm Illustration](../media/ad39b511b42657baed492704a9c84b13.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopiere und füge den folgenden Code in die Arduino-Software ein.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -78,14 +78,14 @@ digitalWrite(Led,LOW);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-Done wiring and powered up, upload well the code to the board. You can see the D13 led on V4.0 board is on.
+Nachdem die Verdrahtung abgeschlossen und die Stromversorgung eingeschaltet ist sowie der Code erfolgreich auf das Board hochgeladen wurde, leuchtet die D13-LED auf dem V4.0-Board.
 
-![Example Result illustration](../media/a2f983d5a5b324f55e3c0994458d4cbc.png)
+![Beispielergebnis Illustration](../media/a2f983d5a5b324f55e3c0994458d4cbc.png)
 
-Then we put some magnetic balls close to the sensor. When the sensor detects the magnetic field signal, the led on the sensor will be turned on but D13 led will be turned off.
+Anschließend halten wir einige Magnetkugeln in die Nähe des Sensors. Wenn der Sensor das Magnetfeld erkennt, leuchtet die LED am Sensor, während die D13-LED erlischt.
 
-![Example Result illustration](../media/ecbec914abc799076513f5c61149b004.png)
+![Beispielergebnis Illustration](../media/ecbec914abc799076513f5c61149b004.png)
 
 ---

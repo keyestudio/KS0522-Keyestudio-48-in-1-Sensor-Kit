@@ -1,61 +1,61 @@
-# Lesson 07: Digital Push Button
+# Lektion 07: Digitaler Taster
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-![Project 7: Digital Push Button illustration](../media/a8707354e54ea51bb92584f791ae79e5.png)
+![Projekt 7: Digitaler Taster Abbildung](../media/a8707354e54ea51bb92584f791ae79e5.png)
 
-## Description
+## Beschreibung
 
-This is a basic button module. You can simply plug it into an IO shield to have your first try of Arduino.
+Dies ist ein einfaches Tastermodul. Du kannst es einfach an ein IO-Shield anschließen, um deinen ersten Versuch mit Arduino zu starten.
 
-## Features
+## Eigenschaften
 
-- Wide voltage range from 3.3V to 5V
+- Breiter Spannungsbereich von 3.3V bis 5V
 
-- Easily recognizable interfaces of sensors ("A" for Analog and "D" for Digital)
+- Leicht erkennbare Schnittstellen der Sensoren ("A" für Analog und "D" für Digital)
 
-- Standard assembled hole
+- Standardisierte Montagebohrung
 
-- Clear icons illustration
+- Klare Symbolillustrationen
 
-- High quality connector
+- Hochwertiger Anschluss
 
-- Easy to plug and operate
+- Einfach zu stecken und zu bedienen
 
-- Large button and high-quality cap
+- Großer Taster und hochwertige Kappe
 
-- To achieve interesting and interactive works
+- Ermöglicht interessante und interaktive Arbeiten
 
-## Specification
+## Technische Daten
 
-- Supply Voltage: 3.3V to 5V
+- Versorgungsspannung: 3.3V bis 5V
 
-- Interface: Digital
+- Schnittstelle: Digital
 
-- Dimensions: 30*20mm
+- Abmessungen: 30*20mm
 
-- Weight: 4g
+- Gewicht: 4g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-First, you need to prepare the following parts before connection:
+Bereite zunächst die folgenden Teile vor, bevor du die Verbindung herstellst:
 
 - V4.0 Board*1
 
-- Push button module*1
+- Tastermodul*1
 
-- USB Cable*1
+- USB-Kabel*1
 
-- Jumper Wire*3
+- Jumperkabel*3
 
-Connect the S pin of module to Digital 3 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinde den S-Pin des Moduls mit Digital 3 des V4.0 board, verbinde den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/6ec73b961481bf0794572a842c5231fa.jpeg)
+![Anschlussdiagramm Abbildung](../media/6ec73b961481bf0794572a842c5231fa.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopiere den untenstehenden Code in die Arduino-Software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -78,12 +78,12 @@ void loop(){
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-Wire it up well as the figure shown below, and then upload the code to the board.
+Verdrahte alles wie in der unten gezeigten Abbildung und lade dann den Code auf das V4.0 board hoch.
 
-When you push the digital button, the Led 13 on V4.0 board will be on. When release the button, the led is off. Shown as below.
+Wenn du den digitalen Taster drückst, leuchtet die LED 13 auf dem V4.0 board. Wenn du den Taster loslässt, geht die LED aus. Siehe unten.
 
-![Example Result illustration](../media/ac03d3fa1c0f5de7dae18c6e64406e60.png)
+![Beispielergebnis Abbildung](../media/ac03d3fa1c0f5de7dae18c6e64406e60.png)
 
 ---

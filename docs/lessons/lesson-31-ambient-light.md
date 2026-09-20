@@ -1,43 +1,43 @@
-# Lesson 31: Ambient Light
+# Lektion 31: Umgebungslicht
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor-Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 31: Ambient Light illustration](../media/3eda1bbb84995dc2195a0406f1b0c196.jpeg)
+![Projekt 31: Umgebungslicht Abbildung](../media/3eda1bbb84995dc2195a0406f1b0c196.jpeg)
 
-## Description
+## Beschreibung
 
-At some point you are going to sense ambient brightness with better precision than your trusty photoresistor without adding complexity to your project. When that day comes, go get yourself a TEMT6000 ambient light sensor.
+Irgendwann werden Sie die Umgebungshelligkeit mit besserer Präzision als mit Ihrem bewährten Fotowiderstand messen wollen, ohne die Komplexität Ihres Projekts zu erhöhen. Für diesen Fall besorgen Sie sich einen TEMT6000-Umgebungslichtsensor.
 
-The TEMT6000 is supposed to be adapted to the sensitivity of the human eye, but found it preformed sub-par in low light conditions. It does however work very well reacting to very small changes in a large range of brightness. Because it is meant to mimic the human eye, it does not react well to IR or UV light, so just make sure to note that when using it in your project.
+Der TEMT6000 ist an die Empfindlichkeit des menschlichen Auges angepasst, zeigte sich jedoch bei schlechten Lichtverhältnissen als mäßig. Er reagiert jedoch sehr gut auf sehr kleine Helligkeitsänderungen über einen großen Bereich. Da er das menschliche Auge nachahmen soll, reagiert er nicht gut auf IR- oder UV-Licht, beachten Sie das also bei der Verwendung in Ihrem Projekt.
 
-## Specification
+## Spezifikation
 
-- Supply Voltage: +5VDC 50mA
+- Betriebsspannung: +5VDC 50mA
 
-- Size: 36.5\*16mm
+- Größe: 36.5\*16mm
 
-- Weight: 4g
+- Gewicht: 4g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-Firstly you need to prepare the following parts before connection.
+Zuerst müssen Sie die folgenden Teile vor dem Anschluss vorbereiten.
 
-- V4.0 Board\*1
+- V4.0-Platine\*1
 
-- TEMT6000 ambient light sensor\*1
+- TEMT6000-Umgebungslichtsensor\*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*3
+- Jumperkabel\*3
 
-This is an incredibly simple part, just connect power and ground, and the signal pin to analog input port, if done connecting, the sensor will output analog voltage, that ramps up when it gets brighter. You can power it with 3.3V as you like, the output value will just be much lower.
+Dies ist ein extrem einfaches Bauteil: Verbinden Sie einfach Versorgungsspannung und Masse sowie den Signalausgang mit einem analogen Eingangsport. Ist die Verbindung hergestellt, gibt der Sensor eine analoge Spannung aus, die mit zunehmender Helligkeit ansteigt. Sie können ihn auch mit 3.3V betreiben; dann sind die Ausgangswerte nur deutlich niedriger.
 
-![Connection Diagram illustration](../media/dae046a9efbeea661b9b6a2ab632fcbc.jpeg)
+![Anschlussdiagramm Abbildung](../media/dae046a9efbeea661b9b6a2ab632fcbc.jpeg)
 
-## Sample Code
+## Beispielcode
 
-You can not get more simpler than this – This just reports the reading value from the sensor to the serial terminal: 0-1023 with 1023 being very bright, and 0 being very dark.
+Einfacher geht es kaum – dieses Beispiel gibt nur den Messwert des Sensors an den seriellen Monitor aus: 0-1023, wobei 1023 sehr hell und 0 sehr dunkel ist.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -53,14 +53,14 @@ void loop() {
 ///////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-Wiring well and uploading the code above, open the serial monitor of Arduino software.
+Nachdem Sie korrekt verdrahtet und den obigen Code hochgeladen haben, öffnen Sie den seriellen Monitor der Arduino-Software.
 
-![Example Result illustration](../media/ea9ab82076983cc965fe016297b6ad76.png)
+![Beispielergebnis Abbildung](../media/ea9ab82076983cc965fe016297b6ad76.png)
 
-Then cover the sensor with your hand or a paper, the light becomes weak, finally you will see the value showed on monitor decreasing.
+Bedecken Sie dann den Sensor mit Ihrer Hand oder einem Papier; das Licht wird schwächer und schließlich sehen Sie, wie der auf dem Monitor angezeigte Wert abnimmt.
 
-![Example Result illustration](../media/846828c9af69a9823ca7218157cc181e.jpeg)
+![Beispielergebnis Abbildung](../media/846828c9af69a9823ca7218157cc181e.jpeg)
 
 ---

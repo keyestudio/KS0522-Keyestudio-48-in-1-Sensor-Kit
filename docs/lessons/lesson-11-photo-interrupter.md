@@ -1,45 +1,45 @@
-# Lesson 11: Photo Interrupter
+# Lektion 11: Lichtschranke
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensorsatz  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
 
-![Project 11: Photo Interrupter illustration](../media/8b0f7b3ba3e139eeaeba9bb7f86a946a.png)
+![Projekt 11: Lichtschranke Abbildung](../media/8b0f7b3ba3e139eeaeba9bb7f86a946a.png)
 
-## Description
+## Beschreibung
 
-Upright part of this sensor is an infrared emitter and on the other side, it’s a shielded infrared detector. By emitting a beam of infrared light from one end to other end, the sensor can detect an object when an object passes through the beam.
+Der aufrechte Teil dieses Sensors ist ein Infrarot-Emitter und auf der gegenüberliegenden Seite befindet sich ein abgeschirmter Infrarot-Detektor. Indem ein Strahl von Infrarotlicht von einem Ende zum anderen ausgesendet wird, kann der Sensor ein Objekt erkennen, wenn dieses den Strahl unterbricht.
 
-It is used for many applications including optical limit switches, pellet dispensing, general object detection, etc.
+Er wird für viele Anwendungen verwendet, einschließlich optischer Endschalter, Pellet-Ausgabe, allgemeiner Objekterkennung usw.
 
-## Specification
+## Technische Daten
 
-- Supply Voltage: 3.3V to 5V
+- Versorgungsspannung: 3.3V bis 5V
 
-- Interface: Digital
+- Schnittstelle: Digital
 
-- Size: 30*20mm
+- Größe: 30*20mm
 
-- Weight: 3g
+- Gewicht: 3g
 
-## Connection Diagram
+## Anschlussdiagramm
 
-First, you need to prepare the following parts before connection:
+Bereiten Sie zunächst die folgenden Teile vor, bevor Sie anschließen:
 
-- V4.0 Board\*1
+- V4.0-Platine\*1
 
-- Photo interrupter module \*1
+- Lichtschranken-Modul \*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*3
+- Jumper-Kabel\*3
 
-Connect the S pin of module to Digital 3 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinden Sie den S-Pin des Moduls mit Digital 3 der V4.0-Platine, verbinden Sie den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/669fa42ef7fb576047d6849940a305ba.jpeg)
+![Anschlussdiagramm Abbildung](../media/669fa42ef7fb576047d6849940a305ba.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -67,14 +67,14 @@ void loop ()
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Example Result
+## Beispielergebnis
 
-Done uploading the code to board, you can see both led on V4.0 board and on module are turned on. Shown as below.
+Nachdem Sie den Code auf die Platine hochgeladen haben, leuchten sowohl die LED auf der V4.0-Platine als auch die am Modul. Siehe unten.
 
-![Example Result illustration](../media/fa4d06ebf82ec572b7eccf6b706942cb.png)
+![Beispielergebnis Abbildung](../media/fa4d06ebf82ec572b7eccf6b706942cb.png)
 
-When pick up a paper on groove joint of module, the signal is interrupted, and led1 on the module will be turned off.
+Wenn Sie ein Stück Papier in den Schlitz des Moduls schieben, wird das Signal unterbrochen und LED1 am Modul schaltet aus.
 
-![Example Result illustration](../media/3ecb941fafc71843148e0e19b6ceda57.png)
+![Beispielergebnis Abbildung](../media/3ecb941fafc71843148e0e19b6ceda57.png)
 
 ---

@@ -1,55 +1,55 @@
-# Lesson 08: Collision Flash
+# Lektion 08: Kollisionsblitz
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
+> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P Board
 
-![Project 8: Collision Flash illustration](../media/29c4641406064a4f1df5d59aefbca480.png)
+![Projekt 8: Kollisionsblitz-Illustration](../media/29c4641406064a4f1df5d59aefbca480.png)
 
-## Description
+## Beschreibung
 
-Crash sensor, also known as electronic switch, is a digital on-off input module necessary for elementary electronic learning.
+Der Kollisionssensor, auch als elektronischer Schalter bekannt, ist ein digitales Ein-/Aus-Eingangsmodul, das für grundlegende Elektroniklernzwecke notwendig ist.
 
-By programming, it can realize to control over light, sound device, key choice function of LCD display, etc.
+Durch Programmierung kann er zur Steuerung von Licht- und Schallgeräten, zur Tastenwahlfunktion eines LCD-Displays usw. eingesetzt werden.
 
-Using 3P sensor cable to connect it to sensor shield, it can be installed to 4WD AL alloy mobile robot platform to realize collision detection function. It is both convenient and efficient.
+Über ein 3P-Sensorkabel mit einem Sensor-Shield verbunden, kann er auf einer 4WD-AL-Legierungs-Mobilrobotplattform montiert werden, um eine Kollisionsdetektionsfunktion zu realisieren. Das ist sowohl praktisch als auch effizient.
 
-You can make a collision flasher using collision module and built-in LED on interface 13. Connect the collision sensor to pin 3. When the collision sensor senses a collision signal, the LEDs on both main board and module will light up simultaneously.
+Sie können einen Kollisionsblinker mit dem Kollisionsmodul und der eingebauten LED an Schnittstelle 13 erstellen. Verbinden Sie den Kollisionssensor mit Pin 3. Wenn der Kollisionssensor ein Kollisionssignal erkennt, leuchten die LEDs sowohl auf dem Hauptboard als auch am Modul gleichzeitig.
 
-## Parameters
+## Parameter
 
-1. If collision happens upfront of where collision module is installed, module outputs low level signal; no collision, outputs high level signal.
+1. Wenn eine Kollision an der Vorderseite des installierten Kollisionsmoduls erfolgt, gibt das Modul ein Low-Signal aus; keine Kollision = High-Signal.
 
-2. Module reserves M3 mounting hole, convenient for fixation on a car.
+2. Das Modul verfügt über eine M3-Befestigungsbohrung, praktisch zur Fixierung an einem Fahrzeug.
 
-3. With switch indicator light, if there is collision, light is on; no collision, light is off.
+3. Mit Schalterstatusanzeige: Bei Kollision leuchtet die Anzeige; ohne Kollision ist sie aus.
 
-## Pin definition
+## Pindefinition
 
-1. Positive pin (+): connect to 3v-12v power supply
+1. Positive Klemme (+): an eine 3V–12V-Stromversorgung anschließen
 
-2. Negative pin (-): connect to GND
+2. Negative Klemme (-): an GND anschließen
 
-3. Signal pin (S): connect to High-low level output
+3. Signalklemme (S): High-/Low-Pegel-Ausgang
 
-## Connection Diagram
+## Anschlussdiagramm
 
-First, you need to prepare the following parts before connection:
+Zuerst müssen Sie vor dem Anschluss folgende Teile vorbereiten:
 
-- V4.0 Board\*1
+- V4.0 Platine\*1
 
-- Crash module \*1
+- Kollisionsmodul \*1
 
-- USB Cable\*1
+- USB-Kabel\*1
 
-- Jumper Wire\*3
+- Jumperkabel\*3
 
-Connect the S pin of module to Digital 3 of V4.0 board, connect the negative pin to GND port, positive pin to 5V port.
+Verbinden Sie den S-Pin des Moduls mit Digital 3 des V4.0-Boards, verbinden Sie die negative Klemme mit dem GND-Anschluss und die positive Klemme mit dem 5V-Anschluss.
 
-![Connection Diagram illustration](../media/a4ec0b7f8fd95fb2d6bb5c06ca0776f0.jpeg)
+![Anschlussdiagramm-Illustration](../media/a4ec0b7f8fd95fb2d6bb5c06ca0776f0.jpeg)
 
-## Sample Code
+## Beispielcode
 
-Copy and paste the below code to Arduino software.
+Kopieren Sie den folgenden Code in die Arduino-Software.
 
 ```c
 const uint8_t ledPin = 13;
@@ -66,10 +66,10 @@ void loop() {
 }
 ```
 
-## Example Result
+## Beispielergebnis
 
-Wire it up well and then upload the code to the board.
+Verdrahten Sie alles korrekt und laden Sie dann den Code auf das Board hoch.
 
-When the object crashes the switch of sensor, both the led on the sensor and led 13 on the board are turned on.
+Wenn ein Objekt den Schalter des Sensors trifft, leuchten sowohl die LED am Sensor als auch die LED 13 auf dem Board auf.
 
 ---
