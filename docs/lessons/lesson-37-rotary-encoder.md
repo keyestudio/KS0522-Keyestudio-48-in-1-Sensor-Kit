@@ -1,35 +1,35 @@
-# Lektion 37: Drehgeber
+# Lección 37: Codificador rotatorio
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
+> **Kit:** Kit de sensores Keyestudio 48-en-1  
+> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno ATmega328P
 
-![Projekt 37: Drehgeber Abbildung](../media/df622003846058dd3cf442518f655af2.png)
+![Proyecto 37: Ilustración del codificador rotatorio](../media/df622003846058dd3cf442518f655af2.png)
 
-## Einführung
+## Introducción
 
-Der Drehgeber kann die während der Rotation in Vorwärts- und Rückwärtsrichtung ausgegebenen Pulssignale zählen.
+El codificador rotatorio puede contar el número de pulsos emitidos durante la rotación en sentido horario y antihorario.
 
-Diese Zählung ist unbegrenzt, im Gegensatz zum Potentiometer. Sie kann auf den Anfangszustand zurückgesetzt werden, um wieder bei 0 zu zählen.
+Este conteo por rotación es ilimitado, a diferencia de un potenciómetro. Puede restablecerse al estado inicial para contar desde 0.
 
-## Spezifikation
+## Especificaciones
 
-- Stromversorgung: 5V
+- Alimentación: 5V
 
-- Schnittstelle: Digital
+- Interfaz: Digital
 
-- Größe: 30\*20mm
+- Tamaño: 30\*20mm
 
-- Gewicht: 7g
+- Peso: 7g
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-![Anschlussdiagramm Abbildung](../media/1de37f27caa224141230be6bdc95d29b.jpeg)
+![Ilustración del diagrama de conexión](../media/1de37f27caa224141230be6bdc95d29b.jpeg)
 
-Wie im Diagramm zu sehen, verbinden wir das Drehgeber-Modul und zwei LED-Module mit dem Steckbrett und dem V4.0-Board.
+Como se ve en el diagrama, conectamos el módulo codificador rotatorio y dos módulos LED al protoboard y a la placa V4.0.
 
-Verwende das Drehgeber-Modul, um zwei LED-Module ein- und auszuschalten.
+Utiliza el módulo codificador rotatorio para controlar el encendido y apagado de los dos módulos LED.
 
-## Beispielcode
+## Código de ejemplo
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -92,12 +92,12 @@ void RoteStateChanged() //When CLK  FALLING READ DAT
 ///////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-Wenn die Verkabelung korrekt ist und der obenstehende Code hochgeladen wurde, kannst du durch Drehen des Encoders die beiden LED-Module abwechselnd ein- und ausschalten. Beim Drehen wird zunächst ein LED-Modul eingeschaltet, während das andere aus ist.
+Con el cableado correcto y cargando el código anterior, puedes girar el codificador para alternar el encendido y apagado de los dos módulos LED. Cuando giras el codificador, un módulo LED se enciende primero mientras el otro está apagado.
 
-Wenn du weiter drehst, wird das eine LED-Modul ausgeschaltet, während das andere eingeschaltet wird — und das wiederholt sich.
+Si continúas girando el codificador, un módulo LED se apaga mientras el otro se enciende, repetidamente.
 
-![Beispielergebnis Abbildung](../media/4c1455602dc8ab6d61f5ab2e2d5dd67c.png)
+![Ilustración del resultado de ejemplo](../media/4c1455602dc8ab6d61f5ab2e2d5dd67c.png)
 
 ---

@@ -1,47 +1,47 @@
-# Lektion 28: Analoge Keramik-Vibration
+# Lección 28: Vibración cerámica analógica
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
+> **Kit:** Kit de sensores Keyestudio 48 en 1  
+> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno ATmega328P
 
-![Analoger Keramik-Vibrationssensormodul](../media/2cf5c2793157816a2346a730ad064955.jpeg)
+![Módulo sensor de vibración cerámica analógica](../media/2cf5c2793157816a2346a730ad064955.jpeg)
 
-## Beschreibung
+## Descripción
 
-Dieser Vibrationssensor basiert auf einem analogen piezoelektrischen Keramikchip. Er nutzt den piezoelektrischen Effekt, bei dem die Keramik durch Vibration elektrische Signale erzeugt. Wenn der piezoelektrische Keramikchip vibriert, erzeugt der Signalausgang des Sensors elektrische Signale.
+Este sensor de vibración se basa en un chip cerámico piezoeléctrico de vibración analógica. Aprovecha el proceso de piezoelectricidad por el que la vibración del chip cerámico genera señales eléctricas. Al vibrar el chip cerámico piezoeléctrico, el terminal de señal del sensor generará señales eléctricas.
 
-Der Sensor kann mit einem dedizierten Sensor-Shield für Arduino verwendet werden, und der analoge Eingang des Arduino kann schwache Vibrationssignale wahrnehmen, so dass interaktive Anwendungen in Bezug auf Vibration möglich sind, z. B. elektronische Schlaginstrumente.
+El sensor puede usarse con el shield dedicado de sensores para Arduino, y el puerto analógico del Arduino puede percibir señales de vibración débiles, de modo que puede realizar proyectos interactivos relacionados con la vibración, como una batería electrónica.
 
-Verbinden Sie den Vibrationssensor mit dem analogen Anschluss A0 des Arduino UNO. Wenn Sie den Sensor in unterschiedlicher Stärke vibrieren, sehen Sie verschiedene Ausgabewerte, die im seriellen Monitor der Arduino-Software angezeigt werden.
+Conecta el sensor de vibración al puerto analógico A0 del Arduino UNO. Al vibrar el sensor con distinta intensidad, verás diferentes valores de salida mostrados en el monitor serie del software de Arduino.
 
-## Spezifikation
+## Especificación
 
-- Versorgungsspannung：3.3V bis 5V
+- Tensión de alimentación: 3.3V a 5V
 
-- Betriebsstrom：\<1mA
+- Corriente de trabajo：\<1mA
 
-- Betriebstemperaturbereich：－10℃～＋70℃
+- Rango de temperatura de trabajo：－10℃～＋70℃
 
-- Ausgangssignal：analoges Signal
+- Señal de salida：señal analógica
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Zuerst müssen Sie vor der Verbindung die folgenden Teile vorbereiten:
+Primero, prepara las siguientes piezas antes de la conexión:
 
-- V4.0-Platine\*1
+- Placa V4.0\*1
 
-- Vibrationssensor\*1
+- sensor de vibración\*1
 
-- USB-Kabel\*1
+- Cable USB\*1
 
-- Jumper-Kabel\*3
+- Cable jumper\*3
 
-Verbinden Sie den S-Pin des Moduls mit Analog A0 der V4.0-Platine, verbinden Sie den negativen Pin mit dem GND-Anschluss, NC-Pin mit dem 5V-Anschluss.
+Conecta el pin S del módulo al analógico A0 de la placa V4.0, conecta el pin negativo al puerto GND, y el pin NC al puerto 5V.
 
-![Anschlussdiagramm](../media/92fce2d45b05876a7928070bd2b137da.jpeg)
+![Ilustración del diagrama de conexión](../media/92fce2d45b05876a7928070bd2b137da.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopieren Sie den folgenden Code in die Arduino-Software.
+Copia y pega el siguiente código en el software de Arduino.
 
 ```c
 ///////////////////////////////////////////////////////////
@@ -60,14 +60,14 @@ delay(100);
 ///////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-![Beispielergebnis](../media/e21152ca9f30274fcc658091f76f7044.png)
+![Ilustración del resultado de ejemplo](../media/e21152ca9f30274fcc658091f76f7044.png)
 
-Verdrahten Sie wie im obigen Diagramm und laden Sie den Code hoch, dann öffnen Sie den seriellen Monitor und stellen die Baudrate auf 9600.
+Cablea según el diagrama anterior y carga correctamente el código; luego abre el monitor serie y ajusta la velocidad en baudios a 9600.
 
-Wenn Sie den Keramikchip zum Vibrieren bringen, sehen Sie die Datenänderungen wie in der unten gezeigten Abbildung.
+Al vibrar la pastilla cerámica, verás que los datos cambian como se muestra en la figura siguiente.
 
-![Beispielergebnis](../media/4be72e831696d59b36082aa45d77a04d.jpeg)
+![Ilustración del resultado de ejemplo](../media/4be72e831696d59b36082aa45d77a04d.jpeg)
 
 ---

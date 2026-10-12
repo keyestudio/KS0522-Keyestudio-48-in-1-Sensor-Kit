@@ -1,35 +1,35 @@
-# Lektion 14: Digitaler Kippschalter
+# Lección 14: Interruptor de inclinación digital
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
+> **Kit:** Kit de sensores Keyestudio 48 en 1  
+> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno (ATmega328P)
 
-![Projekt 14: Digitaler Kippschalter Abbildung](../media/45a40bdcc098c1c4e0efb8246447173c.png)
+![Proyecto 14: ilustración del interruptor de inclinación digital](../media/45a40bdcc098c1c4e0efb8246447173c.png)
 
-## Beschreibung
+## Descripción
 
-Der Kipp-Sensor ist ein digitaler Neigungsschalter. Er kann als einfacher Kippschalter verwendet werden.
+El sensor de inclinación es un interruptor de inclinación digital. Puede usarse como un interruptor de inclinación simple.
 
-Einfach an unser IO/Sensor-Shield anschließen, einfache Kabelverbindung. Mit dem dedizierten Sensor-Shield und einem Arduino können Sie viele interessante und interaktive Projekte erstellen.
+Conéctalo simplemente a nuestro shield de E/S y sensores; la conexión de cables es sencilla. Con un shield de sensores dedicado y un Arduino, puedes crear muchos proyectos interesantes e interactivos.
 
-## Spezifikationen
+## Especificaciones
 
-- Versorgungsspannung: 3.3V bis 5V
+- Tensión de alimentación: 3.3V a 5V
 
-- Schnittstelle: Digital
+- Interfaz: Digital
 
-- Größe: 30*20mm
+- Tamaño: 30*20mm
 
-- Gewicht: 3g
+- Peso: 3g
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Verbinden Sie den S-Pin des Moduls mit Digital 3 des V4.0-Boards, verbinden Sie den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
+Conecta el pin S del módulo al Digital 3 de la placa V4.0, conecta el pin negativo al puerto GND, el pin positivo al puerto 5V.
 
-![Anschlussdiagramm Abbildung](../media/b909cdd6f697779371498723dc1407ab.jpeg)
+![Ilustración del diagrama de conexión](../media/b909cdd6f697779371498723dc1407ab.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopieren Sie den untenstehenden Code in die Arduino-Software.
+Copia y pega el siguiente código en el software de Arduino.
 
 ```c
 int Led=13;//define LED interface
@@ -54,14 +54,14 @@ digitalWrite(Led,HIGH);
 }
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-Nachdem die Verdrahtung abgeschlossen und die Stromversorgung eingeschaltet ist, laden Sie den Code auf das V4.0-Board hoch.
+Una vez cableado y alimentado, sube correctamente el código a la placa V4.0.
 
-![Beispielergebnis Abbildung](../media/d6a0aa9af1e43265114eec8570ac0f3c.png)
+![Ilustración del resultado de ejemplo](../media/d6a0aa9af1e43265114eec8570ac0f3c.png)
 
-Kippen Sie dann den Sensor; Sie werden sehen, dass die LED am Sensor aufleuchtet. Wie unten gezeigt.
+Entonces inclina el sensor; verás que el LED del sensor se enciende. Se muestra a continuación.
 
-![Beispielergebnis Abbildung](../media/6c4a144c26675a100bffa806c532736c.png)
+![Ilustración del resultado de ejemplo](../media/6c4a144c26675a100bffa806c532736c.png)
 
 ---

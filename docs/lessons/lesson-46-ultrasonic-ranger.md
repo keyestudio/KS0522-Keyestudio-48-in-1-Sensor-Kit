@@ -1,78 +1,78 @@
-# Lektion 46: Ultraschall-Entfernungsmesser
+# Lección 46: Medidor ultrasónico
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
+> **Kit:** Keyestudio 48-en-1 Kit de Sensores  
+> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno ATmega328P
 
-![Projekt 46: Ultraschall-Entfernungsmesser Abbildung](../media/c170155a5fb03abdc10866e25e3670b2.jpeg)
+![Proyecto 46: ilustración del medidor ultrasónico](../media/c170155a5fb03abdc10866e25e3670b2.jpeg)
 
-## Beschreibung
+## Descripción
 
-Da Ultraschall im Medium eine starke Richtwirkung, geringen Energieverlust und große Reichweite hat, wird er häufig zur Abstandsmessung verwendet, z. B. in Entfernungsmessern und Positionsmessgeräten.
+Como el ultrasonido tiene fuerte directividad, bajo consumo de energía y gran alcance de propagación en el medio, se utiliza comúnmente en la medición de distancias, como telémetros e instrumentos de medición de posición.
 
-Das Ultraschall-Detektormodul kann einen berührungslosen Messbereich von 2cm–450cm bereitstellen, mit einer Messgenauigkeit von bis zu 3mm, was für normale Anforderungen sehr gut geeignet ist.
+El módulo detector ultrasónico puede proporcionar una distancia de detección sin contacto de 2cm-450cm, y su precisión de medición es de hasta 3mm, muy buena para satisfacer los requisitos normales.
 
-Das Modul enthält einen Ultraschallsender und -empfänger sowie die entsprechende Steuerschaltung.
+El módulo incluye un transmisor y receptor ultrasónicos, así como el circuito de control correspondiente.
 
-## Funktionsschema
+## Esquema de funcionamiento
 
-Die Messsequenz des HC-SR04 ist unten dargestellt:
+La secuencia de medición del HC-SR04 se muestra a continuación:
 
-![Funktionsschema Abbildung](../media/a7b0fc57b2e387962071da618153ad68.jpeg)
+![Esquema de funcionamiento ilustración](../media/a7b0fc57b2e387962071da618153ad68.jpeg)
 
-1\. Zuerst TRIG auf LOW ziehen, und dann mit einem mindestens 10us langen High-Pegel-Signal auslösen;
+1\. Primero poner TRIG en bajo, y luego activarlo con una señal de nivel alto de al menos 10us;
 
-2\. Nach dem Auslösen sendet das Modul automatisch acht 40KHZ-Rechteckwellen und prüft automatisch, ob ein Signal zurückkommt.
+2\. Tras el disparo, el módulo transmitirá automáticamente ocho ondas cuadradas de 40KHZ, y detectará automáticamente si hay una señal de retorno.
 
-3\. Wenn ein Signal zurückkehrt, gibt ECHO ein HIGH-Signal aus; die Dauer des High-Pegels ist die Zeit vom Senden bis zum Empfang des Ultraschalls.
+3\. Si se recibe una señal de retorno, ECHO saldrá a nivel alto; la duración de este nivel alto es en realidad el tiempo desde la emisión hasta la recepción del ultrasonido.
 $$
-Messdistanz = Dauer\ des\ High\text{-}Pegels * 340\ m/s * 0{,}5
+Distancia = Duración\ del\ nivel\ alto * 340m/s * 0.5
 $$
 
-## Parameter
+## Parámetros
 
-- Betriebsspannung: 5 V DC
+- Tensión de trabajo: 5 V DC
 
-- Betriebsstrom: 15mA
+- Corriente de trabajo：15mA
 
-- Messbereich: 2-450cm
+- Rango de detección：2-450cm
 
-- Erfassungswinkel: 15 Grad
+- Ángulo de detección：15 grados
 
-- Eingangsauslösepuls: 10 µs TTL-Pegel
+- Pulso de disparo de entrada：10us Nivel TTL
 
-- Ausgangs-Echo-Signal: TTL-Pegelausgang (HIGH), proportional zur Entfernung.
+- Señal de eco de salida： salida señal de nivel TTL(HIGH)，proporcional a la distancia.
 
-## Pinbelegung
+## Diagrama de pines
 
-![Pinbelegung Abbildung](../media/c03e563bcd19796b483156724bae174a.png)
+![Diagrama de pines ilustración](../media/c03e563bcd19796b483156724bae174a.png)
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Zuerst müssen Sie die folgenden Komponenten vorbereiten:
+Primero, necesita preparar los siguientes componentes:
 
-- V4.0-Board\*1
+- Placa V4.0\*1
 
-- Ultraschallsensor\*1
+- Sensor ultrasónico\*1
 
-- USB-Kabel\*1
+- Cable USB\*1
 
-- Jumperkabel\*4
+- Cable de conexión\*4
 
-Als Nächstes beachten Sie bitte die folgende Verbindungstabelle:
+A continuación, consulte la siguiente tabla de conexión:
 
-![Anschlussdiagramm Abbildung](../media/e708c019b57984a07feb241672793982.jpeg)
+![Diagrama de conexión ilustración](../media/e708c019b57984a07feb241672793982.jpeg)
 
-Hinweis: D4 und D5 sind die digitalen Pins 4 und 5.
+Nota: D4, D5 son los pines digitales 4 y 5.
 
-Sie können sich am folgenden Anschlussdiagramm orientieren:
+Puede referirse al diagrama de conexión que se muestra a continuación:
 
-![Anschlussdiagramm Illustration](../media/b5b964743eac977e687c454b64e061fa.jpeg)
+![Diagrama de conexión ilustración](../media/b5b964743eac977e687c454b64e061fa.jpeg)
 
-Nach dem korrekten Anschluss können Sie damit Entfernungen messen; der Entfernungswert wird im Monitor angezeigt.
+Después de conectar correctamente, puede utilizarlo para medir la distancia, mostrando el valor de distancia en el monitor serie.
 
-## Testcode
+## Código de prueba
 
-Kopieren Sie den folgenden Testcode und fügen Sie ihn in die Arduino-Software ein.
+Copie y pegue el siguiente código de prueba en el software Arduino
 
 ```c
 ///////////////////////////////////////////////////////////////////////////////
@@ -99,14 +99,14 @@ delay(50);
 ///////////////////////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-![Beispielergebnis Abbildung](../media/0dcff2ae88366ce40190b77f25d271d7.png)
+![Resultado de ejemplo ilustración](../media/0dcff2ae88366ce40190b77f25d271d7.png)
 
-Nachdem Sie den Code erfolgreich auf das V4.0-Board hochgeladen haben, öffnen Sie den seriellen Monitor. Wenn Sie ein Objekt vor den Ultraschallsensor halten (näher und weiter entfernt), erkennt er die Entfernung des Objekts. Der Wert wird im Monitor wie unten angezeigt.
+Después de subir correctamente el código a la placa V4.0, abra el monitor serie. Al colocar un objeto frente al sensor ultrasónico (desde cerca y desde lejos), detectará la distancia del objeto. El valor se mostrará en el monitor como se muestra a continuación.
 
-![Beispielergebnis Abbildung](../media/1dbca5dc233994f6923601d942fadba6.png)
+![Resultado de ejemplo ilustración](../media/1dbca5dc233994f6923601d942fadba6.png)
 
-![Beispielergebnis Abbildung](../media/dcd49cc72e7a9f993083af7625d240db.png)
+![Resultado de ejemplo ilustración](../media/dcd49cc72e7a9f993083af7625d240db.png)
 
 ---

@@ -1,47 +1,48 @@
-# Lektion 24: Bodenfeuchtigkeit
+# Lección 24: Humedad del suelo
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor-Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Placa:** Keyestudio V4.0 / placa ATmega328P compatible con Arduino Uno
 
-![Projekt 24: Bodenfeuchte Illustration](../media/d1041a8e2cbfca69c5d8bbd9ba7d4f92.jpeg)
+![Proyecto 24: Ilustración del sensor de humedad del suelo](../media/d1041a8e2cbfca69c5d8bbd9ba7d4f92.jpeg)
 
-## Beschreibung
+## Descripción
 
-Dies ist ein einfacher Bodenfeuchtesensor, der darauf ausgelegt ist, die Bodenfeuchte zu erkennen. Wenn dem Boden Wasser fehlt, nimmt der vom Sensor ausgegebene analoge Wert ab, andernfalls steigt er an.
+Este es un sencillo sensor de humedad del suelo diseñado para detectar la humedad del suelo. Si el suelo carece de agua, el valor analógico que devuelve el sensor disminuirá; de lo contrario, aumentará.
 
-Wenn Sie diesen Sensor verwenden, um eine automatische Bewässerungseinrichtung zu bauen, kann er erkennen, ob Ihre Pflanzen Durst haben, und verhindert so, dass sie verwelken, wenn Sie unterwegs sind.
+Si usas este sensor para crear un dispositivo de riego automático, podrá detectar si tu planta tiene sed y evitar que se marchite cuando salgas.
 
-Die Kombination dieses Sensors mit einem Arduino-Controller kann Ihre Pflanzen komfortabler versorgen und Ihren Garten intelligenter machen.
+Combinar este sensor con un controlador Arduino puede hacer que tu planta esté más cómoda y que tu jardín sea más inteligente.
 
-Das Bodenfeuchtesensormodul ist nicht so kompliziert, wie Sie vielleicht denken. Wenn Sie in Ihrem Projekt den Bodenfeuchtigkeitsgehalt messen müssen, ist es die beste Wahl.
+El módulo sensor de humedad del suelo no es tan complicado como podrías pensar, así que si necesitas detectar la humedad del suelo en tu proyecto, será una excelente opción.
 
-Der Sensor ist mit zwei Sonden ausgestattet, die in den Boden gesteckt werden. Fließt Strom durch den Boden, ermittelt der Sensor den Widerstand, indem er die Stromänderungen zwischen den beiden Sonden misst, und wandelt dann den Widerstandswert in einen Feuchtigkeitswert um.
+El sensor está equipado con dos sondas que se insertan en la tierra. Si la corriente atraviesa el suelo, el sensor obtendrá un valor de resistencia leyendo los cambios de corriente entre las dos sondas y luego convertirá ese valor de resistencia en contenido de humedad.
 
-Je feuchter (geringerer Widerstand), desto höher die Leitfähigkeit des Bodens.
+A mayor humedad (menor resistencia), mayor conductividad tiene el suelo.
 
-Die Oberfläche des Sensors wurde metallisiert, um seine Lebensdauer zu verlängern. Stecken Sie ihn in die Erde und lesen Sie ihn anschließend mit dem A/D-Wandler aus. Mit Hilfe dieses Sensors kann die Pflanze Sie daran erinnern: Ich brauche Wasser.
+La superficie del sensor ha pasado por un proceso de metalización para prolongar su vida útil. Insértalo en el suelo y luego utiliza el convertidor AD para leerlo. Con la ayuda de este sensor, la planta puede recordarte: necesito agua.
 
-## Spezifikation
+## Especificación
 
-- Versorgungsspannung: 3.3V oder 5V
+- Tensión de alimentación: 3.3V o 5V
 
-- Betriebsstrom: ≤ 20mA
+- Corriente de trabajo: ≤ 20mA
 
-- Ausgangsspannung: 0-2.3V (wenn der Sensor vollständig in Wasser eingetaucht ist, beträgt die Spannung 2.3V). Je höher die Feuchtigkeit, desto höher die Ausgangsspannung.
+- Voltaje de salida: 0-2.3V (cuando el sensor está totalmente sumergido en agua, el voltaje será 2.3V)  
+  A mayor humedad, mayor será el voltaje de salida.
 
-- Sensortyp: Analoger Ausgang
+- Tipo de sensor: salida analógica
 
-- Schnittstelle: Pin1 - Signal, Pin2 - GND, Pin3 - VCC
+- Interfaz: Pin1- señal, Pin2- GND, Pin3 - VCC
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Verbinden Sie den S-Pin des Moduls mit dem Analog A0 des V4.0-Boards, verbinden Sie den negativen Pin mit GND und den positiven Pin mit 5V.
+Conecta el pin S del módulo al Analog A0 de la placa V4.0, conecta el pin negativo al puerto GND y el pin positivo al puerto 5V.
 
-![Anschlussdiagramm Illustration](../media/b1685a438f171f4bbb3cd8d1b1782bb1.jpeg)
+![Diagrama de conexión ilustración](../media/b1685a438f171f4bbb3cd8d1b1782bb1.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopieren Sie den folgenden Code in die Arduino-Software.
+Copia y pega el siguiente código en el software de Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -64,12 +65,12 @@ void loop(){
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-![Beispielergebnis Illustration](../media/1200f0f53ca0758afc505c475ce75e68.png)
+![Resultado de ejemplo ilustración](../media/1200f0f53ca0758afc505c475ce75e68.png)
 
-Nachdem die Verkabelung abgeschlossen und die Stromversorgung eingeschaltet ist, laden Sie den Code hoch, öffnen Sie den seriellen Monitor und stellen Sie die Baudrate auf 57600 ein. Sie werden dann den Wert sehen. Wenn der Sensor Feuchtigkeit erkennt, ändert sich der Wert entsprechend. Siehe unten.
+Una vez hechas las conexiones y alimentado el circuito, sube correctamente el código, luego abre el monitor serie y ajusta la velocidad en baudios a 57600, verás el valor. Cuando el sensor detecta humedad, el valor cambiará de forma correspondiente. Mostrado a continuación.
 
-![Beispielergebnis Illustration](../media/cb240ae7199f877c17b9ac3a4d9d6ced.jpeg)
+![Resultado de ejemplo ilustración](../media/cb240ae7199f877c17b9ac3a4d9d6ced.jpeg)
 
 ---

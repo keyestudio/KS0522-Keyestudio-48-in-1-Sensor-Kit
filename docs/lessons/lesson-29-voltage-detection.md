@@ -1,47 +1,47 @@
-# Lektion 29: Spannungsdetektion
+# Lección 29: Detección de voltaje
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
+> **Kit:** Kit de sensores Keyestudio 48 en 1  
+> **Placa:** Placa Keyestudio V4.0 / compatible con Arduino Uno ATmega328P
 
-![Projekt 29: Spannungsdetektion Abbildung](../media/41967398a781944fd64ebd49a9c746fa.jpeg)
+![Proyecto 29: Ilustración de detección de voltaje](../media/41967398a781944fd64ebd49a9c746fa.jpeg)
 
-## Beschreibung
+## Descripción
 
-Da elektronische Produkte vielfältig sind, variiert auch die Versorgungsspannung. Es ist daher notwendig, diese mit einem geeigneten Spannungsdetektionsmodul oder -controller zu erfassen.
+Dado que los productos electrónicos son variados, el voltaje de la alimentación también difiere. Es necesario detectarlo con un módulo o controlador de detección de voltaje adecuado.
 
-Die maximale Eingangsspannung der analogen Schnittstelle des Controllers beträgt 5V, das bedeutet, dass Spannungen größer als 5V nicht gemessen werden können.
+La tensión máxima de entrada de la interfaz analógica del controlador es 5V, lo que significa que no podrá detectarse un voltaje superior a 5V.
 
-Dieses Spannungsdetektionsmodul kann jedoch Spannungen größer als 5 V detektieren.
+Sin embargo, este módulo de detección de voltaje puede detectar valores superiores a 5 V.
 
-Es basiert auf einem 5:1 Widerstands-Spannungsteiler. Bei einer analogen Referenz von 5 V darf die Eingangsspannung 25 V nicht überschreiten. Bei einer analogen Referenz von 3,3 V darf die Eingangsspannung 16,5 V nicht überschreiten.
+Se basa en un divisor resistivo 5:1. Con una referencia analógica de 5 V, la tensión de entrada no debe exceder los 25 V. Con una referencia analógica de 3.3 V, la tensión de entrada no debe exceder los 16.5 V.
 
-Der AVR-Analog-Digital-Wandler ist 10-Bit, daher beträgt die analoge Auflösung 0,00489 V (5 V / 1023). Mit dem 5:1-Teiler ist die minimale messbare Eingangserhöhung ungefähr 0,02445 V.
+El convertidor analógico a digital AVR es de 10 bits, por lo que la resolución analógica es 0.00489 V (5 V / 1023). Con el divisor 5:1, el incremento mínimo de entrada medible es aproximadamente 0.02445 V.
 
-Wenn Sie diesen Sensor mit dem Erweiterungsboard über ein 3-poliges Kabel verbinden, kann er nicht nur einfach die Höhe der Versorgungsspannung erfassen und den Ladezustand der Batterie für interaktive Medienprojekte oder Roboter überwachen, sondern auch in Kombination mit einem IIC LCD1602 LCD-Modul die Spannung anzeigen bzw. als Spannungsanzeige fungieren.
+Al conectar este sensor a la placa de expansión usando un cable de 3 pines, no solo puede detectar fácilmente la magnitud del voltaje y monitorizar la carga de una batería para trabajos de medios interactivos o robots, sino que también puede combinarse con el módulo LCD IIC LCD1602 para mostrar el voltaje o crear un monitor de voltaje.
 
-## Spezifikation
+## Especificaciones
 
-- Betriebsspannung: 0V-25V DC
+- Tensión de trabajo: 0V-25V CC
 
-- Signaltyp: analoges Signal
+- Tipo de señal: señal analógica
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Zuerst müssen Sie vor dem Anschluss folgende Teile vorbereiten:
+Primero, necesitas preparar los siguientes componentes antes de la conexión:
 
-- V4.0-Platine\*1
+- placa V4.0\*1
 
-- Spannungssensor\*1
+- Sensor de voltaje\*1
 
-- USB-Kabel\*1
+- Cable USB\*1
 
-- Jumper-Kabel\*3
+- Cable jumper\*3
 
-Verbinden Sie den S-Pin des Moduls mit dem analogen A0 des V4.0-Boards, verbinden Sie den negativen Pin mit dem GND-Anschluss, den NC-Pin mit dem 5V-Anschluss.
+Conecta el pin S del módulo al analógico A0 de la placa V4.0, conecta el pin negativo al puerto GND, el pin NC al puerto 5V.
 
-![Anschlussdiagramm Abbildung](../media/b8754c45901ff42ba9caadce5db01a3a.jpeg)
+![Ilustración del diagrama de conexión](../media/b8754c45901ff42ba9caadce5db01a3a.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -80,12 +80,12 @@ Serial.print(val2);      //The serial port prints the value of the variable val2
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-![Beispielergebnis Abbildung](../media/ac8825bb333757bad26785e58651beb7.png)
+![Ilustración del resultado de ejemplo](../media/ac8825bb333757bad26785e58651beb7.png)
 
-Nachdem die obige Verkabelung hergestellt wurde, kompilieren und laden Sie den Code hoch, schalten Sie die Stromversorgung ein und öffnen Sie dann den seriellen Monitor; er gibt den detektierten Spannungswert wie unten gezeigt aus.
+Realizado el cableado anterior, compila y sube el código, enciende la alimentación y abre el monitor serie; imprimirá el valor de voltaje detectado que se muestra a continuación.
 
-![Beispielergebnis Abbildung](../media/af699a83a891ea99d193d5b53bd27fa1.jpeg)
+![Ilustración del resultado de ejemplo](../media/af699a83a891ea99d193d5b53bd27fa1.jpeg)
 
 ---

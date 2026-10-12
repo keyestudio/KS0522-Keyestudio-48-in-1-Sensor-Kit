@@ -1,45 +1,45 @@
-# Lektion 11: Lichtschranke
+# Lección 11: Sensor de interrupción óptica
 
-> **Bausatz:** Keyestudio 48-in-1 Sensorsatz  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno ATmega328P
 
-![Projekt 11: Lichtschranke Abbildung](../media/8b0f7b3ba3e139eeaeba9bb7f86a946a.png)
+![Proyecto 11: ilustración del sensor de interrupción óptica](../media/8b0f7b3ba3e139eeaeba9bb7f86a946a.png)
 
-## Beschreibung
+## Descripción
 
-Der aufrechte Teil dieses Sensors ist ein Infrarot-Emitter und auf der gegenüberliegenden Seite befindet sich ein abgeschirmter Infrarot-Detektor. Indem ein Strahl von Infrarotlicht von einem Ende zum anderen ausgesendet wird, kann der Sensor ein Objekt erkennen, wenn dieses den Strahl unterbricht.
+La parte vertical de este sensor es un emisor infrarrojo y en el otro lado hay un detector infrarrojo protegido. Al emitir un haz de luz infrarroja de un extremo al otro, el sensor puede detectar un objeto cuando éste atraviesa el haz.
 
-Er wird für viele Anwendungen verwendet, einschließlich optischer Endschalter, Pellet-Ausgabe, allgemeiner Objekterkennung usw.
+Se utiliza para muchas aplicaciones incluyendo interruptores de límite ópticos, dispensación de pellets, detección general de objetos, etc.
 
-## Technische Daten
+## Especificación
 
-- Versorgungsspannung: 3.3V bis 5V
+- Tensión de alimentación: 3.3V a 5V
 
-- Schnittstelle: Digital
+- Interfaz: Digital
 
-- Größe: 30*20mm
+- Tamaño: 30*20mm
 
-- Gewicht: 3g
+- Peso: 3g
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Bereiten Sie zunächst die folgenden Teile vor, bevor Sie anschließen:
+Primero, debe preparar las siguientes piezas antes de la conexión:
 
-- V4.0-Platine\*1
+- Placa V4.0\*1
 
-- Lichtschranken-Modul \*1
+- Módulo del sensor de interrupción óptica \*1
 
-- USB-Kabel\*1
+- Cable USB\*1
 
-- Jumper-Kabel\*3
+- Cable de puente\*3
 
-Verbinden Sie den S-Pin des Moduls mit Digital 3 der V4.0-Platine, verbinden Sie den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
+Conecte el pin S del módulo a Digital 3 de la placa V4.0, conecte el pin negativo al puerto GND y el pin positivo al puerto 5V.
 
-![Anschlussdiagramm Abbildung](../media/669fa42ef7fb576047d6849940a305ba.jpeg)
+![Ilustración del diagrama de conexión](../media/669fa42ef7fb576047d6849940a305ba.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopieren Sie den folgenden Code in die Arduino-Software.
+Copie y pegue el siguiente código en el IDE de Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -67,14 +67,14 @@ void loop ()
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-Nachdem Sie den Code auf die Platine hochgeladen haben, leuchten sowohl die LED auf der V4.0-Platine als auch die am Modul. Siehe unten.
+Tras subir el código a la placa, puede ver que tanto el led en la placa V4.0 como el del módulo están encendidos. Se muestra a continuación.
 
-![Beispielergebnis Abbildung](../media/fa4d06ebf82ec572b7eccf6b706942cb.png)
+![Ilustración del resultado de ejemplo](../media/fa4d06ebf82ec572b7eccf6b706942cb.png)
 
-Wenn Sie ein Stück Papier in den Schlitz des Moduls schieben, wird das Signal unterbrochen und LED1 am Modul schaltet aus.
+Al colocar un papel en la ranura del módulo, la señal se interrumpe y led1 del módulo se apaga.
 
-![Beispielergebnis Abbildung](../media/3ecb941fafc71843148e0e19b6ceda57.png)
+![Ilustración del resultado de ejemplo](../media/3ecb941fafc71843148e0e19b6ceda57.png)
 
 ---

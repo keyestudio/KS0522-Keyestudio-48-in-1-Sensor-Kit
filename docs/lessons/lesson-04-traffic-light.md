@@ -1,45 +1,45 @@
-# Lektion 04: Ampel
+# Lección 04: Semáforo
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
+> **Kit:** Kit de sensores Keyestudio 48-en-1  
+> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno (ATmega328P)
 
-![Projekt 4: Ampel Illustration](../media/a20653cffac8985dc4919614540ac367.jpeg)
+![Proyecto 4: Ilustración del semáforo](../media/a20653cffac8985dc4919614540ac367.jpeg)
 
-## Beschreibung
+## Descripción
 
-Beim Erlernen des Mikrocontrollers verwendet man üblicherweise drei LEDs – nämlich rote, grüne und gelbe Leuchten –, um per externer Verbindung das Blinken einer Ampel zu simulieren.
+Al aprender sobre microcontroladores, normalmente se usan tres LEDs —rojo, verde y amarillo— para simular el parpadeo de un semáforo mediante una conexión externa.
 
-Für dieses Projekt haben wir ein Modul speziell entworfen, das sehr praktisch zu verdrahten ist. Auf dem Modul sind die rote, gelbe und grüne LED sichtbar.
+En esta ocasión hemos diseñado especialmente este módulo, que es muy conveniente para el cableado, y en el módulo se pueden ver los LED rojo, amarillo y verde.
 
-Dieses Modul ist vollständig kompatibel mit Arduino-Mikrocontrollern und dem Raspberry Pi.
+Este módulo es totalmente compatible con el microcontrolador Arduino y con el sistema Raspberry Pi.
 
-## Spezifikation
+## Especificaciones
 
-- Betriebsspannung: 3.3-5v
+- Tensión de trabajo: 3.3-5v
 
-- Schnittstellentyp: digital
+- Tipo de interfaz: digital
 
-- PH2.54 Socket
+- Conector PH2.54
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Zuerst müssen Sie vor dem Anschluss die folgenden Teile bereitstellen:
+Primero, necesita preparar las siguientes piezas antes de la conexión:
 
-- V4.0 Platine\*1
+- Placa V4.0\*1
 
-- Ampelmodul \*1
+- Módulo de semáforo \*1
 
-- USB-Kabel\*1
+- Cable USB\*1
 
-- Jumperkabel\*4
+- Cables jumper\*4
 
-Verbinden Sie den R-Pin des Moduls mit Digital 5 der V4.0-Platine, den Y-Pin mit Digital 4, den G-Pin mit Digital 3 und den GND-Pin mit dem Masseanschluss.
+Conecte el pin R del módulo al Digital 5 de la placa V4.0, conecte el pin Y al Digital 4, el pin G al Digital 3, y el pin GND al puerto de tierra.
 
-![Anschlussdiagramm Abbildung](../media/b6884692ce41d05d4afb167af5b2239d.jpeg)
+![Ilustración del diagrama de conexión](../media/b6884692ce41d05d4afb167af5b2239d.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopieren Sie den folgenden Code in die Arduino-Software.
+Copie y pegue el siguiente código en el software de Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -72,10 +72,10 @@ digitalWrite(redled, LOW);// turn off red LED
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-Nachdem der Code hochgeladen und die Stromversorgung aktiviert wurde, simulieren die drei LEDs auf dem Modul automatisch zyklisch das Ein- und Ausschalten einer Ampel.
+Una vez subido el código y alimentado, los tres LED del módulo simularán automáticamente el encendido y apagado del semáforo de forma cíclica.
 
-![Beispielergebnis Abbildung](../media/6dd1ff8660b0a62795bd53fc6b6ff591.png)
+![Ilustración del resultado de ejemplo](../media/6dd1ff8660b0a62795bd53fc6b6ff591.png)
 
 ---

@@ -1,35 +1,35 @@
-# Lektion 22: Analoger Schall
+# Lección 22: Sonido analógico
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P-Board
+> **Kit:** Kit de sensores 48 en 1 de Keyestudio  
+> **Placa:** Placa Keyestudio V4.0 / compatible con Arduino Uno (ATmega328P)
 
-![Projekt 22: Analoger Schall Abbildung](../media/a494bbec73f7c8ff91b3133c9d2798a7.jpeg)
+![Ilustración del Proyecto 22: Sonido analógico](../media/a494bbec73f7c8ff91b3133c9d2798a7.jpeg)
 
-## Beschreibung
+## Descripción
 
-Der analoge Schall-Sensor wird typischerweise zur Erkennung der Lautstärke der Umgebungsgeräusche verwendet. Der Sensor verfügt über ein Potentiometer, mit dem du die Verstärkung des Signals einstellen kannst.
+El sensor de sonido analógico se utiliza normalmente para detectar el volumen de los sonidos ambientales. El sensor incluye un potenciómetro, con el que puedes girar para ajustar la ganancia de la señal.
 
-Du kannst ihn verwenden, um einige interessante und interaktive Projekte zu erstellen, wie z. B. einen sprachgesteuerten Schalter.
+Puedes usarlo para crear proyectos interesantes e interactivos, como un interruptor activado por voz.
 
-## Spezifikation
+## Especificación
 
-- Versorgungsspannung: 3.3V bis 5V
+- Tensión de alimentación: 3.3V a 5V
 
-- Schnittstelle: Analog
+- Interfaz: Analógica
 
-- Größe: 30*20mm
+- Tamaño: 30*20mm
 
-- Gewicht: 4g
+- Peso: 4g
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Verbinde den S-Pin des Moduls mit dem analogen A0 des V4.0-Boards, den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
+Conecta el pin S del módulo al pin analógico A0 de la placa V4.0, conecta el pin negativo a GND y el pin positivo a 5V.
 
-![Anschlussdiagramm Abbildung](../media/22e1124550d57015a6d2d5782b8febda.jpeg)
+![Ilustración del diagrama de conexión](../media/22e1124550d57015a6d2d5782b8febda.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopiere und füge den folgenden Code in die Arduino-Software ein.
+Copia y pega el código siguiente en el software de Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -49,10 +49,10 @@ delay(50);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-Nachdem die Verkabelung abgeschlossen und die Stromversorgung eingeschaltet ist und der Code erfolgreich hochgeladen wurde, öffne den Seriellen Monitor und stelle die Baudrate auf 9600 ein. Du wirst dann den analogen Wert sehen. Wenn du in Richtung des Mikrofons sprichst, erhöht sich der Wert. Siehe unten.
+Tras realizar las conexiones y alimentar la placa, sube correctamente el código, luego abre el Monitor Serie y ajusta la tasa de baudios a 9600; verás el valor analógico. Al hablar hacia el micrófono, el valor aumentará. Se muestra a continuación.
 
-![Beispielergebnis Abbildung](../media/4d753036151413a1bdda3c0b283b8551.png)
+![Ilustración del resultado de ejemplo](../media/4d753036151413a1bdda3c0b283b8551.png)
 
 ---

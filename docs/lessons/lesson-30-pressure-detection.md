@@ -1,62 +1,62 @@
-# Lektion 30: Druckerkennung
+# Lección 30: Detección de presión
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P Board
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Placa:** Keyestudio V4.0 / Placa compatible con Arduino Uno ATmega328P
 
-![Projekt 30: Druckerkennung Illustration](../media/313f11bf4a7f52ac903c78976fe1e633.jpeg)
+![Ilustración del proyecto 30: Detección de presión](../media/313f11bf4a7f52ac903c78976fe1e633.jpeg)
 
-## Beschreibung
+## Descripción
 
-Dieser Sensor verwendet neues flexibles nano-druckempfindliches Material mit ultra-dünner Folienauflage. Er ist wasserdicht und zur Druckerkennung geeignet.
+Este sensor utiliza un nuevo material nano sensible a la presión flexible con almohadilla de película ultrafina. Tiene funciones de impermeabilidad y detección de presión.
 
-Wenn der Sensor äußeren Druck erkennt, ändert sich sein Widerstand.
+Cuando el sensor detecta la presión externa, la resistencia del sensor cambiará.
 
-Durch die Schaltung kann das vom Sensor erfasste Drucksignal in ein entsprechendes elektrisches Ausgangssignal umgewandelt werden.
+Por lo tanto, usando el circuito, puede convertir la señal de presión que percibe el cambio de presión en la señal eléctrica correspondiente de salida.
 
-Auf diese Weise können wir durch Erfassen der Signaländerungen die Druckverhältnisse ermitteln.
+De esta manera, podemos obtener las condiciones de cambio de presión detectando los cambios en la señal.
 
-## Parameter
+## Parámetros
 
-- Betriebsspannung：DC 3.3V—5V
+- Voltaje de trabajo：DC 3.3V—5V
 
-- Messbereich：0-10KG
+- Rango：0-10KG
 
-- Dicke：＜0.25mm
+- Espesor：＜0.25mm
 
-- Ansprechpunkt：＜20g
+- Punto de respuesta：＜20g
 
-- Wiederholbarkeit：＜±5.8%（50% Belastung）
+- Repetibilidad：＜±5.8%（50% carga）
 
-- Genauigkeit：±2.5%（85% Bereichsintervall）
+- Precisión：±2.5%（85% intervalo de rango）
 
-- Lebensdauer：＞100.000 Mal
+- Durabilidad：＞100000 veces
 
-- Anfangswiderstand：＞100MΩ（ohne Last）
+- Resistencia inicial：＞100MΩ（sin carga）
 
-- Ansprechzeit：＜1ms
+- Tiempo de respuesta：＜1ms
 
-- Erholzeit：＜15ms
+- Tiempo de recuperación：＜15ms
 
-- Betriebstemperatur：﹣20℃—60℃
+- Temperatura de trabajo：﹣20℃—60℃
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Zuerst müssen Sie die folgenden Teile vor dem Anschließen bereitlegen.
+Primero necesita preparar las siguientes piezas antes de la conexión.
 
-- V4.0-Board\*1
+- Placa V4.0\*1
 
-- Drucksensor\*1
+- Sensor de presión\*1
 
-- USB-Kabel\*1
+- Cable USB\*1
 
-- Jumperkabel\*3
+- Cable jumper\*3
 
-Verbinden Sie den S-Pin des Moduls mit dem analogen A0 des V4.0-Boards, den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
-![Anschlussdiagramm Illustration](../media/3325303180f71db75d9e13acc5036d8f.jpeg)
+Conecta el pin S del módulo al A0 analógico de la placa V4.0, conecta el pin negativo al puerto GND y el pin positivo al puerto 5V.  
+![Ilustración del diagrama de conexión](../media/3325303180f71db75d9e13acc5036d8f.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopieren Sie den folgenden Code in die Arduino-Software.
+Copia y pega el código siguiente en el software de Arduino.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -76,14 +76,14 @@ void loop()
 ///////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-Bei korrekter Verdrahtung und nach dem Hochladen des Codes öffnen Sie den seriellen Monitor in der Arduino-Software.
+Con el cableado correcto y después de subir el código, abre el monitor serie en el software de Arduino.
 
-Drücken Sie dann den Sensor fest mit der Hand; der im Monitor angezeigte Wert steigt an.
+Luego, presiona el sensor con la mano con firmeza; el valor mostrado en el monitor aumentará.
 
-![Beispielergebnis Illustration](../media/a6c4be8596a0048cb5f3b2f1612241bd.png)
+![Ilustración del resultado de ejemplo](../media/a6c4be8596a0048cb5f3b2f1612241bd.png)
 
-![Beispielergebnis Illustration](../media/e055d2749b14c62b92c22496a3d1f96a.jpeg)
+![Ilustración del resultado de ejemplo](../media/e055d2749b14c62b92c22496a3d1f96a.jpeg)
 
 ---

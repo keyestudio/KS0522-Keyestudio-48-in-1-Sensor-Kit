@@ -1,55 +1,55 @@
-# Lektion 17: Reed-Schalter
+# Lección 17: Interruptor Reed
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
+> **Kit:** Kit Keyestudio 48-en-1 de Sensores  
+> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno ATmega328P
 
-![Projekt 17: Reed-Schalter Illustration](../media/e580999515f6522eb603ea723bf62173.png)
+![Ilustración del Proyecto 17: Interruptor Reed](../media/e580999515f6522eb603ea723bf62173.png)
 
-## Beschreibung
+## Descripción
 
-Der Reed-Schalter ist ein spezieller Schalter und eine Hauptkomponente für Reed-Relais und Näherungsschalter.
+El Interruptor Reed es un interruptor especial y un componente principal para relés reed y detectores de proximidad.
 
-Ein Reed-Schalter besteht üblicherweise aus zwei weichmagnetischen Materialien und metallischen Kontaktzungen, die sich trennen, wenn kein Magnetfeld vorhanden ist.
+El interruptor reed suele constar de dos materiales magnéticos blandos y contactos tipo lengüeta metálicos que se abren cuando no hay campo magnético.
 
-Außerdem sind einige Reed-Schalter mit einer zusätzlichen Kontaktzunge als dritten normalerweise geschlossenen Kontakt ausgestattet. Diese Kontaktschaltzungen sind in einem Glasrohr versiegelt, das mit Inertgasen (wie Stickstoff und Helium) gefüllt ist, oder in einem Vakuum-Glasrohr.
+Además, algunos interruptores reed también están equipados con otra lengüeta que actúa como el tercer contacto normalmente cerrado. Estos contactos tipo lengüeta están encapsulados en un tubo de vidrio lleno de gases inertes (como nitrógeno y helio) o en un tubo de vidrio al vacío.
 
-Die im Glasrohr eingeschlossenen Kontaktzungen liegen parallel mit überlappenden Enden. Zwischen ihnen wird ein bestimmter Abstand oder gegenseitiger Kontakt vorgesehen, um die normalerweise offenen oder normalerweise geschlossenen Kontakte des Schalters zu bilden.
+Las lengüetas encapsuladas en el tubo de vidrio se colocan en paralelo con los extremos superpuestos. Se reserva cierta cantidad de espacio o contacto mutuo para constituir los contactos normalmente abiertos o normalmente cerrados del interruptor.
 
-Der Reed-Schalter kann z. B. zum Zählen, als Endschalter oder für andere Zwecke verwendet werden.
+El interruptor reed puede utilizarse para conteo, como fin de carrera u otros propósitos.
 
-Beispielsweise wird bei einem Fahrradkilometerzähler ein Magnet am Reifen befestigt und der Reed-Schalter daneben montiert.
+Por ejemplo, un cuentakilómetros de bicicleta se constituye pegando un imán al neumático y montando el interruptor reed a un lado.
 
-Man kann den Reed-Schalter auch an einer Tür zur Alarmierung oder als Schalter anbringen.
+También puedes montar el interruptor reed en una puerta con fines de alarma o como interruptor.
 
-Reed-Schalter werden weit verbreitet in Haushaltsgeräten, Fahrzeugen, der Kommunikationstechnik, Industrie, im Gesundheitswesen und im Sicherheitsbereich eingesetzt.
+El interruptor reed se ha aplicado ampliamente en electrodomésticos, automóviles, comunicaciones, industria, salud y seguridad.
 
-Darüber hinaus kann er in Verbindung mit anderen Sensoren und elektrischen Geräten eingesetzt werden, z. B. Flüssigkeitsstandsanzeigern, Türmagneten, Reed-Relais, Ölstandssensoren und Näherungssensoren (Magnetsensoren). Er kann in risikoreichen Umgebungen eingesetzt werden.
+Además, también puede aplicarse a otros sensores y dispositivos eléctricos como medidores de líquido, imanes de puerta, relés reed, sensores de nivel de aceite y sensores de proximidad (sensor magnético). Puede utilizarse en entornos de alto riesgo.
 
-## Technische Daten
+## Especificaciones
 
-1. Betriebsspannung: DC 3.3V-5V
+1. Voltaje de trabajo: DC 3.3V-5V
 
-2. Betriebsstrom: ≥20mA
+2. Corriente de trabajo: ≥20mA
 
-3. Betriebstemperatur: －10℃ bis ＋50℃
+3. Temperatura de trabajo: −10℃ a ＋50℃
 
-4. Erfassungsabstand: ≤10mm
+4. Distancia de detección: ≤10mm
 
-5. IO-Schnittstelle: 3-Draht-Schnittstellen (-/+/S)
+5. Interfaz IO: 3 interfaces de cable (-/+/S)
 
-6. Größe: 30\*20mm
+6. Tamaño: 30\*20mm
 
-7. Gewicht: 3g
+7. Peso: 3g
 
-## Anschlussdiagramm
+## Diagrama de Conexión
 
-Verbinde den S-Pin des Moduls mit Digital 3 des V4.0-Boards, den negativen Pin mit dem GND-Port und den positiven Pin mit dem 5V-Port.
+Conecta el pin S del módulo al Digital 3 de la placa V4.0, conecta el pin negativo al puerto GND y el pin positivo al puerto 5V.
 
-![Anschlussdiagramm Illustration](../media/ad39b511b42657baed492704a9c84b13.jpeg)
+![Ilustración del Diagrama de Conexión](../media/ad39b511b42657baed492704a9c84b13.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopiere und füge den folgenden Code in die Arduino-Software ein.
+Copia y pega el siguiente código en el software de Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -78,14 +78,14 @@ digitalWrite(Led,LOW);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-Nachdem die Verdrahtung abgeschlossen und die Stromversorgung eingeschaltet ist sowie der Code erfolgreich auf das Board hochgeladen wurde, leuchtet die D13-LED auf dem V4.0-Board.
+Una vez realizadas las conexiones y alimentada la placa, carga correctamente el código en la placa. Podrás ver que el LED D13 en la placa V4.0 está encendido.
 
-![Beispielergebnis Illustration](../media/a2f983d5a5b324f55e3c0994458d4cbc.png)
+![Ilustración del Resultado de ejemplo](../media/a2f983d5a5b324f55e3c0994458d4cbc.png)
 
-Anschließend halten wir einige Magnetkugeln in die Nähe des Sensors. Wenn der Sensor das Magnetfeld erkennt, leuchtet die LED am Sensor, während die D13-LED erlischt.
+Luego acercamos unas esferas magnéticas al sensor. Cuando el sensor detecta la señal del campo magnético, el LED del sensor se encenderá pero el LED D13 se apagará.
 
-![Beispielergebnis Illustration](../media/ecbec914abc799076513f5c61149b004.png)
+![Ilustración del Resultado de ejemplo](../media/ecbec914abc799076513f5c61149b004.png)
 
 ---

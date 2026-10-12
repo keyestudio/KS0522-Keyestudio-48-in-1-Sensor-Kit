@@ -1,51 +1,51 @@
-# Lektion 34: Digitaler IR-Sender
+# Lección 34: Transmisor IR digital
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Placa:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-![Projekt 34: Digitaler IR-Sender - Abbildung](../media/9fe876a8c857650226cbe2f8a9bead59.png)
+![Proyecto 34: ilustración del transmisor IR digital](../media/9fe876a8c857650226cbe2f8a9bead59.png)
 
-## Beschreibung
+## Descripción
 
-Das IR-Sendermodul ist für IR-Kommunikation ausgelegt und wird häufig verwendet, um ein Fernsehgerät aus kurzer Sichtverbindung zu bedienen.
+El módulo transmisor IR está diseñado para la comunicación por IR, ampliamente usado para operar dispositivos de televisión desde una corta distancia en línea de vista.
 
-Da Infrarot (IR)-Fernbedienung Licht verwendet, benötigt sie Sichtverbindung, um das Zielgerät zu bedienen. Das Signal kann jedoch wie andere Lichtquellen von Spiegeln reflektiert werden.
+Dado que el control remoto por infrarrojos (IR) utiliza luz, requiere línea de vista para operar el dispositivo destino. Sin embargo, la señal puede reflejarse en espejos, al igual que otras fuentes de luz.
 
-Infrarotempfänger haben ebenfalls einen mehr oder weniger begrenzten Betriebswinkel, der hauptsächlich von den optischen Eigenschaften des Phototransistors abhängt.
+Los receptores infrarrojos también suelen tener un ángulo de funcionamiento más o menos limitado, que depende principalmente de las características ópticas del fototransistor.
 
-Den Betriebswinkel kann man jedoch leicht erhöhen, indem man ein mattes, transparentes Objekt vor den Empfänger stellt.
+No obstante, es fácil aumentar el ángulo de operación colocando un objeto transparente mate frente al receptor.
 
-## Spezifikation
+## Especificaciones
 
-- Stromversorgung: 3-5V
+- Fuente de alimentación: 3-5V
 
-- Infrarot-Zentrumwellenlänge: 850nm-940nm
+- Frecuencia central infrarroja: 850nm-940nm
 
-- Abstrahlwinkel des Infrarots: etwa 20 Grad
+- Ángulo de emisión infrarroja: aproximadamente 20 grados
 
-- Abstrahldistanz des Infrarots: etwa 1,3 m (5V 38Khz)
+- Alcance de emisión infrarroja: aproximadamente 1.3m (5V 38Khz)
 
-- Anschlussstecker: JST PH2.0
+- Conector: JST PH2.0
 
-- Befestigungsloch: Innen-Ø 3,2mm, Abstand 15mm
+- Orificio de montaje: diámetro interior 3.2mm, separación 15mm
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Bereiten Sie zunächst die folgenden Teile vor, bevor Sie die Verbindung herstellen.
+Primero debes preparar las siguientes piezas antes de la conexión.
 
-- V4.0-Platine\*1
+- Placa V4.0\*1
 
-- IR-Sendermodul\*1
+- Módulo transmisor IR\*1
 
-- USB-Kabel\*1
+- Cable USB\*1
 
-- Jumperkabel\*3
+- Cables jumper\*3
 
-Verbinden Sie den S-Pin des Moduls mit Digital 3 des V4.0-Boards, verbinden Sie den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
+Conecta el pin S del módulo al Digital 3 de la placa V4.0, conecta el pin negativo al puerto GND y el pin positivo al puerto 5V.
 
-![Anschlussdiagramm - Abbildung](../media/31c03e9ad144e1124260ff6e0538fe69.jpeg)
+![Ilustración del diagrama de conexión](../media/31c03e9ad144e1124260ff6e0538fe69.jpeg)
 
-## Beispielcode 1
+## Código de ejemplo 1
 
 ```c
 int led = 3;
@@ -60,39 +60,39 @@ void loop() {
 }
 ```
 
-In dunkler Umgebung sehen Sie beim Filmen mit der Handykamera ein blinkendes blaues Licht auf dem Bildschirm, wenn die Infrarot-LED leuchtet.
+En la oscuridad, verás una luz azul intermitente en la pantalla del teléfono al usar la cámara para filmar el LED infrarrojo.
 
-Laden Sie den obigen Code auf das Board; die LED am Sensor blinkt rot.
+Sube correctamente el código anterior a la placa; el LED del sensor parpadeará en rojo.
 
-Im Folgenden gehen wir zu einem interaktiven Beispiel zwischen IR-Empfänger und IR-Sendermodul über.
+A continuación, pasemos a un ejemplo interactivo entre el receptor IR y el módulo transmisor IR.
 
-## Infrarot-Fernbedienung/Kommunikation
+## Control remoto/Comunicación infrarroja
 
-## Benötigte Hardware
+## Hardware necesario
 
 - Arduino R3 x2
 
-- Digitaler IR-Empfänger x1
+- Receptor IR digital x1
 
-- IR-Sendermodul x1
+- Módulo transmisor IR x1
 
-Hinweis: Dieses Experiment benötigt zwei Mikrocontroller-Boards. Ein Steckbrett ersetzt nicht das zweite Board, da es den Empfänger-Sketch nicht ausführen kann.
+Nota: este experimento necesita dos placas microcontroladoras. Un protoboard no reemplaza la segunda placa porque no puede ejecutar el sketch del receptor.
 
-## Zwei-Board-Kommunikation
+## Configuración de comunicación con dos placas
 
-## Für IR-Sender
+## Para el transmisor IR
 
-Hinweis: Arduino-IR remote unterstützt nur D3 als Sender.
+Aviso: Arduino-IR remote solo soporta D3 como transmisor.
 
-![Für IR-Sender - Abbildung](../media/08ebf9b37949caf1782e499f49934f1d.png)
+![Ilustración para el transmisor IR](../media/08ebf9b37949caf1782e499f49934f1d.png)
 
-## Für IR-Empfänger
+## Para el receptor IR
 
-Verbinden Sie den Signaleingang mit dem D11-Port.
+Conecta el pin de señal al puerto D11.
 
-![Für IR-Empfänger - Abbildung](../media/687d429fe6360707f95fb6c5ddfa2ca7.jpeg)
+![Ilustración para el receptor IR](../media/687d429fe6360707f95fb6c5ddfa2ca7.jpeg)
 
-## Laden Sie Code 2 auf das mit dem IR-Sender verbundene V4.0-Board hoch
+## Sube el código 2 a la V4.0 conectada al transmisor IR
 
 ```c
  #include <IRremote.h>
@@ -106,7 +106,7 @@ Verbinden Sie den Signaleingang mit dem D11-Port.
      delay(200); }
 ```
 
-## Laden Sie Code 3 auf das mit dem IR-Empfänger verbundene V4.0-Board hoch
+## Sube el código 3 a la V4.0 conectada al receptor IR
 
 ```c
 #include <IRremote.h>
@@ -138,12 +138,12 @@ Verbinden Sie den Signaleingang mit dem D11-Port.
    }}
 ```
 
-## Ergebnis
+## Resultado
 
-Wenn das IR-Empfängermodul das Infrarotsignal vom IR-Sender empfängt, blinkt die D1-LED am IR-Empfängermodul.
+Cuando el módulo receptor IR reciba la señal infrarroja del transmisor IR, el LED D1 del módulo receptor IR parpadeará.
 
-Wenn das IR-Empfängermodul das Infrarotsignal vom IR-Sender empfängt, blinkt die D1-LED am IR-Empfängermodul.
+Cuando el módulo receptor IR reciba la señal infrarroja del transmisor IR, el LED D1 del módulo receptor IR parpadeará.
 
-![Ergebnis - Abbildung](../media/4d73a7178e89de72df7e82a147778ae9.png)
+![Ilustración del resultado](../media/4d73a7178e89de72df7e82a147778ae9.png)
 
 ---

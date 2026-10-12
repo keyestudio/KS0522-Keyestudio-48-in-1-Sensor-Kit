@@ -1,37 +1,45 @@
-# Lektion 21: Fotowiderstand
+# Lección 21: Fotorresistor
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor-Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
+> **Kit:** Kit de sensores Keyestudio 48-in-1  
+> **Placa:** Placa Keyestudio V4.0 / compatible con Arduino Uno ATmega328P
 
-![Projekt 21: Fotowiderstand Illustration](../media/8eed60793fd64a7c0b9a9b2a2fc1ef67.png)
+![Proyecto 21: ilustración del fotorresistor](../media/8eed60793fd64a7c0b9a9b2a2fc1ef67.png)
 
-## Beschreibung
+## Descripción
 
-Fotowiderstände kommen in unserem Alltag häufig vor und werden hauptsächlich in intelligenten Schaltkreisen sowie im allgemeinen Elektronikdesign eingesetzt. Um die Verwendung zu vereinfachen und effektiver zu machen, liefern wir entsprechende Module.
+El fotorresistor es común en nuestra vida diaria y se utiliza principalmente en interruptores
+inteligentes, así como en diseños electrónicos habituales. Para hacerlo más fácil y efectivo,
+suministramos los módulos correspondientes.
 
-Der Fotowiderstand ist ein Halbleiter. Er zeichnet sich durch hohe Empfindlichkeit, schnelle Reaktion, spektrale Eigenschaften und konstante R-Werte aus und behält hohe Stabilität und Zuverlässigkeit auch unter extremen Umgebungsbedingungen wie hoher Temperatur und hoher Luftfeuchtigkeit.
+El fotorresistor es un semiconductor. Tiene características de alta sensibilidad, respuesta
+rápida, característica espectral y consistencia del valor R, manteniendo alta
+estabilidad y fiabilidad en entornos extremos como alta temperatura y
+alta humedad.
 
-Er wird weit verbreitet in automatischen Steuerungsfeldern eingesetzt, z. B. in Kameras, solarbetriebenen Gartenleuchten, Rasenlampen, Geldscheinprüfern, Quarzuhren, Musikbechern, Geschenkboxen, kleinen Nachtlichtern, Licht- und Ton-Steuerschaltern usw.
+Se utiliza ampliamente en campos de control automático como cámaras, luces solares de jardín,
+lámparas de césped, detectores de billetes, relojes de cuarzo, tazas musicales, cajas de regalo, mini
+luces nocturnas, interruptores de control de sonido y luz, etc.
 
-## Spezifikation
+## Especificación
 
-- Schnittstellentyp: analog
+- Tipo de interfaz: analógica
 
-- Betriebsspannung: 5V
+- Voltaje de trabajo: 5V
 
-- Größe: 30*20mm
+- Tamaño: 30*20mm
 
-- Gewicht: 3g
+- Peso: 3g
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Verbinden Sie den S-Pin des Moduls mit dem analogen Anschluss A0 der V4.0-Platine, verbinden Sie den Negativ-Pin mit dem GND-Anschluss, den Positiv-Pin mit dem 5V-Anschluss.
+Conecte el pin S del módulo al Analógico A0 de la placa V4.0, conecte el pin negativo
+al puerto GND, el pin positivo al puerto 5V.
 
-![Anschlussdiagramm Abbildung](../media/28a1990cd088d6f0301f02d217cef301.jpeg)
+![Ilustración del diagrama de conexión](../media/28a1990cd088d6f0301f02d217cef301.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopieren Sie den folgenden Code in die Arduino-Software.
+Copia y pega el siguiente código en el software de Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -49,12 +57,12 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-![Beispielergebnis Abbildung](../media/78268e9cb1dbc127e7ae3299d3a35a45.png)
+![Ilustración del resultado de ejemplo](../media/78268e9cb1dbc127e7ae3299d3a35a45.png)
 
-Nachdem die Verdrahtung abgeschlossen und die Platine mit Strom versorgt ist, laden Sie den Code hoch und öffnen dann den seriellen Monitor. Wenn Sie den Fotowiderstand auf dem Sensor mit Ihrer Hand abdecken, sehen Sie, dass der analoge Wert abnimmt.
+Una vez realizadas las conexiones y con la alimentación encendida, sube correctamente el código, luego abre el monitor serial; si cubres el fotorresistor del sensor con tu mano, verás que el valor analógico disminuye.
 
-![Beispielergebnis Abbildung](../media/85621deb4c66d6e53697cd0ef90cb6e2.jpeg)
+![Ilustración del resultado de ejemplo](../media/85621deb4c66d6e53697cd0ef90cb6e2.jpeg)
 
 ---

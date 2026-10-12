@@ -1,57 +1,57 @@
-# Lektion 23: Wasserstand
+# Lección 23: Nivel de agua
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P-Board
+> **Kit:** Keyestudio Kit de sensores 48 en 1  
+> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno (ATmega328P)
 
-![Projekt 23: Wasserstand Abbildung](../media/23f40997b8634be91aed7311eca2dfbb.jpeg)
+![Proyecto 23: ilustración del nivel de agua](../media/23f40997b8634be91aed7311eca2dfbb.jpeg)
 
-## Beschreibung
+## Descripción
 
-Der Keyestudio-Wassersensor ist einfach zu bedienen, tragbar und kostengünstig und wurde entwickelt, um den Wasserstand und Wassertropfen zu erkennen.
+El sensor de agua Keyestudio es fácil de usar, portátil y económico, diseñado para identificar y detectar el nivel de agua y gotas de agua.
 
-Dieser kleine Sensor kann das Volumen eines Wassertropfens oder die Wassermenge über ein Array von freiliegenden parallelen Leiterbahnen messen.
+Este pequeño sensor puede medir el volumen de gotas de agua o la cantidad de agua mediante una matriz de pistas de cables paralelos expuestos.
 
-## Eigenschaften
+## Características
 
-- sanfte Umwandlung zwischen Wassermenge und analogem Wert;
+- conversión fluida entre la cantidad de agua y la señal analógica;
 
-- hohe Flexibilität, Ausgabe eines grundlegenden Analogwerts;
+- gran flexibilidad, entregando un valor analógico básico;
 
-- geringer Stromverbrauch und hohe Empfindlichkeit;
+- bajo consumo de energía y alta sensibilidad;
 
-- direkter Anschluss an Mikroprozessoren oder andere Logikschaltungen, geeignet für verschiedene Entwicklungsboards und Controller wie Arduino, STC-Mikrocontroller, AVR-Mikrocontroller und mehr.
+- se conecta directamente a microprocesadores u otros circuitos lógicos, siendo adecuado para una variedad de placas de desarrollo y controladores como el controlador Arduino, microcontrolador STC, microcontrolador AVR y más.
 
-## Spezifikationen
+## Especificaciones
 
-- Betriebsspannung: DC5V
+- Voltaje de funcionamiento: DC5V
 
-- Betriebsstrom: ﹤20mA
+- Corriente de funcionamiento: ﹤20mA
 
-- Sensortyp: Analog
+- Tipo de sensor: Analógico
 
-- Erfassungsbereich: 40mm x16mm
+- Área de detección: 40mm x16mm
 
-- Produktionsverfahren: FR4 doppelseitig verzinnt
+- Proceso de fabricación: FR4 estañado por ambas caras
 
-- Formdesign: Anti-Rutsch halbmondförmige Vertiefung
+- Diseño: Receso semilunar antideslizante
 
-- Arbeitstemperatur: 10℃-30℃
+- Temperatura de funcionamiento: 10℃-30℃
 
-- Arbeitsfeuchtigkeit: 10%-90% ohne Kondensation
+- Humedad de funcionamiento: 10%-90% sin condensación
 
-- Gewicht: 3g
+- Peso: 3g
 
-- Abmessungen: 65mm x 20mm x 8mm
+- Dimensiones: 65mm x 20mm x 8mm
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Verbinden Sie den S-Pin des Moduls mit Analog A0 des V4.0 Boards, verbinden Sie den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
+Conecte el pin S del módulo al pin analógico A0 de la placa V4.0, conecte el pin negativo a GND, el pin positivo a 5V.
 
-![Anschlussdiagramm Abbildung](../media/92810e41aea313a15735eecb3a168e2f.jpeg)
+![Ilustración del diagrama de conexión](../media/92810e41aea313a15735eecb3a168e2f.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopieren Sie den folgenden Code in die Arduino-Software.
+Copie y pegue el siguiente código en el software de Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -80,20 +80,20 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-![Beispielergebnis Abbildung](../media/ca727c75f4d4e454c95258d77afdf10e.png)
+![Ilustración del resultado de ejemplo](../media/ca727c75f4d4e454c95258d77afdf10e.png)
 
-Nachdem die obigen Schritte abgeschlossen sind, testen wir den niedrigen Wasserstand und schauen, was passiert?
+Tras completar los pasos anteriores, hagamos una prueba con un nivel de agua bajo y veamos qué ocurre.
 
-Laden Sie den Code erfolgreich auf das V4.0 Board hoch, öffnen Sie dann den seriellen Monitor und stellen Sie die Baudrate auf 9600 ein.
+Suba correctamente el código a la placa V4.0, luego abra el monitor serie y ajuste la velocidad de baudios a 9600.
 
-Wenn Sie den Sensor auf unterschiedlichen Pegeln ins Wasser tauchen, sehen Sie, wie sich der Wert entsprechend ändert.
+Al colocar el sensor en el agua a diferentes niveles, verá cómo el valor cambia en consecuencia.
 
-![Beispielergebnis Abbildung](../media/8070cf2260fef39e5ec5e18b7a1849cf.jpeg)
+![Ilustración del resultado de ejemplo](../media/8070cf2260fef39e5ec5e18b7a1849cf.jpeg)
 
-Außerdem können Sie einen Alarmwert einstellen und einen Summer anschließen, um einen Alarm auszulösen.
+Además, puede establecer un valor de alarma y conectar un zumbador para que suene.
 
-Die LED leuchtet nicht, wenn der Wasserstand den Alarmwert noch nicht erreicht hat. Erreicht der Wasserstand den Alarmwert, wird die LED eingeschaltet und der Summer ertönt, um Alarm zu geben.
+El LED no se encenderá cuando el nivel de agua no haya alcanzado el valor de alarma. Si el nivel de agua alcanza el valor de alarma, el LED se encenderá y el zumbador sonará para alertar.
 
 ---

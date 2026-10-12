@@ -1,47 +1,47 @@
-# Lektion 06: Passiver Summer
+# Lección 06: Zumbador pasivo
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P-Board
+> **Kit:** Keyestudio Kit de sensores 48 en 1  
+> **Placa:** Keyestudio V4.0 / placa ATmega328P compatible con Arduino Uno
 
-![Projekt 6: Passiver Summer Abbildung](../media/1bd2e3afebf5a0d3712fe42092b0a1b4.png)
+![Proyecto 6: Ilustración del zumbador pasivo](../media/1bd2e3afebf5a0d3712fe42092b0a1b4.png)
 
-## Beschreibung
+## Descripción
 
-Mit Arduino können wir viele interaktive Projekte erstellen, wobei die am häufigsten verwendete Anzeige die akustisch-optische Anzeige ist. Der Schaltkreis in diesem Experiment kann Töne erzeugen.
+Podemos usar Arduino para crear muchas obras interactivas, siendo la más común la visualización acústico-óptica. El circuito en este experimento puede producir sonido.
 
-Normalerweise kann das Experiment mit einem Summer oder einem Lautsprecher durchgeführt werden, wobei der Summer einfacher und leichter zu verwenden ist.
+Normalmente, el experimento puede realizarse con un zumbador o un altavoz, mientras que el zumbador es más sencillo y fácil de usar.
 
-Der hier vorgestellte Summer ist ein passiver Summer. Er lässt sich nicht selbst ansteuern, sondern wird durch externe Impulsfrequenzen betrieben. Verschiedene Frequenzen erzeugen unterschiedliche Töne. Mit Arduino kannst du die Melodie eines Liedes programmieren — sehr spaßig und einfach.
+El zumbador que presentamos aquí es un zumbador pasivo. No puede accionarse por sí mismo, sino mediante frecuencias de pulsos externas. Diferentes frecuencias producen distintos sonidos. Puedes usar Arduino para programar la melodía de una canción; es bastante divertido y sencillo.
 
-## Spezifikation
+## Especificaciones
 
-- Betriebsspannung: 3.3-5v
+- Voltaje de trabajo: 3.3-5V
 
-- Schnittstellentyp: digital
+- Tipo de interfaz: digital
 
-- Größe: 30\*20mm
+- Tamaño: 30\*20mm
 
-- Gewicht: 4g
+- Peso: 4g
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Vor dem Anschluss bereiten Sie bitte die folgenden Teile vor:
+Primero, debes preparar las siguientes piezas antes de realizar la conexión:
 
-- V4.0-Platine*1
+- Placa V4.0*1
 
-- Passives Summer-Modul*1
+- Módulo de zumbador pasivo*1
 
-- USB-Kabel*1
+- Cable USB*1
 
-- Jumper-Kabel*3
+- Cables de puente*3
 
-Verbinde den S-Pin des Moduls mit Digital 3 der V4.0-Platine, den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
+Conecta el pin S del módulo al Digital 3 de la placa V4.0, conecta el pin negativo a GND, y el pin positivo a 5V.
 
-![Anschlussdiagramm Abbildung](../media/e9e7ba383738c3b6be85a1f3c97e5385.jpeg)
+![Ilustración del diagrama de conexión](../media/e9e7ba383738c3b6be85a1f3c97e5385.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopieren Sie den folgenden Code in die Arduino-Software.
+Copia y pega el siguiente código en el software de Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -70,10 +70,10 @@ delay(2);//2ms delay
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-Nach dem Hochladen des Codes auf die Platine gibt der Summer einen Ton von sich.
+Una vez cargado el código en la placa, el zumbador emitirá un sonido.
 
-![Beispielergebnis Abbildung](../media/9b29eccd437694e479a836b7da66d500.png)
+![Ilustración del resultado de ejemplo](../media/9b29eccd437694e479a836b7da66d500.png)
 
 ---

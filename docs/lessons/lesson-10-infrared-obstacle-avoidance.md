@@ -1,61 +1,61 @@
-# Lektion 10: Infrarot-Hinderniserkennung
+# Lección 10: Evitación de obstáculos por infrarrojos
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P-Platine
+> **Kit:** Kit de sensores Keyestudio 48 en 1  
+> **Placa:** Placa Keyestudio V4.0 / Placa compatible con Arduino Uno ATmega328P
 
-![Projekt 10: Illustration zur Infrarot-Hinderniserkennung](../media/54ab9db703340471fd9c3151934b85e7.png)
+![Proyecto 10: Evitación de obstáculos por infrarrojos (ilustración)](../media/54ab9db703340471fd9c3151934b85e7.png)
 
-## Beschreibung
+## Descripción
 
-Der Infrarot-Hindernisdetektorsensor verfügt über eine Distanz-Einstellfunktion und ist speziell für Radroboter konzipiert.
+El sensor detector de obstáculos por infrarrojos está equipado con función de ajuste de distancia y está especialmente diseñado para robots con ruedas.
 
-Dieser Sensor hat eine hohe Anpassungsfähigkeit an Umgebungslicht und eine hohe Genauigkeit.
+Este sensor tiene una fuerte adaptabilidad a la luz ambiental y es de alta precisión.
 
-Er besitzt ein Paar aus Infrarot-Sende- und Empfangsröhre. Wenn der vom Sender ausgesandte Infrarotstrahl auf ein Hindernis (seinen Reflektor) trifft, wird der Strahl an die Empfangsröhre reflektiert, wodurch die Anzeigeleuchte aufleuchtet und die Signalausgangsschnittstelle ein digitales Signal ausgibt.
+Tiene un par de tubos emisor y receptor de infrarrojos. Cuando el rayo infrarrojo emitido por el tubo emisor encuentra un obstáculo (su reflector), el rayo infrarrojo se reflejará hacia el tubo receptor, de modo que el indicador se encenderá y la interfaz de salida de señal emitirá una señal digital.
 
-Zusätzlich können Sie den Potentiometerknopf drehen, um die Erkennungsdistanz einzustellen (effektive Distanz: 2～40cm, Betriebsspannung: 3,3V–5V).
+Además, puedes girar la perilla del potenciómetro para ajustar la distancia de detección (distancia efectiva: 2～40cm, Voltaje de trabajo: 3.3V-5V).
 
-Dank des weiten Spannungsbereichs kann dieser Sensor auch bei schwankender Versorgungsspannung stabil arbeiten und ist geeignet für verschiedene Mikrocontroller, Arduino-Controller und BS2-Controller.
+Gracias a su amplio rango de voltaje, este sensor puede funcionar de forma estable incluso con voltajes de alimentación fluctuantes, y es adecuado para diversos microcontroladores, controladores Arduino y controladores BS2.
 
-Ein Roboter, der mit diesem Sensor ausgestattet ist, kann Hindernisse in der Umgebung wahrnehmen.
+Un robot equipado con este sensor puede detectar obstáculos en el entorno.
 
-## Technische Daten
+## Especificaciones
 
-- Betriebsspannung: Gleichspannung (DC) 3,3V–5V
+- Voltaje de trabajo: DC 3.3V-5V
 
-- Betriebsstrom: ≥20 mA
+- Corriente de trabajo: ≥20mA
 
-- Betriebstemperatur: －10℃ bis＋50℃
+- Temperatura de trabajo: －10℃ a＋50℃
 
-- Erkennungsreichweite: 2-40 cm
+- Distancia de detección: 2-40cm
 
-- IO-Schnittstelle: 4-adrige Schnittstelle (-/+/S/EN)
+- Interfaz IO: 4 pines (-/+/S/EN)
 
-- Ausgangssignal: TTL-Spannung
+- Señal de salida: Voltaje TTL
 
-- Einstellmodus: Mehrgang-Potentiometer
+- Modo de ajuste: Potenciómetro de múltiples vueltas
 
-- Erfassungswinkel: 35°
+- Ángulo efectivo: 35°
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Bereite vor der Verbindung zunächst die folgenden Teile vor:
+Primero, debes preparar las siguientes piezas antes de la conexión:
 
-- V4.0-Platine\*1
+- Placa V4.0\*1
 
-- Hindernisdetektor-Modul\*1
+- Módulo detector de obstáculos \*1
 
-- USB-Kabel\*1
+- Cable USB\*1
 
-- Jumperkabel\*3
+- Cables de puente\*3
 
-Verbinde den Out-Pin des Moduls mit Digital 2 der V4.0-Platine, den V+-Pin mit dem 5V-Anschluss und den GND-Pin mit dem GND-Anschluss.
+Conecta el pin Out del módulo al Digital 2 de la placa V4.0, conecta el pin V+ al puerto 5V, y el pin GND al puerto GND.
 
-![Anschlussdiagramm-Illustration](../media/48f60a482d777df19bc43a3203479b0c.jpeg)
+![Diagrama de conexión (ilustración)](../media/48f60a482d777df19bc43a3203479b0c.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopiere den folgenden Code in die Arduino-Software.
+Copia y pega el código siguiente en el software de Arduino.
 
 ```c
 const uint8_t sensorPin = 2;
@@ -72,14 +72,14 @@ void loop() {
 }
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-Nachdem der Code auf das Board hochgeladen wurde, leuchtet die LED sowohl auf der V4.0-Platine als auch am Hindernisdetektor-Modul.
+Una vez subido el código a la placa, puedes ver que el LED tanto de la placa V4.0 como del sensor detector de obstáculos está encendido.
 
-![Beispielergebnis-Illustration](../media/44d035dfe09b4c803becd84c95b05956.png)
+![Resultado de ejemplo (ilustración)](../media/44d035dfe09b4c803becd84c95b05956.png)
 
-Wenn wir einen Schaumstoffblock vor den Sensor stellen, wird diesmal, sobald der Sensor das Hindernis erkennt, die LED am Sensor eingeschaltet.
+Si colocamos un bloque de espuma frente al sensor, esta vez, cuando el sensor detecte el obstáculo, el LED del sensor se encenderá.
 
-![Beispielergebnis-Illustration](../media/da4468fead816d42b2ac43b29716b91f.png)
+![Resultado de ejemplo (ilustración)](../media/da4468fead816d42b2ac43b29716b91f.png)
 
 ---

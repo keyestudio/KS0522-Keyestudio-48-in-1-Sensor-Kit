@@ -1,37 +1,37 @@
-# Lektion 05: Summer-Piepen
+# Lección 05: Pitidos del zumbador
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor-Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno ATmega328P
 
-![Projekt 5: Summer-Piepen Illustration](../media/88c349b0602dfa2e166faabc13cb2f20.png)
+![Proyecto 5: Pitidos del zumbador - ilustración](../media/88c349b0602dfa2e166faabc13cb2f20.png)
 
-## Beschreibung
+## Descripción
 
-Hier ist das einfachste Klangmodul. Du kannst es mit hohem oder niedrigem Pegel ansteuern. Durch Ändern der Frequenz, mit der es brummt, lassen sich unterschiedliche Töne erzeugen.
+Aquí está el módulo más sencillo para generar sonido. Puedes usar niveles alto/bajo para accionarlo. Cambiando la frecuencia con la que vibra se pueden producir diferentes sonidos.
 
-Dieses Modul wird häufig in Alltagsgeräten wie PC, Kühlschrank, Telefonen usw. verwendet.
+Este módulo se utiliza ampliamente en nuestros electrodomésticos diarios como PC, frigorífico, teléfonos, etc.
 
-Außerdem kannst du mit diesem kleinen, aber nützlichen Modul viele interessante interaktive Projekte erstellen. Probier es einfach aus!! Du wirst den von ihm erzeugten elektronischen Klang sehr faszinierend finden.
+Además, puedes crear muchos proyectos interactivos interesantes con este módulo pequeño pero útil. ¡Pruébalo! Encontrarás el sonido electrónico que genera muy fascinante.
 
-## Spezifikation
+## Especificación
 
-- Betriebsspannung: 3.3-5v
+- Voltaje de trabajo: 3.3-5v
 
-- Schnittstellentyp: digital
+- Tipo de interfaz: digital
 
-- Größe: 30*20mm
+- Tamaño: 30*20mm
 
-- Gewicht: 4g
+- Peso: 4g
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Verbinde den S-Pin des Moduls mit Digital 3 der V4.0-Platine, den Minus-Pin mit dem GND-Anschluss und den Plus-Pin mit dem 5V-Anschluss.
+Conecta el pin S del módulo al Digital 3 de la placa V4.0, conecta el pin negativo al puerto GND, y el pin positivo al puerto 5V.
 
-![Anschlussdiagramm Illustration](../media/173f2e9a828b0b20d76dc07de57892c1.jpeg)
+![Diagrama de conexión - ilustración](../media/173f2e9a828b0b20d76dc07de57892c1.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopiere den folgenden Code in die Arduino-Software.
+Copia y pega el siguiente código en el software de Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -50,10 +50,10 @@ int buzzPin =3;    //Connect Buzzer on Digital Pin3
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-Nachdem der Code auf die Platine hochgeladen wurde, gibt der Summer einen Ton von sich.
+Una vez subido el código a la placa, el zumbador emitirá un sonido.
 
-![Beispielergebnis Illustration](../media/109e3287bff29d1d1fb88369d6705ad3.png)
+![Resultado de ejemplo - ilustración](../media/109e3287bff29d1d1fb88369d6705ad3.png)
 
 ---

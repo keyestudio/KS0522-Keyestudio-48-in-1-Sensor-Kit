@@ -1,69 +1,69 @@
-# Lektion 44: Dreiachsige digitale Beschleunigungserkennung
+# Lección 44: Detección de Aceleración Digital Triaxial
 
-> **Bausatz:** Keyestudio 48-in-1-Sensorkit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P-Board
+> **Kit:** Kit de sensores Keyestudio 48 en 1  
+> **Placa:** Placa Keyestudio V4.0 compatible con Arduino Uno (ATmega328P)
 
-![Projekt 44: Dreiachsige digitale Beschleunigungsdetektion (Abbildung)](../media/2a26949601eb888348b798711fe1151e.jpeg)
+![Proyecto 44: Ilustración de detección de aceleración digital triaxial](../media/2a26949601eb888348b798711fe1151e.jpeg)
 
-## Einführung
+## Introducción
 
-MMA8452Q ist ein intelligenter, stromsparender, dreiachsiger kapazitiver mikroelektromechanischer Beschleunigungssensor mit 12-Bit-Auflösung.
+MMA8452Q es un sensor de aceleración de tres ejes, capacitivo, de micromáquina inteligente y de bajo consumo con resolución de 12 bits.
 
-Dieser Beschleunigungssensor bietet umfangreiche integrierte Funktionen, zeichnet sich durch flexible, benutzerprogrammierbare Optionen und eine Konfiguration mit zwei Interrupt-Pins aus.
+Este sensor de aceleración tiene un rendimiento integrado completo, con opciones de programación flexibles por el usuario y configuración de dos pines de interrupción.
 
-Die integrierte Interrupt-Funktion kann den Gesamtenergieverbrauch reduzieren und die Last des ständigen Abfragens von Daten im Hauptprozessor entfernen.
+La función de interrupción integrada puede ahorrar el consumo general de energía y eliminar la carga de sondear constantemente los datos en el procesador principal.
 
-Außerdem bietet die MMA8452Q eine wählbare Messbereichsoption von ±2g / ±4g / ±8g, die sowohl hochpassgefilterte Daten als auch ungefilterte Daten in Echtzeit ausgeben kann.
+Además, MMA8452Q tiene un rango dinámico opcional de ±2g / ±4g / ±8g, que puede emitir datos con filtrado paso alto y datos sin filtrar en tiempo real.
 
-Dieses Bauteil kann so konfiguriert werden, dass es ein Trägheits-Weck-Interrupt-Signal erzeugt, wodurch die MMA8452Q im Ruhezustand einen Niedrigenergie-Modus aufrechterhalten kann, während sie gleichzeitig Ereignisse überwacht.
+Este dispositivo puede configurar una función integrada para generar una señal de interrupción por activación inercial, lo que permite que MMA8452Q mantenga un modo de bajo consumo en estado estático mientras monitoriza el evento.
 
-## Leistungsparameter
+## Parámetros de rendimiento
 
-- Versorgungsspannung：1.95 V bis 3.6 V
+- Tensión de alimentación：1.95 V a 3.6 V
 
-- Schnittstellen-Spannung：1.6 V bis 3.6 V
+- Tensión de interfaz：1.6 V a 3.6 V
 
-- ±2g/±4g/±8g wählbarer Messbereich
+- Rango dinámico opcional ±2g/±4g/±8g
 
-- Ausgangsdatensatzrate (ODR) Bereich: 1.56Hz bis 800Hz
+- Rango de tasa de salida de datos (ODR): 1.56Hz a 800Hz
 
-- Rauschen：99μg/√Hz
+- Ruido：99μg/√Hz
 
-- 12-Bit- und 8-Bit-Digitalausgänge;
+- Salidas digitales de 12 bits y 8 bits;
 
-- I2C-Digitalausgangsschnittstelle (bis zu 2.25MHz, wenn der Pull-up-Widerstand 4.7kΩ beträgt);
+- Interfaz de salida digital I2C (hasta 2.25MHz cuando la resistencia pull-up es de 4.7kΩ);
 
-- Zwei programmierbare Interrupt-Pins, angewendet auf sechs Interrupt-Quellen;
+- Dos pines de interrupción programables aplicados a seis fuentes de interrupción;
 
-- Drei eingebettete Bewegungserkennungs-Kanäle: Freifallerkennung, Impulserkennung, Erschütterungserkennung;
+- Tres canales integrados de detección de movimiento: detección de caída libre, detección de pulso, detección de sacudida;
 
-- Richtungs- (quer/längs) Erkennung mit einstellbarer Verzögerungskompensation;
+- Detección de dirección (transversal/longitudinal) con compensación de retardo configurada;
 
-- Automatische Weck- und Auto-Dormant-Funktionen; die ODR kann automatisch geändert werden;
+- Arranque automático y ODR en reposo automático que pueden alterarse automáticamente;
 
-- Hochpassgefilterte Daten können in Echtzeit ausgegeben werden;
+- Los datos de filtrado paso alto pueden exportarse en tiempo real;
 
-- Stromverbrauch: 6μA – 165μA
+- Consumo de energía: 6μA – 165μA
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Zunächst müssen Sie die folgenden Teile vorbereiten:
+Primero necesita preparar las siguientes piezas:
 
-- V4.0-Board*1
+- Placa V4.0*1
 
-- MMA8452Q Sensor*1
+- Sensor MMA8452Q*1
 
-- USB-Kabel*1
+- Cable USB*1
 
-- Jumper-Kabel*4
+- Cables jumper*4
 
-Verbinden Sie den SCL-Pin mit dem Analogen Anschluss A5, den SDA-Pin mit dem Analogen Anschluss A4; verbinden Sie den Plus-Pin mit dem 3V3-Anschluss und den Minus-Pin mit dem GND-Anschluss.
+Conecte el pin SCL al puerto Analógico A5, el pin SDA al puerto Analógico A4; conecte el pin positivo al puerto 3V3 y el pin negativo a GND.
 
-![Anschlussdiagramm (Abbildung)](../media/fdd68f7da45d46e65f42918eac68a2f3.jpeg)
+![Diagrama de conexión ilustración](../media/fdd68f7da45d46e65f42918eac68a2f3.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopieren Sie den folgenden Code in die Arduino-Software.
+Copie y pegue el código siguiente en el software de Arduino.
 
 ```c
 #include <Wire.h> // Must include Wire library for I2C
@@ -188,14 +188,14 @@ void printOrientation()
 }
 ```
 
-Hinweis: Bevor Sie den Code kompilieren, denken Sie daran, die Bibliothek in das Verzeichnis libraries der Arduino IDE zu kopieren. Andernfalls schlägt die Kompilierung fehl.
+Nota: antes de compilar el código, recuerde colocar la biblioteca en el directorio libraries del IDE de Arduino. De lo contrario, la compilación fallará.
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-![Beispielergebnis (Abbildung)](../media/9f81d233c0387bc32d25951abd3a407c.png)
+![Resultado de ejemplo ilustración](../media/9f81d233c0387bc32d25951abd3a407c.png)
 
-Nachdem Sie den Code hochgeladen und den seriellen Monitor geöffnet haben, werden die dreiachsigen Beschleunigungswerte des Sensors und dessen Status wie unten angezeigt.
+Una vez subido el código y abierto el monitor serie, mostrará la aceleración triaxial del sensor y su estado como se muestra a continuación.
 
-![Beispielergebnis (Abbildung)](../media/03421d279e2e961d7b40f645b7576d73.jpeg)
+![Resultado de ejemplo ilustración](../media/03421d279e2e961d7b40f645b7576d73.jpeg)
 
 ---

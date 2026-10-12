@@ -1,61 +1,61 @@
-# Lektion 07: Digitaler Taster
+# Lección 07: Pulsador digital
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Placa:** Keyestudio V4.0 / compatible con Arduino Uno (ATmega328P) board
 
-![Projekt 7: Digitaler Taster Abbildung](../media/a8707354e54ea51bb92584f791ae79e5.png)
+![Proyecto 7: Ilustración del pulsador digital](../media/a8707354e54ea51bb92584f791ae79e5.png)
 
-## Beschreibung
+## Descripción
 
-Dies ist ein einfaches Tastermodul. Du kannst es einfach an ein IO-Shield anschließen, um deinen ersten Versuch mit Arduino zu starten.
+Este es un módulo de botón básico. Puedes conectarlo fácilmente a un shield de E/S para tu primer intento con Arduino.
 
-## Eigenschaften
+## Características
 
-- Breiter Spannungsbereich von 3.3V bis 5V
+- Amplio rango de voltaje de 3.3V a 5V
 
-- Leicht erkennbare Schnittstellen der Sensoren ("A" für Analog und "D" für Digital)
+- Interfaces de sensores fácilmente reconocibles ("A" para Analógico y "D" para Digital)
 
-- Standardisierte Montagebohrung
+- Orificio de montaje estándar
 
-- Klare Symbolillustrationen
+- Ilustraciones de iconos claras
 
-- Hochwertiger Anschluss
+- Conector de alta calidad
 
-- Einfach zu stecken und zu bedienen
+- Fácil de conectar y usar
 
-- Großer Taster und hochwertige Kappe
+- Botón grande y tapa de alta calidad
 
-- Ermöglicht interessante und interaktive Arbeiten
+- Para lograr proyectos interesantes e interactivos
 
-## Technische Daten
+## Especificación
 
-- Versorgungsspannung: 3.3V bis 5V
+- Tensión de alimentación: 3.3V a 5V
 
-- Schnittstelle: Digital
+- Interfaz: Digital
 
-- Abmessungen: 30*20mm
+- Dimensiones: 30*20mm
 
-- Gewicht: 4g
+- Peso: 4g
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Bereite zunächst die folgenden Teile vor, bevor du die Verbindung herstellst:
+Primero, debes preparar las siguientes piezas antes de la conexión:
 
-- V4.0 Board*1
+- Placa V4.0*1
 
-- Tastermodul*1
+- Módulo de pulsador*1
 
-- USB-Kabel*1
+- Cable USB*1
 
-- Jumperkabel*3
+- Cables de puente*3
 
-Verbinde den S-Pin des Moduls mit Digital 3 des V4.0 board, verbinde den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
+Conecta el pin S del módulo al Digital 3 de la placa V4.0, conecta el pin negativo al puerto GND y el pin positivo al puerto 5V.
 
-![Anschlussdiagramm Abbildung](../media/6ec73b961481bf0794572a842c5231fa.jpeg)
+![Ilustración del diagrama de conexión](../media/6ec73b961481bf0794572a842c5231fa.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopiere den untenstehenden Code in die Arduino-Software.
+Copia y pega el siguiente código en el software de Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -78,12 +78,12 @@ void loop(){
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-Verdrahte alles wie in der unten gezeigten Abbildung und lade dann den Code auf das V4.0 board hoch.
+Conecta los cables correctamente como se muestra en la figura siguiente y luego sube el código a la placa.
 
-Wenn du den digitalen Taster drückst, leuchtet die LED 13 auf dem V4.0 board. Wenn du den Taster loslässt, geht die LED aus. Siehe unten.
+Cuando pulses el botón digital, el Led 13 en la placa V4.0 se encenderá. Al soltar el botón, el led se apagará. Se muestra a continuación.
 
-![Beispielergebnis Abbildung](../media/ac03d3fa1c0f5de7dae18c6e64406e60.png)
+![Ilustración del resultado de ejemplo](../media/ac03d3fa1c0f5de7dae18c6e64406e60.png)
 
 ---

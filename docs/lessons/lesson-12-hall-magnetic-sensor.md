@@ -1,47 +1,47 @@
-# Lektion 12: Hall-Magnetfeldsensor
+# Lección 12: Sensor magnético Hall
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno ATmega328P
 
-![Projekt 12: Hall-Magnetfeldsensor Abbildung](../media/c3d4d513b72ac04fad7e4f3015bfb1ed.png)
+![Proyecto 12: Ilustración del sensor magnético Hall](../media/c3d4d513b72ac04fad7e4f3015bfb1ed.png)
 
-## Beschreibung
+## Descripción
 
-Dies ist ein magnetischer Induktionssensor. Er kann magnetische Materialien innerhalb einer Erkennungsreichweite von bis zu 3cm erfassen. Die Erkennungsreichweite und die Stärke des Magnetfeldes sind proportional. Der Ausgang ist digital ein/aus.
+Este es un sensor de inducción magnética. Puede detectar materiales magnéticos dentro de un rango de detección de hasta 3 cm. El rango de detección y la intensidad del campo magnético son proporcionales. La salida es digital (encendido/apagado).
 
-Dieser Sensor verwendet den SFE Reed Switch - Magnetic Field Sensor.
+Este sensor utiliza el SFE Reed Switch - Magnetic Field Sensor.
 
-## Spezifikation
+## Especificación
 
-- Erkennt magnetische Materialien
+- Detección de materiales magnéticos
 
-- Erfassungsbereich: bis zu 3cm
+- Rango de detección: hasta 3 cm
 
-- Ausgang: digital ein/aus
+- Salida: digital encendido/apagado
 
-- Größe: 30*20mm
+- Tamaño: 30*20mm
 
-- Gewicht: 3g
+- Peso: 3g
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Bereiten Sie vor dem Anschluss die folgenden Teile vor:
+Primero, necesitas preparar las siguientes piezas antes de la conexión:
 
-- V4.0 Platine\*1
+- V4.0 Placa\*1
 
-- Hallsensor \*1
+- Sensor Hall \*1
 
-- USB-Kabel\*1
+- Cable USB\*1
 
-- Jumper-Kabel\*3
+- Cable jumper\*3
 
-Verbinden Sie den S-Pin des Moduls mit Digital 3 der V4.0-Platine, den Minuspol mit dem GND-Anschluss und den Pluspol mit dem 5V-Anschluss.
+Conecta el pin S del módulo al Digital 3 de la placa V4.0, conecta el pin negativo al puerto GND y el pin positivo al puerto 5V.
 
-![Verbindungsdiagramm Abbildung](../media/db4db0c53435ceb1d6caaaf40502247a.jpeg)
+![Ilustración del diagrama de conexión](../media/db4db0c53435ceb1d6caaaf40502247a.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopieren Sie den folgenden Code in die Arduino-Software.
+Copia y pega el siguiente código en el software de Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -65,14 +65,14 @@ void loop(){
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-Verdrahten Sie alles und laden Sie den Code auf das Board hoch. Sie werden sehen, dass die D13-Anzeige auf der V4.0-Platine aus ist und die LED am Modul ebenfalls aus ist.
+Conéctalo y sube correctamente el código a la placa; verás que el indicador D13 en la placa V4.0 está apagado y el LED del módulo también está apagado.
 
-![Beispielergebnis Abbildung](../media/102f67e289b5834de7fa80b6e6d99c20.png)
+![Ilustración del resultado de ejemplo](../media/102f67e289b5834de7fa80b6e6d99c20.png)
 
-Wenn Sie jedoch einen Magnetball in die Nähe des Hall-Moduls bringen, wird die D13-Anzeige auf der V4.0-Platine eingeschaltet und die LED am Modul leuchtet ebenfalls.
+Pero si acercas una esfera magnética al módulo Hall, verás que el indicador D13 en la placa V4.0 se enciende y el LED del módulo también se enciende.
 
-![Beispielergebnis Abbildung](../media/c3c4044f2205dd1ff162ef7e211d2b2c.png)
+![Ilustración del resultado de ejemplo](../media/c3c4044f2205dd1ff162ef7e211d2b2c.png)
 
 ---

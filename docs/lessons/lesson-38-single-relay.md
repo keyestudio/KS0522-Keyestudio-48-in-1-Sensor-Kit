@@ -1,61 +1,61 @@
-# Lektion 38: Einzelrelais
+# Lección 38: Relé simple
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
+> **Kit:** Kit de sensores Keyestudio 48 en 1  
+> **Placa:** Keyestudio V4.0 / placa ATmega328P compatible con Arduino Uno
 
-![Projekt 38: Einzelrelais Abbildung](../media/e0b4485cfd4ccebd974d81f19239dde3.png)
+![Proyecto 38: Relé individual ilustración](../media/e0b4485cfd4ccebd974d81f19239dde3.png)
 
-## Einführung
+## Introducción
 
-Dieses Einzelrelais-Modul kann in interaktiven Projekten verwendet werden. Das Modul verwendet ein hochwertiges SONGLE 5V-Relais. Es kann auch zum Steuern von Beleuchtung, elektrischen Geräten und anderer Ausrüstung verwendet werden.
+Este módulo de relé simple se puede usar en proyectos interactivos. Este módulo utiliza un relé SONGLE 5v de alta calidad. También puede utilizarse para controlar iluminación, equipos eléctricos y otros aparatos.
 
-Das modulare Design macht die Verwendung mit einer Arduino-Platine einfach. Es kann über einen digitalen I/O-Anschluss gesteuert werden, zum Beispiel Magnetventile, Lampen, Motoren und andere Geräte mit hohem Strom oder hoher Spannung.
+El diseño modular facilita su uso con la placa Arduino. Puede controlarse a través del puerto IO digital, como válvulas solenoides, lámparas, motores y otros dispositivos de alta corriente o alto voltaje.
 
-## Spezifikation
+## Especificación
 
-- Typ: Digital
+- Tipo: Digital
 
-- Nennstrom: 10A (NO) 5A (NC)
+- Corriente nominal: 10A (NO) 5A (NC)
 
-- Maximale Schaltspannung: 150VAC 24VDC
+- Voltaje máximo de conmutación: 150VAC 24VDC
 
-- Digitales Interface
+- Interfaz digital
 
-- Steuersignal: TTL-Pegel
+- Señal de control: nivel TTL
 
-- Nennbelastung: 8A 150VAC (NO), 10A 24VDC (NO), 5A 250VAC (NO/NC), 5A 24VDC (NO/NC)
+- Carga nominal: 8A 150VAC (NO), 10A 24VDC (NO), 5A 250VAC (NO/NC), 5A 24VDC (NO/NC)
 
-- Maximale Schaltleistung: AC1200VA DC240W (NO), AC625VA DC120W (NC)
+- Potencia máxima de conmutación: AC1200VA DC240W (NO), AC625VA DC120W (NC)
 
-- Kontakt-Schaltzeit: 10ms
+- Tiempo de acción del contacto: 10ms
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Zuerst müssen Sie vor dem Anschluss die folgenden Teile vorbereiten.
+Primero necesitas preparar las siguientes piezas antes de la conexión.
 
-- V4.0 Platine\*1
+- Placa V4.0\*1
 
-- Relaismodul\*1
+- Módulo relé\*1
 
-- LED-Modul \*1
+- Módulo LED \*1
 
-- Steckbrett \*1
+- Protoboard \*1
 
-- USB-Kabel\*1
+- Cable USB\*1
 
-- Jumperkabel\*9
+- Cables jumper\*9
 
-Hier verwenden wir das Einzelrelais-Modul, um ein LED-Modul ein- oder auszuschalten.
+Aquí usamos el módulo de relé simple para controlar un módulo LED para encenderlo o apagarlo.
 
-Beim Relaismodul verbinden Sie den Signal-Pin mit dem digitalen Port 8 der V4.0-Platine, dann verbinden Sie seinen positiven Pin mit der Anodenreihe des Steckbretts und führen diese Reihe zum 5V-Anschluss der V4.0-Platine. Verbinden Sie seinen negativen Pin mit der Kathodenreihe des Steckbretts und führen diese Reihe zum GND-Anschluss der V4.0-Platine.
+Para el módulo relé, conecta el pin Señal al puerto digital 8 de la placa V4.0, luego conecta su pin positivo a la fila de ánodo del protoboard, conduce esa fila al puerto 5V de la placa V4.0. Conecta su pin negativo a la fila de cátodo del protoboard, conduce esa fila al puerto GND de la placa V4.0.
 
-Beim LED-Modul verbinden Sie den Signal-Pin mit einem Klemmenanschluss des Relaismoduls, ein anderer Klemmenanschluss des Relais ist mit dem digitalen Port 13 der V4.0-Platine verbunden. Verbinden Sie seinen positiven Pin mit der Anodenreihe, den negativen Pin mit der Kathodenreihe des Steckbretts.
+Para el módulo LED, conecta su pin Señal a un bloque terminal del módulo relé; el otro bloque terminal del relé se conecta al puerto digital 13 de la placa V4.0. Conecta su pin positivo a la fila de ánodo y su pin negativo a la fila de cátodo del protoboard.
 
-![Anschlussdiagramm Abbildung](../media/21cf9b1d5f0843230ee516a0a8be77e1.jpeg)
+![Diagrama de conexión (ilustración)](../media/21cf9b1d5f0843230ee516a0a8be77e1.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopieren Sie den folgenden Code in die Arduino-Software.
+Copia y pega el código siguiente en el software de Arduino.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -76,14 +76,14 @@ void loop()
 ///////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-![Beispielergebnis Abbildung](../media/c751be64bd8acd8c6114598b89586cfa.png)
+![Resultado de ejemplo (ilustración)](../media/c751be64bd8acd8c6114598b89586cfa.png)
 
-Dieses Relaismodul ist bei HIGH-Pegel aktiv.
+Este módulo relé se activa a nivel ALTO (HIGH).
 
-Verdrahten Sie alles ordentlich, schalten Sie die Stromversorgung ein und laden Sie dann den obigen Code auf die Platine hoch. Sie werden sehen, dass das Relais für zwei Sekunden eingeschaltet ist (NO geschlossen, NC geöffnet), dann für zwei Sekunden ausgeschaltet ist (NC geschlossen, NO geöffnet), und dies wiederholt sich zyklisch.
+Conéctalo correctamente y aliméntalo; luego sube el código anterior a la placa. Verás que el relé se activa (NO conectado, NC desconectado) durante dos segundos, luego se desactiva (NC conectado, NO desconectado) durante dos segundos, repitiéndose de forma cíclica.
 
-Wenn das Relais eingeschaltet ist, leuchtet die externe LED. Ist das Relais ausgeschaltet, ist die externe LED aus.
+Cuando el relé está activado, el LED externo está encendido. Si el relé está desactivado, el LED externo está apagado.
 
 ---

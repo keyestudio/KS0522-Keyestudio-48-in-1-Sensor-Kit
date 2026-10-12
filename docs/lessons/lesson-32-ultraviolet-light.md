@@ -1,53 +1,53 @@
-# Lektion 32: Ultraviolettes Licht
+# Lección 32: Luz ultravioleta
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor-Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
+> **Kit:** Kit de sensores Keyestudio 48-en-1  
+> **Placa:** Keyestudio V4.0 / Placa compatible con Arduino Uno ATmega328P
 
-![Projekt 32: Ultraviolettes Licht Illustration](../media/15613ff0e8f059a9034e923ab5c2be24.jpeg)
+![Proyecto 32: Ilustración de luz ultravioleta](../media/15613ff0e8f059a9034e923ab5c2be24.jpeg)
 
-## Beschreibung
+## Descripción
 
-Der Keyestudio GUVA-S12SD Ultraviolett-Sensor wird verwendet, um ultraviolettes Licht zu erkennen. Er wird unter anderem eingesetzt, um den UV-Index intelligenter Wearables wie Uhren, Smartphones und Outdoor-Geräte mit UV-Index-Erkennung zu messen.
+El sensor ultravioleta Keyestudio GUVA-S12SD se utiliza para detectar la luz ultravioleta. Incluye el GUVA-S12SD aplicado para medir el índice UV en dispositivos inteligentes para vestir, como relojes, teléfonos inteligentes y dispositivos exteriores con detección del índice UV.
 
-Er kann auch zur Überwachung der Intensität von UV-Licht oder als UV-Flammendetektor bei der Desinfektion von Gegenständen mit UV-Licht verwendet werden.
+También puede utilizarse para monitorear la intensidad de la luz ultravioleta o como detector de llamas UV al desinfectar objetos con luz ultravioleta.
 
-## Parameter
+## Parámetros
 
-- Größe: 15mm×30mm×0.7mm
+- Tamaño: 15mm×30mm×0.7mm
 
-- Versorgungsspannung: 2.5V～5V
+- Voltaje de alimentación: 2.5V～5V
 
-- Ausgangssignal: Analoges Signal
+- Señal de salida: Señal analógica
 
-- Erkennungsbereich des Spektrums: 240-370nm
+- Rango de detección del espectro: 240-370nm
 
-- Aktive Fläche: 0.076mm2
+- Región activa: 0.076mm2
 
-- Empfindlichkeit: 0.14A/W
+- Responsividad: 0.14A/W
 
-- Dunkelstrom: 1nA
+- Corriente en oscuridad: 1nA
 
-- Lichtstrom: 101\~125nA UVA-Licht, 1mW/cm2
+- Corriente de luz: 101\~125nA Luz UVA, 1mW/cm2
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Zuerst müssen Sie die folgenden Teile vor dem Anschluss vorbereiten.
+Primero necesita preparar las siguientes piezas antes de la conexión.
 
-- V4.0 Platine\*1
+- Placa V4.0\*1
 
-- GUVA-S12SD 3528 Ultraviolett-Sensor \*1
+- GUVA-S12SD 3528 Sensor ultravioleta \*1
 
-- USB-Kabel\*1
+- Cable USB\*1
 
-- Jumperkabel\*3
+- Cables jumper\*3
 
-Verbinde den S-Pin des Moduls mit dem analogen A0 des V4.0-Boards, den Minuspol mit dem GND-Anschluss und den Pluspol mit dem 3V3-Anschluss.
+Conecte el pin S del módulo a Analog A0 de la placa V4.0, conecte el pin negativo al puerto GND, y el pin positivo al puerto 3V3.
 
-![Verbindungsdiagramm Illustration](../media/092ebb11142cfe83507989a5b2de0526.jpeg)
+![Ilustración del diagrama de conexión](../media/092ebb11142cfe83507989a5b2de0526.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopiere den folgenden Code in die Arduino-Software.
+Copie y pegue el siguiente código en el software de Arduino.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -76,16 +76,16 @@ void loop() {
 ///////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-![Beispielergebnis Illustration](../media/e81338e1f55ff6b55fbfe369f92b54da.png)
+![Ilustración del resultado de ejemplo](../media/e81338e1f55ff6b55fbfe369f92b54da.png)
 
-Verdrahte alles korrekt und lade den Programmcode hoch, dann öffne den seriellen Monitor; er zeigt die Daten an.
+Conéctelo correctamente y cargue el código del programa, luego abra el monitor serie; mostrará los datos.
 
-Wenn UV-Licht auf den Sensor gerichtet wird, ändern sich die Daten im seriellen Monitor, wie in der folgenden Abbildung gezeigt.
+Si ilumina el sensor con luz UV, los datos en el monitor serie cambian como se muestra en la siguiente imagen.
 
-![Beispielergebnis Illustration](../media/3a7f2a608faa9c72aee76d2820f78845.png)
+![Ilustración del resultado de ejemplo](../media/3a7f2a608faa9c72aee76d2820f78845.png)
 
-![Beispielergebnis Illustration](../media/610d2325395cd3b44ce3c18e05595518.jpeg)
+![Ilustración del resultado de ejemplo](../media/610d2325395cd3b44ce3c18e05595518.jpeg)
 
 ---

@@ -1,39 +1,39 @@
-# Lektion 26: Analoger Alkohol
+# Lección 26: Alcohol analógico
 
-> **Bausatz:** Keyestudio 48-in-1 Sensorsatz  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
+> **Kit:** Kit de sensores Keyestudio 48 en 1  
+> **Placa:** Keyestudio V4.0 / Placa compatible con Arduino Uno ATmega328P
 
-![Projekt 26: Analoger Alkohol - Abbildung](../media/288162cf02f2968eda57b437292a42dd.png)
+![Proyecto 26: Ilustración de alcohol analógico](../media/288162cf02f2968eda57b437292a42dd.png)
 
-## Beschreibung
+## Descripción
 
-Dieser analoge MQ-3-Sensor eignet sich zur Erkennung von Alkohol. Er kann in einem Atemalkoholmessgerät verwendet werden.
+Este sensor analógico MQ-3 es adecuado para detectar alcohol. Puede usarse en un proyecto de alcoholímetro.
 
-Er besitzt eine gute Selektivität, da er gegenüber Alkohol eine höhere Empfindlichkeit und gegenüber Benzin eine geringere Empfindlichkeit aufweist.
+Tiene buena selectividad porque presenta mayor sensibilidad al alcohol y menor sensibilidad a la gasolina.
 
-Die Empfindlichkeit kann durch Drehen des Potentiometers auf dem Sensor eingestellt werden.
+La sensibilidad puede ajustarse girando el potenciómetro del sensor.
 
-## Spezifikationen
+## Especificaciones
 
-- Versorgungsspannung: 5V
+- Alimentación: 5V
 
-- Schnittstellentyp: Analog
+- Tipo de interfaz: Analógica
 
-- Einfache Ansteuerschaltung
+- Circuito de control sencillo
 
-- Stabil und lange Lebensdauer
+- Estable y de larga vida útil
 
-- Schnelle Reaktion und hohe Empfindlichkeit
+- Respuesta rápida y alta sensibilidad
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Verbinden Sie den A0-Pin des Moduls mit dem analogen A0 der V4.0-Platine, verbinden Sie den GND-Pin mit dem GND-Anschluss und den VCC-Pin mit dem 5V-Anschluss.
+Conecta el pin A0 del módulo al pin analógico A0 de la placa V4.0, conecta el pin GND al puerto GND y el pin VCC al puerto de 5V.
 
-![Anschlussdiagramm - Abbildung](../media/61632f44731176aaf95d313f2843c9de.jpeg)
+![Ilustración del diagrama de conexión](../media/61632f44731176aaf95d313f2843c9de.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopieren Sie den untenstehenden Code in die Arduino-Software.
+Copia y pega el siguiente código en el software de Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -52,12 +52,12 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-![Beispielergebnis - Abbildung](../media/a21d5b8c686e46a59128ab48b96d177c.png)
+![Ilustración del resultado de ejemplo](../media/a21d5b8c686e46a59128ab48b96d177c.png)
 
-Nachdem die Verdrahtung abgeschlossen und die Stromversorgung eingeschaltet ist, laden Sie den Code hoch, öffnen Sie dann den seriellen Monitor und stellen Sie die Baudrate auf 9600 ein. Sie sehen den Analogwert. Beim Erkennen von Alkoholgas ändert sich der Wert.
+Una vez realizadas las conexiones y alimentada la placa, sube correctamente el código; a continuación abre el Monitor Serie y ajusta la velocidad a 9600. Verás el valor analógico. Al detectar gas de alcohol, el valor cambiará.
 
-![Beispielergebnis - Abbildung](../media/97565d8ba7691b30a7aa96efc6c7728b.jpeg)
+![Ilustración del resultado de ejemplo](../media/97565d8ba7691b30a7aa96efc6c7728b.jpeg)
 
 ---

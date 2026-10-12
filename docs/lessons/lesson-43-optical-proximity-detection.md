@@ -1,70 +1,70 @@
-# Lektion 43: Optische Näherungserkennung
+# Lección 43: Detección óptica de proximidad
 
-> **Bausatz:** Keyestudio 48-in-1 Sensorkit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P-Board
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno ATmega328P
 
-![Projekt 43: Illustration zur optischen Näherungserkennung](../media/4085d5742012b8647b52c537b82974ff.jpeg)
+![Proyecto 43: ilustración de detección óptica de proximidad](../media/4085d5742012b8647b52c537b82974ff.jpeg)
 
-## Einführung
+## Introducción
 
-**Kompatibilitäts-Hinweis.** Der ursprüngliche Text benennt dieses Modul als TMD27713, während der Sketch unten auf den APDS-9930 abzielt. Prüfen Sie die IC-Beschriftung und verwenden Sie vor dem Hochladen eine passende Bibliothek.
+**Aviso de compatibilidad.** El texto antiguo identifica este módulo como TMD27713, mientras que el boceto siguiente está dirigido al APDS-9930. Confirme el marcado del CI y utilice una biblioteca correspondiente antes de cargar.
 
-Es handelt sich um einen Dreifach-Sensor, der Umgebungslicht, Näherungssensor und eine Infrarot-LED integriert.
+Es un sensor triple integrado con sensor de luz ambiental, sensor de proximidad y LED infrarrojo.
 
-Zum einen dient er zur Erfassung der aktuellen Umgebungshelligkeit (ALS). Er kann in Abhängigkeit von der aktuellen Umgebungshelligkeit die Hintergrundbeleuchtungshelligkeit automatisch per Softwareanpassung regulieren. Auf diese Weise wird die Hintergrundbeleuchtung sanfter, was die Augen schont und Energie spart.
+Por un lado, se utiliza para detectar la luminosidad ambiental actual (ALS). Puede, en función de la luminosidad ambiental actual, ajustar automáticamente el brillo del retroiluminado mediante ajuste por software. De este modo el brillo del retroiluminado puede suavizarse para proteger la vista y lograr un efecto de ahorro de energía.
 
-Zum anderen verfügt er über eine Näherungsfunktion (PROX). Der Sensor integriert Sender und Empfänger, wodurch das Design minimiert wurde; somit bestehen kaum Platzbeschränkungen bei Design und Montage, und die mechanische Struktur ist relativ einfach.
+Otra función es la de sensor de proximidad (PROX). El sensor integra transmisor/receptor y minimiza el diseño; además, el diseño e instalación no tienen más restricciones de espacio y, en parte, la estructura es relativamente simple.
 
-## Parameter
+## Parámetros
 
-- Betriebsspannung：DC 3.3V
+- Tensión de funcionamiento：CC 3.3V
 
-- Erfassungsdistanz：100mm
+- Distancia de detección：100mm
 
-- Kommunikationsschnittstelle：I2C-Kommunikation
+- Modo de comunicación：IIC
 
-- Temperaturbereich：-30℃ bis 85℃
+- Rango de temperatura：-30℃ a 85℃
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Zuerst benötigen Sie die folgenden Teile:
+Primero necesita preparar las siguientes piezas:
 
-- V4.0-Platine\*1
+- Placa V4.0\*1
 
-- TMD27713-Sensor\*1
+- Sensor TMD27713\*1
 
-- USB-Kabel\*1
+- Cable USB\*1
 
-- Jumperkabel\*5
+- Cables jumper\*5
 
-Verbinden Sie den INT-Pin des Sensors mit dem Digital 2 Anschluss des V4.0-Boards, den SCL-Pin mit dem Analog A5 Anschluss, den SDA-Pin mit dem Analog A4 Anschluss; Verbinden Sie den VCC-Pin mit dem 3V3-Anschluss, den GND-Pin mit dem GND-Anschluss.
+Conecte el pin INT del sensor al puerto Digital 2 de la placa V4.0, el pin SCL al puerto Analógico A5, el pin SDA al puerto Analógico A4; conecte el pin VCC al puerto 3V3, el pin GND al puerto GND.
 
-![Anschlussdiagramm-Illustration](../media/c9319e0f5116f416380d6b3c9ddc608c.jpeg)
+![Ilustración del diagrama de conexión](../media/c9319e0f5116f416380d6b3c9ddc608c.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Testet die Näherungs-Interrupt-Fähigkeiten des APDS-9930.
+Prueba las capacidades de interrupción por proximidad del APDS-9930.
 
-Konfiguriert den APDS-9930 über I2C und wartet auf einen externen Interrupt, der auf hohen oder niedrigen Näherungsbedingungen basiert. Bewegen Sie Ihre Hand in die Nähe des Sensors und beobachten Sie die LED an Pin 13.
+Configura el APDS-9930 mediante I2C y espera una interrupción externa basada en condiciones de proximidad alta o baja. Mueva la mano cerca del sensor y observe el LED en el pin 13.
 
-## Hardware-Verbindungen
+## Conexiones de hardware
 
-**WICHTIG**: Der APDS-9930 akzeptiert nur 3,3 V!
+**IMPORTANTE**: ¡El APDS-9930 solo acepta 3.3V!
 
-| Arduino Pin | APDS-9930-Modul | Funktion  |
+| Pin Arduino | Placa APDS-9930 | Función  |
 | :---------: | :-------------: | :-------: |
-|    3.3V     |       VCC       | Stromversorgung |
-|     GND     |       GND       |   Masse   |
-|     A4      |       SDA       | I2C-Daten |
-|     A5      |       SCL       | I2C-Takt  |
-|      2      |       INT       | Interrupt |
+|    3.3V     |       VCC       | Alimentación   |
+|     GND     |       GND       | Tierra   |
+|     A4      |       SDA       | Datos I2C  |
+|     A5      |       SCL       | Reloj I2C |
+|      2      |       INT       | Interrupción |
 |     13      |        -        |    LED    |
 
-**Ressourcen**: Wire.h und APDS9930.h einbinden
+**Recursos**: Incluir Wire.h y APDS9930.h
 
-**Entwicklungsumgebung**: Geschrieben für Arduino 1.0.5
+**Especificaciones del entorno de desarrollo**: Escrito en Arduino 1.0.5
 
-Kopieren Sie den folgenden Code in die Arduino-Software.
+Copie y pegue el código a continuación en el software de Arduino.
 
 ```c
 #include <Wire.h>
@@ -211,14 +211,14 @@ void interruptRoutine() {
 }
 ```
 
-Hinweis: Bevor Sie den Code kompilieren, denken Sie daran, die Bibliothek in das Verzeichnis libraries der Arduino-IDE zu legen. Andernfalls schlägt die Kompilierung fehl.
+Nota: antes de compilar el código, recuerde colocar la biblioteca en el directorio libraries del IDE de Arduino. De lo contrario, la compilación fallará.
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-![Beispielergebnis-Illustration](../media/f2c369c253c3b5fd8cf2c9df39f1c01a.png)
+![Ilustración del resultado de ejemplo](../media/f2c369c253c3b5fd8cf2c9df39f1c01a.png)
 
-Getestet mit der Arduino-Version 1.8.2; öffnen Sie anschließend den Seriellen Monitor, Sie können die Daten wie in der folgenden Abbildung sehen.
+Probado con Arduino-1.8.2; luego abra el Monitor serie, podrá ver los datos como se muestra en la figura a continuación.
 
-![Beispielergebnis-Illustration](../media/607fe1d8c324c14c06492d96d60eb0ca.png)
+![Ilustración del resultado de ejemplo](../media/607fe1d8c324c14c06492d96d60eb0ca.png)
 
 ---

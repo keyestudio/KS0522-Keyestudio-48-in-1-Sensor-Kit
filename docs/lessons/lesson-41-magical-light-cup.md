@@ -1,29 +1,29 @@
-# Lektion 41: Magischer Lichtbecher
+# Lección 41: Taza Mágica de Luz
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
+> **Kit:** Keyestudio 48 en 1 Kit de sensores  
+> **Placa:** Keyestudio V4.0 / Placa compatible con Arduino Uno ATmega328P
 
-![Projekt 41: Magischer Lichtbecher Abbildung](../media/dc3acff676b2611f440643f1657b42e7.png)
+![Proyecto 41: Taza Mágica de Luz ilustración](../media/dc3acff676b2611f440643f1657b42e7.png)
 
-## Einführung
+## Introducción
 
-Das Modul des magischen Lichtbechers kann mit Arduino interagieren. Das Prinzip beruht auf PWM-Dimmung.
+El módulo Taza Mágica de Luz puede interactuar con ARDUINO. El principio se basa en el atenuado por PWM.
 
-Der Quecksilberschalter auf dem Modul liefert ein digitales Signal und löst die PWM-Regelung aus. Die Helligkeit von zwei Modulen wird über das Programm gemeinsam verändert, sodass man schließlich den Effekt sehen kann, dass zwei Becher Licht „ausgießen“.
+El interruptor de mercurio del módulo puede proporcionar una señal digital y activar la regulación por PWM. El brillo de dos módulos cambiará conjuntamente mediante el diseño del programa; finalmente podrás ver el efecto de cambio en el que los dos juegos de tazas parecen verter luz.
 
-## Technische Daten
+## Especificaciones
 
-- Versorgungsspannung: 3.3V bis 5V
+- Voltaje de alimentación: 3.3V a 5V
 
-- Schnittstelle: digital
+- Interfaz: Digital
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-![Anschlussdiagramm Abbildung](../media/9d8d534c60a81608741f85c08d4d0bbe.jpeg)
+![Ilustración del diagrama de conexión](../media/9d8d534c60a81608741f85c08d4d0bbe.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopiere den untenstehenden Code in die Arduino-Software.
+Copia y pega el siguiente código en el software de Arduino.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -75,12 +75,12 @@ delay(5);
 ///////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-![Beispielergebnis Abbildung](../media/f629888f2fedea9442ba74dc8761fcb3.png)
+![Ilustración del resultado de ejemplo](../media/f629888f2fedea9442ba74dc8761fcb3.png)
 
-Verdrahte alles wie im obigen Diagramm und lade den Code auf die Platine hoch. Dann siehst du, dass ein Becher leuchtet, während der andere ausgeschaltet ist. Wenn du diese beiden Becher zur gleichen Seite kippst, wird ein Becher allmählich heller, während der andere allmählich dunkler wird.
+Conéctalo según el diagrama anterior y sube correctamente el código a la placa; entonces verás que una taza se enciende mientras la otra está apagada. Al inclinar estas dos tazas hacia el mismo lado, una taza se va iluminando gradualmente y la otra taza brillante se va apagando gradualmente.
 
-![Beispielergebnis Abbildung](../media/cfc57515b967d19fcda65ea50bda76f1.png)
+![Ilustración del resultado de ejemplo](../media/cfc57515b967d19fcda65ea50bda76f1.png)
 
 ---

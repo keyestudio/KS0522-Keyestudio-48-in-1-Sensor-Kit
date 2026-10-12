@@ -1,43 +1,43 @@
-# Lektion 13: Knocksensor
+# Lección 13: Sensor de golpes
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno ATmega328P
 
-![Projekt 13: Knocksensor Illustration](../media/cef729e5b57059bc14518b0e2fdd2817.png)
+![Ilustración del Proyecto 13: Sensor de golpes](../media/cef729e5b57059bc14518b0e2fdd2817.png)
 
-## Beschreibung
+## Descripción
 
-Dieses Modul ist ein Knocksensor. Wenn Sie darauf klopfen, kann er ein momentanes Signal senden.
+Este módulo es un sensor de golpes. Cuando lo golpeas, puede enviar una señal momentánea.
 
-Sie können ihn mit Arduino kombinieren, um einige interessante Experimente zu machen, z. B. eine elektronische Trommel.
+Puedes combinarlo con Arduino para realizar experimentos interesantes, por ejemplo, un tambor electrónico.
 
-## Technische Daten
+## Especificaciones
 
-- Arbeitsspannung: 5V
+- Voltaje de funcionamiento: 5V
 
-- Größe: 30\*20mm
+- Tamaño: 30\*20mm
 
-- Gewicht: 3g
+- Peso: 3g
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Bereiten Sie vor dem Anschließen zunächst die folgenden Teile vor:
+Primero, necesitas preparar las siguientes piezas antes de la conexión:
 
-- V4.0 Platine\*1
+- Placa V4.0\*1
 
-- Knocksensor \*1
+- Sensor de golpe \*1
 
-- USB-Kabel\*1
+- Cable USB\*1
 
-- Jumperkabel\*3
+- Cable jumper\*3
 
-Verbinden Sie den S-Pin des Moduls mit Digital 3 der V4.0-Platine, den Minus-Pin mit dem GND-Anschluss und den Plus-Pin mit dem 5V-Anschluss.
+Conecta el pin S del módulo al Digital 3 de la placa V4.0, conecta el pin negativo al puerto GND y el pin positivo al puerto 5V.
 
-![Anschlussdiagramm Illustration](../media/1b9c27f145275e7a38d06763114f1847.jpeg)
+![Ilustración del diagrama de conexión](../media/1b9c27f145275e7a38d06763114f1847.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopieren Sie den folgenden Code in die Arduino-Software.
+Copia y pega el siguiente código en el software de Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -64,10 +64,10 @@ digitalWrite(Led,HIGH);
 ////////////////////////////////////////////////////////////////////
 ```
 
-![Beispielcode-Illustration](../media/c3fc14de7267b517a739268ed5b88674.png)
+![Ilustración del código de ejemplo](../media/c3fc14de7267b517a739268ed5b88674.png)
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-Nachdem die Verkabelung wie oben vorgenommen und die Platine mit Strom versorgt wurde und der Code erfolgreich hochgeladen ist, klopfen Sie auf den Sensor. Sie werden sehen, dass sowohl die D13-LED auf der V4.0-Platine als auch die D1-LED am Sensor aufleuchten.
+Tras realizar el cableado y alimentar como se indicó arriba, sube correctamente el código; al golpear el sensor verás que tanto el LED D13 en la placa V4.0 como el LED D1 en el sensor se encienden.
 
 ---

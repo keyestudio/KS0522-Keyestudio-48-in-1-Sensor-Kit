@@ -1,47 +1,47 @@
-# Lektion 09: Linienfolgesensor
+# Lección 09: Sensor de seguimiento de línea
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor-Kit  
-> **Board:** Keyestudio V4.0 / Arduino Uno-kompatible ATmega328P-Platine
+> **Kit:** Kit de sensores Keyestudio 48 en 1  
+> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno ATmega328P
 
-![Projekt 9: Linienfolgesensor Illustration](../media/c476ef922ab6a8d31cb68f3ab3fa2ced.png)
+![Proyecto 9: Ilustración del sensor de seguimiento de línea](../media/c476ef922ab6a8d31cb68f3ab3fa2ced.png)
 
-## Beschreibung
+## Descripción
 
-Dieser Linienfolgesensor kann weiße Linien auf schwarzem Untergrund oder schwarze Linien auf weißem Untergrund erkennen.
+Este sensor de seguimiento de línea puede detectar línea blanca sobre negro o línea negra sobre blanco.
 
-Das einzelne Linienverfolgungs-Signal liefert ein stabiles TTL-Ausgangssignal für eine genauere und stabilere Linienverfolgung. Eine Mehrkanal-Option kann einfach durch die Installation der benötigten Linienfolgesensoren für Roboter realisiert werden.
+La señal de seguimiento de línea de un solo canal proporciona una salida TTL estable para un seguimiento de línea más preciso y estable. La opción multicanal se puede lograr fácilmente instalando los sensores de seguimiento de línea necesarios.
 
-## Technische Daten
+## Especificación
 
-1. Versorgung: +5V
+1. Alimentación: +5V
 
-2. Betriebsstrom: \<10mA
+2. Corriente de funcionamiento: \<10mA
 
-3. Betriebstemperaturbereich: 0°C \~ + 50°C
+3. Rango de temperatura de funcionamiento: 0°C \~ + 50°C
 
-4. Ausgangsschnittstelle: 3-polige Schnittstelle (1 - Signal, 2 - Versorgung, 3 - Versorgung negativ)
+4. Interfaz de salida: interfaz de 3 hilos (1 - señal, 2 - alimentación, 3 - negativo de la alimentación)
 
-5. Ausgangspegel: TTL-Pegel
+5. Nivel de salida: nivel TTL
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Bereiten Sie vor dem Anschluss zunächst die folgenden Teile vor:
+Primero, necesita preparar las siguientes piezas antes de la conexión:
 
-- V4.0 Board\*1
+- Placa V4.0\*1
 
-- Linienfolge-Modul \*1
+- Módulo de seguimiento de línea \*1
 
-- USB-Kabel\*1
+- Cable USB\*1
 
-- Jumper-Kabel\*3
+- Cable jumper\*3
 
-Verbinden Sie den S-Pin des Moduls mit Digital 3 des V4.0-Boards, verbinden Sie den GND-Pin mit dem GND-Anschluss und den V+-Pin mit dem 5V-Anschluss.
+Conecte el pin S del módulo al Digital 3 de la placa V4.0, conecte el pin GND al puerto GND y el pin V+ al puerto 5V.
 
-![Anschlussdiagramm Abbildung](../media/6727a1d7d92c3878fc51b8db0502fd14.jpeg)
+![Ilustración del diagrama de conexión](../media/6727a1d7d92c3878fc51b8db0502fd14.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopieren Sie den folgenden Code in die Arduino-Software.
+Copie y pegue el código siguiente en el software Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -58,10 +58,10 @@ void loop()
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-![Beispielergebnis Abbildung](../media/af115c59987fee06447790f1740e3203.jpeg)
+![Ilustración del resultado de ejemplo](../media/af115c59987fee06447790f1740e3203.jpeg)
 
-Nachdem der Code auf das Board hochgeladen wurde, öffnen Sie den seriellen Monitor und stellen Sie die Baudrate auf 9600 ein. Dann können Sie die Daten des Sensors sehen.
+Una vez cargado el código en la placa, abra el monitor serial y ajuste la velocidad de baudios a 9600; entonces podrá ver los datos del sensor.
 
 ---

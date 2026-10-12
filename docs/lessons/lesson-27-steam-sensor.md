@@ -1,53 +1,53 @@
-# Lektion 27: Feuchtigkeitssensor
+# Lección 27: Sensor de vapor
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Board:** Keyestudio V4.0 / Arduino-Uno-kompatibles ATmega328P-Board
+> **Kit:** Kit de sensores Keyestudio 48 en 1  
+> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno (ATmega328P)
 
-![Projekt 27: Feuchtigkeitssensor Abbildung](../media/d19ac9430f793cdbedde891ee92671e7.jpeg)
+![Proyecto 27: ilustración del sensor de vapor](../media/d19ac9430f793cdbedde891ee92671e7.jpeg)
 
-## Beschreibung
+## Descripción
 
-Der Feuchtigkeitssensor ist ein analoger Sensor und kann als einfacher Regenwasser-Detektor und Flüssigkeitsstandsschalter verwendet werden. Wenn die Feuchtigkeit an der Oberfläche dieses Sensors zunimmt, steigt die Ausgangsspannung.
+El sensor de vapor es un sensor analógico y puede usarse como un detector de lluvia sencillo y como interruptor de nivel de líquido. Cuando la humedad en la superficie de este sensor aumenta, el voltaje de salida incrementará.
 
-Achtung: Verbindungsteile sind nicht wasserdicht, tauchen Sie sie daher bitte nicht ins Wasser.
+Precaución: las partes de conexión no son impermeables, por favor no las sumerjas en agua.
 
-## Parameter
+## Parámetros
 
-- Betriebsspannung: 3,3V oder 5V
+- Voltaje de funcionamiento: 3.3V o 5V
 
-- Betriebsstrom: \<20 mA
+- Corriente de funcionamiento: \<20mA
 
-- Arbeitsbereich der Temperatur: －10℃～＋70℃
+- Rango de temperatura de funcionamiento: －10℃～＋70℃
 
-- Schnittstellentyp: Analoger Signalausgang
+- Tipo de interfaz: Salida de señal analógica
 
-## Pin-Belegung
+## Definición de pines
 
-- S-Pin: für Signal-Ausgang
+- Pin S: salida de señal
 
-- Positiver Pin (+): für Stromversorgung (VCC)
+- Pin positivo (+): alimentación (VCC)
 
-- Negativer Pin (-): für Masse (GND)
+- Pin negativo (-): tierra (GND)
 
-## Verbindungsdiagramm
+## Diagrama de conexión
 
-Zuerst müssen Sie die folgenden Teile vor der Verbindung vorbereiten:
+Primero, debes preparar las siguientes piezas antes de la conexión:
 
-- V4.0-Board*1
+- Placa V4.0*1
 
-- Feuchtigkeitssensor*1
+- Sensor de vapor*1
 
-- USB-Kabel*1
+- Cable USB*1
 
-- Jumper-Kabel*3
+- Cables jumper*3
 
-Verbinden Sie den S-Pin des Moduls mit dem analogen Eingang A0 des V4.0-Boards, verbinden Sie den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
+Conecta el pin S del módulo al pin analógico A0 de la placa V4.0, conecta el pin negativo al puerto GND y el pin positivo al puerto 5V.
 
-![Verbindungsdiagramm Abbildung](../media/8fa51466dbc9650dcaa740bce4dd654e.jpeg)
+![Ilustración del diagrama de conexión](../media/8fa51466dbc9650dcaa740bce4dd654e.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopieren Sie den folgenden Code in die Arduino-Software.
+Copia y pega el siguiente código en el software de Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -66,14 +66,14 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-![Beispielergebnis Abbildung](../media/c4633c5911c042224d187645db4d0588.png)
+![Ilustración del resultado de ejemplo](../media/c4633c5911c042224d187645db4d0588.png)
 
-Beim Erfassen unterschiedlicher Feuchtigkeitsgrade liefert der Sensor unterschiedliche Messwerte. Siehe Abbildung unten.
+Al detectar distintos grados de humedad, el sensor obtendrá la retroalimentación de diferentes valores de corriente. Se muestra en la imagen siguiente.
 
-Aufgrund begrenzter Möglichkeiten können Sie einen Wassertropfen auf den Sensor geben; der Feuchtigkeitswert ändert sich dann im seriellen Monitor der Arduino-Software.
+Debido a las condiciones limitadas, puedes poner una gota de agua sobre el sensor; el valor de humedad cambiará en el monitor serial del software de Arduino.
 
-![Beispielergebnis Abbildung](../media/80e9b3e19db4bec337f3254545a58e9e.jpeg)
+![Ilustración del resultado de ejemplo](../media/80e9b3e19db4bec337f3254545a58e9e.jpeg)
 
 ---

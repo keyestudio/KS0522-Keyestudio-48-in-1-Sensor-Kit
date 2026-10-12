@@ -1,47 +1,47 @@
-# Lektion 15: Kapazitiver Touch
+# Lección 15: Tacto capacitivo
 
-> **Bausatz:** Keyestudio 48-in-1 Sensor Kit  
-> **Platine:** Keyestudio V4.0 / Arduino Uno-kompatibles ATmega328P-Platine
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Placa:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-![Projekt 15: Kapazitiver Touch](../media/bceabc7d4302bd41ae380e179a281314.png)
+![Ilustración del Proyecto 15: Tacto capacitivo](../media/bceabc7d4302bd41ae380e179a281314.png)
 
-## Beschreibung
+## Descripción
 
-Hast du genug von mechanischen Klicktasten? Dann probiere unseren kapazitiven Touch-Sensor. Touch-Sensoren werden häufig in elektronischen Geräten verwendet. Rüste dein Arduino-Projekt mit diesem Sensor auf, um es cooler zu machen.
+¿Estás cansado de pulsar botones mecánicos? Pues prueba nuestro sensor táctil capacitivo. Encontrarás sensores táctiles mayormente usados en dispositivos electrónicos. Mejora tu proyecto Arduino con este sensor táctil para hacerlo más atractivo.
 
-Dieser kleine Sensor erkennt Berührungen von Körper und Metall und gibt ein High-/Low-Signal aus. Selbst wenn er durch Stoff oder Papier isoliert ist, kann er die Berührung noch wahrnehmen. Allerdings nimmt die Empfindlichkeit ab, je dicker die Isolationsschicht wird.
+Este pequeño sensor puede detectar el toque del cuerpo y del metal proporcionando una salida de nivel alto/bajo. Incluso aislado por alguna tela o papel, aún puede detectar el toque. Pero su sensibilidad disminuirá a medida que la capa de aislamiento sea más gruesa.
 
-Wir werden diese Sensormodule weiter verbessern, um dir ein besseres Erlebnis zu bieten.
+Hemos mejorado estos módulos de sensor para ofrecerte una mejor experiencia.
 
-## Spezifikation
+## Especificación
 
-- Versorgungsspannung: 3.3V bis 5V
+- Tensión de alimentación: 3.3V a 5V
 
-- Schnittstelle: Digital
+- Interfaz: Digital
 
-- Größe: 30*20mm
+- Tamaño: 30*20mm
 
-- Gewicht: 3g
+- Peso: 3g
 
-## Anschlussdiagramm
+## Diagrama de conexión
 
-Zuerst musst du vor dem Anschluss die folgenden Teile vorbereiten:
+Primero, necesitas preparar las siguientes piezas antes de la conexión:
 
-- V4.0-Platine*1
+- Placa V4.0*1
 
-- Kapazitiver Touch-Sensor*1
+- Sensor táctil capacitivo*1
 
-- USB-Kabel*1
+- Cable USB*1
 
-- Jumperkabel*3
+- Cables jumper*3
 
-Verbinde den S-Pin des Moduls mit Digital 2 der V4.0-Platine, den negativen Pin mit dem GND-Anschluss und den positiven Pin mit dem 5V-Anschluss.
+Conecta el pin S del módulo a Digital 2 de la placa V4.0, conecta el pin negativo al puerto GND y el pin positivo al puerto 5V.
 
-![Anschlussdiagramm](../media/18193a53377b60f43fb583c29337f3aa.jpeg)
+![Ilustración del diagrama de conexión](../media/18193a53377b60f43fb583c29337f3aa.jpeg)
 
-## Beispielcode
+## Código de ejemplo
 
-Kopiere und füge den folgenden Code in die Arduino-Software ein.
+Copia y pega el siguiente código en el software de Arduino.
 
 ```c
 const uint8_t ledPin = 13;  // On-board LED.
@@ -58,10 +58,10 @@ void loop() {
 }
 ```
 
-## Beispielergebnis
+## Resultado de ejemplo
 
-Nachdem die Verkabelung abgeschlossen und die Platine mit Strom versorgt wurde und der Code erfolgreich hochgeladen ist, berühre den Sensor mit deinem Finger. Sowohl die D2-LED am Sensor als auch die D13-Anzeige an der V4.0-Platine leuchten. Andernfalls sind diese beiden Anzeigen ausgeschaltet.
+Una vez realizado el cableado y alimentada la placa, sube correctamente el código; luego toca el sensor con el dedo: tanto el LED D2 en el sensor como el indicador D13 en la placa V4.0 se encenderán. De lo contrario, esos dos indicadores permanecerán apagados.
 
-![Beispielergebnis](../media/31a751feed0f21236458b93eed14af9f.png)
+![Ilustración del resultado de ejemplo](../media/31a751feed0f21236458b93eed14af9f.png)
 
 ---
