@@ -1,35 +1,35 @@
-# Lección 20: Rotación Analógica
+# Leçon 20 : Rotation analogique
 
-> **Kit:** Keyestudio 48-en-1 Kit de sensores  
-> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno (ATmega328P)
+> **Kit :** Keyestudio 48-in-1 Sensor Kit  
+> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
 
-![Ilustración del Proyecto 20: Rotación Analógica](../media/7a7fffa705c4a50e87455e6d378eb837.png)
+![Illustration Projet 20 : Rotation analogique](../media/7a7fffa705c4a50e87455e6d378eb837.png)
 
-## Descripción
+## Description
 
-Este sensor de rotación analógico es compatible con Arduino. Está basado en un potenciómetro. Su voltaje puede subdividirse en 1024 pasos, y es fácil de conectar al Arduino con nuestro shield de sensores.
+Ce capteur de rotation analogique est compatible Arduino. Il est basé sur un potentiomètre. Sa tension peut être subdivisée en 1024 niveaux, et il se connecte facilement à l'Arduino avec notre shield capteur.
 
-Combinado con otros sensores, puedes usarlo para crear proyectos interesantes leyendo el valor analógico desde el puerto IO.
+Combiné avec d'autres capteurs, vous pouvez l'utiliser pour réaliser des projets intéressants en lisant la valeur analogique depuis le port IO.
 
-## Especificación
+## Spécification
 
-- Tensión de alimentación: 3.3V a 5V
+- Tension d'alimentation: 3.3V à 5V
 
-- Interfaz: Analógica
+- Interface : Analogique
 
-- Tamaño: 30*20mm
+- Taille: 30*20mm
 
-- Peso: 8g
+- Poids: 8g
 
-## Diagrama de conexión
+## Schéma de connexion
 
-Conecta el pin S del módulo al pin analógico A0 de la placa V4.0, conecta el pin negativo al puerto GND y el pin positivo al puerto 5V.
+Connectez la broche S du module à l'A0 analogique de la carte V4.0, connectez la broche négative au port GND, la broche positive au port 5V.
 
-![Ilustración del diagrama de conexión](../media/f8a0c2cca0f3d0935ce0c9a0c4dbe59e.jpeg)
+![Schéma de connexion illustration](../media/f8a0c2cca0f3d0935ce0c9a0c4dbe59e.jpeg)
 
-## Código de ejemplo
+## Exemple de code
 
-Copia y pega el siguiente código en el software de Arduino.
+Copiez et collez le code ci-dessous dans le logiciel Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -47,12 +47,12 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Resultado de ejemplo
+## Exemple de résultat
 
-![Ilustración del resultado de ejemplo](../media/bae047449c10c99449c35a14b22d759c.png)
+![Illustration Exemple de résultat](../media/bae047449c10c99449c35a14b22d759c.png)
 
-Una vez hecha la conexión y alimentada la placa, sube correctamente el código, luego abre el Monitor Serie y ajusta la velocidad a 9600 baudios; finalmente verás el valor analógico. Si giras la perilla del sensor de rotación, el valor cambiará entre 0-1023. Se muestra abajo.
+Une fois le câblage effectué et l'alimentation activée, téléversez correctement le code, puis ouvrez le moniteur série et réglez le débit en bauds sur 9600 ; vous verrez alors la valeur analogique. En tournant le bouton du capteur de rotation, la valeur changera entre 0 et 1023. Illustré ci‑dessous.
 
-![Ilustración del resultado de ejemplo](../media/bc7b15c3245b7cfd91b0ef4b0aeb8e7e.jpeg)
+![Illustration Exemple de résultat](../media/bc7b15c3245b7cfd91b0ef4b0aeb8e7e.jpeg)
 
 ---

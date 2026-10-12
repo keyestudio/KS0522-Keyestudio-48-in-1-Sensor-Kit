@@ -1,62 +1,62 @@
-# Lección 30: Detección de presión
+# Leçon 30 : Détection de pression
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Placa:** Keyestudio V4.0 / Placa compatible con Arduino Uno ATmega328P
+> **Kit :** Keyestudio 48-in-1 Sensor Kit  
+> **Carte :** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-![Ilustración del proyecto 30: Detección de presión](../media/313f11bf4a7f52ac903c78976fe1e633.jpeg)
+![Illustration du projet 30 : Détection de pression](../media/313f11bf4a7f52ac903c78976fe1e633.jpeg)
 
-## Descripción
+## Description
 
-Este sensor utiliza un nuevo material nano sensible a la presión flexible con almohadilla de película ultrafina. Tiene funciones de impermeabilidad y detección de presión.
+Ce capteur adopte un nouveau matériau nano flexible sensible à la pression avec un tampon en film ultra fin. Il offre des fonctions d'étanchéité et de détection de pression.
 
-Cuando el sensor detecta la presión externa, la resistencia del sensor cambiará.
+Lorsque le capteur détecte une pression extérieure, la résistance du capteur change.
 
-Por lo tanto, usando el circuito, puede convertir la señal de presión que percibe el cambio de presión en la señal eléctrica correspondiente de salida.
+Ainsi, grâce au circuit, il peut convertir le signal de pression qui détecte la variation de pression en un signal électrique de sortie correspondant.
 
-De esta manera, podemos obtener las condiciones de cambio de presión detectando los cambios en la señal.
+De cette façon, nous pouvons obtenir l'état des variations de pression en détectant les changements de signal.
 
-## Parámetros
+## Paramètres
 
-- Voltaje de trabajo：DC 3.3V—5V
+- Tension de fonctionnement：DC 3.3V—5V
 
-- Rango：0-10KG
+- Plage：0-10KG
 
-- Espesor：＜0.25mm
+- Épaisseur：＜0.25mm
 
-- Punto de respuesta：＜20g
+- Seuil de réponse：＜20g
 
-- Repetibilidad：＜±5.8%（50% carga）
+- Répétabilité：＜±5.8%（50% de charge）
 
-- Precisión：±2.5%（85% intervalo de rango）
+- Précision：±2.5%（intervalle de 85% de la plage）
 
-- Durabilidad：＞100000 veces
+- Durabilité：＞100 mille fois
 
-- Resistencia inicial：＞100MΩ（sin carga）
+- Résistance initiale：＞100MΩ(sans charge)
 
-- Tiempo de respuesta：＜1ms
+- Temps de réponse：＜1ms
 
-- Tiempo de recuperación：＜15ms
+- Temps de récupération：＜15ms
 
-- Temperatura de trabajo：﹣20℃—60℃
+- Température de fonctionnement：﹣20℃—60℃
 
-## Diagrama de conexión
+## Schéma de connexion
 
-Primero necesita preparar las siguientes piezas antes de la conexión.
+Préparez d'abord les composants suivants avant le branchement.
 
-- Placa V4.0\*1
+- Carte V4.0\*1
 
-- Sensor de presión\*1
+- Capteur de pression\*1
 
-- Cable USB\*1
+- Câble USB\*1
 
-- Cable jumper\*3
+- Fils de connexion\*3
 
-Conecta el pin S del módulo al A0 analógico de la placa V4.0, conecta el pin negativo al puerto GND y el pin positivo al puerto 5V.  
-![Ilustración del diagrama de conexión](../media/3325303180f71db75d9e13acc5036d8f.jpeg)
+Connectez la broche S du module à Analog A0 de la carte V4.0, connectez la broche négative au port GND, la broche positive au port 5V.  
+![Schéma de connexion illustration](../media/3325303180f71db75d9e13acc5036d8f.jpeg)
 
-## Código de ejemplo
+## Code d'exemple
 
-Copia y pega el código siguiente en el software de Arduino.
+Copiez et collez le code ci-dessous dans le logiciel Arduino.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -76,14 +76,14 @@ void loop()
 ///////////////////////////////////////////////////////////////
 ```
 
-## Resultado de ejemplo
+## Résultat d'exemple
 
-Con el cableado correcto y después de subir el código, abre el monitor serie en el software de Arduino.
+Après avoir correctement câblé et téléversé le code, ouvrez le moniteur série dans l'IDE Arduino.
 
-Luego, presiona el sensor con la mano con firmeza; el valor mostrado en el monitor aumentará.
+Ensuite, appuyez fermement sur le capteur avec la main : la valeur affichée dans le moniteur augmente.
 
-![Ilustración del resultado de ejemplo](../media/a6c4be8596a0048cb5f3b2f1612241bd.png)
+![Résultat exemple illustration](../media/a6c4be8596a0048cb5f3b2f1612241bd.png)
 
-![Ilustración del resultado de ejemplo](../media/e055d2749b14c62b92c22496a3d1f96a.jpeg)
+![Résultat exemple illustration](../media/e055d2749b14c62b92c22496a3d1f96a.jpeg)
 
 ---

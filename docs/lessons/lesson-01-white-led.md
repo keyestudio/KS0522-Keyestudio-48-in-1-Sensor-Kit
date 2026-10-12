@@ -1,47 +1,47 @@
-# Lección 01: LED blanco
+# Leçon 01 : LED blanche
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Placa:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Kit :** Kit de capteurs Keyestudio 48-en-1  
+> **Carte :** Keyestudio V4.0 / carte ATmega328P compatible Arduino Uno
 
-![Proyecto 1: ilustración del LED blanco](../media/6819f1c2047a7bb2b58e9cf0d7d3a617.jpeg)
+![Projet 1 : Illustration de la LED blanche](../media/6819f1c2047a7bb2b58e9cf0d7d3a617.jpeg)
 
-## Descripción
+## Description
 
-Este módulo de LED blanco es ideal para principiantes en Arduino. Se puede conectar fácilmente al shield de E/S o al shield de sensores. Permite la interacción con proyectos relacionados con la luz.
+Ce module LED blanche est idéal pour les débutants Arduino. Il peut être facilement connecté au shield IO/Sensor. Il permet des interactions liées à la lumière.
 
-Nota: Puedes elegir otros módulos LED para emitir colores diferentes, como amarillo, rojo, verde y azul.
+Remarque : Vous pouvez choisir d'autres modules LED pour émettre d'autres couleurs comme le jaune, le rouge, le vert et le bleu.
 
-## Especificaciones
+## Spécifications
 
-- Módulo LED blanco
+- Module LED blanc
 
-- Tipo: Digital
+- Type : Numérique
 
-- Conector PH2.54
+- Connecteur PH2.54
 
-- Tamaño: 30\*20mm
+- Taille : 30\*20mm
 
-- Peso: 3g
+- Poids : 3g
 
-## Diagrama de conexión
+## Schéma de connexion
 
-Primero, debes preparar las siguientes piezas antes de la conexión:
+Avant la connexion, préparez les éléments suivants :
 
-- Placa V4.0\*1
+- Carte V4.0\*1
 
-- Módulo LED blanco \*1
+- Module LED blanc \*1
 
-- Cable USB\*1
+- Câble USB\*1
 
-- Cable jumper\*3
+- Câble jumper\*3
 
-Conecta el pin S del módulo al Digital 3 de la placa V4.0, conecta el pin negativo al puerto GND y el pin positivo al puerto 5V.
+Connectez la broche S du module au Digital 3 de la carte V4.0, la broche négative au port GND, et la broche positive au port 5V.
 
-![Ilustración del diagrama de conexión](../media/cb67155c3b3cf25025edea5ae31d6c5f.jpeg)
+![Illustration du schéma de connexion](../media/cb67155c3b3cf25025edea5ae31d6c5f.jpeg)
 
-## Código de ejemplo
+## Exemple de code
 
-Copia y pega el siguiente código en el software de Arduino.
+Copiez et collez le code ci-dessous dans le logiciel Arduino.
 
 ```c
 const uint8_t ledPin = 3;
@@ -58,10 +58,10 @@ void loop() {
 }
 ```
 
-## Resultado de ejemplo
+## Résultat
 
-Con el cableado realizado y la alimentación conectada, y al subir correctamente el código, verás que el módulo LED emite luz blanca.
+Après avoir réalisé le câblage, alimenté la carte et téléversé correctement le code, vous verrez le module LED émettre une lumière blanche.
 
-![Ilustración del resultado de ejemplo](../media/40448f38601a6312bfb1e3764be22158.png)
+![Illustration du résultat](../media/40448f38601a6312bfb1e3764be22158.png)
 
 ---

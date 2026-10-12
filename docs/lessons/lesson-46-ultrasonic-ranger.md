@@ -1,78 +1,78 @@
-# Lección 46: Medidor ultrasónico
+# Leçon 46 : Détecteur de distance ultrasonique
 
-> **Kit:** Keyestudio 48-en-1 Kit de Sensores  
-> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno ATmega328P
+> **Kit :** Keyestudio 48-in-1 Sensor Kit  
+> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
 
-![Proyecto 46: ilustración del medidor ultrasónico](../media/c170155a5fb03abdc10866e25e3670b2.jpeg)
+![Illustration du projet 46 : Détecteur ultrasonique](../media/c170155a5fb03abdc10866e25e3670b2.jpeg)
 
-## Descripción
+## Description
 
-Como el ultrasonido tiene fuerte directividad, bajo consumo de energía y gran alcance de propagación en el medio, se utiliza comúnmente en la medición de distancias, como telémetros e instrumentos de medición de posición.
+Comme les ultrasons ont une forte directivité, une faible consommation d'énergie et une grande portée dans les milieux, ils sont couramment utilisés pour la mesure de distance, tels que les télémètres et les instruments de position.
 
-El módulo detector ultrasónico puede proporcionar una distancia de detección sin contacto de 2cm-450cm, y su precisión de medición es de hasta 3mm, muy buena para satisfacer los requisitos normales.
+Le module détecteur ultrasonique peut fournir une distance de détection sans contact de 2 cm à 450 cm, et sa précision de mesure atteint 3 mm, ce qui répond très bien aux exigences normales.
 
-El módulo incluye un transmisor y receptor ultrasónicos, así como el circuito de control correspondiente.
+Le module comprend un émetteur et un récepteur ultrasonique ainsi que le circuit de commande correspondant.
 
-## Esquema de funcionamiento
+## Schéma de fonctionnement
 
-La secuencia de medición del HC-SR04 se muestra a continuación:
+La séquence de mesure du HC-SR04 est montrée ci‑dessous :
 
-![Esquema de funcionamiento ilustración](../media/a7b0fc57b2e387962071da618153ad68.jpeg)
+![Schéma de fonctionnement](../media/a7b0fc57b2e387962071da618153ad68.jpeg)
 
-1\. Primero poner TRIG en bajo, y luego activarlo con una señal de nivel alto de al menos 10us;
+1\. Tout d'abord, mettre TRIG à l'état bas, puis le déclencher avec un signal de niveau haut d'au moins 10us ;
 
-2\. Tras el disparo, el módulo transmitirá automáticamente ocho ondas cuadradas de 40KHZ, y detectará automáticamente si hay una señal de retorno.
+2\. Après le déclenchement, le module transmettra automatiquement huit ondes carrées à 40KHZ, et détectera automatiquement s'il y a un signal de retour.
 
-3\. Si se recibe una señal de retorno, ECHO saldrá a nivel alto; la duración de este nivel alto es en realidad el tiempo desde la emisión hasta la recepción del ultrasonido.
+3\. S'il y a un signal de retour, il sortira un niveau haut via ECHO ; la durée du niveau haut correspond en fait au temps entre l'émission et la réception de l'ultrason.
 $$
-Distancia = Duración\ del\ nivel\ alto * 340m/s * 0.5
+Distance\ mesurée = Durée\ du\ niveau\ haut * 340m/s * 0.5
 $$
 
-## Parámetros
+## Paramètres
 
-- Tensión de trabajo: 5 V DC
+- Tension de fonctionnement : 5 V DC
 
-- Corriente de trabajo：15mA
+- Courant de fonctionnement : 15mA
 
-- Rango de detección：2-450cm
+- Plage de détection : 2-450cm
 
-- Ángulo de detección：15 grados
+- Angle de détection : 15 degrés
 
-- Pulso de disparo de entrada：10us Nivel TTL
+- Impulsion de déclenchement d'entrée : 10us Niveau TTL
 
-- Señal de eco de salida： salida señal de nivel TTL(HIGH)，proporcional a la distancia.
+- Signal d'écho en sortie : signal de niveau TTL (HIGH), proportionnel à la distance.
 
-## Diagrama de pines
+## Schéma des broches
 
-![Diagrama de pines ilustración](../media/c03e563bcd19796b483156724bae174a.png)
+![Illustration du brochage](../media/c03e563bcd19796b483156724bae174a.png)
 
-## Diagrama de conexión
+## Schéma de connexion
 
-Primero, necesita preparar los siguientes componentes:
+Tout d'abord, vous devez préparer les composants suivants :
 
-- Placa V4.0\*1
+- Carte V4.0\*1
 
-- Sensor ultrasónico\*1
+- Capteur ultrasonique\*1
 
-- Cable USB\*1
+- Câble USB\*1
 
-- Cable de conexión\*4
+- Fils de raccordement\*4
 
-A continuación, consulte la siguiente tabla de conexión:
+Ensuite, veuillez vous référer au tableau de connexion suivant :
 
-![Diagrama de conexión ilustración](../media/e708c019b57984a07feb241672793982.jpeg)
+![Illustration du schéma de connexion](../media/e708c019b57984a07feb241672793982.jpeg)
 
-Nota: D4, D5 son los pines digitales 4 y 5.
+Remarque : D4, D5 sont les broches numériques 4 et 5.
 
-Puede referirse al diagrama de conexión que se muestra a continuación:
+Vous pouvez vous référer au schéma de connexion ci‑dessous :
 
-![Diagrama de conexión ilustración](../media/b5b964743eac977e687c454b64e061fa.jpeg)
+![Illustration du schéma de connexion](../media/b5b964743eac977e687c454b64e061fa.jpeg)
 
-Después de conectar correctamente, puede utilizarlo para medir la distancia, mostrando el valor de distancia en el monitor serie.
+Une fois correctement connecté, vous pouvez l'utiliser pour mesurer la distance et afficher la valeur de distance sur le moniteur.
 
-## Código de prueba
+## Code de test
 
-Copie y pegue el siguiente código de prueba en el software Arduino
+Copiez et collez le code de test ci‑dessous dans le logiciel Arduino
 
 ```c
 ///////////////////////////////////////////////////////////////////////////////
@@ -99,14 +99,14 @@ delay(50);
 ///////////////////////////////////////////////////////////////////////////////
 ```
 
-## Resultado de ejemplo
+## Exemple de résultat
 
-![Resultado de ejemplo ilustración](../media/0dcff2ae88366ce40190b77f25d271d7.png)
+![Exemple de résultat](../media/0dcff2ae88366ce40190b77f25d271d7.png)
 
-Después de subir correctamente el código a la placa V4.0, abra el monitor serie. Al colocar un objeto frente al sensor ultrasónico (desde cerca y desde lejos), detectará la distancia del objeto. El valor se mostrará en el monitor como se muestra a continuación.
+Après avoir correctement téléversé le code sur la carte V4.0, ouvrez le moniteur série. En plaçant un objet devant le capteur ultrasonique (proche ou éloigné), il détectera la distance de l'objet. La valeur sera affichée sur le moniteur comme montré ci‑dessous.
 
-![Resultado de ejemplo ilustración](../media/1dbca5dc233994f6923601d942fadba6.png)
+![Exemple de résultat](../media/1dbca5dc233994f6923601d942fadba6.png)
 
-![Resultado de ejemplo ilustración](../media/dcd49cc72e7a9f993083af7625d240db.png)
+![Exemple de résultat](../media/dcd49cc72e7a9f993083af7625d240db.png)
 
 ---

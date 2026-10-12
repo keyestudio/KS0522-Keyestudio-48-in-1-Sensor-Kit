@@ -1,29 +1,29 @@
-# Lección 41: Taza Mágica de Luz
+# Leçon 41: Gobelet lumineux magique
 
-> **Kit:** Keyestudio 48 en 1 Kit de sensores  
-> **Placa:** Keyestudio V4.0 / Placa compatible con Arduino Uno ATmega328P
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Carte:** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
 
-![Proyecto 41: Taza Mágica de Luz ilustración](../media/dc3acff676b2611f440643f1657b42e7.png)
+![Illustration du projet 41: Gobelet lumineux magique](../media/dc3acff676b2611f440643f1657b42e7.png)
 
-## Introducción
+## Introduction
 
-El módulo Taza Mágica de Luz puede interactuar con ARDUINO. El principio se basa en el atenuado por PWM.
+Le module de gobelet lumineux magique peut interagir avec ARDUINO. Le principe est basé sur la gradation par PWM.
 
-El interruptor de mercurio del módulo puede proporcionar una señal digital y activar la regulación por PWM. El brillo de dos módulos cambiará conjuntamente mediante el diseño del programa; finalmente podrás ver el efecto de cambio en el que los dos juegos de tazas parecen verter luz.
+L'interrupteur à mercure sur le module peut fournir un signal numérique et déclencher la régulation PWM. La luminosité des deux modules sera modifiée simultanément via le programme, et vous verrez finalement l'effet où deux ensembles de gobelets « versent » la lumière.
 
-## Especificaciones
+## Spécification
 
-- Voltaje de alimentación: 3.3V a 5V
+- Tension d'alimentation: 3.3V à 5V
 
-- Interfaz: Digital
+- Interface: Numérique
 
-## Diagrama de conexión
+## Schéma de connexion
 
-![Ilustración del diagrama de conexión](../media/9d8d534c60a81608741f85c08d4d0bbe.jpeg)
+![Illustration du schéma de connexion](../media/9d8d534c60a81608741f85c08d4d0bbe.jpeg)
 
-## Código de ejemplo
+## Exemple de code
 
-Copia y pega el siguiente código en el software de Arduino.
+Copiez et collez le code ci-dessous dans le logiciel Arduino.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -75,12 +75,12 @@ delay(5);
 ///////////////////////////////////////////////////////////////
 ```
 
-## Resultado de ejemplo
+## Exemple de résultat
 
-![Ilustración del resultado de ejemplo](../media/f629888f2fedea9442ba74dc8761fcb3.png)
+![Illustration du résultat](../media/f629888f2fedea9442ba74dc8761fcb3.png)
 
-Conéctalo según el diagrama anterior y sube correctamente el código a la placa; entonces verás que una taza se enciende mientras la otra está apagada. Al inclinar estas dos tazas hacia el mismo lado, una taza se va iluminando gradualmente y la otra taza brillante se va apagando gradualmente.
+Câblez comme dans le schéma ci‑dessus et téléversez correctement le code sur la carte ; vous verrez qu'un gobelet s'allume tandis que l'autre est éteint. Lorsque vous inclinez ces deux gobelets du même côté, l'un s'éclaire progressivement tandis que l'autre s'éteint progressivement.
 
-![Ilustración del resultado de ejemplo](../media/cfc57515b967d19fcda65ea50bda76f1.png)
+![Illustration du résultat](../media/cfc57515b967d19fcda65ea50bda76f1.png)
 
 ---

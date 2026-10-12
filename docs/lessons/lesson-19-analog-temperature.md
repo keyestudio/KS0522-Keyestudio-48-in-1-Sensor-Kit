@@ -1,51 +1,51 @@
-# Lección 19: Temperatura analógica
+# Leçon 19 : Température analogique
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno (ATmega328P)
+> **Kit :** Keyestudio 48-en-1 Kit de capteurs  
+> **Carte :** Carte Keyestudio V4.0 / compatible Arduino Uno ATmega328P
 
-![Proyecto 19: ilustración de Temperatura analógica](../media/8269d6536e383bcc592da1ae98bc3661.png)
+![Projet 19 : Illustration Température analogique](../media/8269d6536e383bcc592da1ae98bc3661.png)
 
-## Descripción
+## Description
 
-Este módulo se basa en el principio de funcionamiento de un termistor (la resistencia varía con el cambio de temperatura en el entorno).
+Ce module est basé sur le principe de fonctionnement d'une thermistance (la résistance varie en fonction des changements de température de l'environnement).
 
-Puede detectar cambios de temperatura en el entorno y enviar los datos al IO analógico de la placa Arduino.
+Il peut détecter les variations de température ambiante et envoyer les données à l'entrée analogique de la carte Arduino.
 
-Solo necesitamos convertir los datos de salida del sensor a grados Celsius mediante una programación sencilla, y finalmente mostrarlos en el monitor.
+Il suffit de convertir la sortie du capteur en degrés Celsius par un simple programme, puis de l'afficher sur le moniteur.
 
-Es tanto conveniente como eficaz, por lo que se aplica ampliamente en jardinería, sistemas de alarma domésticos y otros dispositivos.
+Il est à la fois pratique et efficace, et est donc largement utilisé pour le jardinage, les systèmes d'alarme domestiques et d'autres appareils.
 
-## Especificaciones
+## Spécifications
 
-- Tipo de interfaz: analógica
+- Type d'interface : analogique
 
-- Voltaje de funcionamiento: 5V
+- Tension de fonctionnement : 5V
 
-- Rango de temperatura: -55℃～315℃
+- Plage de températures : -55℃～315℃
 
-- Tamaño: 30\*20mm
+- Taille : 30\*20mm
 
-- Peso: 3g
+- Poids : 3g
 
-## Diagrama de conexión
+## Schéma de connexion
 
-Primero, prepara las siguientes piezas antes de la conexión:
+Tout d'abord, préparez les pièces suivantes avant le branchement :
 
-- Placa V4.0\*1
+- Carte V4.0\*1
 
-- Sensor de temperatura analógico\*1
+- Capteur de température analogique\*1
 
-- Cable USB\*1
+- Câble USB\*1
 
-- Cables de puente\*3
+- Fils de connexion\*3
 
-Conecta el pin S del módulo a Analog A0 de la placa V4.0, conecta el pin negativo al puerto GND, y el pin positivo al puerto 5V.
+Connectez la broche S du module à l'analogique A0 de la carte V4.0, la broche négative au port GND et la broche positive au port 5V.
 
-![Ilustración del diagrama de conexión](../media/330d37f05ac235a850d06726284243a5.jpeg)
+![Illustration du schéma de connexion](../media/330d37f05ac235a850d06726284243a5.jpeg)
 
-## Código de ejemplo
+## Exemple de code
 
-Copia y pega el siguiente código en el software de Arduino.
+Copiez et collez le code ci‑dessous dans le logiciel Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -60,11 +60,11 @@ Serial.println(sensorValue);
 ////////////////////////////////////////////////////////////////////
 ```
 
-El código anterior es solo para el valor analógico.
+Le code ci‑dessus n'affiche que la valeur analogique.
 
-Puedes ver que el valor analógico cambia según la variación de temperatura en el entorno. Pero no es muy evidente.
+Vous pouvez voir que la valeur analogique change selon la température ambiante. Mais ce n'est pas très explicite.
 
-Resolvamos esto usando la siguiente ecuación. Después, sube el código a la placa Arduino. El valor leído por el puerto serie será similar a la temperatura real. Ejemplo: la temperatura ahora es 30°C.
+Résolvons cela en utilisant l'équation suivante. Ensuite téléversez le code ci‑dessous sur la carte Arduino. La valeur lue depuis le port série correspondra à une température en degrés Celsius réaliste, par exemple : la température actuelle est 30°C.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -84,12 +84,12 @@ void loop()
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Resultado de ejemplo
+## Exemple de résultat
 
-![Ilustración del resultado de ejemplo](../media/9ae4e8962bf9d46ceeb3ca0c2e560f43.png)
+![Illustration du résultat](../media/9ae4e8962bf9d46ceeb3ca0c2e560f43.png)
 
-Tras realizar las conexiones y alimentar como en la figura anterior, subir correctamente el código a la placa y abrir el monitor serie del IDE de Arduino, verás el valor de la temperatura actual.
+Après avoir câblé et alimenté comme sur la figure ci‑dessus, téléversez correctement le code sur la carte, puis ouvrez le moniteur série de l'IDE Arduino : vous verrez la valeur de la température actuelle.
 
-![Ilustración del resultado de ejemplo](../media/005b4c639460eba8158f99637f03686b.jpeg)
+![Illustration du résultat](../media/005b4c639460eba8158f99637f03686b.jpeg)
 
 ---

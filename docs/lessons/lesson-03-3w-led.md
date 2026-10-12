@@ -1,63 +1,63 @@
-# Lección 03: LED de 3W
+# Leçon 03 : LED 3W
 
-> **Kit:** Keyestudio Kit de sensores 48 en 1  
-> **Placa:** Keyestudio V4.0 / placa ATmega328P compatible con Arduino Uno
+> **Kit :** Keyestudio 48-en-1 Kit de capteurs  
+> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
 
-![Ilustración del Proyecto 3: LED de 3W](../media/0b1110577bfde7df3b6aec41d5b21b28.png)
+![Illustration du projet 3 : LED 3W](../media/0b1110577bfde7df3b6aec41d5b21b28.png)
 
-## Descripción
+## Description
 
-Este módulo LED es de alta luminosidad porque las cuentas de la lámpara que incorpora son de 3W.  
-Puedes aplicar este módulo a proyectos con Arduino; es ideal para robots o plataformas de búsqueda y rescate.
+Ce module LED présente une forte luminosité car les puces qu'il contient sont de 3W.  
+Vous pouvez utiliser ce module dans des projets Arduino, idéal pour des robots ou des plates-formes de recherche et de sauvetage.
 
-Por ejemplo, robots inteligentes pueden usar este módulo para fines de iluminación.  
-Tenga en cuenta que la luz del LED no debe exponerse directamente a los ojos humanos por motivos de seguridad.
+Par exemple, des robots intelligents peuvent utiliser ce module pour l'éclairage.  
+Veuillez noter que la lumière de la LED ne doit pas être exposée directement aux yeux humains pour des raisons de sécurité.
 
-## Especificación
+## Spécification
 
-- Temperatura de color: 6000\~7000K
+- Température de couleur : 6000\~7000K
 
-- Flujo luminoso: 180\~210lm
+- Flux lumineux : 180\~210lm
 
-- Corriente: 700\~750mA
+- Courant : 700\~750mA
 
-- Potencia: 3W
+- Puissance : 3W
 
-- Ángulo de luz: 140 grados
+- Angle lumineux : 140 degrés
 
-- Temperatura de trabajo: -50\~80℃
+- Température de fonctionnement : -50\~80℃
 
-- Temperatura de almacenamiento: -50\~100℃
+- Température de stockage : -50\~100℃
 
-- Módulo LED de alta potencia, controlado por microcontrolador mediante puerto IO
+- Module LED haute puissance, contrôlé par le port IO du microcontrôleur
 
-- Tipo de IO: Digital
+- Type IO : Numérique
 
-- Voltaje de alimentación: 3.3V a 5V
+- Tension d'alimentation : 3.3V à 5V
 
-- Tamaño: 40x28mm
+- Taille : 40x28mm
 
-- Peso: 6g
+- Poids : 6g
 
-## Diagrama de conexión
+## Schéma de connexion
 
-Primero, necesitas preparar las siguientes piezas antes de la conexión:
+Tout d'abord, vous devez préparer les pièces suivantes avant la connexion :
 
-- Placa V4.0\*1
+- Carte V4.0\*1
 
-- Módulo LED 3W \*1
+- Module LED 3W \*1
 
-- Cable USB\*1
+- Câble USB\*1
 
-- Cable de puente\*3
+- Câble de liaison\*3
 
-Conecta el pin S del módulo al Digital 13 de la placa V4.0, conecta el pin negativo al puerto GND y el pin positivo al puerto 5V.
+Connectez la broche S du module à Digital 13 de la carte V4.0, connectez la broche négative au port GND, la broche positive au port 5V.
 
-![Ilustración del diagrama de conexión](../media/7ca6e53405c422f3ae9b04ac572b40ef.jpeg)
+![Illustration du schéma de connexion](../media/7ca6e53405c422f3ae9b04ac572b40ef.jpeg)
 
-## Código de ejemplo
+## Exemple de code
 
-Copia y pega el código siguiente en el software de Arduino.
+Copiez et collez le code ci-dessous dans le logiciel Arduino.
 
 ```c
 ///////////////////////////////////////////////////////////
@@ -77,10 +77,10 @@ void loop() {
 ///////////////////////////////////////////////////////////
 ```
 
-## Resultado de ejemplo
+## Résultat attendu
 
-Una vez realizado el cableado y alimentado, y subido correctamente el código, tanto el LED D13 como el LED del módulo parpadean durante un segundo y luego se apagan, de forma cíclica.
+Une fois le câblage effectué et l'alimentation mise, téléversez correctement le code : la LED D13 et la LED du module clignotent pendant une seconde puis s'éteignent, de manière cyclique.
 
-![Ilustración del resultado de ejemplo](../media/edeb5b089be0300c719652badfd269e7.png)
+![Illustration du résultat](../media/edeb5b089be0300c719652badfd269e7.png)
 
 ---

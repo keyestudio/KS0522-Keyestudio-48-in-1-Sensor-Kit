@@ -1,43 +1,43 @@
-# Lección 13: Sensor de golpes
+# Leçon 13 : Capteur de percussion
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno ATmega328P
+> **Kit :** Keyestudio 48-in-1 Sensor Kit  
+> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
 
-![Ilustración del Proyecto 13: Sensor de golpes](../media/cef729e5b57059bc14518b0e2fdd2817.png)
+![Illustration du projet 13 : capteur de percussion](../media/cef729e5b57059bc14518b0e2fdd2817.png)
 
-## Descripción
+## Description
 
-Este módulo es un sensor de golpes. Cuando lo golpeas, puede enviar una señal momentánea.
+Ce module est un capteur de percussion. Lorsque vous le frappez, il peut envoyer un signal momentané.
 
-Puedes combinarlo con Arduino para realizar experimentos interesantes, por ejemplo, un tambor electrónico.
+Vous pouvez le combiner avec Arduino pour réaliser des expériences intéressantes, par ex. une batterie électronique.
 
-## Especificaciones
+## Spécifications
 
-- Voltaje de funcionamiento: 5V
+- Tension de fonctionnement: 5V
 
-- Tamaño: 30\*20mm
+- Taille: 30\*20mm
 
-- Peso: 3g
+- Poids: 3g
 
-## Diagrama de conexión
+## Schéma de connexion
 
-Primero, necesitas preparar las siguientes piezas antes de la conexión:
+Avant la connexion, préparez les éléments suivants :
 
-- Placa V4.0\*1
+- Carte V4.0\*1
 
-- Sensor de golpe \*1
+- Capteur de percussion \*1
 
-- Cable USB\*1
+- Câble USB\*1
 
-- Cable jumper\*3
+- Fils de connexion\*3
 
-Conecta el pin S del módulo al Digital 3 de la placa V4.0, conecta el pin negativo al puerto GND y el pin positivo al puerto 5V.
+Connectez la broche S du module au Digital 3 de la carte V4.0, connectez la broche négative au port GND, la broche positive au port 5V.
 
-![Ilustración del diagrama de conexión](../media/1b9c27f145275e7a38d06763114f1847.jpeg)
+![Illustration du schéma de connexion](../media/1b9c27f145275e7a38d06763114f1847.jpeg)
 
-## Código de ejemplo
+## Exemple de code
 
-Copia y pega el siguiente código en el software de Arduino.
+Copiez et collez le code ci-dessous dans le logiciel Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -64,10 +64,10 @@ digitalWrite(Led,HIGH);
 ////////////////////////////////////////////////////////////////////
 ```
 
-![Ilustración del código de ejemplo](../media/c3fc14de7267b517a739268ed5b88674.png)
+![Illustration du code d'exemple](../media/c3fc14de7267b517a739268ed5b88674.png)
 
-## Resultado de ejemplo
+## Résultat
 
-Tras realizar el cableado y alimentar como se indicó arriba, sube correctamente el código; al golpear el sensor verás que tanto el LED D13 en la placa V4.0 como el LED D1 en el sensor se encienden.
+Après avoir réalisé le câblage et alimenté comme indiqué ci‑dessus, téléversez correctement le code, puis frappez le capteur : vous verrez que la LED D13 de la carte V4.0 et la LED D1 du capteur s'allument.
 
 ---

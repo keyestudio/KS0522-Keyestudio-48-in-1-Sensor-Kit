@@ -1,53 +1,53 @@
-# Lección 40: Visualización de temperatura y humedad
+# Leçon 40 : Affichage de la température et de l'humidité
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno ATmega328P
+> **Kit :** Keyestudio kit de capteurs 48-en-1  
+> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno (ATmega328P)
 
-![Proyecto 40: ilustración de visualización de temperatura y humedad](../media/e164737761b08de30da9358b47511d62.png)
+![Projet 40 : Illustration de l'affichage de la température et de l'humidité](../media/e164737761b08de30da9358b47511d62.png)
 
-## Introducción
+## Introduction
 
-Este sensor DHT11 presenta salida de señal digital calibrada con el sensor combinado de temperatura y humedad. Su tecnología garantiza alta fiabilidad y una excelente estabilidad a largo plazo.
+Ce capteur DHT11 fournit une sortie de signal numérique calibrée avec un capteur combiné de température et d'humidité. Sa technologie assure une grande fiabilité et une excellente stabilité à long terme.
 
-Un microcontrolador de 8 bits de alto rendimiento está integrado en el sensor. Este sensor incluye un elemento resistivo y un dispositivo de medición de temperatura NTC sensible a la humedad.
+Un microcontrôleur 8 bits haute performance est intégré au capteur. Ce capteur comprend un élément résistif et des dispositifs de mesure de température NTC sensibles à l'humidité.
 
-Tiene ventajas de excelente calidad, respuesta rápida, capacidad antiinterferencias y alta relación rendimiento-precio.
+Il présente des avantages de grande qualité, de réponse rapide, de capacité anti-interférence et d'un bon rapport qualité-prix.
 
-Cada sensor DHT11 cuenta con datos de calibración extremadamente precisos de la cámara de calibración de humedad. Los coeficientes de calibración están almacenados en la memoria OTP del programa; los sensores internos detectan señales durante el proceso, y debemos emplear estos coeficientes de calibración.
+Chaque capteur DHT11 possède des données d'étalonnage extrêmement précises issues d'une chambre d'étalonnage d'humidité. Les coefficients d'étalonnage sont stockés dans la mémoire programme OTP ; les capteurs internes détectent les signaux pendant le processus, et il faut appliquer ces coefficients d'étalonnage.
 
-El sistema integra una interfaz serial de un solo cable para que sea rápido y fácil. Sus cualidades de tamaño reducido, bajo consumo y una distancia de transmisión de señal de 20 metros lo hacen aplicable en una amplia gama de usos, incluso en los más exigentes.
+L'interface série un fil est intégrée pour rendre la communication rapide et simple. Les caractéristiques de petite taille, de faible consommation et une distance de transmission de signal de 20 mètres le rendent largement applicable, même pour les usages les plus exigeants.
 
-## Especificaciones
+## Spécifications
 
-- Voltaje de alimentación: +5 V
+- Tension d'alimentation : +5 V
 
-- Rango de temperatura: 0-50 °C con un error de ±2 °C
+- Plage de température : 0-50 °C, erreur de ± 2 °C
 
-- Humedad: 20-90% RH con un error de ±5% RH
+- Humidité : 20-90 % RH, erreur de ± 5 % RH
 
-- Interfaz: Digital
+- Interface : Numérique
 
-## Diagrama de conexión
+## Schéma de connexion
 
-Primero debes preparar los siguientes componentes antes de la prueba.
+Préparez d'abord les éléments suivants avant le test.
 
-- Placa V4.0\*1
+- Carte V4.0\*1
 
-- Sensor DHT11\*1
+- Capteur DHT11\*1
 
-- Cable USB\*1
+- Câble USB\*1
 
-- Cables jumper\*3
+- Fils de connexion\*3
 
-Luego, sigue el diagrama de conexiones: conecta el pin de señal (Signal) del sensor al puerto Digital 4 de la placa V4.0, el pin negativo a GND y el pin positivo a 5V.
+Ensuite, suivez le schéma de câblage : connectez la broche Signal du capteur au port Digital 4 de la carte V4.0, la broche négative au port GND et la broche positive au port 5V.
 
-![Ilustración del diagrama de conexión](../media/d10a0556ea9e4a8314ee21f8f58ff236.jpeg)
+![Illustration du schéma de connexion](../media/d10a0556ea9e4a8314ee21f8f58ff236.jpeg)
 
-## Código de ejemplo
+## Exemple de code
 
-Por favor descarga primero la biblioteca [DHT11Lib](https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib). O [visita el sitio web](http://playground.arduino.cc/Main/DHTLib)
+Veuillez d'abord télécharger la [bibliothèque DHT11Lib](https://github.com/RobTillaart/Arduino/tree/master/libraries/DHTlib). Vous pouvez également [consulter le site Web](http://playground.arduino.cc/Main/DHTLib).
 
-Copia y pega el código siguiente en el software de Arduino.
+Copiez et collez le code ci‑dessous dans le logiciel Arduino.
 
 ```c
 #include <dht.h>
@@ -88,14 +88,14 @@ void loop() {
 }
 ```
 
-## Resultado de ejemplo
+## Résultat d'exemple
 
-Conéctalo correctamente y sube el código anterior a la placa V4.0.
+Branchez correctement le montage et téléversez le code ci‑dessus sur la carte V4.0.
 
-![Ilustración del resultado de ejemplo](../media/cdbb75de748e3e2eb6f709b8f469193d.png)
+![Illustration du résultat d'exemple](../media/cdbb75de748e3e2eb6f709b8f469193d.png)
 
-Luego abre el monitor serial y ajusta la velocidad a 9600 baudios; finalmente verás los valores actuales de temperatura y humedad.
+Ensuite, ouvrez le moniteur série et réglez le débit sur 9600 ; vous verrez alors les valeurs de température et d'humidité actuelles.
 
-![Ilustración del resultado de ejemplo](../media/dffe8c9a0b348f7f4f12cbfe95c090f3.jpeg)
+![Illustration du résultat d'exemple](../media/dffe8c9a0b348f7f4f12cbfe95c090f3.jpeg)
 
 ---

@@ -1,37 +1,37 @@
-# Lección 05: Pitidos del zumbador
+# Leçon 05 : Bips du buzzer
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno ATmega328P
+> **Kit :** Keyestudio 48-in-1 Sensor Kit  
+> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
 
-![Proyecto 5: Pitidos del zumbador - ilustración](../media/88c349b0602dfa2e166faabc13cb2f20.png)
+![Projet 5 : Bips du buzzer - illustration](../media/88c349b0602dfa2e166faabc13cb2f20.png)
 
-## Descripción
+## Description
 
-Aquí está el módulo más sencillo para generar sonido. Puedes usar niveles alto/bajo para accionarlo. Cambiando la frecuencia con la que vibra se pueden producir diferentes sonidos.
+Voici le module sonore le plus simple. Vous pouvez le piloter en appliquant un niveau haut/bas. En changeant la fréquence de son bourdonnement, on peut produire des sons différents.
 
-Este módulo se utiliza ampliamente en nuestros electrodomésticos diarios como PC, frigorífico, teléfonos, etc.
+Ce module est largement utilisé dans nos appareils quotidiens tels que PC, réfrigérateur, téléphones, etc.
 
-Además, puedes crear muchos proyectos interactivos interesantes con este módulo pequeño pero útil. ¡Pruébalo! Encontrarás el sonido electrónico que genera muy fascinante.
+De plus, vous pouvez créer de nombreux projets interactifs intéressants avec ce petit mais utile module. Essayez-le !! Vous trouverez le son électronique qu'il produit très fascinant.
 
-## Especificación
+## Spécification
 
-- Voltaje de trabajo: 3.3-5v
+- Tension de fonctionnement : 3.3-5v
 
-- Tipo de interfaz: digital
+- Type d'interface : numérique
 
-- Tamaño: 30*20mm
+- Taille : 30*20mm
 
-- Peso: 4g
+- Poids : 4g
 
-## Diagrama de conexión
+## Schéma de connexion
 
-Conecta el pin S del módulo al Digital 3 de la placa V4.0, conecta el pin negativo al puerto GND, y el pin positivo al puerto 5V.
+Reliez la broche S du module au Digital 3 de la carte V4.0, la broche négative au port GND, la broche positive au port 5V.
 
-![Diagrama de conexión - ilustración](../media/173f2e9a828b0b20d76dc07de57892c1.jpeg)
+![Schéma de connexion - illustration](../media/173f2e9a828b0b20d76dc07de57892c1.jpeg)
 
-## Código de ejemplo
+## Exemple de code
 
-Copia y pega el siguiente código en el software de Arduino.
+Copiez-collez le code ci-dessous dans le logiciel Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -50,10 +50,10 @@ int buzzPin =3;    //Connect Buzzer on Digital Pin3
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Resultado de ejemplo
+## Résultat d'exemple
 
-Una vez subido el código a la placa, el zumbador emitirá un sonido.
+Une fois le code téléversé sur la carte, le buzzer émettra un son.
 
-![Resultado de ejemplo - ilustración](../media/109e3287bff29d1d1fb88369d6705ad3.png)
+![Illustration du résultat](../media/109e3287bff29d1d1fb88369d6705ad3.png)
 
 ---

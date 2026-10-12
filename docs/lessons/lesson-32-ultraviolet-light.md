@@ -1,53 +1,53 @@
-# Lección 32: Luz ultravioleta
+# Leçon 32 : Lumière ultraviolette
 
-> **Kit:** Kit de sensores Keyestudio 48-en-1  
-> **Placa:** Keyestudio V4.0 / Placa compatible con Arduino Uno ATmega328P
+> **Kit :** Kit Keyestudio 48-en-1 de capteurs  
+> **Carte :** Keyestudio V4.0 / Carte compatible Arduino Uno ATmega328P
 
-![Proyecto 32: Ilustración de luz ultravioleta](../media/15613ff0e8f059a9034e923ab5c2be24.jpeg)
+![Projet 32 : Illustration de la lumière ultraviolette](../media/15613ff0e8f059a9034e923ab5c2be24.jpeg)
 
-## Descripción
+## Description
 
-El sensor ultravioleta Keyestudio GUVA-S12SD se utiliza para detectar la luz ultravioleta. Incluye el GUVA-S12SD aplicado para medir el índice UV en dispositivos inteligentes para vestir, como relojes, teléfonos inteligentes y dispositivos exteriores con detección del índice UV.
+Le capteur ultraviolet Keyestudio GUVA-S12SD sert à détecter la lumière ultraviolette. Le GUVA-S12SD est utilisé pour mesurer l'indice UV des dispositifs portables intelligents, tels que les montres, les smartphones et les appareils extérieurs dotés d'une détection de l'indice UV.
 
-También puede utilizarse para monitorear la intensidad de la luz ultravioleta o como detector de llamas UV al desinfectar objetos con luz ultravioleta.
+Il peut également être utilisé pour surveiller l'intensité de la lumière UV ou comme détecteur de flamme UV lors de la désinfection d'objets par lumière ultraviolette.
 
-## Parámetros
+## Paramètres
 
-- Tamaño: 15mm×30mm×0.7mm
+- Taille : 15mm×30mm×0.7mm
 
-- Voltaje de alimentación: 2.5V～5V
+- Tension d'alimentation : 2.5V～5V
 
-- Señal de salida: Señal analógica
+- Signal de sortie : Signal analogique
 
-- Rango de detección del espectro: 240-370nm
+- Plage de détection du spectre : 240-370nm
 
-- Región activa: 0.076mm2
+- Région active : 0.076mm2
 
-- Responsividad: 0.14A/W
+- Responsivité : 0.14A/W
 
-- Corriente en oscuridad: 1nA
+- Courant d'obscurité : 1nA
 
-- Corriente de luz: 101\~125nA Luz UVA, 1mW/cm2
+- Courant lumineux : 101\~125nA Lumière UVA, 1mW/cm2
 
-## Diagrama de conexión
+## Schéma de connexion
 
-Primero necesita preparar las siguientes piezas antes de la conexión.
+Préparez d'abord les éléments suivants avant la connexion.
 
-- Placa V4.0\*1
+- Carte V4.0\*1
 
-- GUVA-S12SD 3528 Sensor ultravioleta \*1
+- Capteur ultraviolet GUVA-S12SD 3528 \*1
 
-- Cable USB\*1
+- Câble USB\*1
 
-- Cables jumper\*3
+- Fils de connexion (jumpers)\*3
 
-Conecte el pin S del módulo a Analog A0 de la placa V4.0, conecte el pin negativo al puerto GND, y el pin positivo al puerto 3V3.
+Connectez la broche S du module à l'entrée analogique A0 de la carte V4.0, la broche négative au port GND, la broche positive au port 3V3.
 
-![Ilustración del diagrama de conexión](../media/092ebb11142cfe83507989a5b2de0526.jpeg)
+![Illustration du schéma de connexion](../media/092ebb11142cfe83507989a5b2de0526.jpeg)
 
-## Código de ejemplo
+## Code d'exemple
 
-Copie y pegue el siguiente código en el software de Arduino.
+Copiez et collez le code ci-dessous dans le logiciel Arduino.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -76,16 +76,16 @@ void loop() {
 ///////////////////////////////////////////////////////////////
 ```
 
-## Resultado de ejemplo
+## Résultat d'exemple
 
-![Ilustración del resultado de ejemplo](../media/e81338e1f55ff6b55fbfe369f92b54da.png)
+![Illustration du résultat d'exemple](../media/e81338e1f55ff6b55fbfe369f92b54da.png)
 
-Conéctelo correctamente y cargue el código del programa, luego abra el monitor serie; mostrará los datos.
+Branchez correctement, téléversez le code du programme, puis ouvrez le moniteur série : il affichera les données.
 
-Si ilumina el sensor con luz UV, los datos en el monitor serie cambian como se muestra en la siguiente imagen.
+Si vous éclairez le capteur avec de la lumière UV, les données dans le moniteur série changent, comme montré sur l'image suivante.
 
-![Ilustración del resultado de ejemplo](../media/3a7f2a608faa9c72aee76d2820f78845.png)
+![Illustration du résultat d'exemple](../media/3a7f2a608faa9c72aee76d2820f78845.png)
 
-![Ilustración del resultado de ejemplo](../media/610d2325395cd3b44ce3c18e05595518.jpeg)
+![Illustration du résultat d'exemple](../media/610d2325395cd3b44ce3c18e05595518.jpeg)
 
 ---

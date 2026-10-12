@@ -1,92 +1,92 @@
-# Lección 42: Sensor de actitud
+# Leçon 42 : Capteur d'attitude
 
-> **Kit:** Kit de sensores Keyestudio 48 en 1  
-> **Placa:** Keyestudio V4.0 / Placa compatible con Arduino Uno ATmega328P
+> **Kit :** Keyestudio 48-in-1 Sensor Kit  
+> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
 
-![Proyecto 42: ilustración del sensor de actitud](../media/8eb8d16c5e76e50a6609678130a9ee29.jpeg)
+![Illustration du projet 42 : Capteur d'attitude](../media/8eb8d16c5e76e50a6609678130a9ee29.jpeg)
 
-## Introducción
+## Introduction
 
-**Aviso de compatibilidad.** La lista de componentes etiqueta esta placa como APDS-9930, pero el siguiente ejemplo legado está orientado a un APDS-9960 y utiliza `SparkFun_APDS9960`. Comprueba la marcación del CI en el módulo real antes de subir este boceto; no uses este ejemplo con una placa APDS-9930. El APDS-9930 en un paquete de 8 pines puede proporcionar el sensor de luz ambiental compatible con la interfaz I2C y el sensor de proximidad con LED infrarrojo.
+**Avis de compatibilité.** La liste de composants indique cette carte comme APDS-9930, mais l'exemple historique suivant cible un APDS-9960 et utilise `SparkFun_APDS9960`. Vérifiez le marquage du circuit intégré sur le module réel avant d'uploader ce sketch ; n'utilisez pas cet exemple avec une carte APDS-9930. L'APDS-9930 en boîtier 8 broches unique peut fournir le capteur de lumière ambiante compatible avec l'interface I2C et le capteur de proximité par LED infrarouge.
 
-El sensor de proximidad, completamente ajustado, puede detectar objetos a 100 mm y exime los requisitos de calibración de fábrica de equipos terminales y subcomponentes.
+Le capteur de proximité, complètement réglé, peut détecter un objet à 100 mm, et dispense des exigences d'étalonnage en usine pour l'équipement terminal ainsi que les sous-composants.
 
-Desde la luz solar intensa hasta una habitación oscura, la función de detección de proximidad del sensor puede operar correctamente.
+Du plein soleil à la pièce sombre, la fonction de détection de proximité du capteur peut fonctionner correctement.
 
-Este módulo añade una microlente óptica que puede proporcionar transmisión y recepción eficientes de energía infrarroja, lo que puede reducir el consumo de energía general.
+Ce module intègre une micro-lentille optique qui permet une transmission et une réception infrarouges efficaces, ce qui peut réduire la consommation d'énergie globale.
 
-Además, su máquina de estados interna puede poner el dispositivo en un modo de bajo consumo, logrando un consumo medio muy bajo.
+De plus, sa machine d'état interne peut mettre l'appareil en mode basse consommation, offrant une consommation moyenne très faible.
 
-## Parámetros
+## Paramètres
 
-- Voltaje de funcionamiento：CC 3.3-3.8V
+- Tension de fonctionnement：DC 3.3-3.8V
 
-- Corriente de salida：0-20mA
+- Courant de sortie：0-20mA
 
-- Rango de temperatura：-40℃—85℃
+- Plage de température：-40℃—85℃
 
-## Características
+## Caractéristiques
 
-1. Módulo óptico integrado con ALS, LED infrarrojo y detector de proximidad;
+1. Module optique intégré avec ALS, LED infrarouge et détecteur de proximité ;
 
-2. Hasta 16 bits de resolución;
+2. Jusqu'à 16 bits de résolution ;
 
-3. Alta sensibilidad en operación detrás de vidrio oscuro;
+3. Haute sensibilité de fonctionnement derrière du verre foncé ;
 
-4. Rendimiento de baja lúmenes de 0.01 lux;
+4. Performance basse lumière de 0.01 lux ;
 
-5. Detección de proximidad, completamente calibrada para detección a 100 mm;
+5. Détection de proximité, entièrement calibrée jusqu'à 100 mm ;
 
-6. Integra LED infrarrojo y controlador síncrono de LED;
+6. Intègre la LED infrarouge et le pilote LED synchrone ;
 
-7. Elimina la calibración de fábrica para sensores de proximidad;
+7. Élimine l'étalonnage en usine pour les capteurs de proximité ;
 
-8. Temporizador de espera programable, consumo en estado de espera - 90μA (valor típico);
+8. Minuterie d'attente programmable, consommation en état d'attente - 90μA (valeur typique) ;
 
-9. Rango programable desde 2.7 milisegundos hasta 8 segundos;
+9. Plage programmable de 2.7 millisecondes à 8 secondes ;
 
-10. Compatible con interfaz I2C, hasta 400kHz (modo rápido I2C);
+10. Compatible avec l'interface I2C, jusqu'à 400kHz (mode rapide I2C) ;
 
-11. Pin de interrupción dedicado;
+11. Broche d'interruption dédiée ;
 
-12. Modo de suspensión consumo - 2.2μA (valor típico).
+12. Consommation en mode veille - 2.2μA (valeur typique).
 
-## Diagrama de conexión
+## Schéma de connexion
 
-Primero necesita preparar las siguientes piezas:
+Tout d'abord, vous devez préparer les pièces suivantes :
 
-- Placa V4.0\*1
+- Carte V4.0\*1
 
-- Sensor de actitud\*1
+- Capteur d'attitude\*1
 
-- Cable USB\*1
+- Câble USB\*1
 
-- Cables jumper\*5
+- Fils de connexion\*5
 
-Conecta el pin INT del sensor al puerto Digital 2 de la placa V4.0, el pin SCL al puerto Analog A5, el pin SDA al puerto Analog A4; conecta el pin 3V3 al puerto 3V3, y el pin GND al puerto GND.
+Connectez la broche INT du capteur au port Digital 2 de la carte V4.0, la broche SCL au port Analog A5, la broche SDA au port Analog A4 ; Connectez la broche 3V3 au port 3V3, la broche GND au port GND.
 
-![Diagrama de conexión ilustración](../media/c906c4e8a06998118eac5e3b981386d6.jpeg)
+![Illustration du schéma de connexion](../media/c906c4e8a06998118eac5e3b981386d6.jpeg)
 
-## Ejemplo de código
+## Exemple de code
 
-**¡IMPORTANTE!**: ¡El APDS-9960 sólo puede aceptar 3.3V!
+**IMPORTANT** : L'APDS-9960 n'accepte que 3.3V !
 
-## Conexiones de hardware
+## Connexions matérielles
 
-| Pin Arduino | Placa APDS-9960 | Función  |
-| :---------: | :-------------: | :-------: |
-|    3.3V     |       VCC       | Alimentación |
-|     GND     |       GND       |   Masa    |
-|     A4      |       SDA       | Datos I2C |
-|     A5      |       SCL       | Reloj I2C |
-|     D2      |       INT       | Interrupción |
-|     D13     |        -        |   LED     |
+| Broche Arduino | Carte APDS-9960 | Fonction       |
+| :------------: | :-------------: | :-------------: |
+|     3.3V       |       VCC       | Alimentation   |
+|      GND       |       GND       | Masse          |
+|      A4        |       SDA       | Données I2C    |
+|      A5        |       SCL       | Horloge I2C    |
+|      D2        |       INT       | Interruption   |
+|      D13       |        -        | LED            |
 
-**Recursos:** Incluir Wire.h y SparkFun_APDS-9960.h
+**Ressources :** Inclure Wire.h et SparkFun_APDS-9960.h
 
-**Especificaciones del entorno de desarrollo:** Escrito en Arduino 1.0.5
+**Détails de l'environnement de développement :** Écrit pour Arduino 1.0.5
 
-Copia y pega el siguiente código en el software de Arduino.
+Copiez-collez le code ci-dessous dans le logiciel Arduino.
 
 ```c
 #include <Wire.h>
@@ -197,14 +197,14 @@ void interruptRoutine() {
 }
 ```
 
-Nota: antes de compilar el código, recuerda colocar la biblioteca en el directorio libraries del IDE de Arduino. De lo contrario, la compilación fallará.
+Remarque : avant de compiler le code, pensez à placer la bibliothèque dans le répertoire libraries de l'IDE Arduino. Sinon, la compilation échouera.
 
-## Resultado de ejemplo
+## Résultat d'exemple
 
-![Resultado de ejemplo ilustración](../media/2a30729fa77874e4e61f51d2bb8e62c1.png)
+![Illustration du résultat d'exemple](../media/2a30729fa77874e4e61f51d2bb8e62c1.png)
 
-Después de subir el código, abre el monitor serie y ajusta la velocidad a 9600 baudios.
+Après avoir téléversé le code, ouvrez le moniteur série et réglez le débit en bauds sur 9600.
 
-![Resultado de ejemplo ilustración](../media/935c7035ef43f54ca65eaa49bbaf5e98.jpeg)
+![Illustration du résultat d'exemple](../media/935c7035ef43f54ca65eaa49bbaf5e98.jpeg)
 
 ---

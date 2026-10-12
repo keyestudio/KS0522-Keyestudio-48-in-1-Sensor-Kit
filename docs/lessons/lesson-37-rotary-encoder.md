@@ -1,35 +1,35 @@
-# Lección 37: Codificador rotatorio
+# Leçon 37 : Encodeur rotatif
 
-> **Kit:** Kit de sensores Keyestudio 48-en-1  
-> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno ATmega328P
+> **Kit :** Keyestudio 48-in-1 Sensor Kit  
+> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
 
-![Proyecto 37: Ilustración del codificador rotatorio](../media/df622003846058dd3cf442518f655af2.png)
+![Projet 37 : illustration de l'encodeur rotatif](../media/df622003846058dd3cf442518f655af2.png)
 
-## Introducción
+## Introduction
 
-El codificador rotatorio puede contar el número de pulsos emitidos durante la rotación en sentido horario y antihorario.
+L'encodeur rotatif peut compter le nombre d'impulsions émises pendant la rotation dans le sens positif et inverse.
 
-Este conteo por rotación es ilimitado, a diferencia de un potenciómetro. Puede restablecerse al estado inicial para contar desde 0.
+Ce comptage rotatif est illimité, contrairement au comptage potentiométrique. Il peut être remis à l'état initial pour compter à partir de 0.
 
-## Especificaciones
+## Spécifications
 
-- Alimentación: 5V
+- Alimentation : 5V
 
-- Interfaz: Digital
+- Interface : Numérique
 
-- Tamaño: 30\*20mm
+- Taille : 30\*20mm
 
-- Peso: 7g
+- Poids : 7g
 
-## Diagrama de conexión
+## Schéma de connexion
 
-![Ilustración del diagrama de conexión](../media/1de37f27caa224141230be6bdc95d29b.jpeg)
+![Illustration du schéma de connexion](../media/1de37f27caa224141230be6bdc95d29b.jpeg)
 
-Como se ve en el diagrama, conectamos el módulo codificador rotatorio y dos módulos LED al protoboard y a la placa V4.0.
+Comme on le voit sur le schéma, nous connectons le module d'encodeur rotatif et deux modules LED à la breadboard et à la carte V4.0.
 
-Utiliza el módulo codificador rotatorio para controlar el encendido y apagado de los dos módulos LED.
+Utilisez le module d'encodeur rotatif pour contrôler l'allumage et l'extinction de deux modules LED.
 
-## Código de ejemplo
+## Code d'exemple
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -92,12 +92,12 @@ void RoteStateChanged() //When CLK  FALLING READ DAT
 ///////////////////////////////////////////////////////////////
 ```
 
-## Resultado de ejemplo
+## Exemple de résultat
 
-Con el cableado correcto y cargando el código anterior, puedes girar el codificador para alternar el encendido y apagado de los dos módulos LED. Cuando giras el codificador, un módulo LED se enciende primero mientras el otro está apagado.
+Une fois le câblage effectué et le code ci‑dessus téléversé, vous pouvez faire tourner l'encodeur pour contrôler de manière alternée l'allumage et l'extinction des deux modules LED. Lorsque vous faites tourner l'encodeur, un module LED s'allume d'abord tandis que l'autre est éteint.
 
-Si continúas girando el codificador, un módulo LED se apaga mientras el otro se enciende, repetidamente.
+Si vous continuez à faire tourner l'encodeur, un module LED s'éteint pendant que l'autre s'allume, de façon répétée.
 
-![Ilustración del resultado de ejemplo](../media/4c1455602dc8ab6d61f5ab2e2d5dd67c.png)
+![Illustration du résultat](../media/4c1455602dc8ab6d61f5ab2e2d5dd67c.png)
 
 ---

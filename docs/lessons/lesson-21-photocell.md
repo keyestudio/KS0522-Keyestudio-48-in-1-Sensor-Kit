@@ -1,45 +1,37 @@
-# Lección 21: Fotorresistor
+# Leçon 21 : Photocellule
 
-> **Kit:** Kit de sensores Keyestudio 48-in-1  
-> **Placa:** Placa Keyestudio V4.0 / compatible con Arduino Uno ATmega328P
+> **Kit :** Keyestudio 48-in-1 Sensor Kit  
+> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
 
-![Proyecto 21: ilustración del fotorresistor](../media/8eed60793fd64a7c0b9a9b2a2fc1ef67.png)
+![Illustration du projet 21 : photocellule](../media/8eed60793fd64a7c0b9a9b2a2fc1ef67.png)
 
-## Descripción
+## Description
 
-El fotorresistor es común en nuestra vida diaria y se utiliza principalmente en interruptores
-inteligentes, así como en diseños electrónicos habituales. Para hacerlo más fácil y efectivo,
-suministramos los módulos correspondientes.
+La photocellule (cellule photoélectrique) est couramment rencontrée dans la vie quotidienne et est principalement utilisée dans les interrupteurs intelligents, ainsi que dans la conception électronique courante. Pour faciliter et améliorer son utilisation, nous fournissons les modules correspondants.
 
-El fotorresistor es un semiconductor. Tiene características de alta sensibilidad, respuesta
-rápida, característica espectral y consistencia del valor R, manteniendo alta
-estabilidad y fiabilidad en entornos extremos como alta temperatura y
-alta humedad.
+La photocellule est un semi‑conducteur. Elle présente une grande sensibilité, une réponse rapide, des caractéristiques spectrales et une cohérence de la valeur R, assurant une grande stabilité et fiabilité dans des environnements extrêmes tels que des températures élevées et une forte humidité.
 
-Se utiliza ampliamente en campos de control automático como cámaras, luces solares de jardín,
-lámparas de césped, detectores de billetes, relojes de cuarzo, tazas musicales, cajas de regalo, mini
-luces nocturnas, interruptores de control de sonido y luz, etc.
+Elle est largement utilisée dans les domaines de commutation de contrôle automatique comme les appareils photo, les lampes solaires de jardin, les lampes pour pelouse, les détecteurs de monnaie, les horloges à quartz, les mugs musicaux, les boîtes cadeaux, les mini veilleuses, les interrupteurs contrôlés par le son et la lumière, etc.
 
-## Especificación
+## Spécification
 
-- Tipo de interfaz: analógica
+- Type d'interface : analogique
 
-- Voltaje de trabajo: 5V
+- Tension de fonctionnement : 5V
 
-- Tamaño: 30*20mm
+- Taille : 30*20mm
 
-- Peso: 3g
+- Poids : 3g
 
-## Diagrama de conexión
+## Schéma de connexion
 
-Conecte el pin S del módulo al Analógico A0 de la placa V4.0, conecte el pin negativo
-al puerto GND, el pin positivo al puerto 5V.
+Connectez la broche S du module à l'Analog A0 de la carte V4.0, connectez la broche négative au port GND, la broche positive au port 5V.
 
-![Ilustración del diagrama de conexión](../media/28a1990cd088d6f0301f02d217cef301.jpeg)
+![Illustration du schéma de connexion](../media/28a1990cd088d6f0301f02d217cef301.jpeg)
 
-## Código de ejemplo
+## Exemple de code
 
-Copia y pega el siguiente código en el software de Arduino.
+Copiez et collez le code ci‑dessous dans le logiciel Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -57,12 +49,12 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Resultado de ejemplo
+## Exemple de résultat
 
-![Ilustración del resultado de ejemplo](../media/78268e9cb1dbc127e7ae3299d3a35a45.png)
+![Illustration du résultat exemple](../media/78268e9cb1dbc127e7ae3299d3a35a45.png)
 
-Una vez realizadas las conexiones y con la alimentación encendida, sube correctamente el código, luego abre el monitor serial; si cubres el fotorresistor del sensor con tu mano, verás que el valor analógico disminuye.
+Une fois le câblage effectué et l'alimentation branchée, téléversez correctement le code, puis ouvrez le moniteur série. Si vous couvrez la photocellule du capteur avec votre main, vous verrez la valeur analogique diminuer.
 
-![Ilustración del resultado de ejemplo](../media/85621deb4c66d6e53697cd0ef90cb6e2.jpeg)
+![Illustration du résultat exemple](../media/85621deb4c66d6e53697cd0ef90cb6e2.jpeg)
 
 ---

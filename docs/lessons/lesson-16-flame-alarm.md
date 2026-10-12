@@ -1,51 +1,51 @@
-# Lección 16: Alarma de llama
+# Leçon 16 : Alarme de flamme
 
-> **Kit:** Keyestudio Kit de sensores 48 en 1  
-> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno ATmega328P
+> **Kit :** Keyestudio Kit de capteurs 48-en-1  
+> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
 
-![Proyecto 16: Ilustración de la alarma de llama](../media/35c5a2593df5d4e76865158e790feada.png)
+![Projet 16 : illustration Alarme de flamme](../media/35c5a2593df5d4e76865158e790feada.png)
 
-## Descripción
+## Description
 
-Este sensor de llama puede usarse para detectar fuego u otras luces con longitud de onda entre 760nm \~ 1100nm.
+Ce capteur de flamme peut être utilisé pour détecter le feu ou d'autres sources lumineuses dont la longueur d'onde se situe entre 760nm \~ 1100nm.
 
-En el juego del robot contra incendios, la llama desempeña un papel importante en la detección, pudiendo utilizarse como los ojos del robot para encontrar la fuente de fuego.
+Dans le jeu de robot-pompier, la flamme joue un rôle important dans la détection, pouvant servir d'yeux du robot pour trouver la source du feu.
 
-## Especificaciones
+## Spécifications
 
-1. Voltaje de alimentación: 3.3V a 5V
+1. Tension d'alimentation : 3.3V à 5V
 
-2. Rango de detección: 20cm (4.8V) \~ 100cm (1V)
+2. Plage de détection : 20cm (4.8V) \~ 100cm (1V)
 
-3. Rango de ancho de banda espectral: 760nm a 1100nm
+3. Plage de bande spectrale : 760nm à 1100nm
 
-4. Temperatura de funcionamiento: -25℃ a 85℃
+4. Température de fonctionnement : -25℃ à 85℃
 
-5. Interfaz: digital
+5. Interface : numérique
 
-6. Tamaño: 44*16.7mm
+6. Taille : 44*16.7mm
 
-7. Peso: 4g
+7. Poids : 4g
 
-## Diagrama de conexión
+## Schéma de connexion
 
-Primero, necesita preparar las siguientes piezas antes de la conexión:
+Tout d'abord, vous devez préparer les pièces suivantes avant la connexion :
 
-- Placa V4.0*1
+- Carte V4.0*1
 
-- Sensor de llama*1
+- Capteur de flamme*1
 
-- Cable USB*1
+- Câble USB*1
 
-- Cables jumper*3
+- Fils de connexion*3
 
-Conecte el pin D0 del módulo al Digital 2 de la placa V4.0, conecte el pin GND al puerto GND y el pin VCC al puerto 5V.
+Connectez la broche D0 du module à Digital 2 de la carte V4.0, la broche GND au port GND, et la broche VCC au port 5V.
 
-![Ilustración del diagrama de conexión](../media/a1ee506fc9921c7616349500c258b733.jpeg)
+![Illustration du schéma de connexion](../media/a1ee506fc9921c7616349500c258b733.jpeg)
 
-## Código de ejemplo
+## Code d'exemple
 
-Copie y pegue el siguiente código en el software Arduino.
+Copiez et collez le code ci-dessous dans le logiciel Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -74,14 +74,14 @@ State = digitalRead(flamePin);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Resultado del ejemplo
+## Exemple de résultat
 
-Con el cableado terminado y la alimentación conectada, cargue correctamente el código en la placa.
+Une fois le câblage effectué et l'alimentation mise, téléversez correctement le code sur la carte.
 
-![Ilustración del resultado de ejemplo](../media/c769453bbd0e1c5fcf6c80cf697030b3.png)
+![Illustration du résultat d'exemple](../media/c769453bbd0e1c5fcf6c80cf697030b3.png)
 
-Si acerca un encendedor al sensor, cuando el sensor detecte la llama, otro LED del sensor se encenderá.
+Ensuite, si vous approchez un briquet du capteur, lorsque le capteur détecte la flamme, une autre DEL sur le capteur s'allume.
 
-![Ilustración del resultado de ejemplo](../media/2ee5a36673d2cbeb934ca2af29dab607.png)
+![Illustration du résultat d'exemple](../media/2ee5a36673d2cbeb934ca2af29dab607.png)
 
 ---

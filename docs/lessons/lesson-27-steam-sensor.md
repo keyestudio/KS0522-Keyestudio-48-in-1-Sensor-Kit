@@ -1,53 +1,53 @@
-# Lección 27: Sensor de vapor
+# Leçon 27: Capteur d'humidité
 
-> **Kit:** Kit de sensores Keyestudio 48 en 1  
-> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno (ATmega328P)
+> **Kit:** Kit de capteurs Keyestudio 48-en-1  
+> **Carte:** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
 
-![Proyecto 27: ilustración del sensor de vapor](../media/d19ac9430f793cdbedde891ee92671e7.jpeg)
+![Illustration du projet 27 : Capteur d'humidité](../media/d19ac9430f793cdbedde891ee92671e7.jpeg)
 
-## Descripción
+## Description
 
-El sensor de vapor es un sensor analógico y puede usarse como un detector de lluvia sencillo y como interruptor de nivel de líquido. Cuando la humedad en la superficie de este sensor aumenta, el voltaje de salida incrementará.
+Le capteur d'humidité est un capteur analogique et peut servir de simple détecteur de pluie ou d'interrupteur de niveau de liquide. Lorsque l'humidité à la surface de ce capteur augmente, la tension de sortie augmentera.
 
-Precaución: las partes de conexión no son impermeables, por favor no las sumerjas en agua.
+Attention : les parties de connexion ne sont pas étanches, ne les plongez donc pas dans l'eau.
 
-## Parámetros
+## Paramètres
 
-- Voltaje de funcionamiento: 3.3V o 5V
+- Tension de fonctionnement: 3.3V ou 5V
 
-- Corriente de funcionamiento: \<20mA
+- Courant de fonctionnement: \<20mA
 
-- Rango de temperatura de funcionamiento: －10℃～＋70℃
+- Plage de température de fonctionnement: －10℃～＋70℃
 
-- Tipo de interfaz: Salida de señal analógica
+- Type d'interface: Sortie de signal analogique
 
-## Definición de pines
+## Définition des broches
 
-- Pin S: salida de señal
+- Broche S : pour la sortie du signal
 
-- Pin positivo (+): alimentación (VCC)
+- Broche positive (+) : pour l'alimentation (VCC)
 
-- Pin negativo (-): tierra (GND)
+- Broche négative (-) : pour la masse (GND)
 
-## Diagrama de conexión
+## Schéma de connexion
 
-Primero, debes preparar las siguientes piezas antes de la conexión:
+Préparez d'abord les éléments suivants avant le branchement :
 
-- Placa V4.0*1
+- Carte V4.0*1
 
-- Sensor de vapor*1
+- Capteur d'humidité*1
 
-- Cable USB*1
+- Câble USB*1
 
-- Cables jumper*3
+- Fils de connexion*3
 
-Conecta el pin S del módulo al pin analógico A0 de la placa V4.0, conecta el pin negativo al puerto GND y el pin positivo al puerto 5V.
+Connectez la broche S du module à l'entrée analogique A0 de la carte V4.0, connectez la broche négative au port GND et la broche positive au port 5V.
 
-![Ilustración del diagrama de conexión](../media/8fa51466dbc9650dcaa740bce4dd654e.jpeg)
+![Illustration du schéma de connexion](../media/8fa51466dbc9650dcaa740bce4dd654e.jpeg)
 
-## Código de ejemplo
+## Exemple de code
 
-Copia y pega el siguiente código en el software de Arduino.
+Copiez et collez le code ci-dessous dans l'environnement Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -66,14 +66,14 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Resultado de ejemplo
+## Résultat exemple
 
-![Ilustración del resultado de ejemplo](../media/c4633c5911c042224d187645db4d0588.png)
+![Exemple de résultat](../media/c4633c5911c042224d187645db4d0588.png)
 
-Al detectar distintos grados de humedad, el sensor obtendrá la retroalimentación de diferentes valores de corriente. Se muestra en la imagen siguiente.
+Lors de la détection de différents degrés d'humidité, le capteur renverra différentes valeurs de courant. Comme montré sur l'image suivante.
 
-Debido a las condiciones limitadas, puedes poner una gota de agua sobre el sensor; el valor de humedad cambiará en el monitor serial del software de Arduino.
+Dans la limite des conditions, vous pouvez déposer une goutte d'eau sur le capteur ; la valeur d'humidité changera dans le moniteur série du logiciel Arduino.
 
-![Ilustración del resultado de ejemplo](../media/80e9b3e19db4bec337f3254545a58e9e.jpeg)
+![Exemple de résultat](../media/80e9b3e19db4bec337f3254545a58e9e.jpeg)
 
 ---

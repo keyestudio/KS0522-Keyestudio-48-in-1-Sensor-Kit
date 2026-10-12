@@ -1,47 +1,47 @@
-# Lección 29: Detección de voltaje
+# Leçon 29 : Détection de tension
 
-> **Kit:** Kit de sensores Keyestudio 48 en 1  
-> **Placa:** Placa Keyestudio V4.0 / compatible con Arduino Uno ATmega328P
+> **Kit :** Kit de capteurs Keyestudio 48-en-1  
+> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P board
 
-![Proyecto 29: Ilustración de detección de voltaje](../media/41967398a781944fd64ebd49a9c746fa.jpeg)
+![Projet 29 : Illustration de la détection de tension](../media/41967398a781944fd64ebd49a9c746fa.jpeg)
 
-## Descripción
+## Description
 
-Dado que los productos electrónicos son variados, el voltaje de la alimentación también difiere. Es necesario detectarlo con un módulo o controlador de detección de voltaje adecuado.
+Les produits électroniques étant variés, la tension d'alimentation l'est aussi. Il est donc nécessaire de la détecter à l'aide d'un module ou d'un contrôleur de détection de tension adapté.
 
-La tensión máxima de entrada de la interfaz analógica del controlador es 5V, lo que significa que no podrá detectarse un voltaje superior a 5V.
+La tension d'entrée maximale de l'interface analogique du contrôleur est de 5 V, ce qui signifie que les tensions supérieures à 5 V ne pourront pas être détectées directement.
 
-Sin embargo, este módulo de detección de voltaje puede detectar valores superiores a 5 V.
+Cependant, ce module de détection de tension permet de mesurer des tensions supérieures à 5 V.
 
-Se basa en un divisor resistivo 5:1. Con una referencia analógica de 5 V, la tensión de entrada no debe exceder los 25 V. Con una referencia analógica de 3.3 V, la tensión de entrada no debe exceder los 16.5 V.
+Il est basé sur un diviseur résistif 5:1. Avec une référence analogique de 5 V, la tension d'entrée ne doit pas dépasser 25 V. Avec une référence analogique de 3,3 V, la tension d'entrée ne doit pas dépasser 16,5 V.
 
-El convertidor analógico a digital AVR es de 10 bits, por lo que la resolución analógica es 0.00489 V (5 V / 1023). Con el divisor 5:1, el incremento mínimo de entrada medible es aproximadamente 0.02445 V.
+Le convertisseur analogique-numérique AVR est en 10 bits, donc la résolution analogique est de 0,00489 V (5 V / 1023). Avec le diviseur 5:1, l'incrément minimal mesurable en entrée est d'approximativement 0,02445 V.
 
-Al conectar este sensor a la placa de expansión usando un cable de 3 pines, no solo puede detectar fácilmente la magnitud del voltaje y monitorizar la carga de una batería para trabajos de medios interactivos o robots, sino que también puede combinarse con el módulo LCD IIC LCD1602 para mostrar el voltaje o crear un monitor de voltaje.
+Lorsqu'on connecte ce capteur à la carte d'extension à l'aide d'un câble 3 broches, il permet non seulement de détecter facilement l'amplitude de la tension d'alimentation et de surveiller l'état de charge d'une batterie pour des œuvres médiatiques interactives ou des robots, mais il peut aussi être combiné avec un module LCD IIC LCD1602 pour afficher la tension ou réaliser un moniteur de tension.
 
-## Especificaciones
+## Spécifications
 
-- Tensión de trabajo: 0V-25V CC
+- Tension de fonctionnement : 0V-25V CC
 
-- Tipo de señal: señal analógica
+- Type de signal : signal analogique
 
-## Diagrama de conexión
+## Schéma de connexion
 
-Primero, necesitas preparar los siguientes componentes antes de la conexión:
+Tout d'abord, préparez les pièces suivantes avant la connexion :
 
-- placa V4.0\*1
+- Carte V4.0\*1
 
-- Sensor de voltaje\*1
+- Capteur de tension\*1
 
-- Cable USB\*1
+- Câble USB\*1
 
-- Cable jumper\*3
+- Fils de liaison\*3
 
-Conecta el pin S del módulo al analógico A0 de la placa V4.0, conecta el pin negativo al puerto GND, el pin NC al puerto 5V.
+Connectez la broche S du module à l'entrée analogique A0 de la carte V4.0, connectez la broche négative à la borne GND, et la broche NC à la borne 5V.
 
-![Ilustración del diagrama de conexión](../media/b8754c45901ff42ba9caadce5db01a3a.jpeg)
+![Schéma de connexion - illustration](../media/b8754c45901ff42ba9caadce5db01a3a.jpeg)
 
-## Código de ejemplo
+## Code d'exemple
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -80,12 +80,12 @@ Serial.print(val2);      //The serial port prints the value of the variable val2
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Resultado de ejemplo
+## Exemple de résultat
 
-![Ilustración del resultado de ejemplo](../media/ac8825bb333757bad26785e58651beb7.png)
+![Illustration du résultat exemple](../media/ac8825bb333757bad26785e58651beb7.png)
 
-Realizado el cableado anterior, compila y sube el código, enciende la alimentación y abre el monitor serie; imprimirá el valor de voltaje detectado que se muestra a continuación.
+Une fois le câblage réalisé comme ci-dessus, compilez et téléversez le code, alimentez le circuit, puis ouvrez le moniteur série ; il affichera la valeur de tension détectée comme montré ci-dessous.
 
-![Ilustración del resultado de ejemplo](../media/af699a83a891ea99d193d5b53bd27fa1.jpeg)
+![Illustration du résultat exemple](../media/af699a83a891ea99d193d5b53bd27fa1.jpeg)
 
 ---

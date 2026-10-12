@@ -1,56 +1,56 @@
-# Lección 48: Matriz de puntos
+# Leçon 48 : Matrice de points
 
-> **Kit:** Kit de sensores Keyestudio 48 en 1  
-> **Placa:** Keyestudio V4.0 / Placa compatible Arduino Uno ATmega328P
+> **Kit :** Keyestudio 48-in-1 Sensor Kit  
+> **Carte :** Keyestudio V4.0 / Carte compatible Arduino Uno ATmega328P
 
-![Ilustración del proyecto 48: Matriz de puntos](../media/10e87958bbef207075643ae4f5481457.jpeg)
+![Illustration du projet 48 : Matrice de points](../media/10e87958bbef207075643ae4f5481457.jpeg)
 
-## Introducción
+## Introduction
 
-¿Qué es mejor que un solo LED? ¡Muchos LEDs! Una forma divertida de crear una pequeña pantalla es usar una matriz de 8x8. Este módulo utiliza el chip HT16K33 para controlar una matriz de puntos 8x8.
+Quoi de mieux qu'une seule LED ? Beaucoup de LED ! Une façon amusante de créer un petit affichage est d'utiliser une matrice 8x8. Ce module utilise la puce HT16K33 pour piloter une matrice de points 8x8.
 
-Solo es necesario usar el puerto de comunicación I2C del microcontrolador para controlar la matriz de puntos, lo que puede ahorrar más recursos de pines del microcontrolador. El módulo de la matriz viene con un cabezal de 4 pines con paso de 2.54 mm.
+Il suffit d'utiliser le port de communication I2C du microcontrôleur pour contrôler la matrice, ce qui permet d'économiser davantage de broches du microcontrôleur. Le module de matrice est livré avec un connecteur 4 broches au pas de 2,54 mm.
 
-Puedes conectar el módulo a la placa de control para la comunicación usando cables dupont.
+Vous pouvez connecter le module à la carte de contrôle pour la communication à l'aide de fils de liaison.
 
-Además, viene con tres interruptores DIP. Puedes alternar aleatoriamente el interruptor para seleccionar la dirección de comunicación I2C.
+De plus, il est fourni avec trois interrupteurs DIP. Vous pouvez basculer les commutateurs de manière aléatoire pour sélectionner l'adresse de communication I2C.
 
-## Los ajustes de dirección son los siguientes
+## Paramètres d'adresse
 
 |   0x70   |          |          |      |   0x71   |          |          |      |   0x72   |          |          |
 | :------: | :------: | :------: | ---- | :------: | :------: | :------: | ---- | :------: | :------: | :------: |
 | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |
-| 0（APAGADO） | 0（APAGADO） | 0（APAGADO） |      | 1（ENCENDIDO）  | 0（APAGADO） | 0（APAGADO） |      | 0（APAGADO） | 1（ENCENDIDO）  | 0（APAGADO） |
+| 0（ARRÊT） | 0（ARRÊT） | 0（ARRÊT） |      | 1（MARCHE）  | 0（ARRÊT） | 0（ARRÊT） |      | 0（ARRÊT） | 1（MARCHE）  | 0（ARRÊT） |
 |          |          |          |      |          |          |          |      |          |          |          |
 | **0x73** |          |          |      | **0x74** |          |          |      | **0x75** |          |          |
 | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |
-| 1（ENCENDIDO）  | 1（ENCENDIDO）  | 0（APAGADO） |      | 0（APAGADO） | 0（APAGADO） | 1（ENCENDIDO）  |      | 1（ENCENDIDO）  | 0（APAGADO） | 1（ENCENDIDO）  |
+| 1（MARCHE）  | 1（MARCHE）  | 0（ARRÊT） |      | 0（ARRÊT） | 0（ARRÊT） | 1（MARCHE）  |      | 1（MARCHE）  | 0（ARRÊT） | 1（MARCHE）  |
 |          |          |          |      |          |          |          |      |          |          |          |
 | **0x76** |          |          |      | **0x77** |          |          |      |          |          |          |
 | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |      |          |          |          |
-| 0（APAGADO） | 1（ENCENDIDO）  | 1（ENCENDIDO）  |      | 1（ENCENDIDO）  | 1（ENCENDIDO）  | 1（ENCENDIDO）  |      |          |          |          |
+| 0（ARRÊT） | 1（MARCHE）  | 1（MARCHE）  |      | 1（MARCHE）  | 1（MARCHE）  | 1（MARCHE）  |      |          |          |          |
 
-## Detalles técnicos
+## Détails techniques
 
-- Interfaz: conector de 4 pines
+- Interface : connecteur 4 broches
 
-- Voltaje de funcionamiento: DC 4.5V-5.5V
+- Tension de fonctionnement : DC 4.5V-5.5V
 
-- Incluye tres interruptores DIP para la selección de dirección
+- Livré avec trois interrupteurs DIP pour la sélection d'adresse
 
-- Dimensiones：52mm\*34mm\*11mm
+- Dimensions：52mm\*34mm\*11mm
 
-- Peso：13.2g
+- Poids：13.2g
 
-## Guía de conexiones
+## Guide de branchement
 
-Conecta el pin SCL al puerto Analógico A5, el pin SDA al puerto Analógico A4; conecta el pin VCC al puerto 5V, GND al puerto GND.
+Connectez la broche SCL au port Analog A5, la broche SDA au port Analog A4 ; connectez la broche VCC au port 5V, la broche GND au port GND.
 
-![Ilustración de la guía de conexiones](../media/e2c09c1a7851f64ad03a027c1aa25a14.jpeg)
+![Illustration du guide de branchement](../media/e2c09c1a7851f64ad03a027c1aa25a14.jpeg)
 
-## Código de prueba
+## Code de test
 
-Descarga la biblioteca:
+Téléchargez la bibliothèque :
 
 ```C
 #include <Wire.h>
@@ -82,66 +82,66 @@ void loop() {
 }
 ```
 
-**Nota:** antes de compilar el código, recuerda colocar la carpeta de la biblioteca Matrix en el directorio \\Arduino\\libraries. De lo contrario, la compilación fallará.
+**Remarque :** avant de compiler le code, pensez à placer le dossier de la bibliothèque Matrix dans le répertoire \\Arduino\\libraries. Sinon, la compilation échouera.
 
-Por ejemplo: **C:\\Program Files\\Arduino\\libraries**
+Par exemple : **C:\\Program Files\\Arduino\\libraries**
 
-## Resultado de la prueba
+## Résultat du test
 
-Una vez subido el código a la placa y encendida la alimentación, deberías ver la matriz 8\*8 mostrando una imagen de corazón. Mostrado abajo.
+Une fois le code téléversé sur la carte et l'alimentation mise sous tension, vous devriez voir la matrice 8\*8 afficher une image de cœur. Comme illustré ci-dessous.
 
-![Ilustración del resultado de la prueba](../media/4a53bb681a3299be450726255f4d56a2.jpeg)
+![Illustration du résultat du test](../media/4a53bb681a3299be450726255f4d56a2.jpeg)
 
-## Método de configuración
+## Méthode de configuration
 
-1. Ajusta la dirección de comunicación. Consulta la tabla de direcciones.
+1. Définissez l'adresse de communication. Reportez-vous au tableau d'adresses.
 
-El código está configurado como sigue.
+Le code est configuré comme ci-dessous.
 
-![Ilustración del método de configuración](../media/187557b09de67c1236bfd6536b0b95ee.png)
+![Illustration de la méthode de configuration](../media/187557b09de67c1236bfd6536b0b95ee.png)
 
-![Ilustración del método de configuración](../media/910472d4662d0c1f463f9bedfe4cef74.png)
+![Illustration de la méthode de configuration](../media/910472d4662d0c1f463f9bedfe4cef74.png)
 
-![Ilustración del método de configuración](../media/165615f73e4c9a49c861f5e17eb333e3.png)
+![Illustration de la méthode de configuration](../media/165615f73e4c9a49c861f5e17eb333e3.png)
 
-1. Ajusta la imagen mostrada
+1. Définissez l'image d'affichage
 
-Puedes definir la imagen que se muestra en el código que se muestra a continuación.
+Vous pouvez définir l'image d'affichage dans le code montré ci-dessous.
 
-![Ilustración del método de configuración](../media/4a709cb4583c82f469c179dd6b1cfa71.png)
+![Illustration de la méthode de configuration](../media/4a709cb4583c82f469c179dd6b1cfa71.png)
 
-Coloca el módulo de la matriz de puntos como sigue:
+Placez le module de matrice comme suit :
 
-![Ilustración del método de configuración](../media/10e87958bbef207075643ae4f5481457.jpeg)
+![Illustration de la méthode de configuration](../media/10e87958bbef207075643ae4f5481457.jpeg)
 
-Luego convierte 0x00,0x18,0x24,0x42,0x81,0x99,0x66,0x00 en números binarios:
+Ensuite convertissez 0x00,0x18,0x24,0x42,0x81,0x99,0x66,0x00 en nombres binaires :
 
-- `0x00` corresponde a `0 0 0 0 0 0 0 0`.
+- `0x00` correspond à `0 0 0 0 0 0 0 0`.
 
-- `0x18` corresponde a `0 0 0 1 1 0 0 0`.
+- `0x18` correspond à `0 0 0 1 1 0 0 0`.
 
-- `0x24` corresponde a `0 0 1 0 0 1 0 0`.
+- `0x24` correspond à `0 0 1 0 0 1 0 0`.
 
-- `0x42` corresponde a `0 1 0 0 0 0 1 0`.
+- `0x42` correspond à `0 1 0 0 0 0 1 0`.
 
-- `0x81` corresponde a `1 0 0 0 0 0 0 1`.
+- `0x81` correspond à `1 0 0 0 0 0 0 1`.
 
-- `0x99` corresponde a `1 0 0 1 1 0 0 1`.
+- `0x99` correspond à `1 0 0 1 1 0 0 1`.
 
-- `0x66` corresponde a `0 1 1 0 0 1 1 0`.
+- `0x66` correspond à `0 1 1 0 0 1 1 0`.
 
-- `0x00` corresponde a `0 0 0 0 0 0 0 0`.
+- `0x00` correspond à `0 0 0 0 0 0 0 0`.
 
-El primer número hexadecimal controla la primera columna de LEDs.
+Le premier nombre hexadécimal contrôle la première colonne de LED.
 
-El segundo valor controla la segunda columna, y así sucesivamente.
+La seconde valeur contrôle la deuxième colonne, et ainsi de suite.
 
-Estos ajustes convierten cada valor hexadecimal de 8 bits en su representación binaria.
+Ces réglages convertissent chaque valeur hexadécimale sur 8 bits en sa représentation binaire.
 
-El número 0 significa LED apagado, y el número 1 significa LED encendido.
+Le chiffre 0 signifie LED éteinte, et le chiffre 1 signifie LED allumée.
 
-El primer número convertido controla el encendido/apagado de la primera fila de LEDs, y así sucesivamente.
+Le premier nombre converti contrôle l'allumage et l'extinction de la première rangée de LED, et ainsi de suite.
 
-![Ilustración del método de configuración](../media/3ba4bb34ddf3ef182c5aa5bc7a309605.png)
+![Illustration de la méthode de configuration](../media/3ba4bb34ddf3ef182c5aa5bc7a309605.png)
 
 ---

@@ -1,65 +1,65 @@
-# Lección 18: Sensor de movimiento PIR
+# Leçon 18 : Capteur de mouvement PIR
 
-> **Kit:** Kit de sensores Keyestudio 48 en 1  
-> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno ATmega328P
+> **Kit :** Kit de capteurs Keyestudio 48-en-1  
+> **Carte :** Keyestudio V4.0 / Carte compatible Arduino Uno ATmega328P
 
-![Proyecto 18: ilustración del sensor de movimiento PIR](../media/ce608db25742f19fdf6eceda756a59d9.png)
+![Illustration du projet 18 : capteur de mouvement PIR](../media/ce608db25742f19fdf6eceda756a59d9.png)
 
-## Descripción
+## Description
 
-El sensor de movimiento por infrarrojos piroeléctrico puede detectar señales infrarrojas de una persona o animal en movimiento y emitir señales de conmutación.
+Le capteur de mouvement infrarouge pyroélectrique peut détecter les signaux infrarouges émis par une personne ou un animal en mouvement, et fournir des signaux de commutation en sortie.
 
-Puede aplicarse en diversas situaciones para detectar el movimiento del cuerpo humano.
+Il peut être appliqué à diverses situations pour détecter le mouvement du corps humain.
 
-Los sensores infrarrojos piroeléctricos convencionales requieren un detector piroeléctrico corporal, un chip profesional y un circuito periférico complejo, por lo que su tamaño es mucho mayor, con circuitos complicados y menor fiabilidad.
+Les capteurs infrarouges pyroélectriques conventionnels nécessitent un détecteur pyroélectrique corporel, une puce professionnelle et un circuit périphérique complexe, ce qui entraîne une taille beaucoup plus importante, un circuit complexe et une fiabilité moindre.
 
-Ahora presentamos este nuevo sensor de movimiento piroeléctrico por infrarrojos, diseñado especialmente para Arduino.
+Nous lançons maintenant ce nouveau capteur de mouvement infrarouge pyroélectrique, spécialement conçu pour Arduino.
 
-Emplea un sensor piroeléctrico corporal infrarrojo digital integrado, con tamaño más reducido, mayor fiabilidad, menor consumo y circuito periférico más simple.
+Il utilise un capteur pyroélectrique infrarouge corporel numérique intégré, avec une taille réduite, une fiabilité accrue, une consommation d'énergie plus faible et un circuit périphérique plus simple.
 
-## Especificaciones
+## Spécifications
 
-- Voltaje de entrada: 3.3 \~ 5V, máximo 6V
+- Tension d'entrée : 3.3 \~ 5V, maximum 6V
 
-- Corriente de trabajo: 15uA
+- Courant de fonctionnement : 15 µA
 
-- Temperatura de funcionamiento: -20 \~ 85 ℃
+- Température de fonctionnement : -20 \~ 85 ℃
 
-- Voltaje de salida: Alto 3V, Bajo 0V
+- Tension de sortie : Haut 3V, Bas 0V
 
-- Tiempo de retardo de salida (nivel alto): Aproximadamente 2.3 a 3 segundos
+- Temps de maintien de la sortie (niveau Haut) : Environ 2,3 à 3 secondes
 
-- Ángulo de detección: 100 °
+- Angle de détection : 100°
 
-- Distancia de detección: 7 metros
+- Distance de détection : 7 mètres
 
-- LED indicador de salida (si la salida está HIGH, se encenderá)
+- LED indicatrice de sortie (si la sortie est à l'état Haut, elle sera ALLUMÉE)
 
-- Corriente límite por pin: 100mA
+- Courant limite pour la broche : 100 mA
 
-- Tamaño: 30*20mm
+- Taille : 30*20 mm
 
-- Peso: 4g
+- Poids : 4 g
 
-## Diagrama de conexión
+## Schéma de connexion
 
-Primero, necesita preparar los siguientes componentes antes de la conexión:
+Avant de connecter, vous devez préparer les pièces suivantes :
 
-- Placa V4.0*1
+- Carte V4.0*1
 
-- Sensor de movimiento PIR*1
+- Capteur de mouvement PIR*1
 
-- Cable USB*1
+- Câble USB*1
 
-- Cables jumper*3
+- Fils de raccordement*3
 
-Conecte el pin S del módulo al Digital 3 de la placa V4.0, conecte el pin negativo al puerto GND y el pin positivo al puerto 5V.
+Connectez la broche S du module au Digital 3 de la carte V4.0, connectez la broche négative au port GND, la broche positive au port 5V.
 
-![Ilustración del diagrama de conexión](../media/01970d510c03a8c7aa3ef0c13ea70cff.jpeg)
+![Schéma de connexion](../media/01970d510c03a8c7aa3ef0c13ea70cff.jpeg)
 
-## Código de ejemplo
+## Exemple de code
 
-Copie y pegue el código siguiente en el software de Arduino.
+Copiez et collez le code ci-dessous dans l'IDE Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -83,14 +83,14 @@ void loop()
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Resultado de ejemplo
+## Exemple de résultat
 
-Después de hacer el cableado y alimentar la placa, subir bien el código, si el sensor detecta a alguien moviéndose cerca, el indicador D13 en la placa V4.0 se encenderá, y "¡Alguien está en esta área!" se mostrará en el monitor serial del software Arduino.
+Une fois le câblage réalisé et l'alimentation connectée, et le code bien téléversé, si le capteur détecte une personne en mouvement à proximité, le témoin D13 sur la carte V4.0 s'allumera, et "Quelqu'un se trouve dans cette zone !" s'affichera sur le moniteur série de l'IDE Arduino.
 
-Si no detecta movimiento, el indicador D13 en la placa V4.0 estará apagado, y "¡Nadie!" se mostrará en el monitor serial.
+S'il ne détecte aucun mouvement, le témoin D13 sur la carte V4.0 restera éteint, et "Personne !" s'affichera sur le moniteur série.
 
-![Ilustración del resultado de ejemplo](../media/e25d28654311fa7820a1886a285353e5.png)
+![Illustration du résultat (1)](../media/e25d28654311fa7820a1886a285353e5.png)
 
-![Ilustración del resultado de ejemplo](../media/9b6209c8ce5b4be73f8378d21b639d28.jpeg)
+![Illustration du résultat (2)](../media/9b6209c8ce5b4be73f8378d21b639d28.jpeg)
 
 ---

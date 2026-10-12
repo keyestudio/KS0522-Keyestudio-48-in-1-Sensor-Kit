@@ -1,35 +1,35 @@
-# Lección 14: Interruptor de inclinación digital
+# Leçon 14 : Interrupteur d'inclinaison numérique
 
-> **Kit:** Kit de sensores Keyestudio 48 en 1  
-> **Placa:** Keyestudio V4.0 / placa compatible con Arduino Uno (ATmega328P)
+> **Kit :** Keyestudio 48-in-1 Sensor Kit  
+> **Carte :** Keyestudio V4.0 / carte ATmega328P compatible Arduino Uno
 
-![Proyecto 14: ilustración del interruptor de inclinación digital](../media/45a40bdcc098c1c4e0efb8246447173c.png)
+![Illustration du projet 14 : Interrupteur d'inclinaison numérique](../media/45a40bdcc098c1c4e0efb8246447173c.png)
 
-## Descripción
+## Description
 
-El sensor de inclinación es un interruptor de inclinación digital. Puede usarse como un interruptor de inclinación simple.
+Le capteur d'inclinaison est un interrupteur d'inclinaison numérique. Il peut être utilisé comme un simple interrupteur d'inclinaison.
 
-Conéctalo simplemente a nuestro shield de E/S y sensores; la conexión de cables es sencilla. Con un shield de sensores dedicado y un Arduino, puedes crear muchos proyectos interesantes e interactivos.
+Branchez-le simplement sur notre IO/Sensor shield, ce qui facilite le branchement des fils. Avec un shield capteur dédié et une carte Arduino, vous pouvez réaliser de nombreux projets intéressants et interactifs.
 
-## Especificaciones
+## Spécifications
 
-- Tensión de alimentación: 3.3V a 5V
+- Tension d'alimentation : 3,3 V à 5 V
 
-- Interfaz: Digital
+- Interface : Numérique
 
-- Tamaño: 30*20mm
+- Dimensions : 30*20 mm
 
-- Peso: 3g
+- Poids : 3 g
 
-## Diagrama de conexión
+## Schéma de connexion
 
-Conecta el pin S del módulo al Digital 3 de la placa V4.0, conecta el pin negativo al puerto GND, el pin positivo al puerto 5V.
+Connectez la broche S du module au Digital 3 de la carte V4.0, connectez la broche négative au port GND, la broche positive au port 5V.
 
-![Ilustración del diagrama de conexión](../media/b909cdd6f697779371498723dc1407ab.jpeg)
+![Illustration du schéma de connexion](../media/b909cdd6f697779371498723dc1407ab.jpeg)
 
-## Código de ejemplo
+## Exemple de code
 
-Copia y pega el siguiente código en el software de Arduino.
+Copiez et collez le code ci‑dessous dans le logiciel Arduino.
 
 ```c
 int Led=13;//define LED interface
@@ -54,14 +54,14 @@ digitalWrite(Led,HIGH);
 }
 ```
 
-## Resultado de ejemplo
+## Exemple de résultat
 
-Una vez cableado y alimentado, sube correctamente el código a la placa V4.0.
+Une fois le câblage effectué et l'alimentation branchée, téléversez correctement le code sur la carte V4.0.
 
-![Ilustración del resultado de ejemplo](../media/d6a0aa9af1e43265114eec8570ac0f3c.png)
+![Illustration du résultat](../media/d6a0aa9af1e43265114eec8570ac0f3c.png)
 
-Entonces inclina el sensor; verás que el LED del sensor se enciende. Se muestra a continuación.
+Inclinez ensuite le capteur : vous verrez la LED du capteur s'allumer, comme montré ci‑dessous.
 
-![Ilustración del resultado de ejemplo](../media/6c4a144c26675a100bffa806c532736c.png)
+![Illustration du résultat](../media/6c4a144c26675a100bffa806c532736c.png)
 
 ---
