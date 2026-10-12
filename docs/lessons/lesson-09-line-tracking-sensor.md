@@ -1,47 +1,47 @@
-# Leçon 09 : Capteur de suivi de ligne
+# Lezione 09: Sensore di tracciamento della linea
 
-> **Kit :** Kit de capteurs Keyestudio 48-en-1  
-> **Carte :** Keyestudio V4.0 / Carte compatible Arduino Uno ATmega328P
+> **Kit:** Kit sensori Keyestudio 48-in-1  
+> **Scheda:** Keyestudio V4.0 / Scheda compatibile Arduino Uno ATmega328P
 
-![Illustration du projet 9 : capteur de suivi de ligne](../media/c476ef922ab6a8d31cb68f3ab3fa2ced.png)
+![Progetto 9: Illustrazione del sensore di tracciamento della linea](../media/c476ef922ab6a8d31cb68f3ab3fa2ced.png)
 
-## Description
+## Descrizione
 
-Ce capteur de suivi de ligne peut détecter une ligne blanche sur fond noir ou une ligne noire sur fond blanc.
+Questo sensore di tracciamento della linea può rilevare una linea bianca su nero o una linea nera su bianco.
 
-Le signal unique de suivi de ligne fournit une sortie stable au niveau TTL pour un suivi plus précis et plus stable. Une option multi-canaux peut être facilement mise en œuvre en installant les capteurs de suivi de ligne nécessaires pour le robot.
+Il singolo segnale di tracciamento fornisce un'uscita stabile TTL per una linea più precisa e più stabile. L'opzione multicanale può essere facilmente ottenuta installando i sensori per robot di tracciamento della linea necessari.
 
-## Spécifications
+## Specifiche
 
-1. Alimentation : +5V
+1. Alimentazione: +5V
 
-2. Courant de fonctionnement : \<10mA
+2. Corrente di funzionamento: \<10mA
 
-3. Plage de température de fonctionnement : 0°C \~ + 50°C
+3. Intervallo di temperatura di funzionamento: 0°C \~ + 50°C
 
-4. Interface de sortie : interface 3 fils (1 - signal, 2 - alimentation, 3 - négatif de l'alimentation)
+4. Interfaccia di uscita: interfaccia a 3 fili (1 - segnale, 2 - alimentazione, 3 - negativo dell'alimentazione)
 
-5. Niveau de sortie : niveau TTL
+5. Livello di uscita: livello TTL
 
-## Schéma de connexion
+## Schema di collegamento
 
-Tout d'abord, préparez les pièces suivantes avant la connexion :
+Per prima cosa, è necessario preparare i seguenti componenti prima del collegamento:
 
-- Carte V4.0\*1
+- Scheda V4.0\*1
 
-- Module de suivi de ligne \*1
+- Modulo di tracciamento linea \*1
 
-- Câble USB\*1
+- Cavo USB\*1
 
-- Fils de connexion\*3
+- Cavi jumper\*3
 
-Connectez la broche S du module au Digital 3 de la carte V4.0, connectez la broche GND au port GND, et la broche V+ au port 5V.
+Collega il pin S del modulo a Digital 3 della scheda V4.0, collega il pin GND alla porta GND, il pin V+ alla porta 5V.
 
-![Illustration du schéma de connexion](../media/6727a1d7d92c3878fc51b8db0502fd14.jpeg)
+![Illustrazione dello schema di collegamento](../media/6727a1d7d92c3878fc51b8db0502fd14.jpeg)
 
-## Exemple de code
+## Codice di esempio
 
-Copiez et collez le code ci-dessous dans le logiciel Arduino.
+Copia e incolla il codice seguente nel software Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -58,10 +58,10 @@ void loop()
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Exemple de résultat
+## Esempio di risultato
 
-![Illustration du résultat d'exemple](../media/af115c59987fee06447790f1740e3203.jpeg)
+![Illustrazione dell'esempio di risultato](../media/af115c59987fee06447790f1740e3203.jpeg)
 
-Une fois le code téléchargé sur la carte, ouvrez le moniteur série et réglez le débit (baud) sur 9600, puis vous pourrez voir les données du capteur.
+Dopo aver caricato il codice sulla scheda, apri il monitor seriale e imposta la velocità di trasmissione (baud) a 9600, quindi potrai vedere i dati dal sensore.
 
 ---

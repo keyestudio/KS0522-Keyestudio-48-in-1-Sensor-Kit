@@ -1,37 +1,37 @@
-# Leçon 05 : Bips du buzzer
+# Lezione 05: Suoni del cicalino
 
-> **Kit :** Keyestudio 48-in-1 Sensor Kit  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Kit sensori Keyestudio 48-in-1  
+> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
 
-![Projet 5 : Bips du buzzer - illustration](../media/88c349b0602dfa2e166faabc13cb2f20.png)
+![Progetto 5: Suoni del cicalino - illustrazione](../media/88c349b0602dfa2e166faabc13cb2f20.png)
 
-## Description
+## Descrizione
 
-Voici le module sonore le plus simple. Vous pouvez le piloter en appliquant un niveau haut/bas. En changeant la fréquence de son bourdonnement, on peut produire des sons différents.
+Ecco il modulo più semplice per produrre suoni. Puoi pilotarlo con livello alto/basso. Cambiando la frequenza con cui vibra si possono ottenere suoni diversi.
 
-Ce module est largement utilisé dans nos appareils quotidiens tels que PC, réfrigérateur, téléphones, etc.
+Questo modulo è ampiamente utilizzato nei nostri elettrodomestici quotidiani come PC, frigorifero, telefoni, ecc.
 
-De plus, vous pouvez créer de nombreux projets interactifs intéressants avec ce petit mais utile module. Essayez-le !! Vous trouverez le son électronique qu'il produit très fascinant.
+Inoltre, puoi creare molti progetti interattivi interessanti con questo piccolo ma utile modulo. Provalo! Troverai davvero affascinante il suono elettronico che crea.
 
-## Spécification
+## Specifiche
 
-- Tension de fonctionnement : 3.3-5v
+- Tensione di lavoro: 3.3-5V
 
-- Type d'interface : numérique
+- Tipo di interfaccia: digitale
 
-- Taille : 30*20mm
+- Dimensioni: 30*20mm
 
-- Poids : 4g
+- Peso: 4g
 
-## Schéma de connexion
+## Schema di collegamento
 
-Reliez la broche S du module au Digital 3 de la carte V4.0, la broche négative au port GND, la broche positive au port 5V.
+Collega il pin S del modulo a Digital 3 della scheda V4.0, collega il pin negativo al connettore GND, il pin positivo al connettore 5V.
 
-![Schéma de connexion - illustration](../media/173f2e9a828b0b20d76dc07de57892c1.jpeg)
+![Schema di collegamento - illustrazione](../media/173f2e9a828b0b20d76dc07de57892c1.jpeg)
 
-## Exemple de code
+## Codice di esempio
 
-Copiez-collez le code ci-dessous dans le logiciel Arduino.
+Copia e incolla il codice sottostante nel software Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -50,10 +50,10 @@ int buzzPin =3;    //Connect Buzzer on Digital Pin3
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Résultat d'exemple
+## Esempio di risultato
 
-Une fois le code téléversé sur la carte, le buzzer émettra un son.
+Dopo aver caricato il codice sulla scheda, il cicalino emetterà un suono.
 
-![Illustration du résultat](../media/109e3287bff29d1d1fb88369d6705ad3.png)
+![Esempio di risultato - illustrazione](../media/109e3287bff29d1d1fb88369d6705ad3.png)
 
 ---

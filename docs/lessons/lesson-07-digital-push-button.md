@@ -1,61 +1,61 @@
-# Leçon 07 : Bouton poussoir numérique
+# Lezione 07: Pulsante Digitale
 
-> **Kit :** Keyestudio 48-in-1 Sensor Kit  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Kit sensori Keyestudio 48-in-1  
+> **Scheda:** Keyestudio V4.0 / scheda compatibile con Arduino Uno (ATmega328P)
 
-![Illustration du projet 7 : bouton poussoir numérique](../media/a8707354e54ea51bb92584f791ae79e5.png)
+![Illustrazione Progetto 7: Pulsante Digitale](../media/a8707354e54ea51bb92584f791ae79e5.png)
 
-## Description
+## Descrizione
 
-C'est un module de bouton basique. Vous pouvez simplement le brancher sur un shield IO pour votre première expérimentation avec Arduino.
+Questo è un modulo pulsante di base. Puoi semplicemente collegarlo a uno shield IO per avere la tua prima esperienza con Arduino.
 
-## Fonctionnalités
+## Caratteristiche
 
-- Large plage de tension de 3.3V à 5V
+- Ampia gamma di tensione da 3.3V a 5V
 
-- Interfaces facilement reconnaissables des capteurs ("A" pour analogique et "D" pour numérique)
+- Interfacce dei sensori facilmente riconoscibili ("A" per Analogico e "D" per Digitale)
 
-- Trou de montage standard
+- Foro di montaggio standard
 
-- Icônes claires
+- Icone chiare
 
-- Connecteur de haute qualité
+- Connettore di alta qualità
 
-- Facile à brancher et à utiliser
+- Facile da collegare e utilizzare
 
-- Grand bouton et capuchon de haute qualité
+- Pulsante ampio e cappuccio di alta qualità
 
-- Pour réaliser des projets intéressants et interactifs
+- Per realizzare progetti interessanti e interattivi
 
-## Spécifications
+## Specifiche
 
-- Tension d'alimentation : 3.3V à 5V
+- Tensione di alimentazione: 3.3V a 5V
 
-- Interface : Digital
+- Interfaccia: Digitale
 
-- Dimensions : 30*20mm
+- Dimensioni: 30*20mm
 
-- Poids : 4g
+- Peso: 4g
 
-## Schéma de connexion
+## Schema di collegamento
 
-Tout d'abord, préparez les éléments suivants avant la connexion :
+Per prima cosa, prepara i seguenti componenti prima del collegamento:
 
-- Carte V4.0*1
+- Scheda V4.0*1
 
-- Module de bouton poussoir*1
+- Modulo pulsante*1
 
-- Câble USB*1
+- Cavo USB*1
 
-- Fils de connexion*3
+- Cavi jumper*3
 
-Connectez la broche S du module à Digital 3 de la carte V4.0, connectez la broche négative au port GND, la broche positive au port 5V.
+Collega il pin S del modulo a Digital 3 della scheda V4.0, collega il pin negativo al connettore GND e il pin positivo al connettore 5V.
 
-![Illustration du schéma de connexion](../media/6ec73b961481bf0794572a842c5231fa.jpeg)
+![Illustrazione schema di collegamento](../media/6ec73b961481bf0794572a842c5231fa.jpeg)
 
-## Code d'exemple
+## Codice di esempio
 
-Copiez et collez le code ci-dessous dans le logiciel Arduino.
+Copia e incolla il codice sottostante nell'ambiente Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -78,12 +78,12 @@ void loop(){
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Résultat
+## Risultato d'esempio
 
-Câblez-le correctement comme sur la figure ci-dessous, puis téléversez le code sur la carte.
+Collega tutto come mostrato nell'immagine sottostante, poi carica il codice sulla scheda.
 
-Lorsque vous appuyez sur le bouton numérique, la LED 13 de la carte V4.0 s'allume. Lorsque vous relâchez le bouton, la LED s'éteint. Illustré ci-dessous.
+Quando premi il pulsante digitale, il LED 13 sulla scheda V4.0 si accende. Quando rilasci il pulsante, il LED si spegne. Mostrato qui sotto.
 
-![Illustration du résultat](../media/ac03d3fa1c0f5de7dae18c6e64406e60.png)
+![Illustrazione risultato d'esempio](../media/ac03d3fa1c0f5de7dae18c6e64406e60.png)
 
 ---

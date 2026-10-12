@@ -1,47 +1,47 @@
-# Leçon 28 : Capteur de vibration céramique analogique
+# Lezione 28: Sensore di vibrazione ceramico analogico
 
-> **Kit :** Kit de capteurs Keyestudio 48-en-1  
-> **Carte :** Keyestudio V4.0 / Carte compatible Arduino Uno ATmega328P
+> **Kit:** Keyestudio 48-in-1 Kit sensori  
+> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
 
-![Module capteur de vibration céramique analogique](../media/2cf5c2793157816a2346a730ad064955.jpeg)
+![Modulo sensore di vibrazione ceramico analogico](../media/2cf5c2793157816a2346a730ad064955.jpeg)
 
-## Description
+## Descrizione
 
-Ce capteur de vibration est basé sur une puce céramique piézoélectrique analogique. Il exploite le processus de conversion inverse par lequel la vibration de la céramique piézoélectrique génère des signaux électriques. Lorsque la puce céramique piézoélectrique vibre, la broche de signal du capteur génère des signaux électriques.
+Questo sensore di vibrazione è basato su un chip ceramico piezoelettrico analogico. Sfrutta il processo piezoelettrico: la vibrazione del chip ceramico piezoelettrico genera segnali elettrici. Quando il chip vibra, il terminale di segnale del sensore produrrà segnali elettrici.
 
-Le capteur peut être utilisé avec un shield de capteurs Arduino dédié, et le port analogique d'Arduino peut détecter de faibles signaux de vibration, ce qui permet de réaliser des applications interactives liées aux vibrations, comme une batterie électronique.
+Il sensore può essere utilizzato con lo shield sensori dedicato per Arduino; la porta analogica di Arduino è in grado di percepire deboli segnali di vibrazione, permettendo applicazioni interattive legate alla vibrazione, come una batteria elettronica.
 
-Connectez le capteur de vibration au port analogique A0 de l'Arduino UNO. En faisant vibrer le capteur avec des intensités différentes, vous verrez différentes valeurs de sortie affichées dans le moniteur série de l'IDE Arduino.
+Collega il sensore di vibrazione alla porta analogica A0 di Arduino UNO. Vibrando il sensore con diversa intensità, vedrai i diversi valori di uscita visualizzati sul monitor seriale dell'IDE Arduino.
 
-## Spécifications
+## Specifiche
 
-- Tension d'alimentation : 3,3V à 5V
+- Tensione di alimentazione: 3.3V a 5V
 
-- Courant de fonctionnement：\<1mA
+- Corrente di lavoro: <1mA
 
-- Plage de température de fonctionnement：－10℃～＋70℃
+- Intervallo di temperatura di esercizio: －10℃～＋70℃
 
-- Signal de sortie：signal analogique
+- Segnale in uscita: segnale analogico
 
-## Schéma de connexion
+## Schema di collegamento
 
-Avant de connecter, préparez les éléments suivants :
+Per prima cosa, prepara i seguenti componenti prima del collegamento:
 
-- Carte V4.0\*1
+- Scheda V4.0\*1
 
-- capteur de vibration\*1
+- sensore di vibrazione\*1
 
-- Câble USB\*1
+- Cavo USB\*1
 
-- fils Dupont\*3
+- Cavi jumper\*3
 
-Connectez la broche S du module à l'analogique A0 de la carte V4.0, connectez la broche négative au port GND, et la broche NC au port 5V.
+Collega il pin S del modulo alla porta analogica A0 della scheda V4.0, collega il pin negativo al GND, il pin NC al 5V.
 
-![Illustration du schéma de connexion](../media/92fce2d45b05876a7928070bd2b137da.jpeg)
+![Illustrazione schema di collegamento](../media/92fce2d45b05876a7928070bd2b137da.jpeg)
 
-## Exemple de code
+## Codice di esempio
 
-Copiez et collez le code ci‑dessous dans l'IDE Arduino.
+Copia e incolla il codice seguente nell'IDE Arduino.
 
 ```c
 ///////////////////////////////////////////////////////////
@@ -60,14 +60,14 @@ delay(100);
 ///////////////////////////////////////////////////////////
 ```
 
-## Résultat de l'exemple
+## Esempio di risultato
 
-![Illustration du résultat](../media/e21152ca9f30274fcc658091f76f7044.png)
+![Illustrazione del risultato d'esempio](../media/e21152ca9f30274fcc658091f76f7044.png)
 
-Câblez comme sur le schéma ci‑dessus et téléversez correctement le code, puis ouvrez le moniteur série et réglez la vitesse de transmission (baud) sur 9600.
+Collega come mostrato nello schema sopra e carica il codice, poi apri il monitor seriale e imposta la velocità di trasmissione su 9600.
 
-Lorsque vous faites vibrer la puce céramique, vous verrez les données changer comme montré sur la figure ci‑dessous.
+Vibrando il chip ceramico vedrai i valori cambiare come mostrato nella figura seguente.
 
-![Illustration du résultat](../media/4be72e831696d59b36082aa45d77a04d.jpeg)
+![Illustrazione del risultato d'esempio](../media/4be72e831696d59b36082aa45d77a04d.jpeg)
 
 ---

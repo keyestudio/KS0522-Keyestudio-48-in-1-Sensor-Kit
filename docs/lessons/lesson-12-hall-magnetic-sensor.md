@@ -1,47 +1,47 @@
-# Leçon 12 : Capteur magnétique Hall
+# Lezione 12: Sensore magnetico Hall
 
-> **Kit :** Keyestudio 48-in-1 Sensor Kit  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
 
-![Illustration du Projet 12 : Capteur magnétique Hall](../media/c3d4d513b72ac04fad7e4f3015bfb1ed.png)
+![Illustrazione Progetto 12: Sensore magnetico Hall](../media/c3d4d513b72ac04fad7e4f3015bfb1ed.png)
 
-## Description
+## Descrizione
 
-Il s'agit d'un capteur d'induction magnétique. Il peut détecter des matériaux magnétiques dans une portée de détection allant jusqu'à 3 cm. La portée de détection est proportionnelle à la force du champ magnétique. La sortie est numérique marche/arrêt.
+Questo è un sensore a induzione magnetica. Può rilevare materiali magnetici entro un raggio di rilevamento fino a 3cm. Il raggio di rilevamento e l'intensità del campo magnetico sono proporzionali. L'uscita è digitale on/off.
 
-Ce capteur utilise le SFE Reed Switch - Magnetic Field Sensor.
+Questo sensore utilizza lo SFE Reed Switch - Magnetic Field Sensor.
 
-## Spécification
+## Specifiche
 
-- Détection de matériaux magnétiques
+- Rileva materiali magnetici
 
-- Portée de détection : jusqu'à 3 cm
+- Raggio di rilevamento: fino a 3cm
 
-- Sortie : numérique marche/arrêt
+- Uscita: digitale on/off
 
-- Taille : 30*20mm
+- Dimensioni: 30*20mm
 
-- Poids : 3g
+- Peso: 3g
 
-## Schéma de connexion
+## Schema di collegamento
 
-Tout d'abord, vous devez préparer les pièces suivantes avant la connexion :
+Per prima cosa, prepara i seguenti componenti prima della connessione:
 
-- Carte V4.0\*1
+- Scheda V4.0\*1
 
-- Capteur Hall \*1
+- Sensore Hall \*1
 
-- Câble USB\*1
+- Cavo USB\*1
 
-- Fils de connexion\*3
+- Cavo jumper\*3
 
-Connectez la broche S du module à Digital 3 de la carte V4.0, connectez la broche négative au port GND, la broche positive au port 5V.
+Collega il pin S del modulo a Digital 3 della scheda V4.0, collega il pin negativo alla porta GND, il pin positivo alla porta 5V.
 
-![Illustration du schéma de connexion](../media/db4db0c53435ceb1d6caaaf40502247a.jpeg)
+![Illustrazione schema di collegamento](../media/db4db0c53435ceb1d6caaaf40502247a.jpeg)
 
-## Exemple de code
+## Codice di esempio
 
-Copiez et collez le code ci-dessous dans le logiciel Arduino.
+Copia e incolla il codice sottostante nel software Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -65,14 +65,14 @@ void loop(){
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Exemple de résultat
+## Risultato di esempio
 
-Branchez le tout et téléversez correctement le code sur la carte, vous verrez que l'indicateur D13 sur la carte V4.0 est éteint, et la LED sur le module est également éteinte.
+Collega i fili e carica correttamente il codice sulla scheda, vedrai che l'indicatore D13 sulla scheda V4.0 è spento, e anche il LED sul modulo è spento.
 
-![Illustration du résultat exemple](../media/102f67e289b5834de7fa80b6e6d99c20.png)
+![Illustrazione risultato di esempio](../media/102f67e289b5834de7fa80b6e6d99c20.png)
 
-Mais si vous approchez une bille magnétique du module Hall, vous verrez que l'indicateur D13 sur la carte V4.0 s'allume, et la LED sur le module s'allume également.
+Ma se avvicini una sfera magnetica al modulo Hall, vedrai che l'indicatore D13 sulla scheda V4.0 si accende, e anche il LED sul modulo si accende.
 
-![Illustration du résultat exemple](../media/c3c4044f2205dd1ff162ef7e211d2b2c.png)
+![Illustrazione risultato di esempio](../media/c3c4044f2205dd1ff162ef7e211d2b2c.png)
 
 ---

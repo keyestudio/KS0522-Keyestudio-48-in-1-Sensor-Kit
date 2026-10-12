@@ -1,5 +1,5 @@
 =============================================
-Keyestudio 48-in-1 Sensor Kit: Projets
+Keyestudio 48-in-1 Sensor Kit: Progetti
 =============================================
 
 

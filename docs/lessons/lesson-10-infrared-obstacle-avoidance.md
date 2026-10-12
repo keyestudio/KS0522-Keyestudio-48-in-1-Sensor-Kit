@@ -1,61 +1,61 @@
-# Leçon 10 : Évitement d'obstacles infrarouges
+# Lezione 10: Evitamento ostacoli a infrarossi
 
-> **Kit :** Keyestudio Kit de capteurs 48 en 1  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Kit sensori Keyestudio 48-in-1  
+> **Scheda:** Keyestudio V4.0 / scheda ATmega328P compatibile con Arduino Uno
 
-![Illustration du projet 10 : Évitement d'obstacles infrarouges](../media/54ab9db703340471fd9c3151934b85e7.png)
+![Illustrazione del progetto 10: Evitamento ostacoli a infrarossi](../media/54ab9db703340471fd9c3151934b85e7.png)
 
-## Description
+## Descrizione
 
-Le capteur détecteur d'obstacles infrarouge est équipé d'une fonction de réglage de la distance et est spécialement conçu pour les robots à roues.
+Il sensore rilevatore di ostacoli a infrarossi è dotato di funzione di regolazione della distanza ed è progettato appositamente per robot su ruote.
 
-Ce capteur présente une forte adaptabilité à la lumière ambiante et une grande précision.
+Questo sensore ha una forte adattabilità alla luce ambientale ed è di alta precisione.
 
-Il possède une paire d'émetteur et de récepteur infrarouges. Lorsque le rayon infrarouge émis par le tube émetteur rencontre un obstacle (son réflecteur), le rayon infrarouge est réfléchi vers le tube récepteur, ainsi l'indicateur s'allume et l'interface de sortie de signal fournit un signal numérique.
+Dispone di una coppia di tubi trasmittente e ricevente a infrarossi. Quando il raggio infrarosso emesso dal tubo trasmittente incontra un ostacolo (il suo riflettore), il raggio verrà riflesso verso il tubo ricevente, così l'indicatore si illuminerà e l'interfaccia di uscita del segnale fornirà un segnale digitale.
 
-De plus, vous pouvez tourner le bouton du potentiomètre pour ajuster la distance de détection (distance effective : 2～40cm, tension de fonctionnement : 3.3V-5V).
+Inoltre, è possibile ruotare la manopola del potenziometro per regolare la distanza di rilevamento (distanza effettiva: 2～40cm, tensione di lavoro: 3.3V-5V).
 
-Grâce à une large plage de tension, ce capteur peut fonctionner de manière stable même en cas de fluctuation de la tension d'alimentation, et convient à divers microcontrôleurs, contrôleurs Arduino et contrôleurs BS2.
+Grazie a un ampio intervallo di tensione, questo sensore può funzionare stabilmente anche con tensione di alimentazione variabile ed è adatto a vari microcontrollori, controller Arduino e controller BS2.
 
-Un robot équipé de ce capteur peut détecter les obstacles dans son environnement.
+Un robot dotato di questo sensore può percepire gli ostacoli nell'ambiente.
 
-## Spécifications
+## Specifiche
 
-- Tension de fonctionnement : DC 3.3V-5V
+- Tensione di lavoro: DC 3.3V-5V
 
-- Courant de fonctionnement : ≥20mA
+- Corrente di lavoro: ≥20mA
 
-- Température de fonctionnement : －10℃ à ＋50℃
+- Temperatura di esercizio: －10℃ a＋50℃
 
-- Distance de détection : 2-40cm
+- Distanza di rilevamento: 2-40cm
 
-- Interface IO : 4 interfaces filaires (-/+/S/EN)
+- Interfaccia IO: 4 fili (-/+/S/EN)
 
-- Signal de sortie : tension TTL
+- Segnale in uscita: tensione TTL
 
-- Mode de réglage : potentiomètre multi-tours
+- Modalità di alloggiamento: regolazione della resistenza multigiro
 
-- Angle effectif : 35°
+- Angolo efficace: 35°
 
-## Schéma de connexion
+## Schema di collegamento
 
-Tout d'abord, vous devez préparer les pièces suivantes avant la connexion :
+Per prima cosa, prepara i seguenti componenti prima del collegamento:
 
-- Carte V4.0\*1
+- Scheda V4.0\*1
 
-- Module détecteur d'obstacles \*1
+- Modulo rilevatore ostacoli \*1
 
-- Câble USB\*1
+- Cavo USB\*1
 
-- Fils de liaison\*3
+- Cavi jumper\*3
 
-Connectez la broche Out du module à Digital 2 de la carte V4.0, connectez la broche V+ au port 5V, la broche GND au port GND.
+Collega il pin Out del modulo a Digital 2 della scheda V4.0, collega il pin V+ alla porta 5V, il pin GND alla porta GND.
 
-![Illustration du schéma de connexion](../media/48f60a482d777df19bc43a3203479b0c.jpeg)
+![Illustrazione schema di collegamento](../media/48f60a482d777df19bc43a3203479b0c.jpeg)
 
-## Exemple de code
+## Codice di esempio
 
-Copiez et collez le code ci-dessous dans le logiciel Arduino.
+Copia e incolla il codice sottostante nell'ambiente Arduino.
 
 ```c
 const uint8_t sensorPin = 2;
@@ -72,14 +72,14 @@ void loop() {
 }
 ```
 
-## Résultat
+## Risultato di esempio
 
-Une fois le code téléversé sur la carte, vous pouvez voir la LED sur la carte V4.0 et sur le capteur de détection d'obstacles s'allumer.
+Dopo aver caricato il codice sulla scheda, puoi vedere il LED sia sulla scheda V4.0 che sul sensore rilevatore di ostacoli acceso.
 
-![Illustration du résultat](../media/44d035dfe09b4c803becd84c95b05956.png)
+![Illustrazione del risultato di esempio](../media/44d035dfe09b4c803becd84c95b05956.png)
 
-Si l'on place un bloc de mousse devant le capteur, lorsque le capteur détecte l'obstacle, la LED du capteur s'allume.
+Se posizioniamo un blocco di schiuma davanti al sensore, questa volta quando il sensore rileva l'ostacolo, il LED sul sensore si accenderà.
 
-![Illustration du résultat](../media/da4468fead816d42b2ac43b29716b91f.png)
+![Illustrazione del risultato di esempio](../media/da4468fead816d42b2ac43b29716b91f.png)
 
 ---

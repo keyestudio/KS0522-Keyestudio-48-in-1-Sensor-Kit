@@ -1,45 +1,45 @@
-# Leçon 04 : Feu tricolore
+# Lezione 04: Semaforo
 
-> **Kit :** Keyestudio 48-in-1 Sensor Kit  
-> **Carte :** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Scheda:** Keyestudio V4.0 / Scheda ATmega328P compatibile con Arduino Uno
 
-![Illustration du projet 4 : Feu tricolore](../media/a20653cffac8985dc4919614540ac367.jpeg)
+![Progetto 4: Illustrazione del semaforo](../media/a20653cffac8985dc4919614540ac367.jpeg)
 
-## Description
+## Descrizione
 
-Lors de l'apprentissage du microcontrôleur, on utilise généralement trois LED, à savoir les voyants rouge, vert et jaune, pour simuler le clignotement d'un feu tricolore via un branchement externe.
+Quando si impara a usare un microcontrollore, si utilizzano di solito tre LED — rosso, verde e giallo — per simulare il lampeggio di un semaforo tramite collegamenti esterni.
 
-Cette fois-ci nous avons conçu spécialement ce module qui est très pratique pour le câblage ; sur le module vous pouvez voir les LED rouge, jaune et verte.
+Questa volta abbiamo progettato appositamente questo modulo, molto comodo per il cablaggio; sul modulo sono presenti i LED rosso, giallo e verde.
 
-Ce module est entièrement compatible avec le microcontrôleur Arduino et le système Raspberry Pi.
+Questo modulo è completamente compatibile con il microcontrollore Arduino e con il sistema Raspberry Pi.
 
-## Spécification
+## Specifiche
 
-- Tension de fonctionnement : 3.3-5v
+- Tensione di funzionamento: 3.3-5V
 
-- Type d'interface : numérique
+- Tipo di interfaccia: digitale
 
-- Connecteur PH2.54
+- Connettore PH2.54
 
-## Schéma de connexion
+## Diagramma di collegamento
 
-Tout d'abord, vous devez préparer les pièces suivantes avant la connexion :
+Per prima cosa, è necessario preparare le seguenti parti prima del collegamento:
 
-- Carte V4.0\*1
+- Scheda V4.0\*1
 
-- Module de feu tricolore \*1
+- Modulo semaforo \*1
 
-- Câble USB\*1
+- Cavo USB\*1
 
-- Fils de connexion\*4
+- Cavi jumper\*4
 
-Connectez la broche R du module au Digital 5 de la carte V4.0, connectez la broche Y au Digital 4, la broche G au Digital 3, et la broche GND au port de masse.
+Collegare il pin R del modulo al Digital 5 della scheda V4.0, collegare il pin Y al Digital 4, il pin G al Digital 3, il pin GND alla porta di massa.
 
-![Illustration du schéma de connexion](../media/b6884692ce41d05d4afb167af5b2239d.jpeg)
+![Illustrazione del diagramma di collegamento](../media/b6884692ce41d05d4afb167af5b2239d.jpeg)
 
-## Code d'exemple
+## Codice di esempio
 
-Copiez et collez le code ci-dessous dans le logiciel Arduino.
+Copia e incolla il codice seguente nel software Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -72,10 +72,10 @@ digitalWrite(redled, LOW);// turn off red LED
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Exemple de résultat
+## Risultato di esempio
 
-Une fois le téléversement du code terminé et l'alimentation branchée, les trois LED sur le module simuleront automatiquement l'allumage et l'extinction du feu tricolore, en boucle.
+Dopo aver caricato il codice e alimentato, i tre LED sul modulo simuleranno automaticamente l'accensione e lo spegnimento del semaforo in modo ciclico.
 
-![Illustration du résultat](../media/6dd1ff8660b0a62795bd53fc6b6ff591.png)
+![Illustrazione del risultato](../media/6dd1ff8660b0a62795bd53fc6b6ff591.png)
 
 ---

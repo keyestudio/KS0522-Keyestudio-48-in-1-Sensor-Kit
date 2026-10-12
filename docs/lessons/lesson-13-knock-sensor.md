@@ -1,43 +1,43 @@
-# Leçon 13 : Capteur de percussion
+# Lezione 13: Sensore Knock
 
-> **Kit :** Keyestudio 48-in-1 Sensor Kit  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
 
-![Illustration du projet 13 : capteur de percussion](../media/cef729e5b57059bc14518b0e2fdd2817.png)
+![Progetto 13: Illustrazione del sensore knock](../media/cef729e5b57059bc14518b0e2fdd2817.png)
 
-## Description
+## Descrizione
 
-Ce module est un capteur de percussion. Lorsque vous le frappez, il peut envoyer un signal momentané.
+Questo modulo è un sensore knock. Quando lo colpisci, può inviare un segnale momentaneo.
 
-Vous pouvez le combiner avec Arduino pour réaliser des expériences intéressantes, par ex. une batterie électronique.
+Puoi combinarlo con Arduino per realizzare esperimenti interessanti, ad esempio una batteria elettronica.
 
-## Spécifications
+## Specifiche
 
-- Tension de fonctionnement: 5V
+- Tensione di funzionamento: 5V
 
-- Taille: 30\*20mm
+- Dimensioni: 30\*20mm
 
-- Poids: 3g
+- Peso: 3g
 
-## Schéma de connexion
+## Schema di collegamento
 
-Avant la connexion, préparez les éléments suivants :
+Per prima cosa, prepara i seguenti componenti prima del collegamento:
 
-- Carte V4.0\*1
+- Scheda V4.0\*1
 
-- Capteur de percussion \*1
+- Sensore knock \*1
 
-- Câble USB\*1
+- Cavo USB\*1
 
-- Fils de connexion\*3
+- Cavi jumper\*3
 
-Connectez la broche S du module au Digital 3 de la carte V4.0, connectez la broche négative au port GND, la broche positive au port 5V.
+Collega il pin S del modulo al pin digitale 3 della scheda V4.0, il pin negativo a GND e il pin positivo a 5V.
 
-![Illustration du schéma de connexion](../media/1b9c27f145275e7a38d06763114f1847.jpeg)
+![Illustrazione dello schema di collegamento](../media/1b9c27f145275e7a38d06763114f1847.jpeg)
 
-## Exemple de code
+## Codice di esempio
 
-Copiez et collez le code ci-dessous dans le logiciel Arduino.
+Copia e incolla il codice seguente nell'IDE Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -64,10 +64,10 @@ digitalWrite(Led,HIGH);
 ////////////////////////////////////////////////////////////////////
 ```
 
-![Illustration du code d'exemple](../media/c3fc14de7267b517a739268ed5b88674.png)
+![Illustrazione del codice di esempio](../media/c3fc14de7267b517a739268ed5b88674.png)
 
-## Résultat
+## Esempio di risultato
 
-Après avoir réalisé le câblage et alimenté comme indiqué ci‑dessus, téléversez correctement le code, puis frappez le capteur : vous verrez que la LED D13 de la carte V4.0 et la LED D1 du capteur s'allument.
+Dopo aver effettuato i collegamenti e alimentato la scheda come indicato, e aver caricato correttamente il codice, colpisci il sensore: vedrai accendersi sia il LED D13 sulla scheda V4.0 sia il LED D1 sul sensore.
 
 ---

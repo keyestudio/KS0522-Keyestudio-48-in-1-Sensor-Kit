@@ -1,49 +1,49 @@
-# Leçon 02 : LED RVB
+# Lezione 02: LED RGB
 
-> **Kit :** Kit de capteurs Keyestudio 48-en-1  
-> **Carte :** Carte Keyestudio V4.0 / compatible Arduino Uno ATmega328P
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
 
-![Illustration du projet 2 : LED RVB](../media/de14ae0679267cf87837b7c09934c52e.png)
+![Progetto 2: illustrazione LED RGB](../media/de14ae0679267cf87837b7c09934c52e.png)
 
-## Description
+## Descrizione
 
-Il s'agit d'un module LED multicolore, qui contient 3 couleurs de base－rouge, vert et bleu. Elles peuvent être considérées comme des LED séparées.
+Questo è un modulo LED a colori completi, che contiene 3 colori di base: rosso, verde e blu. Possono essere considerati come LED separati.
 
-Après programmation, vous pouvez les allumer et les éteindre en séquence ou utiliser la sortie analogique PWM pour mélanger les trois couleurs et générer différentes teintes.
+Dopo la programmazione, puoi accenderli e spegnerli in sequenza oppure utilizzare l'uscita analogica PWM per miscelare i tre colori e generare colori diversi.
 
-## Spécifications
+## Specifiche
 
-- Couleur : rouge, vert et bleu
+- Colore: rosso, verde e blu
 
-- Luminosité : élevée
+- Luminosità: Alta
 
-- Tension : 5V
+- Tensione: 5V
 
-- Entrée : niveau numérique
+- Ingresso: livello digitale
 
-- Taille : 30 \*20mm
+- Dimensioni: 30 \*20mm
 
-- Poids : 3g
+- Peso: 3g
 
-## Schéma de connexion
+## Schema di collegamento
 
-Préparez d'abord les composants suivants avant la connexion :
+Per prima cosa, è necessario preparare i seguenti componenti prima del collegamento:
 
-- Carte V4.0\*1
+- Scheda V4.0\*1
 
-- module LED RVB \*1
+- Modulo LED RGB \*1
 
-- Câble USB\*1
+- Cavo USB\*1
 
-- Fils de connexion\*4
+- Cavi jumper\*4
 
-Connectez la broche V du module au port 5V de la carte V4.0, connectez la broche B à Digital 11, la broche R à Digital 10, et la broche G à Digital 9.
+Collega il pin V del modulo alla porta 5V della scheda V4.0, collega il pin B al Digital 11, il pin R al Digital 10, il pin G al Digital 9.
 
-![Illustration du schéma de connexion](../media/2c0a9305cd7c7b0c28c51bc2bc24eb39.jpeg)
+![Illustrazione dello schema di collegamento](../media/2c0a9305cd7c7b0c28c51bc2bc24eb39.jpeg)
 
-## Exemple de code
+## Codice di esempio
 
-Copiez et collez le code ci-dessous dans le logiciel Arduino.
+Copia e incolla il codice sottostante nel software Arduino.
 
 ```c
 const uint8_t redPin = 11;
@@ -72,10 +72,10 @@ void loop() {
 }
 ```
 
-## Exemple de résultat
+## Risultato di esempio
 
-Après le câblage et la mise sous tension, une fois le code correctement téléversé, vous verrez le module LED RVB émettre des couleurs brillantes.
+Dopo aver completato i collegamenti e alimentato la scheda, e aver caricato correttamente il codice, vedrai il modulo LED RGB emettere colori brillanti.
 
-![Illustration du résultat](../media/0872e5256edf443efcb68218505096ba.png)
+![Illustrazione del risultato](../media/0872e5256edf443efcb68218505096ba.png)
 
 ---

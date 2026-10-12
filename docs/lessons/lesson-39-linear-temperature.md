@@ -1,47 +1,51 @@
-# Leçon 39 : Température linéaire
+# Lezione 39: Temperatura lineare
 
-> **Kit :** Kit de capteurs Keyestudio 48-en-1  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Keyestudio Kit sensori 48-in-1  
+> **Scheda:** Keyestudio V4.0 / Scheda ATmega328P compatibile con Arduino Uno
 
-![Illustration du projet 39 : Température linéaire](../media/9a9b328cb85401dce3932f047f0979e0.png)
+![Progetto 39: Sensore di temperatura lineare illustrazione](../media/9a9b328cb85401dce3932f047f0979e0.png)
 
-## Introduction
+## Introduzione
 
-Le capteur de température linéaire LM35 est basé sur la puce de température LM35. Il peut être utilisé pour détecter la température ambiante de l'air.
+Il sensore di temperatura lineare LM35 è basato sul sensore di temperatura a semiconduttore LM35. Può essere utilizzato per rilevare la temperatura dell'aria ambiente.
 
-Ce capteur offre une plage de fonctionnement de 0 degré Celsius à 100 degrés Celsius. La sensibilité est de 10 mV par degré Celsius. La tension de sortie est proportionnelle à la température.
+Questo sensore offre un intervallo di funzionamento da 0 gradi Celsius a 100 gradi Celsius. La sensibilità è di 10mV per grado Celsius. La tensione di uscita è proporzionale alla temperatura.
 
-Ce type de capteur est couramment utilisé pour la mesure de la température. Les capteurs de température comprennent les thermocouples, les sondes à résistance de platine, les thermistances et les puces semi‑conductrices de température.
+Questo sensore è comunemente usato come sensore di misura della temperatura. Include termocoppie, sensori a resistenza di platino (RTD), termistori e sensori di temperatura a semiconduttore.
 
-La puce est couramment utilisée dans les thermocouples de mesure de haute température.
+Il sensore a resistenza di platino è usato per misurazioni fino a 800 gradi Celsius, mentre i termistori e i sensori di temperatura a semiconduttore sono adatti per misurare temperature intorno a 100–200 gradi Celsius o inferiori; in queste applicazioni l'impiego di un semplice sensore di temperatura a semiconduttore garantisce buona linearità e alta sensibilità.
 
-La sonde à résistance de platine est utilisée pour des mesures jusqu'à 800 degrés Celsius, tandis que la thermistance et le capteur de température à semi‑conducteur conviennent pour mesurer des températures d'environ 100–200 degrés ou moins. Dans ces applications, un capteur de température à semi‑conducteur simple offre une bonne linéarité et une grande sensibilité.
+Il sensore di temperatura lineare LM35 può essere facilmente collegato a uno shield per Arduino.
 
-Le capteur de température linéaire LM35 peut être facilement connecté à un shield Arduino.
+## Specifiche
 
-## Spécification
+- Sensibilità: 10mV per grado Celsius
 
-- Sensibilité : 10 mV par degré Celsius
-- Plage de fonctionnement : 0 degré Celsius à 100 degrés Celsius
-- Taille : 30 × 20 mm
-- Poids : 3 g
+- Intervallo di funzionamento: 0 gradi Celsius a 100 gradi Celsius
 
-## Schéma de connexion
+- Dimensioni: 30*20mm
 
-Tout d'abord vous devez préparer les éléments suivants avant le test.
+- Peso: 3g
 
-- Carte V4.0\*1
-- Capteur de température LM35\*1
-- Câble USB\*1
-- Fils de connexion\*3
+## Schema di collegamento
 
-Ensuite, suivez le schéma de câblage : connectez la broche de signal du capteur au port A0 de la carte V4.0, la broche négative au port GND et la broche positive au port 5V.
+Per prima cosa è necessario preparare le parti seguenti prima del test.
 
-![Illustration du schéma de connexion](../media/e2f1fc77bb6b54c35bc3d1a8834cbf6b.jpeg)
+- Scheda V4.0\*1
 
-## Exemple de code
+- Sensore di temperatura LM35\*1
 
-Copiez et collez le code ci‑dessous dans le logiciel Arduino.
+- Cavo USB\*1
+
+- Cavi jumper\*3
+
+Quindi seguire lo schema di collegamento: collegare il pin di segnale del sensore alla porta A0 della scheda V4.0, il pin negativo a GND e il pin positivo a 5V.
+
+![Schema di collegamento illustrazione](../media/e2f1fc77bb6b54c35bc3d1a8834cbf6b.jpeg)
+
+## Codice di esempio
+
+Copia e incolla il codice sottostante nell'ambiente Arduino.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -62,14 +66,14 @@ void setup()
 ///////////////////////////////////////////////////////////////
 ```
 
-## Exemple de résultat
+## Risultato d'esempio
 
-![Illustration du résultat](../media/95d0d43a93fd2bf1e9c7248e80edcedc.png)
+![Risultato d'esempio illustrazione](../media/95d0d43a93fd2bf1e9c7248e80edcedc.png)
 
-Câblez comme sur le schéma ci‑dessus et téléversez correctement le code sur la carte, puis ouvrez le moniteur série et réglez la vitesse de transmission sur 9600 bauds.
+Collegalo come nello schema sopra e carica correttamente il codice sulla scheda, quindi apri il monitor seriale e impostane la velocità di trasmissione a 9600 baud.
 
-Vous verrez la valeur de température actuelle affichée ci‑dessous. La valeur peut légèrement varier selon l'emplacement et la météo.
+Vedrai il valore della temperatura corrente mostrato di seguito. Il valore può differire leggermente a seconda del luogo e delle condizioni meteorologiche.
 
-![Illustration du résultat](../media/8331a0416c8006161b3227e170a3b033.jpeg)
+![Risultato d'esempio illustrazione](../media/8331a0416c8006161b3227e170a3b033.jpeg)
 
 ---

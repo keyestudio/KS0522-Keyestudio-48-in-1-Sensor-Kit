@@ -1,37 +1,37 @@
-# Leçon 25 : Gaz analogique
+# Lezione 25: Sensore gas analogico
 
-> **Kit :** Keyestudio 48-in-1 Kit de capteurs  
-> **Carte :** Keyestudio V4.0 / carte ATmega328P compatible Arduino Uno
+> **Kit:** Keyestudio Kit sensori 48-in-1  
+> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno (ATmega328P)
 
-![Projet 25 : Gaz analogique (illustration)](../media/36f00d2a934c497f390b49c4113c7c04.png)
+![Progetto 25: illustrazione sensore gas analogico](../media/36f00d2a934c497f390b49c4113c7c04.png)
 
-## Description
+## Descrizione
 
-Ce capteur de gaz analogique MQ2 est utilisé dans les dispositifs de détection de fuites de gaz, tant dans l'électronique grand public que dans les applications industrielles. Ce capteur est adapté à la détection de GPL (LPG), i-butane, propane, méthane, alcool, hydrogène et fumée.
+Questo sensore di gas analogico MQ2 viene utilizzato negli apparecchi di rilevamento di perdite di gas sia nell'elettronica di consumo che nei mercati industriali. Questo sensore è adatto per rilevare GPL, isobutano, propano, metano, alcol, idrogeno e fumo.
 
-La plage de détection de ce capteur est très large, et il offre une grande sensibilité et une réponse rapide.
+L'ambito di rilevamento di questo sensore è molto ampio, ha un'alta sensibilità e una risposta rapida.
 
-De plus, la sensibilité peut être ajustée en tournant le potentiomètre présent sur le capteur.
+Inoltre, la sensibilità può essere regolata ruotando il potenziometro sul sensore.
 
-## Spécifications
+## Specifiche
 
-- Alimentation : 5V
+- Alimentazione: 5V
 
-- Type d'interface : Analogique
+- Tipo di interfaccia: Analogico
 
-- Circuit de pilotage simple
+- Circuito di pilotaggio semplice
 
-- Stable et longue durée de vie
+- Stabile e lunga durata
 
-## Schéma de connexion
+## Schema di collegamento
 
-Connectez la broche A0 du module à l'Analog A0 de la carte V4.0, connectez la broche GND au port GND, et la broche VCC au port 5V.
+Collega il pin A0 del modulo all'ingresso Analog A0 della scheda V4.0, collega il pin GND al connettore GND e il pin VCC al connettore 5V.
 
-![Schéma de connexion (illustration)](../media/7b2cdff9418f79b2e9e566ce61a7966a.jpeg)
+![Illustrazione schema di collegamento](../media/7b2cdff9418f79b2e9e566ce61a7966a.jpeg)
 
-## Exemple de code
+## Codice di esempio
 
-Copiez et collez le code ci-dessous dans le logiciel Arduino.
+Copia e incolla il codice seguente nell'IDE Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -51,12 +51,12 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Exemple de résultat
+## Risultato di esempio
 
-![Exemple de résultat (illustration)](../media/d440553d52e043d7a91928882d877dd1.png)
+![Illustrazione risultato di esempio](../media/d440553d52e043d7a91928882d877dd1.png)
 
-Une fois le câblage terminé et l'alimentation mise sous tension, téléversez correctement le code, puis ouvrez le moniteur série et réglez la vitesse sur 9600 bauds. Vous verrez la valeur analogique. Lors de la détection de gaz, la valeur changera.
+Dopo aver completato il cablaggio e alimentato, carica correttamente il codice, quindi apri il monitor seriale e imposta il baud rate a 9600; vedrai il valore analogico. Quando viene rilevato gas, il valore varierà.
 
-![Exemple de résultat (illustration)](../media/cbf777feb6231d76347bc632f87d0e8e.jpeg)
+![Illustrazione risultato di esempio](../media/cbf777feb6231d76347bc632f87d0e8e.jpeg)
 
 ---

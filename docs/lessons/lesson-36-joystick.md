@@ -1,43 +1,43 @@
-# Leçon 36 : Joystick
+# Lezione 36: Joystick
 
-> **Kit :** Kit de capteurs Keyestudio 48-en-1  
-> **Carte :** Carte Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Keyestudio Kit sensori 48-in-1  
+> **Scheda:** Keyestudio V4.0 / Scheda compatibile con Arduino Uno (ATmega328P)
 
-![Illustration du projet 36 : joystick](../media/310a620a28ae6ebeeee7294bdc7a2bb0.png)
+![Progetto 36: illustrazione del joystick](../media/310a620a28ae6ebeeee7294bdc7a2bb0.png)
 
-## Description
+## Descrizione
 
-Beaucoup de projets robotiques nécessitent un joystick. Ce module offre une solution abordable. En le connectant simplement à deux entrées analogiques, le robot répond à vos commandes en X et Y. Il possède également un interrupteur relié à une broche numérique.
+Molti progetti robotici richiedono uno joystick. Questo modulo offre una soluzione economica. Collegandolo semplicemente a due ingressi analogici, il robot è sotto il tuo controllo con asse X e Y. Ha anche un interruttore collegato a un pin digitale.
 
-## Spécification
+## Specifiche
 
-- Tension d'alimentation : 3.3V à 5V
+- Tensione di alimentazione: 3.3V a 5V
 
-- Interface : Analogique x2, Numérique x1
+- Interfaccia: Analogico x2, Digitale x1
 
-- Taille : 40*28mm
+- Dimensioni: 40*28mm
 
-- Poids : 12g
+- Peso: 12g
 
-## Schéma de connexion
+## Diagramma di collegamento
 
-Tout d'abord, vous devez préparer les pièces suivantes avant la connexion.
+Prima di tutto, prepara i seguenti componenti prima del collegamento.
 
-- Carte V4.0\*1
+- Scheda V4.0\*1
 
-- Module joystick\*1
+- Modulo joystick\*1
 
-- Câble USB\*1
+- Cavo USB\*1
 
-- Fils de connexion\*5
+- Cavi jumper\*5
 
-Connectez la broche Y du module à Analog A1 de la carte V4.0, connectez la broche X à Analog A0, la broche B à Digital 3 ; connectez la broche négative au port GND, la broche positive au port 5V.
+Collega il pin Y del modulo ad Analog A1 della Scheda V4.0, collega il pin X ad Analog A0, il pin B a Digital 3; collega il pin negativo alla porta GND, il pin positivo alla porta 5V.
 
-![Illustration du schéma de connexion](../media/3c0d2f553f6e76565171dae78a440568.jpeg)
+![Diagramma di collegamento (illustrazione)](../media/3c0d2f553f6e76565171dae78a440568.jpeg)
 
-## Exemple de code
+## Codice di esempio
 
-Copiez et collez le code ci-dessous dans le logiciel Arduino.
+Copia e incolla il codice sottostante nell'IDE di Arduino.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -65,12 +65,12 @@ void loop()
 ///////////////////////////////////////////////////////////////
 ```
 
-## Exemple de résultat
+## Risultato di esempio
 
-![Illustration du résultat](../media/5e6809517dd961c3740b04c7774c3e75.png)
+![Esempio di risultato (illustrazione)](../media/5e6809517dd961c3740b04c7774c3e75.png)
 
-Après avoir correctement câblé et téléversé le code, ouvrez le Moniteur Série dans le logiciel Arduino et réglez le débit en bauds sur 9600 ; vous verrez les valeurs affichées ci-dessous. Si vous poussez le joystick vers le bas / le haut / la gauche / la droite, les données changeront.
+Dopo aver effettuato i collegamenti e caricato il codice, apri il monitor seriale nell'IDE di Arduino e imposta la velocità di trasmissione su 9600 baud: vedrai i valori mostrati qui sotto. Se spingi lo joystick verso il basso, in alto, a sinistra o a destra, i dati cambieranno.
 
-![Illustration du résultat](../media/6b3a1bd089cafce0f1db02f405ab5035.jpeg)
+![Esempio di risultato (illustrazione)](../media/6b3a1bd089cafce0f1db02f405ab5035.jpeg)
 
 ---

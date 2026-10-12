@@ -1,55 +1,55 @@
-# Leçon 08 : Clignotement de collision
+# Lezione 08: Lampeggio da collisione
 
-> **Kit :** Keyestudio 48-in-1 Sensor Kit  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Keyestudio 48-in-1 Kit sensori  
+> **Scheda:** Keyestudio V4.0 / Scheda ATmega328P compatibile con Arduino Uno
 
-![Illustration du projet 8 : Clignotement de collision](../media/29c4641406064a4f1df5d59aefbca480.png)
+![Illustrazione del Progetto 8: Lampeggio da collisione](../media/29c4641406064a4f1df5d59aefbca480.png)
 
-## Description
+## Descrizione
 
-Le capteur de collision, également appelé interrupteur électronique, est un module d'entrée numérique on/off indispensable pour l'apprentissage élémentaire de l'électronique.
+Il sensore d'urto, noto anche come interruttore elettronico, è un modulo di ingresso digitale on-off necessario per l'apprendimento elementare dell'elettronica.
 
-Grâce à la programmation, il permet de contrôler des voyants, des dispositifs sonores, la fonction de sélection de touches d'un afficheur LCD, etc.
+Attraverso la programmazione può controllare luci, dispositivi sonori, funzioni di selezione tasti di un display LCD, ecc.
 
-En utilisant un câble capteur 3P pour le connecter au shield de capteurs, il peut être installé sur la plateforme robot mobile 4WD AL en alliage pour réaliser la fonction de détection de collision. C'est à la fois pratique et efficace.
+Utilizzando un cavo sensore 3P per collegarlo allo shield sensori, può essere installato sulla piattaforma robot mobile 4WD in lega AL per realizzare la funzione di rilevamento delle collisioni. È sia comodo che efficiente.
 
-Vous pouvez réaliser un clignoteur de collision en utilisant le module de collision et la LED intégrée à l'interface 13. Connectez le capteur de collision à la broche 3. Lorsque le capteur détecte un signal de collision, les LEDs de la carte principale et du module s'allument simultanément.
+Puoi realizzare un lampeggiatore di collisione utilizzando il modulo di collisione e il LED integrato sull'interfaccia 13. Collega il sensore di collisione al pin 3. Quando il sensore di collisione rileva un segnale di collisione, i LED sia sulla scheda principale sia sul modulo si accendono contemporaneamente.
 
-## Paramètres
+## Parametri
 
-1. Si une collision se produit en face de l'endroit où le module de collision est installé, le module délivre un signal de niveau bas ; en l'absence de collision, il délivre un signal de niveau haut.
+1. Se avviene una collisione nella parte anteriore dove è installato il modulo di collisione, il modulo emette un segnale a livello basso; in assenza di collisione, emette un segnale a livello alto.
 
-2. Le module dispose d'un trou de fixation M3, pratique pour la fixation sur un véhicule.
+2. Il modulo prevede un foro di montaggio M3, comodo per il fissaggio su un veicolo.
 
-3. Avec une LED indicatrice d'interrupteur : en cas de collision, la LED est allumée ; sans collision, elle est éteinte.
+3. Con spia dell'interruttore: in caso di collisione la spia è accesa; in assenza di collisione la spia è spenta.
 
-## Définition des broches
+## Definizione dei pin
 
-1. Broche positive (+) : connecter à une alimentation 3v-12v
+1. Pin positivo (+): collegare all'alimentazione 3v-12v
 
-2. Broche négative (-) : connecter à GND
+2. Pin negativo (-): collegare a GND
 
-3. Broche signal (S) : sortie de niveau haut/bas
+3. Pin segnale (S): collegare all'uscita di livello alto/basso
 
-## Schéma de connexion
+## Schema di collegamento
 
-Avant de connecter, vous devez préparer les pièces suivantes :
+Prima di collegare, è necessario preparare i seguenti componenti:
 
-- Carte V4.0\*1
+- Scheda V4.0\*1
 
-- Module de collision \*1
+- Modulo d'urto \*1
 
-- Câble USB\*1
+- Cavo USB\*1
 
-- Fils de connexion\*3
+- Cavo jumper\*3
 
-Connectez la broche S du module au Digital 3 de la carte V4.0, connectez la broche négative au port GND et la broche positive au port 5V.
+Collega il pin S del modulo a Digital 3 della scheda V4.0, collega il pin negativo alla porta GND, il pin positivo alla porta 5V.
 
-![Illustration du schéma de connexion](../media/a4ec0b7f8fd95fb2d6bb5c06ca0776f0.jpeg)
+![Illustrazione dello schema di collegamento](../media/a4ec0b7f8fd95fb2d6bb5c06ca0776f0.jpeg)
 
-## Code d'exemple
+## Codice di esempio
 
-Copiez et collez le code ci-dessous dans le logiciel Arduino.
+Copia e incolla il codice qui sotto nell'IDE di Arduino.
 
 ```c
 const uint8_t ledPin = 13;
@@ -66,10 +66,8 @@ void loop() {
 }
 ```
 
-## Résultat de l'exemple
+## Risultato d'esempio
 
-Branchez correctement les fils puis téléversez le code sur la carte.
+Collega tutto correttamente e poi carica il codice sulla scheda.
 
-Lorsque l'objet heurte l'interrupteur du capteur, la LED sur le capteur et la LED 13 de la carte s'allument.
-
----
+Quando un oggetto urta l'interruttore del sensore, sia il LED sul sensore che il LED 13 sulla scheda si accendono.

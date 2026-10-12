@@ -1,45 +1,45 @@
-# Leçon 11 : Interrupteur optique
+# Lezione 11: Foto-interruttore
 
-> **Kit :** Keyestudio Kit de capteurs 48-en-1  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Keyestudio Kit sensori 48-in-1  
+> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
 
-![Projet 11 : Illustration de l'interrupteur optique](../media/8b0f7b3ba3e139eeaeba9bb7f86a946a.png)
+![Progetto 11: Foto-interruttore - illustrazione](../media/8b0f7b3ba3e139eeaeba9bb7f86a946a.png)
 
-## Description
+## Descrizione
 
-La partie verticale de ce capteur est un émetteur infrarouge et, de l'autre côté, un détecteur infrarouge protégé. En émettant un faisceau de lumière infrarouge d'une extrémité à l'autre, le capteur peut détecter un objet lorsqu'il passe à travers le faisceau.
+La parte verticale di questo sensore è un emettitore a infrarossi e sul lato opposto c’è un rivelatore a infrarossi schermato. Emettendo un fascio di luce infrarossa da un’estremità all’altra, il sensore può rilevare un oggetto quando questo attraversa il fascio.
 
-Il est utilisé pour de nombreuses applications, notamment des interrupteurs de fin de course optiques, la distribution de pastilles, la détection générale d'objets, etc.
+Viene utilizzato in molte applicazioni, inclusi interruttori di fine corsa ottici, dosaggio di pellet, rilevamento generale di oggetti, ecc.
 
-## Spécification
+## Specifiche
 
-- Tension d'alimentation : 3.3V à 5V
+- Tensione di alimentazione: 3.3V a 5V
 
-- Interface : Numérique
+- Interfaccia: Digitale
 
-- Taille : 30*20mm
+- Dimensioni: 30*20mm
 
-- Poids : 3g
+- Peso: 3g
 
-## Schéma de connexion
+## Schema di collegamento
 
-Tout d'abord, vous devez préparer les pièces suivantes avant la connexion :
+Per prima cosa, è necessario preparare le seguenti parti prima del collegamento:
 
-- Carte V4.0\*1
+- Scheda V4.0\*1
 
-- Module d'interrupteur optique \*1
+- Modulo foto-interruttore \*1
 
-- Câble USB\*1
+- Cavo USB\*1
 
-- Fils de connexion\*3
+- Cavi jumper\*3
 
-Connectez la broche S du module à Digital 3 de la carte V4.0, connectez la broche négative au port GND et la broche positive au port 5V.
+Collega il pin S del modulo al Digital 3 della scheda V4.0, collega il pin negativo a GND e il pin positivo a 5V.
 
-![Illustration du schéma de connexion](../media/669fa42ef7fb576047d6849940a305ba.jpeg)
+![Illustrazione dello schema di collegamento](../media/669fa42ef7fb576047d6849940a305ba.jpeg)
 
-## Code d'exemple
+## Codice di esempio
 
-Copiez et collez le code ci-dessous dans le logiciel Arduino.
+Copia e incolla il codice sottostante nel software Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -67,14 +67,14 @@ void loop ()
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Résultat d'exemple
+## Risultato di esempio
 
-Une fois le code téléversé sur la carte, vous pouvez voir que la LED sur la carte V4.0 et celle sur le module sont allumées. Comme montré ci-dessous.
+Dopo aver caricato il codice sulla scheda, puoi vedere sia il led sulla scheda V4.0 sia quello sul modulo accesi. Come mostrato di seguito.
 
-![Illustration du résultat d'exemple](../media/fa4d06ebf82ec572b7eccf6b706942cb.png)
+![Illustrazione del risultato di esempio](../media/fa4d06ebf82ec572b7eccf6b706942cb.png)
 
-Lorsque vous insérez un papier dans la rainure du module, le signal est interrompu et la led1 du module s'éteint.
+Quando si inserisce un foglio nella scanalatura del modulo, il segnale viene interrotto e led1 sul modulo si spegne.
 
-![Illustration du résultat d'exemple](../media/3ecb941fafc71843148e0e19b6ceda57.png)
+![Illustrazione del risultato di esempio](../media/3ecb941fafc71843148e0e19b6ceda57.png)
 
 ---

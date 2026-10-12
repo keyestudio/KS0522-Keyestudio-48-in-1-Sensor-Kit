@@ -1,43 +1,43 @@
-# Leçon 31 : Lumière ambiante
+# Lezione 31: Luce Ambientale
 
-> **Kit :** Keyestudio 48-in-1 Sensor Kit  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Kit Keyestudio 48-in-1 di sensori  
+> **Scheda:** Scheda Keyestudio V4.0 / scheda compatibile Arduino Uno con ATmega328P
 
-![Illustration du projet 31 : lumière ambiante](../media/3eda1bbb84995dc2195a0406f1b0c196.jpeg)
+![Illustrazione Progetto 31: Luce Ambientale](../media/3eda1bbb84995dc2195a0406f1b0c196.jpeg)
 
-## Description
+## Descrizione
 
-À un moment donné, vous voudrez mesurer la luminosité ambiante avec une meilleure précision que votre fidèle photorésistance sans ajouter de complexité à votre projet. Quand ce jour arrivera, procurez-vous un capteur de lumière ambiante TEMT6000.
+A un certo punto vorrai rilevare la luminosità ambientale con maggiore precisione rispetto al tuo fidato fotoresistore senza aggiungere complessità al progetto. Quando arriverà quel giorno, procurati un sensore di luce ambientale TEMT6000.
 
-Le TEMT6000 est censé être adapté à la sensibilité de l'œil humain, mais il s'est avéré moins performant en faible luminosité. Il réagit néanmoins très bien à de très petits changements sur une large plage d'intensités lumineuses. Étant donné qu'il est conçu pour imiter l'œil humain, il ne réagit pas bien aux lumières IR ou UV, donc prenez-en compte ce point lorsque vous l'utilisez dans votre projet.
+Il TEMT6000 è progettato per adattarsi alla sensibilità dell'occhio umano, ma si è dimostrato meno performante in condizioni di luce bassa. Funziona però molto bene nel reagire a piccole variazioni su un ampio intervallo di luminosità. Poiché è pensato per imitare l'occhio umano, non risponde bene alla luce IR o UV, quindi tienine conto quando lo utilizzi nel tuo progetto.
 
-## Spécifications
+## Specifiche
 
-- Tension d'alimentation : +5VDC 50mA
+- Tensione di alimentazione: +5VDC 50mA
 
-- Taille: 36.5\*16mm
+- Dimensioni: 36.5\*16mm
 
-- Poids: 4g
+- Peso: 4g
 
-## Schéma de connexion
+## Schema di collegamento
 
-Tout d'abord, vous devez préparer les pièces suivantes avant le raccordement.
+Per prima cosa prepara i seguenti componenti.
 
-- Carte V4.0\*1
+- Scheda V4.0\*1
 
-- Capteur de lumière ambiante TEMT6000\*1
+- Sensore di luce ambientale TEMT6000\*1
 
-- Câble USB\*1
+- Cavo USB\*1
 
-- Fils de connexion\*3
+- Cavo jumper\*3
 
-C'est une pièce incroyablement simple : connectez simplement l'alimentation et la masse, et la broche de signal au port d'entrée analogique. Une fois connecté, le capteur fournira une tension analogique qui augmente quand il fait plus clair. Vous pouvez l'alimenter en 3.3V si vous le souhaitez, la valeur de sortie sera simplement beaucoup plus faible.
+Si tratta di un componente estremamente semplice: collega solo alimentazione e massa, e il pin di segnale alla porta di ingresso analogico; una volta collegato, il sensore fornirà una tensione analogica che aumenta quando diventa più luminoso. Puoi alimentarlo anche con 3.3V se preferisci; il valore di uscita sarà semplicemente molto più basso.
 
-![Illustration du schéma de connexion](../media/dae046a9efbeea661b9b6a2ab632fcbc.jpeg)
+![Schema di collegamento illustrazione](../media/dae046a9efbeea661b9b6a2ab632fcbc.jpeg)
 
-## Exemple de code
+## Codice di esempio
 
-On ne peut pas faire plus simple que ceci – cela envoie simplement la valeur relevée par le capteur vers le moniteur série : 0–1023, 1023 étant très lumineux et 0 très sombre.
+Non si può fare più semplice di così – questo riporta semplicemente il valore di lettura dal sensore al terminale seriale: 0-1023, con 1023 molto luminoso e 0 molto buio.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -53,14 +53,14 @@ void loop() {
 ///////////////////////////////////////////////////////////////
 ```
 
-## Exemple de résultat
+## Risultato di esempio
 
-Après avoir bien câblé et téléversé le code ci‑dessus, ouvrez le moniteur série du logiciel Arduino.
+Dopo aver collegato correttamente e caricato il codice sopra, apri il monitor seriale dell'IDE Arduino.
 
-![Illustration du résultat](../media/ea9ab82076983cc965fe016297b6ad76.png)
+![Illustrazione risultato di esempio](../media/ea9ab82076983cc965fe016297b6ad76.png)
 
-Couvrez ensuite le capteur avec votre main ou un papier ; la lumière devient plus faible et vous verrez finalement la valeur affichée sur le moniteur diminuer.
+Quindi copri il sensore con la mano o con un foglio di carta: la luce diminuisce e vedrai infine il valore mostrato nel monitor diminuire.
 
-![Illustration du résultat](../media/846828c9af69a9823ca7218157cc181e.jpeg)
+![Illustrazione risultato di esempio](../media/846828c9af69a9823ca7218157cc181e.jpeg)
 
 ---

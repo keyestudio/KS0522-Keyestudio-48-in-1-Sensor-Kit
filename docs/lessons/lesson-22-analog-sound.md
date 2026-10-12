@@ -1,35 +1,35 @@
-# Leçon 22 : Son analogique
+# Lezione 22: Suono Analogico
 
-> **Kit :** Keyestudio 48-in-1 Sensor Kit  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Scheda:** Keyestudio V4.0 / scheda ATmega328P compatibile con Arduino Uno
 
-![Illustration du Projet 22 : Son analogique](../media/a494bbec73f7c8ff91b3133c9d2798a7.jpeg)
+![Progetto 22: illustrazione Suono Analogico](../media/a494bbec73f7c8ff91b3133c9d2798a7.jpeg)
 
-## Description
+## Descrizione
 
-Le capteur de son analogique est généralement utilisé pour détecter le volume des sons ambiants. Le capteur est équipé d'un potentiomètre que vous pouvez tourner pour ajuster le gain du signal.
+Il sensore di suono analogico viene tipicamente usato per rilevare il volume dei suoni ambientali. Il sensore è dotato di un potenziometro, che puoi ruotare per regolare il guadagno del segnale.
 
-Vous pouvez l'utiliser pour réaliser des projets intéressants et interactifs, comme un interrupteur commandé par la voix.
+Puoi usarlo per creare lavori interessanti e interattivi, come un interruttore attivato dalla voce.
 
-## Spécifications
+## Specifiche
 
-- Tension d'alimentation : 3.3V à 5V
+- Tensione di alimentazione: 3.3V a 5V
 
-- Interface : Analogique
+- Interfaccia: Analogico
 
-- Taille : 30*20mm
+- Dimensioni: 30*20mm
 
-- Poids : 4g
+- Peso: 4g
 
-## Schéma de connexion
+## Diagramma di collegamento
 
-Connectez la broche S du module à l'entrée analogique A0 de la carte V4.0, connectez la broche négative à GND, la broche positive à 5V.
+Collega il pin S del modulo al pin A0 analogico della scheda V4.0, collega il pin negativo al connettore GND, il pin positivo al connettore 5V.
 
-![Illustration du schéma de connexion](../media/22e1124550d57015a6d2d5782b8febda.jpeg)
+![Illustrazione del diagramma di collegamento](../media/22e1124550d57015a6d2d5782b8febda.jpeg)
 
-## Exemple de code
+## Codice di esempio
 
-Copiez et collez le code ci-dessous dans l'IDE Arduino.
+Copia e incolla il codice seguente nell'IDE Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -49,10 +49,10 @@ delay(50);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Exemple de résultat
+## Risultato di esempio
 
-Une fois le câblage effectué et l'alimentation branchée, téléversez correctement le code, puis ouvrez le moniteur série et réglez le débit en bauds sur 9600 : vous verrez la valeur analogique. En parlant vers le microphone, la valeur augmentera. Illustré ci‑dessous.
+Dopo aver completato i collegamenti e alimentato la scheda, carica il codice, poi apri il monitor seriale e imposta la velocità di trasmissione (baud) a 9600; vedrai il valore analogico. Quando parli rivolgendoti verso il microfono, il valore aumenterà. Mostrato qui sotto.
 
-![Illustration du résultat](../media/4d753036151413a1bdda3c0b283b8551.png)
+![Illustrazione del risultato di esempio](../media/4d753036151413a1bdda3c0b283b8551.png)
 
 ---

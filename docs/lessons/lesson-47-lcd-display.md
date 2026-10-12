@@ -1,66 +1,66 @@
-# Leçon 47 : Afficheur LCD
+# Lezione 47: Display LCD
 
-> **Kit :** Keyestudio 48-in-1 Sensor Kit  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Keyestudio Kit sensori 48-in-1  
+> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
 
-![Illustration du projet 47 : Afficheur LCD](../media/1aa1fd551e180d013633c1fe857c24a6.jpeg)
+![Illustrazione progetto 47: display LCD](../media/1aa1fd551e180d013633c1fe857c24a6.jpeg)
 
-## Description
+## Descrizione
 
-Dans ce projet, nous allons piloter cet écran LCD 0802 pour afficher du texte avec la carte V4.0.
+In questo progetto guideremo il display LCD 0802 per visualizzare testo utilizzando la scheda V4.0.
 
-La capacité d'affichage du LCD est de 8x2 caractères, et la tension de fonctionnement de la puce est de 4,5～5,5V.
+La capacità di visualizzazione dell'LCD è di 8x2 caratteri, e la tensione operativa del chip è 4,5～5,5V.
 
-Il existe deux méthodes de connexion pour afficher du texte sur l'écran 0802 : connexion 4 bits et connexion 8 bits.
+Esistono due metodi di collegamento per visualizzare testo sul 0802 LCD: collegamento a 4 bit e collegamento a 8 bit.
 
-Vous pouvez vous référer aux explications ci‑dessous.
+Puoi fare riferimento alle spiegazioni correlate di seguito.
 
-## Explication des interfaces
+## Spiegazione delle Interfacce
 
-| **Interface** | **Broche** | **Explication**                                              |
+| **Interfaccia** | **Pin** | **Spiegazione**                                              |
 | :-----------: | :-----: | ------------------------------------------------------------ |
-|       1       |   VSS   | Masse d'alimentation logique                                  |
-|       2       |   VDD   | Alimentation logique                                           |
-|       3       |   V0    | Tension réglable du LCD, à connecter au point milieu du potentiomètre 10K |
-|       4       |   RS    | Données\\ Option de commande                                  |
-|       5       |   RW    | Lecture\\Écriture (option)                                    |
-|       6       |    E    | Active la lecture\\écriture, actif à HIGH, le front descendant verrouille les données |
-|       7       |   DB0   | Broche d'entrée/sortie de données                             |
-|       8       |   DB1   | Broche d'entrée/sortie de données                             |
-|       9       |   DB2   | Broche d'entrée/sortie de données                             |
-|      10       |   DB3   | Broche d'entrée/sortie de données                             |
-|      11       |   DB4   | Broche d'entrée/sortie de données                             |
-|      12       |   DB5   | Broche d'entrée/sortie de données                             |
-|      13       |   DB6   | Broche d'entrée/sortie de données                             |
-|      14       |   DB7   | Broche d'entrée/sortie de données                             |
-|      15       |  LED-A  | borne positive de l'alimentation du rétroéclairage            |
-|      16       |  LED-K  | borne négative de l'alimentation du rétroéclairage            |
+|       1       |   VSS   | Massa alimentazione logica                                    |
+|       2       |   VDD   | Alimentazione logica                                           |
+|       3       |   V0    | Tensione regolabile LCD, collegare al pin centrale del potenziometro da 10K |
+|       4       |   RS    | Selezione Dati\\Comando                                       |
+|       5       |   RW    | Opzione lettura\\scrittura                                    |
+|       6       |    E    | Abilita lettura\\scrittura, attivo a HIGH, al fronte di discesa blocca i dati |
+|       7       |   DB0   | Pin di input/output dati                                      |
+|       8       |   DB1   | Pin di input/output dati                                      |
+|       9       |   DB2   | Pin di input/output dati                                      |
+|      10       |   DB3   | Pin di input/output dati                                      |
+|      11       |   DB4   | Pin di input/output dati                                      |
+|      12       |   DB5   | Pin di input/output dati                                      |
+|      13       |   DB6   | Pin di input/output dati                                      |
+|      14       |   DB7   | Pin di input/output dati                                      |
+|      15       |  LED-A  | Terminale positivo alimentazione retroilluminazione          |
+|      16       |  LED-K  | Terminale negativo alimentazione retroilluminazione          |
 
-## Matériel requis
+## Materiale Necessario
 
-Vous devez d'abord préparer les composants suivants :
+Per prima cosa prepara le seguenti parti:
 
-- Carte V4.0 × 1
-- LCD 0802 × 1
-- Potentiomètre rotatif × 1
-- Plaque d'essai (breadboard) × 1
-- Câble USB × 1
-- Fils de connexion (jumpers), selon besoin
-- Fils Dupont, selon besoin
+- Scheda V4.0 × 1
+- 0802 LCD × 1
+- Potenziometro rotativo × 1
+- Piastra di prototipazione (breadboard) × 1
+- Cavo USB × 1
+- Cavi jumper, secondo necessità
+- Cavi Dupont, secondo necessità
 
-## Schéma de connexion
+## Diagramma di Collegamento
 
-## Connexion 4 bits
+## Connessione a 4 bit
 
-![Illustration de la connexion 4 bits](../media/6b3c862d4b36726275b67b747e6d5df3.jpeg)
+![Illustrazione collegamento a 4 bit](../media/6b3c862d4b36726275b67b747e6d5df3.jpeg)
 
-## Connexion 8 bits
+## Connessione a 8 bit
 
-![Illustration de la connexion 8 bits](../media/97a92aff5ba45d0f7daaca6307b9a5fd.png)
+![Illustrazione collegamento a 8 bit](../media/97a92aff5ba45d0f7daaca6307b9a5fd.png)
 
-## Code source
+## Codice Sorgente
 
-## Pour la connexion 4 bits
+## Per connessione a 4 bit
 
 ```C
 //////////////////////////////////////////////////////////
@@ -83,7 +83,7 @@ void loop() {
 //////////////////////////////////////////////////////////
 ```
 
-## Pour la connexion 8 bits
+## Per connessione a 8 bit
 
 ```C
 #include <LiquidCrystal.h>
@@ -105,16 +105,16 @@ void loop() {
 }
 ```
 
-## Exemple de résultat
+## Risultato di Esempio
 
-Une fois le câblage effectué et l'alimentation mise, téléversez le code ci‑dessus sur la carte, réglez le rétroéclairage du LCD en tournant le potentiomètre ; vous verrez finalement les caractères s'afficher sur l'écran LCD.
+Collegalo correttamente, alimenta la scheda, carica il codice sopra sulla scheda, regola la retroilluminazione del LCD ruotando il potenziometro; alla fine vedrai i caratteri visualizzati sullo schermo LCD.
 
-Si vous utilisez la connexion 4 bits, vous devriez voir le LCD afficher "Bonjour" sur la première ligne, et "monde !" sur la seconde, comme indiqué ci‑dessous.
+Se usi la connessione a 4 bit, dovresti vedere l'LCD visualizzare il testo "Ciao" sulla prima riga, e la seconda riga visualizzare il testo "mondo!" come mostrato di seguito.
 
-![Illustration du résultat exemple](../media/7d2763d65677d2925902ffcc65bf1b12.png)
+![Illustrazione risultato di esempio](../media/7d2763d65677d2925902ffcc65bf1b12.png)
 
-Si vous utilisez la connexion 8 bits, d'autres caractères s'afficheront sur le LCD, comme montré ci‑dessous.
+Se usi la connessione a 8 bit, vedrai altri caratteri visualizzati sull'LCD. Come mostrato di seguito.
 
-![Illustration du résultat exemple](../media/61002a13397f8041574b375b0032da26.png)
+![Illustrazione risultato di esempio](../media/61002a13397f8041574b375b0032da26.png)
 
 ---

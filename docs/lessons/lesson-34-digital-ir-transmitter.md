@@ -1,51 +1,51 @@
-# Leçon 34 : Émetteur IR numérique
+# Lezione 34: Trasmettitore IR Digitale
 
-> **Kit :** Keyestudio 48-in-1 Sensor Kit  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno (ATmega328P)
+> **Kit:** Keyestudio 48-in-1 Kit di sensori  
+> **Scheda:** Scheda Keyestudio V4.0 / compatibile Arduino Uno ATmega328P
 
-![Illustration du projet 34 : émetteur IR numérique](../media/9fe876a8c857650226cbe2f8a9bead59.png)
+![Progetto 34: Trasmettitore IR Digitale - illustrazione](../media/9fe876a8c857650226cbe2f8a9bead59.png)
 
-## Description
+## Descrizione
 
-Le module émetteur IR est conçu pour la communication infrarouge, largement utilisée pour piloter un téléviseur à courte distance en ligne de visée.
+Il modulo trasmettitore IR è progettato per la comunicazione IR, ampiamente utilizzata per comandare apparecchi televisivi da breve distanza in linea di vista.
 
-Comme la télécommande infrarouge (IR) utilise la lumière, elle nécessite une ligne de visée pour faire fonctionner l'appareil cible. Le signal peut cependant être réfléchi par des miroirs, comme toute autre source lumineuse.
+Poiché il telecomando a infrarossi (IR) usa la luce, richiede la linea di vista per far funzionare il dispositivo di destinazione. Il segnale può però essere riflesso da specchi, proprio come qualsiasi altra sorgente luminosa.
 
-Les récepteurs infrarouges ont également tendance à avoir un angle de réception plus ou moins limité, qui dépend principalement des caractéristiques optiques du phototransistor.
+Anche i ricevitori a infrarossi tendono ad avere un angolo di funzionamento più o meno limitato, il quale dipende principalmente dalle caratteristiche ottiche del fototransistor.
 
-Toutefois, il est facile d'augmenter l'angle de réception en plaçant un objet transparent mat devant le récepteur.
+Tuttavia, è facile aumentare l'angolo di funzionamento usando un oggetto trasparente satinato davanti al ricevitore.
 
-## Spécification
+## Specifiche
 
-- Alimentation : 3-5V
+- Alimentazione: 3-5V
 
-- Fréquence centrale infrarouge : 850nm-940nm
+- Frequenza centrale infrarossa: 850nm-940nm
 
-- Angle d'émission infrarouge : environ 20 degrés
+- Angolo di emissione infrarossa: circa 20 gradi
 
-- Portée d'émission infrarouge : environ 1,3 m (5V 38Khz)
+- Distanza di emissione infrarossa: circa 1.3m (5V 38Khz)
 
-- Connecteur : JST PH2.0
+- Connettore: JST PH2.0
 
-- Trou de montage : diamètre intérieur 3,2mm, entraxe 15mm
+- Foro di montaggio: diametro interno 3.2mm, distanza 15mm
 
-## Schéma de connexion
+## Schema di collegamento
 
-Avant la connexion, vous devez préparer les pièces suivantes.
+Per prima cosa è necessario preparare i seguenti componenti prima del collegamento.
 
-- Carte V4.0\*1
+- Scheda V4.0\*1
 
-- Module émetteur IR\*1
+- Modulo trasmettitore IR\*1
 
-- Câble USB\*1
+- Cavo USB\*1
 
-- Fils de connexion\*3
+- Cavi jumper\*3
 
-Connectez la broche S du module au Digital 3 de la carte V4.0, la broche négative au port GND, la broche positive au port 5V.
+Collega il pin S del modulo al pin D3 della scheda V4.0, collega il pin negativo a GND e il pin positivo a 5V.
 
-![Illustration du schéma de connexion](../media/31c03e9ad144e1124260ff6e0538fe69.jpeg)
+![Schema di collegamento - illustrazione](../media/31c03e9ad144e1124260ff6e0538fe69.jpeg)
 
-## Exemple de code 1
+## Esempio di codice 1
 
 ```c
 int led = 3;
@@ -60,39 +60,39 @@ void loop() {
 }
 ```
 
-Dans l'obscurité, vous verrez une lumière bleue clignotante sur l'écran du téléphone si vous utilisez l'appareil photo pour filmer la LED infrarouge.
+In condizioni di oscurità, vedrai una luce blu lampeggiante sullo schermo del telefono quando userai la fotocamera per riprendere il LED infrarosso.
 
-Téléversez correctement le code ci‑dessus sur la carte ; la LED du capteur clignotera en rouge.
+Carica correttamente il codice sopra sulla scheda; il LED sul sensore lampeggerà di rosso.
 
-Passons maintenant à un exemple interactif entre le module récepteur IR et le module émetteur IR.
+Di seguito, passiamo a un esempio interattivo tra modulo ricevitore IR e modulo trasmettitore IR.
 
-## Télécommande/communication infrarouge
+## Telecomando/Comunicazione a infrarossi
 
-## Matériel requis
+## Materiale necessario
 
 - Arduino R3 x2
 
-- Récepteur IR numérique x1
+- Ricevitore IR digitale x1
 
-- Module émetteur IR x1
+- Modulo trasmettitore IR x1
 
-Remarque : cette expérience nécessite deux cartes microcontrôleurs. Une plaque d'essai (breadboard) ne remplace pas la deuxième carte car elle ne peut pas exécuter le sketch du récepteur.
+Nota: questo esperimento richiede due schede microcontrollore. Una breadboard non può sostituire la seconda scheda perché non può eseguire lo sketch del ricevitore.
 
-## Configuration de communication à deux cartes
+## Configurazione per comunicazione a due schede
 
-## Pour l'émetteur IR
+## Per il trasmettitore IR
 
-Remarque : Arduino-IR remote ne prend en charge que D3 comme émetteur.
+Attenzione: Arduino-IR remote supporta solo D3 come trasmettitore.
 
-![Illustration pour l'émetteur IR](../media/08ebf9b37949caf1782e499f49934f1d.png)
+![Per il trasmettitore IR - illustrazione](../media/08ebf9b37949caf1782e499f49934f1d.png)
 
-## Pour le récepteur IR
+## Per il ricevitore IR
 
-Connectez la broche signal au port D11.
+Collega il pin del segnale al connettore D11.
 
-![Illustration pour le récepteur IR](../media/687d429fe6360707f95fb6c5ddfa2ca7.jpeg)
+![Per il ricevitore IR - illustrazione](../media/687d429fe6360707f95fb6c5ddfa2ca7.jpeg)
 
-## Téléversez le code 2 sur la V4.0 connectée à l'émetteur IR
+## Carica il codice 2 sulla V4.0 connessa al trasmettitore IR
 
 ```c
  #include <IRremote.h>
@@ -106,7 +106,7 @@ Connectez la broche signal au port D11.
      delay(200); }
 ```
 
-## Téléversez le code 3 sur la V4.0 connectée au récepteur IR
+## Carica il codice 3 sulla V4.0 connessa al ricevitore IR
 
 ```c
 #include <IRremote.h>
@@ -138,12 +138,12 @@ Connectez la broche signal au port D11.
    }}
 ```
 
-## Résultat
+## Risultato
 
-Lorsque le module récepteur IR reçoit le signal infrarouge de l'émetteur IR, la LED D1 du module récepteur IR clignotera.
+Quando il modulo ricevitore IR riceve il segnale infrarosso dal trasmettitore IR, il LED D1 sul modulo ricevitore IR lampeggerà.
 
-Lorsque le module récepteur IR reçoit le signal infrarouge de l'émetteur IR, la LED D1 du module récepteur IR clignotera.
+Quando il modulo ricevitore IR riceve il segnale infrarosso dal trasmettitore IR, il LED D1 sul modulo ricevitore IR lampeggerà.
 
-![Illustration du résultat](../media/4d73a7178e89de72df7e82a147778ae9.png)
+![Risultato - illustrazione](../media/4d73a7178e89de72df7e82a147778ae9.png)
 
 ---

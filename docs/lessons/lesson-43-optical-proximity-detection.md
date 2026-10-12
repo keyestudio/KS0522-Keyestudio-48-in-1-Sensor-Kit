@@ -1,70 +1,70 @@
-# Leçon 43 : Détection de proximité optique
+# Lezione 43: Rilevamento di prossimità ottico
 
-> **Kit :** Keyestudio 48-en-1 Kit de capteurs  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Kit sensori Keyestudio 48-in-1  
+> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
 
-![Illustration du projet 43 : Détection de proximité optique](../media/4085d5742012b8647b52c537b82974ff.jpeg)
+![Illustrazione Progetto 43: Rilevamento di prossimità ottico](../media/4085d5742012b8647b52c537b82974ff.jpeg)
 
-## Introduction
+## Introduzione
 
-**Avis de compatibilité.** Le texte d'origine identifie ce module comme TMD27713, tandis que le sketch ci‑dessous cible APDS-9930. Confirmez le marquage du CI et utilisez une bibliothèque correspondante avant de téléverser.
+**Avviso di compatibilità.** Il testo originale identifica questo modulo come TMD27713, mentre lo sketch qui sotto è destinato all'APDS-9930. Verifica la marcatura del circuito integrato e usa una libreria corrispondente prima di effettuare l'upload.
 
-C'est un capteur triple intégrant un capteur de lumière ambiante, un capteur de proximité et une LED infrarouge.
+Si tratta di un sensore triplo che integra sensore di luce ambientale, sensore di prossimità e LED a infrarossi.
 
-D'une part, il sert à détecter la luminosité ambiante actuelle (ALS). Il peut, en fonction de la luminosité ambiante, ajuster automatiquement la luminosité du rétroéclairage par le biais d'un réglage logiciel. Cette méthode permet d'adoucir la luminosité du rétroéclairage pour protéger la vue et d'obtenir un effet d'économie d'énergie.
+Da un lato viene usato per rilevare la luminosità ambientale corrente (ALS). Può, in base alla luminosità ambientale, regolare automaticamente la luminosità del retroilluminazione tramite intervento software. Questo permette di rendere la retroilluminazione più morbida per proteggere la vista e ottenere un effetto di risparmio energetico.
 
-D'autre part, nous parlons ici de la fonction capteur de proximité (PROX). Le capteur intègre un émetteur/récepteur et réduit la taille du design ; de plus, le design et l'installation n'ont plus de fortes contraintes d'espace, et la structure est relativement simple.
+Tra le altre funzioni è presente la rilevazione di prossimità (PROX). Il sensore integra trasmettitore/ricevitore e minimizza il design; inoltre l'installazione non ha più restrizioni di spazio e la struttura risulta relativamente semplice.
 
-## Paramètres
+## Parametri
 
-- Tension de fonctionnement：DC 3.3V
+- Tensione di funzionamento: DC 3.3V
 
-- Distance de détection：100mm
+- Distanza di rilevamento: 100mm
 
-- Mode de communication：Communication IIC
+- Modalità di comunicazione: Comunicazione I2C
 
-- Plage de température：-30℃ to 85℃
+- Intervallo di temperatura: -30℃ a 85℃
 
-## Schéma de connexion
+## Schema di collegamento
 
-Tout d'abord, vous devez préparer les pièces suivantes :
+Per prima cosa è necessario preparare i seguenti componenti:
 
-- Carte V4.0\*1
+- Scheda V4.0\*1
 
-- Capteur TMD27713\*1
+- Sensore TMD27713\*1
 
-- Câble USB\*1
+- Cavo USB\*1
 
-- Fils de connexion\*5
+- Cavi jumper\*5
 
-Connectez la broche INT du capteur au port numérique 2 de la carte V4.0, la broche SCL au port analogique A5, la broche SDA au port analogique A4 ; connectez la broche VCC au port 3V3 et la broche GND au port GND.
+Connetti il pin INT del sensore alla porta Digital 2 della scheda V4.0, il pin SCL alla porta Analog A5, il pin SDA alla porta Analog A4; connetti il pin VCC alla porta 3V3, il pin GND alla porta GND.
 
-![Illustration du schéma de connexion](../media/c9319e0f5116f416380d6b3c9ddc608c.jpeg)
+![Diagramma di collegamento](../media/c9319e0f5116f416380d6b3c9ddc608c.jpeg)
 
-## Exemple de code
+## Codice di esempio
 
-Teste les capacités d'interruption de proximité de l'APDS-9930.
+Testa le capacità di interrupt di prossimità dell'APDS-9930.
 
-Configure l'APDS-9930 via I2C et attend une interruption externe basée sur des conditions de proximité hautes ou basses. Approchez la main du capteur et regardez la LED sur la broche 13.
+Configura l'APDS-9930 via I2C e attende un interrupt esterno basato su condizioni di prossimità alte o basse. Muovi la mano vicino al sensore e osserva il LED sul pin 13.
 
-## Connexions matérielles
+## Collegamenti hardware
 
-**IMPORTANT** : L'APDS-9930 n'accepte que du 3.3V !
+**IMPORTANTE**: l'APDS-9930 può accettare solo 3.3V!
 
-| Broche Arduino | Carte APDS-9930 | Fonction  |
-| :-------------: | :-------------: | :-------: |
-|    3.3V     |       VCC       | Alimentation   |
-|     GND     |       GND       |  Masse   |
-|     A4      |       SDA       | Données I2C  |
-|     A5      |       SCL       | Horloge I2C |
-|      2      |       INT       | Interruption |
+| Arduino Pin | APDS-9930 Board | Funzione  |
+| :---------: | :-------------: | :-------: |
+|    3.3V     |       VCC       |   Alimentazione   |
+|     GND     |       GND       |  Massa   |
+|     A4      |       SDA       | Dati I2C  |
+|     A5      |       SCL       | Clock I2C |
+|      2      |       INT       | Interrupt |
 |     13      |        -        |    LED    |
 
-**Ressources** : Inclure Wire.h et APDS9930.h
+**Risorse**: Include Wire.h e APDS9930.h
 
-**Spécificités de l'environnement de développement** : Écrit sous Arduino 1.0.5
+**Specifiche dell'ambiente di sviluppo**: Scritto in Arduino 1.0.5
 
-Copiez et collez le code ci‑dessous dans le logiciel Arduino.
+Copia e incolla il codice qui sotto nell'IDE Arduino.
 
 ```c
 #include <Wire.h>
@@ -211,14 +211,14 @@ void interruptRoutine() {
 }
 ```
 
-Remarque : avant de compiler le code, n'oubliez pas de placer la bibliothèque dans le répertoire libraries de l'IDE Arduino. Sinon, la compilation échouera.
+Nota: prima di compilare il codice ricordati di posizionare la libreria nella cartella libraries dell'IDE Arduino. Altrimenti la compilazione fallirà.
 
-## Exemple de résultat
+## Risultato d'esempio
 
-![Illustration du résultat exemple](../media/f2c369c253c3b5fd8cf2c9df39f1c01a.png)
+![Risultato d'esempio (illustrazione)](../media/f2c369c253c3b5fd8cf2c9df39f1c01a.png)
 
-Testé avec Arduino-1.8.2. Ensuite, ouvrez le moniteur série : vous pouvez voir les données comme montré sur l'image ci‑dessous.
+Testato con il software Arduino-1.8.2; aprendo il monitor seriale puoi vedere i dati come mostrato nella figura qui sotto.
 
-![Illustration du résultat exemple](../media/607fe1d8c324c14c06492d96d60eb0ca.png)
+![Risultato d'esempio (illustrazione)](../media/607fe1d8c324c14c06492d96d60eb0ca.png)
 
 ---

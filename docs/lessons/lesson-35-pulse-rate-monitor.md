@@ -1,37 +1,37 @@
-# Leçon 35 : Moniteur de fréquence cardiaque
+# Lezione 35: Monitor della frequenza cardiaca
 
-> **Kit :** Kit de capteurs Keyestudio 48-en-1  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
 
-![Illustration du projet 35 : moniteur de fréquence cardiaque](../media/0ec440cd93e00e956357ece654ce2a9c.png)
+![Illustrazione del progetto 35: Monitor della frequenza cardiaca](../media/0ec440cd93e00e956357ece654ce2a9c.png)
 
-## Description
+## Descrizione
 
-Ce module utilise une LED infrarouge ultra-claire et un phototransistor pour détecter le pouls dans votre doigt. La LED rouge clignotera en rythme avec votre pouls.
+Questo modulo utilizza un LED a infrarossi ultra-chiaro e un fototransistor per rilevare il battito nel tuo dito. Il LED rosso lampeggerà in sincronismo con il tuo battito.
 
-Principe de fonctionnement
+Principio di funzionamento
 
-Faites briller la LED brillante sur un côté de votre doigt pendant que le phototransistor, de l'autre côté, capte la quantité de lumière transmise. La résistance du phototransistor variera légèrement à mesure que le sang pulse dans votre doigt.
+Illumina con il LED brillante un lato del dito mentre il fototransistor sull'altro lato rileva la quantità di luce trasmessa. La resistenza del fototransistor varierà leggermente man mano che il sangue pulsa attraverso il dito.
 
-## Schéma de connexion
+## Schema di collegamento
 
-Tout d'abord, préparez les pièces suivantes avant d'effectuer un test.
+Prima di tutto è necessario preparare i seguenti componenti prima di effettuare il test.
 
-- Carte V4.0\*1
+- Scheda V4.0\*1
 
-- Module de pouls\*1
+- Modulo pulsazioni\*1
 
-- Câble USB\*1
+- Cavo USB\*1
 
-- Fils de connexion\*3
+- Cavi jumper\*3
 
-Reliez la broche Signal du module à l'entrée analogique A0 de la carte V4.0, la broche positive au port 5V et la broche négative au port GND.
+Collega il pin Signal del modulo ad Analog A0 della scheda V4.0, il pin positivo alla porta 5V, il pin negativo alla porta GND.
 
-![Illustration du schéma de connexion](../media/fa86e3930b83753af7ad87d0418cd350.jpeg)
+![Schema di collegamento (illustrazione)](../media/fa86e3930b83753af7ad87d0418cd350.jpeg)
 
-## Code d'exemple
+## Codice di esempio
 
-Copiez et collez le code ci‑dessous dans le logiciel Arduino.
+Copia e incolla il codice seguente nell'ambiente Arduino.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -60,14 +60,14 @@ delay(period);
 ///////////////////////////////////////////////////////////////
 ```
 
-## Exemple de résultat
+## Risultato di esempio
 
-Câblez correctement comme indiqué sur le schéma ci‑dessus, puis téléversez le code sur la carte et cliquez sur l'icône du moniteur série en haut à droite du logiciel Arduino. Réglez le débit en bauds sur 115200 ; vous verrez les données s'afficher dans le moniteur.
+Collegalo bene come nel diagramma sopra, quindi carica correttamente il codice sulla scheda e clicca l'icona del Monitor seriale nell'angolo in alto a destra dell'IDE Arduino. Imposta la velocità di trasmissione (baud rate) su 115200: vedrai i dati visualizzati nel monitor.
 
-Vous pouvez copier-coller les données dans Excel ; cela générera finalement l'image correspondante montrée ci‑dessous.
+Puoi copiare e incollare i dati in Excel; alla fine verrà generato il grafico corrispondente mostrato qui sotto.
 
-![Illustration du résultat](../media/3c3a1a0d120f1c68c95095a0fd98fa47.png)
+![Esempio di risultato (illustrazione)](../media/3c3a1a0d120f1c68c95095a0fd98fa47.png)
 
-![Illustration du résultat](../media/215ab9a6174f9798a291bacb907eaf89.jpeg)
+![Esempio di risultato (illustrazione)](../media/215ab9a6174f9798a291bacb907eaf89.jpeg)
 
 ---

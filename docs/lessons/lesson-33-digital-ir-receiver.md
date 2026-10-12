@@ -1,49 +1,49 @@
-# Leçon 33 : Récepteur IR numérique
+# Lezione 33: Ricevitore IR digitale
 
-> **Kit :** Keyestudio Kit de capteurs 48-en-1  
-> **Carte :** Keyestudio V4.0 / Carte compatible Arduino Uno ATmega328P
+> **Kit:** Kit sensori Keyestudio 48-in-1  
+> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
 
-![Illustration du projet 33 : Récepteur IR numérique](../media/f64f21b6ca681f928c3318bd2d33a017.png)
+![Progetto 33: illustrazione Ricevitore IR digitale](../media/f64f21b6ca681f928c3318bd2d33a017.png)
 
-## Description
+## Descrizione
 
-L'IR est largement utilisé dans les télécommandes. Avec ce récepteur IR, un projet Arduino peut recevoir des commandes de n'importe quelle télécommande IR si vous disposez du bon décodeur. Il est également facile de créer votre propre télécommande IR en utilisant un émetteur IR.
+L'IR è ampiamente utilizzato nei telecomandi. Con questo ricevitore IR, un progetto Arduino è in grado di ricevere comandi da qualsiasi telecomando IR se si dispone del decodificatore corretto. Inoltre, sarà facile realizzare il proprio controller IR usando un trasmettitore IR.
 
-## Spécifications
+## Specifiche
 
-- Alimentation : 5V
+- Alimentazione: 5V
 
-- Interface : Numérique
+- Interfaccia: Digitale
 
-- Fréquence de modulation : 38 kHz
+- Frequenza di modulazione: 38Khz
 
-- Connecteur du module : JST PH2.0
+- Connettore modulo: JST PH2.0
 
-- Taille : 30*20 mm
+- Dimensioni: 30*20mm
 
-- Poids : 4 g
+- Peso: 4g
 
-## Schéma de connexion
+## Schema di collegamento
 
-Tout d'abord, vous devez préparer les pièces suivantes avant le branchement.
+Prima di tutto devi preparare le seguenti parti prima del collegamento.
 
-- Carte V4.0\*1
+- Scheda V4.0\*1
 
-- Module récepteur IR\*1
+- Modulo ricevitore IR\*1
 
-- Câble USB\*1
+- Cavo USB\*1
 
-- Fil de liaison\*3
+- Cavi jumper\*3
 
-Connectez la broche S du module au Digital 11 de la carte V4.0, la broche négative au GND, la broche positive au port 5V.
+Collega il pin S del modulo a Digital 11 della scheda V4.0, collega il pin negativo al connettore GND, il pin positivo al connettore 5V.
 
-![Illustration du schéma de connexion](../media/687d429fe6360707f95fb6c5ddfa2ca7.jpeg)
+![Illustrazione schema di collegamento](../media/687d429fe6360707f95fb6c5ddfa2ca7.jpeg)
 
-Dans le code d'exemple ci‑dessous, la broche numérique 11 est utilisée ; vous pouvez soit modifier votre câblage, soit adapter le code d'exemple pour correspondre.
+Nel codice di esempio qui sotto è utilizzato il pin Digital 11; puoi modificare il cablaggio o il codice di esempio per farli corrispondere.
 
-## Exemple de code
+## Codice di esempio
 
-Copiez et collez le code ci‑dessous dans le logiciel Arduino.
+Copia e incolla il codice qui sotto nel software Arduino.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -66,18 +66,18 @@ Copiez et collez le code ci‑dessous dans le logiciel Arduino.
 ///////////////////////////////////////////////////////////////
 ```
 
-**Remarque :** avant de compiler le code, n'oubliez pas de placer la bibliothèque dans le répertoire libraries de l'IDE Arduino. Sinon, la compilation échouera.
+**Nota:** prima di compilare il codice, ricordati di inserire la libreria nella directory libraries dell'IDE Arduino. Altrimenti la compilazione fallirà.
 
-La bibliothèque IR Remote inclut quelques exemples pour l'envoi et la réception.
+La libreria IR Remote include alcuni esempi per l'invio e la ricezione.
 
 <https://github.com/shirriff/Arduino-IRremote>
 
-## Exemple de résultat
+## Risultato di esempio
 
-![Illustration du résultat](../media/2692333113be48ffa11c27649d18dcb8.png)
+![Illustrazione risultato di esempio](../media/2692333113be48ffa11c27649d18dcb8.png)
 
-Après avoir réalisé le câblage et téléversé le code, contrôlez le module récepteur IR avec une télécommande infrarouge : la LED D1 clignotera.
+Una volta completato il cablaggio e caricato il codice, controlla il modulo ricevitore IR con un telecomando a infrarossi; il LED D1 lampeggerà.
 
-![Illustration du résultat](../media/4bb52e2957e3aaeace252021e7084c95.png)
+![Illustrazione risultato di esempio](../media/4bb52e2957e3aaeace252021e7084c95.png)
 
 ---

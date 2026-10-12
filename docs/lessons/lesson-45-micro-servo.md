@@ -1,55 +1,55 @@
-# Leçon 45 : Micro Servo
+# Lezione 45: Micro Servo
 
-> **Kit :** Keyestudio 48-in-1 Sensor Kit  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Keyestudio Kit sensori 48-in-1  
+> **Scheda:** Keyestudio V4.0 / Scheda compatibile Arduino Uno ATmega328P
 
-![Illustration du projet 45 : Micro Servo](../media/12c59bd3ab0733beb6ff7802305d4384.jpeg)
+![Illustrazione Progetto 45: Micro Servo](../media/12c59bd3ab0733beb6ff7802305d4384.jpeg)
 
-## Introduction
+## Introduzione
 
-Un servomoteur est un actionneur rotatif à contrôle de position. Il se compose principalement du boîtier, d'une carte électronique, d'un moteur coreless, d'engrenages et d'un capteur de position.
+Il servomotore è un attuatore rotante per il controllo della posizione. È composto principalmente da involucro, circuito, motore coreless, ingranaggi e sensore di posizione.
 
-Avec votre servo, vous trouverez plusieurs supports blancs qui se fixent sur l'axe du servo. Vous pouvez fixer celui que vous souhaitez pour le montage. Il sert d'aide visuelle, facilitant l'observation de la rotation du servo.
+In dotazione con il tuo servomotore troverai una varietà di supporti bianchi per motore che si collegano all'albero del servo. Puoi scegliere di fissare qualsiasi supporto desideri per il circuito. Servirà come ausilio visivo, rendendo più facile vedere il movimento del servo.
 
-Le servo possède trois fils, distingués par les couleurs marron, rouge et orange (selon la marque, les couleurs peuvent varier). Le fil marron est la masse (GND), le rouge est l'alimentation 5V, l'orange est la borne de signal (signal PWM).
+Il servo ha tre interfacce, distinte da linee marrone, rossa e arancione (alcuni marchi possono avere colori diversi). La linea marrone è per GND, quella rossa per l'alimentazione 5V, quella arancione per il terminale del segnale (segnale PWM).
 
-![Illustration d'introduction](../media/e7eb9914318b92eff98a4a84a8d1a557.png)
+![Illustrazione introduzione](../media/e7eb9914318b92eff98a4a84a8d1a557.png)
 
-L'angle de rotation du servo est contrôlé en modulant le cycle de service du signal PWM (modulation de largeur d'impulsion). La période standard du signal PWM est de 20 ms (50 Hz), et la largeur d'impulsion varie entre 1 ms et 2 ms. La largeur d'impulsion correspond à l'angle de rotation (0°～90°) du servo.
+L'angolo di rotazione del servo è controllato regolando il duty cycle del segnale PWM (modulazione di larghezza di impulso). Il periodo standard del segnale PWM è fissato a 20ms (50 Hz), e la larghezza dell'impulso è compresa tra 1ms e 2ms. La larghezza dell'impulso corrisponde all'angolo di rotazione ( 0°～90°) del servo.
 
-![Illustration d'introduction](../media/723671941df8a57cf9246c9916e7b279.png)
+![Illustrazione introduzione](../media/723671941df8a57cf9246c9916e7b279.png)
 
-Passons maintenant à l'apprentissage du contrôle d'un servomoteur.
+Ora impariamo come controllare un servomotore.
 
-Pour cette expérience, vous n'avez besoin que d'un servomoteur et de quelques fils de connexion.
+In questo esperimento ti servono solo un servomotore e alcuni cavi jumper.
 
-## Schéma de connexion
+## Diagramma di collegamento
 
-Connexion pour V4.0 :
+Collegamento per V4.0 :
 
-![Illustration du schéma de connexion](../media/da1e3590f86a5a8ed27b333742ae49c9.jpeg)
+![Illustrazione diagramma di connessione](../media/da1e3590f86a5a8ed27b333742ae49c9.jpeg)
 
-Connexion pour 2560 R3:
+Collegamento per 2560 R3:
 
-![Illustration du schéma de connexion](../media/1c8bd09408be60254883b910ef4fc9bf.png)
+![Illustrazione diagramma di connessione](../media/1c8bd09408be60254883b910ef4fc9bf.png)
 
-Connectez le moteur à la broche numérique 9.
+Collega il motore al pin digitale 9.
 
-Compilez un programme pour contrôler la rotation du moteur jusqu'à l'angle demandé, et afficher l'angle à l'écran.
+Compila un programma per controllare la rotazione del motore all'angolo richiesto e visualizzare l'angolo sullo schermo.
 
-## Programme d'exemple
+## Programma di esempio
 
-Il y a deux manières de contrôler un servomoteur avec Arduino.
+Ci sono due modi per controllare un servomotore con Arduino.
 
-La première consiste à utiliser un port numérique standard d'Arduino pour produire une onde carrée avec différents rapports cycliques pour simuler un signal PWM, et utiliser ce signal pour contrôler la position du moteur.
+Uno è usare una comune porta digitale per sensori di Arduino per generare un'onda quadra con diverso duty cycle per simulare un segnale PWM e usare quel segnale per controllare il posizionamento del motore.
 
-L'autre manière est d'utiliser directement la fonction Servo d'Arduino pour contrôler le moteur.
+Un altro modo è usare direttamente la funzione Servo di Arduino per controllare il motore.
 
-Avec cette seconde méthode, le programme sera plus simple mais elle ne peut contrôler que des moteurs à deux fils via la fonction servo ; seules les broches numériques 9 et 10 peuvent être utilisées. La capacité de pilotage d'Arduino est limitée. Donc si vous devez contrôler plus d'un moteur, vous aurez besoin d'une alimentation externe.
+In questo modo il programma sarà più semplice ma può controllare solo motori a due contatti tramite la funzione servo; possono essere usati solo i pin digitali 9 e 10. La capacità di pilotaggio di Arduino è limitata. Quindi se hai bisogno di controllare più di un motore, avrai bisogno di alimentazione esterna.
 
-## Méthode 1
+## Metodo 1
 
-## Programme d'exemple A
+## Programma di esempio A
 
 ```c
 //////////////////////////////////////////////////////////
@@ -90,25 +90,25 @@ servopulse(servopin,val);// use the pulse function
 //////////////////////////////////////////////////////////
 ```
 
-## Méthode 2
+## Metodo 2
 
-Voyons d'abord la fonction servo intégrée à Arduino et quelques instructions courantes.
+Diamo prima un'occhiata alla funzione Servo incorporata di Arduino e ad alcune istruzioni comuni.
 
-1. **attach (interface)** — sélectionne la broche pour le servo ; seules les broches 9 ou 10 peuvent être utilisées.
+1\. **attach（interface）**——seleziona il pin per il servo, può usare solo il pin 9 o 10.
 
-2. **write (angle)** — sert à contrôler l'angle de rotation du servo ; on peut définir un angle entre 0° et 180°.
+2\. **write（angle）**——usata per controllare l'angolo di rotazione del servo, può impostare l'angolo tra 0 e 180 gradi.
 
-3. **read()** — sert à lire l'angle du servo ; considérez-la comme la lecture de la valeur définie avec write().
+3\. **read（）**——usata per leggere l'angolo del servo; considerala una funzione per leggere il valore impostato con write().
 
-4. **attached()** — détermine si le servo est attaché à la broche (si les paramètres sont envoyés à la broche du servo).
+4\. **attached（）**——determina se il parametro del servo è assegnato al pin del servo.
 
-5. **detach()** — détache le servo de la broche, et la broche (numérique 9 ou 10) peut être utilisée pour d'autres usages PWM.
+5\. **detach（）**——scollega il servo dal pin, e il pin (pin digitale 9 o 10) può essere usato come porta PWM.
 
-**Remarque :** la forme écrite des instructions ci‑dessus est "nom_variable_servo.instruction_spécifique()", p. ex. myservo.attach(9).
+**Nota:** la forma scritta delle istruzioni sopra è "nomeVariabileServo.nomeFunzione()", ad es. myservo.attach(9).
 
-Connectez donc le servo à la broche 9.
+Collega comunque il servo al pin 9.
 
-## Programme d'exemple B
+## Programma di esempio B
 
 ```c
 #include <Servo.h>// define a header file. Special attention here, you can call the servo function directly from Arduino's software menu
@@ -124,14 +124,14 @@ myservo.write(90);// set rotating angle of the motor
 }
 ```
 
-## Résultat de l'exemple
+## Risultato di esempio
 
-![Illustration du résultat de l'exemple](../media/f02556e0631fb206c114ced29e643016.png)
+![Illustrazione risultato di esempio](../media/f02556e0631fb206c114ced29e643016.png)
 
-Branchez correctement, téléversez le Programme A sur la carte, puis ouvrez le moniteur série du logiciel Arduino, réglez la vitesse à 9600 bauds, et dans la barre supérieure saisissez un nombre et cliquez sur «Envoyer». Vous verrez le servo se positionner à l'angle correspondant, et l'angle en mouvement sera affiché dans le moniteur, comme montré ci‑dessous.
+Collega tutto correttamente, carica il Programma A sulla scheda, poi apri il monitor seriale del software Arduino, imposta il baud rate a 9600, e nella barra superiore inserisci un numero e clicca “Invia”; vedrai il servo ruotare all'angolo corrispondente e l'angolo in movimento verrà visualizzato sul monitor, come mostrato sotto.
 
-Sous tension, après avoir téléversé correctement le Programme B sur la carte, le premier servo se positionnera à 90 degrés.
+Una volta alimentata, e caricato correttamente il Programma B sulla scheda, il servo si posizionerà inizialmente a 90 gradi.
 
-![Illustration du résultat de l'exemple](../media/de50d502cb8ed1feb5935d16584cfd63.png)
+![Illustrazione risultato di esempio](../media/de50d502cb8ed1feb5935d16584cfd63.png)
 
 ---

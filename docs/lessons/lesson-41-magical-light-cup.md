@@ -1,29 +1,29 @@
-# Leçon 41: Gobelet lumineux magique
+# Lezione 41: Coppa di Luce Magica
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Carte:** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Kit sensori Keyestudio 48-in-1  
+> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
 
-![Illustration du projet 41: Gobelet lumineux magique](../media/dc3acff676b2611f440643f1657b42e7.png)
+![Illustrazione del Progetto 41: Coppa di Luce Magica](../media/dc3acff676b2611f440643f1657b42e7.png)
 
-## Introduction
+## Introduzione
 
-Le module de gobelet lumineux magique peut interagir avec ARDUINO. Le principe est basé sur la gradation par PWM.
+Il modulo Coppa di Luce Magica può interagire con ARDUINO. Il principio si basa sulla regolazione della luminosità tramite PWM.
 
-L'interrupteur à mercure sur le module peut fournir un signal numérique et déclencher la régulation PWM. La luminosité des deux modules sera modifiée simultanément via le programme, et vous verrez finalement l'effet où deux ensembles de gobelets « versent » la lumière.
+L'interruttore a mercurio presente sul modulo può fornire un segnale digitale e attivare la regolazione PWM. La luminosità dei due moduli verrà modificata contemporaneamente tramite il programma; infine potrai vedere l'effetto di cambiamento come se due serie di coppe stessero versando la luce.
 
-## Spécification
+## Specifiche
 
-- Tension d'alimentation: 3.3V à 5V
+- Tensione di alimentazione: da 3,3V a 5V
 
-- Interface: Numérique
+- Interfaccia: Digitale
 
-## Schéma de connexion
+## Schema di Collegamento
 
-![Illustration du schéma de connexion](../media/9d8d534c60a81608741f85c08d4d0bbe.jpeg)
+![Illustrazione dello schema di collegamento](../media/9d8d534c60a81608741f85c08d4d0bbe.jpeg)
 
-## Exemple de code
+## Codice di esempio
 
-Copiez et collez le code ci-dessous dans le logiciel Arduino.
+Copia e incolla il codice seguente nell'IDE Arduino.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -75,12 +75,12 @@ delay(5);
 ///////////////////////////////////////////////////////////////
 ```
 
-## Exemple de résultat
+## Risultato di esempio
 
-![Illustration du résultat](../media/f629888f2fedea9442ba74dc8761fcb3.png)
+![Illustrazione del risultato d'esempio](../media/f629888f2fedea9442ba74dc8761fcb3.png)
 
-Câblez comme dans le schéma ci‑dessus et téléversez correctement le code sur la carte ; vous verrez qu'un gobelet s'allume tandis que l'autre est éteint. Lorsque vous inclinez ces deux gobelets du même côté, l'un s'éclaire progressivement tandis que l'autre s'éteint progressivement.
+Collega il circuito come mostrato nello schema sopra e carica correttamente il codice sulla scheda; vedrai che una coppa si accende mentre l'altra è spenta. Quando inclini le due coppe dalla stessa parte, una coppa diventa progressivamente più luminosa mentre l'altra si spegne gradualmente.
 
-![Illustration du résultat](../media/cfc57515b967d19fcda65ea50bda76f1.png)
+![Illustrazione del risultato d'esempio](../media/cfc57515b967d19fcda65ea50bda76f1.png)
 
 ---

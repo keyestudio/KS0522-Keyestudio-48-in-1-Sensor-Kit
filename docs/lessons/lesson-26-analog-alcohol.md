@@ -1,39 +1,39 @@
-# Leçon 26 : Alcool analogique
+# Lezione 26: Sensore alcolico analogico
 
-> **Kit :** Kit de capteurs Keyestudio 48-en-1  
-> **Carte :** Keyestudio V4.0 / compatible Arduino Uno ATmega328P
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
 
-![Illustration du projet 26 : Alcool analogique](../media/288162cf02f2968eda57b437292a42dd.png)
+![Progetto 26: Sensore alcolico analogico (illustrazione)](../media/288162cf02f2968eda57b437292a42dd.png)
 
-## Description
+## Descrizione
 
-Ce capteur MQ-3 analogique est adapté à la détection d'alcool. Il peut être utilisé dans un projet d'éthylotest.
+Questo sensore MQ-3 analogico è adatto per rilevare l'alcol. Può essere utilizzato in un progetto di etilometro.
 
-Il présente une bonne sélectivité car il est plus sensible à l'alcool et moins sensible au benzène.
+Ha buona selettività perché è più sensibile all'alcol e meno sensibile alla benzina.
 
-La sensibilité peut être ajustée en tournant le potentiomètre sur le module.
+La sensibilità può essere regolata ruotando il potenziometro sul sensore.
 
-## Spécification
+## Specifiche
 
-- Alimentation : 5V
+- Alimentazione: 5V
 
-- Type d'interface : Analogique
+- Tipo di interfaccia: Analogico
 
-- Circuit de pilotage simple
+- Circuito di pilotaggio semplice
 
-- Stable et longue durée de vie
+- Stabile e lunga durata
 
-- Réponse rapide et haute sensibilité
+- Risposta rapida e alta sensibilità
 
-## Schéma de connexion
+## Schema di collegamento
 
-Connectez la broche A0 du module à l'entrée analogique A0 de la carte V4.0, reliez la broche GND au port GND, la broche VCC au port 5V.
+Collega il pin A0 del modulo all'ingresso analogico A0 della scheda V4.0, collega il pin GND al terminale GND, il pin VCC al terminale 5V.
 
-![Schéma de connexion (illustration)](../media/61632f44731176aaf95d313f2843c9de.jpeg)
+![Schema di collegamento (illustrazione)](../media/61632f44731176aaf95d313f2843c9de.jpeg)
 
-## Exemple de code
+## Codice di esempio
 
-Copiez et collez le code ci-dessous dans le logiciel Arduino.
+Copia e incolla il codice sottostante nel software Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -52,12 +52,12 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Exemple de résultat
+## Risultato di esempio
 
-![Illustration du résultat](../media/a21d5b8c686e46a59128ab48b96d177c.png)
+![Risultato di esempio (illustrazione)](../media/a21d5b8c686e46a59128ab48b96d177c.png)
 
-Après avoir effectué les branchements et alimenté le montage, téléversez correctement le code, puis ouvrez le moniteur série et réglez le débit en bauds sur 9600 ; vous verrez la valeur analogique. Lors de la détection de vapeurs d'alcool, la valeur changera.
+Dopo aver collegato i cavi e alimentato il circuito, carica correttamente il codice, poi apri il monitor seriale e imposta il baud rate a 9600; vedrai il valore analogico. Quando rileverà vapori di alcol, il valore varierà.
 
-![Illustration du résultat](../media/97565d8ba7691b30a7aa96efc6c7728b.jpeg)
+![Risultato di esempio (illustrazione)](../media/97565d8ba7691b30a7aa96efc6c7728b.jpeg)
 
 ---

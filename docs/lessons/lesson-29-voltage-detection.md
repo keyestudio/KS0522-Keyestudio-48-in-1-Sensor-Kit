@@ -1,47 +1,47 @@
-# Leçon 29 : Détection de tension
+# Lezione 29: Rilevamento della tensione
 
-> **Kit :** Kit de capteurs Keyestudio 48-en-1  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P board
+> **Kit:** Keyestudio Kit sensori 48-in-1  
+> **Scheda:** Keyestudio V4.0 / scheda compatibile con Arduino Uno ATmega328P
 
-![Projet 29 : Illustration de la détection de tension](../media/41967398a781944fd64ebd49a9c746fa.jpeg)
+![Illustrazione Progetto 29: Rilevamento della tensione](../media/41967398a781944fd64ebd49a9c746fa.jpeg)
 
-## Description
+## Descrizione
 
-Les produits électroniques étant variés, la tension d'alimentation l'est aussi. Il est donc nécessaire de la détecter à l'aide d'un module ou d'un contrôleur de détection de tension adapté.
+Poiché i prodotti elettronici sono diversi, anche la tensione dell'alimentazione varia. È quindi necessario rilevarla con un modulo di rilevamento della tensione o un controller adeguato.
 
-La tension d'entrée maximale de l'interface analogique du contrôleur est de 5 V, ce qui signifie que les tensions supérieures à 5 V ne pourront pas être détectées directement.
+La tensione massima di ingresso dell'interfaccia analogica del controller è 5V, il che significa che tensioni maggiori di 5V non verranno rilevate.
 
-Cependant, ce module de détection de tension permet de mesurer des tensions supérieures à 5 V.
+Tuttavia, questo modulo di rilevamento della tensione consente di rilevare tensioni superiori a 5 V.
 
-Il est basé sur un diviseur résistif 5:1. Avec une référence analogique de 5 V, la tension d'entrée ne doit pas dépasser 25 V. Avec une référence analogique de 3,3 V, la tension d'entrée ne doit pas dépasser 16,5 V.
+Si basa su un partitore resistivo 5:1. Con un riferimento analogico di 5 V, la tensione di ingresso non deve superare i 25 V. Con un riferimento analogico di 3.3 V, la tensione di ingresso non deve superare i 16.5 V.
 
-Le convertisseur analogique-numérique AVR est en 10 bits, donc la résolution analogique est de 0,00489 V (5 V / 1023). Avec le diviseur 5:1, l'incrément minimal mesurable en entrée est d'approximativement 0,02445 V.
+Il convertitore analogico-digitale AVR è a 10 bit, quindi la risoluzione analogica è 0.00489 V (5 V / 1023). Con il partitore 5:1, l'incremento minimo misurabile in ingresso è approssimativamente 0.02445 V.
 
-Lorsqu'on connecte ce capteur à la carte d'extension à l'aide d'un câble 3 broches, il permet non seulement de détecter facilement l'amplitude de la tension d'alimentation et de surveiller l'état de charge d'une batterie pour des œuvres médiatiques interactives ou des robots, mais il peut aussi être combiné avec un module LCD IIC LCD1602 pour afficher la tension ou réaliser un moniteur de tension.
+Quando si collega questo sensore alla scheda di espansione usando un cavo a 3 pin, non solo può rilevare facilmente l'entità della tensione di alimentazione e monitorare la carica della batteria per opere multimediali interattive o robot, ma può anche essere abbinato a un modulo LCD IIC LCD1602 per visualizzare la tensione o realizzare un monitor della tensione.
 
-## Spécifications
+## Specifiche
 
-- Tension de fonctionnement : 0V-25V CC
+- Tensione di funzionamento: 0V-25V DC
 
-- Type de signal : signal analogique
+- Tipo di segnale: segnale analogico
 
-## Schéma de connexion
+## Schema di collegamento
 
-Tout d'abord, préparez les pièces suivantes avant la connexion :
+Per prima cosa, è necessario preparare i seguenti componenti prima del collegamento:
 
-- Carte V4.0\*1
+- Scheda V4.0\*1
 
-- Capteur de tension\*1
+- Sensore di tensione\*1
 
-- Câble USB\*1
+- Cavo USB\*1
 
-- Fils de liaison\*3
+- Cavi jumper\*3
 
-Connectez la broche S du module à l'entrée analogique A0 de la carte V4.0, connectez la broche négative à la borne GND, et la broche NC à la borne 5V.
+Collegare il pin S del modulo ad Analog A0 della scheda V4.0, collegare il pin negativo alla porta GND, il pin NC alla porta 5V.
 
-![Schéma de connexion - illustration](../media/b8754c45901ff42ba9caadce5db01a3a.jpeg)
+![Illustrazione dello schema di collegamento](../media/b8754c45901ff42ba9caadce5db01a3a.jpeg)
 
-## Code d'exemple
+## Codice di esempio
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -80,12 +80,12 @@ Serial.print(val2);      //The serial port prints the value of the variable val2
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Exemple de résultat
+## Risultato di esempio
 
-![Illustration du résultat exemple](../media/ac8825bb333757bad26785e58651beb7.png)
+![Illustrazione del risultato di esempio](../media/ac8825bb333757bad26785e58651beb7.png)
 
-Une fois le câblage réalisé comme ci-dessus, compilez et téléversez le code, alimentez le circuit, puis ouvrez le moniteur série ; il affichera la valeur de tension détectée comme montré ci-dessous.
+Dopo aver effettuato il collegamento come sopra, compilare e caricare il codice, alimentare la scheda, quindi aprire il monitor seriale: verrà stampato il valore della tensione rilevata come mostrato di seguito.
 
-![Illustration du résultat exemple](../media/af699a83a891ea99d193d5b53bd27fa1.jpeg)
+![Illustrazione del risultato di esempio](../media/af699a83a891ea99d193d5b53bd27fa1.jpeg)
 
 ---

@@ -1,55 +1,55 @@
-# Leçon 17 : Interrupteur Reed
+# Lezione 17: Interruttore Reed
 
-> **Kit :** Kit de capteurs Keyestudio 48-en-1  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Keyestudio Kit sensori 48-in-1  
+> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno (ATmega328P)
 
-![Projet 17 : illustration de l'interrupteur Reed](../media/e580999515f6522eb603ea723bf62173.png)
+![Progetto 17: illustrazione Interruttore Reed](../media/e580999515f6522eb603ea723bf62173.png)
 
-## Description
+## Descrizione
 
-L'interrupteur reed est un commutateur spécial et un composant principal des relais reed et des capteurs de proximité.
+L'interruttore reed è un interruttore speciale e un componente principale per relè reed e interruttori di prossimità.
 
-Un interrupteur reed est généralement constitué de deux matériaux magnétiques doux et de contacts métalliques (lames) qui se séparent lorsqu'il n'y a pas de champ magnétique.
+Un interruttore reed è solitamente costituito da due materiali magnetici morbidi e contatti a lama metallici che si aprono quando non è presente un campo magnetico.
 
-De plus, certains interrupteurs reed sont équipés d'une autre lame jouant le rôle d'un troisième contact normalement fermé. Ces contacts sont encapsulés dans un tube en verre rempli de gaz inertes (comme l'azote ou l'hélium) ou dans un tube en verre sous vide.
+Inoltre, alcuni interruttori reed sono dotati di una terza lama che funge da contatto normalmente chiuso. Questi contatti a lama sono incapsulati in un tubo di vetro pieno di gas inerti (come azoto ed elio) o in un tubo di vetro sottovuoto.
 
-Les lames encapsulées dans le tube en verre sont placées en parallèle avec les extrémités se chevauchant. Un certain espace ou contact mutuel est prévu afin de constituer les contacts normalement ouverts ou normalement fermés de l'interrupteur.
+Le lame incapsulate nel tubo di vetro sono disposte in parallelo con le estremità sovrapposte. Viene riservata una certa distanza o un contatto reciproco per costituire i contatti normalmente aperti o normalmente chiusi dell'interruttore.
 
-L'interrupteur reed peut être utilisé pour le comptage, la détection de fin de course ou d'autres usages.
+L'interruttore reed può essere usato per conteggio, come finecorsa o per altri scopi.
 
-Par exemple, un compteur de vélo peut être constitué en collant un aimant sur le pneu et en fixant l'interrupteur reed à côté.
+Ad esempio, un contachilometri per bicicletta può essere costituito applicando un magnete al pneumatico e montando l'interruttore reed accanto.
 
-Vous pouvez également monter l'interrupteur reed sur une porte à des fins d'alarme ou comme interrupteur.
+È possibile montare l'interruttore reed sulla porta per scopi di allarme o come interruttore.
 
-L'interrupteur reed est largement utilisé dans les appareils ménagers, l'automobile, les communications, l'industrie, la santé et la sécurité.
+L'interruttore reed è ampiamente utilizzato in elettrodomestici, automobili, comunicazioni, industria, sanità e ambito sicurezza.
 
-De plus, il peut être appliqué à d'autres capteurs et dispositifs électriques tels que détecteur de liquide, aimant de porte, relais reed, capteur de niveau d'huile et capteur de proximité (capteur magnétique). Il peut être utilisé dans des environnements à haut risque.
+Inoltre, può essere applicato ad altri sensori e dispositivi elettrici come misuratori di liquidi, magneti per porte, relè reed, sensori di livello dell'olio e sensori di prossimità (sensori magnetici). Può essere utilizzato in ambienti ad alto rischio.
 
-## Spécification
+## Specifiche
 
-1. Tension de fonctionnement : CC 3.3V-5V
+1. Tensione di funzionamento: DC 3.3V-5V
 
-2. Courant de fonctionnement : ≥20mA
+2. Corrente di funzionamento: ≥20mA
 
-3. Température de fonctionnement : －10℃ à ＋50℃
+3. Temperatura di funzionamento: －10℃ a ＋50℃
 
-4. Distance de détection : ≤10mm
+4. Distanza di rilevamento: ≤10mm
 
-5. Interface E/S : 3 broches (-/+/S)
+5. Interfaccia IO: 3 fili (-/+/S)
 
-6. Taille : 30\*20mm
+6. Dimensioni: 30\*20mm
 
-7. Poids : 3g
+7. Peso: 3g
 
-## Schéma de connexion
+## Schema di collegamento
 
-Connectez la broche S du module à Digital 3 de la carte V4.0, connectez la broche négative au port GND, la broche positive au port 5V.
+Collegare il pin S del modulo al Digital 3 della scheda V4.0, collegare il pin negativo al connettore GND, il pin positivo al connettore 5V.
 
-![Schéma de connexion illustration](../media/ad39b511b42657baed492704a9c84b13.jpeg)
+![Illustrazione schema di collegamento](../media/ad39b511b42657baed492704a9c84b13.jpeg)
 
-## Exemple de code
+## Codice di esempio
 
-Copiez et collez le code ci-dessous dans le logiciel Arduino.
+Copia e incolla il codice seguente nell'IDE Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -78,14 +78,14 @@ digitalWrite(Led,LOW);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Résultat attendu
+## Risultato di esempio
 
-Une fois le câblage effectué et l'alimentation mise, téléversez correctement le code sur la carte. Vous verrez la LED D13 de la carte V4.0 allumée.
+Dopo aver effettuato i collegamenti e alimentato la scheda, caricato correttamente il codice sulla scheda, puoi vedere che il D13 led sulla scheda V4.0 è acceso.
 
-![Illustration du résultat](../media/a2f983d5a5b324f55e3c0994458d4cbc.png)
+![Illustrazione risultato di esempio](../media/a2f983d5a5b324f55e3c0994458d4cbc.png)
 
-Ensuite, nous approchons quelques aimants en bille du capteur. Lorsque le capteur détecte le champ magnétique, la LED du capteur s'allume tandis que la LED D13 s'éteint.
+Poi avviciniamo alcune sfere magnetiche al sensore. Quando il sensore rileva il campo magnetico, il led sul sensore si accende mentre il D13 led si spegne.
 
-![Illustration du résultat](../media/ecbec914abc799076513f5c61149b004.png)
+![Illustrazione risultato di esempio](../media/ecbec914abc799076513f5c61149b004.png)
 
 ---

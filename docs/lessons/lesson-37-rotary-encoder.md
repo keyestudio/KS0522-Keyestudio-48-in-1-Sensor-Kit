@@ -1,35 +1,35 @@
-# Leçon 37 : Encodeur rotatif
+# Lezione 37: Encoder rotativo
 
-> **Kit :** Keyestudio 48-in-1 Sensor Kit  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Scheda:** Keyestudio V4.0 / scheda compatibile con Arduino Uno (ATmega328P)
 
-![Projet 37 : illustration de l'encodeur rotatif](../media/df622003846058dd3cf442518f655af2.png)
+![Progetto 37: illustrazione dell'encoder rotativo](../media/df622003846058dd3cf442518f655af2.png)
 
-## Introduction
+## Introduzione
 
-L'encodeur rotatif peut compter le nombre d'impulsions émises pendant la rotation dans le sens positif et inverse.
+L'encoder rotativo può contare il numero di impulsi emessi durante la rotazione in senso orario e antiorario.
 
-Ce comptage rotatif est illimité, contrairement au comptage potentiométrique. Il peut être remis à l'état initial pour compter à partir de 0.
+Questa conta durante la rotazione è illimitata, a differenza del conteggio di un potenziometro. Può essere riportato allo stato iniziale per ricominciare a contare da 0.
 
-## Spécifications
+## Specifiche
 
-- Alimentation : 5V
+- Alimentazione: 5V
 
-- Interface : Numérique
+- Interfaccia: Digitale
 
-- Taille : 30\*20mm
+- Dimensioni: 30\*20mm
 
-- Poids : 7g
+- Peso: 7g
 
-## Schéma de connexion
+## Schema di collegamento
 
-![Illustration du schéma de connexion](../media/1de37f27caa224141230be6bdc95d29b.jpeg)
+![Illustrazione dello schema di collegamento](../media/1de37f27caa224141230be6bdc95d29b.jpeg)
 
-Comme on le voit sur le schéma, nous connectons le module d'encodeur rotatif et deux modules LED à la breadboard et à la carte V4.0.
+Come mostrato nello schema, colleghiamo il modulo encoder rotativo e due moduli LED sulla breadboard e alla scheda V4.0.
 
-Utilisez le module d'encodeur rotatif pour contrôler l'allumage et l'extinction de deux modules LED.
+Utilizza il modulo encoder rotativo per controllare l'accensione e lo spegnimento dei due moduli LED.
 
-## Code d'exemple
+## Codice di esempio
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -92,12 +92,12 @@ void RoteStateChanged() //When CLK  FALLING READ DAT
 ///////////////////////////////////////////////////////////////
 ```
 
-## Exemple de résultat
+## Risultato d'esempio
 
-Une fois le câblage effectué et le code ci‑dessus téléversé, vous pouvez faire tourner l'encodeur pour contrôler de manière alternée l'allumage et l'extinction des deux modules LED. Lorsque vous faites tourner l'encodeur, un module LED s'allume d'abord tandis que l'autre est éteint.
+Dopo aver collegato correttamente e caricato il codice sopra, puoi ruotare il modulo encoder per controllare in modo alternato l'accensione e lo spegnimento dei due moduli LED. Quando ruoti l'encoder, un modulo LED si accende prima mentre l'altro è spento.
 
-Si vous continuez à faire tourner l'encodeur, un module LED s'éteint pendant que l'autre s'allume, de façon répétée.
+Se continui a ruotare l'encoder, un modulo LED si spegnerà mentre l'altro si accende, ripetutamente.
 
-![Illustration du résultat](../media/4c1455602dc8ab6d61f5ab2e2d5dd67c.png)
+![Illustrazione del risultato d'esempio](../media/4c1455602dc8ab6d61f5ab2e2d5dd67c.png)
 
 ---

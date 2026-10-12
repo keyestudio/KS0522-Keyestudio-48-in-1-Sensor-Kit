@@ -1,57 +1,57 @@
-# Leçon 23 : Niveau d'eau
+# Lezione 23: Livello dell'acqua
 
-> **Kit :** Kit de capteurs Keyestudio 48 en 1  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno (ATmega328P)
+> **Kit:** Kit sensori Keyestudio 48-in-1  
+> **Scheda:** Keyestudio V4.0 / Scheda compatibile Arduino Uno con ATmega328P
 
-![Projet 23 : Illustration du niveau d'eau](../media/23f40997b8634be91aed7311eca2dfbb.jpeg)
+![Progetto 23: illustrazione del livello dell'acqua](../media/23f40997b8634be91aed7311eca2dfbb.jpeg)
 
-## Description
+## Descrizione
 
-Le capteur d'eau Keyestudio est facile à utiliser, portable et économique, conçu pour identifier et détecter le niveau d'eau et les gouttes d'eau.
+Il sensore d'acqua Keyestudio è facile da usare, portatile e conveniente, progettato per identificare e rilevare il livello dell'acqua e le gocce d'acqua.
 
-Ce petit capteur peut mesurer le volume d'une goutte d'eau ou la quantité d'eau grâce à une série de pistes constituées de fils parallèles exposés.
+Questo piccolo sensore può misurare il volume di gocce d'acqua o la quantità d'acqua tramite una serie di tracce di fili paralleli esposti.
 
-## Caractéristiques
+## Caratteristiche
 
-- conversion fluide entre quantité d'eau et valeur analogique ;
+- conversione fluida tra quantità d'acqua e valore analogico;
 
-- grande flexibilité, sortie d'une valeur analogique basique ;
+- alta flessibilità, con uscita di un valore analogico di base;
 
-- faible consommation d'énergie et haute sensibilité ;
+- basso consumo energetico e alta sensibilità;
 
-- connexion directe à un microprocesseur ou à d'autres circuits logiques, compatible avec une grande variété de cartes de développement et de contrôleurs tels que Arduino, microcontrôleur STC, microcontrôleur AVR, et plus.
+- si collega direttamente a microprocessori o ad altri circuiti logici, adatto a una varietà di schede di sviluppo e controller come il controller Arduino, il microcontrollore STC, il microcontrollore AVR e altri.
 
-## Spécifications
+## Specifiche
 
-- Tension de fonctionnement : DC5V
+- Tensione di funzionamento: DC5V
 
-- Courant de fonctionnement : ﹤20mA
+- Corrente di funzionamento: ﹤20mA
 
-- Type de capteur : Analogique
+- Tipo di sensore: Analogico
 
-- Zone de détection : 40mm x16mm
+- Area di rilevamento: 40mm x16mm
 
-- Processus de fabrication : FR4 double-face étamé
+- Processo di produzione: FR4 doppia faccia stagnata
 
-- Conception de la forme : Encoches semi-lunaires antidérapantes
+- Design della forma: rientranza semilunare antiscivolo
 
-- Température de fonctionnement : 10℃-30℃
+- Temperatura di esercizio: 10℃-30℃
 
-- Humidité de fonctionnement : 10%-90% sans condensation
+- Umidità di esercizio: 10%-90% senza condensazione
 
-- Poids : 3g
+- Peso: 3g
 
-- Dimensions : 65mm x 20mm x 8mm
+- Dimensioni: 65mm x 20mm x 8mm
 
-## Schéma de connexion
+## Schema di collegamento
 
-Connectez la broche S du module à Analog A0 de la carte V4.0, connectez la broche négative à la borne GND, la broche positive à la borne 5V.
+Collegare il pin S del modulo all'Analogico A0 della scheda V4.0, collegare il pin negativo al GND e il pin positivo al 5V.
 
-![Schéma de connexion illustration](../media/92810e41aea313a15735eecb3a168e2f.jpeg)
+![Illustrazione schema di collegamento](../media/92810e41aea313a15735eecb3a168e2f.jpeg)
 
-## Code d'exemple
+## Codice di esempio
 
-Copiez et collez le code ci-dessous dans l'environnement Arduino.
+Copia e incolla il codice qui sotto nell'IDE Arduino.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -80,20 +80,20 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Exemple de résultat
+## Esempio di risultato
 
-![Illustration du résultat exemple](../media/ca727c75f4d4e454c95258d77afdf10e.png)
+![Illustrazione del risultato di esempio](../media/ca727c75f4d4e454c95258d77afdf10e.png)
 
-Après avoir réalisé les étapes ci‑dessus, faisons un test avec un niveau d'eau faible et voyons ce qui se passe ?
+Dopo aver eseguito i passaggi precedenti, facciamo una prova con un livello d'acqua basso e verifichiamo cosa succede?
 
-Téléversez correctement le code sur la carte V4.0, puis ouvrez le moniteur série et réglez la vitesse à 9600 bauds.
+Carica correttamente il codice sulla scheda V4.0, poi apri il monitor seriale e imposta la velocità di trasmissione (baud) a 9600.
 
-Lorsque vous placez le capteur à différents niveaux dans l'eau, vous verrez la valeur changer en conséquence.
+Quando posizioni il sensore nell'acqua a livelli diversi, vedrai il valore cambiare di conseguenza.
 
-![Illustration du résultat exemple](../media/8070cf2260fef39e5ec5e18b7a1849cf.jpeg)
+![Illustrazione del risultato di esempio](../media/8070cf2260fef39e5ec5e18b7a1849cf.jpeg)
 
-De plus, vous pouvez définir une valeur d'alarme et connecter un avertisseur sonore pour déclencher une alarme.
+Inoltre, puoi impostare un valore di soglia per l'allarme e collegare un cicalino per generare un avviso.
 
-La DEL ne s'allumera pas tant que le niveau d'eau n'aura pas atteint la valeur d'alarme. Si le niveau d'eau atteint la valeur d'alarme, la DEL s'allumera et l'avertisseur sonore sonnera pour déclencher l'alarme.
+Il LED non si accenderà quando il livello dell'acqua non ha raggiunto il valore di allarme. Se il livello dell'acqua raggiunge il valore di allarme, il LED si accenderà e il cicalino suonerà per segnalare l'allarme.
 
 ---

@@ -1,69 +1,69 @@
-# Leçon 44 : Détection d'accélération numérique triaxiale
+# Lezione 44: Rilevamento di accelerazione digitale triaxiale
 
-> **Kit :** Keyestudio 48-in-1 Sensor Kit  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Scheda:** Keyestudio V4.0 / scheda ATmega328P compatibile con Arduino Uno
 
-![Illustration du projet 44 : Détection d'accélération numérique triaxiale](../media/2a26949601eb888348b798711fe1151e.jpeg)
+![Progetto 44: Illustrazione del rilevamento di accelerazione digitale triaxiale](../media/2a26949601eb888348b798711fe1151e.jpeg)
 
-## Introduction
+## Introduzione
 
-Le MMA8452Q est un capteur d'accélération capacitif micromécanique (MEMS) intelligent et basse consommation, à trois axes, avec une résolution de 12 bits.
+MMA8452Q è un sensore di accelerazione intelligente a bassa potenza, a tre assi, a micromacchina capacitiva, con risoluzione a 12 bit.
 
-Ce capteur d'accélération dispose de nombreuses fonctions embarquées, avec des options configurables par l'utilisateur et une configuration à deux broches d'interruption.
+Questo sensore di accelerazione integra funzionalità ricche, con opzioni programmabili dall'utente flessibili e la configurazione di due pin di interruzione.
 
-La fonction d'interruption intégrée peut réduire la consommation globale d'énergie et éviter la charge d'interroger en permanence les données par le processeur principal.
+La funzione di interruzione integrata può ridurre il consumo energetico complessivo e togliere l'onere dal processore principale di dover interrogare continuamente i dati.
 
-De plus, le MMA8452Q propose une plage optionnelle de ±2g / ±4g / ±8g, et peut fournir en temps réel des données filtrées en passe-haut et des données non filtrées.
+Inoltre, MMA8452Q offre una gamma selezionabile di ±2g / ±4g / ±8g, e può fornire in tempo reale dati filtrati con filtro passa-alto e dati non filtrati.
 
-Cet appareil peut être configuré pour générer une interruption de réveil inertielle, ce qui permet au MMA8452Q de rester en mode basse consommation à l'état statique tout en surveillant les événements.
+Questo dispositivo può configurare una funzione integrata per generare un segnale di interruzione di risveglio inerziale, che permette a MMA8452Q di mantenere una modalità a bassa potenza nello stato statico mentre monitora l'evento.
 
-## Paramètres de performance
+## Parametri di prestazione
 
-- Tension d'alimentation : 1.95 V à 3.6 V
+- Tensione di alimentazione：1.95 V a 3.6 V
 
-- Tension d'interface : 1.6 V à 3.6 V
+- Tensione di interfaccia：1.6 V a 3.6 V
 
-- Plage dynamique optionnelle : ±2g / ±4g / ±8g
+- Intervallo dinamico opzionale ±2g/±4g/±8g
 
-- Plage de fréquence de sortie des données (ODR) : 1.56 Hz à 800 Hz
+- Intervallo della frequenza di uscita dati (ODR): 1.56Hz a 800Hz
 
-- Bruit : 99 μg/√Hz
+- Rumore：99μg/√Hz
 
-- Sorties numériques 12 bits et 8 bits ;
+- Uscite digitali a 12 bit e 8 bit;
 
-- Interface de sortie numérique I2C (jusqu'à 2.25 MHz lorsque la résistance de pull-up est de 4.7 kΩ) ;
+- Interfaccia di uscita digitale I2C (fino a 2.25MHz quando la resistenza pull-up è 4.7kΩ);
 
-- Deux broches d'interruption programmables appliquées à six sources d'interruption ;
+- Due pin di interruzione programmabili applicabili a sei sorgenti di interruzione;
 
-- Trois canaux intégrés de détection de mouvement : détection de chute libre, détection d'impulsion, détection de secousse ;
+- Tre canali integrati di rilevamento del movimento: rilevamento di caduta libera, rilevamento a impulso, rilevamento scuotimento;
 
-- Détection de direction (transversale/longitudinale) avec compensation de décalage configurable ;
+- Rilevamento della direzione (trasversale/longitudinale) con compensazione di ritardo configurabile;
 
-- Réveil automatique et ODR en veille automatique pouvant être modifiés automatiquement ;
+- L'ODR in modalità risveglio e in modalità dormiente può essere modificato automaticamente;
 
-- Les données filtrées passe-haut peuvent être exportées en temps réel ;
+- I dati filtrati con filtro passa-alto possono essere esportati in tempo reale;
 
-- Consommation : 6 μA – 165 μA
+- Consumo energetico: 6μA – 165μA
 
-## Diagramme de connexion
+## Schema di collegamento
 
-Tout d'abord, vous devez préparer les pièces suivantes :
+Per prima cosa prepara i seguenti componenti:
 
-- Carte V4.0*1
+- Scheda V4.0*1
 
-- Capteur MMA8452Q*1
+- Sensore MMA8452Q*1
 
-- Câble USB*1
+- Cavo USB*1
 
-- Fils de connexion*4
+- Cavi jumper*4
 
-Connectez la broche SCL au port Analog A5, la broche SDA au port Analog A4 ; connectez la broche positive au port 3V3, la broche négative au port GND.
+Collega il pin SCL alla porta Analog A5, il pin SDA alla porta Analog A4; collega il pin positivo alla porta 3V3, il pin negativo alla porta GND.
 
-![Illustration du diagramme de connexion](../media/fdd68f7da45d46e65f42918eac68a2f3.jpeg)
+![Illustrazione dello schema di collegamento](../media/fdd68f7da45d46e65f42918eac68a2f3.jpeg)
 
-## Exemple de code
+## Codice di esempio
 
-Copiez-collez le code ci-dessous dans le logiciel Arduino.
+Copia e incolla il codice qui sotto nell'IDE Arduino.
 
 ```c
 #include <Wire.h> // Must include Wire library for I2C
@@ -188,14 +188,14 @@ void printOrientation()
 }
 ```
 
-Remarque : avant de compiler le code, pensez à placer la bibliothèque dans le répertoire libraries de l'IDE Arduino. Sinon, la compilation échouera.
+Nota: prima di compilare il codice, ricordati di posizionare la libreria nella cartella libraries dell'IDE Arduino. Altrimenti la compilazione fallirà.
 
-## Exemple de résultat
+## Risultato di esempio
 
-![Illustration de l'exemple de résultat](../media/9f81d233c0387bc32d25951abd3a407c.png)
+![Illustrazione del risultato di esempio](../media/9f81d233c0387bc32d25951abd3a407c.png)
 
-Après avoir téléversé le code et ouvert le moniteur série, il affichera l'accélération triaxiale du capteur et son état comme indiqué ci-dessous.
+Dopo aver caricato il codice e aperto il monitor seriale, verranno visualizzati l'accelerazione triaxiale del sensore e il relativo stato come mostrato di seguito.
 
-![Illustration de l'exemple de résultat](../media/03421d279e2e961d7b40f645b7576d73.jpeg)
+![Illustrazione del risultato di esempio](../media/03421d279e2e961d7b40f645b7576d73.jpeg)
 
 ---

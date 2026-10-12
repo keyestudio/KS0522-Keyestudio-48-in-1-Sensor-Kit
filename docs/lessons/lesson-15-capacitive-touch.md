@@ -1,47 +1,47 @@
-# Leçon 15 : Touche capacitive
+# Lezione 15: Touch capacitivo
 
-> **Kit :** Keyestudio 48-en-1 Kit de capteurs  
-> **Carte :** Keyestudio V4.0 / carte compatible Arduino Uno ATmega328P
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
 
-![Illustration du projet 15 : Touche capacitive](../media/bceabc7d4302bd41ae380e179a281314.png)
+![Illustrazione del progetto 15: Touch capacitivo](../media/bceabc7d4302bd41ae380e179a281314.png)
 
-## Description
+## Descrizione
 
-Vous en avez assez de cliquer sur des boutons mécaniques ? Essayez notre capteur tactile capacitif. On trouve des capteurs tactiles principalement sur des appareils électroniques. Améliorez donc votre projet Arduino avec ce capteur pour le rendre plus moderne.
+Se sei stanco di premere pulsanti meccanici, prova il nostro sensore touch capacitivo. I sensori touch sono comunemente usati nei dispositivi elettronici. Aggiorna il tuo progetto Arduino con questo sensore per renderlo più interessante.
 
-Ce petit capteur peut détecter le contact du corps et du métal en renvoyant un niveau de tension haut/bas. Même isolé par du tissu ou du papier, il peut encore détecter le contact. Mais sa sensibilité diminue lorsque la couche d'isolation devient plus épaisse.
+Questo piccolo sensore può rilevare il tocco del corpo e dei metalli restituendo un livello di tensione alto/basso. Anche se isolato da tessuto o carta, può ancora percepire il contatto, sebbene la sensibilità diminuisca all'aumentare dello spessore dello strato isolante.
 
-Nous apporterons d'autres améliorations à ces modules capteurs pour vous offrir une meilleure expérience.
+Apporteremo ulteriori miglioramenti a questi moduli sensore per offrirti una migliore esperienza.
 
-## Spécifications
+## Specifiche
 
-- Tension d'alimentation: 3.3V à 5V
+- Tensione di alimentazione: 3.3V a 5V
 
-- Interface: Numérique
+- Interfaccia: Digitale
 
-- Taille: 30*20mm
+- Dimensioni: 30*20mm
 
-- Poids: 3g
+- Peso: 3g
 
-## Schéma de connexion
+## Schema di collegamento
 
-Premièrement, vous devez préparer les composants suivants avant la connexion :
+Prima di collegare, prepara i seguenti componenti:
 
-- Carte V4.0*1
+- Scheda V4.0*1
 
-- Capteur tactile capacitif*1
+- Sensore touch capacitivo*1
 
-- Câble USB*1
+- Cavo USB*1
 
-- Fils de connexion*3
+- Cavi jumper*3
 
-Connectez la broche S du module au Digital 2 de la carte V4.0, connectez la broche négative au port GND et la broche positive au port 5V.
+Collega il pin S del modulo al Digital 2 della scheda V4.0, collega il pin negativo al GND e il pin positivo al 5V.
 
-![Illustration du schéma de connexion](../media/18193a53377b60f43fb583c29337f3aa.jpeg)
+![Illustrazione dello schema di collegamento](../media/18193a53377b60f43fb583c29337f3aa.jpeg)
 
-## Code d'exemple
+## Codice di esempio
 
-Copiez et collez le code ci-dessous dans le logiciel Arduino.
+Copia e incolla il codice seguente nell'IDE Arduino.
 
 ```c
 const uint8_t ledPin = 13;  // On-board LED.
@@ -58,10 +58,10 @@ void loop() {
 }
 ```
 
-## Exemple de résultat
+## Risultato di esempio
 
-Après avoir réalisé le câblage, alimenté le montage et téléversé correctement le code, touchez le capteur avec votre doigt : la LED D2 sur le capteur et l'indicateur D13 sur la carte V4.0 s'allument. Sinon, ces deux voyants sont éteints.
+Dopo aver effettuato i collegamenti e alimentato la scheda, caricato correttamente il codice, tocca il sensore con il dito: sia il LED D2 sul sensore sia l'indicatore D13 sulla scheda V4.0 si accendono. Altrimenti, entrambi gli indicatori sono spenti.
 
-![Illustration du résultat](../media/31a751feed0f21236458b93eed14af9f.png)
+![Illustrazione del risultato di esempio](../media/31a751feed0f21236458b93eed14af9f.png)
 
 ---
