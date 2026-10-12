@@ -1,43 +1,43 @@
-# Lezione 36: Joystick
+# レッスン36：ジョイスティック
 
-> **Kit:** Keyestudio Kit sensori 48-in-1  
-> **Scheda:** Keyestudio V4.0 / Scheda compatibile con Arduino Uno (ATmega328P)
+> **キット：** Keyestudio 48-in-1 センサーキット  
+> **ボード：** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 36: illustrazione del joystick](../media/310a620a28ae6ebeeee7294bdc7a2bb0.png)
+![プロジェクト36：ジョイスティックの図](../media/310a620a28ae6ebeeee7294bdc7a2bb0.png)
 
-## Descrizione
+## 概要
 
-Molti progetti robotici richiedono uno joystick. Questo modulo offre una soluzione economica. Collegandolo semplicemente a due ingressi analogici, il robot è sotto il tuo controllo con asse X e Y. Ha anche un interruttore collegato a un pin digitale.
+多くのロボットプロジェクトではジョイスティックが必要です。このモジュールは手頃な価格でその解決策を提供します。2つのアナログ入力に接続するだけで、X・Y制御でロボットを操作できます。さらに、デジタルピンに接続されたスイッチも備えています。
 
-## Specifiche
+## 仕様
 
-- Tensione di alimentazione: 3.3V a 5V
+- 電源電圧：3.3V〜5V
 
-- Interfaccia: Analogico x2, Digitale x1
+- インターフェース：アナログ x2、デジタル x1
 
-- Dimensioni: 40*28mm
+- サイズ：40×28mm
 
-- Peso: 12g
+- 重量：12g
 
-## Diagramma di collegamento
+## 接続図
 
-Prima di tutto, prepara i seguenti componenti prima del collegamento.
+まず接続の前に以下の部品を用意してください。
 
-- Scheda V4.0\*1
+- V4.0 ボード\*1
 
-- Modulo joystick\*1
+- ジョイスティックモジュール\*1
 
-- Cavo USB\*1
+- USBケーブル\*1
 
-- Cavi jumper\*5
+- ジャンパーワイヤー\*5
 
-Collega il pin Y del modulo ad Analog A1 della Scheda V4.0, collega il pin X ad Analog A0, il pin B a Digital 3; collega il pin negativo alla porta GND, il pin positivo alla porta 5V.
+モジュールのYピンをV4.0ボードのアナログ A1 に接続し、Xピンをアナログ A0、Bピンをデジタル 3 に接続します。負（マイナス）ピンを GND ポートに、正（プラス）ピンを 5V ポートに接続します。
 
-![Diagramma di collegamento (illustrazione)](../media/3c0d2f553f6e76565171dae78a440568.jpeg)
+![接続図のイラスト](../media/3c0d2f553f6e76565171dae78a440568.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice sottostante nell'IDE di Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -65,12 +65,12 @@ void loop()
 ///////////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 動作例
 
-![Esempio di risultato (illustrazione)](../media/5e6809517dd961c3740b04c7774c3e75.png)
+![動作例の図](../media/5e6809517dd961c3740b04c7774c3e75.png)
 
-Dopo aver effettuato i collegamenti e caricato il codice, apri il monitor seriale nell'IDE di Arduino e imposta la velocità di trasmissione su 9600 baud: vedrai i valori mostrati qui sotto. Se spingi lo joystick verso il basso, in alto, a sinistra o a destra, i dati cambieranno.
+配線とコードの書き込みが完了したら、Arduinoソフトウェアのシリアルモニタを開き、ボーレートを9600に設定します。以下のような値が表示されます。ジョイスティックを下／上／左／右に動かすと、表示されるデータが変化します。
 
-![Esempio di risultato (illustrazione)](../media/6b3a1bd089cafce0f1db02f405ab5035.jpeg)
+![動作例の図](../media/6b3a1bd089cafce0f1db02f405ab5035.jpeg)
 
 ---

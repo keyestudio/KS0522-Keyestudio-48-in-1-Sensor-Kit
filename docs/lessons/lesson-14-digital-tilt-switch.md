@@ -1,35 +1,32 @@
-# Lezione 14: Interruttore di inclinazione digitale
+# レッスン14：デジタル傾斜スイッチ
 
-> **Kit:** Keyestudio 48-in-1 Kit di sensori  
-> **Scheda:** Keyestudio V4.0 / scheda ATmega328P compatibile con Arduino Uno
+> **キット：** Keyestudio 48-in-1 センサーキット  
+> **ボード：** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 14: Interruttore di inclinazione digitale - illustrazione](../media/45a40bdcc098c1c4e0efb8246447173c.png)
+![プロジェクト14：デジタル傾斜スイッチの図](../media/45a40bdcc098c1c4e0efb8246447173c.png)
 
-## Descrizione
+## 説明
 
-Il sensore di inclinazione è un interruttore digitale. Può essere utilizzato come un semplice interruttore di inclinazione.
+傾斜センサー（Tilt Sensor）はデジタル傾斜スイッチです。シンプルな傾斜スイッチとして使用できます。
 
-Semplicemente collegalo al nostro IO/Sensor shield, facile per il collegamento dei fili. Con lo shield dedicato per sensori e Arduino, puoi realizzare molti progetti interessanti e interattivi.
+IO/Sensorシールドに差し込むだけで配線が簡単です。専用のセンサーシールドとArduinoを使用すれば、さまざまな面白くインタラクティブな作品を作成できます。
 
-## Specifiche
+## 仕様
 
-- Tensione di alimentazione: 3.3V a 5V
+- 供給電圧：3.3V〜5V
+- インターフェース：デジタル
+- サイズ：30*20mm
+- 重量：3g
 
-- Interfaccia: Digitale
+## 接続図
 
-- Dimensioni: 30*20mm
+モジュールのSピンをV4.0ボードのDigital 3に接続し、負極ピンをGND端子に、正極ピンを5V端子に接続します。
 
-- Peso: 3g
+![接続図（イラスト）](../media/b909cdd6f697779371498723dc1407ab.jpeg)
 
-## Schema di collegamento
+## サンプルコード
 
-Collegare il pin S del modulo al pin Digital 3 della scheda V4.0, collegare il pin negativo al connettore GND e il pin positivo al connettore 5V.
-
-![Illustrazione dello schema di collegamento](../media/b909cdd6f697779371498723dc1407ab.jpeg)
-
-## Esempio di codice
-
-Copia e incolla il codice seguente nell'ambiente Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 int Led=13;//define LED interface
@@ -54,14 +51,14 @@ digitalWrite(Led,HIGH);
 }
 ```
 
-## Risultato di esempio
+## 実行例
 
-Dopo aver effettuato i collegamenti e fornito l'alimentazione, carica correttamente il codice sulla scheda V4.0.
+配線と電源を接続し、コードをV4.0ボードに正しくアップロードしたら、次のように動作します。
 
-![Illustrazione del risultato di esempio](../media/d6a0aa9af1e43265114eec8570ac0f3c.png)
+![実行例（イラスト）](../media/d6a0aa9af1e43265114eec8570ac0f3c.png)
 
-Poi inclina il sensore: vedrai che il LED sul sensore si accende, come mostrato di seguito.
+センサーを傾けると、センサー上のLEDが点灯します。下図のようになります。
 
-![Illustrazione del risultato di esempio](../media/6c4a144c26675a100bffa806c532736c.png)
+![実行例（イラスト）](../media/6c4a144c26675a100bffa806c532736c.png)
 
 ---

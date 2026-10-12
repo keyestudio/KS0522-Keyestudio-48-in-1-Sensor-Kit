@@ -1,48 +1,47 @@
-# Lezione 24: Umidità del Suolo
+# レッスン24：土壌水分
 
-> **Kit:** Kit sensori Keyestudio 48-in-1  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P  
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 24: illustrazione Umidità del Suolo](../media/d1041a8e2cbfca69c5d8bbd9ba7d4f92.jpeg)
+![プロジェクト24：土壌水分のイラスト](../media/d1041a8e2cbfca69c5d8bbd9ba7d4f92.jpeg)
 
-## Descrizione
+## 説明
 
-Questo è un semplice sensore di umidità del suolo progettato per rilevare l'umidità del terreno. Se il terreno è carente d'acqua, il valore analogico in uscita dal sensore diminuirà, altrimenti aumenterà.
+これは土壌の湿度を検出するためのシンプルな土壌湿度センサーです。土に水が不足しているとセンサーの出力するアナログ値は低くなり、逆に水分が多いと高くなります。
 
-Se usi questo sensore per costruire un dispositivo di irrigazione automatico, può rilevare se le tue piante hanno sete per evitare che appassiscano quando sei fuori.
+このセンサーを使って自動給水装置を作れば、外出時に植物が枯れるのを防ぐために植物が水を必要としているかどうかを検知できます。
 
-Combinando questo sensore con un controllore Arduino puoi rendere le tue piante più curate e il tuo giardino più intelligente.
+このセンサーとArduinoコントローラを組み合わせることで、植物をより快適に、庭をよりスマートにできます。
 
-Il modulo sensore di umidità del suolo non è così complicato come potresti pensare, quindi se hai bisogno di rilevare l'umidità nel tuo progetto sarà una delle migliori scelte.
+土壌湿度センサーモジュールは思っているほど複雑ではないので、プロジェクトで土壌を検出する必要がある場合、最良の選択となるでしょう。
 
-Il sensore è dotato di due sonde che vengono inserite nel terreno. Se la corrente passa attraverso il terreno, il sensore ottiene il valore di resistenza leggendo le variazioni di corrente tra le due sonde, quindi converte il valore di resistenza in contenuto di umidità.
+センサーは土に挿入する2本のプローブを備えています。土を通して電流が流れると、センサーは2つのプローブ間の電流変化を読み取って抵抗値を取得し、その抵抗値を湿度に変換します。
 
-Maggiore è l'umidità (minore resistenza), maggiore è la conducibilità del terreno.
+水分が高い（抵抗が低い）ほど、土壌の導電率は高くなります。
 
-La superficie del sensore è stata sottoposta a un processo di metallizzazione per prolungarne la durata. Inseriscilo nel terreno e poi usa il convertitore AD per leggerne il valore. Con l'aiuto di questo sensore, la pianta può ricordarti: Ho bisogno d'acqua.
+センサーの表面は電鋳（めっき）処理が施されており、寿命を延ばしています。土に挿入してADコンバータで読み取ってください。このセンサーのおかげで植物があなたに知らせてくれます：「水が必要です。」
 
-## Specifiche
+## 仕様
 
-- Tensione di alimentazione: 3.3V o 5V
+- 電源電圧: 3.3V または 5V
 
-- Corrente di lavoro: ≤ 20mA
+- 動作電流: ≤ 20mA
 
-- Tensione in uscita: 0-2.3V (Quando il sensore è completamente immerso in acqua, la tensione sarà 2.3V)  
-  Più alta è l'umidità, più alta sarà la tensione in uscita.
+- 出力電圧: 0-2.3V (センサーが完全に水に浸かっているとき、電圧は2.3Vになります) 湿度が高いほど出力電圧は高くなります。
 
-- Tipo di sensore: Uscita analogica
+- センサータイプ: アナログ出力
 
-- Interfaccia: Pin1 - segnale, Pin2 - GND, Pin3 - VCC
+- インターフェース: Pin1 - 信号, Pin2 - GND, Pin3 - VCC
 
-## Schema di Collegamento
+## 接続図
 
-Collega il pin S del modulo ad Analog A0 della scheda V4.0, collega il pin negativo a GND e il pin positivo a 5V.
+モジュールの S ピンを V4.0 ボードの Analog A0 に接続し、負極ピンを GND ポート、正極ピンを 5V ポートに接続します。
 
-![Illustrazione schema di collegamento](../media/b1685a438f171f4bbb3cd8d1b1782bb1.jpeg)
+![接続図のイラスト](../media/b1685a438f171f4bbb3cd8d1b1782bb1.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice sottostante nel software Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -65,12 +64,12 @@ void loop(){
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 結果の例
 
-![Illustrazione risultato di esempio](../media/1200f0f53ca0758afc505c475ce75e68.png)
+![結果の例のイラスト](../media/1200f0f53ca0758afc505c475ce75e68.png)
 
-Dopo aver collegato i cavi e alimentato il circuito, carica correttamente il codice, quindi apri il monitor seriale e imposta la velocità di trasmissione a 57600: vedrai il valore. Quando il sensore rileva l'umidità, il valore cambierà di conseguenza. Mostrato di seguito.
+配線と電源を接続し、コードをアップロードしたら、シリアルモニタを開きボーレートを57600に設定すると、値が表示されます。センサーが湿度を検出すると値が対応して変化します。下図参照。
 
-![Illustrazione risultato di esempio](../media/cb240ae7199f877c17b9ac3a4d9d6ced.jpeg)
+![結果の例のイラスト](../media/cb240ae7199f877c17b9ac3a4d9d6ced.jpeg)
 
 ---

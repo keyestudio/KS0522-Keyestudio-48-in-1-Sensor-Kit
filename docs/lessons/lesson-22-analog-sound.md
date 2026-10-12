@@ -1,35 +1,35 @@
-# Lezione 22: Suono Analogico
+# レッスン22: アナログサウンド
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Scheda:** Keyestudio V4.0 / scheda ATmega328P compatibile con Arduino Uno
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 22: illustrazione Suono Analogico](../media/a494bbec73f7c8ff91b3133c9d2798a7.jpeg)
+![プロジェクト22：アナログサウンドの図](../media/a494bbec73f7c8ff91b3133c9d2798a7.jpeg)
 
-## Descrizione
+## 説明
 
-Il sensore di suono analogico viene tipicamente usato per rilevare il volume dei suoni ambientali. Il sensore è dotato di un potenziometro, che puoi ruotare per regolare il guadagno del segnale.
+アナログ音センサーは、周囲の音の大きさ（音量）を検出するのに一般的に使われます。センサーには可変抵抗（ポテンショメータ）が付属しており、これを回して信号の増幅度を調整できます。
 
-Puoi usarlo per creare lavori interessanti e interattivi, come un interruttore attivato dalla voce.
+音声起動スイッチのような、面白くインタラクティブな作品に利用できます。
 
-## Specifiche
+## 仕様
 
-- Tensione di alimentazione: 3.3V a 5V
+- 供給電圧: 3.3V〜5V
 
-- Interfaccia: Analogico
+- インターフェース: アナログ
 
-- Dimensioni: 30*20mm
+- サイズ: 30×20mm
 
-- Peso: 4g
+- 重さ: 4g
 
-## Diagramma di collegamento
+## 接続図
 
-Collega il pin S del modulo al pin A0 analogico della scheda V4.0, collega il pin negativo al connettore GND, il pin positivo al connettore 5V.
+モジュールのSピンをV4.0ボードのAnalog A0に接続し、負極ピンをGNDポートに、正極ピンを5Vポートに接続します。
 
-![Illustrazione del diagramma di collegamento](../media/22e1124550d57015a6d2d5782b8febda.jpeg)
+![接続図](../media/22e1124550d57015a6d2d5782b8febda.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice seguente nell'IDE Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -49,10 +49,10 @@ delay(50);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 実行例
 
-Dopo aver completato i collegamenti e alimentato la scheda, carica il codice, poi apri il monitor seriale e imposta la velocità di trasmissione (baud) a 9600; vedrai il valore analogico. Quando parli rivolgendoti verso il microfono, il valore aumenterà. Mostrato qui sotto.
+配線と電源を接続し、コードをアップロードしたら、シリアルモニタを開いてボーレートを9600に設定します。アナログ値が表示されます。マイクヘッドに向かって話すと値が増加します。下図参照。
 
-![Illustrazione del risultato di esempio](../media/4d753036151413a1bdda3c0b283b8551.png)
+![実行例の図](../media/4d753036151413a1bdda3c0b283b8551.png)
 
 ---

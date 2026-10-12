@@ -1,49 +1,49 @@
-# Lezione 02: LED RGB
+# レッスン 02: RGB LED
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 2: illustrazione LED RGB](../media/de14ae0679267cf87837b7c09934c52e.png)
+![プロジェクト2: RGB LED イラスト](../media/de14ae0679267cf87837b7c09934c52e.png)
 
-## Descrizione
+## 説明
 
-Questo è un modulo LED a colori completi, che contiene 3 colori di base: rosso, verde e blu. Possono essere considerati come LED separati.
+これはフルカラーLEDモジュールで、赤、緑、青という3つの基本色を含んでいます。それぞれは個別のLEDとして見ることができます。
 
-Dopo la programmazione, puoi accenderli e spegnerli in sequenza oppure utilizzare l'uscita analogica PWM per miscelare i tre colori e generare colori diversi.
+プログラムにより、順番に点灯・消灯させたり、PWMのアナログ出力を使用して3色を混合し、さまざまな色を生成することができます。
 
-## Specifiche
+## 仕様
 
-- Colore: rosso, verde e blu
+- 色: 赤、緑、青
 
-- Luminosità: Alta
+- 明るさ: 高
 
-- Tensione: 5V
+- 電圧: 5V
 
-- Ingresso: livello digitale
+- 入力: デジタルレベル
 
-- Dimensioni: 30 \*20mm
+- サイズ: 30 \*20mm
 
-- Peso: 3g
+- 重量: 3g
 
-## Schema di collegamento
+## 接続図
 
-Per prima cosa, è necessario preparare i seguenti componenti prima del collegamento:
+まず、接続の前に以下の部品を用意してください:
 
-- Scheda V4.0\*1
+- V4.0 ボード\*1
 
-- Modulo LED RGB \*1
+- RGB LEDモジュール \*1
 
-- Cavo USB\*1
+- USBケーブル\*1
 
-- Cavi jumper\*4
+- ジャンパーワイヤー\*4
 
-Collega il pin V del modulo alla porta 5V della scheda V4.0, collega il pin B al Digital 11, il pin R al Digital 10, il pin G al Digital 9.
+モジュールのVピンをV4.0ボードの5Vポートに接続し、BピンをDigital 11、RピンをDigital 10、GピンをDigital 9に接続します。
 
-![Illustrazione dello schema di collegamento](../media/2c0a9305cd7c7b0c28c51bc2bc24eb39.jpeg)
+![接続図イラスト](../media/2c0a9305cd7c7b0c28c51bc2bc24eb39.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice sottostante nel software Arduino.
+以下のコードをArduinoソフトにコピー＆ペーストしてください。
 
 ```c
 const uint8_t redPin = 11;
@@ -72,10 +72,10 @@ void loop() {
 }
 ```
 
-## Risultato di esempio
+## 例の結果
 
-Dopo aver completato i collegamenti e alimentato la scheda, e aver caricato correttamente il codice, vedrai il modulo LED RGB emettere colori brillanti.
+配線と電源を接続し、コードを問題なくアップロードすると、RGB LEDモジュールが鮮やかな色を発光します。
 
-![Illustrazione del risultato](../media/0872e5256edf443efcb68218505096ba.png)
+![実例イラスト](../media/0872e5256edf443efcb68218505096ba.png)
 
 ---

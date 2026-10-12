@@ -1,61 +1,61 @@
-# Lezione 38: Relè singolo
+# レッスン38: 単一リレー
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno con ATmega328P
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328Pボード
 
-![Progetto 38: Illustrazione relè singolo](../media/e0b4485cfd4ccebd974d81f19239dde3.png)
+![プロジェクト38: 単一リレーの図](../media/e0b4485cfd4ccebd974d81f19239dde3.png)
 
-## Introduzione
+## はじめに
 
-Questo modulo relè singolo può essere usato in progetti interattivi. Il modulo utilizza un relè SONGLE 5V di alta qualità. Può inoltre essere impiegato per controllare illuminazione, apparecchi elettrici e altri dispositivi.
+この単一リレーモジュールはインタラクティブなプロジェクトで使用できます。このモジュールは SONGLE の高品質な5Vリレーを使用しています。照明や電気機器などの制御にも使用できます。
 
-Il design modulare lo rende facile da usare con la scheda Arduino. Può essere controllato tramite una porta IO digitale, ad esempio per valvole elettromagnetiche, lampade, motori e altri dispositivi ad alta corrente o alta tensione.
+モジュール設計によりArduinoボードで簡単に使用できます。デジタルI/Oポートを通じて制御でき、電磁弁、ランプ、モーターなどの高電流または高電圧デバイスの制御に適しています。
 
-## Specifiche
+## 仕様
 
-- Tipo: Digitale
+- タイプ: デジタル
 
-- Corrente nominale: 10A (NO) 5A (NC)
+- 定格電流: 10A (NO) 5A (NC)
 
-- Tensione massima di commutazione: 150VAC 24VDC
+- 最大切替電圧: 150VAC 24VDC
 
-- Interfaccia digitale
+- デジタルインターフェース
 
-- Segnale di controllo: livello TTL
+- 制御信号: TTLレベル
 
-- Carico nominale: 8A 150VAC (NO), 10A 24VDC (NO), 5A 250VAC (NO/NC), 5A 24VDC (NO/NC)
+- 定格負荷: 8A 150VAC (NO), 10A 24VDC (NO), 5A 250VAC (NO/NC), 5A 24VDC (NO/NC)
 
-- Potenza massima di commutazione: AC1200VA DC240W (NO), AC625VA DC120W (NC)
+- 最大切替容量: AC1200VA DC240W (NO), AC625VA DC120W (NC)
 
-- Tempo di azione del contatto: 10ms
+- 接点動作時間: 10ms
 
-## Schema di collegamento
+## 接続図
 
-Per prima cosa è necessario preparare i seguenti componenti prima del collegamento.
+まず接続の前に次の部品を用意してください。
 
-- Scheda V4.0\*1
+- V4.0 ボード\*1
 
-- Modulo relè\*1
+- リレーモジュール\*1
 
-- Modulo LED \*1
+- LEDモジュール \*1
 
-- Breadboard \*1
+- ブレッドボード \*1
 
-- Cavo USB\*1
+- USBケーブル\*1
 
-- Jumper Wire\*9
+- ジャンパーワイヤー\*9
 
-Qui usiamo il modulo relè singolo per controllare l'accensione o lo spegnimento di un modulo LED.
+ここでは単一のリレーモジュールでLEDモジュールのON/OFFを制御します。
 
-Per il modulo relè, collegare il pin Signal alla porta digitale 8 della scheda V4.0, quindi collegare il suo pin positivo alla riga anodo della breadboard, portare via la riga alla porta 5V della scheda V4.0. Collegare il suo pin negativo alla riga catodo della breadboard, portare via la riga alla porta GND della scheda V4.0.
+リレーモジュールでは、SignalピンをV4.0ボードのデジタルポート8に接続し、次にその正極ピンをブレッドボードのアノード列に接続してその列からV4.0ボードの5Vポートへリードします。負極ピンはブレッドボードのカソード列に接続し、その列からV4.0ボードのGNDポートへリードします。
 
-Per il modulo LED, collegare il suo pin Signal a un morsetto del modulo relè, l'altro morsetto del relè va collegato alla porta digitale 13 della scheda V4.0. Collegare il suo pin positivo alla riga anodo, il pin negativo alla riga catodo della breadboard.
+LEDモジュールは、そのSignalピンをリレーモジュールの片方の端子ブロックに接続し、リレーのもう一方の端子ブロックをV4.0ボードのデジタルポート13に接続します。正極ピンをアノード列に、負極ピンをカソード列に接続します。
 
-![Illustrazione schema di collegamento](../media/21cf9b1d5f0843230ee516a0a8be77e1.jpeg)
+![接続図のイラスト](../media/21cf9b1d5f0843230ee516a0a8be77e1.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice sottostante nel software Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -76,14 +76,14 @@ void loop()
 ///////////////////////////////////////////////////////////////
 ```
 
-## Risultato d'esempio
+## 実行例
 
-![Illustrazione risultato d'esempio](../media/c751be64bd8acd8c6114598b89586cfa.png)
+![実行例のイラスト](../media/c751be64bd8acd8c6114598b89586cfa.png)
 
-Questo modulo relè si attiva a livello HIGH.
+このリレーモジュールはHIGHレベルで動作します。
 
-Collegalo correttamente, alimenta la scheda, quindi carica il codice sopra: vedrai che il relè si accende（ON connesso, NC disconnesso）per due secondi, poi si spegne per due secondi（NC chiuso, ON disconnesso）, ripetutamente e ciclicamente.
+配線を正しく行い電源を入れ、上記のコードをボードにアップロードすると、リレーは2秒間オン（ON接点が接続され、NC接点が切断される）になり、その後2秒間オフ（NC接点が閉じ、ON接点が切断される）になり、これを繰り返します。
 
-Quando il relè è attivato, il LED esterno si accende. Se il relè è disattivato, il LED esterno si spegne.
+リレーがオンのとき外部LEDは点灯し、リレーがオフのとき外部LEDは消灯します。
 
 ---

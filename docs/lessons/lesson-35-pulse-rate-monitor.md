@@ -1,37 +1,37 @@
-# Lezione 35: Monitor della frequenza cardiaca
+# レッスン 35: パルスレートモニター
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328Pボード
 
-![Illustrazione del progetto 35: Monitor della frequenza cardiaca](../media/0ec440cd93e00e956357ece654ce2a9c.png)
+![プロジェクト35: パルスレートモニター イラスト](../media/0ec440cd93e00e956357ece654ce2a9c.png)
 
-## Descrizione
+## 説明
 
-Questo modulo utilizza un LED a infrarossi ultra-chiaro e un fototransistor per rilevare il battito nel tuo dito. Il LED rosso lampeggerà in sincronismo con il tuo battito.
+このモジュールは、超鮮明な赤外LEDとフォトトランジスタを使用して、指先の脈拍を検出します。赤色LEDは脈拍に合わせて点滅します。
 
-Principio di funzionamento
+動作原理
 
-Illumina con il LED brillante un lato del dito mentre il fototransistor sull'altro lato rileva la quantità di luce trasmessa. La resistenza del fototransistor varierà leggermente man mano che il sangue pulsa attraverso il dito.
+指の片側に明るいLEDを照射し、反対側のフォトトランジスタが透過光の量を検出します。血液が指を流れる際にフォトトランジスタの抵抗がわずかに変化します。
 
-## Schema di collegamento
+## 接続図
 
-Prima di tutto è necessario preparare i seguenti componenti prima di effettuare il test.
+まずテストを行う前に以下の部品を用意してください。
 
-- Scheda V4.0\*1
+- V4.0 ボード\*1
 
-- Modulo pulsazioni\*1
+- パルスモジュール\*1
 
-- Cavo USB\*1
+- USB ケーブル\*1
 
-- Cavi jumper\*3
+- ジャンパーワイヤー\*3
 
-Collega il pin Signal del modulo ad Analog A0 della scheda V4.0, il pin positivo alla porta 5V, il pin negativo alla porta GND.
+モジュールのSignalピンをV4.0ボードのAnalog A0に接続し、正極ピンを5Vポートに、負極ピンをGNDポートに接続します。
 
-![Schema di collegamento (illustrazione)](../media/fa86e3930b83753af7ad87d0418cd350.jpeg)
+![接続図イラスト](../media/fa86e3930b83753af7ad87d0418cd350.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice seguente nell'ambiente Arduino.
+下記のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -60,14 +60,14 @@ delay(period);
 ///////////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 実行結果
 
-Collegalo bene come nel diagramma sopra, quindi carica correttamente il codice sulla scheda e clicca l'icona del Monitor seriale nell'angolo in alto a destra dell'IDE Arduino. Imposta la velocità di trasmissione (baud rate) su 115200: vedrai i dati visualizzati nel monitor.
+上の図のように配線を正しく行い、コードをボードにアップロードしてから、Arduinoソフトウェアの右上にあるシリアルモニタのアイコンをクリックします。ボーレートを115200に設定すると、モニタにデータが表示されます。
 
-Puoi copiare e incollare i dati in Excel; alla fine verrà generato il grafico corrispondente mostrato qui sotto.
+データをExcelにコピー＆ペーストすると、最終的に下に示す対応するグラフが生成されます。
 
-![Esempio di risultato (illustrazione)](../media/3c3a1a0d120f1c68c95095a0fd98fa47.png)
+![実行結果イラスト](../media/3c3a1a0d120f1c68c95095a0fd98fa47.png)
 
-![Esempio di risultato (illustrazione)](../media/215ab9a6174f9798a291bacb907eaf89.jpeg)
+![実行結果イラスト](../media/215ab9a6174f9798a291bacb907eaf89.jpeg)
 
 ---

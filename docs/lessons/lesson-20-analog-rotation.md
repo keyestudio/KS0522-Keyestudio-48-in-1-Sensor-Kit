@@ -1,35 +1,35 @@
-# Lezione 20: Rotazione analogica
+# レッスン20: アナログ回転
 
-> **Kit:** Kit sensori Keyestudio 48-in-1  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328Pボード
 
-![Progetto 20: sensore di rotazione analogico illustrazione](../media/7a7fffa705c4a50e87455e6d378eb837.png)
+![プロジェクト20: アナログ回転の図](../media/7a7fffa705c4a50e87455e6d378eb837.png)
 
-## Descrizione
+## 説明
 
-Questo sensore di rotazione analogico è compatibile con Arduino. È basato su un potenziometro. La sua tensione può essere suddivisa in 1024 livelli, ed è facile da collegare ad Arduino con il nostro shield per sensori.
+このアナログ回転センサーはArduino互換です。可変抵抗（ポテンショメータ）をベースにしており、出力電圧は1024段階に分解されます。当社のセンサーシールドを使えばArduinoに簡単に接続できます。
 
-Combinato con altri sensori, puoi usarlo per realizzare progetti interessanti leggendo il valore analogico dalla porta IO.
+他のセンサーと組み合わせて、IOポートからアナログ値を読み取り、面白いプロジェクトを作成できます。
 
-## Specifiche
+## 仕様
 
-- Tensione di alimentazione: 3.3V a 5V
+- 電源電圧: 3.3V～5V
 
-- Interfaccia: Analogica
+- インターフェース: アナログ
 
-- Dimensioni: 30*20mm
+- サイズ: 30*20mm
 
-- Peso: 8g
+- 重量: 8g
 
-## Schema di collegamento
+## 接続図
 
-Collega il pin S del modulo all'ingresso analogico A0 della scheda V4.0, collega il pin negativo a GND e il pin positivo a 5V.
+モジュールのSピンをV4.0ボードのAnalog A0に接続し、負極ピンをGNDポート、正極ピンを5Vポートに接続します。
 
-![Schema di collegamento illustrazione](../media/f8a0c2cca0f3d0935ce0c9a0c4dbe59e.jpeg)
+![接続図のイラスト](../media/f8a0c2cca0f3d0935ce0c9a0c4dbe59e.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice qui sotto nell'IDE di Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -47,12 +47,12 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 実行結果
 
-![Risultato di esempio illustrazione](../media/bae047449c10c99449c35a14b22d759c.png)
+![実行結果のイラスト](../media/bae047449c10c99449c35a14b22d759c.png)
 
-Dopo aver effettuato il cablaggio e alimentato il circuito, carica correttamente il codice, poi apri il monitor seriale e imposta la velocità di trasmissione (baud) su 9600; infine vedrai il valore analogico. Se ruoti la manopola del sensore di rotazione, il valore varierà tra 0 e 1023. Come mostrato sotto.
+配線と電源を接続し、コードを正しくアップロードしたら、シリアルモニタを開き、ボーレートを9600に設定します。するとアナログ値が表示されます。回転センサーのツマミを回すと、値は0〜1023の範囲で変化します。下図のとおりです。
 
-![Risultato di esempio illustrazione](../media/bc7b15c3245b7cfd91b0ef4b0aeb8e7e.jpeg)
+![実行結果のイラスト](../media/bc7b15c3245b7cfd91b0ef4b0aeb8e7e.jpeg)
 
 ---

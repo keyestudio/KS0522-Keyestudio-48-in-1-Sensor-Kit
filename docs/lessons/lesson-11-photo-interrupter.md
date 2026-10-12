@@ -1,45 +1,45 @@
-# Lezione 11: Foto-interruttore
+# レッスン11: フォトインタラプタ
 
-> **Kit:** Keyestudio Kit sensori 48-in-1  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 11: Foto-interruttore - illustrazione](../media/8b0f7b3ba3e139eeaeba9bb7f86a946a.png)
+![プロジェクト11: フォトインタラプタの図](../media/8b0f7b3ba3e139eeaeba9bb7f86a946a.png)
 
-## Descrizione
+## 説明
 
-La parte verticale di questo sensore è un emettitore a infrarossi e sul lato opposto c’è un rivelatore a infrarossi schermato. Emettendo un fascio di luce infrarossa da un’estremità all’altra, il sensore può rilevare un oggetto quando questo attraversa il fascio.
+このセンサーの直立した部分は赤外線発光部で、反対側には遮蔽された赤外線検出部があります。一端から他端へ赤外線ビームを発射することで、物体がビームを通過したときに検出できます。
 
-Viene utilizzato in molte applicazioni, inclusi interruttori di fine corsa ottici, dosaggio di pellet, rilevamento generale di oggetti, ecc.
+光学的リミットスイッチ、ペレット供給、一般的な物体検出など、多くの用途に使用されます。
 
-## Specifiche
+## 仕様
 
-- Tensione di alimentazione: 3.3V a 5V
+- 電源電圧: 3.3V to 5V
 
-- Interfaccia: Digitale
+- インターフェース: デジタル
 
-- Dimensioni: 30*20mm
+- サイズ: 30*20mm
 
-- Peso: 3g
+- 重量: 3g
 
-## Schema di collegamento
+## 接続図
 
-Per prima cosa, è necessario preparare le seguenti parti prima del collegamento:
+接続の前に、まず以下の部品を用意してください:
 
-- Scheda V4.0\*1
+- V4.0ボード\*1
 
-- Modulo foto-interruttore \*1
+- フォトインタラプタモジュール \*1
 
-- Cavo USB\*1
+- USBケーブル\*1
 
-- Cavi jumper\*3
+- ジャンパーワイヤ\*3
 
-Collega il pin S del modulo al Digital 3 della scheda V4.0, collega il pin negativo a GND e il pin positivo a 5V.
+モジュールのSピンをV4.0ボードのDigital 3に接続し、負極ピンをGNDポートへ、正極ピンを5Vポートへ接続します。
 
-![Illustrazione dello schema di collegamento](../media/669fa42ef7fb576047d6849940a305ba.jpeg)
+![接続図のイラスト](../media/669fa42ef7fb576047d6849940a305ba.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice sottostante nel software Arduino.
+以下のコードをArduinoソフトウェアにコピーして貼り付けてください。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -67,14 +67,14 @@ void loop ()
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 実行結果
 
-Dopo aver caricato il codice sulla scheda, puoi vedere sia il led sulla scheda V4.0 sia quello sul modulo accesi. Come mostrato di seguito.
+ボードへコードの書き込みが完了すると、V4.0ボード上とモジュール上の両方のLEDが点灯します。以下のように表示されます。
 
-![Illustrazione del risultato di esempio](../media/fa4d06ebf82ec572b7eccf6b706942cb.png)
+![実行結果のイラスト](../media/fa4d06ebf82ec572b7eccf6b706942cb.png)
 
-Quando si inserisce un foglio nella scanalatura del modulo, il segnale viene interrotto e led1 sul modulo si spegne.
+モジュールの溝部分に紙を差し込むと信号が遮断され、モジュール上のLED1が消灯します。
 
-![Illustrazione del risultato di esempio](../media/3ecb941fafc71843148e0e19b6ceda57.png)
+![実行結果のイラスト](../media/3ecb941fafc71843148e0e19b6ceda57.png)
 
 ---

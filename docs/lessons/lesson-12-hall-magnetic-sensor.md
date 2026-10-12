@@ -1,47 +1,47 @@
-# Lezione 12: Sensore magnetico Hall
+# レッスン12：ホール磁気センサー
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Illustrazione Progetto 12: Sensore magnetico Hall](../media/c3d4d513b72ac04fad7e4f3015bfb1ed.png)
+![プロジェクト12：ホール磁気センサーの図](../media/c3d4d513b72ac04fad7e4f3015bfb1ed.png)
 
-## Descrizione
+## 説明
 
-Questo è un sensore a induzione magnetica. Può rilevare materiali magnetici entro un raggio di rilevamento fino a 3cm. Il raggio di rilevamento e l'intensità del campo magnetico sono proporzionali. L'uscita è digitale on/off.
+これは磁気誘導センサーです。検出範囲最大約3cm以内の磁性体を感知できます。検出範囲と磁場の強さは比例します。出力はデジタルのオン/オフです。
 
-Questo sensore utilizza lo SFE Reed Switch - Magnetic Field Sensor.
+このセンサーは SFE Reed Switch - Magnetic Field Sensor を使用しています。
 
-## Specifiche
+## 仕様
 
-- Rileva materiali magnetici
+- 磁性体の検出
 
-- Raggio di rilevamento: fino a 3cm
+- 検出範囲：最大約3cm
 
-- Uscita: digitale on/off
+- 出力：デジタル（オン/オフ）
 
-- Dimensioni: 30*20mm
+- サイズ：30*20mm
 
-- Peso: 3g
+- 重量：3g
 
-## Schema di collegamento
+## 接続図
 
-Per prima cosa, prepara i seguenti componenti prima della connessione:
+接続前に次のパーツを用意してください:
 
-- Scheda V4.0\*1
+- V4.0ボード\*1
 
-- Sensore Hall \*1
+- ホールセンサー\*1
 
-- Cavo USB\*1
+- USBケーブル\*1
 
-- Cavo jumper\*3
+- ジャンパーワイヤー\*3
 
-Collega il pin S del modulo a Digital 3 della scheda V4.0, collega il pin negativo alla porta GND, il pin positivo alla porta 5V.
+モジュールのSピンを V4.0ボードのDigital 3に接続し、負極ピンをGNDポートに、正極ピンを5Vポートに接続します。
 
-![Illustrazione schema di collegamento](../media/db4db0c53435ceb1d6caaaf40502247a.jpeg)
+![接続図のイラスト](../media/db4db0c53435ceb1d6caaaf40502247a.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice sottostante nel software Arduino.
+下のコードをコピーしてArduinoソフトに貼り付けてください。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -65,14 +65,14 @@ void loop(){
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 実行例
 
-Collega i fili e carica correttamente il codice sulla scheda, vedrai che l'indicatore D13 sulla scheda V4.0 è spento, e anche il LED sul modulo è spento.
+配線を行い、コードをボードに正しくアップロードすると、V4.0ボードのD13インジケーターは消灯し、モジュール上のLEDも消灯しているのが確認できます。
 
-![Illustrazione risultato di esempio](../media/102f67e289b5834de7fa80b6e6d99c20.png)
+![実行例のイラスト（磁石なし）](../media/102f67e289b5834de7fa80b6e6d99c20.png)
 
-Ma se avvicini una sfera magnetica al modulo Hall, vedrai che l'indicatore D13 sulla scheda V4.0 si accende, e anche il LED sul modulo si accende.
+しかし、ホールモジュールに磁石を近づけると、V4.0ボードのD13インジケーターが点灯し、モジュール上のLEDも点灯します。
 
-![Illustrazione risultato di esempio](../media/c3c4044f2205dd1ff162ef7e211d2b2c.png)
+![実行例のイラスト（磁石あり）](../media/c3c4044f2205dd1ff162ef7e211d2b2c.png)
 
 ---

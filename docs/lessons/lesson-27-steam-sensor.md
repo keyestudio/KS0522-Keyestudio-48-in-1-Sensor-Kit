@@ -1,53 +1,53 @@
-# Lezione 27: Sensore di vapore
+# レッスン27: 蒸気センサー
 
-> **Kit:** Kit sensori Keyestudio 48-in-1  
-> **Scheda:** Keyestudio V4.0 / Scheda compatibile con Arduino Uno (ATmega328P)
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328Pボード
 
-![Illustrazione Progetto 27: Sensore di vapore](../media/d19ac9430f793cdbedde891ee92671e7.jpeg)
+![プロジェクト27: 蒸気センサーのイラスト](../media/d19ac9430f793cdbedde891ee92671e7.jpeg)
 
-## Descrizione
+## 説明
 
-Il sensore di vapore è un sensore analogico e può essere usato come semplice rivelatore di pioggia e come interruttore di livello del liquido. Quando l'umidità sulla superficie del sensore aumenta, la tensione di uscita aumenterà.
+蒸気センサーはアナログセンサーで、簡易の雨水検出器や液面スイッチとして使用できます。センサー表面の湿度が上がると、出力電圧が上昇します。
 
-Attenzione: le parti di collegamento non sono impermeabili, quindi non immergerle in acqua.
+注意: 接続部は防水ではないため、水に入れないでください。
 
-## Parametri
+## 仕様
 
-- Tensione di funzionamento: 3.3V o 5V
+- 動作電圧: 3.3V または 5V
 
-- Corrente di funzionamento: \<20mA
+- 動作電流: \<20mA
 
-- Intervallo di temperatura di funzionamento: －10℃～＋70℃
+- 動作温度範囲: －10℃～＋70℃
 
-- Tipo di interfaccia: Uscita segnale analogico
+- インターフェース: アナログ信号出力
 
-## Definizione dei pin
+## ピン定義
 
-- Pin S: per uscita segnale
+- Sピン: 信号出力用
 
-- Pin positivo (+): per alimentazione (VCC)
+- 正ピン (+): 電源供給（VCC）用
 
-- Pin negativo (-): per massa (GND)
+- 負ピン (-): グラウンド（GND）用
 
-## Diagramma di collegamento
+## 接続図
 
-Prima di collegare, prepara i seguenti componenti:
+まず、接続前に以下の部品を準備してください:
 
-- Scheda V4.0*1
+- V4.0ボード*1
 
-- Sensore di vapore*1
+- 蒸気センサー*1
 
-- Cavo USB*1
+- USBケーブル*1
 
-- Cavo jumper*3
+- ジャンパー線*3
 
-Collega il pin S del modulo all'analogico A0 della scheda V4.0, collega il pin negativo al GND e il pin positivo al 5V.
+モジュールのSピンをV4.0ボードのAnalog A0に接続し、負ピンをGNDポート、正ピンを5Vポートに接続します。
 
-![Diagramma di collegamento - illustrazione](../media/8fa51466dbc9650dcaa740bce4dd654e.jpeg)
+![接続図のイラスト](../media/8fa51466dbc9650dcaa740bce4dd654e.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice qui sotto nell'ambiente software Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -66,14 +66,14 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Esempio di risultato
+## 実行結果
 
-![Risultato di esempio - illustrazione](../media/c4633c5911c042224d187645db4d0588.png)
+![実行例のイラスト](../media/c4633c5911c042224d187645db4d0588.png)
 
-Quando vengono rilevati diversi gradi di umidità, il sensore restituisce valori di corrente differenti. Come mostrato nell'immagine seguente.
+異なる湿度を検出すると、センサーは異なる電流値を返します。以下の図のように示されます。
 
-A causa delle condizioni limitate, puoi mettere una goccia d'acqua sul sensore; il valore di umidità cambierà nel Monitor Seriale del software Arduino.
+条件が限られているため、センサーに水滴を一滴垂らすと、Arduinoソフトウェアのシリアルモニタで湿度値が変化するのが確認できます。
 
-![Risultato di esempio - illustrazione](../media/80e9b3e19db4bec337f3254545a58e9e.jpeg)
+![実行例のイラスト](../media/80e9b3e19db4bec337f3254545a58e9e.jpeg)
 
 ---

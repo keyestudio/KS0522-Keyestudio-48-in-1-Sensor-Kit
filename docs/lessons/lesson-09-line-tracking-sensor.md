@@ -1,47 +1,47 @@
-# Lezione 09: Sensore di tracciamento della linea
+# レッスン09: ライン追跡センサー
 
-> **Kit:** Kit sensori Keyestudio 48-in-1  
-> **Scheda:** Keyestudio V4.0 / Scheda compatibile Arduino Uno ATmega328P
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 9: Illustrazione del sensore di tracciamento della linea](../media/c476ef922ab6a8d31cb68f3ab3fa2ced.png)
+![プロジェクト9: ライン追跡センサー 図](../media/c476ef922ab6a8d31cb68f3ab3fa2ced.png)
 
-## Descrizione
+## 説明
 
-Questo sensore di tracciamento della linea può rilevare una linea bianca su nero o una linea nera su bianco.
+このライン追跡センサーは、黒地に白い線、または白地に黒い線を検出できます。
 
-Il singolo segnale di tracciamento fornisce un'uscita stabile TTL per una linea più precisa e più stabile. L'opzione multicanale può essere facilmente ottenuta installando i sensori per robot di tracciamento della linea necessari.
+単一のライン追跡信号は、より正確で安定したライン検出のために安定したTTL出力を提供します。必要なライン追跡ロボット用センサーを取り付けることで、マルチチャンネル構成も容易に実現できます。
 
-## Specifiche
+## 仕様
 
-1. Alimentazione: +5V
+1. 電源: +5V
 
-2. Corrente di funzionamento: \<10mA
+2. 動作電流: \<10mA
 
-3. Intervallo di temperatura di funzionamento: 0°C \~ + 50°C
+3. 動作温度範囲: 0°C \~ + 50°C
 
-4. Interfaccia di uscita: interfaccia a 3 fili (1 - segnale, 2 - alimentazione, 3 - negativo dell'alimentazione)
+4. 出力インターフェース: 3線式インターフェース (1 - 信号, 2 - 電源, 3 - 電源の負極)
 
-5. Livello di uscita: livello TTL
+5. 出力レベル: TTLレベル
 
-## Schema di collegamento
+## 接続図
 
-Per prima cosa, è necessario preparare i seguenti componenti prima del collegamento:
+まず、接続前に以下の部品を準備してください:
 
-- Scheda V4.0\*1
+- V4.0ボード\*1
 
-- Modulo di tracciamento linea \*1
+- ライン追跡モジュール \*1
 
-- Cavo USB\*1
+- USBケーブル\*1
 
-- Cavi jumper\*3
+- ジャンパー線\*3
 
-Collega il pin S del modulo a Digital 3 della scheda V4.0, collega il pin GND alla porta GND, il pin V+ alla porta 5V.
+モジュールのSピンをV4.0ボードのDigital 3に接続し、GNDピンをGNDポートに、V+ピンを5Vポートに接続します。
 
-![Illustrazione dello schema di collegamento](../media/6727a1d7d92c3878fc51b8db0502fd14.jpeg)
+![接続図](../media/6727a1d7d92c3878fc51b8db0502fd14.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice seguente nel software Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -58,10 +58,10 @@ void loop()
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Esempio di risultato
+## 実行結果の例
 
-![Illustrazione dell'esempio di risultato](../media/af115c59987fee06447790f1740e3203.jpeg)
+![実行結果の例 図](../media/af115c59987fee06447790f1740e3203.jpeg)
 
-Dopo aver caricato il codice sulla scheda, apri il monitor seriale e imposta la velocità di trasmissione (baud) a 9600, quindi potrai vedere i dati dal sensore.
+コードをボードにアップロードしたら、シリアルモニタを開き、ボーレートを9600に設定すると、センサーからのデータが表示されます。
 
 ---

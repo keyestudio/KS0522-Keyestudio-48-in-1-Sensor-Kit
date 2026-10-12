@@ -1,61 +1,61 @@
-# Lezione 07: Pulsante Digitale
+# レッスン 07: デジタルプッシュボタン
 
-> **Kit:** Kit sensori Keyestudio 48-in-1  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile con Arduino Uno (ATmega328P)
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Illustrazione Progetto 7: Pulsante Digitale](../media/a8707354e54ea51bb92584f791ae79e5.png)
+![プロジェクト7：デジタルプッシュボタンのイラスト](../media/a8707354e54ea51bb92584f791ae79e5.png)
 
-## Descrizione
+## 説明
 
-Questo è un modulo pulsante di base. Puoi semplicemente collegarlo a uno shield IO per avere la tua prima esperienza con Arduino.
+これは基本的なボタンモジュールです。IOシールドに差し込むだけで、Arduinoを簡単に試すことができます。
 
-## Caratteristiche
+## 特長
 
-- Ampia gamma di tensione da 3.3V a 5V
+- 3.3Vから5Vまでの広い電圧範囲
 
-- Interfacce dei sensori facilmente riconoscibili ("A" per Analogico e "D" per Digitale)
+- センサーのインターフェースが識別しやすい（「A」はアナログ、「D」はデジタル）
 
-- Foro di montaggio standard
+- 標準的な取り付け穴
 
-- Icone chiare
+- 分かりやすいアイコン表示
 
-- Connettore di alta qualità
+- 高品質コネクタ
 
-- Facile da collegare e utilizzare
+- 差し込みや操作が簡単
 
-- Pulsante ampio e cappuccio di alta qualità
+- 大型ボタンと高品質キャップ
 
-- Per realizzare progetti interessanti e interattivi
+- 面白くインタラクティブな作品を実現できます
 
-## Specifiche
+## 仕様
 
-- Tensione di alimentazione: 3.3V a 5V
+- 供給電圧: 3.3V〜5V
 
-- Interfaccia: Digitale
+- インターフェース: デジタル
 
-- Dimensioni: 30*20mm
+- 寸法: 30×20mm
 
-- Peso: 4g
+- 重量: 4g
 
-## Schema di collegamento
+## 接続図
 
-Per prima cosa, prepara i seguenti componenti prima del collegamento:
+接続する前に、以下の部品を用意してください：
 
-- Scheda V4.0*1
+- V4.0ボード*1
 
-- Modulo pulsante*1
+- プッシュボタンモジュール*1
 
-- Cavo USB*1
+- USBケーブル*1
 
-- Cavi jumper*3
+- ジャンパーワイヤー*3
 
-Collega il pin S del modulo a Digital 3 della scheda V4.0, collega il pin negativo al connettore GND e il pin positivo al connettore 5V.
+モジュールのSピンをV4.0ボードのDigital 3に接続し、負のピンをGND、正のピンを5Vに接続してください。
 
-![Illustrazione schema di collegamento](../media/6ec73b961481bf0794572a842c5231fa.jpeg)
+![接続図のイラスト](../media/6ec73b961481bf0794572a842c5231fa.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice sottostante nell'ambiente Arduino.
+以下のコードをコピーしてArduinoソフトウェアに貼り付けてください。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -78,12 +78,12 @@ void loop(){
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Risultato d'esempio
+## 動作例
 
-Collega tutto come mostrato nell'immagine sottostante, poi carica il codice sulla scheda.
+下図のように配線を正しく行い、コードをボードにアップロードしてください。
 
-Quando premi il pulsante digitale, il LED 13 sulla scheda V4.0 si accende. Quando rilasci il pulsante, il LED si spegne. Mostrato qui sotto.
+デジタルボタンを押すと、V4.0ボード上の Led 13 が点灯します。ボタンを離すと、Led 13 は消灯します。以下に示します。
 
-![Illustrazione risultato d'esempio](../media/ac03d3fa1c0f5de7dae18c6e64406e60.png)
+![動作例のイラスト](../media/ac03d3fa1c0f5de7dae18c6e64406e60.png)
 
 ---

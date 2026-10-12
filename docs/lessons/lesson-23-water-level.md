@@ -1,57 +1,45 @@
-# Lezione 23: Livello dell'acqua
+# レッスン23: 水位
 
-> **Kit:** Kit sensori Keyestudio 48-in-1  
-> **Scheda:** Keyestudio V4.0 / Scheda compatibile Arduino Uno con ATmega328P
+> **キット：** Keyestudio 48-in-1 センサーキット  
+> **ボード：** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 23: illustrazione del livello dell'acqua](../media/23f40997b8634be91aed7311eca2dfbb.jpeg)
+![プロジェクト23: 水位のイラスト](../media/23f40997b8634be91aed7311eca2dfbb.jpeg)
 
-## Descrizione
+## 説明
 
-Il sensore d'acqua Keyestudio è facile da usare, portatile e conveniente, progettato per identificare e rilevare il livello dell'acqua e le gocce d'acqua.
+Keyestudioの水センサーは使いやすく、携帯性に優れ、コスト効果の高い設計で、水位や水滴の検知に使用されます。
 
-Questo piccolo sensore può misurare il volume di gocce d'acqua o la quantità d'acqua tramite una serie di tracce di fili paralleli esposti.
+この小型センサーは、露出した並列配線のトレース配列を通じて、水滴の量や水の量を測定できます。
 
-## Caratteristiche
+## 特徴
 
-- conversione fluida tra quantità d'acqua e valore analogico;
+- 水量とアナログ量の間の滑らかな変換;
+- 高い柔軟性で、基本的なアナログ値を出力;
+- 低消費電力かつ高感度;
+- マイクロプロセッサやその他の論理回路に直接接続可能で、Arduinoコントローラ、STC単一チップマイコン、AVR単一チップマイコンなど、さまざまな開発ボードやコントローラに適合。
 
-- alta flessibilità, con uscita di un valore analogico di base;
+## 仕様
 
-- basso consumo energetico e alta sensibilità;
+- 動作電圧: DC5V
+- 動作電流: <20mA
+- センサータイプ: アナログ
+- 検出面積: 40mm x16mm
+- 製造工程: FR4 両面スズメッキ
+- 形状設計: 滑り止め半月状凹み
+- 動作温度: 10℃-30℃
+- 動作湿度: 結露なき状態で10%-90%
+- 重量: 3g
+- 寸法: 65mm x 20mm x 8mm
 
-- si collega direttamente a microprocessori o ad altri circuiti logici, adatto a una varietà di schede di sviluppo e controller come il controller Arduino, il microcontrollore STC, il microcontrollore AVR e altri.
+## 接続図
 
-## Specifiche
+モジュールのSピンをV4.0ボードのアナログA0に接続し、負極をGNDポート、正極を5Vポートに接続します。
 
-- Tensione di funzionamento: DC5V
+![接続図のイラスト](../media/92810e41aea313a15735eecb3a168e2f.jpeg)
 
-- Corrente di funzionamento: ﹤20mA
+## サンプルコード
 
-- Tipo di sensore: Analogico
-
-- Area di rilevamento: 40mm x16mm
-
-- Processo di produzione: FR4 doppia faccia stagnata
-
-- Design della forma: rientranza semilunare antiscivolo
-
-- Temperatura di esercizio: 10℃-30℃
-
-- Umidità di esercizio: 10%-90% senza condensazione
-
-- Peso: 3g
-
-- Dimensioni: 65mm x 20mm x 8mm
-
-## Schema di collegamento
-
-Collegare il pin S del modulo all'Analogico A0 della scheda V4.0, collegare il pin negativo al GND e il pin positivo al 5V.
-
-![Illustrazione schema di collegamento](../media/92810e41aea313a15735eecb3a168e2f.jpeg)
-
-## Codice di esempio
-
-Copia e incolla il codice qui sotto nell'IDE Arduino.
+下のコードをArduinoソフトウェアにコピーして貼り付けます。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -80,20 +68,20 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Esempio di risultato
+## 実行結果
 
-![Illustrazione del risultato di esempio](../media/ca727c75f4d4e454c95258d77afdf10e.png)
+![実行結果のイラスト](../media/ca727c75f4d4e454c95258d77afdf10e.png)
 
-Dopo aver eseguito i passaggi precedenti, facciamo una prova con un livello d'acqua basso e verifichiamo cosa succede?
+上記の手順が完了したら、低い水位でテストしてどうなるか確認してみましょう。
 
-Carica correttamente il codice sulla scheda V4.0, poi apri il monitor seriale e imposta la velocità di trasmissione (baud) a 9600.
+コードをV4.0ボードにアップロードし、シリアルモニタを開いてボーレートを9600に設定します。
 
-Quando posizioni il sensore nell'acqua a livelli diversi, vedrai il valore cambiare di conseguenza.
+センサーを異なる水位に入れると、値がそれに応じて変化するのが確認できます。
 
-![Illustrazione del risultato di esempio](../media/8070cf2260fef39e5ec5e18b7a1849cf.jpeg)
+![実行結果のイラスト](../media/8070cf2260fef39e5ec5e18b7a1849cf.jpeg)
 
-Inoltre, puoi impostare un valore di soglia per l'allarme e collegare un cicalino per generare un avviso.
+さらに、警報値を設定してブザーを接続し、アラームを鳴らすことができます。
 
-Il LED non si accenderà quando il livello dell'acqua non ha raggiunto il valore di allarme. Se il livello dell'acqua raggiunge il valore di allarme, il LED si accenderà e il cicalino suonerà per segnalare l'allarme.
+水位が警報値に達していない場合、LEDは点灯しません。水位が警報値に達すると、LEDが点灯し、ブザーが鳴ってアラームを発します。
 
 ---

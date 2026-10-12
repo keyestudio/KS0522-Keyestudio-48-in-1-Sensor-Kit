@@ -1,43 +1,43 @@
-# Lezione 13: Sensore Knock
+# レッスン13：ノックセンサー
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 13: Illustrazione del sensore knock](../media/cef729e5b57059bc14518b0e2fdd2817.png)
+![プロジェクト13：ノックセンサーのイラスト](../media/cef729e5b57059bc14518b0e2fdd2817.png)
 
-## Descrizione
+## 説明
 
-Questo modulo è un sensore knock. Quando lo colpisci, può inviare un segnale momentaneo.
+このモジュールはノックセンサーです。叩くと一時的な信号を送ります。
 
-Puoi combinarlo con Arduino per realizzare esperimenti interessanti, ad esempio una batteria elettronica.
+Arduinoと組み合わせて、電子ドラムなどの面白い実験を行うことができます。
 
-## Specifiche
+## 仕様
 
-- Tensione di funzionamento: 5V
+- 動作電圧: 5V
 
-- Dimensioni: 30\*20mm
+- サイズ: 30\*20mm
 
-- Peso: 3g
+- 重量: 3g
 
-## Schema di collegamento
+## 接続図
 
-Per prima cosa, prepara i seguenti componenti prima del collegamento:
+まず、接続する前に以下の部品を用意してください:
 
-- Scheda V4.0\*1
+- V4.0 ボード\*1
 
-- Sensore knock \*1
+- ノックセンサー \*1
 
-- Cavo USB\*1
+- USBケーブル\*1
 
-- Cavi jumper\*3
+- ジャンパー線\*3
 
-Collega il pin S del modulo al pin digitale 3 della scheda V4.0, il pin negativo a GND e il pin positivo a 5V.
+モジュールのSピンをV4.0ボードのDigital 3に接続し、負極ピンをGNDポート、正極ピンを5Vポートに接続します。
 
-![Illustrazione dello schema di collegamento](../media/1b9c27f145275e7a38d06763114f1847.jpeg)
+![接続図のイラスト](../media/1b9c27f145275e7a38d06763114f1847.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice seguente nell'IDE Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -64,10 +64,10 @@ digitalWrite(Led,HIGH);
 ////////////////////////////////////////////////////////////////////
 ```
 
-![Illustrazione del codice di esempio](../media/c3fc14de7267b517a739268ed5b88674.png)
+![サンプルコードのイラスト](../media/c3fc14de7267b517a739268ed5b88674.png)
 
-## Esempio di risultato
+## 実行結果
 
-Dopo aver effettuato i collegamenti e alimentato la scheda come indicato, e aver caricato correttamente il codice, colpisci il sensore: vedrai accendersi sia il LED D13 sulla scheda V4.0 sia il LED D1 sul sensore.
+上記の配線と電源供給が完了し、コードを正しくアップロードしたら、センサーを叩くとV4.0ボード上のD13 LEDとセンサー上のD1 LEDの両方が点灯します。
 
 ---

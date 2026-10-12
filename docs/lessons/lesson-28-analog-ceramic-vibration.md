@@ -1,47 +1,47 @@
-# Lezione 28: Sensore di vibrazione ceramico analogico
+# レッスン 28: アナログ セラミック 振動
 
-> **Kit:** Keyestudio 48-in-1 Kit sensori  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Modulo sensore di vibrazione ceramico analogico](../media/2cf5c2793157816a2346a730ad064955.jpeg)
+![アナログセラミック振動センサーモジュール](../media/2cf5c2793157816a2346a730ad064955.jpeg)
 
-## Descrizione
+## 説明
 
-Questo sensore di vibrazione è basato su un chip ceramico piezoelettrico analogico. Sfrutta il processo piezoelettrico: la vibrazione del chip ceramico piezoelettrico genera segnali elettrici. Quando il chip vibra, il terminale di segnale del sensore produrrà segnali elettrici.
+この振動センサーは圧電セラミック素子を用いたアナログ振動検出に基づいています。圧電セラミックが振動すると電気信号を発生する逆変換プロセスを利用しています。圧電セラミックチップを振動させると、センサーの信号端子が電気信号を生成します。
 
-Il sensore può essere utilizzato con lo shield sensori dedicato per Arduino; la porta analogica di Arduino è in grado di percepire deboli segnali di vibrazione, permettendo applicazioni interattive legate alla vibrazione, come una batteria elettronica.
+センサーはArduino専用センサーシールドと併用でき、Arduinoのアナログポートで微弱な振動信号を検出できます。これにより、電子ドラムのような振動に関連するインタラクティブな作品を作ることができます。
 
-Collega il sensore di vibrazione alla porta analogica A0 di Arduino UNO. Vibrando il sensore con diversa intensità, vedrai i diversi valori di uscita visualizzati sul monitor seriale dell'IDE Arduino.
+振動センサーをArduino UNOのアナログポートA0に接続します。センサーを異なる強さで振動させると、Arduinoソフトのシリアルモニタに異なる出力値が表示されます。
 
-## Specifiche
+## 仕様
 
-- Tensione di alimentazione: 3.3V a 5V
+- 動作電圧: 3.3V～5V
 
-- Corrente di lavoro: <1mA
+- 動作電流：\<1mA
 
-- Intervallo di temperatura di esercizio: －10℃～＋70℃
+- 動作温度範囲：－10℃～＋70℃
 
-- Segnale in uscita: segnale analogico
+- 出力信号：アナログ信号
 
-## Schema di collegamento
+## 接続図
 
-Per prima cosa, prepara i seguenti componenti prima del collegamento:
+接続する前に、以下の部品を準備してください：
 
-- Scheda V4.0\*1
+- V4.0 ボード\*1
 
-- sensore di vibrazione\*1
+- 振動センサー\*1
 
-- Cavo USB\*1
+- USBケーブル\*1
 
-- Cavi jumper\*3
+- ジャンパー線\*3
 
-Collega il pin S del modulo alla porta analogica A0 della scheda V4.0, collega il pin negativo al GND, il pin NC al 5V.
+モジュールのSピンをV4.0ボードのアナログA0に接続し、負極ピンをGNDポートに接続し、NCピンを5Vポートに接続します。
 
-![Illustrazione schema di collegamento](../media/92fce2d45b05876a7928070bd2b137da.jpeg)
+![接続図のイラスト](../media/92fce2d45b05876a7928070bd2b137da.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice seguente nell'IDE Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ///////////////////////////////////////////////////////////
@@ -60,14 +60,14 @@ delay(100);
 ///////////////////////////////////////////////////////////
 ```
 
-## Esempio di risultato
+## 実行例
 
-![Illustrazione del risultato d'esempio](../media/e21152ca9f30274fcc658091f76f7044.png)
+![実行例のイラスト](../media/e21152ca9f30274fcc658091f76f7044.png)
 
-Collega come mostrato nello schema sopra e carica il codice, poi apri il monitor seriale e imposta la velocità di trasmissione su 9600.
+上の図のように配線し、コードをアップロードしたら、シリアルモニターを開き、ボーレートを9600に設定してください。
 
-Vibrando il chip ceramico vedrai i valori cambiare come mostrato nella figura seguente.
+セラミックチップを振動させると、下図のようにデータが変化するのが確認できます。
 
-![Illustrazione del risultato d'esempio](../media/4be72e831696d59b36082aa45d77a04d.jpeg)
+![実行例のイラスト](../media/4be72e831696d59b36082aa45d77a04d.jpeg)
 
 ---

@@ -1,29 +1,29 @@
-# Lezione 41: Coppa di Luce Magica
+# レッスン41: マジカルライトカップ
 
-> **Kit:** Kit sensori Keyestudio 48-in-1  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
+> **キット:** Keyestudio 48-in-1 Sensor Kit  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328Pボード
 
-![Illustrazione del Progetto 41: Coppa di Luce Magica](../media/dc3acff676b2611f440643f1657b42e7.png)
+![プロジェクト41: マジカルライトカップのイラスト](../media/dc3acff676b2611f440643f1657b42e7.png)
 
-## Introduzione
+## はじめに
 
-Il modulo Coppa di Luce Magica può interagire con ARDUINO. Il principio si basa sulla regolazione della luminosità tramite PWM.
+マジックライトカップモジュールはArduinoと連動できます。原理はPWMによる調光です。
 
-L'interruttore a mercurio presente sul modulo può fornire un segnale digitale e attivare la regolazione PWM. La luminosità dei due moduli verrà modificata contemporaneamente tramite il programma; infine potrai vedere l'effetto di cambiamento come se due serie di coppe stessero versando la luce.
+モジュール上の水銀スイッチはデジタル信号を供給し、PWM制御をトリガーします。プログラム設計により2つのモジュールの明るさが一緒に変化し、最終的に2つのカップが光を注ぐような変化効果が見られます。
 
-## Specifiche
+## 仕様
 
-- Tensione di alimentazione: da 3,3V a 5V
+- 電源電圧: 3.3V～5V
 
-- Interfaccia: Digitale
+- インターフェース: デジタル
 
-## Schema di Collegamento
+## 接続図
 
-![Illustrazione dello schema di collegamento](../media/9d8d534c60a81608741f85c08d4d0bbe.jpeg)
+![接続図のイラスト](../media/9d8d534c60a81608741f85c08d4d0bbe.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice seguente nell'IDE Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -75,12 +75,12 @@ delay(5);
 ///////////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 実行結果
 
-![Illustrazione del risultato d'esempio](../media/f629888f2fedea9442ba74dc8761fcb3.png)
+![実行例のイラスト](../media/f629888f2fedea9442ba74dc8761fcb3.png)
 
-Collega il circuito come mostrato nello schema sopra e carica correttamente il codice sulla scheda; vedrai che una coppa si accende mentre l'altra è spenta. Quando inclini le due coppe dalla stessa parte, una coppa diventa progressivamente più luminosa mentre l'altra si spegne gradualmente.
+上の図のように配線し、コードをボードにアップロードすると、片方のカップが点灯してもう片方が消灯しているのが見えます。これら2つのカップを同じ側に傾けると、片方が徐々に明るくなり、もう片方の明るいカップが徐々に暗くなります。
 
-![Illustrazione del risultato d'esempio](../media/cfc57515b967d19fcda65ea50bda76f1.png)
+![実行例のイラスト](../media/cfc57515b967d19fcda65ea50bda76f1.png)
 
 ---

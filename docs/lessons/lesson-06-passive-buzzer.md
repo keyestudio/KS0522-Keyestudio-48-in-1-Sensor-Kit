@@ -1,47 +1,47 @@
-# Lezione 06: Buzzer Passivo
+# レッスン 06：パッシブブザー
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Scheda:** Keyestudio V4.0 / Scheda compatibile Arduino Uno con ATmega328P
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Illustrazione Progetto 6: Buzzer Passivo](../media/1bd2e3afebf5a0d3712fe42092b0a1b4.png)
+![プロジェクト6：パッシブブザーの図](../media/1bd2e3afebf5a0d3712fe42092b0a1b4.png)
 
-## Descrizione
+## 説明
 
-Possiamo utilizzare Arduino per realizzare molte opere interattive, delle quali la più comunemente usata è la visualizzazione acustica e ottica. Il circuito in questo esperimento può produrre suono.
+Arduinoを使って多くのインタラクティブな作品を作ることができ、その中でも最もよく使われるのが音と光の表示です。この実験の回路は音を出すことができます。
 
-Normalmente, l'esperimento può essere eseguito con un buzzer o un altoparlante, mentre il buzzer è più semplice e facile da usare.
+通常、この実験はブザーまたはスピーカーで行えますが、ブザーの方が簡単で使いやすいです。
 
-Il buzzer introdotto qui è un buzzer passivo. Non può essere azionato da solo, ma richiede impulsi esterni a determinate frequenze. Frequenze diverse producono suoni diversi. Puoi usare Arduino per programmare la melodia di una canzone; è piuttosto divertente e semplice.
+ここで紹介するブザーはパッシブブザーです。自ら駆動することはできず、外部からのパルス周波数で駆動します。周波数が異なれば異なる音が出ます。Arduinoを使って曲のメロディをコーディングすることができ、とても楽しく簡単です。
 
-## Specifiche
+## 仕様
 
-- Tensione di esercizio: 3.3-5V
+- 動作電圧: 3.3-5v
 
-- Tipo di interfaccia: digitale
+- インターフェースタイプ: デジタル
 
-- Dimensioni: 30\*20mm
+- サイズ: 30\*20mm
 
-- Peso: 4g
+- 重量: 4g
 
-## Diagramma di collegamento
+## 接続図
 
-Per prima cosa, prepara i seguenti componenti prima del collegamento:
+まず、接続の前に以下の部品を用意してください:
 
-- Scheda V4.0*1
+- V4.0 ボード*1
 
-- Modulo buzzer passivo*1
+- パッシブブザーモジュール*1
 
-- Cavo USB*1
+- USBケーブル*1
 
-- Cavi jumper*3
+- ジャンパーワイヤ*3
 
-Collega il pin S del modulo a Digital 3 della scheda V4.0, collega il pin negativo alla porta GND, il pin positivo alla porta 5V.
+モジュールのSピンをV4.0ボードのDigital 3に接続し、マイナスピンをGNDポート、プラスピンを5Vポートに接続します。
 
-![Illustrazione Diagramma di collegamento](../media/e9e7ba383738c3b6be85a1f3c97e5385.jpeg)
+![接続図のイラスト](../media/e9e7ba383738c3b6be85a1f3c97e5385.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice qui sotto nell'IDE di Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -70,10 +70,10 @@ delay(2);//2ms delay
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 実行結果
 
-Dopo aver caricato il codice sulla scheda, il buzzer emetterà un suono.
+コードをボードにアップロードすると、ブザーが鳴ります。
 
-![Illustrazione risultato di esempio](../media/9b29eccd437694e479a836b7da66d500.png)
+![実行結果のイラスト](../media/9b29eccd437694e479a836b7da66d500.png)
 
 ---

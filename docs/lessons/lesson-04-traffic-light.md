@@ -1,45 +1,45 @@
-# Lezione 04: Semaforo
+# レッスン04: 信号機
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Scheda:** Keyestudio V4.0 / Scheda ATmega328P compatibile con Arduino Uno
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 4: Illustrazione del semaforo](../media/a20653cffac8985dc4919614540ac367.jpeg)
+![プロジェクト4: 信号機のイラスト](../media/a20653cffac8985dc4919614540ac367.jpeg)
 
-## Descrizione
+## 説明
 
-Quando si impara a usare un microcontrollore, si utilizzano di solito tre LED — rosso, verde e giallo — per simulare il lampeggio di un semaforo tramite collegamenti esterni.
+マイコンを学ぶ際、通常は赤・緑・黄の3つのLEDを外部接続で点滅させ、信号機の点滅を模擬します。
 
-Questa volta abbiamo progettato appositamente questo modulo, molto comodo per il cablaggio; sul modulo sono presenti i LED rosso, giallo e verde.
+このモジュールは配線が非常に簡単になるよう特別に設計されており、モジュール上に赤、黄、緑のLEDが配置されています。
 
-Questo modulo è completamente compatibile con il microcontrollore Arduino e con il sistema Raspberry Pi.
+このモジュールはArduinoマイコンおよびRaspberry Piに完全対応しています。
 
-## Specifiche
+## 仕様
 
-- Tensione di funzionamento: 3.3-5V
+- 動作電圧: 3.3-5V
 
-- Tipo di interfaccia: digitale
+- インターフェース: デジタル
 
-- Connettore PH2.54
+- PH2.54 ソケット
 
-## Diagramma di collegamento
+## 接続図
 
-Per prima cosa, è necessario preparare le seguenti parti prima del collegamento:
+まず接続する前に、以下の部品を準備してください：
 
-- Scheda V4.0\*1
+- V4.0 ボード\*1
 
-- Modulo semaforo \*1
+- 信号機モジュール \*1
 
-- Cavo USB\*1
+- USB ケーブル\*1
 
-- Cavi jumper\*4
+- ジャンパーワイヤ\*4
 
-Collegare il pin R del modulo al Digital 5 della scheda V4.0, collegare il pin Y al Digital 4, il pin G al Digital 3, il pin GND alla porta di massa.
+モジュールの R ピンを V4.0 ボードの Digital 5 に接続し、Y ピンを Digital 4、G ピンを Digital 3、GND ピンをグラウンド端子に接続します。
 
-![Illustrazione del diagramma di collegamento](../media/b6884692ce41d05d4afb167af5b2239d.jpeg)
+![接続図イラスト](../media/b6884692ce41d05d4afb167af5b2239d.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice seguente nel software Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -72,10 +72,10 @@ digitalWrite(redled, LOW);// turn off red LED
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 実行結果
 
-Dopo aver caricato il codice e alimentato, i tre LED sul modulo simuleranno automaticamente l'accensione e lo spegnimento del semaforo in modo ciclico.
+コードをアップロードして電源を入れると、モジュール上の3つのLEDが自動で信号機の点灯・消灯を繰り返します。
 
-![Illustrazione del risultato](../media/6dd1ff8660b0a62795bd53fc6b6ff591.png)
+![実行結果イラスト](../media/6dd1ff8660b0a62795bd53fc6b6ff591.png)
 
 ---

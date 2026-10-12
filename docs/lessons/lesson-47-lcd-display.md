@@ -1,66 +1,66 @@
-# Lezione 47: Display LCD
+# レッスン47: LCDディスプレイ
 
-> **Kit:** Keyestudio Kit sensori 48-in-1  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Illustrazione progetto 47: display LCD](../media/1aa1fd551e180d013633c1fe857c24a6.jpeg)
+![プロジェクト47: LCDディスプレイのイラスト](../media/1aa1fd551e180d013633c1fe857c24a6.jpeg)
 
-## Descrizione
+## 説明
 
-In questo progetto guideremo il display LCD 0802 per visualizzare testo utilizzando la scheda V4.0.
+このプロジェクトでは、V4.0ボードを使って0802 LCDにテキストを表示します。
 
-La capacità di visualizzazione dell'LCD è di 8x2 caratteri, e la tensione operativa del chip è 4,5～5,5V.
+LCDの表示容量は8×2文字で、チップの動作電圧は4.5～5.5Vです。
 
-Esistono due metodi di collegamento per visualizzare testo sul 0802 LCD: collegamento a 4 bit e collegamento a 8 bit.
+0802 LCDでテキストを表示する接続方法は、4ビット接続と8ビット接続の2通りあります。
 
-Puoi fare riferimento alle spiegazioni correlate di seguito.
+以下の説明を参照してください。
 
-## Spiegazione delle Interfacce
+## インターフェースの説明
 
-| **Interfaccia** | **Pin** | **Spiegazione**                                              |
+| **インターフェース** | **ピン** | **説明**                                              |
 | :-----------: | :-----: | ------------------------------------------------------------ |
-|       1       |   VSS   | Massa alimentazione logica                                    |
-|       2       |   VDD   | Alimentazione logica                                           |
-|       3       |   V0    | Tensione regolabile LCD, collegare al pin centrale del potenziometro da 10K |
-|       4       |   RS    | Selezione Dati\\Comando                                       |
-|       5       |   RW    | Opzione lettura\\scrittura                                    |
-|       6       |    E    | Abilita lettura\\scrittura, attivo a HIGH, al fronte di discesa blocca i dati |
-|       7       |   DB0   | Pin di input/output dati                                      |
-|       8       |   DB1   | Pin di input/output dati                                      |
-|       9       |   DB2   | Pin di input/output dati                                      |
-|      10       |   DB3   | Pin di input/output dati                                      |
-|      11       |   DB4   | Pin di input/output dati                                      |
-|      12       |   DB5   | Pin di input/output dati                                      |
-|      13       |   DB6   | Pin di input/output dati                                      |
-|      14       |   DB7   | Pin di input/output dati                                      |
-|      15       |  LED-A  | Terminale positivo alimentazione retroilluminazione          |
-|      16       |  LED-K  | Terminale negativo alimentazione retroilluminazione          |
+|       1       |   VSS   | ロジック電源グランド                                           |
+|       2       |   VDD   | ロジック電源                                                  |
+|       3       |   V0    | LCDの調整電圧、10Kポテンショメータの中央ピンに接続してください |
+|       4       |   RS    | データ\\ コマンド選択                                        |
+|       5       |   RW    | 読み取り\\書き込み選択                                           |
+|       6       |    E    | 読み取り\\書き込みのイネーブル、HIGHで有効、立ち下がりエッジでデータをラッチ |
+|       7       |   DB0   | データ入出力ピン                                        |
+|       8       |   DB1   | データ入出力ピン                                        |
+|       9       |   DB2   | データ入出力ピン                                        |
+|      10       |   DB3   | データ入出力ピン                                        |
+|      11       |   DB4   | データ入出力ピン                                        |
+|      12       |   DB5   | データ入出力ピン                                        |
+|      13       |   DB6   | データ入出力ピン                                        |
+|      14       |   DB7   | データ入出力ピン                                        |
+|      15       |  LED-A  | バックライト電源正極                                 |
+|      16       |  LED-K  | バックライト電源負極                                 |
 
-## Materiale Necessario
+## 必要なハードウェア
 
-Per prima cosa prepara le seguenti parti:
+まず、以下の部品を用意してください。
 
-- Scheda V4.0 × 1
+- V4.0ボード × 1
 - 0802 LCD × 1
-- Potenziometro rotativo × 1
-- Piastra di prototipazione (breadboard) × 1
-- Cavo USB × 1
-- Cavi jumper, secondo necessità
-- Cavi Dupont, secondo necessità
+- ロータリーポテンショメータ × 1
+- ブレッドボード × 1
+- USBケーブル × 1
+- ジャンパーワイヤ（必要に応じて）
+- デュポン線（必要に応じて）
 
-## Diagramma di Collegamento
+## 接続図
 
-## Connessione a 4 bit
+## 4ビット接続
 
-![Illustrazione collegamento a 4 bit](../media/6b3c862d4b36726275b67b747e6d5df3.jpeg)
+![4ビット接続のイラスト](../media/6b3c862d4b36726275b67b747e6d5df3.jpeg)
 
-## Connessione a 8 bit
+## 8ビット接続
 
-![Illustrazione collegamento a 8 bit](../media/97a92aff5ba45d0f7daaca6307b9a5fd.png)
+![8ビット接続のイラスト](../media/97a92aff5ba45d0f7daaca6307b9a5fd.png)
 
-## Codice Sorgente
+## ソースコード
 
-## Per connessione a 4 bit
+## 4ビット接続用
 
 ```C
 //////////////////////////////////////////////////////////
@@ -83,7 +83,7 @@ void loop() {
 //////////////////////////////////////////////////////////
 ```
 
-## Per connessione a 8 bit
+## 8ビット接続用
 
 ```C
 #include <LiquidCrystal.h>
@@ -105,16 +105,16 @@ void loop() {
 }
 ```
 
-## Risultato di Esempio
+## 実行結果
 
-Collegalo correttamente, alimenta la scheda, carica il codice sopra sulla scheda, regola la retroilluminazione del LCD ruotando il potenziometro; alla fine vedrai i caratteri visualizzati sullo schermo LCD.
+配線・電源を接続し、上記のコードをボードにアップロードします。ポテンショメータを回してLCDのバックライトを調整すると、文字がLCD画面に表示されます。
 
-Se usi la connessione a 4 bit, dovresti vedere l'LCD visualizzare il testo "Ciao" sulla prima riga, e la seconda riga visualizzare il testo "mondo!" come mostrato di seguito.
+4ビット接続を使用した場合、LCDの1行目に「Hello」が、2行目に「world!」が表示されるはずです。下図のように表示されます。
 
-![Illustrazione risultato di esempio](../media/7d2763d65677d2925902ffcc65bf1b12.png)
+![実行例のイラスト](../media/7d2763d65677d2925902ffcc65bf1b12.png)
 
-Se usi la connessione a 8 bit, vedrai altri caratteri visualizzati sull'LCD. Come mostrato di seguito.
+8ビット接続を使用した場合、LCDに別の文字が表示されます。以下に示します。
 
-![Illustrazione risultato di esempio](../media/61002a13397f8041574b375b0032da26.png)
+![実行例のイラスト](../media/61002a13397f8041574b375b0032da26.png)
 
 ---

@@ -1,37 +1,37 @@
-# Lezione 05: Suoni del cicalino
+# レッスン 05: ブザーのビープ
 
-> **Kit:** Kit sensori Keyestudio 48-in-1  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 5: Suoni del cicalino - illustrazione](../media/88c349b0602dfa2e166faabc13cb2f20.png)
+![プロジェクト5: ブザーのビープの図](../media/88c349b0602dfa2e166faabc13cb2f20.png)
 
-## Descrizione
+## 説明
 
-Ecco il modulo più semplice per produrre suoni. Puoi pilotarlo con livello alto/basso. Cambiando la frequenza con cui vibra si possono ottenere suoni diversi.
+これは最もシンプルな音を出すモジュールです。高/低レベルで駆動できます。鳴る周波数を変えることで異なる音を出せます。
 
-Questo modulo è ampiamente utilizzato nei nostri elettrodomestici quotidiani come PC, frigorifero, telefoni, ecc.
+このモジュールは パソコン、冷蔵庫、携帯電話などの日常の家電製品で広く使われています。
 
-Inoltre, puoi creare molti progetti interattivi interessanti con questo piccolo ma utile modulo. Provalo! Troverai davvero affascinante il suono elettronico che crea.
+また、この小さくて便利なモジュールを使って多くの面白いインタラクティブなプロジェクトを作ることができます。ぜひ試してみてください！！出る電子音はとても魅力的です。
 
-## Specifiche
+## 仕様
 
-- Tensione di lavoro: 3.3-5V
+- 動作電圧: 3.3-5v
 
-- Tipo di interfaccia: digitale
+- インターフェースタイプ: デジタル
 
-- Dimensioni: 30*20mm
+- サイズ: 30*20mm
 
-- Peso: 4g
+- 重量: 4g
 
-## Schema di collegamento
+## 接続図
 
-Collega il pin S del modulo a Digital 3 della scheda V4.0, collega il pin negativo al connettore GND, il pin positivo al connettore 5V.
+モジュールの S ピンを V4.0 ボードの Digital 3 に接続し、負（マイナス）ピンを GND に、正（プラス）ピンを 5V に接続します。
 
-![Schema di collegamento - illustrazione](../media/173f2e9a828b0b20d76dc07de57892c1.jpeg)
+![接続図のイラスト](../media/173f2e9a828b0b20d76dc07de57892c1.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice sottostante nel software Arduino.
+以下のコードをコピーして Arduino ソフトウェアに貼り付けてください。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -50,10 +50,10 @@ int buzzPin =3;    //Connect Buzzer on Digital Pin3
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Esempio di risultato
+## 実行結果の例
 
-Dopo aver caricato il codice sulla scheda, il cicalino emetterà un suono.
+コードをボードにアップロードすると、ブザーが音を出します。
 
-![Esempio di risultato - illustrazione](../media/109e3287bff29d1d1fb88369d6705ad3.png)
+![実行結果の図](../media/109e3287bff29d1d1fb88369d6705ad3.png)
 
 ---

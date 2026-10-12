@@ -1,64 +1,62 @@
-# Lezione 03: LED 3W
+# レッスン 03: 3W LED
 
-> **Kit:** Kit sensori Keyestudio 48-in-1  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
+> **キット:** Keyestudio 48-in-1 Sensor Kit  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 3: illustrazione LED 3W](../media/0b1110577bfde7df3b6aec41d5b21b28.png)
+![プロジェクト 3: 3W LED のイラスト](../media/0b1110577bfde7df3b6aec41d5b21b28.png)
 
-## Descrizione
+## 説明
 
-Questo modulo LED è ad alta luminosità perché i chip LED che monta sono da 3W.
-Puoi applicare questo modulo a progetti Arduino, ideale per robot o piattaforme di
-ricerca e soccorso.
+このLEDモジュールは、搭載されているLED素子が3Wであるため高輝度です。  
+Arduinoプロジェクトに応用でき、ロボットや捜索・救助プラットフォームでの使用に最適です。
 
-Ad esempio, robot intelligenti possono utilizzare questo modulo per scopi di
-illuminazione. Nota che la luce del LED non deve essere esposta direttamente agli occhi umani per ragioni di sicurezza.
+例えば、自律ロボットが照明用にこのモジュールを使用できます。安全上の理由から、LEDの光を直接人間の目に当てないでください。
 
-## Specifiche
+## 仕様
 
-- Temperatura del colore: 6000\~7000K
+- 色温度: 6000\~7000K
 
-- Flusso luminoso: 180\~210lm
+- 光束: 180\~210lm
 
-- Corrente: 700\~750mA
+- 電流: 700\~750mA
 
-- Potenza: 3W
+- 電力: 3W
 
-- Angolo di luce: 140 gradi
+- ビーム角: 140度
 
-- Temperatura di funzionamento: -50\~80℃
+- 動作温度: -50\~80℃
 
-- Temperatura di conservazione: -50\~100℃
+- 保管温度: -50\~100℃
 
-- Modulo LED ad alta potenza, controllato da una porta IO del microcontrollore
+- 高出力LEDモジュール、IOポートでマイコンにより制御
 
-- Tipo IO: Digitale
+- IOタイプ: デジタル
 
-- Tensione di alimentazione: 3.3V a 5V
+- 供給電圧: 3.3V〜5V
 
-- Dimensioni: 40x28mm
+- サイズ: 40x28mm
 
-- Peso: 6g
+- 重量: 6g
 
-## Diagramma di collegamento
+## 接続図
 
-Per prima cosa, prepara i seguenti componenti prima del collegamento:
+まず、接続の前に以下のパーツを準備してください:
 
-- Scheda V4.0\*1
+- V4.0 ボード\*1
 
-- Modulo LED 3W \*1
+- 3W LEDモジュール\*1
 
-- Cavo USB\*1
+- USBケーブル\*1
 
-- Cavi jumper\*3
+- ジャンパー線\*3
 
-Collega il pin S del modulo al pin Digital 13 della scheda V4.0, collega il pin negativo al connettore GND e il pin positivo al connettore 5V.
+モジュールのSピンをV4.0ボードのDigital 13に接続し、負極ピンをGNDに、正極ピンを5Vに接続します。
 
-![Illustrazione diagramma di collegamento](../media/7ca6e53405c422f3ae9b04ac572b40ef.jpeg)
+![接続図のイラスト](../media/7ca6e53405c422f3ae9b04ac572b40ef.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il seguente codice nell'ambiente di sviluppo Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ///////////////////////////////////////////////////////////
@@ -78,10 +76,10 @@ void loop() {
 ///////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 実行結果
 
-Dopo aver collegato i cavi e alimentato il circuito, e aver caricato correttamente il codice, sia il LED D13 sia il LED sul modulo lampeggeranno per un secondo e poi si spegneranno, ciclicamente.
+配線と電源を接続し、コードを正常にアップロードすると、D13のLEDとモジュール上のLEDがそれぞれ1秒点灯して1秒消灯を繰り返します。
 
-![Illustrazione risultato di esempio](../media/edeb5b089be0300c719652badfd269e7.png)
+![実行例のイラスト](../media/edeb5b089be0300c719652badfd269e7.png)
 
 ---

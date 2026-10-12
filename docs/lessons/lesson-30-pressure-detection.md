@@ -1,62 +1,62 @@
-# Lezione 30: Rilevamento della pressione
+# レッスン30: 圧力検出
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
+> **キット：** Keyestudio 48-in-1 センサーキット  
+> **ボード：** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Illustrazione del progetto 30: Rilevamento della pressione](../media/313f11bf4a7f52ac903c78976fe1e633.jpeg)
+![プロジェクト30: 圧力検出 イラスト](../media/313f11bf4a7f52ac903c78976fe1e633.jpeg)
 
-## Descrizione
+## 説明
 
-Questo sensore utilizza un nuovo materiale sensibile alla pressione nano-flessibile con pad a pellicola ultrasottile. Ha le funzioni di impermeabilità e rilevamento della pressione.
+このセンサーは新しい柔軟なナノ圧力感知材料と超薄型フィルムパッドを採用しています。防水と圧力検知の機能を備えています。
 
-Quando il sensore rileva la pressione esterna, la resistenza del sensore varierà.
+外部の圧力を検知すると、センサーの抵抗値が変化します。
 
-Pertanto, tramite il circuito, può convertire il segnale di pressione (che rileva la variazione di pressione) nel corrispondente segnale elettrico di uscita.
+したがって、回路を使用することで、圧力変化を感知する圧力信号を対応する電気信号として出力できます。
 
-In questo modo possiamo ottenere le condizioni delle variazioni di pressione rilevando i cambiamenti del segnale.
+このように、信号の変化を検出することで、圧力変化の状態を取得できます。
 
-## Parametri
+## パラメータ
 
-- Tensione di lavoro: DC 3.3V—5V
+- 動作電圧：DC 3.3V—5V
 
-- Intervallo: 0-10 kg
+- 測定範囲：0-10KG
 
-- Spessore: ＜0.25 mm
+- 厚さ：＜0.25mm
 
-- Punto di risposta: ＜20 g
+- 応答点：＜20g
 
-- Ripetibilità: ＜±5.8%（50% del carico）
+- 再現性：＜±5.8%（50% 負荷）
 
-- Precisione: ±2.5%（85% dell'intervallo）
+- 精度：±2.5%（レンジの85%区間）
 
-- Durata: ＞100.000 volte
+- 耐久性：＞100000回
 
-- Resistenza iniziale: ＞100 MΩ（nessun carico）
+- 初期抵抗：＞100MΩ（無負荷）
 
-- Tempo di risposta: ＜1 ms
+- 応答時間：＜1ms
 
-- Tempo di recupero: ＜15 ms
+- 回復時間：＜15ms
 
-- Temperatura di lavoro: −20℃—60℃
+- 動作温度：﹣20℃—60℃
 
-## Diagramma di collegamento
+## 接続図
 
-Per prima cosa è necessario preparare le seguenti parti prima del collegamento.
+まず、接続前に以下の部品を準備してください。
 
-- Scheda V4.0\*1
+- V4.0 ボード\*1
 
-- Sensore di pressione\*1
+- 圧力センサー\*1
 
-- Cavo USB\*1
+- USB ケーブル\*1
 
-- Cavi jumper\*3
+- ジャンパー線\*3
 
-Collega il pin S del modulo ad Analog A0 della scheda V4.0, collega il pin negativo al GND, il pin positivo al 5V.  
-![Diagramma di collegamento illustrazione](../media/3325303180f71db75d9e13acc5036d8f.jpeg)
+モジュールの S ピンを V4.0 ボードの Analog A0 に接続し、負極ピンを GND ポート、正極ピンを 5V ポートに接続します。  
+![接続図 イラスト](../media/3325303180f71db75d9e13acc5036d8f.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice qui sotto nell'IDE di Arduino.
+以下のコードを Arduino ソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -76,14 +76,14 @@ void loop()
 ///////////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 実行例
 
-Dopo aver cablato correttamente e caricato il codice, apri il monitor seriale nell'IDE di Arduino.
+配線とコードのアップロードが完了したら、Arduino ソフトウェアのシリアルモニタを開いてください。
 
-Poi, premi il sensore con forza con la mano: il valore mostrato nel monitor aumenterà.
+次に、センサーを手でしっかり押すと、モニタに表示される値が増加します。
 
-![Risultato di esempio illustrazione](../media/a6c4be8596a0048cb5f3b2f1612241bd.png)
+![実行例 イラスト](../media/a6c4be8596a0048cb5f3b2f1612241bd.png)
 
-![Risultato di esempio illustrazione](../media/e055d2749b14c62b92c22496a3d1f96a.jpeg)
+![実行例 イラスト](../media/e055d2749b14c62b92c22496a3d1f96a.jpeg)
 
 ---

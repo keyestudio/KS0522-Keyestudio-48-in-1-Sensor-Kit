@@ -1,55 +1,55 @@
-# Lezione 17: Interruttore Reed
+# レッスン17：リードスイッチ
 
-> **Kit:** Keyestudio Kit sensori 48-in-1  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno (ATmega328P)
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 17: illustrazione Interruttore Reed](../media/e580999515f6522eb603ea723bf62173.png)
+![プロジェクト17：リードスイッチのイラスト](../media/e580999515f6522eb603ea723bf62173.png)
 
-## Descrizione
+## 説明
 
-L'interruttore reed è un interruttore speciale e un componente principale per relè reed e interruttori di prossimità.
+リードスイッチは特殊なスイッチであり、リードリレーや近接スイッチの主要な構成部品です。
 
-Un interruttore reed è solitamente costituito da due materiali magnetici morbidi e contatti a lama metallici che si aprono quando non è presente un campo magnetico.
+リードスイッチは通常、二つの軟磁性材料と金属製のリード接点で構成され、磁気がないときに接点が開く仕組みになっています。
 
-Inoltre, alcuni interruttori reed sono dotati di una terza lama che funge da contatto normalmente chiuso. Questi contatti a lama sono incapsulati in un tubo di vetro pieno di gas inerti (come azoto ed elio) o in un tubo di vetro sottovuoto.
+さらに、一部のリードスイッチには第3の常時閉接点として機能する別のリードが備えられている場合もあります。これらのリード接点は、不活性ガス（窒素やヘリウムなど）で満たされたガラス管内、または真空のガラス管内に封入されています。
 
-Le lame incapsulate nel tubo di vetro sono disposte in parallelo con le estremità sovrapposte. Viene riservata una certa distanza o un contatto reciproco per costituire i contatti normalmente aperti o normalmente chiusi dell'interruttore.
+ガラス管内に封入されたリードは平行に配置され、端部が重なっています。スイッチの常時開（NO）または常時閉（NC）接点を構成するために、ある程度の隙間または相互接触が確保されています。
 
-L'interruttore reed può essere usato per conteggio, come finecorsa o per altri scopi.
+リードスイッチはカウント、リミット、その他の目的で使用できます。
 
-Ad esempio, un contachilometri per bicicletta può essere costituito applicando un magnete al pneumatico e montando l'interruttore reed accanto.
+例えば、タイヤにマグネットを貼り付けてリードスイッチを側面に取り付けることで、自転車の走行距離計のような仕組みを構成できます。
 
-È possibile montare l'interruttore reed sulla porta per scopi di allarme o come interruttore.
+また、ドアに取り付けて警報目的やスイッチとして使用することもできます。
 
-L'interruttore reed è ampiamente utilizzato in elettrodomestici, automobili, comunicazioni, industria, sanità e ambito sicurezza.
+リードスイッチは家庭用電化製品、自動車、通信、産業、医療、セキュリティ分野などで広く応用されています。
 
-Inoltre, può essere applicato ad altri sensori e dispositivi elettrici come misuratori di liquidi, magneti per porte, relè reed, sensori di livello dell'olio e sensori di prossimità (sensori magnetici). Può essere utilizzato in ambienti ad alto rischio.
+さらに、液面計、ドアマグネット、リードリレー、油位センサー、近接センサー（磁気センサー）など他のセンサや電子機器にも応用でき、高リスク環境でも使用可能です。
 
-## Specifiche
+## 仕様
 
-1. Tensione di funzionamento: DC 3.3V-5V
+1. 動作電圧: DC 3.3V-5V
 
-2. Corrente di funzionamento: ≥20mA
+2. 動作電流: ≥20mA
 
-3. Temperatura di funzionamento: －10℃ a ＋50℃
+3. 動作温度: －10℃ ～ ＋50℃
 
-4. Distanza di rilevamento: ≤10mm
+4. 検出距離: ≤10mm
 
-5. Interfaccia IO: 3 fili (-/+/S)
+5. IOインターフェース: 3線インターフェース（-/+/S）
 
-6. Dimensioni: 30\*20mm
+6. サイズ: 30\*20mm
 
-7. Peso: 3g
+7. 重量: 3g
 
-## Schema di collegamento
+## 接続図
 
-Collegare il pin S del modulo al Digital 3 della scheda V4.0, collegare il pin negativo al connettore GND, il pin positivo al connettore 5V.
+モジュールのSピンをV4.0ボードのDigital 3に接続し、負極ピンをGNDポート、正極ピンを5Vポートに接続します。
 
-![Illustrazione schema di collegamento](../media/ad39b511b42657baed492704a9c84b13.jpeg)
+![接続図](../media/ad39b511b42657baed492704a9c84b13.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice seguente nell'IDE Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -78,14 +78,14 @@ digitalWrite(Led,LOW);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 実行結果
 
-Dopo aver effettuato i collegamenti e alimentato la scheda, caricato correttamente il codice sulla scheda, puoi vedere che il D13 led sulla scheda V4.0 è acceso.
+配線と電源を接続し、コードをボードに正常にアップロードすると、V4.0ボード上のD13 LEDが点灯します。
 
-![Illustrazione risultato di esempio](../media/a2f983d5a5b324f55e3c0994458d4cbc.png)
+![実行結果のイラスト](../media/a2f983d5a5b324f55e3c0994458d4cbc.png)
 
-Poi avviciniamo alcune sfere magnetiche al sensore. Quando il sensore rileva il campo magnetico, il led sul sensore si accende mentre il D13 led si spegne.
+その後、いくつかの磁性ボールをセンサに近づけます。センサが磁場信号を検出すると、センサ上のLEDが点灯しますが、D13 LEDは消灯します。
 
-![Illustrazione risultato di esempio](../media/ecbec914abc799076513f5c61149b004.png)
+![実行結果のイラスト](../media/ecbec914abc799076513f5c61149b004.png)
 
 ---

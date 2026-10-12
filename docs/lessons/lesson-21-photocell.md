@@ -1,37 +1,37 @@
-# Lezione 21: Fotocellula
+# レッスン21: フォトセル
 
-> **Kit:** Kit sensori Keyestudio 48-in-1  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno con ATmega328P
+> **キット：** Keyestudio 48-in-1 センサーキット  
+> **ボード：** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 21: illustrazione fotocellula](../media/8eed60793fd64a7c0b9a9b2a2fc1ef67.png)
+![プロジェクト21: フォトセルのイラスト](../media/8eed60793fd64a7c0b9a9b2a2fc1ef67.png)
 
-## Descrizione
+## 説明
 
-La fotocellula è comunemente presente nella nostra vita quotidiana ed è principalmente utilizzata negli interruttori intelligenti, nonché nei normali progetti elettronici. Per rendere il suo utilizzo più semplice ed efficace, forniamo i moduli corrispondenti.
+フォトセルは日常生活でよく見られ、主に自動スイッチや一般的な電子設計で使用されます。使いやすさと効果を高めるために、対応するモジュールを用意しています。
 
-La fotocellula è un semiconduttore. Presenta elevata sensibilità, risposta rapida, caratteristiche spettrali e costanza del valore R, mantenendo alta stabilità e affidabilità anche in ambienti estremi come alte temperature e alta umidità.
+フォトセルは半導体であり、高感度、応答速度の速さ、スペクトル特性および抵抗値の一貫性を特徴とし、高温多湿などの厳しい環境下でも高い安定性と信頼性を保ちます。
 
-È ampiamente utilizzata nei campi del controllo automatico come fotocamere, luci solari da giardino, lampade per prati, rilevatori di banconote, orologi al quarzo, tazze musicali, scatole regalo, mini luci notturne, interruttori a controllo sonoro e luminoso, ecc.
+カメラ、ガーデンソーラーライト、芝生用ランプ、コイン検出器、クオーツ時計、音楽ボックス、ギフトボックス、ミニ常夜灯、音光制御スイッチなど、照明の自動制御スイッチ分野で広く使用されています。
 
-## Specifiche
+## 仕様
 
-- Tipo interfaccia: analogico
+- インターフェース: アナログ
 
-- Tensione di lavoro: 5V
+- 動作電圧: 5V
 
-- Dimensioni: 30*20mm
+- サイズ: 30*20mm
 
-- Peso: 3g
+- 重量: 3g
 
-## Schema di collegamento
+## 接続図
 
-Collegare il pin S del modulo all'Analog A0 della scheda V4.0, collegare il pin negativo al connettore GND e il pin positivo al connettore 5V.
+モジュールのSピンをV4.0ボードのAnalog A0に接続し、負極ピンをGNDポートに、正極ピンを5Vポートに接続します。
 
-![Illustrazione schema di collegamento](../media/28a1990cd088d6f0301f02d217cef301.jpeg)
+![接続図のイラスト](../media/28a1990cd088d6f0301f02d217cef301.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice sottostante nell'IDE Arduino.
+以下のコードをArduinoソフトにコピー＆ペーストしてください。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -49,12 +49,12 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 実行結果
 
-![Illustrazione del risultato di esempio](../media/78268e9cb1dbc127e7ae3299d3a35a45.png)
+![実行結果のイラスト](../media/78268e9cb1dbc127e7ae3299d3a35a45.png)
 
-Dopo aver completato i collegamenti e alimentato la scheda, carica correttamente il codice, poi apri il monitor seriale. Se copri la fotocellula sul sensore con la mano, vedrai il valore analogico diminuire.
+配線と電源を接続し、コードをアップロードしたらシリアルモニタを開いてください。センサー上のフォトセルを手で覆うと、アナログ値が低下するのが確認できます。
 
-![Illustrazione del risultato di esempio](../media/85621deb4c66d6e53697cd0ef90cb6e2.jpeg)
+![実行結果のイラスト](../media/85621deb4c66d6e53697cd0ef90cb6e2.jpeg)
 
 ---

@@ -1,78 +1,78 @@
-# Lezione 46: Rilevatore ultrasonico
+# レッスン46: 超音波レンジャー
 
-> **Kit:** Keyestudio Kit sensori 48-in-1  
-> **Scheda:** Keyestudio V4.0 / Scheda compatibile Arduino Uno con ATmega328P
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno 互換 ATmega328P ボード
 
-![Illustrazione Progetto 46: rilevatore ultrasonico](../media/c170155a5fb03abdc10866e25e3670b2.jpeg)
+![プロジェクト46：超音波レンジャー（イラスト）](../media/c170155a5fb03abdc10866e25e3670b2.jpeg)
 
-## Descrizione
+## 説明
 
-Poiché gli ultrasuoni hanno una forte direttività, bassa dissipazione di energia e grande capacità di propagazione nel mezzo, sono comunemente usati nella misurazione delle distanze, come nei telemetri e negli strumenti di rilevamento di posizione.
+超音波は指向性が強く、媒体中でのエネルギー損失が小さく長距離伝播できるため、距離測定（レンジファインダーや位置測定器）に広く用いられています。
 
-Il modulo rilevatore ultrasonico può fornire una distanza di rilevamento non a contatto da 2cm a 450cm, e la sua precisione di misura arriva fino a 3mm, ottimo per soddisfare le esigenze ordinarie.
+超音波検出モジュールは、2cm〜450cm の非接触検出距離を提供でき、測距精度は最大で約3mmと、通常の要求を十分満たします。
 
-Il modulo include un trasmettitore e un ricevitore ultrasonico oltre al circuito di controllo corrispondente.
+このモジュールは超音波送信器と受信器および対応する制御回路を含んでいます。
 
-## Schema di funzionamento
+## 動作概略
 
-La sequenza di misura dell'HC-SR04 è mostrata di seguito:
+HC-SR04 の測定シーケンスは以下の通りです：
 
-![Illustrazione Schema di funzionamento](../media/a7b0fc57b2e387962071da618153ad68.jpeg)
+![動作概略図](../media/a7b0fc57b2e387962071da618153ad68.jpeg)
 
-1\. Per prima cosa tenere basso il TRIG, quindi attivarlo con un segnale livello alto di almeno 10us;
+1\. まずTRIGをローにしておき、少なくとも10usのハイレベル信号でトリガーします；
 
-2\. Dopo l'attivazione, il modulo trasmetterà automaticamente otto onde quadre a 40KHz e rileverà automaticamente se vi è un segnale di ritorno.
+2\. トリガー後、モジュールは自動的に8回の40kHzの方形波を送信し、戻り信号があるかを自動検出します。
 
-3\. Se esiste un segnale di ritorno, tramite l'ECHO viene emesso un livello alto; la durata del livello alto corrisponde al tempo dall'emissione alla ricezione dell'ultrasuono.
+3\. もし信号が返ってきた場合、ECHOピンからハイレベルが出力されます。ハイレベルの継続時間は、実際には超音波の送信から受信までの時間です。
 $$
-Distanza\ misurata = Durata\ del\ livello\ alto * 340m/s * 0.5
+測定距離 = ハイレベル継続時間 * 340m/s * 0.5
 $$
 
-## Parametri
+## パラメータ
 
-- Tensione di lavoro: 5 V DC
+- 動作電圧: 5 V DC
 
-- Corrente di lavoro：15mA
+- 動作電流：15mA
 
-- Campo di rilevamento：2-450cm
+- 検出範囲：2-450cm
 
-- Angolo di rilevamento：15 gradi
+- 検出角度：15度
 
-- Impulso di trigger in ingresso：10us livello TTL
+- 入力トリガーパルス：10us TTL レベル
 
-- Segnale di eco in uscita： segnale a livello TTL (HIGH), proporzionale alla distanza.
+- 出力エコー信号：TTL レベル信号(HIGH)を出力、距離に比例
 
-## Diagramma dei pin
+## ピン配置図
 
-![Illustrazione Diagramma dei pin](../media/c03e563bcd19796b483156724bae174a.png)
+![ピン配置図](../media/c03e563bcd19796b483156724bae174a.png)
 
-## Schema di collegamento
+## 接続図
 
-Per prima cosa, è necessario preparare i seguenti componenti:
+まず、以下の部品を準備してください：
 
-- Scheda V4.0\*1
+- V4.0 ボード\*1
 
-- Sensore ultrasonico\*1
+- 超音波センサ\*1
 
-- Cavo USB\*1
+- USB ケーブル\*1
 
-- Cavi jumper\*4
+- ジャンパー線\*4
 
-Successivamente, fare riferimento alla seguente tabella di collegamento:
+次に、以下の接続表を参照してください：
 
-![Illustrazione Schema di collegamento](../media/e708c019b57984a07feb241672793982.jpeg)
+![接続図](../media/e708c019b57984a07feb241672793982.jpeg)
 
-Nota: D4、D5 sono i pin digitali 4 e 5.
+注：D4、D5 はデジタルピン4およびピン5です。
 
-È possibile fare riferimento al diagramma di collegamento mostrato di seguito:
+以下の接続図を参考にしてください：
 
-![Illustrazione Schema di collegamento](../media/b5b964743eac977e687c454b64e061fa.jpeg)
+![接続図](../media/b5b964743eac977e687c454b64e061fa.jpeg)
 
-Dopo aver effettuato correttamente i collegamenti, è possibile misurare la distanza e visualizzare il valore della distanza sul monitor.
+接続が正しくできたら、距離を測定してモニタに距離値を表示できます。
 
-## Codice di test
+## テストコード
 
-Copia e incolla il codice di test qui sotto nel software Arduino
+以下のテストコードをArduinoソフトウェアにコピー＆ペーストしてください
 
 ```c
 ///////////////////////////////////////////////////////////////////////////////
@@ -99,14 +99,14 @@ delay(50);
 ///////////////////////////////////////////////////////////////////////////////
 ```
 
-## Esempio di risultato
+## 実行例
 
-![Illustrazione Esempio di risultato](../media/0dcff2ae88366ce40190b77f25d271d7.png)
+![実行例の図](../media/0dcff2ae88366ce40190b77f25d271d7.png)
 
-Dopo aver caricato correttamente il codice sulla scheda V4.0, aprire il monitor seriale. Posizionando un oggetto davanti al sensore ultrasonico (da vicino e da lontano), verrà rilevata la distanza dell'oggetto. Il valore verrà visualizzato sul monitor mostrato di seguito.
+コードをV4.0ボードに正常にアップロードしたら、シリアルモニタを開きます。超音波センサの前に物体を置くと（近くから遠くへ）、物体までの距離を検出します。値は下のモニタに表示されます。
 
-![Illustrazione Esempio di risultato](../media/1dbca5dc233994f6923601d942fadba6.png)
+![実行例の図](../media/1dbca5dc233994f6923601d942fadba6.png)
 
-![Illustrazione Esempio di risultato](../media/dcd49cc72e7a9f993083af7625d240db.png)
+![実行例の図](../media/dcd49cc72e7a9f993083af7625d240db.png)
 
 ---

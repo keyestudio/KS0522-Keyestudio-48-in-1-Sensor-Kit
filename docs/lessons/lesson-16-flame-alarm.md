@@ -1,51 +1,51 @@
-# Lesson 16: Flame Alarm
+# レッスン 16：火炎アラーム
 
-> **Kit:** Keyestudio Kit sensori 48-in-1  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno con ATmega328P
+> **キット:** Keyestudio 48-in-1 Sensor Kit  
+> **ボード:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-![Illustrazione Progetto 16: Allarme Fiamma](../media/35c5a2593df5d4e76865158e790feada.png)
+![プロジェクト16：火炎アラームのイラスト](../media/35c5a2593df5d4e76865158e790feada.png)
 
-## Descrizione
+## 説明
 
-Questo sensore di fiamma può essere utilizzato per rilevare incendi o altre sorgenti luminose con lunghezze d'onda comprese tra 760nm \~ 1100nm.
+この火炎センサーは、波長が760nm ～ 1100nmの火やその他の光を検出するために使用できます。
 
-Nel gioco/competizione del robot antincendio, la fiamma ha un ruolo importante nelle rilevazioni e può essere usata come "occhi" del robot per trovare la sorgente di incendio.
+消火ロボットの競技では、火炎は探索において重要な役割を果たし、ロボットが火元を探すための“目”として使用できます。
 
-## Specifiche
+## 仕様
 
-1. Tensione di alimentazione: 3.3V a 5V
+1. 電源電圧: 3.3V～5V
 
-2. Distanza di rilevamento: 20cm (4.8V) \~ 100cm (1V)
+2. 検出範囲: 20cm (4.8V) ～ 100cm (1V)
 
-3. Intervallo della banda spettrale: 760nm a 1100nm
+3. スペクトル帯域範囲: 760nm～1100nm
 
-4. Temperatura di esercizio: -25℃ a 85℃
+4. 動作温度: -25℃から85℃
 
-5. Interfaccia: digitale
+5. インターフェース: デジタル
 
-6. Dimensioni: 44*16.7mm
+6. サイズ: 44*16.7mm
 
-7. Peso: 4g
+7. 重量: 4g
 
-## Diagramma di collegamento
+## 接続図
 
-Per prima cosa, prepara i seguenti componenti prima del collegamento:
+まず接続の前に次の部品を用意してください:
 
-- Scheda V4.0*1
+- V4.0 Board*1
 
-- Sensore di fiamma*1
+- 火炎センサー*1
 
-- Cavo USB*1
+- USBケーブル*1
 
-- Cavi jumper*3
+- ジャンパー線*3
 
-Collega il pin D0 del modulo al Digital 2 della scheda V4.0, collega il pin GND alla porta GND, il pin VCC alla porta 5V.
+モジュールのD0ピンをV4.0ボードのDigital 2に接続し、GNDピンをGNDポートに、VCCピンを5Vポートに接続します。
 
-![Illustrazione Diagramma di collegamento](../media/a1ee506fc9921c7616349500c258b733.jpeg)
+![接続図のイラスト](../media/a1ee506fc9921c7616349500c258b733.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice sottostante nel software Arduino.
+以下のコードをArduinoソフトウェアにコピーして貼り付けてください。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -74,14 +74,14 @@ State = digitalRead(flamePin);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 実行結果
 
-Dopo aver completato i collegamenti e alimentato la scheda, carica correttamente il codice sulla scheda.
+配線と電源を接続し、コードをボードに正常にアップロードすると、
 
-![Illustrazione Risultato di esempio](../media/c769453bbd0e1c5fcf6c80cf697030b3.png)
+![実行結果のイラスト](../media/c769453bbd0e1c5fcf6c80cf697030b3.png)
 
-Se avvicini un accendino al sensore, quando il sensore rileva la fiamma, un altro LED sul modulo si accende.
+ライターをセンサーに近づけると、センサーが火炎を検出した際にセンサー上の別のLEDが点灯します。
 
-![Illustrazione Risultato di esempio](../media/2ee5a36673d2cbeb934ca2af29dab607.png)
+![実行結果のイラスト](../media/2ee5a36673d2cbeb934ca2af29dab607.png)
 
 ---

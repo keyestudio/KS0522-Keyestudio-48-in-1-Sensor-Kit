@@ -1,47 +1,47 @@
-# Lezione 29: Rilevamento della tensione
+# レッスン29：電圧検出
 
-> **Kit:** Keyestudio Kit sensori 48-in-1  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile con Arduino Uno ATmega328P
+> **キット：** Keyestudio 48-in-1 センサーキット  
+> **ボード：** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Illustrazione Progetto 29: Rilevamento della tensione](../media/41967398a781944fd64ebd49a9c746fa.jpeg)
+![プロジェクト29：電圧検出のイラスト](../media/41967398a781944fd64ebd49a9c746fa.jpeg)
 
-## Descrizione
+## 説明
 
-Poiché i prodotti elettronici sono diversi, anche la tensione dell'alimentazione varia. È quindi necessario rilevarla con un modulo di rilevamento della tensione o un controller adeguato.
+電子製品は種類が多いため、電源電圧も異なります。適切な電圧検出モジュールやコントローラで検出する必要があります。
 
-La tensione massima di ingresso dell'interfaccia analogica del controller è 5V, il che significa che tensioni maggiori di 5V non verranno rilevate.
+コントローラのアナログインターフェースの最大入力電圧は5Vであり、5Vを超える電圧はそのままでは検出できません。
 
-Tuttavia, questo modulo di rilevamento della tensione consente di rilevare tensioni superiori a 5 V.
+しかし、この電圧検出モジュールを使用すれば5Vを超える電圧を検出できます。
 
-Si basa su un partitore resistivo 5:1. Con un riferimento analogico di 5 V, la tensione di ingresso non deve superare i 25 V. Con un riferimento analogico di 3.3 V, la tensione di ingresso non deve superare i 16.5 V.
+これは5:1の抵抗分圧に基づいています。アナログ基準が5Vの場合、入力電圧は最大25Vまで測定できます。アナログ基準が3.3Vの場合、入力電圧は最大16.5Vまでです。
 
-Il convertitore analogico-digitale AVR è a 10 bit, quindi la risoluzione analogica è 0.00489 V (5 V / 1023). Con il partitore 5:1, l'incremento minimo misurabile in ingresso è approssimativamente 0.02445 V.
+AVRのアナログ-デジタルコンバータは10ビットなので、アナログ分解能は0.00489V（5 V / 1023）です。5:1の分圧を考慮すると、入力で検出可能な最小増分は約0.02445Vになります。
 
-Quando si collega questo sensore alla scheda di espansione usando un cavo a 3 pin, non solo può rilevare facilmente l'entità della tensione di alimentazione e monitorare la carica della batteria per opere multimediali interattive o robot, ma può anche essere abbinato a un modulo LCD IIC LCD1602 per visualizzare la tensione o realizzare un monitor della tensione.
+このセンサを3ピンケーブルで拡張ボードに接続すると、電源電圧の大きさを簡単に検出でき、インタラクティブメディア作品やロボットのためにバッテリの電力量を監視できます。また、IIC LCD1602 LCDモジュールと組み合わせて電圧を表示したり電圧モニタを作成したりすることもできます。
 
-## Specifiche
+## 仕様
 
-- Tensione di funzionamento: 0V-25V DC
+- 動作電圧: 0V-25V DC
 
-- Tipo di segnale: segnale analogico
+- 信号タイプ: アナログ信号
 
-## Schema di collegamento
+## 接続図
 
-Per prima cosa, è necessario preparare i seguenti componenti prima del collegamento:
+まず、接続前に次の部品を用意してください:
 
-- Scheda V4.0\*1
+- V4.0 ボード\*1
 
-- Sensore di tensione\*1
+- 電圧センサー\*1
 
-- Cavo USB\*1
+- USBケーブル\*1
 
-- Cavi jumper\*3
+- ジャンパーワイヤー\*3
 
-Collegare il pin S del modulo ad Analog A0 della scheda V4.0, collegare il pin negativo alla porta GND, il pin NC alla porta 5V.
+モジュールのSピンをV4.0ボードのアナログ A0 に接続し、負極ピンをGNDポートに、NCピンを5Vポートに接続します。
 
-![Illustrazione dello schema di collegamento](../media/b8754c45901ff42ba9caadce5db01a3a.jpeg)
+![接続図のイラスト](../media/b8754c45901ff42ba9caadce5db01a3a.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -80,12 +80,12 @@ Serial.print(val2);      //The serial port prints the value of the variable val2
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 実例の結果
 
-![Illustrazione del risultato di esempio](../media/ac8825bb333757bad26785e58651beb7.png)
+![実例の結果のイラスト](../media/ac8825bb333757bad26785e58651beb7.png)
 
-Dopo aver effettuato il collegamento come sopra, compilare e caricare il codice, alimentare la scheda, quindi aprire il monitor seriale: verrà stampato il valore della tensione rilevata come mostrato di seguito.
+上記の配線どおりに接続し、コードをコンパイルしてアップロード後、電源を入れてシリアルモニタを開くと、下図のように検出した電圧値が表示されます。
 
-![Illustrazione del risultato di esempio](../media/af699a83a891ea99d193d5b53bd27fa1.jpeg)
+![実例の結果のイラスト](../media/af699a83a891ea99d193d5b53bd27fa1.jpeg)
 
 ---

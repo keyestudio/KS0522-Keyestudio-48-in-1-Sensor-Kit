@@ -1,81 +1,81 @@
-# Lezione 42: Sensore di assetto
+# レッスン 42：姿勢センサー
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Scheda:** Keyestudio V4.0 / Scheda compatibile Arduino Uno ATmega328P
+> **キット：** Keyestudio 48-in-1 Sensor Kit  
+> **ボード：** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Illustrazione Progetto 42: Sensore di assetto](../media/8eb8d16c5e76e50a6609678130a9ee29.jpeg)
+![プロジェクト42：姿勢センサーのイラスト](../media/8eb8d16c5e76e50a6609678130a9ee29.jpeg)
 
-## Introduzione
+## 導入
 
-**Avviso di compatibilità.** L'elenco dei componenti contrassegna questa scheda come APDS-9930, ma il seguente esempio legacy è destinato a un APDS-9960 e utilizza `SparkFun_APDS9960`. Controllare la marcatura del circuito integrato sul modulo reale prima di caricare questo sketch; non utilizzare questo esempio con una scheda APDS-9930. L'APDS-9930 in un singolo package a 8 pin può fornire il sensore di luce ambientale compatibile con interfaccia I2C e il sensore di prossimità a LED infrarossi.
+**互換性に関する注意。** 部品表ではこのボードを APDS-9930 と表示していますが、以下のレガシーな例は APDS-9960 を対象としており `SparkFun_APDS9960` を使用します。スケッチをアップロードする前に実際のモジュールの IC マーキングを確認してください。APDS-9930 基板ではこの例を使用しないでください。単一の8ピンパッケージの APDS-9930 は、I2C インターフェイスに対応した環境光センサと赤外 LED 近接センサを提供できます。
 
-Il sensore di prossimità, completamente tarato, può rilevare oggetti a 100 mm, esentando i requisiti di calibrazione in fabbrica per l'apparecchiatura terminale e i sottocomponenti.
+完全に調整された近接センサは100mm の物体を検出でき、端末装置やサブコンポーネントの工場校正要件を不要にします。
 
-Dalla luce solare intensa alla stanza buia, la funzione di rilevamento di prossimità opera correttamente.
+明るい日光から暗い部屋まで、近接センサの近接検出機能は良好に動作します。
 
-Questo modulo, dotato di micro-lente ottica, offre trasmissione e ricezione a infrarossi efficienti dal punto di vista energetico, riducendo il consumo complessivo di potenza.
+このモジュールはマイクロ光学レンズを追加しており、赤外線の効率的な送受信を提供し、全体の消費電力を低減できます。
 
-Inoltre, la sua macchina a stati interna può mettere il dispositivo in modalità a basso consumo, garantendo un consumo medio molto ridotto.
+さらに、内部のステートマシンによりデバイスを低消費電力モードにでき、非常に低い平均消費電力を実現します。
 
-## Parametri
+## 仕様
 
-- Tensione di lavoro：DC 3.3-3.8V
+- 動作電圧：DC 3.3-3.8V
 
-- Corrente di uscita：0-20mA
+- 出力電流：0-20mA
 
-- Intervallo di temperatura：-40℃—85℃
+- 温度範囲：-40℃—85℃
 
-## Caratteristiche
+## 特徴
 
-1. Modulo ottico integrato con ALS, LED a infrarossi e rivelatore di prossimità;
-2. Risoluzione fino a 16 bit;
-3. Alta sensibilità di funzionamento anche dietro vetro scuro;
-4. Prestazioni a basso flusso luminoso di 0.01 lux;
-5. Rilevamento di prossimità, completamente calibrato per rilevamento a 100 mm;
-6. Integra LED a infrarossi e driver LED sincrono;
-7. Elimina la calibrazione di fabbrica per i sensori di prossimità;
-8. Timer di attesa programmabile, consumo in stato di attesa - 90μA (valore tipico);
-9. Intervallo programmabile da 2.7 millisecondi a 8 secondi;
-10. Compatibile con interfaccia I2C, fino a 400 kHz (modalità I2C fast);
-11. Pin di interruzione dedicato;
-12. Modalità sleep, consumo - 2.2μA (valore tipico).
+1. ALS、赤外 LED、および近接検出器を統合した光学モジュール
+2. 最大16ビットの分解能
+3. ダークガラス越しでも高感度に動作
+4. 0.01 lux の低照度性能
+5. 近接検出は工場で完全に較正され、100 mm の検出を実現
+6. 赤外 LED および同期 LED ドライバを統合
+7. 近接センサの工場較正を不要化
+8. プログラム可能な待機タイマ、待機状態の消費電流 - 90 μA（代表値）
+9. プログラム可能な範囲は2.7ミリ秒から8秒まで
+10. I2C インターフェイス互換、最大400kHz（I2C ファストモード）
+11. 専用の割り込みピン
+12. スリープモード消費電流 - 2.2 μA（代表値）
 
-## Schema di collegamento
+## 接続図
 
-Per prima cosa è necessario preparare le seguenti parti:
+まず、以下の部品を準備してください:
 
-- Scheda V4.0\*1
+- V4.0 ボード\*1
 
-- Sensore di assetto\*1
+- 姿勢センサー\*1
 
-- Cavo USB\*1
+- USB ケーブル\*1
 
-- Cavi jumper\*5
+- ジャンパーワイヤー\*5
 
-Collegare il pin INT del sensore alla porta digitale D2 della scheda V4.0, il pin SCL alla porta analogica A5, il pin SDA alla porta analogica A4; collegare il pin 3V3 al terminale 3V3 e il pin GND al terminale GND.
+センサーの INT ピンを V4.0 ボードの Digital 2 ポートに接続、SCL ピンを Analog A5 ポートに、SDA ピンを Analog A4 ポートに接続；3V3 ピンを 3V3 ポートに、GND ピンを GND ポートに接続します。
 
-![Illustrazione schema di collegamento](../media/c906c4e8a06998118eac5e3b981386d6.jpeg)
+![接続図のイラスト](../media/c906c4e8a06998118eac5e3b981386d6.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-**IMPORTANTE**: L'APDS-9960 può accettare solo 3.3V!
+**重要**: APDS-9960 は 3.3V のみ受け付けます!
 
-## Collegamenti hardware
+## ハードウェア接続
 
-| Pin Arduino | Scheda APDS-9960 | Funzione  |
-| :---------: | :--------------: | :-------: |
-|    3.3V     |       VCC        |   Alimentazione   |
-|     GND     |       GND        |     Massa        |
-|     A4      |       SDA        |   Dati I2C       |
-|     A5      |       SCL        |   Clock I2C      |
-|     D2      |       INT        |   Interruzione   |
-|     D13     |        -         |      LED         |
+| Arduino Pin | APDS-9960 Board | 機能      |
+| :---------: | :-------------: | :--------: |
+|    3.3V     |       VCC       |   電源    |
+|     GND     |       GND       |   グランド |
+|     A4      |       SDA       | I2C データ |
+|     A5      |       SCL       | I2C クロック |
+|     D2      |       INT       | 割り込み   |
+|     D13     |        -        |    LED    |
 
-**Risorse:** Includere Wire.h e SparkFun_APDS-9960.h
+**リソース：** Wire.h と SparkFun_APDS-9960.h を含めます
 
-**Specifiche dell'ambiente di sviluppo:** Scritto in Arduino 1.0.5
+**開発環境の詳細：** Arduino 1.0.5 で作成
 
-Copia e incolla il codice sottostante nel software Arduino.
+以下のコードを Arduino ソフトウェアにコピー＆ペーストしてください。
 
 ```c
 #include <Wire.h>
@@ -186,14 +186,14 @@ void interruptRoutine() {
 }
 ```
 
-Nota: prima di compilare il codice, ricordarsi di posizionare la libreria nella directory libraries dell'IDE di Arduino. Altrimenti la compilazione fallirà.
+注意: コードをコンパイルする前に、ライブラリを Arduino IDE の libraries ディレクトリに配置するのを忘れないでください。そうしないとコンパイルに失敗します。
 
-## Risultato di esempio
+## 実行結果の例
 
-![Illustrazione risultato di esempio](../media/2a30729fa77874e4e61f51d2bb8e62c1.png)
+![実行結果のイラスト](../media/2a30729fa77874e4e61f51d2bb8e62c1.png)
 
-Dopo aver caricato il codice, aprire il monitor seriale e impostare il baud rate su 9600.
+コードをアップロードしたら、シリアルモニタを開き、ボーレートを9600に設定してください。
 
-![Illustrazione risultato di esempio](../media/935c7035ef43f54ca65eaa49bbaf5e98.jpeg)
+![実行結果のイラスト](../media/935c7035ef43f54ca65eaa49bbaf5e98.jpeg)
 
 ---

@@ -1,51 +1,51 @@
-# Lezione 34: Trasmettitore IR Digitale
+# レッスン34: デジタル赤外線送信機
 
-> **Kit:** Keyestudio 48-in-1 Kit di sensori  
-> **Scheda:** Scheda Keyestudio V4.0 / compatibile Arduino Uno ATmega328P
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 34: Trasmettitore IR Digitale - illustrazione](../media/9fe876a8c857650226cbe2f8a9bead59.png)
+![プロジェクト34: デジタル赤外線送信機 イラスト](../media/9fe876a8c857650226cbe2f8a9bead59.png)
 
-## Descrizione
+## 説明
 
-Il modulo trasmettitore IR è progettato per la comunicazione IR, ampiamente utilizzata per comandare apparecchi televisivi da breve distanza in linea di vista.
+IR送信モジュールはIR通信向けに設計されており、短距離の視線（ライン・オブ・サイト）でテレビなどの機器を操作する用途で広く使われています。
 
-Poiché il telecomando a infrarossi (IR) usa la luce, richiede la linea di vista per far funzionare il dispositivo di destinazione. Il segnale può però essere riflesso da specchi, proprio come qualsiasi altra sorgente luminosa.
+赤外線（IR）リモコンは光を使用するため、操作対象機器への視線が必要です。ただし、赤外線信号は他の光源と同様に鏡で反射することもあります。
 
-Anche i ricevitori a infrarossi tendono ad avere un angolo di funzionamento più o meno limitato, il quale dipende principalmente dalle caratteristiche ottiche del fototransistor.
+赤外線受信機は、受光素子（フォトトランジスタ）の光学特性により、動作角がある程度制限される傾向があります。
 
-Tuttavia, è facile aumentare l'angolo di funzionamento usando un oggetto trasparente satinato davanti al ricevitore.
+しかし、受信機の前に半透明のマットな物体を置くことで、動作角を簡単に広げることができます。
 
-## Specifiche
+## 仕様
 
-- Alimentazione: 3-5V
+- 電源: 3-5V
 
-- Frequenza centrale infrarossa: 850nm-940nm
+- 赤外線中心波長: 850nm-940nm
 
-- Angolo di emissione infrarossa: circa 20 gradi
+- 赤外線放射角: 約20度
 
-- Distanza di emissione infrarossa: circa 1.3m (5V 38Khz)
+- 赤外線送信距離: 約1.3m（5V 38Khz）
 
-- Connettore: JST PH2.0
+- インターフェースソケット: JST PH2.0
 
-- Foro di montaggio: diametro interno 3.2mm, distanza 15mm
+- 取付穴: 内径は3.2mm、間隔は15mm
 
-## Schema di collegamento
+## 接続図
 
-Per prima cosa è necessario preparare i seguenti componenti prima del collegamento.
+まず接続する前に以下の部品を用意してください。
 
-- Scheda V4.0\*1
+- V4.0 ボード\*1
 
-- Modulo trasmettitore IR\*1
+- IR送信モジュール\*1
 
-- Cavo USB\*1
+- USBケーブル\*1
 
-- Cavi jumper\*3
+- ジャンパー線\*3
 
-Collega il pin S del modulo al pin D3 della scheda V4.0, collega il pin negativo a GND e il pin positivo a 5V.
+モジュールのSピンをV4.0ボードのDigital 3に接続し、負極ピンをGNDポート、正極ピンを5Vポートに接続します。
 
-![Schema di collegamento - illustrazione](../media/31c03e9ad144e1124260ff6e0538fe69.jpeg)
+![接続図 イラスト](../media/31c03e9ad144e1124260ff6e0538fe69.jpeg)
 
-## Esempio di codice 1
+## サンプルコード1
 
 ```c
 int led = 3;
@@ -60,39 +60,39 @@ void loop() {
 }
 ```
 
-In condizioni di oscurità, vedrai una luce blu lampeggiante sullo schermo del telefono quando userai la fotocamera per riprendere il LED infrarosso.
+暗い環境では、赤外線LEDをスマートフォンのカメラで撮影すると、画面に青い点滅光が見えます。
 
-Carica correttamente il codice sopra sulla scheda; il LED sul sensore lampeggerà di rosso.
+上記のコードをボードにアップロードすると、センサー上のLEDが赤く点滅します。
 
-Di seguito, passiamo a un esempio interattivo tra modulo ricevitore IR e modulo trasmettitore IR.
+以下では、IR受信モジュールとIR送信モジュール間のインタラクティブな例に進みます。
 
-## Telecomando/Comunicazione a infrarossi
+## 赤外線リモコン/通信
 
-## Materiale necessario
+## 必要なハードウェア
 
-- Arduino R3 x2
+- Arduino R3 ×2
 
-- Ricevitore IR digitale x1
+- デジタルIR受信機 ×1
 
-- Modulo trasmettitore IR x1
+- IR送信モジュール ×1
 
-Nota: questo esperimento richiede due schede microcontrollore. Una breadboard non può sostituire la seconda scheda perché non può eseguire lo sketch del ricevitore.
+注意: この実験には2枚のマイコンボードが必要です。ブレッドボードは受信側のスケッチを実行できないため、2枚目のボードの代わりにはなりません。
 
-## Configurazione per comunicazione a due schede
+## 二枚のボードによる通信設定
 
-## Per il trasmettitore IR
+## IR送信機用
 
-Attenzione: Arduino-IR remote supporta solo D3 come trasmettitore.
+注意: Arduino-IR リモコンは送信にD3のみをサポートします。
 
-![Per il trasmettitore IR - illustrazione](../media/08ebf9b37949caf1782e499f49934f1d.png)
+![IR送信機用 イラスト](../media/08ebf9b37949caf1782e499f49934f1d.png)
 
-## Per il ricevitore IR
+## IR受信機用
 
-Collega il pin del segnale al connettore D11.
+信号ピンをD11ポートに接続してください。
 
-![Per il ricevitore IR - illustrazione](../media/687d429fe6360707f95fb6c5ddfa2ca7.jpeg)
+![IR受信機用 イラスト](../media/687d429fe6360707f95fb6c5ddfa2ca7.jpeg)
 
-## Carica il codice 2 sulla V4.0 connessa al trasmettitore IR
+## IR送信機に接続したV4.0へコード2をアップロード
 
 ```c
  #include <IRremote.h>
@@ -106,7 +106,7 @@ Collega il pin del segnale al connettore D11.
      delay(200); }
 ```
 
-## Carica il codice 3 sulla V4.0 connessa al ricevitore IR
+## IR受信機に接続したV4.0へコード3をアップロード
 
 ```c
 #include <IRremote.h>
@@ -138,12 +138,12 @@ Collega il pin del segnale al connettore D11.
    }}
 ```
 
-## Risultato
+## 結果
 
-Quando il modulo ricevitore IR riceve il segnale infrarosso dal trasmettitore IR, il LED D1 sul modulo ricevitore IR lampeggerà.
+IR受信モジュールがIR送信機から赤外線信号を受信すると、IR受信モジュール上のD1 LEDが点滅します。
 
-Quando il modulo ricevitore IR riceve il segnale infrarosso dal trasmettitore IR, il LED D1 sul modulo ricevitore IR lampeggerà.
+IR受信モジュールがIR送信機から赤外線信号を受信すると、IR受信モジュール上のD1 LEDが点滅します。
 
-![Risultato - illustrazione](../media/4d73a7178e89de72df7e82a147778ae9.png)
+![結果 イラスト](../media/4d73a7178e89de72df7e82a147778ae9.png)
 
 ---

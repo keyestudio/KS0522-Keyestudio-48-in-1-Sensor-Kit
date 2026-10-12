@@ -1,65 +1,65 @@
-# Lezione 18: Sensore di movimento PIR
+# レッスン18：PIRモーションセンサー
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Scheda:** Keyestudio V4.0 / Scheda compatibile Arduino Uno ATmega328P
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328Pボード
 
-![Illustrazione Progetto 18: Sensore di movimento PIR](../media/ce608db25742f19fdf6eceda756a59d9.png)
+![プロジェクト18：PIRモーションセンサーのイラスト](../media/ce608db25742f19fdf6eceda756a59d9.png)
 
-## Descrizione
+## 説明
 
-Il sensore di movimento a infrarossi piroelettrico può rilevare segnali infrarossi provenienti da una persona in movimento o da un animale in movimento e fornire segnali di commutazione in uscita.
+パイロ（熱）電気式赤外線モーションセンサーは、人や動物の動きによる赤外線を検出し、スイッチング信号を出力します。
 
-Può essere applicato in molteplici occasioni per rilevare lo spostamento del corpo umano.
+人体の動きを検出するさまざまな用途に応用できます。
 
-I tradizionali sensori a infrarossi piroelettrici richiedono un rilevatore piroelettrico del corpo, un chip professionale e circuiti periferici complessi, pertanto le dimensioni sono maggiori, con circuito complesso e minore affidabilità.
+従来のパイロ電気式赤外線センサーは、人体用パイロ電気赤外線検知素子や専用チップ、複雑な周辺回路を必要とするため、大きく、回路が複雑で信頼性が低い場合がありました。
 
-Ora presentiamo questo nuovo sensore di movimento a infrarossi piroelettrico, progettato appositamente per Arduino.
+そこでArduino向けに特別設計した新しいパイロ電気式赤外線モーションセンサーを発売しました。
 
-Utilizza un sensore piroelettrico integrato digitale per il corpo, con dimensioni più ridotte, maggiore affidabilità, minore consumo energetico e circuito periferico più semplice.
+統合されたデジタル人体用パイロ電気赤外線センサーを採用しており、サイズが小さく、信頼性が高く、消費電力が低く、周辺回路も簡素です。
 
-## Specifiche
+## 仕様
 
-- Tensione di ingresso: 3.3 \~ 5V, massimo 6V
+- 入力電圧：3.3 \~ 5V、最大 6V
 
-- Corrente di lavoro: 15uA
+- 動作電流：15uA
 
-- Temperatura di lavoro: -20 \~ 85 ℃
+- 動作温度：-20 \~ 85 ℃
 
-- Tensione di uscita: Livello alto 3V, Livello basso 0V
+- 出力電圧：高 3V、低 0V
 
-- Tempo di ritardo di uscita (livello alto): circa 2.3 a 3 secondi
+- 出力遅延時間（Highレベル）：約 2.3〜3 秒
 
-- Angolo di rilevamento: 100°
+- 検出角度：100 °
 
-- Distanza di rilevamento: 7 metri
+- 検出距離：7メートル
 
-- LED indicatore di uscita (se l'uscita è HIGH, si accenderà)
+- 出力表示LED（出力が HIGH のとき点灯）
 
-- Corrente limite per il pin: 100mA
+- ピンの制限電流：100mA
 
-- Dimensioni: 30*20mm
+- サイズ：30*20mm
 
-- Peso: 4g
+- 重量：4g
 
-## Schema di collegamento
+## 接続図
 
-Per il collegamento, prepara i seguenti componenti:
+接続する前に、次の部品を準備してください：
 
-- Scheda V4.0*1
+- V4.0 ボード*1
 
-- Sensore di movimento PIR*1
+- PIRモーションセンサー*1
 
-- Cavo USB*1
+- USBケーブル*1
 
-- Cavi jumper*3
+- ジャンパーワイヤ*3
 
-Collega il pin S del modulo a Digital 3 della scheda V4.0, collega il pin negativo a GND e il pin positivo a 5V.
+モジュールの S ピンを V4.0 ボードの Digital 3 に接続し、負（-）ピンを GND ポートに、正（+）ピンを 5V ポートに接続します。
 
-![Schema di collegamento illustrazione](../media/01970d510c03a8c7aa3ef0c13ea70cff.jpeg)
+![接続図のイラスト](../media/01970d510c03a8c7aa3ef0c13ea70cff.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice sottostante nell'IDE Arduino.
+以下のコードを Arduino ソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -83,14 +83,14 @@ void loop()
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Esempio di risultato
+## 実行結果
 
-Completati i collegamenti e alimentato il sistema, caricato correttamente il codice, se il sensore rileva qualcuno che si muove nelle vicinanze, l'indicatore D13 sulla scheda V4.0 si accenderà e "C'è qualcuno in questa zona!" verrà visualizzato nel monitor seriale del software Arduino.
+配線と電源を接続し、コードを正常にアップロードすると、センサーが近くで人の動きを検出した場合、V4.0 ボード上の D13 インジケーターが点灯し、Arduino ソフトウェアのシリアルモニタに「誰かがこのエリアにいます！」と表示されます。
 
-Se non viene rilevato alcun movimento, l'indicatore D13 sulla scheda V4.0 sarà spento e "Nessuno!" verrà visualizzato nel monitor seriale.
+動きを検出しない場合、V4.0 ボード上の D13 インジケーターは消灯し、シリアルモニタには「誰もいません！」と表示されます。
 
-![Esempio di risultato illustrazione](../media/e25d28654311fa7820a1886a285353e5.png)
+![実行結果のイラスト](../media/e25d28654311fa7820a1886a285353e5.png)
 
-![Esempio di risultato illustrazione](../media/9b6209c8ce5b4be73f8378d21b639d28.jpeg)
+![実行結果のイラスト](../media/9b6209c8ce5b4be73f8378d21b639d28.jpeg)
 
 ---

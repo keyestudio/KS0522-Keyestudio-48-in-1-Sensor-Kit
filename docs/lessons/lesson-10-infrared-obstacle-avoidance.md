@@ -1,61 +1,61 @@
-# Lezione 10: Evitamento ostacoli a infrarossi
+# Lesson 10: 赤外線障害物回避
 
-> **Kit:** Kit sensori Keyestudio 48-in-1  
-> **Scheda:** Keyestudio V4.0 / scheda ATmega328P compatibile con Arduino Uno
+> **キット：** Keyestudio 48-in-1 Sensor Kit  
+> **ボード：** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-![Illustrazione del progetto 10: Evitamento ostacoli a infrarossi](../media/54ab9db703340471fd9c3151934b85e7.png)
+![プロジェクト10：赤外線障害物回避のイラスト](../media/54ab9db703340471fd9c3151934b85e7.png)
 
-## Descrizione
+## 説明
 
-Il sensore rilevatore di ostacoli a infrarossi è dotato di funzione di regolazione della distanza ed è progettato appositamente per robot su ruote.
+赤外線障害物検出センサーは距離調整機能を備えており、特に車輪型ロボット向けに設計されています。
 
-Questo sensore ha una forte adattabilità alla luce ambientale ed è di alta precisione.
+このセンサーは周囲光への適応性が高く、精度に優れています。
 
-Dispone di una coppia di tubi trasmittente e ricevente a infrarossi. Quando il raggio infrarosso emesso dal tubo trasmittente incontra un ostacolo (il suo riflettore), il raggio verrà riflesso verso il tubo ricevente, così l'indicatore si illuminerà e l'interfaccia di uscita del segnale fornirà un segnale digitale.
+赤外線の送信管と受信管が一対あり、送信管から発せられた赤外線が障害物（その反射体）に当たると、赤外線が受信管に反射され、インジケータが点灯し、信号出力インターフェースがデジタル信号を出力します。
 
-Inoltre, è possibile ruotare la manopola del potenziometro per regolare la distanza di rilevamento (distanza effettiva: 2～40cm, tensione di lavoro: 3.3V-5V).
+また、可変抵抗のつまみを回すことで検出距離を調整できます（有効距離: 2～40cm、動作電圧: 3.3V-5V）。
 
-Grazie a un ampio intervallo di tensione, questo sensore può funzionare stabilmente anche con tensione di alimentazione variabile ed è adatto a vari microcontrollori, controller Arduino e controller BS2.
+広い電圧範囲により、電源電圧が変動しても安定して動作でき、さまざまなマイコン、Arduinoコントローラ、BS2コントローラに適しています。
 
-Un robot dotato di questo sensore può percepire gli ostacoli nell'ambiente.
+このセンサーを搭載したロボットは周囲の障害物を感知できます。
 
-## Specifiche
+## 仕様
 
-- Tensione di lavoro: DC 3.3V-5V
+- 動作電圧: DC 3.3V-5V
 
-- Corrente di lavoro: ≥20mA
+- 動作電流: ≥20mA
 
-- Temperatura di esercizio: －10℃ a＋50℃
+- 動作温度: －10℃～＋50℃
 
-- Distanza di rilevamento: 2-40cm
+- 検出距離: 2-40cm
 
-- Interfaccia IO: 4 fili (-/+/S/EN)
+- IOインターフェース: 4線インターフェース (-/+/S/EN)
 
-- Segnale in uscita: tensione TTL
+- 出力信号: TTL電圧
 
-- Modalità di alloggiamento: regolazione della resistenza multigiro
+- 収容方式: 多周抵抗調整
 
-- Angolo efficace: 35°
+- 有効角度: 35°
 
-## Schema di collegamento
+## 接続図
 
-Per prima cosa, prepara i seguenti componenti prima del collegamento:
+接続する前に、以下の部品を用意してください:
 
-- Scheda V4.0\*1
+- V4.0 ボード\*1
 
-- Modulo rilevatore ostacoli \*1
+- 障害物検出モジュール \*1
 
-- Cavo USB\*1
+- USBケーブル\*1
 
-- Cavi jumper\*3
+- ジャンパー線\*3
 
-Collega il pin Out del modulo a Digital 2 della scheda V4.0, collega il pin V+ alla porta 5V, il pin GND alla porta GND.
+モジュールの Out ピンを V4.0 ボードの Digital 2 に接続し、V+ ピンを 5V ポートに、GND ピンを GND ポートに接続します。
 
-![Illustrazione schema di collegamento](../media/48f60a482d777df19bc43a3203479b0c.jpeg)
+![接続図のイラスト](../media/48f60a482d777df19bc43a3203479b0c.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice sottostante nell'ambiente Arduino.
+以下のコードを Arduino ソフトウェアにコピー＆ペーストしてください。
 
 ```c
 const uint8_t sensorPin = 2;
@@ -72,14 +72,14 @@ void loop() {
 }
 ```
 
-## Risultato di esempio
+## 実行例
 
-Dopo aver caricato il codice sulla scheda, puoi vedere il LED sia sulla scheda V4.0 che sul sensore rilevatore di ostacoli acceso.
+コードをボードにアップロードすると、V4.0 ボードと障害物検出センサーの両方のLEDが点灯しているのが確認できます。
 
-![Illustrazione del risultato di esempio](../media/44d035dfe09b4c803becd84c95b05956.png)
+![実行例のイラスト](../media/44d035dfe09b4c803becd84c95b05956.png)
 
-Se posizioniamo un blocco di schiuma davanti al sensore, questa volta quando il sensore rileva l'ostacolo, il LED sul sensore si accenderà.
+センサーの前に発泡ブロックを置くと、障害物を検出したときにセンサーのLEDが点灯します。
 
-![Illustrazione del risultato di esempio](../media/da4468fead816d42b2ac43b29716b91f.png)
+![実行例のイラスト](../media/da4468fead816d42b2ac43b29716b91f.png)
 
 ---

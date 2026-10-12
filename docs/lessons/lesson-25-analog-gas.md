@@ -1,37 +1,38 @@
-# Lezione 25: Sensore gas analogico
+# レッスン 25：アナログガス
 
-> **Kit:** Keyestudio Kit sensori 48-in-1  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno (ATmega328P)
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 25: illustrazione sensore gas analogico](../media/36f00d2a934c497f390b49c4113c7c04.png)
+![プロジェクト25：アナログガスの図](../media/36f00d2a934c497f390b49c4113c7c04.png)
 
-## Descrizione
+## 説明
 
-Questo sensore di gas analogico MQ2 viene utilizzato negli apparecchi di rilevamento di perdite di gas sia nell'elettronica di consumo che nei mercati industriali. Questo sensore è adatto per rilevare GPL, isobutano, propano, metano, alcol, idrogeno e fumo.
+このアナログガスセンサー MQ2 は、民生用電子機器および産業用市場のガス漏れ検知装置で使用されます。  
+このセンサーは、LPG、イソブタン、プロパン、メタン、アルコール、水素、煙の検出に適しています。
 
-L'ambito di rilevamento di questo sensore è molto ampio, ha un'alta sensibilità e una risposta rapida.
+検出範囲が広く、高感度で応答が速い特性を持ちます。
 
-Inoltre, la sensibilità può essere regolata ruotando il potenziometro sul sensore.
+また、センサー上のポテンショメータを回すことで感度を調整できます。
 
-## Specifiche
+## 仕様
 
-- Alimentazione: 5V
+- 電源: 5V
 
-- Tipo di interfaccia: Analogico
+- インターフェースタイプ: アナログ
 
-- Circuito di pilotaggio semplice
+- シンプルな駆動回路
 
-- Stabile e lunga durata
+- 安定して長寿命
 
-## Schema di collegamento
+## 接続図
 
-Collega il pin A0 del modulo all'ingresso Analog A0 della scheda V4.0, collega il pin GND al connettore GND e il pin VCC al connettore 5V.
+モジュールの A0 ピンを V4.0 ボードの Analog A0 に接続し、GND ピンを GND に、VCC ピンを 5V に接続します。
 
-![Illustrazione schema di collegamento](../media/7b2cdff9418f79b2e9e566ce61a7966a.jpeg)
+![接続図の説明図](../media/7b2cdff9418f79b2e9e566ce61a7966a.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice seguente nell'IDE Arduino.
+以下のコードを Arduino ソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -51,12 +52,12 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 実例の結果
 
-![Illustrazione risultato di esempio](../media/d440553d52e043d7a91928882d877dd1.png)
+![実例の結果の図](../media/d440553d52e043d7a91928882d877dd1.png)
 
-Dopo aver completato il cablaggio e alimentato, carica correttamente il codice, quindi apri il monitor seriale e imposta il baud rate a 9600; vedrai il valore analogico. Quando viene rilevato gas, il valore varierà.
+配線と電源が完了し、コードを正しくアップロードしたら、シリアルモニタを開き、ボーレートを 9600 に設定してください。アナログ値が表示されます。ガスを検出すると、その値が変化します。
 
-![Illustrazione risultato di esempio](../media/cbf777feb6231d76347bc632f87d0e8e.jpeg)
+![実例の結果の図](../media/cbf777feb6231d76347bc632f87d0e8e.jpeg)
 
 ---

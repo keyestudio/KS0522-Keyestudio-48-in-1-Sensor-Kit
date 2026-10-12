@@ -1,69 +1,69 @@
-# Lezione 44: Rilevamento di accelerazione digitale triaxiale
+# レッスン44: 三軸デジタル加速度検出
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Scheda:** Keyestudio V4.0 / scheda ATmega328P compatibile con Arduino Uno
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 44: Illustrazione del rilevamento di accelerazione digitale triaxiale](../media/2a26949601eb888348b798711fe1151e.jpeg)
+![プロジェクト44：三軸デジタル加速度検出の図](../media/2a26949601eb888348b798711fe1151e.jpeg)
 
-## Introduzione
+## はじめに
 
-MMA8452Q è un sensore di accelerazione intelligente a bassa potenza, a tre assi, a micromacchina capacitiva, con risoluzione a 12 bit.
+MMA8452Qはスマートで低消費電力の三軸静電容量マイクロマシン加速度センサーで、12ビットの分解能を持ちます。
 
-Questo sensore di accelerazione integra funzionalità ricche, con opzioni programmabili dall'utente flessibili e la configurazione di due pin di interruzione.
+この加速度センサーは豊富な内蔵機能を備えており、柔軟なユーザープログラム可能なオプションと2つの割り込みピン構成を特徴としています。
 
-La funzione di interruzione integrata può ridurre il consumo energetico complessivo e togliere l'onere dal processore principale di dover interrogare continuamente i dati.
+内蔵の割り込み機能により、全体の消費電力を削減でき、メインプロセッサでデータを常時ポーリングする負担を軽減します。
 
-Inoltre, MMA8452Q offre una gamma selezionabile di ±2g / ±4g / ±8g, e può fornire in tempo reale dati filtrati con filtro passa-alto e dati non filtrati.
+さらに、MMA8452Qはユーザーが選択可能な±2g / ±4g / ±8gのレンジを持ち、ハイパスフィルタ処理されたデータと非フィルタデータをリアルタイムで出力できます。
 
-Questo dispositivo può configurare una funzione integrata per generare un segnale di interruzione di risveglio inerziale, che permette a MMA8452Q di mantenere una modalità a bassa potenza nello stato statico mentre monitora l'evento.
+本デバイスは慣性によるウェイクアップ割り込み信号を生成する内蔵機能を設定でき、静止状態でイベントを監視しながら低消費電力モードを維持できます。
 
-## Parametri di prestazione
+## 性能パラメータ
 
-- Tensione di alimentazione：1.95 V a 3.6 V
+- 電源電圧：1.95 V ～ 3.6 V
 
-- Tensione di interfaccia：1.6 V a 3.6 V
+- インターフェース電圧：1.6 V ～ 3.6 V
 
-- Intervallo dinamico opzionale ±2g/±4g/±8g
+- ±2g/±4g/±8g 選択可能な動作レンジ
 
-- Intervallo della frequenza di uscita dati (ODR): 1.56Hz a 800Hz
+- 出力データレート（ODR）範囲：1.56Hz ～ 800Hz
 
-- Rumore：99μg/√Hz
+- ノイズ：99μg/√Hz
 
-- Uscite digitali a 12 bit e 8 bit;
+- 12ビットおよび8ビットのデジタル出力
 
-- Interfaccia di uscita digitale I2C (fino a 2.25MHz quando la resistenza pull-up è 4.7kΩ);
+- I2Cデジタル出力インターフェース（プルアップ抵抗が4.7kΩのとき最大2.25MHz）
 
-- Due pin di interruzione programmabili applicabili a sei sorgenti di interruzione;
+- 6つの割り込みソースに適用できる2つのプログラム可能な割り込みピン
 
-- Tre canali integrati di rilevamento del movimento: rilevamento di caduta libera, rilevamento a impulso, rilevamento scuotimento;
+- 3つの組み込みモーション検出チャンネル：フリーフォール検出、パルス検出、シェイク検出
 
-- Rilevamento della direzione (trasversale/longitudinale) con compensazione di ritardo configurabile;
+- 遅延補償設定付きの方向（横/縦）検出
 
-- L'ODR in modalità risveglio e in modalità dormiente può essere modificato automaticamente;
+- 自動ウェイクおよび自動スリープ時のODRを自動的に切替可能
 
-- I dati filtrati con filtro passa-alto possono essere esportati in tempo reale;
+- ハイパスフィルタ処理されたデータをリアルタイムで出力可能
 
-- Consumo energetico: 6μA – 165μA
+- 消費電流：6μA ～ 165μA
 
-## Schema di collegamento
+## 接続図
 
-Per prima cosa prepara i seguenti componenti:
+まず以下のパーツを用意してください:
 
-- Scheda V4.0*1
+- V4.0 ボード*1
 
-- Sensore MMA8452Q*1
+- MMA8452Q センサー*1
 
-- Cavo USB*1
+- USBケーブル*1
 
-- Cavi jumper*4
+- ジャンパーワイヤ*4
 
-Collega il pin SCL alla porta Analog A5, il pin SDA alla porta Analog A4; collega il pin positivo alla porta 3V3, il pin negativo alla porta GND.
+SCLピンをAnalog A5ポートに、SDAピンをAnalog A4ポートに接続します; 正極ピンを3V3ポートに、負極ピンをGNDポートに接続します。
 
-![Illustrazione dello schema di collegamento](../media/fdd68f7da45d46e65f42918eac68a2f3.jpeg)
+![接続図のイラスト](../media/fdd68f7da45d46e65f42918eac68a2f3.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice qui sotto nell'IDE Arduino.
+以下のコードをArduinoソフトにコピー＆ペーストしてください。
 
 ```c
 #include <Wire.h> // Must include Wire library for I2C
@@ -188,14 +188,14 @@ void printOrientation()
 }
 ```
 
-Nota: prima di compilare il codice, ricordati di posizionare la libreria nella cartella libraries dell'IDE Arduino. Altrimenti la compilazione fallirà.
+注: コードをコンパイルする前に、ライブラリをArduino IDEのlibrariesディレクトリに配置してください。さもなければ、コンパイルは失敗します。
 
-## Risultato di esempio
+## 実行結果
 
-![Illustrazione del risultato di esempio](../media/9f81d233c0387bc32d25951abd3a407c.png)
+![実行例の画像](../media/9f81d233c0387bc32d25951abd3a407c.png)
 
-Dopo aver caricato il codice e aperto il monitor seriale, verranno visualizzati l'accelerazione triaxiale del sensore e il relativo stato come mostrato di seguito.
+コードのアップロードが完了してシリアルモニタを開くと、センサーの三軸加速度とその状態が以下のように表示されます。
 
-![Illustrazione del risultato di esempio](../media/03421d279e2e961d7b40f645b7576d73.jpeg)
+![実行例の画像](../media/03421d279e2e961d7b40f645b7576d73.jpeg)
 
 ---

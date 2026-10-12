@@ -1,47 +1,47 @@
-# Lezione 01: LED bianco
+# レッスン01：白色LED
 
-> **Kit:** Kit sensori Keyestudio 48-in-1  
-> **Board:** scheda Keyestudio V4.0 / compatibile Arduino Uno con ATmega328P
+> **キット:** Keyestudio 48-in-1 Sensor Kit  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換のATmega328Pボード
 
-![Illustrazione Progetto 1: LED bianco](../media/6819f1c2047a7bb2b58e9cf0d7d3a617.jpeg)
+![プロジェクト1：白色LEDのイラスト](../media/6819f1c2047a7bb2b58e9cf0d7d3a617.jpeg)
 
-## Descrizione
+## 説明
 
-Questo modulo LED bianco è ideale per chi inizia con Arduino. Può essere facilmente collegato allo shield IO/Sensor. Permette l'interazione con progetti legati alla luce.
+この白色LEDモジュールはArduinoの入門者に最適です。IO/Sensorシールドに簡単に接続でき、光に関連するさまざまな動作と連動できます。
 
-Nota: Puoi scegliere altri moduli LED per emettere colori diversi come giallo, rosso, verde e blu.
+注意：黄色、赤、緑、青など、異なる色を発光する他のLEDモジュールを選ぶこともできます。
 
-## Specifiche
+## 仕様
 
-- Modulo LED bianco
+- 白色LEDモジュール
 
-- Tipo: Digitale
+- タイプ: デジタル
 
-- Presa PH2.54
+- PH2.54ソケット
 
-- Dimensioni: 30\*20mm
+- サイズ: 30\*20mm
 
-- Peso: 3g
+- 重量: 3g
 
-## Schema di collegamento
+## 接続図
 
-Per prima cosa, prepara i seguenti componenti prima del collegamento:
+まず、接続する前に次の部品を用意してください：
 
-- scheda V4.0\*1
+- V4.0ボード\*1
 
-- Modulo LED bianco \*1
+- 白色LEDモジュール \*1
 
-- Cavo USB\*1
+- USBケーブル\*1
 
-- Cavi jumper\*3
+- ジャンパー線\*3
 
-Collega il pin S del modulo a Digital 3 della scheda V4.0; collega il pin negativo al connettore GND e il pin positivo al connettore 5V.
+モジュールのSピンをV4.0ボードのDigital 3に接続し、負極ピンをGNDポートに、正極ピンを5Vポートに接続します。
 
-![Illustrazione schema di collegamento](../media/cb67155c3b3cf25025edea5ae31d6c5f.jpeg)
+![接続図のイラスト](../media/cb67155c3b3cf25025edea5ae31d6c5f.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice seguente nell'ambiente di sviluppo Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 const uint8_t ledPin = 3;
@@ -58,10 +58,10 @@ void loop() {
 }
 ```
 
-## Risultato di esempio
+## 実行結果の例
 
-Dopo aver collegato i cavi, alimentato la scheda e caricato correttamente il codice, vedrai il modulo LED emettere luce bianca.
+配線と電源を接続してコードをアップロードすると、LEDモジュールが白色の光を点灯します。
 
-![Illustrazione risultato di esempio](../media/40448f38601a6312bfb1e3764be22158.png)
+![実行結果のイラスト](../media/40448f38601a6312bfb1e3764be22158.png)
 
 ---

@@ -1,49 +1,49 @@
-# Lezione 33: Ricevitore IR digitale
+# レッスン33: デジタルIR受信機
 
-> **Kit:** Kit sensori Keyestudio 48-in-1  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 33: illustrazione Ricevitore IR digitale](../media/f64f21b6ca681f928c3318bd2d33a017.png)
+![プロジェクト33: デジタルIR受信機のイラスト](../media/f64f21b6ca681f928c3318bd2d33a017.png)
 
-## Descrizione
+## 説明
 
-L'IR è ampiamente utilizzato nei telecomandi. Con questo ricevitore IR, un progetto Arduino è in grado di ricevere comandi da qualsiasi telecomando IR se si dispone del decodificatore corretto. Inoltre, sarà facile realizzare il proprio controller IR usando un trasmettitore IR.
+IR（赤外線）はリモコンで広く使われています。このIR受信機を使えば、正しいデコーダがあればArduinoプロジェクトで任意の赤外線リモコンからのコマンドを受信できます。もちろん、IR送信機を使って独自のIRコントローラを作るのも簡単です。
 
-## Specifiche
+## 仕様
 
-- Alimentazione: 5V
+- 電源: 5V
 
-- Interfaccia: Digitale
+- インターフェース: デジタル
 
-- Frequenza di modulazione: 38Khz
+- 変調周波数: 38Khz
 
-- Connettore modulo: JST PH2.0
+- モジュールインターフェースソケット: JST PH2.0
 
-- Dimensioni: 30*20mm
+- サイズ: 30*20mm
 
-- Peso: 4g
+- 重量: 4g
 
-## Schema di collegamento
+## 接続図
 
-Prima di tutto devi preparare le seguenti parti prima del collegamento.
+まず接続する前に以下の部品を準備してください。
 
-- Scheda V4.0\*1
+- V4.0 ボード\*1
 
-- Modulo ricevitore IR\*1
+- IR レシーバーモジュール\*1
 
-- Cavo USB\*1
+- USB ケーブル\*1
 
-- Cavi jumper\*3
+- ジャンパー線\*3
 
-Collega il pin S del modulo a Digital 11 della scheda V4.0, collega il pin negativo al connettore GND, il pin positivo al connettore 5V.
+モジュールのSピンをV4.0ボードのデジタルピン11に接続し、負極ピンをGND、正極ピンを5Vに接続します。
 
-![Illustrazione schema di collegamento](../media/687d429fe6360707f95fb6c5ddfa2ca7.jpeg)
+![接続図](../media/687d429fe6360707f95fb6c5ddfa2ca7.jpeg)
 
-Nel codice di esempio qui sotto è utilizzato il pin Digital 11; puoi modificare il cablaggio o il codice di esempio per farli corrispondere.
+下のサンプルコードではデジタルピン11が使用されています。配線を変更するか、サンプルコードを変更して一致させてください。
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice qui sotto nel software Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -66,18 +66,18 @@ Copia e incolla il codice qui sotto nel software Arduino.
 ///////////////////////////////////////////////////////////////
 ```
 
-**Nota:** prima di compilare il codice, ricordati di inserire la libreria nella directory libraries dell'IDE Arduino. Altrimenti la compilazione fallirà.
+**注意:** コードをコンパイルする前に、ライブラリをArduino IDEのlibrariesディレクトリに配置するのを忘れないでください。そうしないとコンパイルは失敗します。
 
-La libreria IR Remote include alcuni esempi per l'invio e la ricezione.
+IR Remote Libraryには送信と受信のサンプルコードが含まれています。
 
 <https://github.com/shirriff/Arduino-IRremote>
 
-## Risultato di esempio
+## 実行結果の例
 
-![Illustrazione risultato di esempio](../media/2692333113be48ffa11c27649d18dcb8.png)
+![実行結果の例](../media/2692333113be48ffa11c27649d18dcb8.png)
 
-Una volta completato il cablaggio e caricato il codice, controlla il modulo ricevitore IR con un telecomando a infrarossi; il LED D1 lampeggerà.
+配線とコードのアップロードが完了したら、赤外線リモコンでIR受信モジュールを操作するとD1のLEDが点滅します。
 
-![Illustrazione risultato di esempio](../media/4bb52e2957e3aaeace252021e7084c95.png)
+![実行結果の例](../media/4bb52e2957e3aaeace252021e7084c95.png)
 
 ---

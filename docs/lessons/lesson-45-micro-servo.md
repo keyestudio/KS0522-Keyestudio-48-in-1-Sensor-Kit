@@ -1,55 +1,55 @@
-# Lezione 45: Micro Servo
+# レッスン45: マイクロサーボ
 
-> **Kit:** Keyestudio Kit sensori 48-in-1  
-> **Scheda:** Keyestudio V4.0 / Scheda compatibile Arduino Uno ATmega328P
+> **キット:** Keyestudio 48-in-1 センサーキット  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Illustrazione Progetto 45: Micro Servo](../media/12c59bd3ab0733beb6ff7802305d4384.jpeg)
+![プロジェクト45: マイクロサーボのイラスト](../media/12c59bd3ab0733beb6ff7802305d4384.jpeg)
 
-## Introduzione
+## はじめに
 
-Il servomotore è un attuatore rotante per il controllo della posizione. È composto principalmente da involucro, circuito, motore coreless, ingranaggi e sensore di posizione.
+サーボモーターは位置制御用の回転アクチュエータです。主にハウジング、回路基板、コアレスモーター、ギア、および位置センサーで構成されます。
 
-In dotazione con il tuo servomotore troverai una varietà di supporti bianchi per motore che si collegano all'albero del servo. Puoi scegliere di fissare qualsiasi supporto desideri per il circuito. Servirà come ausilio visivo, rendendo più facile vedere il movimento del servo.
+サーボモーターには、シャフトに接続するさまざまな白いモーターマウントが付属しています。回路に合わせて任意のマウントを取り付けて構いません。視覚的な補助になり、サーボの回転が見やすくなります。
 
-Il servo ha tre interfacce, distinte da linee marrone, rossa e arancione (alcuni marchi possono avere colori diversi). La linea marrone è per GND, quella rossa per l'alimentazione 5V, quella arancione per il terminale del segnale (segnale PWM).
+サーボには茶色、赤、オレンジの線で区別される3つのインターフェースがあります（ブランドにより色が異なる場合があります）。茶色の線がGND、赤が電源5V、オレンジが信号端子（PWM信号）です。
 
-![Illustrazione introduzione](../media/e7eb9914318b92eff98a4a84a8d1a557.png)
+![導入のイラスト](../media/e7eb9914318b92eff98a4a84a8d1a557.png)
 
-L'angolo di rotazione del servo è controllato regolando il duty cycle del segnale PWM (modulazione di larghezza di impulso). Il periodo standard del segnale PWM è fissato a 20ms (50 Hz), e la larghezza dell'impulso è compresa tra 1ms e 2ms. La larghezza dell'impulso corrisponde all'angolo di rotazione ( 0°～90°) del servo.
+サーボの回転角はPWM（パルス幅変調）信号のデューティ比を調整して制御されます。PWM信号の標準周期は20ms（50 Hz）に固定されており、パルス幅は1ms〜2msの間で変化します。パルス幅はサーボの回転角（0°～90°）に対応します。
 
-![Illustrazione introduzione](../media/723671941df8a57cf9246c9916e7b279.png)
+![導入のイラスト](../media/723671941df8a57cf9246c9916e7b279.png)
 
-Ora impariamo come controllare un servomotore.
+次に、サーボモーターの制御方法を学びましょう。
 
-In questo esperimento ti servono solo un servomotore e alcuni cavi jumper.
+この実験では、サーボモーターといくつかのジャンパー線だけが必要です。
 
-## Diagramma di collegamento
+## 接続図
 
-Collegamento per V4.0 :
+V4.0 用接続 :
 
-![Illustrazione diagramma di connessione](../media/da1e3590f86a5a8ed27b333742ae49c9.jpeg)
+![接続図のイラスト](../media/da1e3590f86a5a8ed27b333742ae49c9.jpeg)
 
-Collegamento per 2560 R3:
+2560 R3 用接続:
 
-![Illustrazione diagramma di connessione](../media/1c8bd09408be60254883b910ef4fc9bf.png)
+![接続図のイラスト](../media/1c8bd09408be60254883b910ef4fc9bf.png)
 
-Collega il motore al pin digitale 9.
+モーターをデジタルピン9に接続してください。
 
-Compila un programma per controllare la rotazione del motore all'angolo richiesto e visualizzare l'angolo sullo schermo.
+モーターが指定した角度に回転するようプログラムをコンパイルし、その角度を画面に表示します。
 
-## Programma di esempio
+## サンプルプログラム
 
-Ci sono due modi per controllare un servomotore con Arduino.
+Arduinoでサーボモーターを制御する方法は2通りあります。
 
-Uno è usare una comune porta digitale per sensori di Arduino per generare un'onda quadra con diverso duty cycle per simulare un segnale PWM e usare quel segnale per controllare il posizionamento del motore.
+1つは、Arduinoの一般的なデジタルセンサーポートを使ってデューティ比の異なる方形波を発生させ、PWM信号をシミュレートしてモーターの位置決めを制御する方法です。
 
-Un altro modo è usare direttamente la funzione Servo di Arduino per controllare il motore.
+もう1つは、ArduinoのServo機能を直接使用してモーターを制御する方法です。
 
-In questo modo il programma sarà più semplice ma può controllare solo motori a due contatti tramite la funzione servo; possono essere usati solo i pin digitali 9 e 10. La capacità di pilotaggio di Arduino è limitata. Quindi se hai bisogno di controllare più di un motore, avrai bisogno di alimentazione esterna.
+この方法ではプログラムは簡単になりますが、サーボ機能は二接点モーターのみ制御でき、使用できるのはデジタルピン9と10だけです。Arduinoの駆動能力には限界があります。したがって複数のモーターを制御する場合は外部電源が必要です。
 
-## Metodo 1
+## 方法1
 
-## Programma di esempio A
+## サンプルプログラムA
 
 ```c
 //////////////////////////////////////////////////////////
@@ -90,25 +90,25 @@ servopulse(servopin,val);// use the pulse function
 //////////////////////////////////////////////////////////
 ```
 
-## Metodo 2
+## 方法2
 
-Diamo prima un'occhiata alla funzione Servo incorporata di Arduino e ad alcune istruzioni comuni.
+まず Arduino の組み込みサーボ機能といくつかの一般的な文を見てみましょう。
 
-1\. **attach（interface）**——seleziona il pin per il servo, può usare solo il pin 9 o 10.
+1\. **attach(interface)**——サーボ用のピンを選択します。使用できるのはピン9または10のみです。
 
-2\. **write（angle）**——usata per controllare l'angolo di rotazione del servo, può impostare l'angolo tra 0 e 180 gradi.
+2\. **write(angle)**——サーボの回転角を制御するために使用します。角度は0度から180度の範囲で設定できます。
 
-3\. **read（）**——usata per leggere l'angolo del servo; considerala una funzione per leggere il valore impostato con write().
+3\. **read()**——サーボの角度を読み取るために使用します。write() 関数で設定した値を読み取るための関数と考えてください。
 
-4\. **attached（）**——determina se il parametro del servo è assegnato al pin del servo.
+4\. **attached()**——サーボのパラメータがサーボピンに送られているかどうかを判定します。
 
-5\. **detach（）**——scollega il servo dal pin, e il pin (pin digitale 9 o 10) può essere usato come porta PWM.
+5\. **detach()**——サーボとピンの接続を切断します。ピン（デジタルピン9または10）はPWMポートとして使用できるようになります。
 
-**Nota:** la forma scritta delle istruzioni sopra è "nomeVariabileServo.nomeFunzione()", ad es. myservo.attach(9).
+注意：上記の文の書き方は「サーボ変数名. 特定の文()」です。例: myservo. Attach (9).
 
-Collega comunque il servo al pin 9.
+ここでもサーボをピン9に接続してください。
 
-## Programma di esempio B
+## サンプルプログラムB
 
 ```c
 #include <Servo.h>// define a header file. Special attention here, you can call the servo function directly from Arduino's software menu
@@ -124,14 +124,14 @@ myservo.write(90);// set rotating angle of the motor
 }
 ```
 
-## Risultato di esempio
+## 実行結果
 
-![Illustrazione risultato di esempio](../media/f02556e0631fb206c114ced29e643016.png)
+![実行結果のイラスト](../media/f02556e0631fb206c114ced29e643016.png)
 
-Collega tutto correttamente, carica il Programma A sulla scheda, poi apri il monitor seriale del software Arduino, imposta il baud rate a 9600, e nella barra superiore inserisci un numero e clicca “Invia”; vedrai il servo ruotare all'angolo corrispondente e l'angolo in movimento verrà visualizzato sul monitor, come mostrato sotto.
+配線を正しく行い、プログラムA をボードにアップロードしたら、Arduinoソフトのシリアルモニタを開き、ボーレートを9600に設定します。上部の入力欄に数値を入力して「送信」をクリックすると、サーボが対応する角度に回転し、移動角がモニタに表示されます。以下に示します。
 
-Una volta alimentata, e caricato correttamente il Programma B sulla scheda, il servo si posizionerà inizialmente a 90 gradi.
+電源を入れ、プログラムB をボードに正常にアップロードすると、サーボはまず90度の位置に移動します。
 
-![Illustrazione risultato di esempio](../media/de50d502cb8ed1feb5935d16584cfd63.png)
+![実行結果のイラスト](../media/de50d502cb8ed1feb5935d16584cfd63.png)
 
 ---

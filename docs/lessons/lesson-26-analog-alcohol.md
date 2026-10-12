@@ -1,39 +1,39 @@
-# Lezione 26: Sensore alcolico analogico
+# レッスン26：アナログアルコール
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
+> **キット：** Keyestudio 48-in-1 センサーキット  
+> **ボード：** Keyestudio V4.0 / Arduino Uno互換のATmega328Pボード
 
-![Progetto 26: Sensore alcolico analogico (illustrazione)](../media/288162cf02f2968eda57b437292a42dd.png)
+![プロジェクト26：アナログアルコールの図](../media/288162cf02f2968eda57b437292a42dd.png)
 
-## Descrizione
+## 説明
 
-Questo sensore MQ-3 analogico è adatto per rilevare l'alcol. Può essere utilizzato in un progetto di etilometro.
+このアナログMQ-3センサーはアルコールの検出に適しています。呼気検査（ブレスアナライザー）プロジェクトに使用できます。
 
-Ha buona selettività perché è più sensibile all'alcol e meno sensibile alla benzina.
+アルコールに対する感度が高く、ベンジンに対する感度が低いため、選択性が良好です。
 
-La sensibilità può essere regolata ruotando il potenziometro sul sensore.
+センサー上の可変抵抗（ポテンショメータ）を回すことで感度を調整できます。
 
-## Specifiche
+## 仕様
 
-- Alimentazione: 5V
+- 電源: 5V
 
-- Tipo di interfaccia: Analogico
+- インターフェース: アナログ
 
-- Circuito di pilotaggio semplice
+- 駆動回路が簡単
 
-- Stabile e lunga durata
+- 安定しており長寿命
 
-- Risposta rapida e alta sensibilità
+- 応答が速く高感度
 
-## Schema di collegamento
+## 接続図
 
-Collega il pin A0 del modulo all'ingresso analogico A0 della scheda V4.0, collega il pin GND al terminale GND, il pin VCC al terminale 5V.
+モジュールのA0ピンをV4.0ボードのAnalog A0に接続し、GNDピンをGND、VCCピンを5Vに接続します。
 
-![Schema di collegamento (illustrazione)](../media/61632f44731176aaf95d313f2843c9de.jpeg)
+![接続図](../media/61632f44731176aaf95d313f2843c9de.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice sottostante nel software Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -52,12 +52,12 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 実行例
 
-![Risultato di esempio (illustrazione)](../media/a21d5b8c686e46a59128ab48b96d177c.png)
+![実行例の図](../media/a21d5b8c686e46a59128ab48b96d177c.png)
 
-Dopo aver collegato i cavi e alimentato il circuito, carica correttamente il codice, poi apri il monitor seriale e imposta il baud rate a 9600; vedrai il valore analogico. Quando rileverà vapori di alcol, il valore varierà.
+配線が完了し電源を入れ、コードを正常にアップロードしたら、シリアルモニタを開きボーレートを9600に設定してください。アナログ値が表示されます。アルコールガスを検出すると、その値が変化します。
 
-![Risultato di esempio (illustrazione)](../media/97565d8ba7691b30a7aa96efc6c7728b.jpeg)
+![実行例の図](../media/97565d8ba7691b30a7aa96efc6c7728b.jpeg)
 
 ---

@@ -1,53 +1,53 @@
-# Lezione 32: Luce ultravioletta
+# レッスン 32: 紫外線
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Scheda:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **キット:** Keyestudio 48-in-1 Sensor Kit  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Illustrazione del Progetto 32: Luce ultravioletta](../media/15613ff0e8f059a9034e923ab5c2be24.jpeg)
+![プロジェクト32：紫外線のイラスト](../media/15613ff0e8f059a9034e923ab5c2be24.jpeg)
 
-## Descrizione
+## 説明
 
-Il sensore ultravioletto Keyestudio GUVA-S12SD viene utilizzato per rilevare la luce ultravioletta. È adatto per misurare l'indice UV in dispositivi indossabili intelligenti, come orologi, smartphone e dispositivi esterni con rilevamento dell'indice UV.
+Keyestudio GUVA-S12SD 紫外線センサーは紫外線を検出するために使用されます。GUVA-S12SD は時計、スマートフォンや紫外線インデックス検出機能を持つ屋外機器などのウェアラブルデバイスの紫外線インデックスを測定する用途に適しています。
 
-Può anche essere usato per monitorare l'intensità della luce ultravioletta o come rivelatore di fiamma UV durante la disinfezione con luce ultravioletta.
+また、紫外線の強度を監視したり、紫外線で消毒する際の UV 光検出器としても使用できます。
 
-## Parametri
+## 仕様
 
-- Dimensioni: 15mm×30mm×0.7mm
+- サイズ: 15mm×30mm×0.7mm
 
-- Tensione di alimentazione: 2.5V～5V
+- 供給電圧: 2.5V～5V
 
-- Segnale di uscita: Segnale analogico
+- 出力信号: アナログ信号
 
-- Gamma di rilevamento dello spettro: 240-370nm
+- 検出スペクトル範囲: 240-370nm
 
-- Area attiva: 0.076mm2
+- 有効領域: 0.076mm2
 
-- Responsività: 0.14A/W
+- 感度: 0.14A/W
 
-- Corrente a buio: 1nA
+- 暗電流: 1nA
 
-- Corrente alla luce: 101\~125nA luce UVA, 1mW/cm2
+- 光電流: 101\~125nA（UVA 光、1mW/cm2）
 
-## Schema di collegamento
+## 接続図
 
-Prima di effettuare i collegamenti, prepara i seguenti componenti.
+まず接続する前に次の部品を用意してください。
 
-- Scheda V4.0\*1
+- V4.0 ボード\*1
 
-- GUVA-S12SD 3528 Sensore ultravioletto \*1
+- GUVA-S12SD 3528 紫外線センサー \*1
 
-- Cavo USB\*1
+- USB ケーブル\*1
 
-- Cavi jumper\*3
+- ジャンパーワイヤー\*3
 
-Collega il pin S del modulo all'Analog A0 della scheda V4.0, collega il pin negativo alla porta GND e il pin positivo alla porta 3V3.
+モジュールの S ピンを V4.0 ボードのアナログ A0 に接続し、負極ピンを GND ポート、正極ピンを 3V3 ポートに接続します。
 
-![Illustrazione schema di collegamento](../media/092ebb11142cfe83507989a5b2de0526.jpeg)
+![接続図のイラスト](../media/092ebb11142cfe83507989a5b2de0526.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice qui sotto nell'IDE Arduino.
+以下のコードを Arduino ソフトウェアにコピーして貼り付けてください。
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -76,16 +76,16 @@ void loop() {
 ///////////////////////////////////////////////////////////////
 ```
 
-## Risultato di esempio
+## 実行例
 
-![Illustrazione risultato di esempio](../media/e81338e1f55ff6b55fbfe369f92b54da.png)
+![実行例のイラスト](../media/e81338e1f55ff6b55fbfe369f92b54da.png)
 
-Collega tutto correttamente e carica il codice sul dispositivo, poi apri il Monitor seriale: verranno visualizzati i dati.
+配線を正しく行い、プログラムを書き込んだらシリアルモニタを開くとデータが表示されます。
 
-Se esponi il sensore a luce UV, i valori sul Monitor seriale varieranno come mostrato nelle immagini seguenti.
+センサーに紫外線を照射すると、シリアルモニタ上のデータが次の画像のように変化します。
 
-![Illustrazione risultato di esempio](../media/3a7f2a608faa9c72aee76d2820f78845.png)
+![実行例のイラスト](../media/3a7f2a608faa9c72aee76d2820f78845.png)
 
-![Illustrazione risultato di esempio](../media/610d2325395cd3b44ce3c18e05595518.jpeg)
+![実行例のイラスト](../media/610d2325395cd3b44ce3c18e05595518.jpeg)
 
 ---

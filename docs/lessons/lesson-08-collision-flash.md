@@ -1,55 +1,55 @@
-# Lezione 08: Lampeggio da collisione
+# レッスン 08: 衝突フラッシュ
 
-> **Kit:** Keyestudio 48-in-1 Kit sensori  
-> **Scheda:** Keyestudio V4.0 / Scheda ATmega328P compatibile con Arduino Uno
+> **キット：** Keyestudio 48-in-1 センサーキット  
+> **ボード：** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Illustrazione del Progetto 8: Lampeggio da collisione](../media/29c4641406064a4f1df5d59aefbca480.png)
+![プロジェクト8：衝突フラッシュのイラスト](../media/29c4641406064a4f1df5d59aefbca480.png)
 
-## Descrizione
+## 説明
 
-Il sensore d'urto, noto anche come interruttore elettronico, è un modulo di ingresso digitale on-off necessario per l'apprendimento elementare dell'elettronica.
+衝突センサー（電子スイッチとも呼ばれる）は、初歩的な電子学習に必要なデジタルのオン・オフ入力モジュールです。
 
-Attraverso la programmazione può controllare luci, dispositivi sonori, funzioni di selezione tasti di un display LCD, ecc.
+プログラミングにより、ライトや音響デバイス、LCD表示のキー選択機能などを制御できます。
 
-Utilizzando un cavo sensore 3P per collegarlo allo shield sensori, può essere installato sulla piattaforma robot mobile 4WD in lega AL per realizzare la funzione di rilevamento delle collisioni. È sia comodo che efficiente.
+3Pセンサーケーブルでセンサーシールドに接続すれば、4WDのアルミ合金モバイルロボットプラットフォームに取り付けて衝突検知機能を実現できます。便利かつ効率的です。
 
-Puoi realizzare un lampeggiatore di collisione utilizzando il modulo di collisione e il LED integrato sull'interfaccia 13. Collega il sensore di collisione al pin 3. Quando il sensore di collisione rileva un segnale di collisione, i LED sia sulla scheda principale sia sul modulo si accendono contemporaneamente.
+衝突（クラッシュ）モジュールとインターフェース13の内蔵LEDを使って衝突フラッシャーを作成できます。衝突センサーをピン 3 に接続します。センサーが衝突信号を検出すると、メインボードとモジュール両方のLEDが同時に点灯します。
 
-## Parametri
+## パラメータ
 
-1. Se avviene una collisione nella parte anteriore dove è installato il modulo di collisione, il modulo emette un segnale a livello basso; in assenza di collisione, emette un segnale a livello alto.
+1. 衝突モジュールが取り付けられている前方で衝突が発生すると、モジュールはロー（低）レベル信号を出力します。衝突がない場合はハイ（高）レベル信号を出力します。
 
-2. Il modulo prevede un foro di montaggio M3, comodo per il fissaggio su un veicolo.
+2. モジュールにはM3取り付け穴があり、車体への固定に便利です。
 
-3. Con spia dell'interruttore: in caso di collisione la spia è accesa; in assenza di collisione la spia è spenta.
+3. スイッチに表示用LEDがあり、衝突があると点灯し、衝突がないと消灯します。
 
-## Definizione dei pin
+## ピン定義
 
-1. Pin positivo (+): collegare all'alimentazione 3v-12v
+1. 正電源ピン（+）：3V〜12Vの電源に接続
 
-2. Pin negativo (-): collegare a GND
+2. 負電源ピン（-）：GNDに接続
 
-3. Pin segnale (S): collegare all'uscita di livello alto/basso
+3. 信号ピン（S）：ハイ・ロー（高低）レベル出力
 
-## Schema di collegamento
+## 接続図
 
-Prima di collegare, è necessario preparare i seguenti componenti:
+まず、接続前に以下の部品を準備してください：
 
-- Scheda V4.0\*1
+- V4.0 ボード\*1
 
-- Modulo d'urto \*1
+- 衝突（クラッシュ）モジュール \*1
 
-- Cavo USB\*1
+- USB ケーブル\*1
 
-- Cavo jumper\*3
+- ジャンパーワイヤー\*3
 
-Collega il pin S del modulo a Digital 3 della scheda V4.0, collega il pin negativo alla porta GND, il pin positivo alla porta 5V.
+モジュールのSピンをV4.0ボードのDigital 3に接続し、負電源ピンをGNDポートに、正電源ピンを5Vポートに接続します。
 
-![Illustrazione dello schema di collegamento](../media/a4ec0b7f8fd95fb2d6bb5c06ca0776f0.jpeg)
+![接続図のイラスト](../media/a4ec0b7f8fd95fb2d6bb5c06ca0776f0.jpeg)
 
-## Codice di esempio
+## サンプルコード
 
-Copia e incolla il codice qui sotto nell'IDE di Arduino.
+以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
 
 ```c
 const uint8_t ledPin = 13;
@@ -66,8 +66,10 @@ void loop() {
 }
 ```
 
-## Risultato d'esempio
+## 動作例
 
-Collega tutto correttamente e poi carica il codice sulla scheda.
+配線を正しく行い、コードをボードにアップロードします。
 
-Quando un oggetto urta l'interruttore del sensore, sia il LED sul sensore che il LED 13 sulla scheda si accendono.
+物体がセンサーのスイッチに衝突すると、センサー上のLEDとボードのLED 13の両方が点灯します。
+
+---

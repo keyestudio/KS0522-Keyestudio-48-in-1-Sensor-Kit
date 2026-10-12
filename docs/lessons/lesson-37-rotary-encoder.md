@@ -1,35 +1,35 @@
-# Lezione 37: Encoder rotativo
+# レッスン37: ロータリーエンコーダ
 
-> **Kit:** Keyestudio 48-in-1 Sensor Kit  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile con Arduino Uno (ATmega328P)
+> **キット:** Keyestudio 48-in-1 Sensor Kit  
+> **ボード:** Keyestudio V4.0 / Arduino Uno互換の ATmega328P ボード
 
-![Progetto 37: illustrazione dell'encoder rotativo](../media/df622003846058dd3cf442518f655af2.png)
+![プロジェクト37：ロータリーエンコーダの図](../media/df622003846058dd3cf442518f655af2.png)
 
-## Introduzione
+## はじめに
 
-L'encoder rotativo può contare il numero di impulsi emessi durante la rotazione in senso orario e antiorario.
+ロータリーエンコーダは、回転の正転・逆転の過程で出力されるパルスの回数を数えることができます。
 
-Questa conta durante la rotazione è illimitata, a differenza del conteggio di un potenziometro. Può essere riportato allo stato iniziale per ricominciare a contare da 0.
+この回転によるカウントは無制限で、ポテンショメータのような制限されたカウントとは異なります。初期状態に戻して0から再びカウントすることができます。
 
-## Specifiche
+## 仕様
 
-- Alimentazione: 5V
+- 電源: 5V
 
-- Interfaccia: Digitale
+- インターフェース: デジタル
 
-- Dimensioni: 30\*20mm
+- サイズ: 30\*20mm
 
-- Peso: 7g
+- 重さ: 7g
 
-## Schema di collegamento
+## 接続図
 
-![Illustrazione dello schema di collegamento](../media/1de37f27caa224141230be6bdc95d29b.jpeg)
+![接続図のイラスト](../media/1de37f27caa224141230be6bdc95d29b.jpeg)
 
-Come mostrato nello schema, colleghiamo il modulo encoder rotativo e due moduli LED sulla breadboard e alla scheda V4.0.
+図のように、ロータリーエンコーダモジュールと2つのLEDモジュールをブレッドボードとV4.0ボードに接続します。
 
-Utilizza il modulo encoder rotativo per controllare l'accensione e lo spegnimento dei due moduli LED.
+ロータリーエンコーダモジュールを使って2つのLEDモジュールの点灯/消灯を制御します。
 
-## Codice di esempio
+## サンプルコード
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -92,12 +92,12 @@ void RoteStateChanged() //When CLK  FALLING READ DAT
 ///////////////////////////////////////////////////////////////
 ```
 
-## Risultato d'esempio
+## 実行結果
 
-Dopo aver collegato correttamente e caricato il codice sopra, puoi ruotare il modulo encoder per controllare in modo alternato l'accensione e lo spegnimento dei due moduli LED. Quando ruoti l'encoder, un modulo LED si accende prima mentre l'altro è spento.
+配線を正しく行い上記のコードをアップロードすると、エンコーダモジュールを回転させることで2つのLEDモジュールを交互に点灯/消灯させることができます。エンコーダを回すと、まず一方のLEDが点灯し、もう一方は消灯します。
 
-Se continui a ruotare l'encoder, un modulo LED si spegnerà mentre l'altro si accende, ripetutamente.
+さらに回し続けると、一方が消灯しもう一方が点灯する動作が繰り返されます。
 
-![Illustrazione del risultato d'esempio](../media/4c1455602dc8ab6d61f5ab2e2d5dd67c.png)
+![実行結果のイメージ](../media/4c1455602dc8ab6d61f5ab2e2d5dd67c.png)
 
 ---

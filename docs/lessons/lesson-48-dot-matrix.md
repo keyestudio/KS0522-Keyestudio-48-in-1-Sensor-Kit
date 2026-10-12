@@ -1,56 +1,56 @@
-# Lezione 48: Matrice a punti
+# レッスン48：ドットマトリクス
 
-> **Kit:** Keyestudio 48-in-1 Kit sensori  
-> **Scheda:** Keyestudio V4.0 / scheda compatibile Arduino Uno ATmega328P
+> **キット：** Keyestudio 48-in-1 Sensor Kit  
+> **ボード：** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
 
-![Progetto 48: illustrazione Matrice a punti](../media/10e87958bbef207075643ae4f5481457.jpeg)
+![プロジェクト48：ドットマトリクス図](../media/10e87958bbef207075643ae4f5481457.jpeg)
 
-## Introduzione
+## はじめに
 
-Cosa c'è di meglio di un singolo LED? Molti LED! Un modo divertente per realizzare un piccolo display è usare una matrice 8x8. Questo modulo utilizza il chip HT16K33 per pilotare una matrice a punti 8x8.
+単一のLEDより良いものは何でしょう？たくさんのLEDです！小さなディスプレイを作る楽しい方法のひとつが8x8マトリクスの使用です。このモジュールはHT16K33チップを使用して8x8ドットマトリクスを駆動します。
 
-È sufficiente utilizzare la porta di comunicazione I2C del microcontrollore per controllare la matrice, il che permette di risparmiare molte risorse di porte del microcontrollore. Il modulo matrice è fornito con un connettore a 4 pin con passo di 2,54 mm.
+マイコンのI2C通信ポートを使ってドットマトリクスを制御するだけで済むため、マイコンのポート資源を節約できます。マトリクスモジュールはピンピッチ2.54mmの4ピンヘッダを備えています。
 
-Puoi collegare il modulo alla scheda di controllo per la comunicazione usando cavetti jumper.
+ジャンパー線でモジュールを制御ボードに接続して通信できます。
 
-Inoltre, è fornito con tre interruttori DIP. Puoi impostare gli interruttori a piacere per selezionare l'indirizzo di comunicazione I2C.
+また、3つのDIPスイッチが付属しており、スイッチを切り替えてI2C通信アドレスを選択できます。
 
-## Le impostazioni dell'indirizzo sono indicate di seguito
+## アドレス設定は下図のようになります
 
 |   0x70   |          |          |      |   0x71   |          |          |      |   0x72   |          |          |
 | :------: | :------: | :------: | ---- | :------: | :------: | :------: | ---- | :------: | :------: | :------: |
 | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |
-| 0（SPENTO） | 0（SPENTO） | 0（SPENTO） |      | 1（ACCESO）  | 0（SPENTO） | 0（SPENTO） |      | 0（SPENTO） | 1（ACCESO）  | 0（SPENTO） |
+| 0（OFF） | 0（OFF） | 0（OFF） |      | 1（ON）  | 0（OFF） | 0（OFF） |      | 0（OFF） | 1（ON）  | 0（OFF） |
 |          |          |          |      |          |          |          |      |          |          |          |
 | **0x73** |          |          |      | **0x74** |          |          |      | **0x75** |          |          |
 | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |
-| 1（ACCESO）  | 1（ACCESO）  | 0（SPENTO） |      | 0（SPENTO） | 0（SPENTO） | 1（ACCESO）  |      | 1（ACCESO）  | 0（SPENTO） | 1（ACCESO）  |
+| 1（ON）  | 1（ON）  | 0（OFF） |      | 0（OFF） | 0（OFF） | 1（ON）  |      | 1（ON）  | 0（OFF） | 1（ON）  |
 |          |          |          |      |          |          |          |      |          |          |          |
 | **0x76** |          |          |      | **0x77** |          |          |      |          |          |          |
 | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |      |          |          |          |
-| 0（SPENTO） | 1（ACCESO）  | 1（ACCESO）  |      | 1（ACCESO）  | 1（ACCESO）  | 1（ACCESO）  |      |          |          |          |
+| 0（OFF） | 1（ON）  | 1（ON）  |      | 1（ON）  | 1（ON）  | 1（ON）  |      |          |          |          |
 
-## Dettagli tecnici
+## 技術仕様
 
-- Interfaccia: header a 4 pin
+- インターフェース：4ピンヘッダ
 
-- Tensione di funzionamento: DC 4.5V-5.5V
+- 動作電圧：DC 4.5V-5.5V
 
-- Fornito con tre interruttori DIP per la selezione dell'indirizzo
+- アドレス選択用の3つのDIPスイッチ付き
 
-- Dimensioni：52mm\*34mm\*11mm
+- 寸法：52mm\*34mm\*11mm
 
-- Peso：13.2g
+- 重量：13.2g
 
-## Guida al collegamento
+## 接続ガイド
 
-Collega il pin SCL alla porta analogica A5, il pin SDA alla porta analogica A4; collega il pin VCC a 5V e GND a GND.
+SCLピンをAnalog A5ポートに、SDAピンをAnalog A4ポートに接続します；VCCピンを5Vポートに、GNDピンをGNDポートに接続します。
 
-![Guida al collegamento: illustrazione](../media/e2c09c1a7851f64ad03a027c1aa25a14.jpeg)
+![接続ガイド図](../media/e2c09c1a7851f64ad03a027c1aa25a14.jpeg)
 
-## Codice di prova
+## テスト用コード
 
-Scarica la libreria:
+ライブラリをダウンロード：
 
 ```C
 #include <Wire.h>
@@ -82,66 +82,66 @@ void loop() {
 }
 ```
 
-**Nota:** prima di compilare il codice, ricordati di posizionare la cartella della libreria Matrix nella directory \\Arduino\\libraries. Altrimenti la compilazione fallirà.
+注意：コンパイルする前に、Matrixライブラリのフォルダをディレクトリ \\Arduino\\libraries に配置することを忘れないでください。そうしないと、コードのコンパイルに失敗します。
 
-Per esempio: **C:\\Program Files\\Arduino\\libraries**
+例えば： **C:\\Program Files\\Arduino\\libraries**
 
-## Risultato del test
+## テスト結果
 
-Dopo aver caricato il codice sulla scheda e alimentato, dovresti vedere la matrice 8\*8 visualizzare un'immagine a forma di cuore. Mostrato qui sotto.
+コードをボードにアップロードし終え、電源を入れると、8\*8マトリクスにハートの画像が表示されるはずです。下図参照。
 
-![Risultato del test: illustrazione](../media/4a53bb681a3299be450726255f4d56a2.jpeg)
+![テスト結果図](../media/4a53bb681a3299be450726255f4d56a2.jpeg)
 
-## Metodo di impostazione
+## 設定方法
 
-1. Imposta l'indirizzo di comunicazione. Consulta la tabella degli indirizzi.
+1. 通信アドレスを設定します。アドレス表を参照してください。
 
-Il codice è impostato come segue.
+コードは以下のように設定されています。
 
-![Metodo di impostazione: illustrazione](../media/187557b09de67c1236bfd6536b0b95ee.png)
+![設定方法図](../media/187557b09de67c1236bfd6536b0b95ee.png)
 
-![Metodo di impostazione: illustrazione](../media/910472d4662d0c1f463f9bedfe4cef74.png)
+![設定方法図](../media/910472d4662d0c1f463f9bedfe4cef74.png)
 
-![Metodo di impostazione: illustrazione](../media/165615f73e4c9a49c861f5e17eb333e3.png)
+![設定方法図](../media/165615f73e4c9a49c861f5e17eb333e3.png)
 
-1. Imposta l'immagine da visualizzare
+1. 表示画像を設定します
 
-Puoi impostare l'immagine da visualizzare nel codice mostrato di seguito.
+コード内で表示する画像を設定できます。以下のコード例を参照してください。
 
-![Metodo di impostazione: illustrazione](../media/4a709cb4583c82f469c179dd6b1cfa71.png)
+![設定方法図](../media/4a709cb4583c82f469c179dd6b1cfa71.png)
 
-Posiziona il modulo matrice come segue:
+マトリクスモジュールを次のように配置します：
 
-![Metodo di impostazione: illustrazione](../media/10e87958bbef207075643ae4f5481457.jpeg)
+![設定方法図](../media/10e87958bbef207075643ae4f5481457.jpeg)
 
-Quindi converti 0x00,0x18,0x24,0x42,0x81,0x99,0x66,0x00 in numeri binari:
+次に、0x00,0x18,0x24,0x42,0x81,0x99,0x66,0x00 を2進数に変換します：
 
-- `0x00` corrisponde a `0 0 0 0 0 0 0 0`.
+- `0x00` は `0 0 0 0 0 0 0 0` に対応します。
 
-- `0x18` corrisponde a `0 0 0 1 1 0 0 0`.
+- `0x18` は `0 0 0 1 1 0 0 0` に対応します。
 
-- `0x24` corrisponde a `0 0 1 0 0 1 0 0`.
+- `0x24` は `0 0 1 0 0 1 0 0` に対応します。
 
-- `0x42` corrisponde a `0 1 0 0 0 0 1 0`.
+- `0x42` は `0 1 0 0 0 0 1 0` に対応します。
 
-- `0x81` corrisponde a `1 0 0 0 0 0 0 1`.
+- `0x81` は `1 0 0 0 0 0 0 1` に対応します。
 
-- `0x99` corrisponde a `1 0 0 1 1 0 0 1`.
+- `0x99` は `1 0 0 1 1 0 0 1` に対応します。
 
-- `0x66` corrisponde a `0 1 1 0 0 1 1 0`.
+- `0x66` は `0 1 1 0 0 1 1 0` に対応します。
 
-- `0x00` corrisponde a `0 0 0 0 0 0 0 0`.
+- `0x00` は `0 0 0 0 0 0 0 0` に対応します。
 
-Il primo numero esadecimale controlla la prima colonna di LED.
+最初の16進数はLEDの第1列を制御します。
 
-Il secondo valore controlla la seconda colonna, e così via.
+2番目の値は第2列を制御し、同様に続きます。
 
-Queste impostazioni convertono ogni valore esadecimale a 8 bit nella sua rappresentazione binaria.
+これらの設定は、各8ビットの16進値をその2進表現に変換します。
 
-Il numero 0 indica LED spento, 1 indica LED acceso.
+数字の0はLEDオフ、数字の1はLEDオンを意味します。
 
-Il primo numero convertito controlla l'accensione/spegnimento della prima riga di LED, e così via.
+最初に変換された数はLEDの第1行のオン／オフを制御し、以下同様です。
 
-![Metodo di impostazione: illustrazione](../media/3ba4bb34ddf3ef182c5aa5bc7a309605.png)
+![設定方法図](../media/3ba4bb34ddf3ef182c5aa5bc7a309605.png)
 
 ---
