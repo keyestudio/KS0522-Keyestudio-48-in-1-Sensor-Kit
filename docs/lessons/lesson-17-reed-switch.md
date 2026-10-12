@@ -1,55 +1,55 @@
-# レッスン17：リードスイッチ
+# Les 17: Reedschakelaar
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P bord
 
-![プロジェクト17：リードスイッチのイラスト](../media/e580999515f6522eb603ea723bf62173.png)
+![Project 17: Reedschakelaar illustratie](../media/e580999515f6522eb603ea723bf62173.png)
 
-## 説明
+## Beschrijving
 
-リードスイッチは特殊なスイッチであり、リードリレーや近接スイッチの主要な構成部品です。
+Een reedschakelaar is een speciaal type schakelaar en een hoofdcomponent voor reed-relais en nabuurschakelaars.
 
-リードスイッチは通常、二つの軟磁性材料と金属製のリード接点で構成され、磁気がないときに接点が開く仕組みになっています。
+Een reedschakelaar bestaat meestal uit twee zachtmagnetische materialen en metalen reed-contacten die van elkaar loskomen wanneer er geen magneet aanwezig is.
 
-さらに、一部のリードスイッチには第3の常時閉接点として機能する別のリードが備えられている場合もあります。これらのリード接点は、不活性ガス（窒素やヘリウムなど）で満たされたガラス管内、または真空のガラス管内に封入されています。
+Daarnaast zijn sommige reedschakelaars ook voorzien van een extra reed die functioneert als het derde normaal-gesloten contact. Deze reed-contacten zijn ingekapseld in een glazen buis gevuld met inert gas (zoals stikstof en helium) of in een vacuüm glazen buis.
 
-ガラス管内に封入されたリードは平行に配置され、端部が重なっています。スイッチの常時開（NO）または常時閉（NC）接点を構成するために、ある程度の隙間または相互接触が確保されています。
+De reeds in de glazen buis zijn parallel geplaatst met overlappende uiteinden. Er wordt een bepaalde ruimte of onderling contact gereserveerd om de normaal-open of normaal-gesloten contacten van de schakelaar te vormen.
 
-リードスイッチはカウント、リミット、その他の目的で使用できます。
+Een reedschakelaar kan worden gebruikt voor tellen, begrenzing of andere doeleinden.
 
-例えば、タイヤにマグネットを貼り付けてリードスイッチを側面に取り付けることで、自転車の走行距離計のような仕組みを構成できます。
+Bijvoorbeeld: een kilometer- of snelheidsmeter voor fietsen wordt gerealiseerd door een magneet op het wiel te plakken en de reedschakelaar naast het wiel te monteren.
 
-また、ドアに取り付けて警報目的やスイッチとして使用することもできます。
+Je kunt de reedschakelaar ook op een deur monteren voor alarmdoeleinden of als schakelaar.
 
-リードスイッチは家庭用電化製品、自動車、通信、産業、医療、セキュリティ分野などで広く応用されています。
+Reedschakelaars worden veel toegepast in huishoudelijke apparaten, auto’s, communicatie, industrie, gezondheidszorg en beveiliging.
 
-さらに、液面計、ドアマグネット、リードリレー、油位センサー、近接センサー（磁気センサー）など他のセンサや電子機器にも応用でき、高リスク環境でも使用可能です。
+Bovendien kan het ook worden toegepast in andere sensoren en elektrische apparaten zoals vloeistofmeters, deurmagneten, reed-relais, olieniveausensoren en nabuursensoren (magnetische sensoren). Het kan worden gebruikt in risicovolle omgevingen.
 
-## 仕様
+## Specificaties
 
-1. 動作電圧: DC 3.3V-5V
+1. Werkspanning: DC 3.3V-5V
 
-2. 動作電流: ≥20mA
+2. Werkstroom: ≥20mA
 
-3. 動作温度: －10℃ ～ ＋50℃
+3. Werktemperatuur: －10℃ tot ＋50℃
 
-4. 検出距離: ≤10mm
+4. Detectieafstand: ≤10mm
 
-5. IOインターフェース: 3線インターフェース（-/+/S）
+5. IO-interface: 3-aderige interface (-/+/S)
 
-6. サイズ: 30\*20mm
+6. Grootte: 30\*20mm
 
-7. 重量: 3g
+7. Gewicht: 3g
 
-## 接続図
+## Aansluitschema
 
-モジュールのSピンをV4.0ボードのDigital 3に接続し、負極ピンをGNDポート、正極ピンを5Vポートに接続します。
+Sluit de S-pin van de module aan op Digital 3 van het V4.0-bord, sluit de negatieve pin aan op GND en de positieve pin op 5V.
 
-![接続図](../media/ad39b511b42657baed492704a9c84b13.jpeg)
+![Aansluitschema illustratie](../media/ad39b511b42657baed492704a9c84b13.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -78,14 +78,14 @@ digitalWrite(Led,LOW);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 実行結果
+## Voorbeeldresultaat
 
-配線と電源を接続し、コードをボードに正常にアップロードすると、V4.0ボード上のD13 LEDが点灯します。
+Na aansluiting, inschakelen en het succesvol uploaden van de code naar het bord zie je dat de D13-LED op het V4.0-bord brandt.
 
-![実行結果のイラスト](../media/a2f983d5a5b324f55e3c0994458d4cbc.png)
+![Voorbeeldresultaat illustratie](../media/a2f983d5a5b324f55e3c0994458d4cbc.png)
 
-その後、いくつかの磁性ボールをセンサに近づけます。センサが磁場信号を検出すると、センサ上のLEDが点灯しますが、D13 LEDは消灯します。
+Vervolgens brengen we enkele magneetballetjes dicht bij de sensor. Wanneer de sensor het magnetische veld detecteert, gaat de LED op de sensor branden en gaat de D13-LED uit.
 
-![実行結果のイラスト](../media/ecbec914abc799076513f5c61149b004.png)
+![Voorbeeldresultaat illustratie](../media/ecbec914abc799076513f5c61149b004.png)
 
 ---

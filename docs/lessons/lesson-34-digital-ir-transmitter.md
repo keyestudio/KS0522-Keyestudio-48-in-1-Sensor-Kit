@@ -1,51 +1,51 @@
-# レッスン34: デジタル赤外線送信機
+# Les 34: Digitale IR-zender
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P bord
 
-![プロジェクト34: デジタル赤外線送信機 イラスト](../media/9fe876a8c857650226cbe2f8a9bead59.png)
+![Afbeelding Project 34: Digitale IR-zender](../media/9fe876a8c857650226cbe2f8a9bead59.png)
 
-## 説明
+## Beschrijving
 
-IR送信モジュールはIR通信向けに設計されており、短距離の視線（ライン・オブ・サイト）でテレビなどの機器を操作する用途で広く使われています。
+De IR-zendermodule is ontworpen voor IR-communicatie, die veel wordt gebruikt voor het bedienen van bijvoorbeeld een televisie op korte zichtafstand.
 
-赤外線（IR）リモコンは光を使用するため、操作対象機器への視線が必要です。ただし、赤外線信号は他の光源と同様に鏡で反射することもあります。
+Aangezien infrarood (IR) afstandsbediening gebruikmaakt van licht, is een rechte zichtlijn vereist om het doelapparaat te bedienen. Het signaal kan echter, net als elk ander licht, door spiegels worden teruggekaatst.
 
-赤外線受信機は、受光素子（フォトトランジスタ）の光学特性により、動作角がある程度制限される傾向があります。
+Infraroodontvangers hebben ook vaak een min of meer beperkte werkhoek, wat voornamelijk afhangt van de optische eigenschappen van de fototransistor.
 
-しかし、受信機の前に半透明のマットな物体を置くことで、動作角を簡単に広げることができます。
+Het is echter eenvoudig om de werkhoek te vergroten door een mat transparant object voor de ontvanger te plaatsen.
 
-## 仕様
+## Specificaties
 
-- 電源: 3-5V
+- Voedingsspanning: 3-5V
 
-- 赤外線中心波長: 850nm-940nm
+- Infrarood golflengte: 850nm-940nm
 
-- 赤外線放射角: 約20度
+- Uitzendhoek: ongeveer 20 graden
 
-- 赤外線送信距離: 約1.3m（5V 38Khz）
+- Uitzendafstand: ongeveer 1.3m (5V 38Khz)
 
-- インターフェースソケット: JST PH2.0
+- Interface-aansluiting: JST PH2.0
 
-- 取付穴: 内径は3.2mm、間隔は15mm
+- Bevestigingsgat: binnendiameter is 3.2mm, afstand is 15mm
 
-## 接続図
+## Aansluitschema
 
-まず接続する前に以下の部品を用意してください。
+Bereid eerst de volgende onderdelen voor voordat je gaat aansluiten.
 
-- V4.0 ボード\*1
+- V4.0 Board\*1
 
-- IR送信モジュール\*1
+- IR Transmitter module\*1
 
-- USBケーブル\*1
+- USB Cable\*1
 
-- ジャンパー線\*3
+- Jumper Wire\*3
 
-モジュールのSピンをV4.0ボードのDigital 3に接続し、負極ピンをGNDポート、正極ピンを5Vポートに接続します。
+Verbind de S-pin van de module met Digital 3 van het V4.0-bord, verbind de negatieve pin met de GND-poort en de positieve pin met de 5V-poort.
 
-![接続図 イラスト](../media/31c03e9ad144e1124260ff6e0538fe69.jpeg)
+![Afbeelding Aansluitschema](../media/31c03e9ad144e1124260ff6e0538fe69.jpeg)
 
-## サンプルコード1
+## Voorbeeldcode 1
 
 ```c
 int led = 3;
@@ -60,39 +60,39 @@ void loop() {
 }
 ```
 
-暗い環境では、赤外線LEDをスマートフォンのカメラで撮影すると、画面に青い点滅光が見えます。
+In een donkere omgeving zie je op het scherm van je telefoon een knipperend blauw licht als je met de camera op de infrarood-LED richt.
 
-上記のコードをボードにアップロードすると、センサー上のLEDが赤く点滅します。
+Upload de bovenstaande code naar het bord; de LED op de sensor zal rood knipperen.
 
-以下では、IR受信モジュールとIR送信モジュール間のインタラクティブな例に進みます。
+Laten we verdergaan met een interactief voorbeeld tussen een IR-ontvanger en een IR-zendermodule.
 
-## 赤外線リモコン/通信
+## Infrarood afstandsbediening/communicatie
 
-## 必要なハードウェア
+## Benodigde hardware
 
-- Arduino R3 ×2
+- Arduino R3 x2
 
-- デジタルIR受信機 ×1
+- Digital IR Receiver x1
 
-- IR送信モジュール ×1
+- IR Transmitter Module x1
 
-注意: この実験には2枚のマイコンボードが必要です。ブレッドボードは受信側のスケッチを実行できないため、2枚目のボードの代わりにはなりません。
+Opmerking: voor dit experiment zijn twee microcontrollerborden nodig. Een breadboard vervangt het tweede bord niet omdat het de ontvanger-sketch niet kan uitvoeren.
 
-## 二枚のボードによる通信設定
+## Communicatie-opstelling met twee borden
 
-## IR送信機用
+## Voor IR-zender
 
-注意: Arduino-IR リモコンは送信にD3のみをサポートします。
+Let op: Arduino-IR remote ondersteunt alleen D3 als zender.
 
-![IR送信機用 イラスト](../media/08ebf9b37949caf1782e499f49934f1d.png)
+![Afbeelding Voor IR-zender](../media/08ebf9b37949caf1782e499f49934f1d.png)
 
-## IR受信機用
+## Voor IR-ontvanger
 
-信号ピンをD11ポートに接続してください。
+Verbind de signaalpin met poort D11.
 
-![IR受信機用 イラスト](../media/687d429fe6360707f95fb6c5ddfa2ca7.jpeg)
+![Afbeelding Voor IR-ontvanger](../media/687d429fe6360707f95fb6c5ddfa2ca7.jpeg)
 
-## IR送信機に接続したV4.0へコード2をアップロード
+## Upload code 2 naar het V4.0-bord dat met de IR-zender is verbonden
 
 ```c
  #include <IRremote.h>
@@ -106,7 +106,7 @@ void loop() {
      delay(200); }
 ```
 
-## IR受信機に接続したV4.0へコード3をアップロード
+## Upload code 3 naar het V4.0-bord dat met de IR-ontvanger is verbonden
 
 ```c
 #include <IRremote.h>
@@ -138,12 +138,12 @@ void loop() {
    }}
 ```
 
-## 結果
+## Resultaat
 
-IR受信モジュールがIR送信機から赤外線信号を受信すると、IR受信モジュール上のD1 LEDが点滅します。
+Wanneer de IR-ontvangermodule het infraroodsignaal van de IR-zender ontvangt, zal de D1-led op de IR-ontvangermodule knipperen.
 
-IR受信モジュールがIR送信機から赤外線信号を受信すると、IR受信モジュール上のD1 LEDが点滅します。
+Wanneer de IR-ontvangermodule het infraroodsignaal van de IR-zender ontvangt, zal de D1-led op de IR-ontvangermodule knipperen.
 
-![結果 イラスト](../media/4d73a7178e89de72df7e82a147778ae9.png)
+![Afbeelding Resultaat](../media/4d73a7178e89de72df7e82a147778ae9.png)
 
 ---

@@ -1,49 +1,49 @@
-# レッスン33: デジタルIR受信機
+# Les 33: Digitale IR-ontvanger
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Set:** Keyestudio 48-in-1 Sensorkit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibele ATmega328P-bord
 
-![プロジェクト33: デジタルIR受信機のイラスト](../media/f64f21b6ca681f928c3318bd2d33a017.png)
+![Project 33: Digitale IR-ontvanger illustratie](../media/f64f21b6ca681f928c3318bd2d33a017.png)
 
-## 説明
+## Beschrijving
 
-IR（赤外線）はリモコンで広く使われています。このIR受信機を使えば、正しいデコーダがあればArduinoプロジェクトで任意の赤外線リモコンからのコマンドを受信できます。もちろん、IR送信機を使って独自のIRコントローラを作るのも簡単です。
+IR wordt veel gebruikt in afstandsbedieningen. Met deze IR-ontvanger kan een Arduino-project commando's van elke IR-afstandsbediening ontvangen als je de juiste decoder hebt. Het is ook eenvoudig om je eigen IR-afstandsbediening te maken met een IR-zender.
 
-## 仕様
+## Specificaties
 
-- 電源: 5V
+- Voedingsspanning: 5V
 
-- インターフェース: デジタル
+- Interface: Digitaal
 
-- 変調周波数: 38Khz
+- Modulatiefrequentie: 38Khz
 
-- モジュールインターフェースソケット: JST PH2.0
+- Module-aansluiting: JST PH2.0
 
-- サイズ: 30*20mm
+- Afmetingen: 30*20mm
 
-- 重量: 4g
+- Gewicht: 4g
 
-## 接続図
+## Aansluitschema
 
-まず接続する前に以下の部品を準備してください。
+Bereid eerst de volgende onderdelen voor voordat je gaat aansluiten.
 
-- V4.0 ボード\*1
+- V4.0 Board\*1
 
-- IR レシーバーモジュール\*1
+- IR-ontvangermodule\*1
 
-- USB ケーブル\*1
+- USB-kabel\*1
 
-- ジャンパー線\*3
+- Dupont-draad\*3
 
-モジュールのSピンをV4.0ボードのデジタルピン11に接続し、負極ピンをGND、正極ピンを5Vに接続します。
+Verbind de S-pin van de module met Digital 11 van het V4.0 board, verbind de negatieve pin met de GND-aansluiting en de positieve pin met de 5V-aansluiting.
 
-![接続図](../media/687d429fe6360707f95fb6c5ddfa2ca7.jpeg)
+![Aansluitschema illustratie](../media/687d429fe6360707f95fb6c5ddfa2ca7.jpeg)
 
-下のサンプルコードではデジタルピン11が使用されています。配線を変更するか、サンプルコードを変更して一致させてください。
+In de voorbeeldcode hieronder wordt Digital pin 11 gebruikt; je kunt ofwel je bedrading aanpassen of de voorbeeldcode wijzigen zodat deze overeenkomt.
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -66,18 +66,18 @@ IR（赤外線）はリモコンで広く使われています。このIR受信�
 ///////////////////////////////////////////////////////////////
 ```
 
-**注意:** コードをコンパイルする前に、ライブラリをArduino IDEのlibrariesディレクトリに配置するのを忘れないでください。そうしないとコンパイルは失敗します。
+**Opmerking:** voordat je de code compileert, plaats de bibliotheek in de libraries-directory van de Arduino IDE. Anders zal het compileren mislukken.
 
-IR Remote Libraryには送信と受信のサンプルコードが含まれています。
+IR Remote Library bevat enkele voorbeeldcodes voor zenden en ontvangen.
 
 <https://github.com/shirriff/Arduino-IRremote>
 
-## 実行結果の例
+## Voorbeeldresultaat
 
-![実行結果の例](../media/2692333113be48ffa11c27649d18dcb8.png)
+![Voorbeeldresultaat illustratie](../media/2692333113be48ffa11c27649d18dcb8.png)
 
-配線とコードのアップロードが完了したら、赤外線リモコンでIR受信モジュールを操作するとD1のLEDが点滅します。
+Na het aansluiten en uploaden van de code, bedien de IR-ontvanger met een infrarood afstandsbediening; de D1 led zal knipperen.
 
-![実行結果の例](../media/4bb52e2957e3aaeace252021e7084c95.png)
+![Voorbeeldresultaat illustratie](../media/4bb52e2957e3aaeace252021e7084c95.png)
 
 ---

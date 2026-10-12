@@ -1,45 +1,57 @@
-# レッスン23: 水位
+# Les 23: Waterniveau
 
-> **キット：** Keyestudio 48-in-1 センサーキット  
-> **ボード：** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![プロジェクト23: 水位のイラスト](../media/23f40997b8634be91aed7311eca2dfbb.jpeg)
+![Project 23: Illustratie van waterniveau](../media/23f40997b8634be91aed7311eca2dfbb.jpeg)
 
-## 説明
+## Beschrijving
 
-Keyestudioの水センサーは使いやすく、携帯性に優れ、コスト効果の高い設計で、水位や水滴の検知に使用されます。
+De Keyestudio watersensor is gebruiksvriendelijk, draagbaar en kosteneffectief, en ontworpen om het waterniveau en waterdruppels te identificeren en te detecteren.
 
-この小型センサーは、露出した並列配線のトレース配列を通じて、水滴の量や水の量を測定できます。
+Deze kleine sensor kan het volume van waterdruppels of de hoeveelheid water meten via een reeks blootgestelde parallelle geleiders.
 
-## 特徴
+## Kenmerken
 
-- 水量とアナログ量の間の滑らかな変換;
-- 高い柔軟性で、基本的なアナログ値を出力;
-- 低消費電力かつ高感度;
-- マイクロプロセッサやその他の論理回路に直接接続可能で、Arduinoコントローラ、STC単一チップマイコン、AVR単一チップマイコンなど、さまざまな開発ボードやコントローラに適合。
+- soepele conversie tussen waterhoeveelheid en analoge waarde;
 
-## 仕様
+- grote flexibiliteit, geeft een basis analoge waarde;
 
-- 動作電圧: DC5V
-- 動作電流: <20mA
-- センサータイプ: アナログ
-- 検出面積: 40mm x16mm
-- 製造工程: FR4 両面スズメッキ
-- 形状設計: 滑り止め半月状凹み
-- 動作温度: 10℃-30℃
-- 動作湿度: 結露なき状態で10%-90%
-- 重量: 3g
-- 寸法: 65mm x 20mm x 8mm
+- laag stroomverbruik en hoge gevoeligheid;
 
-## 接続図
+- kan rechtstreeks worden aangesloten op een microprocessor of andere logische schakelingen, geschikt voor verschillende ontwikkelborden en controllers zoals Arduino-controllers, STC single-chip microcontrollers, AVR single-chip microcontrollers en meer.
 
-モジュールのSピンをV4.0ボードのアナログA0に接続し、負極をGNDポート、正極を5Vポートに接続します。
+## Specificaties
 
-![接続図のイラスト](../media/92810e41aea313a15735eecb3a168e2f.jpeg)
+- Bedrijfsspanning: DC5V
 
-## サンプルコード
+- Bedrijfstroom: ﹤20mA
 
-下のコードをArduinoソフトウェアにコピーして貼り付けます。
+- Sensortype: Analoog
+
+- Detectiegebied: 40mm x16mm
+
+- Productieproces: FR4 dubbelzijdig getind
+
+- Vormgeving: anti-slip halfmaanvormige inkeping
+
+- Werktemperatuur: 10℃-30℃
+
+- Werkvochtigheid: 10%-90% zonder condensatie
+
+- Gewicht: 3g
+
+- Afmetingen: 65mm x 20mm x 8mm
+
+## Aansluitschema
+
+Verbind de S-pin van de module met analoog A0 van het V4.0-bord, verbind de negatieve pin met GND, en de positieve pin met 5V.
+
+![Illustratie van het aansluitschema](../media/92810e41aea313a15735eecb3a168e2f.jpeg)
+
+## Voorbeeldcode
+
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -68,20 +80,20 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 実行結果
+## Voorbeeldresultaat
 
-![実行結果のイラスト](../media/ca727c75f4d4e454c95258d77afdf10e.png)
+![Illustratie van het voorbeeldresultaat](../media/ca727c75f4d4e454c95258d77afdf10e.png)
 
-上記の手順が完了したら、低い水位でテストしてどうなるか確認してみましょう。
+Nadat bovenstaande stappen zijn uitgevoerd, doen we een test met een laag waterniveau om te zien wat er gebeurt?
 
-コードをV4.0ボードにアップロードし、シリアルモニタを開いてボーレートを9600に設定します。
+Upload de code naar het V4.0-bord, open vervolgens de seriële monitor en stel de baudrate in op 9600.
 
-センサーを異なる水位に入れると、値がそれに応じて変化するのが確認できます。
+Wanneer je de sensor op verschillende niveaus in het water plaatst, zie je dat de waarde overeenkomstig verandert.
 
-![実行結果のイラスト](../media/8070cf2260fef39e5ec5e18b7a1849cf.jpeg)
+![Illustratie van het voorbeeldresultaat](../media/8070cf2260fef39e5ec5e18b7a1849cf.jpeg)
 
-さらに、警報値を設定してブザーを接続し、アラームを鳴らすことができます。
+Verder kun je een alarmwaarde instellen en een zoemer aansluiten om een alarm te maken.
 
-水位が警報値に達していない場合、LEDは点灯しません。水位が警報値に達すると、LEDが点灯し、ブザーが鳴ってアラームを発します。
+De LED gaat niet branden zolang het waterniveau de alarmwaarde niet heeft bereikt. Als het waterniveau de alarmwaarde bereikt, zal de LED aangaan en zal de zoemer klinken om alarm te geven.
 
 ---

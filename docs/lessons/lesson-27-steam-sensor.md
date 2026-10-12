@@ -1,53 +1,53 @@
-# レッスン27: 蒸気センサー
+# Les 27: Stoomsensor
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328Pボード
+> **Set:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![プロジェクト27: 蒸気センサーのイラスト](../media/d19ac9430f793cdbedde891ee92671e7.jpeg)
+![Project 27: stoomsensor illustratie](../media/d19ac9430f793cdbedde891ee92671e7.jpeg)
 
-## 説明
+## Beschrijving
 
-蒸気センサーはアナログセンサーで、簡易の雨水検出器や液面スイッチとして使用できます。センサー表面の湿度が上がると、出力電圧が上昇します。
+De stoomsensor is een analoge sensor en kan gebruikt worden als eenvoudige regenwaterdetector en vloeistofniveauschakelaar. Wanneer de vochtigheid op het oppervlak van deze sensor toeneemt, zal de uitgangsspanning stijgen.
 
-注意: 接続部は防水ではないため、水に入れないでください。
+Let op: de aansluitingsdelen zijn niet waterdicht, plaats ze daarom niet in water.
 
-## 仕様
+## Parameters
 
-- 動作電圧: 3.3V または 5V
+- Werkspanning: 3.3V of 5V
 
-- 動作電流: \<20mA
+- Werkstroom: \<20mA
 
-- 動作温度範囲: －10℃～＋70℃
+- Werktemperatuurbereik: －10℃～＋70℃
 
-- インターフェース: アナログ信号出力
+- Interface-type: Analoge signaaluitgang
 
-## ピン定義
+## Pindefinitie
 
-- Sピン: 信号出力用
+- S-pin: voor signaaluitgang
 
-- 正ピン (+): 電源供給（VCC）用
+- Positieve pin (+): voor voedingsspanning (VCC)
 
-- 負ピン (-): グラウンド（GND）用
+- Negatieve pin (-): voor massa (GND)
 
-## 接続図
+## Aansluitschema
 
-まず、接続前に以下の部品を準備してください:
+Bereid eerst de volgende onderdelen voor:
 
-- V4.0ボード*1
+- V4.0-bord*1
 
-- 蒸気センサー*1
+- Stoomsensor*1
 
-- USBケーブル*1
+- USB-kabel*1
 
-- ジャンパー線*3
+- Jumperdraad*3
 
-モジュールのSピンをV4.0ボードのAnalog A0に接続し、負ピンをGNDポート、正ピンを5Vポートに接続します。
+Verbind de S-pin van de module met analoge A0 van het V4.0-bord, verbind de negatieve pin met de GND-aansluiting en de positieve pin met de 5V-aansluiting.
 
-![接続図のイラスト](../media/8fa51466dbc9650dcaa740bce4dd654e.jpeg)
+![Aansluitschema illustratie](../media/8fa51466dbc9650dcaa740bce4dd654e.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -66,14 +66,14 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 実行結果
+## Voorbeeldresultaat
 
-![実行例のイラスト](../media/c4633c5911c042224d187645db4d0588.png)
+![Voorbeeldresultaat illustratie](../media/c4633c5911c042224d187645db4d0588.png)
 
-異なる湿度を検出すると、センサーは異なる電流値を返します。以下の図のように示されます。
+Bij detectie van verschillende vochtigheidsniveaus geeft de sensor verschillende meetwaarden terug. Zie de volgende afbeelding.
 
-条件が限られているため、センサーに水滴を一滴垂らすと、Arduinoソフトウェアのシリアルモニタで湿度値が変化するのが確認できます。
+Vanwege de beperkte omstandigheden kun je een druppel water op de sensor plaatsen; de vochtwaarde verandert dan in de seriële monitor van de Arduino-software.
 
-![実行例のイラスト](../media/80e9b3e19db4bec337f3254545a58e9e.jpeg)
+![Voorbeeldresultaat illustratie](../media/80e9b3e19db4bec337f3254545a58e9e.jpeg)
 
 ---

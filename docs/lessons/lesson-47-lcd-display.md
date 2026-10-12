@@ -1,66 +1,66 @@
-# レッスン47: LCDディスプレイ
+# Les 47: LCD-display
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 sensorkit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![プロジェクト47: LCDディスプレイのイラスト](../media/1aa1fd551e180d013633c1fe857c24a6.jpeg)
+![Project 47: LCD-display illustratie](../media/1aa1fd551e180d013633c1fe857c24a6.jpeg)
 
-## 説明
+## Beschrijving
 
-このプロジェクトでは、V4.0ボードを使って0802 LCDにテキストを表示します。
+In dit project gaan we dit 0802 LCD-display aansturen om tekst weer te geven in combinatie met het V4.0-bord.
 
-LCDの表示容量は8×2文字で、チップの動作電圧は4.5～5.5Vです。
+De weergavecapaciteit van de LCD is 8x2 tekens en de bedrijfsvoering van de chip is 4.5～5.5V.
 
-0802 LCDでテキストを表示する接続方法は、4ビット接続と8ビット接続の2通りあります。
+Er zijn twee aansluitmethoden voor het weergeven van tekst op de 0802 LCD: respectievelijk 4-bit en 8-bit aansluiting.
 
-以下の説明を参照してください。
+Zie de gerelateerde uitleg hieronder.
 
-## インターフェースの説明
+## Uitleg van de interfaces
 
-| **インターフェース** | **ピン** | **説明**                                              |
+| **Aansluiting** | **Pin** | **Uitleg**                                                    |
 | :-----------: | :-----: | ------------------------------------------------------------ |
-|       1       |   VSS   | ロジック電源グランド                                           |
-|       2       |   VDD   | ロジック電源                                                  |
-|       3       |   V0    | LCDの調整電圧、10Kポテンショメータの中央ピンに接続してください |
-|       4       |   RS    | データ\\ コマンド選択                                        |
-|       5       |   RW    | 読み取り\\書き込み選択                                           |
-|       6       |    E    | 読み取り\\書き込みのイネーブル、HIGHで有効、立ち下がりエッジでデータをラッチ |
-|       7       |   DB0   | データ入出力ピン                                        |
-|       8       |   DB1   | データ入出力ピン                                        |
-|       9       |   DB2   | データ入出力ピン                                        |
-|      10       |   DB3   | データ入出力ピン                                        |
-|      11       |   DB4   | データ入出力ピン                                        |
-|      12       |   DB5   | データ入出力ピン                                        |
-|      13       |   DB6   | データ入出力ピン                                        |
-|      14       |   DB7   | データ入出力ピン                                        |
-|      15       |  LED-A  | バックライト電源正極                                 |
-|      16       |  LED-K  | バックライト電源負極                                 |
+|       1       |   VSS   | Logische voedingsmassa                                       |
+|       2       |   VDD   | Logische voeding                                             |
+|       3       |   V0    | LCD instelbare spanning, verbinden met de middenpen van een 10K potentiometer |
+|       4       |   RS    | Data\\ Commando optie                                        |
+|       5       |   RW    | lezen\\schrijven optie                                       |
+|       6       |    E    | Inschakelen lezen\\schrijven, actief bij HIGH, vallende flank vergrendelt de data |
+|       7       |   DB0   | Data in-/uitgangspin                                         |
+|       8       |   DB1   | Data in-/uitgangspin                                         |
+|       9       |   DB2   | Data in-/uitgangspin                                         |
+|      10       |   DB3   | Data in-/uitgangspin                                         |
+|      11       |   DB4   | Data in-/uitgangspin                                         |
+|      12       |   DB5   | Data in-/uitgangspin                                         |
+|      13       |   DB6   | Data in-/uitgangspin                                         |
+|      14       |   DB7   | Data in-/uitgangspin                                         |
+|      15       |  LED-A  | Positieve voedingsaansluiting van de achtergrondverlichting |
+|      16       |  LED-K  | Negatieve voedingsaansluiting van de achtergrondverlichting |
 
-## 必要なハードウェア
+## Benodigde hardware
 
-まず、以下の部品を用意してください。
+Allereerst moet je de volgende onderdelen voorbereiden:
 
-- V4.0ボード × 1
+- V4.0-bord × 1
 - 0802 LCD × 1
-- ロータリーポテンショメータ × 1
-- ブレッドボード × 1
-- USBケーブル × 1
-- ジャンパーワイヤ（必要に応じて）
-- デュポン線（必要に応じて）
+- Draaipotentiometer × 1
+- Breadboard × 1
+- USB-kabel × 1
+- Jumperdraden, indien nodig
+- Dupont-draden, indien nodig
 
-## 接続図
+## Aansluitschema
 
-## 4ビット接続
+## 4-bit aansluiting
 
-![4ビット接続のイラスト](../media/6b3c862d4b36726275b67b747e6d5df3.jpeg)
+![Illustratie 4-bit aansluiting](../media/6b3c862d4b36726275b67b747e6d5df3.jpeg)
 
-## 8ビット接続
+## 8-bit aansluiting
 
-![8ビット接続のイラスト](../media/97a92aff5ba45d0f7daaca6307b9a5fd.png)
+![Illustratie 8-bit aansluiting](../media/97a92aff5ba45d0f7daaca6307b9a5fd.png)
 
-## ソースコード
+## Broncode
 
-## 4ビット接続用
+## Voor 4-bit aansluiting
 
 ```C
 //////////////////////////////////////////////////////////
@@ -83,7 +83,7 @@ void loop() {
 //////////////////////////////////////////////////////////
 ```
 
-## 8ビット接続用
+## Voor 8-bit aansluiting
 
 ```C
 #include <LiquidCrystal.h>
@@ -105,16 +105,16 @@ void loop() {
 }
 ```
 
-## 実行結果
+## Voorbeeldresultaat
 
-配線・電源を接続し、上記のコードをボードにアップロードします。ポテンショメータを回してLCDのバックライトを調整すると、文字がLCD画面に表示されます。
+Sluit alles goed aan, zet de voeding aan, upload de bovenstaande code naar het bord, stel de achtergrondverlichting van de LCD af door de potentiometer te draaien; uiteindelijk zie je de tekens op het LCD-scherm.
 
-4ビット接続を使用した場合、LCDの1行目に「Hello」が、2行目に「world!」が表示されるはずです。下図のように表示されます。
+Als je de 4-bit aansluiting gebruikt, zou je op de eerste regel "Hallo" en op de tweede regel "wereld!" op het LCD moeten zien, zoals hieronder weergegeven.
 
-![実行例のイラスト](../media/7d2763d65677d2925902ffcc65bf1b12.png)
+![Illustratie voorbeeldresultaat](../media/7d2763d65677d2925902ffcc65bf1b12.png)
 
-8ビット接続を使用した場合、LCDに別の文字が表示されます。以下に示します。
+Als je de 8-bit aansluiting gebruikt, zie je andere tekens op het LCD weergegeven, zoals hieronder.
 
-![実行例のイラスト](../media/61002a13397f8041574b375b0032da26.png)
+![Illustratie voorbeeldresultaat](../media/61002a13397f8041574b375b0032da26.png)
 
 ---

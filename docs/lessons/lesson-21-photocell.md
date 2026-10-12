@@ -1,37 +1,37 @@
-# レッスン21: フォトセル
+# Les 21: Fotocel
 
-> **キット：** Keyestudio 48-in-1 センサーキット  
-> **ボード：** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Set:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![プロジェクト21: フォトセルのイラスト](../media/8eed60793fd64a7c0b9a9b2a2fc1ef67.png)
+![Project 21: Fotocel illustratie](../media/8eed60793fd64a7c0b9a9b2a2fc1ef67.png)
 
-## 説明
+## Beschrijving
 
-フォトセルは日常生活でよく見られ、主に自動スイッチや一般的な電子設計で使用されます。使いやすさと効果を高めるために、対応するモジュールを用意しています。
+Een fotocel komt vaak voor in ons dagelijks leven en wordt voornamelijk gebruikt in intelligente schakelaars, maar ook in algemeen elektronisch ontwerp. Om het eenvoudiger en effectiever te maken, leveren we de bijbehorende modules.
 
-フォトセルは半導体であり、高感度、応答速度の速さ、スペクトル特性および抵抗値の一貫性を特徴とし、高温多湿などの厳しい環境下でも高い安定性と信頼性を保ちます。
+De fotocel is een halfgeleider. Hij heeft kenmerken zoals hoge gevoeligheid, snelle reactie, spectrale karakteristiek en consistentie van de R-waarde, waardoor hij een hoge stabiliteit en betrouwbaarheid behoudt in extreme omgevingen, zoals hoge temperaturen en hoge luchtvochtigheid.
 
-カメラ、ガーデンソーラーライト、芝生用ランプ、コイン検出器、クオーツ時計、音楽ボックス、ギフトボックス、ミニ常夜灯、音光制御スイッチなど、照明の自動制御スイッチ分野で広く使用されています。
+Hij wordt veel gebruikt in automatische schakelaars voor toepassingen zoals camera's, tuin-zonnenlampen, gazonverlichting, gelddetectoren, kwartsuurwerken, muziekbekers, cadeauboxen, mini-nachtlampjes, geluids- en lichtgestuurde schakelaars, enz.
 
-## 仕様
+## Specificatie
 
-- インターフェース: アナログ
+- Interface type: analoog
 
-- 動作電圧: 5V
+- Werkspanning: 5V
 
-- サイズ: 30*20mm
+- Afmetingen: 30*20mm
 
-- 重量: 3g
+- Gewicht: 3g
 
-## 接続図
+## Aansluitschema
 
-モジュールのSピンをV4.0ボードのAnalog A0に接続し、負極ピンをGNDポートに、正極ピンを5Vポートに接続します。
+Verbind de S-pin van de module met Analoge A0 van het V4.0-bord, verbind de negatieve pin met de GND-poort en de positieve pin met de 5V-poort.
 
-![接続図のイラスト](../media/28a1990cd088d6f0301f02d217cef301.jpeg)
+![Aansluitschema illustratie](../media/28a1990cd088d6f0301f02d217cef301.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -49,12 +49,12 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 実行結果
+## Voorbeeldresultaat
 
-![実行結果のイラスト](../media/78268e9cb1dbc127e7ae3299d3a35a45.png)
+![Voorbeeldresultaat illustratie](../media/78268e9cb1dbc127e7ae3299d3a35a45.png)
 
-配線と電源を接続し、コードをアップロードしたらシリアルモニタを開いてください。センサー上のフォトセルを手で覆うと、アナログ値が低下するのが確認できます。
+Als de bedrading klaar is en het bord van stroom is voorzien, upload je de code. Open vervolgens de seriële monitor; als je de fotocel op de sensor met je hand bedekt, zie je dat de analoge waarde afneemt.
 
-![実行結果のイラスト](../media/85621deb4c66d6e53697cd0ef90cb6e2.jpeg)
+![Voorbeeldresultaat illustratie](../media/85621deb4c66d6e53697cd0ef90cb6e2.jpeg)
 
 ---

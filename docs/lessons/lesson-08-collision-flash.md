@@ -1,55 +1,55 @@
-# レッスン 08: 衝突フラッシュ
+# Les 08: Botsingsflits
 
-> **キット：** Keyestudio 48-in-1 センサーキット  
-> **ボード：** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 sensorenkit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![プロジェクト8：衝突フラッシュのイラスト](../media/29c4641406064a4f1df5d59aefbca480.png)
+![Project 8: Illustratie Botsingsflits](../media/29c4641406064a4f1df5d59aefbca480.png)
 
-## 説明
+## Beschrijving
 
-衝突センサー（電子スイッチとも呼ばれる）は、初歩的な電子学習に必要なデジタルのオン・オフ入力モジュールです。
+Botsingssensor, ook bekend als elektronische schakelaar, is een digitale aan/uit-ingangsmodule die noodzakelijk is voor basis elektronische leeractiviteiten.
 
-プログラミングにより、ライトや音響デバイス、LCD表示のキー選択機能などを制御できます。
+Met programmeren kan deze gebruikt worden om licht, geluidsapparaten, toetskeuzefuncties van een LCD-display, enz. te regelen.
 
-3Pセンサーケーブルでセンサーシールドに接続すれば、4WDのアルミ合金モバイルロボットプラットフォームに取り付けて衝突検知機能を実現できます。便利かつ効率的です。
+Door een 3P-sensorkabel te gebruiken om hem aan een sensor shield te koppelen, kan hij op een 4WD AL-legering mobiel robotplatform worden gemonteerd om botsingsdetectie mogelijk te maken. Het is zowel handig als efficiënt.
 
-衝突（クラッシュ）モジュールとインターフェース13の内蔵LEDを使って衝突フラッシャーを作成できます。衝突センサーをピン 3 に接続します。センサーが衝突信号を検出すると、メインボードとモジュール両方のLEDが同時に点灯します。
+Je kunt een botsingsknipper maken met de botsingsmodule en de ingebouwde LED op interface 13. Verbind de botsingssensor met pin 3. Wanneer de botsingssensor een botsingssignaal detecteert, gaan de LEDs op zowel het hoofdboard als de module gelijktijdig branden.
 
-## パラメータ
+## Kenmerken
 
-1. 衝突モジュールが取り付けられている前方で衝突が発生すると、モジュールはロー（低）レベル信号を出力します。衝突がない場合はハイ（高）レベル信号を出力します。
+1. Als er een botsing plaatsvindt aan de voorkant van waar de botsingsmodule is gemonteerd, geeft de module een laag signaal uit; geen botsing geeft een hoog signaal uit.
 
-2. モジュールにはM3取り付け穴があり、車体への固定に便利です。
+2. De module heeft een M3-montagegat gereserveerd, handig voor bevestiging op een voertuig.
 
-3. スイッチに表示用LEDがあり、衝突があると点灯し、衝突がないと消灯します。
+3. Met een schakelaar-indicatorlampje: bij een botsing is het lampje aan; zonder botsing is het lampje uit.
 
-## ピン定義
+## Pindefinitie
 
-1. 正電源ピン（+）：3V〜12Vの電源に接続
+1. Positieve pin (+): verbinden met 3v-12v voedingsspanning
 
-2. 負電源ピン（-）：GNDに接続
+2. Negatieve pin (-): verbinden met GND
 
-3. 信号ピン（S）：ハイ・ロー（高低）レベル出力
+3. Signaalpin (S): geeft hoog/laag niveau uit
 
-## 接続図
+## Aansluitschema
 
-まず、接続前に以下の部品を準備してください：
+Bereid vooraf de volgende onderdelen voor:
 
-- V4.0 ボード\*1
+- V4.0-bord\*1
 
-- 衝突（クラッシュ）モジュール \*1
+- Botsingsmodule \*1
 
-- USB ケーブル\*1
+- USB-kabel\*1
 
-- ジャンパーワイヤー\*3
+- Jumperdraad\*3
 
-モジュールのSピンをV4.0ボードのDigital 3に接続し、負電源ピンをGNDポートに、正電源ピンを5Vポートに接続します。
+Verbind de S-pin van de module met Digital 3 van het V4.0-bord, verbind de negatieve pin met de GND-poort en de positieve pin met de 5V-poort.
 
-![接続図のイラスト](../media/a4ec0b7f8fd95fb2d6bb5c06ca0776f0.jpeg)
+![Aansluitschema-illustratie](../media/a4ec0b7f8fd95fb2d6bb5c06ca0776f0.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak onderstaande code in de Arduino-software.
 
 ```c
 const uint8_t ledPin = 13;
@@ -66,10 +66,10 @@ void loop() {
 }
 ```
 
-## 動作例
+## Voorbeeldresultaat
 
-配線を正しく行い、コードをボードにアップロードします。
+Sluit alles goed aan en upload vervolgens de code naar het bord.
 
-物体がセンサーのスイッチに衝突すると、センサー上のLEDとボードのLED 13の両方が点灯します。
+Wanneer een object de schakelaar van de sensor raakt, gaan zowel de LED op de sensor als LED 13 op het bord aan.
 
 ---

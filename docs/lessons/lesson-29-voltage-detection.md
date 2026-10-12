@@ -1,47 +1,47 @@
-# レッスン29：電圧検出
+# Les 29: Spanningsdetectie
 
-> **キット：** Keyestudio 48-in-1 センサーキット  
-> **ボード：** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibele ATmega328P board
 
-![プロジェクト29：電圧検出のイラスト](../media/41967398a781944fd64ebd49a9c746fa.jpeg)
+![Project 29: Spanningsdetectie illustratie](../media/41967398a781944fd64ebd49a9c746fa.jpeg)
 
-## 説明
+## Beschrijving
 
-電子製品は種類が多いため、電源電圧も異なります。適切な電圧検出モジュールやコントローラで検出する必要があります。
+Aangezien elektronische producten uiteenlopend zijn, verschilt ook de voedingsspanning. Het is daarom nodig om deze te detecteren met een geschikte spanningsdetectiemodule of controller.
 
-コントローラのアナログインターフェースの最大入力電圧は5Vであり、5Vを超える電圧はそのままでは検出できません。
+De maximale ingangsspanning van de analoge interface van de controller is 5V, wat betekent dat spanningen hoger dan 5V niet gedetecteerd kunnen worden.
 
-しかし、この電圧検出モジュールを使用すれば5Vを超える電圧を検出できます。
+Met deze spanningsdetectormodule kan echter wel spanning boven 5 V worden gemeten.
 
-これは5:1の抵抗分圧に基づいています。アナログ基準が5Vの場合、入力電圧は最大25Vまで測定できます。アナログ基準が3.3Vの場合、入力電圧は最大16.5Vまでです。
+Deze is gebaseerd op een 5:1 weerstandsspanningsdeler. Met een analoge referentie van 5 V mag de ingangsspanning niet hoger zijn dan 25 V. Met een analoge referentie van 3,3 V mag de ingangsspanning niet hoger zijn dan 16,5 V.
 
-AVRのアナログ-デジタルコンバータは10ビットなので、アナログ分解能は0.00489V（5 V / 1023）です。5:1の分圧を考慮すると、入力で検出可能な最小増分は約0.02445Vになります。
+De AVR analoog-naar-digitaal-omzetter is 10-bits, dus de analoge resolutie is 0,00489 V (5 V / 1023). Met de 5:1 deler is de minimaal meetbare ingangsverandering ongeveer 0,02445 V.
 
-このセンサを3ピンケーブルで拡張ボードに接続すると、電源電圧の大きさを簡単に検出でき、インタラクティブメディア作品やロボットのためにバッテリの電力量を監視できます。また、IIC LCD1602 LCDモジュールと組み合わせて電圧を表示したり電圧モニタを作成したりすることもできます。
+Wanneer je deze sensor via een 3Pin-kabel op de uitbreidingskaart aansluit, kan deze niet alleen eenvoudig de grootte van de voedingsspanning detecteren en het batterijniveau van interactieve media of robots bewaken, maar ook gecombineerd worden met een IIC LCD1602 LCD-module om de spanning weer te geven of een spanningsmonitor te maken.
 
-## 仕様
+## Specificaties
 
-- 動作電圧: 0V-25V DC
+- Werkspanning: 0V-25V DC
 
-- 信号タイプ: アナログ信号
+- Signaaltype: analoog signaal
 
-## 接続図
+## Aansluitschema
 
-まず、接続前に次の部品を用意してください:
+Bereid eerst de volgende onderdelen voor voordat je aansluit:
 
-- V4.0 ボード\*1
+- V4.0 board\*1
 
-- 電圧センサー\*1
+- Spanningssensor\*1
 
-- USBケーブル\*1
+- USB-kabel\*1
 
-- ジャンパーワイヤー\*3
+- Jumperdraad\*3
 
-モジュールのSピンをV4.0ボードのアナログ A0 に接続し、負極ピンをGNDポートに、NCピンを5Vポートに接続します。
+Verbind de S-pin van de module met analoge A0 van de V4.0 board, verbind de negatieve pin met de GND-aansluiting, en de NC-pin met de 5V-aansluiting.
 
-![接続図のイラスト](../media/b8754c45901ff42ba9caadce5db01a3a.jpeg)
+![Aansluitschema illustratie](../media/b8754c45901ff42ba9caadce5db01a3a.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -80,12 +80,12 @@ Serial.print(val2);      //The serial port prints the value of the variable val2
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 実例の結果
+## Voorbeeldresultaat
 
-![実例の結果のイラスト](../media/ac8825bb333757bad26785e58651beb7.png)
+![Voorbeeldresultaat illustratie](../media/ac8825bb333757bad26785e58651beb7.png)
 
-上記の配線どおりに接続し、コードをコンパイルしてアップロード後、電源を入れてシリアルモニタを開くと、下図のように検出した電圧値が表示されます。
+Als de bedrading zoals hierboven is uitgevoerd, compileer en upload je de code en zet je het bord onder spanning. Open vervolgens de seriële monitor; deze geeft de gedetecteerde spanningswaarde zoals hieronder weer.
 
-![実例の結果のイラスト](../media/af699a83a891ea99d193d5b53bd27fa1.jpeg)
+![Voorbeeldresultaat illustratie](../media/af699a83a891ea99d193d5b53bd27fa1.jpeg)
 
 ---

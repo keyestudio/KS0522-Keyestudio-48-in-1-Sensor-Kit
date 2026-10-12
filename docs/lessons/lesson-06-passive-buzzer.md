@@ -1,47 +1,47 @@
-# レッスン 06：パッシブブザー
+# Les 06: Passieve zoemer
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![プロジェクト6：パッシブブザーの図](../media/1bd2e3afebf5a0d3712fe42092b0a1b4.png)
+![Project 6: Illustratie passieve zoemer](../media/1bd2e3afebf5a0d3712fe42092b0a1b4.png)
 
-## 説明
+## Beschrijving
 
-Arduinoを使って多くのインタラクティブな作品を作ることができ、その中でも最もよく使われるのが音と光の表示です。この実験の回路は音を出すことができます。
+We kunnen Arduino gebruiken om veel interactieve projecten te maken, waarvan de meest gebruikte de akoestisch-visuele weergave is. Het circuit in dit experiment kan geluid produceren.
 
-通常、この実験はブザーまたはスピーカーで行えますが、ブザーの方が簡単で使いやすいです。
+Normaal kan het experiment worden uitgevoerd met een zoemer of een luidspreker, waarbij een zoemer eenvoudiger en makkelijker in gebruik is.
 
-ここで紹介するブザーはパッシブブザーです。自ら駆動することはできず、外部からのパルス周波数で駆動します。周波数が異なれば異なる音が出ます。Arduinoを使って曲のメロディをコーディングすることができ、とても楽しく簡単です。
+De zoemer die hier wordt geïntroduceerd is een passieve zoemer. Deze kan niet zelfstandig worden aangestuurd, maar door externe pulsfrequenties. Verschillende frequenties produceren verschillende geluiden. Je kunt Arduino gebruiken om de melodie van een liedje te programmeren — leuk en eenvoudig.
 
-## 仕様
+## Specificaties
 
-- 動作電圧: 3.3-5v
+- Werkspanning: 3.3-5v
 
-- インターフェースタイプ: デジタル
+- Interface type: digitaal
 
-- サイズ: 30\*20mm
+- Afmetingen: 30\*20mm
 
-- 重量: 4g
+- Gewicht: 4g
 
-## 接続図
+## Aansluitschema
 
-まず、接続の前に以下の部品を用意してください:
+Bereid eerst de volgende onderdelen voor voordat je gaat aansluiten:
 
-- V4.0 ボード*1
+- V4.0-bord*1
 
-- パッシブブザーモジュール*1
+- Passieve zoemer-module*1
 
-- USBケーブル*1
+- USB-kabel*1
 
-- ジャンパーワイヤ*3
+- Jumperdraden*3
 
-モジュールのSピンをV4.0ボードのDigital 3に接続し、マイナスピンをGNDポート、プラスピンを5Vポートに接続します。
+Verbind de S-pin van de module met Digital 3 van het V4.0-bord, verbind de negatieve pin met de GND-poort en de positieve pin met de 5V-poort.
 
-![接続図のイラスト](../media/e9e7ba383738c3b6be85a1f3c97e5385.jpeg)
+![Aansluitschema illustratie](../media/e9e7ba383738c3b6be85a1f3c97e5385.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -70,10 +70,10 @@ delay(2);//2ms delay
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 実行結果
+## Voorbeeldresultaat
 
-コードをボードにアップロードすると、ブザーが鳴ります。
+Na het uploaden van de code naar het bord zal de zoemer geluid maken.
 
-![実行結果のイラスト](../media/9b29eccd437694e479a836b7da66d500.png)
+![Voorbeeldresultaat illustratie](../media/9b29eccd437694e479a836b7da66d500.png)
 
 ---

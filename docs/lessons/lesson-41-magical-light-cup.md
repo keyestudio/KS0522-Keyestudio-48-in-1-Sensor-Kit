@@ -1,29 +1,29 @@
-# レッスン41: マジカルライトカップ
+# Les 41: Magische Lichtbeker
 
-> **キット:** Keyestudio 48-in-1 Sensor Kit  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328Pボード
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![プロジェクト41: マジカルライトカップのイラスト](../media/dc3acff676b2611f440643f1657b42e7.png)
+![Project 41: illustratie Magische Lichtbeker](../media/dc3acff676b2611f440643f1657b42e7.png)
 
-## はじめに
+## Inleiding
 
-マジックライトカップモジュールはArduinoと連動できます。原理はPWMによる調光です。
+De magische lichtbeker-module kan met Arduino communiceren. Het principe is gebaseerd op PWM-dimmen.
 
-モジュール上の水銀スイッチはデジタル信号を供給し、PWM制御をトリガーします。プログラム設計により2つのモジュールの明るさが一緒に変化し、最終的に2つのカップが光を注ぐような変化効果が見られます。
+De kwikschakelaar op de module levert een digitaal signaal en activeert PWM-regeling. De helderheid van twee modules verandert gelijktijdig via het programma; uiteindelijk zie je het veranderende effect waarbij twee bekers licht "gieten".
 
-## 仕様
+## Specificatie
 
-- 電源電圧: 3.3V～5V
+- Voedingsspanning: 3.3V tot 5V
 
-- インターフェース: デジタル
+- Interface: Digitaal
 
-## 接続図
+## Aansluitschema
 
-![接続図のイラスト](../media/9d8d534c60a81608741f85c08d4d0bbe.jpeg)
+![Aansluitschema illustratie](../media/9d8d534c60a81608741f85c08d4d0bbe.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -75,12 +75,12 @@ delay(5);
 ///////////////////////////////////////////////////////////////
 ```
 
-## 実行結果
+## Voorbeeldresultaat
 
-![実行例のイラスト](../media/f629888f2fedea9442ba74dc8761fcb3.png)
+![Voorbeeldresultaat illustratie](../media/f629888f2fedea9442ba74dc8761fcb3.png)
 
-上の図のように配線し、コードをボードにアップロードすると、片方のカップが点灯してもう片方が消灯しているのが見えます。これら2つのカップを同じ側に傾けると、片方が徐々に明るくなり、もう片方の明るいカップが徐々に暗くなります。
+Sluit alles aan volgens het bovenstaande schema en laad de code op het bord, dan zie je dat de ene beker oplicht terwijl de andere uit is. Wanneer je de twee bekers naar dezelfde kant kantelt, wordt de ene beker geleidelijk helderder en de andere geleidelijk gedoofd.
 
-![実行例のイラスト](../media/cfc57515b967d19fcda65ea50bda76f1.png)
+![Voorbeeldresultaat illustratie](../media/cfc57515b967d19fcda65ea50bda76f1.png)
 
 ---

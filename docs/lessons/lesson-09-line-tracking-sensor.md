@@ -1,47 +1,47 @@
-# レッスン09: ライン追跡センサー
+# Les 09: Lijnvolgsensor
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Set:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![プロジェクト9: ライン追跡センサー 図](../media/c476ef922ab6a8d31cb68f3ab3fa2ced.png)
+![Project 9: Lijnvolgsensor illustratie](../media/c476ef922ab6a8d31cb68f3ab3fa2ced.png)
 
-## 説明
+## Beschrijving
 
-このライン追跡センサーは、黒地に白い線、または白地に黒い線を検出できます。
+Deze lijnvolgsensor kan een witte lijn op een zwarte achtergrond of een zwarte lijn op een witte achtergrond detecteren.
 
-単一のライン追跡信号は、より正確で安定したライン検出のために安定したTTL出力を提供します。必要なライン追跡ロボット用センサーを取り付けることで、マルチチャンネル構成も容易に実現できます。
+De enkele lijnvolguitgang levert een stabiel TTL-signaal voor een nauwkeurigere en stabielere lijndetectie. Een meerkanaalsoptie kan eenvoudig worden gerealiseerd door de benodigde lijnvolg-robotsensoren te installeren.
 
-## 仕様
+## Specificatie
 
-1. 電源: +5V
+1. Voedingsspanning: +5V
 
-2. 動作電流: \<10mA
+2. Bedrijfstroom: \<10mA
 
-3. 動作温度範囲: 0°C \~ + 50°C
+3. Bedrijfstemperatuurbereik: 0°C \~ + 50°C
 
-4. 出力インターフェース: 3線式インターフェース (1 - 信号, 2 - 電源, 3 - 電源の負極)
+4. Uitgangsinterface: 3-draads interface (1 - signaal, 2 - voeding, 3 - voedingsnegatief)
 
-5. 出力レベル: TTLレベル
+5. Uitgangsniveau: TTL-niveau
 
-## 接続図
+## Aansluitschema
 
-まず、接続前に以下の部品を準備してください:
+Bereid eerst de volgende onderdelen voor voordat je gaat aansluiten:
 
-- V4.0ボード\*1
+- V4.0-bord\*1
 
-- ライン追跡モジュール \*1
+- Lijnvolgmodule\*1
 
-- USBケーブル\*1
+- USB-kabel\*1
 
-- ジャンパー線\*3
+- Jumperdraad\*3
 
-モジュールのSピンをV4.0ボードのDigital 3に接続し、GNDピンをGNDポートに、V+ピンを5Vポートに接続します。
+Verbind de S-pin van de module met Digital 3 van het V4.0-bord, verbind de GND-pin met GND en de V+-pin met 5V.
 
-![接続図](../media/6727a1d7d92c3878fc51b8db0502fd14.jpeg)
+![Aansluitschema illustratie](../media/6727a1d7d92c3878fc51b8db0502fd14.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -58,10 +58,10 @@ void loop()
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 実行結果の例
+## Voorbeeldresultaat
 
-![実行結果の例 図](../media/af115c59987fee06447790f1740e3203.jpeg)
+![Voorbeeldresultaat illustratie](../media/af115c59987fee06447790f1740e3203.jpeg)
 
-コードをボードにアップロードしたら、シリアルモニタを開き、ボーレートを9600に設定すると、センサーからのデータが表示されます。
+Nadat de code naar het bord is geüpload, open je de seriële monitor en stel je de baudrate in op 9600; vervolgens zie je de gegevens van de sensor.
 
 ---

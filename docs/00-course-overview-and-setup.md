@@ -1,114 +1,114 @@
-# Keyestudio 48-in-1 センサーキット：コース概要とセットアップ
+# Keyestudio 48-in-1 Sensor Kit: Cursusoverzicht en installatie
 
-![Keyestudio 48-in-1 センサーキットのイラスト](media/714cd6e6cc87437cbdb2a0def262cc62.jpeg)
+![Keyestudio 48 in 1 Sensor Kit illustratie](media/714cd6e6cc87437cbdb2a0def262cc62.jpeg)
 
-## コース概要
+## Cursusoverzicht
 
-このセンサーキットはさまざまなマイコンやRaspberry Piと互換性があり、アクティブブザーモジュール、5Vリレーモジュール、温湿度モジュールなどを含む48種類の一般的なセンサーとモジュールを収録しています。
+Deze sensorkit, compatibel met verschillende microcontrollers en Raspberry Pi, bevat 48 veelgebruikte sensoren en modules, waaronder een actieve buzzermodule, een 5V relaismodule, een temperatuur- en vochtigheidsmodule en anderen.
 
-また、各センサーに基づく開発ボード向けの詳細なプロジェクト（配線方法やテストコードなど）も提供されています。このキットを使えば、それらについての興味深い知識を得るだけでなく、実用的なインタラクティブプロジェクトを作成することができます。
+Tegelijk worden er voor elke sensor gedetailleerde projecten gebaseerd op een ontwikkelbord geleverd, zoals aansluitmethodes en testcode. Met behulp van deze kit kunt u niet alleen interessante kennis over de modules opdoen, maar ook substantiële interactieve projecten maken.
 
-以下のプロジェクトでは、メインボードやその他の配線はキットに含まれていない点にご注意ください。
+Houd er rekening mee dat in de volgende projecten het ontwikkelbord en overige kabels niet in deze kit zijn inbegrepen.
 
-> **リソースとコードのダウンロード：** [KS0522 チュートリアル](./Resources.7z)
+> **Hulpmiddelen en code downloaden:** [KS0522 handleiding](./Resources.7z)
 
-## コンポーネント一覧
+## Componentenlijst
 
-| **番号** |                      **部品**                      | **数量** |                          **画像**                           |
-| :-----: | :-------------------------------------------------: | :------: | :--------------------------------------------------------: |
-|    1    |                  白色 LED モジュール                |    1     |       ![白色 LED モジュール](media/00fa6b471d2b7f1608a71020b1970634.png)        |
-|    2    |                   RGB LED モジュール                |    1     |       ![RGB LED モジュール](media/a93124954fa6e91ebc70a17a4658878f.png)        |
-|    3    |                    3W LED モジュール                |    1     |       ![3W LED モジュール](media/39d91874c6a4520c3c51a5d1175eaf59.png)        |
-|    4    |                  信号機モジュール                   |    1     |       ![信号機モジュール](media/049ef2362fd17ddcd0f1999fbc73786c.png)        |
-|    5    |                アクティブブザーモジュール           |    1     |       ![アクティブブザーモジュール](media/7804a211249ab9d822691fbcb412b3da.png)        |
-|    6    |                パッシブブザーモジュール             |    1     |       ![パッシブブザーモジュール](media/2b1a7aa03cde9830e4854124dff43070.png)        |
-|    7    |             デジタルプッシュボタンモジュール        |    1     |       ![デジタル プッシュボタン モジュール](media/4f3852adfd12a4a5ce8e61212f4598ca.png)        |
-|    8    |                    衝突センサー                     |    1     |       ![衝突センサー](media/883f639547b26d746c24a5c90d2b82b3.png)        |
-|    9    |               ライントラッキングセンサー            |    1     |       ![ライントラッキングセンサー](media/62e5d8f364a6fc4d4cc58b07c99dfbba.png)        |
-|   10    |            赤外線障害物回避センサー                 |    1     |       ![赤外線障害物回避センサー](media/f8e1dca64e2212f29df369129422f52a.png)        |
-|   11    |             フォトインタラプターモジュール          |    1     |       ![フォトインタラプターモジュール](media/f876c4f4294f075cb04ee43590ddf88b.png)        |
-|   12    |                  ホール磁気センサー                 |    1     |       ![ホール磁気センサー](media/7aa521918a3bb3c2b91e06abfc7fbe70.png)        |
-|   13    |                 ノックセンサーモジュール            |    1     |       ![ノックセンサーモジュール](media/346d5bfeb282a2013668975032b5ca82.png)        |
-|   14    |                 デジタル傾斜センサー                 |    1     |       ![デジタル傾斜センサー](media/dae46d28ac614887748a08ac28115314.png)        |
-|   15    |               静電容量式タッチセンサー               |    1     |       ![静電容量式タッチセンサー](media/649629399ead5d8366fc7c2b8af27500.png)        |
-|   16    |                    火炎センサー                     |    1     |       ![火炎センサー](media/35c5a2593df5d4e76865158e790feada.png)        |
-|   17    |                 リードスイッチモジュール            |    1     |       ![リードスイッチモジュール](media/e580999515f6522eb603ea723bf62173.png)        |
-|   18    |                  PIR モーションセンサー             |    1     |       ![PIR モーションセンサー](media/ce608db25742f19fdf6eceda756a59d9.png)        |
-|   19    |               アナログ温度センサー                   |    1     |       ![アナログ温度センサー](media/2d1c2777de054df1b8c0b0f48d67319e.png)        |
-|   20    |               アナログ回転センサー                   |    1     |       ![アナログ回転センサー](media/965283cbc1319760b2641aa95d7ac69b.png)        |
-|   21    |                   光センサー                        |    1     |       ![光センサー](media/080b732b0ef67ead75f644ba07547b41.png)        |
-|   22    |                 アナログ音センサー                   |    1     |       ![アナログ音センサー](media/a494bbec73f7c8ff91b3133c9d2798a7.jpeg)       |
-|   23    |                    水センサー                       |    1     |       ![水センサー](media/e0b94b539ac96c9991c5f3c667e5d7b0.png)        |
-|   24    |                土壌湿度センサー                      |    1     |       ![土壌湿度センサー](media/7d45efb1fd73b0661b2e9114d98bd7f3.jpeg)       |
-|   25    |                  アナログガスセンサー                |    1     |       ![アナログガスセンサー](media/dad10644704395d3ca9cb5ba5ae5ea91.png)        |
-|   26    |                アナログアルコールセンサー            |    1     |       ![アナログアルコールセンサー](media/cabb6dae6f2fcf728c20621cc2952302.png)        |
-|   27    |                    蒸気センサー                      |    1     |       ![蒸気センサー](media/902883d9366fa8286ffb783be3e88f74.png)        |
-|   28    |    アナログ圧電セラミック振動センサー               |    1     |       ![アナログ圧電セラミック振動センサー](media/5f59fb3b72e3fe5005960de7cec617be.png)        |
-|   29    |                   電圧センサー                       |    1     |       ![電圧センサー](media/4fb203182e6b2e9439d169e1e37b6291.png)        |
-|   30    |                薄膜圧力センサー                      |    1     |       ![薄膜圧力センサー](media/5517d0c49df292c00f9d8f33b10d530e.png)        |
-|   31    |            TEMT6000 環境光センサー                   |    1     |       ![TEMT6000 環境光センサー](media/47bd304fdc23d4509d48a830f882ab3e.jpeg)       |
-|   32    |         GUVA-S12SD 3528 紫外線センサー               |    1     |       ![GUVA-S12SD 3528 紫外線センサー](media/0ebc10c2e86a80d18a5986572128f673.png)        |
-|   33    |             デジタルIR受信モジュール                 |    1     |       ![デジタル IR 受信モジュール](media/ef949b17df9e18ae686b63573d02a81d.png)        |
-|   34    |            デジタルIR送信モジュール                  |    1     |       ![デジタル IR 送信モジュール](media/5ec6fb3ccd872d7d569386f9dd7f94a6.png)        |
-|   35    |              脈拍モニターモジュール                  |    1     |       ![脈拍モニターモジュール](media/443801b38858849ec4c39522b408d43f.png)        |
-|   36    |                   ジョイスティックモジュール         |    1     |       ![ジョイスティックモジュール](media/bad69264ba325dcb9c624493bf0c91b4.png)        |
-|   37    |                ロータリエンコーダーモジュール        |    1     |       ![ロータリエンコーダーモジュール](media/c23713422d192d04daad1f78217482a1.png)        |
-|   38    |              5V 1チャネルリレーモジュール           |    1     |       ![5V 1チャネルリレーモジュール](media/44701f3662e67ada71ddfaeecf4c95d0.png)        |
-|   39    |           LM35 線形温度センサー                      |    1     |       ![LM35 線形温度センサー](media/5ef9579fb067139086bed84750439166.png)        |
-|   40    |        DHT11 温湿度センサー                          |    1     |       ![DHT11 温湿度センサー](media/45a95440852f54274ccfdb0c0e373191.png)        |
-|   41    |              マジカルライトカップモジュール          |    2     |       ![マジカルライトカップモジュール](media/15137aab686349c3683c8193b56efcf1.png)        |
-|   42    |          APDS-9930 態勢センサーモジュール            |    1     |       ![APDS-9930 態勢センサーモジュール](media/ab282825c64a8293781b39f1932c2118.png)        |
-|   43    | ALS 赤外LED 光学近接検出モジュール                   |    1     |       ![ALS 赤外LED 光学近接検出モジュール](media/29f295f3602c320aea57e16994fcc1a5.png)        |
-|   44    | MMA8452Q 3軸デジタル加速度傾斜センサー               |    1     |       ![MMA8452Q 3軸デジタル加速度傾斜センサー](media/5dad2d704cc2fbc58a21767365ae96c0.png)        |
-|   45    |                   9G サーボモーター                   |    1     |       ![9G サーボモーター](media/044232fa56bdfd60ccf2646f4a5f9cfe.png)        |
-|   46    |           HC-SR04 青色超音波センサー                  |    1     |       ![HC-SR04 青色超音波センサー](media/b045bfb123aa82a1640810f88507ff47.png)        |
-|   47    | 0802 LCD モジュール 5V 青スクリーン（バックライト付き） |    1     |       ![0802 LCD モジュール 5V 青スクリーン（バックライト付き）](media/1aa1fd551e180d013633c1fe857c24a6.jpeg)       |
-|   48    |        8x8 LED マトリックスモジュール（アドレス選択） |    1     |       ![8x8 LED マトリックスモジュール（アドレス選択）](media/10e87958bbef207075643ae4f5481457.jpeg)       |
+| **Nr.** |                   **Componenten**                    | **Aantal** |                         **Afbeelding**                          |
+| :-----: | :-------------------------------------------------: | :--------: | :------------------------------------------------------------: |
+|    1    |                  Wit LED-module                      |      1     |       ![Wit LED-module](media/00fa6b471d2b7f1608a71020b1970634.png)        |
+|    2    |                   RGB LED-module                     |      1     |       ![RGB LED-module](media/a93124954fa6e91ebc70a17a4658878f.png)        |
+|    3    |                    3W LED-module                     |      1     |       ![3W LED-module](media/39d91874c6a4520c3c51a5d1175eaf59.png)        |
+|    4    |                Verkeerslichtmodule                    |      1     |       ![Verkeerslichtmodule](media/049ef2362fd17ddcd0f1999fbc73786c.png)        |
+|    5    |                Actieve buzzermodule                  |      1     |       ![Actieve buzzermodule](media/7804a211249ab9d822691fbcb412b3da.png)        |
+|    6    |                Passieve buzzermodule                 |      1     |       ![Passieve buzzermodule](media/2b1a7aa03cde9830e4854124dff43070.png)        |
+|    7    |             Digitale drukknopmodule                  |      1     |       ![Digitale drukknopmodule](media/4f3852adfd12a4a5ce8e61212f4598ca.png)        |
+|    8    |                  Botsingssensor                      |      1     |       ![Botsingssensor](media/883f639547b26d746c24a5c90d2b82b3.png)        |
+|    9    |                Lijnvolgsensor                        |      1     |       ![Lijnvolgsensor](media/62e5d8f364a6fc4d4cc58b07c99dfbba.png)        |
+|   10    |         Infrarood obstakelvermijdingssensor          |      1     |       ![Infrarood obstakelvermijdingssensor](media/f8e1dca64e2212f29df369129422f52a.png)        |
+|   11    |              Foto-interruptermodule                  |      1     |       ![Foto-interruptermodule](media/f876c4f4294f075cb04ee43590ddf88b.png)        |
+|   12    |                Hall-magnetische sensor               |      1     |       ![Hall-magnetische sensor](media/7aa521918a3bb3c2b91e06abfc7fbe70.png)        |
+|   13    |                 Knock-sensormodule                   |      1     |       ![Knock-sensormodule](media/346d5bfeb282a2013668975032b5ca82.png)        |
+|   14    |                 Digitale kantelsensor                |      1     |       ![Digitale kantelsensor](media/dae46d28ac614887748a08ac28115314.png)        |
+|   15    |               Capacitatieve aanraksensor             |      1     |       ![Capacitatieve aanraksensor](media/649629399ead5d8366fc7c2b8af27500.png)        |
+|   16    |                    Vlam-sensor                       |      1     |       ![Vlam-sensor](media/35c5a2593df5d4e76865158e790feada.png)        |
+|   17    |                 Reedschakelaarmodule                 |      1     |       ![Reedschakelaarmodule](media/e580999515f6522eb603ea723bf62173.png)        |
+|   18    |                  PIR bewegingssensor                 |      1     |       ![PIR bewegingssensor](media/ce608db25742f19fdf6eceda756a59d9.png)        |
+|   19    |              Analoge temperatuursensor               |      1     |       ![Analoge temperatuursensor](media/2d1c2777de054df1b8c0b0f48d67319e.png)        |
+|   20    |               Analoge rotatiesensor                  |      1     |       ![Analoge rotatiesensor](media/965283cbc1319760b2641aa95d7ac69b.png)        |
+|   21    |                  Fotocel-sensor                      |      1     |       ![Fotocel-sensor](media/080b732b0ef67ead75f644ba07547b41.png)        |
+|   22    |                 Analoge geluidsensor                 |      1     |       ![Analoge geluidsensor](media/a494bbec73f7c8ff91b3133c9d2798a7.jpeg)       |
+|   23    |                    Watersensor                       |      1     |       ![Watersensor](media/e0b94b539ac96c9991c5f3c667e5d7b0.png)        |
+|   24    |                Bodemvochtsensor                      |      1     |       ![Bodemvochtsensor](media/7d45efb1fd73b0661b2e9114d98bd7f3.jpeg)       |
+|   25    |                  Analoge gassensor                   |      1     |       ![Analoge gassensor](media/dad10644704395d3ca9cb5ba5ae5ea91.png)        |
+|   26    |                Analoge alcoholsensor                  |      1     |       ![Analoge alcoholsensor](media/cabb6dae6f2fcf728c20621cc2952302.png)        |
+|   27    |                    Damp-sensor                       |      1     |       ![Damp-sensor](media/902883d9366fa8286ffb783be3e88f74.png)        |
+|   28    |    Analoge piëzo-elektrische keramische trillingssensor |    1     |       ![Analoge piëzo-elektrische keramische trillingssensor](media/5f59fb3b72e3fe5005960de7cec617be.png)        |
+|   29    |                   Spanningssensor                    |      1     |       ![Spanningssensor](media/4fb203182e6b2e9439d169e1e37b6291.png)        |
+|   30    |              Dunfilm-druksensor                      |      1     |       ![Dunfilm-druksensor](media/5517d0c49df292c00f9d8f33b10d530e.png)        |
+|   31    |            TEMT6000 omgevingslichtsensor             |      1     |       ![TEMT6000 omgevingslichtsensor](media/47bd304fdc23d4509d48a830f882ab3e.jpeg)       |
+|   32    |         GUVA-S12SD 3528 ultraviolet-sensor           |      1     |       ![GUVA-S12SD 3528 ultraviolet-sensor](media/0ebc10c2e86a80d18a5986572128f673.png)        |
+|   33    |             Digitale IR-ontvanger-module             |      1     |       ![Digitale IR-ontvanger-module](media/ef949b17df9e18ae686b63573d02a81d.png)        |
+|   34    |            Digitale IR-zendermodule                  |      1     |       ![Digitale IR-zendermodule](media/5ec6fb3ccd872d7d569386f9dd7f94a6.png)        |
+|   35    |              Pols-slagmonitor-module                 |      1     |       ![Pols-slagmonitor-module](media/443801b38858849ec4c39522b408d43f.png)        |
+|   36    |                   Joystick-module                    |      1     |       ![Joystick-module](media/bad69264ba325dcb9c624493bf0c91b4.png)        |
+|   37    |                Rotary encoder-module                 |      1     |       ![Rotary encoder-module](media/c23713422d192d04daad1f78217482a1.png)        |
+|   38    |              5V 1-kanaals relaismodule               |      1     |       ![5V 1-kanaals relaismodule](media/44701f3662e67ada71ddfaeecf4c95d0.png)        |
+|   39    |           LM35 lineaire temperatuursensor            |      1     |       ![LM35 lineaire temperatuursensor](media/5ef9579fb067139086bed84750439166.png)        |
+|   40    |        DHT11 temperatuur- en vochtigheidssensor      |      1     |       ![DHT11 temperatuur- en vochtigheidssensor](media/45a95440852f54274ccfdb0c0e373191.png)        |
+|   41    |              Magische lichtbeker-module              |      2     |       ![Magische lichtbeker-module](media/15137aab686349c3683c8193b56efcf1.png)        |
+|   42    |          APDS-9930 houdingssensor-module             |      1     |       ![APDS-9930 houdingssensor-module](media/ab282825c64a8293781b39f1932c2118.png)        |
+|   43    | ALS infrarood LED optische nabijheidsdetectiemodule |      1     |       ![ALS infrarood LED optische nabijheidsdetectiemodule](media/29f295f3602c320aea57e16994fcc1a5.png)        |
+|   44    | MMA8452Q drieassige digitale versnellings-/kantelsensor |    1     |       ![MMA8452Q drieassige digitale versnellings-/kantelsensor](media/5dad2d704cc2fbc58a21767365ae96c0.png)        |
+|   45    |                   9G servo-motor                     |      1     |       ![9G servo-motor](media/044232fa56bdfd60ccf2646f4a5f9cfe.png)        |
+|   46    |           HC-SR04 blauwe ultrasone sensor            |      1     |       ![HC-SR04 blauwe ultrasone sensor](media/b045bfb123aa82a1640810f88507ff47.png)        |
+|   47    |  0802 LCD-module 5V blauw scherm (met achtergrondverlichting) | 1 |       ![0802 LCD-module 5V blauw scherm (met achtergrondverlichting)](media/1aa1fd551e180d013633c1fe857c24a6.jpeg)       |
+|   48    |        8x8 LED-matrixmodule met adresselectie        |      1     |       ![8x8 LED-matrixmodule met adresselectie](media/10e87958bbef207075643ae4f5481457.jpeg)       |
 
-## Keyestudio V4.0 開発ボード
+## Keyestudio V4.0 ontwikkelbord
 
-![Keyestudio V4.0 開発ボードのイラスト](media/d48e310dbb7f60760a02fbd88c17d97a.png)
+![3. Keyestudio V4.0 ontwikkelbord illustratie](media/d48e310dbb7f60760a02fbd88c17d97a.png)
 
-Keyestudio V4.0 開発ボードは Arduino Uno 互換のボードで、ATmega328P MCU をベースにしており、UART から USB への変換には cp2102 チップを使用しています。
+Keyestudio V4.0 ontwikkelbord is een Arduino Uno-compatibel bord, gebaseerd op de ATmega328P MCU, en met een cp2102-chip als UART-naar-USB-converter.
 
-![Keyestudio V4.0 開発ボードのイラスト](media/d1d8b8703109cc5f953ec723ac57804d.jpeg)
-14 個のデジタル入出力ピン（うち 6 個は PWM 出力として使用可能）、6 個のアナログ入力、16 MHz の水晶発振子、USB コネクタ、電源ジャック、2 つの ICSP ヘッダ、およびリセットボタンを備えています。
+![3. Keyestudio V4.0 ontwikkelbord illustratie](media/d1d8b8703109cc5f953ec723ac57804d.jpeg)
+Het heeft 14 digitale in-/uitgangspinnen (waarvan 6 kunnen worden gebruikt als PWM-uitgangen), 6 analoge ingangen, een 16 MHz kwarts, een USB-aansluiting, een voedingsconnector, 2 ICSP-headers en een resetknop.
 
-![Keyestudio V4.0 開発ボードのイラスト](media/bc609cfdb8f102e95dd298121e8eae01.jpeg)
-マイコンを動作させるために必要なものはすべて含まれており、USB ケーブルでコンピュータに接続するか、外部 DC 電源ジャック（DC 7-12V）またはメスヘッダの Vin/ GND(DC 7-12V) 経由で給電するだけで始められます。
+![3. Keyestudio V4.0 ontwikkelbord illustratie](media/bc609cfdb8f102e95dd298121e8eae01.jpeg)
+Het bevat alles wat nodig is om de microcontroller te ondersteunen; verbind het eenvoudig met een computer met een USB-kabel of voed het via een externe DC-voedingsingang (DC 7-12V) of via vrouwelijke headers Vin/ GND (DC 7-12V) om te beginnen.
 
-| マイクロコントローラ        | ATmega328P-PU                                            |
+| Microcontroller             | ATmega328P-PU                                            |
 |-----------------------------|----------------------------------------------------------|
-| 動作電圧                    | 5V                                                       |
-| 推奨入力電圧                | DC7-12V                                                  |
-| デジタル入出力ピン          | 14 (D0-D13)  （うち 6 個は PWM 出力）                   |
-| PWM デジタル入出力ピン      | 6 (D3, D5, D6, D9, D10, D11)                             |
-| アナログ入力ピン            | 6 (A0-A5)                                                |
-| 各 I/O ピンの DC 電流        | 20 mA                                                    |
-| 3.3V ピンの DC 電流         | 50 mA                                                    |
-| フラッシュメモリ            | 32 KB (ATmega328P-PU) うちブートローダで 0.5 KB 使用    |
+| Bedrijfsspanning            | 5V                                                       |
+| Ingangsspanning (aanbevolen)| DC7-12V                                                  |
+| Digitale I/O-pinnen         | 14 (D0-D13)  (waarvan 6 PWM-uitgang)                     |
+| PWM digitale I/O-pinnen     | 6 (D3, D5, D6, D9, D10, D11)                             |
+| Analoge ingangen            | 6 (A0-A5)                                                |
+| DC-stroom per I/O-pin       | 20 mA                                                    |
+| DC-stroom voor 3.3V-pin     | 50 mA                                                    |
+| Flashgeheugen               | 32 KB (ATmega328P-PU) waarvan 0.5 KB door bootloader gebruikt |
 | SRAM                        | 2 KB (ATmega328P-PU)                                     |
 | EEPROM                      | 1 KB (ATmega328P-PU)                                     |
-| クロックスピード            | 16 MHz                                                   |
+| Kloksnelheid                | 16 MHz                                                   |
 | LED_BUILTIN                 | D13                                                      |
 
-## Arduino IDE とドライバのインストール
+## Arduino IDE en stuurprogramma installatie
 
-![Arduino IDE とドライバのインストール画像](media/image-20260908110236895.png)
+![Arduino IDE en stuurprogramma installatie afbeelding](media/image-20260908110236895.png)
 
-> **セットアップガイド：** [Arduino IDE、ドライバ、ライブラリのインストールと最初のスケッチ](https://getting-started-with-arduino.readthedocs.io/en/latest/Arduino%20IDE%20Tutorial.html).
+> **Installatiegids:** [Installeer de Arduino IDE, stuurprogramma's, bibliotheken en de eerste sketch](https://getting-started-with-arduino.readthedocs.io/en/latest/Arduino%20IDE%20Tutorial.html).
 
-## ライブラリ要件
+## Vereiste bibliotheken
 
-> **安全とセットアップ。** 配線を変更する前に電源を切ってください。リレープロジェクトは、適切な絶縁、筐体、商用電源の安全対策が施されていない限り、必ず低電圧負荷のみで使用してください。V4.0 ボード向けのサンプルをコンパイルする前に、Arduino IDE で必ず **Arduino Uno** を選択してください。
+> **Veiligheid en installatie.** Koppel de voeding los voordat u bedrading wijzigt. Gebruik het relaisproject alleen met laagspanningsbelastingen tenzij geschikte isolatie, behuizing en netspanningsveiligheidsmaatregelen aanwezig zijn. Selecteer **Arduino Uno** in de Arduino IDE voordat u voorbeelden voor het V4.0-bord compileert.
 
-ほとんどの例は標準の Arduino コアのみを使用します。対応するプロジェクトをコンパイルする前に、以下のライブラリをインストールしてください。パッケージには古いライブラリ API を対象としたプロジェクト向けに、`Resources/02. libraries/` 以下にレガシーコピーも含まれています。
+De meeste voorbeelden gebruiken alleen de standaard Arduino-core. Installeer de volgende bibliotheken voordat u de bijbehorende projecten compileert. Het pakket bevat ook legacy-kopieën onder `Resources/02. libraries/` voor projecten waarvan de code gericht is op oudere library-API's.
 
-| プロジェクト | 必要なライブラリ | インストールの案内 |
+| Projecten | Vereiste bibliotheek | Installatie-instructie |
 | --- | --- | --- |
-| 33–34 | `IRremote` | Arduino IDE の Library Manager から **IRremote** をインストールしてください。 |
-| 40 | `DHTlib` | Arduino IDE の Library Manager から **DHTlib** をインストールしてください。下の例は現在の `dht.h` API を使用しています。 |
-| 42 | `SparkFun_APDS9960` | ハードウェアが APDS-9960 であることを確認した後、同梱の `Resources/02. libraries/SparkFun_APDS9960` ライブラリを使用してください。 |
-| 43 | `APDS9930` | ハードウェアが APDS-9930 であることを確認した後、同梱の `Resources/02. libraries/APDS9930_` ライブラリを使用してください。 |
-| 44 | `SparkFun_MMA8452Q` | 同梱の `Resources/02. libraries/SparkFun_MMA8452Q_Arduino_Library_master` ライブラリを使用してください。 |
-| 48 | `Adafruit LED Backpack Library` and `Adafruit GFX Library` | 両方のライブラリを Arduino IDE の Library Manager からインストールしてください。 |
+| 33–34 | `IRremote` | Installeer **IRremote** via de Library Manager van de Arduino IDE. |
+| 40 | `DHTlib` | Installeer **DHTlib** via de Library Manager van de Arduino IDE. Het onderstaande voorbeeld gebruikt de huidige `dht.h` API. |
+| 42 | `SparkFun_APDS9960` | Gebruik de meegeleverde `Resources/02. libraries/SparkFun_APDS9960` bibliotheek nadat u hebt bevestigd dat de hardware APDS-9960 is. |
+| 43 | `APDS9930` | Gebruik de meegeleverde `Resources/02. libraries/APDS9930_` bibliotheek nadat u hebt bevestigd dat de hardware APDS-9930 is. |
+| 44 | `SparkFun_MMA8452Q` | Gebruik de meegeleverde `Resources/02. libraries/SparkFun_MMA8452Q_Arduino_Library_master` bibliotheek. |
+| 48 | `Adafruit LED Backpack Library` en `Adafruit GFX Library` | Installeer beide bibliotheken via de Library Manager van de Arduino IDE. |

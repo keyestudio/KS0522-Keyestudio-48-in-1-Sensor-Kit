@@ -1,47 +1,47 @@
-# レッスン01：白色LED
+# Les 01: Witte LED
 
-> **キット:** Keyestudio 48-in-1 Sensor Kit  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換のATmega328Pボード
+> **Set:** Keyestudio 48-in-1 Sensor Kit  
+> **Ontwikkelbord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-board
 
-![プロジェクト1：白色LEDのイラスト](../media/6819f1c2047a7bb2b58e9cf0d7d3a617.jpeg)
+![Project 1: Witte LED illustratie](../media/6819f1c2047a7bb2b58e9cf0d7d3a617.jpeg)
 
-## 説明
+## Beschrijving
 
-この白色LEDモジュールはArduinoの入門者に最適です。IO/Sensorシールドに簡単に接続でき、光に関連するさまざまな動作と連動できます。
+Deze witte LED-lichtmodule is ideaal voor Arduino-beginners. Hij kan eenvoudig worden aangesloten op een IO/Sensor shield. Hij maakt interactie met lichtgerelateerde projecten mogelijk.
 
-注意：黄色、赤、緑、青など、異なる色を発光する他のLEDモジュールを選ぶこともできます。
+Opmerking: Je kunt ook andere LED-modules kiezen om andere kleuren te laten uitstralen, zoals geel, rood, groen en blauw.
 
-## 仕様
+## Specificatie
 
-- 白色LEDモジュール
+- Witte LED-module
 
-- タイプ: デジタル
+- Type: Digitaal
 
-- PH2.54ソケット
+- PH2.54-connector
 
-- サイズ: 30\*20mm
+- Afmetingen: 30\*20mm
 
-- 重量: 3g
+- Gewicht: 3g
 
-## 接続図
+## Aansluitschema
 
-まず、接続する前に次の部品を用意してください：
+Bereid eerst de volgende onderdelen voor voordat je gaat aansluiten:
 
-- V4.0ボード\*1
+- V4.0-ontwikkelbord\*1
 
-- 白色LEDモジュール \*1
+- Witte LED-module \*1
 
-- USBケーブル\*1
+- USB-kabel\*1
 
-- ジャンパー線\*3
+- Dupont-kabel\*3
 
-モジュールのSピンをV4.0ボードのDigital 3に接続し、負極ピンをGNDポートに、正極ピンを5Vポートに接続します。
+Sluit de S-pin van de module aan op Digital 3 van het V4.0-ontwikkelbord, sluit de negatieve pin aan op de GND-poort en de positieve pin op de 5V-poort.
 
-![接続図のイラスト](../media/cb67155c3b3cf25025edea5ae31d6c5f.jpeg)
+![Aansluitschema illustratie](../media/cb67155c3b3cf25025edea5ae31d6c5f.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 const uint8_t ledPin = 3;
@@ -58,10 +58,10 @@ void loop() {
 }
 ```
 
-## 実行結果の例
+## Voorbeeldresultaat
 
-配線と電源を接続してコードをアップロードすると、LEDモジュールが白色の光を点灯します。
+Na het aansluiten en inschakelen, en nadat je de code succesvol hebt geüpload, zal de LED-module wit licht uitstralen.
 
-![実行結果のイラスト](../media/40448f38601a6312bfb1e3764be22158.png)
+![Voorbeeldresultaat illustratie](../media/40448f38601a6312bfb1e3764be22158.png)
 
 ---

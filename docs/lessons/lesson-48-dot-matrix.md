@@ -1,56 +1,56 @@
-# レッスン48：ドットマトリクス
+# Les 48: Puntmatrix
 
-> **キット：** Keyestudio 48-in-1 Sensor Kit  
-> **ボード：** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![プロジェクト48：ドットマトリクス図](../media/10e87958bbef207075643ae4f5481457.jpeg)
+![Project 48: Puntmatrix illustratie](../media/10e87958bbef207075643ae4f5481457.jpeg)
 
-## はじめに
+## Inleiding
 
-単一のLEDより良いものは何でしょう？たくさんのLEDです！小さなディスプレイを作る楽しい方法のひとつが8x8マトリクスの使用です。このモジュールはHT16K33チップを使用して8x8ドットマトリクスを駆動します。
+Wat is beter dan één LED? Veel LED's! Een leuke manier om een klein display te maken is met een 8x8-matrix. Deze module gebruikt de HT16K33-chip om een 8x8 puntmatrix aan te sturen.
 
-マイコンのI2C通信ポートを使ってドットマトリクスを制御するだけで済むため、マイコンのポート資源を節約できます。マトリクスモジュールはピンピッチ2.54mmの4ピンヘッダを備えています。
+Je hoeft alleen de I2C-communicatiepoort van de microcontroller te gebruiken om de puntmatrix te besturen, wat meer poortreserves van de microcontroller kan besparen. De matrixmodule wordt geleverd met een 4-pins header met 2,54 mm pinafstand.
 
-ジャンパー線でモジュールを制御ボードに接続して通信できます。
+Je kunt de module met jumperdraden aansluiten op de besturingskaart voor communicatie.
 
-また、3つのDIPスイッチが付属しており、スイッチを切り替えてI2C通信アドレスを選択できます。
+Bovendien is hij uitgerust met drie DIP-schakelaars. Je kunt willekeurig een schakelaar omzetten om het I2C-communicatieadres te selecteren.
 
-## アドレス設定は下図のようになります
+## De adresinstellingen zijn als volgt
 
 |   0x70   |          |          |      |   0x71   |          |          |      |   0x72   |          |          |
 | :------: | :------: | :------: | ---- | :------: | :------: | :------: | ---- | :------: | :------: | :------: |
 | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |
-| 0（OFF） | 0（OFF） | 0（OFF） |      | 1（ON）  | 0（OFF） | 0（OFF） |      | 0（OFF） | 1（ON）  | 0（OFF） |
+| 0（UIT） | 0（UIT） | 0（UIT） |      | 1（AAN） | 0（UIT） | 0（UIT） |      | 0（UIT） | 1（AAN） | 0（UIT） |
 |          |          |          |      |          |          |          |      |          |          |          |
 | **0x73** |          |          |      | **0x74** |          |          |      | **0x75** |          |          |
 | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |
-| 1（ON）  | 1（ON）  | 0（OFF） |      | 0（OFF） | 0（OFF） | 1（ON）  |      | 1（ON）  | 0（OFF） | 1（ON）  |
+| 1（AAN） | 1（AAN） | 0（UIT） |      | 0（UIT） | 0（UIT） | 1（AAN） |      | 1（AAN） | 0（UIT） | 1（AAN） |
 |          |          |          |      |          |          |          |      |          |          |          |
 | **0x76** |          |          |      | **0x77** |          |          |      |          |          |          |
 | A0（1）  | A1（2）  | A2（3）  |      | A0（1）  | A1（2）  | A2（3）  |      |          |          |          |
-| 0（OFF） | 1（ON）  | 1（ON）  |      | 1（ON）  | 1（ON）  | 1（ON）  |      |          |          |          |
+| 0（UIT） | 1（AAN） | 1（AAN） |      | 1（AAN） | 1（AAN） | 1（AAN） |      |          |          |          |
 
-## 技術仕様
+## Technische gegevens
 
-- インターフェース：4ピンヘッダ
+- Interface: 4Pin header
 
-- 動作電圧：DC 4.5V-5.5V
+- Bedrijfsspanning: DC 4.5V-5.5V
 
-- アドレス選択用の3つのDIPスイッチ付き
+- Voorzien van drie DIP-schakelaars voor adresselectie
 
-- 寸法：52mm\*34mm\*11mm
+- Afmetingen：52mm\*34mm\*11mm
 
-- 重量：13.2g
+- Gewicht：13.2g
 
-## 接続ガイド
+## Aansluitschema
 
-SCLピンをAnalog A5ポートに、SDAピンをAnalog A4ポートに接続します；VCCピンを5Vポートに、GNDピンをGNDポートに接続します。
+Sluit de SCL-pin aan op de Analoge A5-poort, de SDA-pin op de Analoge A4-poort; sluit de VCC-pin aan op de 5V-poort en de GND-pin op GND.
 
-![接続ガイド図](../media/e2c09c1a7851f64ad03a027c1aa25a14.jpeg)
+![Aansluitschema illustratie](../media/e2c09c1a7851f64ad03a027c1aa25a14.jpeg)
 
-## テスト用コード
+## Testcode
 
-ライブラリをダウンロード：
+Download de bibliotheek:
 
 ```C
 #include <Wire.h>
@@ -82,66 +82,66 @@ void loop() {
 }
 ```
 
-注意：コンパイルする前に、Matrixライブラリのフォルダをディレクトリ \\Arduino\\libraries に配置することを忘れないでください。そうしないと、コードのコンパイルに失敗します。
+**Opmerking:** voordat je de code compileert, zorg ervoor dat je de Matrix-bibliotheekmap plaatst in de directory \\Arduino\\libraries. Anders mislukt het compileren van de code.
 
-例えば： **C:\\Program Files\\Arduino\\libraries**
+Bijvoorbeeld: **C:\\Program Files\\Arduino\\libraries**
 
-## テスト結果
+## Testresultaat
 
-コードをボードにアップロードし終え、電源を入れると、8\*8マトリクスにハートの画像が表示されるはずです。下図参照。
+Nadat je de code naar het bord hebt geüpload en de voeding inschakelt, zou je de 8\*8-matrix een hartafbeelding moeten zien weergeven. Zie hieronder.
 
-![テスト結果図](../media/4a53bb681a3299be450726255f4d56a2.jpeg)
+![Testresultaat illustratie](../media/4a53bb681a3299be450726255f4d56a2.jpeg)
 
-## 設定方法
+## Instelmethode
 
-1. 通信アドレスを設定します。アドレス表を参照してください。
+1. Stel het communicatieadres in. Raadpleeg de adresgrafiek.
 
-コードは以下のように設定されています。
+De code is als volgt ingesteld.
 
-![設定方法図](../media/187557b09de67c1236bfd6536b0b95ee.png)
+![Instelmethode illustratie](../media/187557b09de67c1236bfd6536b0b95ee.png)
 
-![設定方法図](../media/910472d4662d0c1f463f9bedfe4cef74.png)
+![Instelmethode illustratie](../media/910472d4662d0c1f463f9bedfe4cef74.png)
 
-![設定方法図](../media/165615f73e4c9a49c861f5e17eb333e3.png)
+![Instelmethode illustratie](../media/165615f73e4c9a49c861f5e17eb333e3.png)
 
-1. 表示画像を設定します
+1. Stel het weergavebeeld in
 
-コード内で表示する画像を設定できます。以下のコード例を参照してください。
+Je kunt het weergegeven beeld instellen in de onderstaande code.
 
-![設定方法図](../media/4a709cb4583c82f469c179dd6b1cfa71.png)
+![Instelmethode illustratie](../media/4a709cb4583c82f469c179dd6b1cfa71.png)
 
-マトリクスモジュールを次のように配置します：
+Plaats de matrixmodule als volgt:
 
-![設定方法図](../media/10e87958bbef207075643ae4f5481457.jpeg)
+![Instelmethode illustratie](../media/10e87958bbef207075643ae4f5481457.jpeg)
 
-次に、0x00,0x18,0x24,0x42,0x81,0x99,0x66,0x00 を2進数に変換します：
+Converteer vervolgens 0x00,0x18,0x24,0x42,0x81,0x99,0x66,0x00 naar binaire getallen:
 
-- `0x00` は `0 0 0 0 0 0 0 0` に対応します。
+- `0x00` komt overeen met `0 0 0 0 0 0 0 0`.
 
-- `0x18` は `0 0 0 1 1 0 0 0` に対応します。
+- `0x18` komt overeen met `0 0 0 1 1 0 0 0`.
 
-- `0x24` は `0 0 1 0 0 1 0 0` に対応します。
+- `0x24` komt overeen met `0 0 1 0 0 1 0 0`.
 
-- `0x42` は `0 1 0 0 0 0 1 0` に対応します。
+- `0x42` komt overeen met `0 1 0 0 0 0 1 0`.
 
-- `0x81` は `1 0 0 0 0 0 0 1` に対応します。
+- `0x81` komt overeen met `1 0 0 0 0 0 0 1`.
 
-- `0x99` は `1 0 0 1 1 0 0 1` に対応します。
+- `0x99` komt overeen met `1 0 0 1 1 0 0 1`.
 
-- `0x66` は `0 1 1 0 0 1 1 0` に対応します。
+- `0x66` komt overeen met `0 1 1 0 0 1 1 0`.
 
-- `0x00` は `0 0 0 0 0 0 0 0` に対応します。
+- `0x00` komt overeen met `0 0 0 0 0 0 0 0`.
 
-最初の16進数はLEDの第1列を制御します。
+Het eerste hexadecimale getal bestuurt de eerste kolom van LED's.
 
-2番目の値は第2列を制御し、同様に続きます。
+De tweede waarde bestuurt de tweede kolom, enzovoort.
 
-これらの設定は、各8ビットの16進値をその2進表現に変換します。
+Deze instellingen zetten elke 8-bits hexadecimale waarde om in de binaire weergave.
 
-数字の0はLEDオフ、数字の1はLEDオンを意味します。
+Het cijfer 0 betekent LED uit, en het cijfer 1 betekent LED aan.
 
-最初に変換された数はLEDの第1行のオン／オフを制御し、以下同様です。
+Het eerste geconverteerde getal bestuurt het aan/uit van de eerste rij LEDs, enzovoort.
 
-![設定方法図](../media/3ba4bb34ddf3ef182c5aa5bc7a309605.png)
+![Instelmethode illustratie](../media/3ba4bb34ddf3ef182c5aa5bc7a309605.png)
 
 ---

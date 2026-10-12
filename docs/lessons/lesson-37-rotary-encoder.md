@@ -1,35 +1,35 @@
-# レッスン37: ロータリーエンコーダ
+# Les 37: Rotary-encoder
 
-> **キット:** Keyestudio 48-in-1 Sensor Kit  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換の ATmega328P ボード
+> **Set:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![プロジェクト37：ロータリーエンコーダの図](../media/df622003846058dd3cf442518f655af2.png)
+![Project 37: Rotary-encoder illustratie](../media/df622003846058dd3cf442518f655af2.png)
 
-## はじめに
+## Introductie
 
-ロータリーエンコーダは、回転の正転・逆転の過程で出力されるパルスの回数を数えることができます。
+De rotary-encoder kan het aantal uitgezonden pulsen tellen tijdens het draaien in zowel de positieve als de omgekeerde richting.
 
-この回転によるカウントは無制限で、ポテンショメータのような制限されたカウントとは異なります。初期状態に戻して0から再びカウントすることができます。
+Deze roterende telling is onbeperkt, anders dan bij een potentiometer. Hij kan worden teruggezet naar de begintoestand om vanaf 0 te tellen.
 
-## 仕様
+## Specificaties
 
-- 電源: 5V
+- Voedingsspanning: 5V
 
-- インターフェース: デジタル
+- Interface: Digitaal
 
-- サイズ: 30\*20mm
+- Afmetingen: 30\*20mm
 
-- 重さ: 7g
+- Gewicht: 7g
 
-## 接続図
+## Aansluitschema
 
-![接続図のイラスト](../media/1de37f27caa224141230be6bdc95d29b.jpeg)
+![Aansluitschema illustratie](../media/1de37f27caa224141230be6bdc95d29b.jpeg)
 
-図のように、ロータリーエンコーダモジュールと2つのLEDモジュールをブレッドボードとV4.0ボードに接続します。
+Zoals te zien is in het schema verbinden we de rotary-encodermodule en twee LED-modules met het breadboard en het V4.0-bord.
 
-ロータリーエンコーダモジュールを使って2つのLEDモジュールの点灯/消灯を制御します。
+Gebruik de rotary-encodermodule om twee LED-modules in- en uit te schakelen.
 
-## サンプルコード
+## Voorbeeldcode
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -92,12 +92,12 @@ void RoteStateChanged() //When CLK  FALLING READ DAT
 ///////////////////////////////////////////////////////////////
 ```
 
-## 実行結果
+## Voorbeeldresultaat
 
-配線を正しく行い上記のコードをアップロードすると、エンコーダモジュールを回転させることで2つのLEDモジュールを交互に点灯/消灯させることができます。エンコーダを回すと、まず一方のLEDが点灯し、もう一方は消灯します。
+Als je de bedrading correct aansluit en bovenstaande code uploadt, kun je aan de encoder draaien om willekeurig de twee LED-modules in- en uit te schakelen. Wanneer je aan de encoder draait, gaat één LED-module eerst aan terwijl de andere uit is.
 
-さらに回し続けると、一方が消灯しもう一方が点灯する動作が繰り返されます。
+Als je blijft draaien aan de encoder, gaat de ene LED-module uit terwijl de andere aan gaat, en dit herhaalt zich voortdurend.
 
-![実行結果のイメージ](../media/4c1455602dc8ab6d61f5ab2e2d5dd67c.png)
+![Voorbeeldresultaat illustratie](../media/4c1455602dc8ab6d61f5ab2e2d5dd67c.png)
 
 ---

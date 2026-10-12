@@ -1,37 +1,37 @@
-# レッスン 05: ブザーのビープ
+# Les 05: Zoemerpiepjes
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Set:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![プロジェクト5: ブザーのビープの図](../media/88c349b0602dfa2e166faabc13cb2f20.png)
+![Project 5: Zoemerpiepjes illustratie](../media/88c349b0602dfa2e166faabc13cb2f20.png)
 
-## 説明
+## Beschrijving
 
-これは最もシンプルな音を出すモジュールです。高/低レベルで駆動できます。鳴る周波数を変えることで異なる音を出せます。
+Hier is de eenvoudigste geluidsmodule. Je kunt deze aansturen met hoge/lage niveaus. Door de frequentie te veranderen, kan het zoemen verschillende geluiden produceren.
 
-このモジュールは パソコン、冷蔵庫、携帯電話などの日常の家電製品で広く使われています。
+Deze module wordt veel gebruikt in dagelijkse apparaten zoals PC, koelkast, telefoons, enz.
 
-また、この小さくて便利なモジュールを使って多くの面白いインタラクティブなプロジェクトを作ることができます。ぜひ試してみてください！！出る電子音はとても魅力的です。
+Bovendien kun je met deze kleine maar nuttige module veel interessante interactieve projecten maken. Probeer het gewoon!! Je zult het elektronische geluid dat het voortbrengt erg fascinerend vinden.
 
-## 仕様
+## Specificaties
 
-- 動作電圧: 3.3-5v
+- Werkspanning: 3.3-5v
 
-- インターフェースタイプ: デジタル
+- Interface-type: digitaal
 
-- サイズ: 30*20mm
+- Afmetingen: 30*20mm
 
-- 重量: 4g
+- Gewicht: 4g
 
-## 接続図
+## Aansluitschema
 
-モジュールの S ピンを V4.0 ボードの Digital 3 に接続し、負（マイナス）ピンを GND に、正（プラス）ピンを 5V に接続します。
+Sluit de S-pin van de module aan op Digital 3 van het V4.0-bord, sluit de negatieve pin aan op GND, en de positieve pin op 5V.
 
-![接続図のイラスト](../media/173f2e9a828b0b20d76dc07de57892c1.jpeg)
+![Aansluitschema illustratie](../media/173f2e9a828b0b20d76dc07de57892c1.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをコピーして Arduino ソフトウェアに貼り付けてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -50,10 +50,10 @@ int buzzPin =3;    //Connect Buzzer on Digital Pin3
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 実行結果の例
+## Voorbeeldresultaat
 
-コードをボードにアップロードすると、ブザーが音を出します。
+Na het uploaden van de code naar het bord zal de zoemer geluid maken.
 
-![実行結果の図](../media/109e3287bff29d1d1fb88369d6705ad3.png)
+![Voorbeeldresultaat illustratie](../media/109e3287bff29d1d1fb88369d6705ad3.png)
 
 ---

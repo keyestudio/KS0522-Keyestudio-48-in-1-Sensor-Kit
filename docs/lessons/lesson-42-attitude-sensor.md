@@ -1,81 +1,92 @@
-# レッスン 42：姿勢センサー
+# Les 42: Oriëntatiesensor
 
-> **キット：** Keyestudio 48-in-1 Sensor Kit  
-> **ボード：** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![プロジェクト42：姿勢センサーのイラスト](../media/8eb8d16c5e76e50a6609678130a9ee29.jpeg)
+![Project 42: Oriëntatiesensor illustratie](../media/8eb8d16c5e76e50a6609678130a9ee29.jpeg)
 
-## 導入
+## Introductie
 
-**互換性に関する注意。** 部品表ではこのボードを APDS-9930 と表示していますが、以下のレガシーな例は APDS-9960 を対象としており `SparkFun_APDS9960` を使用します。スケッチをアップロードする前に実際のモジュールの IC マーキングを確認してください。APDS-9930 基板ではこの例を使用しないでください。単一の8ピンパッケージの APDS-9930 は、I2C インターフェイスに対応した環境光センサと赤外 LED 近接センサを提供できます。
+**Compatibiliteitsmelding.** De onderdelenlijst labelt dit bord als APDS-9930, maar het volgende legacy-voorbeeld is gericht op een APDS-9960 en gebruikt `SparkFun_APDS9960`. Controleer de IC-markering op het daadwerkelijke module voordat je dit sketch uploadt; gebruik dit voorbeeld niet met een APDS-9930-bord. APDS-9930 in een enkele 8-pins behuizing kan de omgevingslichtsensor leveren die compatibel is met de I2C-interface en de infrarood-LED nabijheidssensor.
 
-完全に調整された近接センサは100mm の物体を検出でき、端末装置やサブコンポーネントの工場校正要件を不要にします。
+De nabijheidssensor, die volledig is afgesteld, kan een object op 100 mm detecteren en ontslaat de fabriekscalibratievereisten van eindapparatuur en subcomponenten.
 
-明るい日光から暗い部屋まで、近接センサの近接検出機能は良好に動作します。
+Van fel zonlicht tot een donkere kamer kan de nabijheidsdetectiefunctie goed werken.
 
-このモジュールはマイクロ光学レンズを追加しており、赤外線の効率的な送受信を提供し、全体の消費電力を低減できます。
+Deze module heeft een micro optische lens toegevoegd die efficiënte transmissie en ontvangst van infraroodenergie biedt, wat het totale stroomverbruik kan verminderen.
 
-さらに、内部のステートマシンによりデバイスを低消費電力モードにでき、非常に低い平均消費電力を実現します。
+Daarnaast kan de interne toestandsmachine het apparaat in een laagvermogenmodus brengen, wat een zeer laag gemiddeld stroomverbruik oplevert.
 
-## 仕様
+## Parameters
 
-- 動作電圧：DC 3.3-3.8V
+- Werkspanning：DC 3.3-3.8V
 
-- 出力電流：0-20mA
+- Uitgangsstroom：0-20mA
 
-- 温度範囲：-40℃—85℃
+- Temperatuurbereik：-40℃—85℃
 
-## 特徴
+## Kenmerken
 
-1. ALS、赤外 LED、および近接検出器を統合した光学モジュール
-2. 最大16ビットの分解能
-3. ダークガラス越しでも高感度に動作
-4. 0.01 lux の低照度性能
-5. 近接検出は工場で完全に較正され、100 mm の検出を実現
-6. 赤外 LED および同期 LED ドライバを統合
-7. 近接センサの工場較正を不要化
-8. プログラム可能な待機タイマ、待機状態の消費電流 - 90 μA（代表値）
-9. プログラム可能な範囲は2.7ミリ秒から8秒まで
-10. I2C インターフェイス互換、最大400kHz（I2C ファストモード）
-11. 専用の割り込みピン
-12. スリープモード消費電流 - 2.2 μA（代表値）
+1. Optische module geïntegreerd met ALS, infrarood-LED en nabijheidsdetector;
 
-## 接続図
+2. Tot 16-bit resolutie;
 
-まず、以下の部品を準備してください:
+3. Hoge gevoeligheid bij werking achter donker glas;
 
-- V4.0 ボード\*1
+4. 0.01lux detectie bij weinig licht;
 
-- 姿勢センサー\*1
+5. Nabijheidsdetectie, volledig gekalibreerd voor 100 mm detectie;
 
-- USB ケーブル\*1
+6. Integreert infrarood-LED en synchrone LED-driver;
 
-- ジャンパーワイヤー\*5
+7. Elimineert fabriekskalibratie voor nabijheidssensoren;
 
-センサーの INT ピンを V4.0 ボードの Digital 2 ポートに接続、SCL ピンを Analog A5 ポートに、SDA ピンを Analog A4 ポートに接続；3V3 ピンを 3V3 ポートに、GND ピンを GND ポートに接続します。
+8. Programmeerbare wachttimer, stroomverbruik in wachtstand - 90μA (typische waarde);
 
-![接続図のイラスト](../media/c906c4e8a06998118eac5e3b981386d6.jpeg)
+9. Programmeerbaar bereik van 2.7 milliseconden tot 8 seconden;
 
-## サンプルコード
+10. Compatibel met I2C-interface, tot 400kHz (I2C snelle modus);
 
-**重要**: APDS-9960 は 3.3V のみ受け付けます!
+11. Toegewijde onderbrekingspin;
 
-## ハードウェア接続
+12. Slaapmodusstroom - 2.2μA (typische waarde).
 
-| Arduino Pin | APDS-9960 Board | 機能      |
-| :---------: | :-------------: | :--------: |
-|    3.3V     |       VCC       |   電源    |
-|     GND     |       GND       |   グランド |
-|     A4      |       SDA       | I2C データ |
-|     A5      |       SCL       | I2C クロック |
-|     D2      |       INT       | 割り込み   |
+## Aansluitschema
+
+Zorg eerst dat je de volgende onderdelen klaar hebt:
+
+- V4.0 Bord\*1
+
+- Oriëntatiesensor\*1
+
+- USB-kabel\*1
+
+- Jumper Wire\*5
+
+Verbind de INT-pin van de sensor met digitale poort 2 van het V4.0-bord, de SCL-pin met Analoge A5-poort, de SDA-pin met Analoge A4-poort; verbind de 3V3-pin met de 3V3-aansluiting, GND-pin met de GND-aansluiting.
+
+![Aansluitschema illustratie](../media/c906c4e8a06998118eac5e3b981386d6.jpeg)
+
+## Voorbeeldcode
+
+**BELANGRIJK**: De APDS-9960 accepteert alleen 3.3V!
+
+## Hardware-aansluitingen
+
+| Arduino Pin | APDS-9960 Board | Functie  |
+| :---------: | :-------------: | :-------: |
+|    3.3V     |       VCC       |   Voeding   |
+|     GND     |       GND       |   Aarde    |
+|     A4      |       SDA       | I2C-gegevens  |
+|     A5      |       SCL       | I2C-klok |
+|     D2      |       INT       | Onderbreking |
 |     D13     |        -        |    LED    |
 
-**リソース：** Wire.h と SparkFun_APDS-9960.h を含めます
+**Bronnen:** Inclusief Wire.h en SparkFun_APDS-9960.h
 
-**開発環境の詳細：** Arduino 1.0.5 で作成
+**Ontwikkelomgevingsdetails:** Geschreven in Arduino 1.0.5
 
-以下のコードを Arduino ソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak onderstaande code in de Arduino-software.
 
 ```c
 #include <Wire.h>
@@ -186,14 +197,14 @@ void interruptRoutine() {
 }
 ```
 
-注意: コードをコンパイルする前に、ライブラリを Arduino IDE の libraries ディレクトリに配置するのを忘れないでください。そうしないとコンパイルに失敗します。
+Opmerking: plaats vóór het compileren de bibliotheek in de libraries-map van de Arduino IDE. Anders faalt de compilatie.
 
-## 実行結果の例
+## Voorbeeldresultaat
 
-![実行結果のイラスト](../media/2a30729fa77874e4e61f51d2bb8e62c1.png)
+![Voorbeeldresultaat illustratie](../media/2a30729fa77874e4e61f51d2bb8e62c1.png)
 
-コードをアップロードしたら、シリアルモニタを開き、ボーレートを9600に設定してください。
+Na het uploaden van de code, open de seriële monitor en stel de baudrate in op 9600.
 
-![実行結果のイラスト](../media/935c7035ef43f54ca65eaa49bbaf5e98.jpeg)
+![Voorbeeldresultaat illustratie](../media/935c7035ef43f54ca65eaa49bbaf5e98.jpeg)
 
 ---

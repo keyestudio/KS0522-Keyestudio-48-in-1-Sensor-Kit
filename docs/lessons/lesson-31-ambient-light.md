@@ -1,43 +1,43 @@
-# レッスン31: 周囲光
+# Les 31: Omgevingslicht
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P bord
 
-![プロジェクト31: 周囲光のイラスト](../media/3eda1bbb84995dc2195a0406f1b0c196.jpeg)
+![Project 31: Omgevingslicht illustratie](../media/3eda1bbb84995dc2195a0406f1b0c196.jpeg)
 
-## 説明
+## Beschrijving
 
-いつかは、信頼できるフォトレジスタよりも精度よく周囲の明るさを検出したくなる時が来ますが、プロジェクトに複雑さを追加したくない場合があります。そんなときは TEMT6000 環境光センサを使ってみてください。
+Op een gegeven moment wil je wellicht de omgevingshelderheid nauwkeuriger meten dan met je vertrouwde fotoresistor, zonder extra complexiteit aan je project toe te voegen. Als dat moment daar is, haal dan een TEMT6000-omgevingslichtsensor.
 
-TEMT6000 は人間の目の感度に合わせて設計されていますが、低光量環境では性能がやや劣る場合があります。ただし、広い明るさ範囲で非常に小さな変化にもよく反応します。人間の目を模倣する設計のため、赤外線（IR）や紫外線（UV）にはあまり反応しませんので、プロジェクトで使用する際はその点に注意してください。
+De TEMT6000 zou aangepast zijn aan de gevoeligheid van het menselijk oog, maar presteert ondermaats bij weinig licht. Hij werkt echter zeer goed bij het reageren op zeer kleine veranderingen over een groot helderheidsbereik. Omdat hij bedoeld is het menselijk oog te imiteren, reageert hij niet goed op IR- of UV-licht; houd daar rekening mee bij gebruik in je project.
 
-## 仕様
+## Specificatie
 
-- 供給電圧: +5VDC 50mA
+- Voedingsspanning: +5VDC 50mA
 
-- サイズ: 36.5\*16mm
+- Grootte: 36.5\*16mm
 
-- 重量: 4g
+- Gewicht: 4g
 
-## 接続図
+## Aansluitschema
 
-まず接続の前に以下の部品を用意してください。
+Bereid eerst de volgende onderdelen voor voordat je aansluit.
 
-- V4.0 ボード\*1
+- V4.0-bord\*1
 
-- TEMT6000 環境光センサー\*1
+- TEMT6000-omgevingslichtsensor\*1
 
-- USBケーブル\*1
+- USB-kabel\*1
 
-- ジャンパー線\*3
+- Jumperdraad\*3
 
-この部品は非常にシンプルです。電源とグランドを接続し、信号ピンをアナログ入力ポートに接続するだけです。接続が完了すると、センサは明るくなるにつれて増加するアナログ電圧を出力します。必要であれば3.3Vで駆動することもでき、その場合は出力値がかなり小さくなります。
+Dit is een ongelooflijk eenvoudig onderdeel: sluit eenvoudig VCC en GND aan, en de signaalpin op een analoge ingang. Zodra aangesloten geeft de sensor een analoge spanning af die toeneemt bij meer licht. Je kunt hem ook met 3.3V voeden; de uitgangswaarde zal dan gewoon veel lager zijn.
 
-![接続図のイラスト](../media/dae046a9efbeea661b9b6a2ab632fcbc.jpeg)
+![Aansluitschema illustratie](../media/dae046a9efbeea661b9b6a2ab632fcbc.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-これ以上シンプルにできません — このコードはセンサからの読み取り値をシリアル端末に報告するだけです: 0-1023（1023が非常に明るく、0が非常に暗いことを示します）。
+Eenvoudiger kan niet: dit geeft alleen de uitleeswaarde van de sensor naar de seriële monitor weer: 0–1023, waarbij 1023 zeer helder is en 0 zeer donker.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -53,14 +53,14 @@ void loop() {
 ///////////////////////////////////////////////////////////////
 ```
 
-## 実行結果
+## Voorbeeldresultaat
 
-配線を正しく行い上記のコードをアップロードしたら、Arduinoソフトウェアのシリアルモニタを開いてください。
+Na correct aansluiten en het uploaden van bovenstaande code, open je de seriële monitor van de Arduino-software.
 
-![実行結果のイラスト](../media/ea9ab82076983cc965fe016297b6ad76.png)
+![Voorbeeldresultaat illustratie](../media/ea9ab82076983cc965fe016297b6ad76.png)
 
-その後、センサを手や紙で覆うと光が弱まり、モニタに表示される値が減少していくのが確認できます。
+Bedek vervolgens de sensor met je hand of een papiertje; het licht wordt zwakker en je ziet de waarde in de monitor afnemen.
 
-![実行結果のイラスト](../media/846828c9af69a9823ca7218157cc181e.jpeg)
+![Voorbeeldresultaat illustratie](../media/846828c9af69a9823ca7218157cc181e.jpeg)
 
 ---

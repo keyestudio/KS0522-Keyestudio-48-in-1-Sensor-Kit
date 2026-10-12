@@ -1,45 +1,45 @@
-# レッスン11: フォトインタラプタ
+# Les 11: Foto-interrupter
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-![プロジェクト11: フォトインタラプタの図](../media/8b0f7b3ba3e139eeaeba9bb7f86a946a.png)
+![Project 11: Illustratie van de foto-interrupter](../media/8b0f7b3ba3e139eeaeba9bb7f86a946a.png)
 
-## 説明
+## Beschrijving
 
-このセンサーの直立した部分は赤外線発光部で、反対側には遮蔽された赤外線検出部があります。一端から他端へ赤外線ビームを発射することで、物体がビームを通過したときに検出できます。
+Het verticale deel van deze sensor is een infraroodzender en aan de andere kant zit een afgeschermde infraroodontvanger. Door een infraroodstraal van de ene zijde naar de andere te zenden, kan de sensor een object detecteren wanneer het object de straal passeert.
 
-光学的リミットスイッチ、ペレット供給、一般的な物体検出など、多くの用途に使用されます。
+Hij wordt voor veel toepassingen gebruikt, waaronder optische aanslagschakelaars, pelletdosering, algemene objectdetectie, enz.
 
-## 仕様
+## Specificatie
 
-- 電源電圧: 3.3V to 5V
+- Voedingsspanning: 3.3V tot 5V
 
-- インターフェース: デジタル
+- Interface: Digitaal
 
-- サイズ: 30*20mm
+- Afmetingen: 30*20mm
 
-- 重量: 3g
+- Gewicht: 3g
 
-## 接続図
+## Aansluitschema
 
-接続の前に、まず以下の部品を用意してください:
+Bereid eerst de volgende onderdelen voor voordat je gaat aansluiten:
 
-- V4.0ボード\*1
+- V4.0 Board\*1
 
-- フォトインタラプタモジュール \*1
+- Foto-interruptermodule \*1
 
-- USBケーブル\*1
+- USB-kabel\*1
 
-- ジャンパーワイヤ\*3
+- Jumperkabel\*3
 
-モジュールのSピンをV4.0ボードのDigital 3に接続し、負極ピンをGNDポートへ、正極ピンを5Vポートへ接続します。
+Verbind de S-pin van de module met Digital 3 van het V4.0-board, verbind de negatieve pin met de GND-aansluiting en de positieve pin met de 5V-aansluiting.
 
-![接続図のイラスト](../media/669fa42ef7fb576047d6849940a305ba.jpeg)
+![Illustratie van het aansluitschema](../media/669fa42ef7fb576047d6849940a305ba.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピーして貼り付けてください。
+Kopieer en plak onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -67,14 +67,14 @@ void loop ()
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 実行結果
+## Voorbeeldresultaat
 
-ボードへコードの書き込みが完了すると、V4.0ボード上とモジュール上の両方のLEDが点灯します。以下のように表示されます。
+Na het uploaden van de code naar het board zie je dat zowel de LED op het V4.0-board als op de module zijn ingeschakeld. Zoals hieronder weergegeven.
 
-![実行結果のイラスト](../media/fa4d06ebf82ec572b7eccf6b706942cb.png)
+![Illustratie van het voorbeeldresultaat](../media/fa4d06ebf82ec572b7eccf6b706942cb.png)
 
-モジュールの溝部分に紙を差し込むと信号が遮断され、モジュール上のLED1が消灯します。
+Wanneer je een papiertje in de groef van de module steekt, wordt het signaal onderbroken en zal led1 op de module uitgaan.
 
-![実行結果のイラスト](../media/3ecb941fafc71843148e0e19b6ceda57.png)
+![Illustratie van het voorbeeldresultaat](../media/3ecb941fafc71843148e0e19b6ceda57.png)
 
 ---

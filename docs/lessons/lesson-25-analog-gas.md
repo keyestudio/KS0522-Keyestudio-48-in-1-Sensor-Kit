@@ -1,38 +1,37 @@
-# レッスン 25：アナログガス
+# Les 25: Analoog gas
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 sensorkit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P board
 
-![プロジェクト25：アナログガスの図](../media/36f00d2a934c497f390b49c4113c7c04.png)
+![Project 25: Analoog gas illustratie](../media/36f00d2a934c497f390b49c4113c7c04.png)
 
-## 説明
+## Beschrijving
 
-このアナログガスセンサー MQ2 は、民生用電子機器および産業用市場のガス漏れ検知装置で使用されます。  
-このセンサーは、LPG、イソブタン、プロパン、メタン、アルコール、水素、煙の検出に適しています。
+Deze analoge gassensor MQ2 wordt gebruikt in apparatuur voor het detecteren van gaslekken, zowel in consumentenelektronica als in de industrie. Deze sensor is geschikt voor het detecteren van LPG, i-butaan, propaan, methaan, alcohol, waterstof en rook.
 
-検出範囲が広く、高感度で応答が速い特性を持ちます。
+Het detectiebereik van deze sensor is zeer ruim en hij heeft een hoge gevoeligheid en een snelle respons.
 
-また、センサー上のポテンショメータを回すことで感度を調整できます。
+Daarnaast kan de gevoeligheid worden aangepast door de potentiometer op de sensor te verdraaien.
 
-## 仕様
+## Specificatie
 
-- 電源: 5V
+- Voedingsspanning: 5V
 
-- インターフェースタイプ: アナログ
+- Interface-type: Analoog
 
-- シンプルな駆動回路
+- Eenvoudig stuurcircuit
 
-- 安定して長寿命
+- Stabiel en lange levensduur
 
-## 接続図
+## Aansluitschema
 
-モジュールの A0 ピンを V4.0 ボードの Analog A0 に接続し、GND ピンを GND に、VCC ピンを 5V に接続します。
+Verbind de A0-pin van de module met Analog A0 van het V4.0-board, verbind de GND-pin met de GND-poort en de VCC-pin met de 5V-poort.
 
-![接続図の説明図](../media/7b2cdff9418f79b2e9e566ce61a7966a.jpeg)
+![Aansluitschema illustratie](../media/7b2cdff9418f79b2e9e566ce61a7966a.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードを Arduino ソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -52,12 +51,12 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 実例の結果
+## Voorbeeldresultaat
 
-![実例の結果の図](../media/d440553d52e043d7a91928882d877dd1.png)
+![Voorbeeldresultaat illustratie](../media/d440553d52e043d7a91928882d877dd1.png)
 
-配線と電源が完了し、コードを正しくアップロードしたら、シリアルモニタを開き、ボーレートを 9600 に設定してください。アナログ値が表示されます。ガスを検出すると、その値が変化します。
+Als de bedrading klaar is en de voeding is aangesloten, upload je de code, open je de seriële monitor en stel je de baudrate in op 9600; je zult de analoge waarde zien. Bij het detecteren van gas zal de waarde veranderen.
 
-![実例の結果の図](../media/cbf777feb6231d76347bc632f87d0e8e.jpeg)
+![Voorbeeldresultaat illustratie](../media/cbf777feb6231d76347bc632f87d0e8e.jpeg)
 
 ---

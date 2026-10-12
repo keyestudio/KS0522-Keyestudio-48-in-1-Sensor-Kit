@@ -1,32 +1,35 @@
-# レッスン14：デジタル傾斜スイッチ
+# Les 14: Digitale kantelschakelaar
 
-> **キット：** Keyestudio 48-in-1 センサーキット  
-> **ボード：** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 sensorkit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![プロジェクト14：デジタル傾斜スイッチの図](../media/45a40bdcc098c1c4e0efb8246447173c.png)
+![Project 14: Digitale kantelschakelaar illustratie](../media/45a40bdcc098c1c4e0efb8246447173c.png)
 
-## 説明
+## Beschrijving
 
-傾斜センサー（Tilt Sensor）はデジタル傾斜スイッチです。シンプルな傾斜スイッチとして使用できます。
+De kantelsensor is een digitale kantelschakelaar. Hij kan worden gebruikt als een eenvoudige kantelschakelaar.
 
-IO/Sensorシールドに差し込むだけで配線が簡単です。専用のセンサーシールドとArduinoを使用すれば、さまざまな面白くインタラクティブな作品を作成できます。
+Sluit hem eenvoudig aan op onze IO/Sensor-shield, gemakkelijk voor bedrading. Met een speciale sensor-shield en een Arduino kun je veel interessante en interactieve projecten maken.
 
-## 仕様
+## Specificaties
 
-- 供給電圧：3.3V〜5V
-- インターフェース：デジタル
-- サイズ：30*20mm
-- 重量：3g
+- Voedingsspanning: 3.3V tot 5V
 
-## 接続図
+- Interface: Digitaal
 
-モジュールのSピンをV4.0ボードのDigital 3に接続し、負極ピンをGND端子に、正極ピンを5V端子に接続します。
+- Afmetingen: 30*20mm
 
-![接続図（イラスト）](../media/b909cdd6f697779371498723dc1407ab.jpeg)
+- Gewicht: 3g
 
-## サンプルコード
+## Aansluitingsdiagram
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Verbind de S-pin van de module met Digital 3 van de V4.0-board, verbind de negatieve pin met de GND-poort en de positieve pin met de 5V-poort.
+
+![Aansluitingsdiagram illustratie](../media/b909cdd6f697779371498723dc1407ab.jpeg)
+
+## Voorbeeldcode
+
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 int Led=13;//define LED interface
@@ -51,14 +54,14 @@ digitalWrite(Led,HIGH);
 }
 ```
 
-## 実行例
+## Voorbeeldresultaat
 
-配線と電源を接続し、コードをV4.0ボードに正しくアップロードしたら、次のように動作します。
+Na het aansluiten van de bedrading en het inschakelen, upload je de code correct naar het V4.0-board.
 
-![実行例（イラスト）](../media/d6a0aa9af1e43265114eec8570ac0f3c.png)
+![Voorbeeldresultaat illustratie](../media/d6a0aa9af1e43265114eec8570ac0f3c.png)
 
-センサーを傾けると、センサー上のLEDが点灯します。下図のようになります。
+Kantel vervolgens de sensor; je zult zien dat de led op de sensor oplicht. Zie hieronder.
 
-![実行例（イラスト）](../media/6c4a144c26675a100bffa806c532736c.png)
+![Voorbeeldresultaat illustratie](../media/6c4a144c26675a100bffa806c532736c.png)
 
 ---

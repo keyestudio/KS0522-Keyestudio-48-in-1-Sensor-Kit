@@ -1,53 +1,53 @@
-# レッスン 32: 紫外線
+# Les 32: Ultraviolet licht
 
-> **キット:** Keyestudio 48-in-1 Sensor Kit  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 sensorkit  
+> **Ontwikkelbord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![プロジェクト32：紫外線のイラスト](../media/15613ff0e8f059a9034e923ab5c2be24.jpeg)
+![Project 32: Ultraviolet licht illustratie](../media/15613ff0e8f059a9034e923ab5c2be24.jpeg)
 
-## 説明
+## Beschrijving
 
-Keyestudio GUVA-S12SD 紫外線センサーは紫外線を検出するために使用されます。GUVA-S12SD は時計、スマートフォンや紫外線インデックス検出機能を持つ屋外機器などのウェアラブルデバイスの紫外線インデックスを測定する用途に適しています。
+De Keyestudio GUVA-S12SD ultraviolet-sensor wordt gebruikt om ultraviolet licht te detecteren. De GUVA-S12SD wordt toegepast om de UV-index te meten in slimme draagbare apparaten, zoals horloges, smartphones en draagbare buitenapparaten met UV-indexdetectie.
 
-また、紫外線の強度を監視したり、紫外線で消毒する際の UV 光検出器としても使用できます。
+Hij kan ook worden gebruikt om de intensiteit van ultraviolet licht te monitoren of als UV-vlamdetector bij het desinfecteren met ultraviolet licht.
 
-## 仕様
+## Parameters
 
-- サイズ: 15mm×30mm×0.7mm
+- Grootte: 15mm×30mm×0.7mm
 
-- 供給電圧: 2.5V～5V
+- Voedingsspanning: 2.5V～5V
 
-- 出力信号: アナログ信号
+- Uitgangssignaal: Analoog signaal
 
-- 検出スペクトル範囲: 240-370nm
+- Detectiebereik van spectrum: 240-370nm
 
-- 有効領域: 0.076mm2
+- Actief gebied: 0.076mm2
 
-- 感度: 0.14A/W
+- Responsiviteit: 0.14A/W
 
-- 暗電流: 1nA
+- Donkerstroom: 1nA
 
-- 光電流: 101\~125nA（UVA 光、1mW/cm2）
+- Lichtstroom: 101\~125nA UVA-licht, 1mW/cm2
 
-## 接続図
+## Aansluitschema
 
-まず接続する前に次の部品を用意してください。
+Bereid eerst de volgende onderdelen voor voordat u aansluit.
 
-- V4.0 ボード\*1
+- V4.0-board\*1
 
-- GUVA-S12SD 3528 紫外線センサー \*1
+- GUVA-S12SD 3528 ultraviolette sensor \*1
 
-- USB ケーブル\*1
+- USB-kabel\*1
 
-- ジャンパーワイヤー\*3
+- Jumperdraad\*3
 
-モジュールの S ピンを V4.0 ボードのアナログ A0 に接続し、負極ピンを GND ポート、正極ピンを 3V3 ポートに接続します。
+Verbind de S-pin van de module met Analog A0 van het V4.0-board, verbind de negatieve pin met de GND-poort en de positieve pin met de 3V3-poort.
 
-![接続図のイラスト](../media/092ebb11142cfe83507989a5b2de0526.jpeg)
+![Aansluitschema illustratie](../media/092ebb11142cfe83507989a5b2de0526.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードを Arduino ソフトウェアにコピーして貼り付けてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -76,16 +76,16 @@ void loop() {
 ///////////////////////////////////////////////////////////////
 ```
 
-## 実行例
+## Voorbeeldresultaat
 
-![実行例のイラスト](../media/e81338e1f55ff6b55fbfe369f92b54da.png)
+![Voorbeeldresultaat illustratie](../media/e81338e1f55ff6b55fbfe369f92b54da.png)
 
-配線を正しく行い、プログラムを書き込んだらシリアルモニタを開くとデータが表示されます。
+Sluit alles correct aan en upload de programmatuur, open vervolgens de seriële monitor; deze toont de gegevens.
 
-センサーに紫外線を照射すると、シリアルモニタ上のデータが次の画像のように変化します。
+Wanneer u UV-licht op de sensor richt, veranderen de gegevens in de seriële monitor zoals in de volgende afbeelding wordt getoond.
 
-![実行例のイラスト](../media/3a7f2a608faa9c72aee76d2820f78845.png)
+![Voorbeeldresultaat illustratie](../media/3a7f2a608faa9c72aee76d2820f78845.png)
 
-![実行例のイラスト](../media/610d2325395cd3b44ce3c18e05595518.jpeg)
+![Voorbeeldresultaat illustratie](../media/610d2325395cd3b44ce3c18e05595518.jpeg)
 
 ---

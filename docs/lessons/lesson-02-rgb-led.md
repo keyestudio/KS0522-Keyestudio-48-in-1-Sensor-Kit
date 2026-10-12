@@ -1,49 +1,49 @@
-# レッスン 02: RGB LED
+# Les 02: RGB LED
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P bord
 
-![プロジェクト2: RGB LED イラスト](../media/de14ae0679267cf87837b7c09934c52e.png)
+![Project 2: RGB LED illustratie](../media/de14ae0679267cf87837b7c09934c52e.png)
 
-## 説明
+## Beschrijving
 
-これはフルカラーLEDモジュールで、赤、緑、青という3つの基本色を含んでいます。それぞれは個別のLEDとして見ることができます。
+Dit is een full-colour LED-module, die 3 basiskleuren bevat – rood, groen en blauw. Ze kunnen worden gezien als afzonderlijke LED-lampjes.
 
-プログラムにより、順番に点灯・消灯させたり、PWMのアナログ出力を使用して3色を混合し、さまざまな色を生成することができます。
+Na programmeren kunt u ze achtereenvolgens aan- en uitzetten, of de PWM-analoge uitgang gebruiken om de drie kleuren te mengen en zo verschillende kleuren te genereren.
 
-## 仕様
+## Specificatie
 
-- 色: 赤、緑、青
+- Kleur: rood, groen en blauw
 
-- 明るさ: 高
+- Helderheid: Hoog
 
-- 電圧: 5V
+- Spanning: 5V
 
-- 入力: デジタルレベル
+- Ingang: digitaal niveau
 
-- サイズ: 30 \*20mm
+- Afmeting: 30 \*20mm
 
-- 重量: 3g
+- Gewicht: 3g
 
-## 接続図
+## Aansluitschema
 
-まず、接続の前に以下の部品を用意してください:
+Bereid eerst de volgende onderdelen voor voordat u ze aansluit:
 
-- V4.0 ボード\*1
+- V4.0-bord\*1
 
-- RGB LEDモジュール \*1
+- RGB LED-module \*1
 
-- USBケーブル\*1
+- USB-kabel\*1
 
-- ジャンパーワイヤー\*4
+- Dupont-draad\*4
 
-モジュールのVピンをV4.0ボードの5Vポートに接続し、BピンをDigital 11、RピンをDigital 10、GピンをDigital 9に接続します。
+Verbind de V-pin van de module met de 5V-poort van het V4.0-board, verbind de B-pin met Digital 11, de R-pin met Digital 10 en de G-pin met Digital 9.
 
-![接続図イラスト](../media/2c0a9305cd7c7b0c28c51bc2bc24eb39.jpeg)
+![Aansluitschema illustratie](../media/2c0a9305cd7c7b0c28c51bc2bc24eb39.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 const uint8_t redPin = 11;
@@ -72,10 +72,10 @@ void loop() {
 }
 ```
 
-## 例の結果
+## Voorbeeldresultaat
 
-配線と電源を接続し、コードを問題なくアップロードすると、RGB LEDモジュールが鮮やかな色を発光します。
+Als de bedrading is voltooid en het bord van stroom is voorzien en de code succesvol is geüpload, zult u zien dat de RGB LED-module heldere kleuren uitstraalt.
 
-![実例イラスト](../media/0872e5256edf443efcb68218505096ba.png)
+![Voorbeeldresultaat illustratie](../media/0872e5256edf443efcb68218505096ba.png)
 
 ---

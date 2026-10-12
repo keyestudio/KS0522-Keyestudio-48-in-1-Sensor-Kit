@@ -1,39 +1,39 @@
-# レッスン26：アナログアルコール
+# Les 26: Analoge alcoholsensor
 
-> **キット：** Keyestudio 48-in-1 センサーキット  
-> **ボード：** Keyestudio V4.0 / Arduino Uno互換のATmega328Pボード
+> **Set:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / compatibel met Arduino Uno ATmega328P-bord
 
-![プロジェクト26：アナログアルコールの図](../media/288162cf02f2968eda57b437292a42dd.png)
+![Project 26: Analoge Alcohol illustratie](../media/288162cf02f2968eda57b437292a42dd.png)
 
-## 説明
+## Beschrijving
 
-このアナログMQ-3センサーはアルコールの検出に適しています。呼気検査（ブレスアナライザー）プロジェクトに使用できます。
+Deze analoge MQ-3-sensor is geschikt voor het detecteren van alcohol. Hij kan worden gebruikt in een blaastestproject.
 
-アルコールに対する感度が高く、ベンジンに対する感度が低いため、選択性が良好です。
+Hij heeft een goede selectiviteit omdat hij een hogere gevoeligheid voor alcohol en een lagere gevoeligheid voor benzine heeft.
 
-センサー上の可変抵抗（ポテンショメータ）を回すことで感度を調整できます。
+De gevoeligheid kan worden aangepast door de potentiometer op de sensor te verdraaien.
 
-## 仕様
+## Specificatie
 
-- 電源: 5V
+- Voeding: 5V
 
-- インターフェース: アナログ
+- Type interface: Analoog
 
-- 駆動回路が簡単
+- Eenvoudig stuurcircuit
 
-- 安定しており長寿命
+- Stabiel en lange levensduur
 
-- 応答が速く高感度
+- Snelle reactie en hoge gevoeligheid
 
-## 接続図
+## Aansluitschema
 
-モジュールのA0ピンをV4.0ボードのAnalog A0に接続し、GNDピンをGND、VCCピンを5Vに接続します。
+Verbind de A0-pin van de module met Analoge A0 van het V4.0-bord, verbind de GND-pin met de GND-aansluiting en de VCC-pin met de 5V-aansluiting.
 
-![接続図](../media/61632f44731176aaf95d313f2843c9de.jpeg)
+![Aansluitschema illustratie](../media/61632f44731176aaf95d313f2843c9de.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -52,12 +52,12 @@ delay(100);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 実行例
+## Voorbeeldresultaat
 
-![実行例の図](../media/a21d5b8c686e46a59128ab48b96d177c.png)
+![Voorbeeldresultaat illustratie](../media/a21d5b8c686e46a59128ab48b96d177c.png)
 
-配線が完了し電源を入れ、コードを正常にアップロードしたら、シリアルモニタを開きボーレートを9600に設定してください。アナログ値が表示されます。アルコールガスを検出すると、その値が変化します。
+Na het aansluiten en inschakelen, upload de code correct, open vervolgens de seriële monitor en stel de baudrate in op 9600; je zult de analoge waarde zien. Wanneer alcoholgas wordt gedetecteerd, zal de waarde veranderen.
 
-![実行例の図](../media/97565d8ba7691b30a7aa96efc6c7728b.jpeg)
+![Voorbeeldresultaat illustratie](../media/97565d8ba7691b30a7aa96efc6c7728b.jpeg)
 
 ---

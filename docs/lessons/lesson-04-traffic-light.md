@@ -1,45 +1,45 @@
-# レッスン04: 信号機
+# Les 04: Verkeerslicht
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Set:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibele ATmega328P-bord
 
-![プロジェクト4: 信号機のイラスト](../media/a20653cffac8985dc4919614540ac367.jpeg)
+![Project 4: Verkeerslicht illustratie](../media/a20653cffac8985dc4919614540ac367.jpeg)
 
-## 説明
+## Beschrijving
 
-マイコンを学ぶ際、通常は赤・緑・黄の3つのLEDを外部接続で点滅させ、信号機の点滅を模擬します。
+Bij het leren van de microcontroller gebruik je meestal drie LED's, namelijk rode, groene en gele lampjes om het knipperen van een verkeerslicht via een externe aansluiting na te bootsen.
 
-このモジュールは配線が非常に簡単になるよう特別に設計されており、モジュール上に赤、黄、緑のLEDが配置されています。
+Deze keer hebben we speciaal deze module ontworpen die zeer handig is voor bedrading, en op de module zie je de rode, gele en groene LED's.
 
-このモジュールはArduinoマイコンおよびRaspberry Piに完全対応しています。
+Deze module is volledig compatibel met Arduino-microcontrollers en het Raspberry Pi-systeem.
 
-## 仕様
+## Specificaties
 
-- 動作電圧: 3.3-5V
+- Werkspanning: 3.3-5v
 
-- インターフェース: デジタル
+- Type interface: digitaal
 
-- PH2.54 ソケット
+- PH2.54-connector
 
-## 接続図
+## Aansluitschema
 
-まず接続する前に、以下の部品を準備してください：
+Bereid eerst de volgende onderdelen voor voordat je gaat aansluiten:
 
-- V4.0 ボード\*1
+- V4.0 bord\*1
 
-- 信号機モジュール \*1
+- Verkeerslichtmodule \*1
 
-- USB ケーブル\*1
+- USB-kabel\*1
 
-- ジャンパーワイヤ\*4
+- Dupont-kabel\*4
 
-モジュールの R ピンを V4.0 ボードの Digital 5 に接続し、Y ピンを Digital 4、G ピンを Digital 3、GND ピンをグラウンド端子に接続します。
+Verbind de R-pin van de module met Digital 5 van het V4.0 board, verbind de Y-pin met Digital 4, de G-pin met Digital 3, en de GND-pin met de GND-aansluiting.
 
-![接続図イラスト](../media/b6884692ce41d05d4afb167af5b2239d.jpeg)
+![Aansluitschema illustratie](../media/b6884692ce41d05d4afb167af5b2239d.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -72,10 +72,10 @@ digitalWrite(redled, LOW);// turn off red LED
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 実行結果
+## Voorbeeldresultaat
 
-コードをアップロードして電源を入れると、モジュール上の3つのLEDが自動で信号機の点灯・消灯を繰り返します。
+Na het uploaden van de code en het inschakelen zullen de drie LED's op de module automatisch in een lus het verkeerslicht simuleren.
 
-![実行結果イラスト](../media/6dd1ff8660b0a62795bd53fc6b6ff591.png)
+![Voorbeeldresultaat illustratie](../media/6dd1ff8660b0a62795bd53fc6b6ff591.png)
 
 ---

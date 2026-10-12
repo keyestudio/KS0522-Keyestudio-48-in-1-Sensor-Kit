@@ -1,70 +1,70 @@
-# レッスン 43：光学近接検出
+# Les 43: Optische nabijheidsdetectie
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-![プロジェクト43：光学近接検出のイラスト](../media/4085d5742012b8647b52c537b82974ff.jpeg)
+![Project 43: Illustratie optische nabijheidsdetectie](../media/4085d5742012b8647b52c537b82974ff.jpeg)
 
-## はじめに
+## Inleiding
 
-**互換性についての注意:** 元の説明ではこのモジュールを TMD27713 として記載していますが、下記スケッチは APDS-9930 を対象にしています。IC のマーキングを確認し、アップロード前に対応するライブラリを使用してください。
+**Compatibiliteitsmelding.** De legacy-tekst identificeert deze module als TMD27713, terwijl de sketch hieronder gericht is op APDS-9930. Controleer de IC-markering en gebruik een bijpassende bibliotheek voordat je uploadt.
 
-このモジュールは環境光、近接センサ、および赤外LEDを統合したトリプルセンサです。
+Het is een drievoudige sensor geïntegreerd met omgevingslichtsensor, nabijheidssensor en infrarood-LED.
 
-一つは環境光（ALS）を検出する用途です。現在の周囲の明るさに応じて、ソフトウェアでバックライトの明るさを自動調整できます。これによりバックライトの明るさを抑えて視力を保護し、省エネ効果を得られます。
+Ten eerste wordt deze gebruikt om de huidige omgevingshelderheid (ALS) te detecteren. Op basis van de huidige omgevingshelderheid kan hij via software automatisch de helderheid van de achtergrondverlichting aanpassen aan het omgevingslicht. Op deze manier kan de achtergrondverlichting zacht worden gehouden om je zicht te beschermen en energie te besparen.
 
-もう一つの機能は近接センサ（PROX）です。送受信機が統合されて設計が簡素化されており、設計や取り付けにおけるスペース制約が少なく、構造も比較的単純です。
+Een andere functie is de nabijheidssensorfunctie (PROX). De sensor heeft zender/ontvanger geïntegreerd en het ontwerp geminimaliseerd; hierdoor zijn er geen ruimtelijke beperkingen meer voor ontwerp en installatie en is een deel van de constructie relatief eenvoudig.
 
-## パラメータ
+## Parameters
 
-- 動作電圧：DC 3.3V
+- Werkspanning：DC 3.3V
 
-- 検出距離：100mm
+- Detectieafstand：100mm
 
-- 通信方式：IIC 通信
+- Communicatie：IIC-communicatie
 
-- 温度範囲：-30℃ 〜 85℃
+- Temperatuurbereik：-30℃ tot 85℃
 
-## 接続図
+## Aansluitschema
 
-まず次の部品を用意してください：
+Bereid eerst de volgende onderdelen voor:
 
-- V4.0 ボード*1
+- V4.0 Board\*1
 
-- TMD27713 センサ*1
+- TMD27713 sensor\*1
 
-- USBケーブル*1
+- USB-kabel\*1
 
-- ジャンパーワイヤ*5
+- Dupontdraden\*5
 
-センサの INT ピンを V4.0 ボードの Digital 2 ポートに、SCL ピンを Analog A5 ポートに、SDA ピンを Analog A4 ポートに接続します；VCC ピンを 3V3 ポート、GND ピンを GND ポートに接続します。
+Verbind de INT-pin van de sensor met de Digital 2-poort van het V4.0-bord, de SCL-pin met de Analog A5-poort, de SDA-pin met de Analog A4-poort; verbind de VCC-pin met de 3V3-poort, GND-pin met de GND-poort.
 
-![接続図のイラスト](../media/c9319e0f5116f416380d6b3c9ddc608c.jpeg)
+![Aansluitschema illustratie](../media/c9319e0f5116f416380d6b3c9ddc608c.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-APDS-9930 の近接割り込み機能をテストします。
+Test de interrupt-mogelijkheden voor nabijheid van de APDS-9930.
 
-APDS-9930 を I2C 経由で設定し、近接が高/低の条件に基づく外部割り込みを待ちます。手をセンサの近くに動かすと、ピン 13 の LED が点灯するのを確認してください。
+Configureert de APDS-9930 via I2C en wacht op een externe interrupt op basis van hoge of lage nabijheidscondities. Beweeg je hand dicht bij de sensor en kijk naar de LED op pin 13.
 
-## ハードウェア接続
+## Hardwareverbindingen
 
-**重要**: APDS-9930 は 3.3V のみ使用できます！
+**BELANGRIJK**: De APDS-9930 accepteert alleen 3.3V!
 
-| Arduino ピン | APDS-9930 ボード | 機能       |
-| :----------: | :--------------: | :---------: |
-|    3.3V      |       VCC        | 電源       |
-|     GND      |       GND        | 接地       |
-|     A4       |       SDA        | I2C データ |
-|     A5       |       SCL        | I2C クロック |
-|      2       |       INT        | 割り込み   |
-|     13       |        -         | LED        |
+| Arduino Pin | APDS-9930 Board | Functie   |
+| :---------: | :-------------: | :-------: |
+|    3.3V     |       VCC       |  Voeding  |
+|     GND     |       GND       |   Massa   |
+|     A4      |       SDA       | I2C-data  |
+|     A5      |       SCL       | I2C-klok  |
+|      2      |       INT       | Onderbreking |
+|     13      |        -        |    LED    |
 
-**リソース**: Wire.h と APDS9930.h を含めてください
+**Bronnen**: Voeg Wire.h en APDS9930.h toe
 
-**開発環境の特記事項**: Arduino 1.0.5 で作成
+**Ontwikkelomgeving**: Geschreven voor Arduino 1.0.5
 
-以下のコードを Arduino ソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 #include <Wire.h>
@@ -211,14 +211,14 @@ void interruptRoutine() {
 }
 ```
 
-注意: コードをコンパイルする前に、ライブラリを Arduino IDE の libraries ディレクトリに配置することを忘れないでください。そうしないとコンパイルに失敗します。
+Opmerking: plaats vóór het compileren de bibliotheek in de libraries-map van de Arduino IDE. Anders faalt het compileren.
 
-## 実行例
+## Voorbeeldresultaat
 
-![実行例のイラスト](../media/f2c369c253c3b5fd8cf2c9df39f1c01a.png)
+![Voorbeeldresultaat illustratie](../media/f2c369c253c3b5fd8cf2c9df39f1c01a.png)
 
-Arduino-1.8.2 でテストした後、シリアルモニタを開くと下図のようにデータが表示されます。
+Getest met Arduino-1.8.2 software; open de seriële monitor om de gegevens te zien zoals in de onderstaande afbeelding.
 
-![実行例のイラスト](../media/607fe1d8c324c14c06492d96d60eb0ca.png)
+![Voorbeeldresultaat illustratie](../media/607fe1d8c324c14c06492d96d60eb0ca.png)
 
 ---

@@ -1,61 +1,61 @@
-# レッスン 07: デジタルプッシュボタン
+# Les 07: Digitale drukknop
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Set:** Keyestudio 48-in-1 sensorkit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![プロジェクト7：デジタルプッシュボタンのイラスト](../media/a8707354e54ea51bb92584f791ae79e5.png)
+![Project 7: Digitale drukknop illustratie](../media/a8707354e54ea51bb92584f791ae79e5.png)
 
-## 説明
+## Beschrijving
 
-これは基本的なボタンモジュールです。IOシールドに差し込むだけで、Arduinoを簡単に試すことができます。
+Dit is een basis knoppenmodule. Je kunt deze eenvoudig in een IO-shield pluggen om je eerste Arduino-ervaring uit te proberen.
 
-## 特長
+## Kenmerken
 
-- 3.3Vから5Vまでの広い電圧範囲
+- Breed spanningsbereik van 3.3V tot 5V
 
-- センサーのインターフェースが識別しやすい（「A」はアナログ、「D」はデジタル）
+- Gemakkelijk herkenbare sensorinterfaces ("A" voor Analoog en "D" voor Digitaal)
 
-- 標準的な取り付け穴
+- Standaard montagegat
 
-- 分かりやすいアイコン表示
+- Duidelijke pictogrammen
 
-- 高品質コネクタ
+- Hoogwaardige connector
 
-- 差し込みや操作が簡単
+- Gemakkelijk in te pluggen en te bedienen
 
-- 大型ボタンと高品質キャップ
+- Grote knop en hoogwaardige kap
 
-- 面白くインタラクティブな作品を実現できます
+- Om interessante en interactieve projecten te realiseren
 
-## 仕様
+## Specificatie
 
-- 供給電圧: 3.3V〜5V
+- Voedingsspanning: 3.3V tot 5V
 
-- インターフェース: デジタル
+- Interface: Digitaal
 
-- 寸法: 30×20mm
+- Afmetingen: 30*20mm
 
-- 重量: 4g
+- Gewicht: 4g
 
-## 接続図
+## Aansluitschema
 
-接続する前に、以下の部品を用意してください：
+Bereid eerst de volgende onderdelen voor voordat je gaat aansluiten:
 
-- V4.0ボード*1
+- V4.0-bord*1
 
-- プッシュボタンモジュール*1
+- Drukknopmodule*1
 
-- USBケーブル*1
+- USB-kabel*1
 
-- ジャンパーワイヤー*3
+- Jumperdraden*3
 
-モジュールのSピンをV4.0ボードのDigital 3に接続し、負のピンをGND、正のピンを5Vに接続してください。
+Verbind de S-pin van de module met Digital 3 van het V4.0-bord, verbind de negatieve pin met de GND-aansluiting en de positieve pin met de 5V-aansluiting.
 
-![接続図のイラスト](../media/6ec73b961481bf0794572a842c5231fa.jpeg)
+![Aansluitschema illustratie](../media/6ec73b961481bf0794572a842c5231fa.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをコピーしてArduinoソフトウェアに貼り付けてください。
+Kopieer en plak onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -78,12 +78,12 @@ void loop(){
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 動作例
+## Voorbeeldresultaat
 
-下図のように配線を正しく行い、コードをボードにアップロードしてください。
+Sluit alles goed aan zoals in de onderstaande afbeelding en upload vervolgens de code naar het bord.
 
-デジタルボタンを押すと、V4.0ボード上の Led 13 が点灯します。ボタンを離すと、Led 13 は消灯します。以下に示します。
+Wanneer je de digitale knop indrukt, gaat LED 13 op het V4.0-bord aan. Wanneer je de knop loslaat, gaat de LED uit. Zie hieronder.
 
-![動作例のイラスト](../media/ac03d3fa1c0f5de7dae18c6e64406e60.png)
+![Voorbeeldresultaat illustratie](../media/ac03d3fa1c0f5de7dae18c6e64406e60.png)
 
 ---

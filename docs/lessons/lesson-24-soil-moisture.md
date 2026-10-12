@@ -1,47 +1,48 @@
-# レッスン24：土壌水分
+# Les 24: Bodemvochtigheid
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Set:** Keyestudio 48-in-1 sensorkit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibele ATmega328P-board
 
-![プロジェクト24：土壌水分のイラスト](../media/d1041a8e2cbfca69c5d8bbd9ba7d4f92.jpeg)
+![Project 24: Bodemvochtigheid illustratie](../media/d1041a8e2cbfca69c5d8bbd9ba7d4f92.jpeg)
 
-## 説明
+## Beschrijving
 
-これは土壌の湿度を検出するためのシンプルな土壌湿度センサーです。土に水が不足しているとセンサーの出力するアナログ値は低くなり、逆に水分が多いと高くなります。
+Dit is een eenvoudige bodemvochtigheidssensor bedoeld om de vochtigheid van de grond te detecteren. Als de grond water gebrek heeft, zal de door de sensor uitgegeven analoge waarde dalen; anders zal deze stijgen.
 
-このセンサーを使って自動給水装置を作れば、外出時に植物が枯れるのを防ぐために植物が水を必要としているかどうかを検知できます。
+Als je deze sensor gebruikt om een automatisch watergeefsysteem te maken, kan hij detecteren of je planten dorst hebben en voorkomen dat ze verwelken wanneer je weg bent.
 
-このセンサーとArduinoコントローラを組み合わせることで、植物をより快適に、庭をよりスマートにできます。
+Door deze sensor te combineren met een Arduino-controller kun je je plant comfortabeler maken en je tuin slimmer.
 
-土壌湿度センサーモジュールは思っているほど複雑ではないので、プロジェクトで土壌を検出する必要がある場合、最良の選択となるでしょう。
+De bodemvochtigheidssensormodule is niet zo ingewikkeld als je misschien denkt, dus als je in je project de bodem moet controleren, is dit je beste keuze.
 
-センサーは土に挿入する2本のプローブを備えています。土を通して電流が流れると、センサーは2つのプローブ間の電流変化を読み取って抵抗値を取得し、その抵抗値を湿度に変換します。
+De sensor heeft twee probes die in de grond worden gestoken. Als er stroom door de grond loopt, bepaalt de sensor de weerstand door de stroomveranderingen tussen de twee probes te meten en zet die weerstand om in vochtigheidswaarde.
 
-水分が高い（抵抗が低い）ほど、土壌の導電率は高くなります。
+Hoe hoger de vochtigheid (minder weerstand), hoe hoger de geleidbaarheid van de grond.
 
-センサーの表面は電鋳（めっき）処理が施されており、寿命を延ばしています。土に挿入してADコンバータで読み取ってください。このセンサーのおかげで植物があなたに知らせてくれます：「水が必要です。」
+Het oppervlak van de sensor heeft een metallisatieproces ondergaan om de levensduur te verlengen. Steek hem in de grond en gebruik vervolgens de AD-omzetter om te lezen. Met behulp van deze sensor kan de plant je eraan herinneren: ik heb water nodig.
 
-## 仕様
+## Specificaties
 
-- 電源電圧: 3.3V または 5V
+- Voedingsspanning: 3.3V of 5V
 
-- 動作電流: ≤ 20mA
+- Werkstroom: ≤ 20mA
 
-- 出力電圧: 0-2.3V (センサーが完全に水に浸かっているとき、電圧は2.3Vになります) 湿度が高いほど出力電圧は高くなります。
+- Uitgangsspanning: 0-2.3V (Wanneer de sensor volledig in water is ondergedompeld, zal de spanning 2.3V zijn)  
+  Hoe hoger de vochtigheid, hoe hoger de uitgangsspanning.
 
-- センサータイプ: アナログ出力
+- Sensortype: Analoge uitgang
 
-- インターフェース: Pin1 - 信号, Pin2 - GND, Pin3 - VCC
+- Aansluiting: Pin1 - signaal, Pin2 - GND, Pin3 - VCC
 
-## 接続図
+## Aansluitschema
 
-モジュールの S ピンを V4.0 ボードの Analog A0 に接続し、負極ピンを GND ポート、正極ピンを 5V ポートに接続します。
+Verbind de S-pin van de module met Analog A0 van het V4.0-board, verbind de negatieve pin met GND en de positieve pin met 5V.
 
-![接続図のイラスト](../media/b1685a438f171f4bbb3cd8d1b1782bb1.jpeg)
+![Aansluitschema illustratie](../media/b1685a438f171f4bbb3cd8d1b1782bb1.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -64,12 +65,12 @@ void loop(){
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 結果の例
+## Voorbeeldresultaat
 
-![結果の例のイラスト](../media/1200f0f53ca0758afc505c475ce75e68.png)
+![Voorbeeldresultaat illustratie](../media/1200f0f53ca0758afc505c475ce75e68.png)
 
-配線と電源を接続し、コードをアップロードしたら、シリアルモニタを開きボーレートを57600に設定すると、値が表示されます。センサーが湿度を検出すると値が対応して変化します。下図参照。
+Na het aansluiten en inschakelen, upload de code, open de seriële monitor en stel de baudrate in op 57600, je zult de waarden zien. Wanneer de sensor vocht detecteert, verandert de waarde overeenkomstig. Zie hieronder.
 
-![結果の例のイラスト](../media/cb240ae7199f877c17b9ac3a4d9d6ced.jpeg)
+![Voorbeeldresultaat illustratie](../media/cb240ae7199f877c17b9ac3a4d9d6ced.jpeg)
 
 ---

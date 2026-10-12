@@ -1,51 +1,51 @@
-# レッスン19: アナログ温度
+# Les 19: Analoge Temperatuur
 
-> **キット：** Keyestudio 48-in-1 センサーキット  
-> **ボード：** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 Sensorkit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![プロジェクト19: アナログ温度の図](../media/8269d6536e383bcc592da1ae98bc3661.png)
+![Project 19: Illustratie Analoge Temperatuur](../media/8269d6536e383bcc592da1ae98bc3661.png)
 
-## 説明
+## Beschrijving
 
-このモジュールはサーミスタ（周囲温度の変化に応じて抵抗値が変化する）の動作原理に基づいています。
+Deze module is gebaseerd op het werkingsprincipe van een thermistor (weerstand varieert met temperatuursverandering in de omgeving).
 
-周囲の温度変化を感知し、ArduinoボードのアナログI/Oにデータを送ることができます。
+Hij kan temperatuurveranderingen in de omgeving detecteren en de gegevens naar de analoge IO van het Arduino-bord sturen.
 
-センサーの出力を簡単なプログラムで摂氏温度に変換し、最終的にモニタに表示するだけです。
+Alles wat we hoeven te doen is de uitvoer van de sensor omzetten naar graden Celsius met eenvoudige programmering en deze vervolgens op de monitor weergeven.
 
-扱いやすく有効なため、園芸、住宅用警報システムなどさまざまな機器で広く応用されています。
+Het is zowel praktisch als effectief, en wordt daarom veel toegepast in tuinieren, alarmsystemen voor thuis en andere apparaten.
 
-## 仕様
+## Specificatie
 
-- インターフェース：アナログ
+- Type interface: analoog
 
-- 動作電圧：5V
+- Werks spanning: 5V
 
-- 温度範囲：-55℃〜315℃
+- Temperatuurbereik: -55℃～315℃
 
-- サイズ：30\*20mm
+- Afmeting: 30\*20mm
 
-- 重量：3g
+- Gewicht: 3g
 
-## 接続図
+## Aansluitschema
 
-接続する前に、次の部品を用意してください：
+Bereid eerst de volgende onderdelen voor voordat je gaat aansluiten:
 
-- V4.0 ボード\*1
+- V4.0 Bord\*1
 
-- アナログ温度センサー\*1
+- Analoge temperatuursensor\*1
 
-- USBケーブル\*1
+- USB-kabel\*1
 
-- ジャンパーワイヤー\*3
+- Jumperdraad\*3
 
-モジュールの S ピンを V4.0 ボードのアナログ A0 に接続し、負極（-）を GND、正極（+）を 5V に接続します。
+Verbind de S-pin van de module met Analoge A0 van het V4.0-bord, verbind de negatieve pin met de GND-poort en de positieve pin met de 5V-poort.
 
-![接続図のイラスト](../media/330d37f05ac235a850d06726284243a5.jpeg)
+![Aansluitschema illustratie](../media/330d37f05ac235a850d06726284243a5.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -60,11 +60,11 @@ Serial.println(sensorValue);
 ////////////////////////////////////////////////////////////////////
 ```
 
-上のコードはアナログ値のみを扱います。
+De bovenstaande code is alleen voor analoge waarden.
 
-アナログ値が周囲の温度変化に応じて変化するのは確認できますが、変化はあまり明確ではありません。
+Je kunt zien dat de analoge waarde verandert naarmate de omgevingstemperatuur verandert. Maar dat is niet erg duidelijk.
 
-次の式を使ってこれを解決します。下のコードをArduinoボードにアップロードしてください。シリアルポートから読み取った値は実際の温度に近くなります。例：現在の温度が30°Cの場合。
+We lossen dit op met behulp van de volgende formule. Upload vervolgens de onderstaande code naar het Arduino-bord. De waarde die via de seriële poort wordt gelezen, komt ongeveer overeen met de werkelijke temperatuur. Bijvoorbeeld: de temperatuur is nu 30°C.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -84,12 +84,12 @@ void loop()
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 実行結果の例
+## Voorbeeldresultaat
 
-![実行結果の図](../media/9ae4e8962bf9d46ceeb3ca0c2e560f43.png)
+![Illustratie van het voorbeeldresultaat](../media/9ae4e8962bf9d46ceeb3ca0c2e560f43.png)
 
-上図のように配線して電源を入れ、コードをボードに正常にアップロードしたら、Arduino IDEのシリアルモニタを開くと現在の温度値が表示されます。
+Als de bedrading gereed is en de voeding is aangesloten zoals in de afbeelding, upload je de code naar het bord en open je de seriële monitor van de Arduino IDE; je ziet de huidige temperatuurwaarde.
 
-![実行結果の図](../media/005b4c639460eba8158f99637f03686b.jpeg)
+![Illustratie van het voorbeeldresultaat](../media/005b4c639460eba8158f99637f03686b.jpeg)
 
 ---

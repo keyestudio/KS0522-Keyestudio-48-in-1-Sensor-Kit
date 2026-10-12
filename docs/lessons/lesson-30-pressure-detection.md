@@ -1,62 +1,62 @@
-# レッスン30: 圧力検出
+# Les 30: Drukdetectie
 
-> **キット：** Keyestudio 48-in-1 センサーキット  
-> **ボード：** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Set:** Keyestudio 48-in-1 Sensor Kit  
+> **Ontwikkelbord:** Keyestudio V4.0 / Arduino Uno-compatibele ATmega328P-bord
 
-![プロジェクト30: 圧力検出 イラスト](../media/313f11bf4a7f52ac903c78976fe1e633.jpeg)
+![Project 30: Illustratie drukdetectie](../media/313f11bf4a7f52ac903c78976fe1e633.jpeg)
 
-## 説明
+## Beschrijving
 
-このセンサーは新しい柔軟なナノ圧力感知材料と超薄型フィルムパッドを採用しています。防水と圧力検知の機能を備えています。
+Deze sensor gebruikt nieuw flexibel nano druksensitief materiaal met een ultradunne filmlaag. Hij is waterdicht en heeft de functie drukdetectie.
 
-外部の圧力を検知すると、センサーの抵抗値が変化します。
+Wanneer de sensor druk van buiten detecteert, verandert de weerstand van de sensor.
 
-したがって、回路を使用することで、圧力変化を感知する圧力信号を対応する電気信号として出力できます。
+Met dit circuit kan het druksignaal, dat drukveranderingen detecteert, worden omgezet naar het overeenkomstige elektrische signaal.
 
-このように、信号の変化を検出することで、圧力変化の状態を取得できます。
+Op deze manier kunnen we de toestanden van drukveranderingen bepalen door de signaalveranderingen te detecteren.
 
-## パラメータ
+## Specificaties
 
-- 動作電圧：DC 3.3V—5V
+- Werkspanning：DC 3.3V—5V
 
-- 測定範囲：0-10KG
+- Bereik：0-10KG
 
-- 厚さ：＜0.25mm
+- Dikte：＜0.25mm
 
-- 応答点：＜20g
+- Responsdrempel：＜20g
 
-- 再現性：＜±5.8%（50% 負荷）
+- Herhaalbaarheid：＜±5.8%（50% belasting）
 
-- 精度：±2.5%（レンジの85%区間）
+- Nauwkeurigheid：±2.5%（85% bereikinterval）
 
-- 耐久性：＞100000回
+- Duurzaamheid：＞100 duizend keer
 
-- 初期抵抗：＞100MΩ（無負荷）
+- Initiële Weerstand：＞100MΩ（geen belasting）
 
-- 応答時間：＜1ms
+- Reactietijd：＜1ms
 
-- 回復時間：＜15ms
+- Hersteltijd：＜15ms
 
-- 動作温度：﹣20℃—60℃
+- Werktemperatuur：﹣20℃—60℃
 
-## 接続図
+## Aansluitschema
 
-まず、接続前に以下の部品を準備してください。
+Bereid eerst de volgende onderdelen voor voordat u aansluit.
 
-- V4.0 ボード\*1
+- V4.0-bord\*1
 
-- 圧力センサー\*1
+- Druksensor\*1
 
-- USB ケーブル\*1
+- USB-kabel\*1
 
-- ジャンパー線\*3
+- Jumperdraad\*3
 
-モジュールの S ピンを V4.0 ボードの Analog A0 に接続し、負極ピンを GND ポート、正極ピンを 5V ポートに接続します。  
-![接続図 イラスト](../media/3325303180f71db75d9e13acc5036d8f.jpeg)
+Verbind de S-pin van de module met Analoge A0 van het V4.0-bord, verbind de negatieve pin met de GND-poort, de positieve pin met de 5V-poort.
+![Aansluitschema illustratie](../media/3325303180f71db75d9e13acc5036d8f.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードを Arduino ソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -76,14 +76,13 @@ void loop()
 ///////////////////////////////////////////////////////////////
 ```
 
-## 実行例
+## Voorbeeldresultaat
 
-配線とコードのアップロードが完了したら、Arduino ソフトウェアのシリアルモニタを開いてください。
+Als de bedrading goed is en de code is geüpload, open dan de seriële monitor in de Arduino-software.
 
-次に、センサーを手でしっかり押すと、モニタに表示される値が増加します。
+Druk vervolgens stevig met uw hand op de sensor; de op de monitor weergegeven waarde neemt toe.
+![Voorbeeldresultaat illustratie](../media/a6c4be8596a0048cb5f3b2f1612241bd.png)
 
-![実行例 イラスト](../media/a6c4be8596a0048cb5f3b2f1612241bd.png)
-
-![実行例 イラスト](../media/e055d2749b14c62b92c22496a3d1f96a.jpeg)
+![Voorbeeldresultaat illustratie](../media/e055d2749b14c62b92c22496a3d1f96a.jpeg)
 
 ---

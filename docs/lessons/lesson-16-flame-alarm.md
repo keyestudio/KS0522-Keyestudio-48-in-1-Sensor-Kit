@@ -1,51 +1,51 @@
-# レッスン 16：火炎アラーム
+# Les 16: Vlamalarm
 
-> **キット:** Keyestudio 48-in-1 Sensor Kit  
-> **ボード:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Kit:** Keyestudio 48-in-1 sensorpakket  
+> **Printplaat:** Keyestudio V4.0 / Arduino Uno-compatibele ATmega328P-printplaat
 
-![プロジェクト16：火炎アラームのイラスト](../media/35c5a2593df5d4e76865158e790feada.png)
+![Project 16: Vlamalarm illustratie](../media/35c5a2593df5d4e76865158e790feada.png)
 
-## 説明
+## Beschrijving
 
-この火炎センサーは、波長が760nm ～ 1100nmの火やその他の光を検出するために使用できます。
+Deze vlamsensor kan worden gebruikt om vuur of ander licht met golflengte in het bereik van 760nm \~ 1100nm te detecteren.
 
-消火ロボットの競技では、火炎は探索において重要な役割を果たし、ロボットが火元を探すための“目”として使用できます。
+In het brandbestrijdingsrobotspel speelt de vlam een belangrijke rol bij het opsporen; het kan dienen als de ogen van de robot om de vuurbron te vinden.
 
-## 仕様
+## Specificaties
 
-1. 電源電圧: 3.3V～5V
+1. Voedingsspanning: 3.3V tot 5V
 
-2. 検出範囲: 20cm (4.8V) ～ 100cm (1V)
+2. Detectiebereik: 20cm (4.8V) \~ 100cm (1V)
 
-3. スペクトル帯域範囲: 760nm～1100nm
+3. Bereik van de spectrale bandbreedte: 760nm tot 1100nm
 
-4. 動作温度: -25℃から85℃
+4. Bedrijfstemperatuur: -25℃tot 85℃
 
-5. インターフェース: デジタル
+5. Interface: digitaal
 
-6. サイズ: 44*16.7mm
+6. Afmetingen: 44*16.7mm
 
-7. 重量: 4g
+7. Gewicht: 4g
 
-## 接続図
+## Aansluitschema
 
-まず接続の前に次の部品を用意してください:
+Eerst moet je de volgende onderdelen voorbereiden voordat je gaat aansluiten:
 
-- V4.0 Board*1
+- V4.0-printplaat*1
 
-- 火炎センサー*1
+- Vlamsensor*1
 
-- USBケーブル*1
+- USB-kabel*1
 
-- ジャンパー線*3
+- Jumperdraad*3
 
-モジュールのD0ピンをV4.0ボードのDigital 2に接続し、GNDピンをGNDポートに、VCCピンを5Vポートに接続します。
+Verbind de D0 pin van de module met Digital 2 van het V4.0-printplaat, verbind de GND pin met de GND-aansluiting en de VCC pin met de 5V-aansluiting.
 
-![接続図のイラスト](../media/a1ee506fc9921c7616349500c258b733.jpeg)
+![Aansluitschema illustratie](../media/a1ee506fc9921c7616349500c258b733.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピーして貼り付けてください。
+Kopieer en plak onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -74,14 +74,14 @@ State = digitalRead(flamePin);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 実行結果
+## Voorbeeldresultaat
 
-配線と電源を接続し、コードをボードに正常にアップロードすると、
+Nadat de bedrading is voltooid en de voeding is ingeschakeld, upload je de code correct naar de printplaat.
 
-![実行結果のイラスト](../media/c769453bbd0e1c5fcf6c80cf697030b3.png)
+![Voorbeeldresultaat illustratie](../media/c769453bbd0e1c5fcf6c80cf697030b3.png)
 
-ライターをセンサーに近づけると、センサーが火炎を検出した際にセンサー上の別のLEDが点灯します。
+Als je vervolgens een aansteker dicht bij de sensor houdt, zal wanneer de sensor de vlam detecteert, een andere led op de sensor aangaan.
 
-![実行結果のイラスト](../media/2ee5a36673d2cbeb934ca2af29dab607.png)
+![Voorbeeldresultaat illustratie](../media/2ee5a36673d2cbeb934ca2af29dab607.png)
 
 ---

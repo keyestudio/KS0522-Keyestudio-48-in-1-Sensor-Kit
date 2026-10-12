@@ -1,47 +1,47 @@
-# レッスン12：ホール磁気センサー
+# Les 12: Hall-magnetische sensor
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Set:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P bord
 
-![プロジェクト12：ホール磁気センサーの図](../media/c3d4d513b72ac04fad7e4f3015bfb1ed.png)
+![Project 12: Hall-magnetische sensor illustratie](../media/c3d4d513b72ac04fad7e4f3015bfb1ed.png)
 
-## 説明
+## Beschrijving
 
-これは磁気誘導センサーです。検出範囲最大約3cm以内の磁性体を感知できます。検出範囲と磁場の強さは比例します。出力はデジタルのオン/オフです。
+Dit is een magnetische inductiesensor. Hij kan magnetische materialen detecteren binnen een detectiebereik tot 3cm. Het detectiebereik en de sterkte van het magnetisch veld zijn evenredig. De uitgang is digitaal aan/uit.
 
-このセンサーは SFE Reed Switch - Magnetic Field Sensor を使用しています。
+Deze sensor gebruikt de SFE Reed Switch - Magnetic Field Sensor.
 
-## 仕様
+## Specificaties
 
-- 磁性体の検出
+- Detecteert magnetische materialen
 
-- 検出範囲：最大約3cm
+- Detectiebereik: tot 3cm
 
-- 出力：デジタル（オン/オフ）
+- Uitgang: digitaal aan/uit
 
-- サイズ：30*20mm
+- Afmeting: 30*20mm
 
-- 重量：3g
+- Gewicht: 3g
 
-## 接続図
+## Aansluitschema
 
-接続前に次のパーツを用意してください:
+Eerst moet je de volgende onderdelen voorbereiden voordat je aansluit:
 
-- V4.0ボード\*1
+- V4.0 Bord\*1
 
-- ホールセンサー\*1
+- Hall-sensor \*1
 
-- USBケーブル\*1
+- USB-kabel\*1
 
-- ジャンパーワイヤー\*3
+- Jumperdraad\*3
 
-モジュールのSピンを V4.0ボードのDigital 3に接続し、負極ピンをGNDポートに、正極ピンを5Vポートに接続します。
+Verbind de S-pin van de module met Digital 3 van het V4.0-bord, verbind de negatieve pin met de GND-poort en de positieve pin met de 5V-poort.
 
-![接続図のイラスト](../media/db4db0c53435ceb1d6caaaf40502247a.jpeg)
+![Aansluitschema illustratie](../media/db4db0c53435ceb1d6caaaf40502247a.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-下のコードをコピーしてArduinoソフトに貼り付けてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -65,14 +65,14 @@ void loop(){
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 実行例
+## Voorbeeldresultaat
 
-配線を行い、コードをボードに正しくアップロードすると、V4.0ボードのD13インジケーターは消灯し、モジュール上のLEDも消灯しているのが確認できます。
+Sluit alles aan en upload de code naar het bord; je zult zien dat de D13-indicator op het V4.0-bord uit is, en de LED op de module ook uit is.
 
-![実行例のイラスト（磁石なし）](../media/102f67e289b5834de7fa80b6e6d99c20.png)
+![Voorbeeldresultaat illustratie](../media/102f67e289b5834de7fa80b6e6d99c20.png)
 
-しかし、ホールモジュールに磁石を近づけると、V4.0ボードのD13インジケーターが点灯し、モジュール上のLEDも点灯します。
+Maar als je een magneet dicht bij de hall-module houdt, zie je dat de D13-indicator op het V4.0-bord aangaat, en de LED op de module ook aangaat.
 
-![実行例のイラスト（磁石あり）](../media/c3c4044f2205dd1ff162ef7e211d2b2c.png)
+![Voorbeeldresultaat illustratie](../media/c3c4044f2205dd1ff162ef7e211d2b2c.png)
 
 ---

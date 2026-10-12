@@ -1,35 +1,35 @@
-# レッスン22: アナログサウンド
+# Les 22: Analoog geluid
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Set:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![プロジェクト22：アナログサウンドの図](../media/a494bbec73f7c8ff91b3133c9d2798a7.jpeg)
+![Project 22: Analoog geluid illustratie](../media/a494bbec73f7c8ff91b3133c9d2798a7.jpeg)
 
-## 説明
+## Beschrijving
 
-アナログ音センサーは、周囲の音の大きさ（音量）を検出するのに一般的に使われます。センサーには可変抵抗（ポテンショメータ）が付属しており、これを回して信号の増幅度を調整できます。
+Een analoge geluidsensor wordt meestal gebruikt om het volumeniveau van omgevingsgeluiden te detecteren. De sensor is voorzien van een potentiometer, zodat je deze kunt draaien om de signaalversterking aan te passen.
 
-音声起動スイッチのような、面白くインタラクティブな作品に利用できます。
+Je kunt hem gebruiken om interessante en interactieve projecten te maken, zoals een spraakgestuurde schakelaar.
 
-## 仕様
+## Specificaties
 
-- 供給電圧: 3.3V〜5V
+- Voedingsspanning: 3.3V tot 5V
 
-- インターフェース: アナログ
+- Interface: Analoog
 
-- サイズ: 30×20mm
+- Afmetingen: 30*20mm
 
-- 重さ: 4g
+- Gewicht: 4g
 
-## 接続図
+## Aansluitschema
 
-モジュールのSピンをV4.0ボードのAnalog A0に接続し、負極ピンをGNDポートに、正極ピンを5Vポートに接続します。
+Verbind de S-pin van de module met Analoog A0 van het V4.0-bord, verbind de negatieve pin met de GND-poort en de positieve pin met de 5V-poort.
 
-![接続図](../media/22e1124550d57015a6d2d5782b8febda.jpeg)
+![Aansluitschema illustratie](../media/22e1124550d57015a6d2d5782b8febda.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -49,10 +49,10 @@ delay(50);
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 実行例
+## Voorbeeldresultaat
 
-配線と電源を接続し、コードをアップロードしたら、シリアルモニタを開いてボーレートを9600に設定します。アナログ値が表示されます。マイクヘッドに向かって話すと値が増加します。下図参照。
+Na het aansluiten en inschakelen en het correct uploaden van de code, open de seriële monitor en stel de baudrate in op 9600; je ziet de analoge waarde. Als je naar de microfoon spreekt, zal de waarde toenemen. Zie hieronder.
 
-![実行例の図](../media/4d753036151413a1bdda3c0b283b8551.png)
+![Voorbeeldresultaat illustratie](../media/4d753036151413a1bdda3c0b283b8551.png)
 
 ---

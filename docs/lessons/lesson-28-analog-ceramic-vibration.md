@@ -1,47 +1,47 @@
-# レッスン 28: アナログ セラミック 振動
+# Les 28: Analoge keramische trilling
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Set:** Keyestudio 48-in-1 Sensorset  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![アナログセラミック振動センサーモジュール](../media/2cf5c2793157816a2346a730ad064955.jpeg)
+![Analoge keramische trillingssensormodule](../media/2cf5c2793157816a2346a730ad064955.jpeg)
 
-## 説明
+## Beschrijving
 
-この振動センサーは圧電セラミック素子を用いたアナログ振動検出に基づいています。圧電セラミックが振動すると電気信号を発生する逆変換プロセスを利用しています。圧電セラミックチップを振動させると、センサーの信号端子が電気信号を生成します。
+Deze trillingssensor is gebaseerd op een piëzo-elektrische keramische chip voor analoge trilling. Hij maakt gebruik van het anti-omzettingsproces waarbij de piëzo-elektrische keramische trilling elektrische signalen genereert. Wanneer de keramische piëzochip trilt, zal de signaalaansluiting van de sensor elektrische signalen produceren.
 
-センサーはArduino専用センサーシールドと併用でき、Arduinoのアナログポートで微弱な振動信号を検出できます。これにより、電子ドラムのような振動に関連するインタラクティブな作品を作ることができます。
+De sensor kan worden gebruikt met een Arduino-dedicated sensor shield, en de analoge poort van de Arduino kan zwakke trilsignalen waarnemen, zodat hij interactieve toepassingen met trillingen kan aansturen, zoals een elektronische drum.
 
-振動センサーをArduino UNOのアナログポートA0に接続します。センサーを異なる強さで振動させると、Arduinoソフトのシリアルモニタに異なる出力値が表示されます。
+Sluit de trillingssensor aan op de analoge poort A0 van het V4.0-bord. Wanneer je de sensor in verschillende mate laat trillen, zie je verschillende uitvoerwaarden weergegeven in de seriële monitor van de Arduino-software.
 
-## 仕様
+## Specificatie
 
-- 動作電圧: 3.3V～5V
+- Voedingsspanning: 3.3V tot 5V
 
-- 動作電流：\<1mA
+- Werkstroom：\<1mA
 
-- 動作温度範囲：－10℃～＋70℃
+- Werktemperatuurbereik：－10℃～＋70℃
 
-- 出力信号：アナログ信号
+- Uitgangssignaal：analoog signaal
 
-## 接続図
+## Aansluitschema
 
-接続する前に、以下の部品を準備してください：
+Eerst moet je de volgende onderdelen voorbereiden voordat je aansluit:
 
-- V4.0 ボード\*1
+- V4.0-bord\*1
 
-- 振動センサー\*1
+- trillingssensor\*1
 
-- USBケーブル\*1
+- USB-kabel\*1
 
-- ジャンパー線\*3
+- Jumperdraad\*3
 
-モジュールのSピンをV4.0ボードのアナログA0に接続し、負極ピンをGNDポートに接続し、NCピンを5Vポートに接続します。
+Verbind de S-pin van de module met analoog A0 van het V4.0-bord, verbind de negatieve pin met de GND-aansluiting, en de NC-pin met de 5V-aansluiting.
 
-![接続図のイラスト](../media/92fce2d45b05876a7928070bd2b137da.jpeg)
+![Aansluitschema illustratie](../media/92fce2d45b05876a7928070bd2b137da.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak onderstaande code in de Arduino-software.
 
 ```c
 ///////////////////////////////////////////////////////////
@@ -60,14 +60,14 @@ delay(100);
 ///////////////////////////////////////////////////////////
 ```
 
-## 実行例
+## Voorbeeldresultaat
 
-![実行例のイラスト](../media/e21152ca9f30274fcc658091f76f7044.png)
+![Voorbeeldresultaat illustratie](../media/e21152ca9f30274fcc658091f76f7044.png)
 
-上の図のように配線し、コードをアップロードしたら、シリアルモニターを開き、ボーレートを9600に設定してください。
+Bedraad volgens het bovenstaande schema en upload de code, open vervolgens de seriële monitor en stel de baudrate (baud-snelheid) in op 9600.
 
-セラミックチップを振動させると、下図のようにデータが変化するのが確認できます。
+Wanneer je de keramische chip laat trillen, zie je de gegevens veranderen zoals in de onderstaande afbeelding.
 
-![実行例のイラスト](../media/4be72e831696d59b36082aa45d77a04d.jpeg)
+![Voorbeeldresultaat illustratie](../media/4be72e831696d59b36082aa45d77a04d.jpeg)
 
 ---

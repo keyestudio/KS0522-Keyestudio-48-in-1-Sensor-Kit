@@ -1,53 +1,53 @@
-# レッスン 39: リニア温度
+# Lesson 39: Linear Temperature
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Set:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-![プロジェクト39：リニア温度の図](../media/9a9b328cb85401dce3932f047f0979e0.png)
+![Project 39: Lineaire temperatuur illustratie](../media/9a9b328cb85401dce3932f047f0979e0.png)
 
-## はじめに
+## Inleiding
 
-LM35 リニア温度センサーは、半導体型のLM35温度センサーに基づいています。周囲の空気温度を検出するために使用できます。
+De LM35 lineaire temperatuursensor is gebaseerd op de halfgeleider LM35 temperatuursensor. Hij kan gebruikt worden om de omgevingstemperatuur te detecteren.
 
-このセンサーは摂氏0度から摂氏100度の範囲で動作します。感度は1℃あたり10mVです。出力電圧は温度に比例します。
+Deze sensor heeft een werkbereik van 0 graden Celsius tot 100 graden Celsius. De gevoeligheid is 10mV per graad Celsius. De uitgangsspanning is evenredig met de temperatuur.
 
-このセンサーは一般的に温度測定センサーとして使用されます。温度センサーには熱電対、白金抵抗（プラチナ抵抗）、サーミスタ（熱抵抗）、および半導体温度センサーチップが含まれます。
+Deze sensor wordt vaak gebruikt als temperatuursensor. Tot de categorieën behoren thermokoppels, platina-weerstandssensoren, thermische weerstanden en halfgeleider-temperatuurchips.
 
-この種のチップは高温測定用の熱電対としてよく使用されます。
+De chip wordt vaak toegepast in thermokoppels voor het meten van hoge temperaturen.
 
-白金抵抗温度センサーは約800℃までの測定に使用され、サーミスタや半導体温度センサーは100〜200℃程度またはそれ以下の測定に適しています。その中で、単純な半導体温度センサーは線形性に優れ感度が高いという利点があります。
+Een platina-weerstandstemperatuursensor wordt gebruikt voor metingen tot 800 graden Celsius, terwijl thermische weerstand- en halfgeleider-temperatuursensoren geschikt zijn voor het meten van temperaturen rond 100–200 graden of lager. Voor eenvoudige toepassingen is een halfgeleider-temperatuursensor geschikt vanwege de goede lineariteit en hoge gevoeligheid.
 
-LM35リニア温度センサーはArduinoシールドに簡単に接続できます。
+De LM35 lineaire temperatuursensor kan eenvoudig op een Arduino-shield worden aangesloten.
 
-## 仕様
+## Specificaties
 
-- 感度: 1℃あたり10mV
+- Gevoeligheid: 10mV per graad Celsius
 
-- 動作範囲: 0℃〜100℃
+- Functioneel bereik: 0 graden Celsius tot 100 graden Celsius
 
-- サイズ: 30×20mm
+- Grootte: 30*20mm
 
-- 重量: 3g
+- Gewicht: 3g
 
-## 接続図
+## Aansluitschema
 
-まず、テストの前に次の部品を用意してください。
+Bereid eerst de volgende onderdelen voor voordat u gaat testen.
 
-- V4.0 ボード\*1
+- V4.0 Board\*1
 
-- LM35 温度センサー\*1
+- LM35 temperatuursensor\*1
 
-- USB ケーブル\*1
+- USB-kabel\*1
 
-- ジャンパーワイヤ\*3
+- Jumperdraad\*3
 
-次に配線図に従い、センサーの信号ピンをV4.0ボードのA0ポートに、マイナスピンをGNDポートに、プラスピンを5Vポートに接続します。
+Volg vervolgens het aansluitschema en verbind de signaaldraad van de sensor met de A0-poort van het V4.0-board, de negatieve pin met GND en de positieve pin met 5V.
 
-![配線図の図](../media/e2f1fc77bb6b54c35bc3d1a8834cbf6b.jpeg)
+![Aansluitschema illustratie](../media/e2f1fc77bb6b54c35bc3d1a8834cbf6b.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -68,14 +68,14 @@ void setup()
 ///////////////////////////////////////////////////////////////
 ```
 
-## 実例
+## Voorbeeldresultaat
 
-![実行結果の図](../media/95d0d43a93fd2bf1e9c7248e80edcedc.png)
+![Voorbeeldresultaat illustratie](../media/95d0d43a93fd2bf1e9c7248e80edcedc.png)
 
-上図のように配線し、コードをボードに正しくアップロードしたら、シリアルモニタを開き、ボーレートを9600に設定します。
+Sluit alles aan volgens het bovenstaande schema en upload de code naar het bord. Open vervolgens de seriële monitor en stel de baudrate in op 9600.
 
-下に現在の温度値が表示されます。場所や気象条件により値は若干異なる場合があります。
+U ziet de huidige temperatuurwaarde zoals hieronder weergegeven. De waarde kan licht afwijken afhankelijk van de locatie en het weer.
 
-![実行結果の図](../media/8331a0416c8006161b3227e170a3b033.jpeg)
+![Voorbeeldresultaat illustratie](../media/8331a0416c8006161b3227e170a3b033.jpeg)
 
 ---

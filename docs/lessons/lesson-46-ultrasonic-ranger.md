@@ -1,78 +1,78 @@
-# レッスン46: 超音波レンジャー
+# Les 46: Ultrasone afstandssensor
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno 互換 ATmega328P ボード
+> **Set:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
 
-![プロジェクト46：超音波レンジャー（イラスト）](../media/c170155a5fb03abdc10866e25e3670b2.jpeg)
+![Project 46: Ultrasone afstandssensor illustratie](../media/c170155a5fb03abdc10866e25e3670b2.jpeg)
 
-## 説明
+## Beschrijving
 
-超音波は指向性が強く、媒体中でのエネルギー損失が小さく長距離伝播できるため、距離測定（レンジファインダーや位置測定器）に広く用いられています。
+Omdat ultrasoon geluid een sterke richtinggevoeligheid heeft, weinig energie verbruikt en ver door het medium verspreidt, wordt het vaak gebruikt bij afstandsmetingen, zoals afstandsmeter en positie-meetinstrument.
 
-超音波検出モジュールは、2cm〜450cm の非接触検出距離を提供でき、測距精度は最大で約3mmと、通常の要求を十分満たします。
+De ultrasone detectormodule kan een contactloze detectieafstand van 2cm–450cm bieden, en de meetnauwkeurigheid is tot 3mm, wat uitstekend voldoet aan normale eisen.
 
-このモジュールは超音波送信器と受信器および対応する制御回路を含んでいます。
+De module bevat een ultrasone zender en ontvanger en de bijbehorende stuurcircuits.
 
-## 動作概略
+## Werkingsschema
 
-HC-SR04 の測定シーケンスは以下の通りです：
+De HC-SR04 meetvolgorde wordt hieronder weergegeven:
 
-![動作概略図](../media/a7b0fc57b2e387962071da618153ad68.jpeg)
+![Werkingsschema illustratie](../media/a7b0fc57b2e387962071da618153ad68.jpeg)
 
-1\. まずTRIGをローにしておき、少なくとも10usのハイレベル信号でトリガーします；
+1\. Eerst TRIG laag trekken, en vervolgens triggeren met een hoog signaal van minimaal 10us;
 
-2\. トリガー後、モジュールは自動的に8回の40kHzの方形波を送信し、戻り信号があるかを自動検出します。
+2\. Na het triggeren zendt de module automatisch acht 40KHZ rechthoekgolven uit en detecteert automatisch of er een terugkerend signaal is.
 
-3\. もし信号が返ってきた場合、ECHOピンからハイレベルが出力されます。ハイレベルの継続時間は、実際には超音波の送信から受信までの時間です。
+3\. Als er een signaal terugkomt, geeft ECHO een hoog niveau uit; de duur van het hoge niveau is in feite de tijd van uitzending tot ontvangst van het ultrasone signaal.
 $$
-測定距離 = ハイレベル継続時間 * 340m/s * 0.5
+Testafstand = Duur van het hoge niveau * 340m/s * 0.5
 $$
 
-## パラメータ
+## Parameters
 
-- 動作電圧: 5 V DC
+- Werkspanning: 5 V DC
 
-- 動作電流：15mA
+- Werkstroom：15mA
 
-- 検出範囲：2-450cm
+- Detectiebereik：2-450cm
 
-- 検出角度：15度
+- Detectiehoek：15 graden
 
-- 入力トリガーパルス：10us TTL レベル
+- Ingang-triggerpuls：10us TTL-niveau
 
-- 出力エコー信号：TTL レベル信号(HIGH)を出力、距離に比例
+- Uitgang-echo signaal：uitgang TTL-niveausignaal(HIGH)，evenredig met afstand.
 
-## ピン配置図
+## Pinout Diagram
 
-![ピン配置図](../media/c03e563bcd19796b483156724bae174a.png)
+![Pinout-diagram illustratie](../media/c03e563bcd19796b483156724bae174a.png)
 
-## 接続図
+## Aansluitschema
 
-まず、以下の部品を準備してください：
+Eerst moet je de volgende componenten voorbereiden:
 
-- V4.0 ボード\*1
+- V4.0 bord\*1
 
-- 超音波センサ\*1
+- Ultrasone sensor\*1
 
-- USB ケーブル\*1
+- USB-kabel\*1
 
-- ジャンパー線\*4
+- Jumperdraad\*4
 
-次に、以下の接続表を参照してください：
+Raadpleeg vervolgens de volgende aansluittafel:
 
-![接続図](../media/e708c019b57984a07feb241672793982.jpeg)
+![Aansluitschema illustratie](../media/e708c019b57984a07feb241672793982.jpeg)
 
-注：D4、D5 はデジタルピン4およびピン5です。
+Opmerking: D4、D5 zijn respectievelijk digitale pin 4 en pin 5.
 
-以下の接続図を参考にしてください：
+Je kunt verwijzen naar het onderstaande aansluitdiagram:
 
-![接続図](../media/b5b964743eac977e687c454b64e061fa.jpeg)
+![Aansluitschema illustratie](../media/b5b964743eac977e687c454b64e061fa.jpeg)
 
-接続が正しくできたら、距離を測定してモニタに距離値を表示できます。
+Na correcte aansluiting kun je het gebruiken om de afstand te meten; de afstandswaarde wordt op de monitor weergegeven.
 
-## テストコード
+## Testcode
 
-以下のテストコードをArduinoソフトウェアにコピー＆ペーストしてください
+Kopieer en plak de testcode hieronder in de Arduino-software
 
 ```c
 ///////////////////////////////////////////////////////////////////////////////
@@ -99,14 +99,14 @@ delay(50);
 ///////////////////////////////////////////////////////////////////////////////
 ```
 
-## 実行例
+## Voorbeeldresultaat
 
-![実行例の図](../media/0dcff2ae88366ce40190b77f25d271d7.png)
+![Voorbeeldresultaat illustratie](../media/0dcff2ae88366ce40190b77f25d271d7.png)
 
-コードをV4.0ボードに正常にアップロードしたら、シリアルモニタを開きます。超音波センサの前に物体を置くと（近くから遠くへ）、物体までの距離を検出します。値は下のモニタに表示されます。
+Nadat je de code succesvol naar het V4.0 board hebt geüpload, open je de seriële monitor. Wanneer je een object voor de ultrasone sensor plaatst (van dichtbij naar verder weg), detecteert de sensor de afstand tot het object. De waarde wordt in de onderstaande monitor weergegeven.
 
-![実行例の図](../media/1dbca5dc233994f6923601d942fadba6.png)
+![Voorbeeldresultaat illustratie](../media/1dbca5dc233994f6923601d942fadba6.png)
 
-![実行例の図](../media/dcd49cc72e7a9f993083af7625d240db.png)
+![Voorbeeldresultaat illustratie](../media/dcd49cc72e7a9f993083af7625d240db.png)
 
 ---

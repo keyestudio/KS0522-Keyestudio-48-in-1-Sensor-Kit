@@ -1,69 +1,69 @@
-# レッスン44: 三軸デジタル加速度検出
+# Les 44: Drie-assige digitale versnellingsdetectie
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 Sensorkit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P-bord
 
-![プロジェクト44：三軸デジタル加速度検出の図](../media/2a26949601eb888348b798711fe1151e.jpeg)
+![Project 44: Drie-assige digitale versnellingsdetectie illustratie](../media/2a26949601eb888348b798711fe1151e.jpeg)
 
-## はじめに
+## Introductie
 
-MMA8452Qはスマートで低消費電力の三軸静電容量マイクロマシン加速度センサーで、12ビットの分解能を持ちます。
+MMA8452Q is een slimme laag-vermogen, drie-assige, capacitatieve micromachine-versnellingssensor met 12-bits resolutie.
 
-この加速度センサーは豊富な内蔵機能を備えており、柔軟なユーザープログラム可能なオプションと2つの割り込みピン構成を特徴としています。
+Deze versnellingssensor heeft rijke ingebouwde functionaliteit, met flexibele door de gebruiker programmeerbare opties en twee interrupt-pinnen configuratie.
 
-内蔵の割り込み機能により、全体の消費電力を削減でき、メインプロセッサでデータを常時ポーリングする負担を軽減します。
+De ingebouwde interrupt-functie kan het totale stroomverbruik verlagen en de last van constant polleren van gegevens in de hoofdprocessor wegnemen.
 
-さらに、MMA8452Qはユーザーが選択可能な±2g / ±4g / ±8gのレンジを持ち、ハイパスフィルタ処理されたデータと非フィルタデータをリアルタイムで出力できます。
+Daarnaast heeft de MMA8452Q een door de gebruiker te kiezen bereik van ±2g / ±4g / ±8g, en kan real-time hoogdoorlaatgefilterde gegevens en niet-gefilterde gegevens afgeven.
 
-本デバイスは慣性によるウェイクアップ割り込み信号を生成する内蔵機能を設定でき、静止状態でイベントを監視しながら低消費電力モードを維持できます。
+Dit apparaat kan een ingebouwde functie configureren om een inertiële wake-up interrupt-signaal te genereren, waardoor de MMA8452Q in de statische toestand in een laag-vermogenmodus kan blijven terwijl het gebeurtenissen bewaakt.
 
-## 性能パラメータ
+## Prestatiespecificaties
 
-- 電源電圧：1.95 V ～ 3.6 V
+- Voedingsspanningsbereik: 1.95 V tot 3.6 V
 
-- インターフェース電圧：1.6 V ～ 3.6 V
+- Interface spanning: 1.6 V tot 3.6 V
 
-- ±2g/±4g/±8g 選択可能な動作レンジ
+- Optioneel dynamisch bereik: ±2g / ±4g / ±8g
 
-- 出力データレート（ODR）範囲：1.56Hz ～ 800Hz
+- Output-datafrequentie (ODR) bereik: 1.56Hz tot 800Hz
 
-- ノイズ：99μg/√Hz
+- Ruis: 99μg/√Hz
 
-- 12ビットおよび8ビットのデジタル出力
+- 12-bits en 8-bits digitale outputs;
 
-- I2Cデジタル出力インターフェース（プルアップ抵抗が4.7kΩのとき最大2.25MHz）
+- I2C digitale output-interface (tot 2.25MHz wanneer de pull-up weerstand 4.7kΩ is);
 
-- 6つの割り込みソースに適用できる2つのプログラム可能な割り込みピン
+- Twee programmeerbare interrupt-pinnen toegepast op zes interrupt-bronnen;
 
-- 3つの組み込みモーション検出チャンネル：フリーフォール検出、パルス検出、シェイク検出
+- Drie ingebouwde bewegingsdetectiekanalen: vrije-val-detectie, puls-detectie, schud-detectie;
 
-- 遅延補償設定付きの方向（横/縦）検出
+- Richtingsdetectie (transversaal/ longitudinaal) met instelbare vertragingcompensatie;
 
-- 自動ウェイクおよび自動スリープ時のODRを自動的に切替可能
+- Automatische wake-up en automatische slaap-ODR kunnen automatisch aangepast worden;
 
-- ハイパスフィルタ処理されたデータをリアルタイムで出力可能
+- Gegevens met hoogdoorlaatfilter kunnen in realtime geëxporteerd worden;
 
-- 消費電流：6μA ～ 165μA
+- Stroomverbruik: 6μA – 165μA
 
-## 接続図
+## Aansluitschema
 
-まず以下のパーツを用意してください:
+Bereid eerst de volgende onderdelen voor:
 
-- V4.0 ボード*1
+- V4.0-bord*1
 
-- MMA8452Q センサー*1
+- MMA8452Q-sensor*1
 
-- USBケーブル*1
+- USB-kabel*1
 
-- ジャンパーワイヤ*4
+- Jumperdraden*4
 
-SCLピンをAnalog A5ポートに、SDAピンをAnalog A4ポートに接続します; 正極ピンを3V3ポートに、負極ピンをGNDポートに接続します。
+Verbind de SCL-pin met de Analog A5-poort, de SDA-pin met de Analog A4-poort; verbind de positieve pin met de 3V3-poort, de negatieve pin met de GND-poort.
 
-![接続図のイラスト](../media/fdd68f7da45d46e65f42918eac68a2f3.jpeg)
+![Aansluitschema illustratie](../media/fdd68f7da45d46e65f42918eac68a2f3.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 #include <Wire.h> // Must include Wire library for I2C
@@ -188,14 +188,14 @@ void printOrientation()
 }
 ```
 
-注: コードをコンパイルする前に、ライブラリをArduino IDEのlibrariesディレクトリに配置してください。さもなければ、コンパイルは失敗します。
+Opmerking: voordat je de code compileert, vergeet niet de bibliotheek in de libraries-map van de Arduino IDE te plaatsen. Anders zal het compileren mislukken.
 
-## 実行結果
+## Voorbeeldresultaat
 
-![実行例の画像](../media/9f81d233c0387bc32d25951abd3a407c.png)
+![Voorbeeldresultaat illustratie](../media/9f81d233c0387bc32d25951abd3a407c.png)
 
-コードのアップロードが完了してシリアルモニタを開くと、センサーの三軸加速度とその状態が以下のように表示されます。
+Na het uploaden van de code en het openen van de seriële monitor, worden de drie-assige versnellingen van de sensor en de status hieronder weergegeven.
 
-![実行例の画像](../media/03421d279e2e961d7b40f645b7576d73.jpeg)
+![Voorbeeldresultaat illustratie](../media/03421d279e2e961d7b40f645b7576d73.jpeg)
 
 ---

@@ -1,61 +1,61 @@
-# Lesson 10: 赤外線障害物回避
+# Les 10: Infrarood obstakelvermijding
 
-> **キット：** Keyestudio 48-in-1 Sensor Kit  
-> **ボード：** Keyestudio V4.0 / Arduino Uno-compatible ATmega328P board
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel bord met ATmega328P
 
-![プロジェクト10：赤外線障害物回避のイラスト](../media/54ab9db703340471fd9c3151934b85e7.png)
+![Project 10: Infrarood obstakelvermijding illustratie](../media/54ab9db703340471fd9c3151934b85e7.png)
 
-## 説明
+## Beschrijving
 
-赤外線障害物検出センサーは距離調整機能を備えており、特に車輪型ロボット向けに設計されています。
+De infrarood obstakeldetector-sensor is uitgerust met een afstandsinstelfunctie en is speciaal ontworpen voor rijdende robots.
 
-このセンサーは周囲光への適応性が高く、精度に優れています。
+Deze sensor heeft een sterke aanpassing aan omgevingslicht en een hoge precisie.
 
-赤外線の送信管と受信管が一対あり、送信管から発せられた赤外線が障害物（その反射体）に当たると、赤外線が受信管に反射され、インジケータが点灯し、信号出力インターフェースがデジタル信号を出力します。
+Hij heeft een paar infrarood zend- en ontvangbuisjes. Wanneer de infraroodstraal die door het zendbuisje wordt uitgezonden een obstakel (zijn reflector) raakt, wordt de infraroodstraal teruggekaatst naar het ontvangbuisje, waardoor de indicator oplicht en de signaaluitgangsinterface een digitaal signaal afgeeft.
 
-また、可変抵抗のつまみを回すことで検出距離を調整できます（有効距離: 2～40cm、動作電圧: 3.3V-5V）。
+Daarnaast kunt u de potentiometerknop draaien om de detecteerafstand aan te passen (effectieve afstand: 2～40cm, voedingsspanning: 3.3V-5V).
 
-広い電圧範囲により、電源電圧が変動しても安定して動作でき、さまざまなマイコン、Arduinoコントローラ、BS2コントローラに適しています。
+Dankzij het brede spanningsbereik kan deze sensor stabiel werken zelfs bij schommelende voedingsspanning en is hij geschikt voor verschillende microcontrollers, Arduino-controllers en BS2-controllers.
 
-このセンサーを搭載したロボットは周囲の障害物を感知できます。
+Een robot uitgerust met deze sensor kan obstakels in de omgeving waarnemen.
 
-## 仕様
+## Specificatie
 
-- 動作電圧: DC 3.3V-5V
+- Werkspanning: DC 3.3V-5V
 
-- 動作電流: ≥20mA
+- Werkstroom: ≥20mA
 
-- 動作温度: －10℃～＋50℃
+- Werktemperatuur: －10℃ tot ＋50℃
 
-- 検出距離: 2-40cm
+- Detectieafstand: 2-40cm
 
-- IOインターフェース: 4線インターフェース (-/+/S/EN)
+- IO-interface: 4-draads aansluiting (-/+/S/EN)
 
-- 出力信号: TTL電圧
+- Uitgangssignaal: TTL-spanning
 
-- 収容方式: 多周抵抗調整
+- Aanpassingsmodus: meer-toerenpotentiometer
 
-- 有効角度: 35°
+- Effectieve hoek: 35°
 
-## 接続図
+## Aansluitschema
 
-接続する前に、以下の部品を用意してください:
+Bereid eerst de volgende onderdelen voor voordat u begint met aansluiten:
 
-- V4.0 ボード\*1
+- V4.0-bord\*1
 
-- 障害物検出モジュール \*1
+- Obstakeldetectormodule \*1
 
-- USBケーブル\*1
+- USB-kabel\*1
 
-- ジャンパー線\*3
+- Jumperdraad\*3
 
-モジュールの Out ピンを V4.0 ボードの Digital 2 に接続し、V+ ピンを 5V ポートに、GND ピンを GND ポートに接続します。
+Verbind de Out-pin van de module met Digital 2 van de V4.0 board, verbind de V+ pin met de 5V-poort, GND pin met de GND-poort.
 
-![接続図のイラスト](../media/48f60a482d777df19bc43a3203479b0c.jpeg)
+![Aansluitschema illustratie](../media/48f60a482d777df19bc43a3203479b0c.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードを Arduino ソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 const uint8_t sensorPin = 2;
@@ -72,14 +72,14 @@ void loop() {
 }
 ```
 
-## 実行例
+## Voorbeeldresultaat
 
-コードをボードにアップロードすると、V4.0 ボードと障害物検出センサーの両方のLEDが点灯しているのが確認できます。
+Nadat u de code naar het board heeft geüpload, ziet u dat de LED op zowel het V4.0 board als de obstakeldetector-sensor brandt.
 
-![実行例のイラスト](../media/44d035dfe09b4c803becd84c95b05956.png)
+![Voorbeeldresultaat illustratie](../media/44d035dfe09b4c803becd84c95b05956.png)
 
-センサーの前に発泡ブロックを置くと、障害物を検出したときにセンサーのLEDが点灯します。
+Als we een schuimblok voor de sensor plaatsen, zal wanneer de sensor het obstakel detecteert de LED op de sensor aangaan.
 
-![実行例のイラスト](../media/da4468fead816d42b2ac43b29716b91f.png)
+![Voorbeeldresultaat illustratie](../media/da4468fead816d42b2ac43b29716b91f.png)
 
 ---

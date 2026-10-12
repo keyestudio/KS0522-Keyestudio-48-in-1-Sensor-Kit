@@ -1,62 +1,64 @@
-# レッスン 03: 3W LED
+# Les 03: 3W LED
 
-> **キット:** Keyestudio 48-in-1 Sensor Kit  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Set:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / compatibel met Arduino Uno-bord (ATmega328P)
 
-![プロジェクト 3: 3W LED のイラスト](../media/0b1110577bfde7df3b6aec41d5b21b28.png)
+![Project 3: 3W LED illustratie](../media/0b1110577bfde7df3b6aec41d5b21b28.png)
 
-## 説明
+## Beschrijving
 
-このLEDモジュールは、搭載されているLED素子が3Wであるため高輝度です。  
-Arduinoプロジェクトに応用でき、ロボットや捜索・救助プラットフォームでの使用に最適です。
+Deze LED-module heeft een hoge helderheid omdat de LED-chip die hij draagt 3W is.
+Je kunt deze module toepassen in Arduino-projecten, ideaal voor robot- of zoek-
+en reddingsplatformtoepassingen.
 
-例えば、自律ロボットが照明用にこのモジュールを使用できます。安全上の理由から、LEDの光を直接人間の目に当てないでください。
+Bijvoorbeeld kunnen intelligente robots deze module gebruiken voor verlichting.
+Let op dat het LED-licht om veiligheidsredenen niet rechtstreeks op menselijke ogen mag worden gericht.
 
-## 仕様
+## Specificatie
 
-- 色温度: 6000\~7000K
+- Kleurtemperatuur: 6000\~7000K
 
-- 光束: 180\~210lm
+- Lichtstroom: 180\~210lm
 
-- 電流: 700\~750mA
+- Stroom: 700\~750mA
 
-- 電力: 3W
+- Vermogen: 3W
 
-- ビーム角: 140度
+- Lichthoek: 140 graden
 
-- 動作温度: -50\~80℃
+- Werkingstemperatuur: -50\~80℃
 
-- 保管温度: -50\~100℃
+- Opslagtemperatuur: -50\~100℃
 
-- 高出力LEDモジュール、IOポートでマイコンにより制御
+- Hoog vermogen LED-module, aangestuurd door microcontroller via IO-poort
 
-- IOタイプ: デジタル
+- IO-type: Digitaal
 
-- 供給電圧: 3.3V〜5V
+- Voedingsspanning: 3.3V tot 5V
 
-- サイズ: 40x28mm
+- Afmeting: 40x28mm
 
-- 重量: 6g
+- Gewicht: 6g
 
-## 接続図
+## Aansluitschema
 
-まず、接続の前に以下のパーツを準備してください:
+Bereid eerst de volgende onderdelen voor voordat je gaat aansluiten:
 
-- V4.0 ボード\*1
+- V4.0 Bord\*1
 
-- 3W LEDモジュール\*1
+- 3W LED-module \*1
 
-- USBケーブル\*1
+- USB-kabel\*1
 
-- ジャンパー線\*3
+- Jumperkabel\*3
 
-モジュールのSピンをV4.0ボードのDigital 13に接続し、負極ピンをGNDに、正極ピンを5Vに接続します。
+Verbind de S-pin van de module met Digital 13 van het V4.0 bord, verbind de negatieve pin met de GND-poort, de positieve pin met de 5V-poort.
 
-![接続図のイラスト](../media/7ca6e53405c422f3ae9b04ac572b40ef.jpeg)
+![Aansluitschema illustratie](../media/7ca6e53405c422f3ae9b04ac572b40ef.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 ///////////////////////////////////////////////////////////
@@ -76,10 +78,10 @@ void loop() {
 ///////////////////////////////////////////////////////////
 ```
 
-## 実行結果
+## Voorbeeldresultaat
 
-配線と電源を接続し、コードを正常にアップロードすると、D13のLEDとモジュール上のLEDがそれぞれ1秒点灯して1秒消灯を繰り返します。
+Na het aansluiten en inschakelen, en nadat de code succesvol is geüpload, knipperen zowel de D13-led als de led op de module één seconde aan en één seconde uit, herhalend.
 
-![実行例のイラスト](../media/edeb5b089be0300c719652badfd269e7.png)
+![Voorbeeldresultaat illustratie](../media/edeb5b089be0300c719652badfd269e7.png)
 
 ---

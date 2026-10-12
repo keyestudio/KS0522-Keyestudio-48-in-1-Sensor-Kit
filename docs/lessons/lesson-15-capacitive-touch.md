@@ -1,47 +1,47 @@
-# レッスン15：静電容量式タッチ
+# Les 15: Capacitieve aanraking
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibele ATmega328P board
 
-![プロジェクト15：静電容量式タッチのイラスト](../media/bceabc7d4302bd41ae380e179a281314.png)
+![Project 15: Capacitieve aanraking illustratie](../media/bceabc7d4302bd41ae380e179a281314.png)
 
-## 説明
+## Beschrijving
 
-機械式ボタンのクリックに飽きましたか？それなら静電容量式タッチセンサーを試してみてください。タッチセンサーは電子機器でよく使われています。Arduinoプロジェクトにこのセンサーを追加して、よりクールにしましょう。
+Ben je het zat om mechanische knoppen te gebruiken? Probeer dan onze capacitieve aanraaksensor. Aanraaksensoren worden meestal gebruikt op elektronische apparaten. Upgrade dus je Arduino-project met deze aanraaksensor om je project stoerder te maken.
 
-この小さなセンサーは人体や金属のタッチを高/低電圧レベルで検出できます。布や紙で絶縁されていてもタッチを感知できますが、絶縁層が厚くなると感度は低下します。
+Deze kleine sensor kan aanraking van het lichaam en metaal detecteren en geeft als feedback een hoog/laag spanningsniveau. Zelfs wanneer geïsoleerd door kleding of papier kan hij de aanraking nog steeds voelen. Maar de gevoeligheid neemt af naarmate de isolatielaag dikker wordt.
 
-より良い体験を提供するために、これらのセンサーモジュールはさらに改良されます。
+We zullen deze sensormodules verder verbeteren om je een betere ervaring te bieden.
 
-## 仕様
+## Specificaties
 
-- 供給電圧: 3.3V〜5V
+- Voedingsspanning: 3.3V tot 5V
 
-- インターフェース: デジタル
+- Interface: Digitaal
 
-- サイズ: 30*20mm
+- Grootte: 30*20mm
 
-- 重量: 3g
+- Gewicht: 3g
 
-## 接続図
+## Aansluitschema
 
-接続する前に、以下の部品を用意してください:
+Bereid eerst de volgende onderdelen voor voordat je gaat aansluiten:
 
-- V4.0ボード*1
+- V4.0-bord*1
 
-- 静電容量式タッチセンサー*1
+- Capacitieve aanraaksensor*1
 
-- USBケーブル*1
+- USB-kabel*1
 
-- ジャンパー線*3
+- Jumperdraad*3
 
-モジュールのSピンをV4.0ボードのDigital 2に接続し、負極ピンをGND、正極ピンを5Vに接続します。
+Verbind de S-pin van de module met Digital 2 van het V4.0-board, verbind de negatieve pin met de GND-poort en de positieve pin met de 5V-poort.
 
-![接続図イラスト](../media/18193a53377b60f43fb583c29337f3aa.jpeg)
+![Aansluitschema illustratie](../media/18193a53377b60f43fb583c29337f3aa.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak onderstaande code in de Arduino-software.
 
 ```c
 const uint8_t ledPin = 13;  // On-board LED.
@@ -58,10 +58,10 @@ void loop() {
 }
 ```
 
-## 実行結果
+## Voorbeeldresultaat
 
-配線と電源を接続し、コードをアップロードしたら、指でセンサーに触れてください。センサー上のD2 LEDとV4.0ボードのD13インジケータの両方が点灯します。触れていないときは両方とも消灯します。
+Na het aansluiten en inschakelen, en nadat je de code hebt geüpload, raak je de sensor met je vinger aan; zowel de D2-led op de sensor als de D13-indicator op het V4.0-board gaan branden. Anders zijn die twee indicatoren uit.
 
-![動作例の図](../media/31a751feed0f21236458b93eed14af9f.png)
+![Voorbeeldresultaat illustratie](../media/31a751feed0f21236458b93eed14af9f.png)
 
 ---

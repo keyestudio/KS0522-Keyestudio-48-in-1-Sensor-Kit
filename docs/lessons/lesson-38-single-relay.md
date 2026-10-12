@@ -1,61 +1,61 @@
-# レッスン38: 単一リレー
+# Les 38: Enkele relais
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328Pボード
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P bord
 
-![プロジェクト38: 単一リレーの図](../media/e0b4485cfd4ccebd974d81f19239dde3.png)
+![Project 38: Enkele relais illustratie](../media/e0b4485cfd4ccebd974d81f19239dde3.png)
 
-## はじめに
+## Introductie
 
-この単一リレーモジュールはインタラクティブなプロジェクトで使用できます。このモジュールは SONGLE の高品質な5Vリレーを使用しています。照明や電気機器などの制御にも使用できます。
+Deze enkele relaismodule kan worden gebruikt in interactieve projecten. Deze module gebruikt een SONGLE 5v relais van hoge kwaliteit. Hij kan ook worden gebruikt om verlichting, elektrische en andere apparaten te schakelen.
 
-モジュール設計によりArduinoボードで簡単に使用できます。デジタルI/Oポートを通じて制御でき、電磁弁、ランプ、モーターなどの高電流または高電圧デバイスの制御に適しています。
+Het modulaire ontwerp maakt het eenvoudig te gebruiken met een Arduino-bord. Het kan worden aangestuurd via een digitale IO-poort, zoals elektromagnetische kleppen, lampen, motoren en andere hoge stroom- of hoge spanningsapparaten.
 
-## 仕様
+## Specificatie
 
-- タイプ: デジタル
+- Type: Digitaal
 
-- 定格電流: 10A (NO) 5A (NC)
+- Nominale stroom: 10A (NO) 5A (NC)
 
-- 最大切替電圧: 150VAC 24VDC
+- Maximale schakelspanning: 150VAC 24VDC
 
-- デジタルインターフェース
+- Digitale interface
 
-- 制御信号: TTLレベル
+- Controlesignaal: TTL-niveau
 
-- 定格負荷: 8A 150VAC (NO), 10A 24VDC (NO), 5A 250VAC (NO/NC), 5A 24VDC (NO/NC)
+- Nominale belasting: 8A 150VAC (NO), 10A 24VDC (NO), 5A 250VAC (NO/NC), 5A 24VDC (NO/NC)
 
-- 最大切替容量: AC1200VA DC240W (NO), AC625VA DC120W (NC)
+- Maximale schakelvermogen: AC1200VA DC240W (NO), AC625VA DC120W (NC)
 
-- 接点動作時間: 10ms
+- Contactwerktijd: 10ms
 
-## 接続図
+## Aansluitschema
 
-まず接続の前に次の部品を用意してください。
+Bereid eerst de volgende onderdelen voor voordat je gaat aansluiten.
 
-- V4.0 ボード\*1
+- V4.0 Bord\*1
 
-- リレーモジュール\*1
+- Relaismodule\*1
 
-- LEDモジュール \*1
+- LED-module \*1
 
-- ブレッドボード \*1
+- Steekbord \*1
 
-- USBケーブル\*1
+- USB-kabel\*1
 
-- ジャンパーワイヤー\*9
+- Dupont-kabel\*9
 
-ここでは単一のリレーモジュールでLEDモジュールのON/OFFを制御します。
+Hier gebruiken we de enkele relaismodule om een LED-module aan of uit te schakelen.
 
-リレーモジュールでは、SignalピンをV4.0ボードのデジタルポート8に接続し、次にその正極ピンをブレッドボードのアノード列に接続してその列からV4.0ボードの5Vポートへリードします。負極ピンはブレッドボードのカソード列に接続し、その列からV4.0ボードのGNDポートへリードします。
+Voor de relaismodule, sluit de Signaalpin aan op Digitale poort 8 van het V4.0-bord, verbind vervolgens de positieve pin met de anode-rij van het steekbord, leid die rij naar de 5V-poort van het V4.0-bord. Verbind de negatieve pin met de kathode-rij van het steekbord, leid die rij naar de GND-poort van het V4.0-bord.
 
-LEDモジュールは、そのSignalピンをリレーモジュールの片方の端子ブロックに接続し、リレーのもう一方の端子ブロックをV4.0ボードのデジタルポート13に接続します。正極ピンをアノード列に、負極ピンをカソード列に接続します。
+Voor de LED-module, sluit de Signaalpin aan op één klemblok van de relaismodule, een ander klemblok van het relais is verbonden met Digitale poort 13 van het V4.0-bord. Verbind de positieve pin met de anode-rij en de negatieve pin met de kathode-rij van het steekbord.
 
-![接続図のイラスト](../media/21cf9b1d5f0843230ee516a0a8be77e1.jpeg)
+![Aansluitschema illustratie](../media/21cf9b1d5f0843230ee516a0a8be77e1.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 ///////////////////////////////////////////////////////////////
@@ -76,14 +76,14 @@ void loop()
 ///////////////////////////////////////////////////////////////
 ```
 
-## 実行例
+## Voorbeeldresultaat
 
-![実行例のイラスト](../media/c751be64bd8acd8c6114598b89586cfa.png)
+![Voorbeeldresultaat illustratie](../media/c751be64bd8acd8c6114598b89586cfa.png)
 
-このリレーモジュールはHIGHレベルで動作します。
+Deze relaismodule is actief bij HIGH-niveau.
 
-配線を正しく行い電源を入れ、上記のコードをボードにアップロードすると、リレーは2秒間オン（ON接点が接続され、NC接点が切断される）になり、その後2秒間オフ（NC接点が閉じ、ON接点が切断される）になり、これを繰り返します。
+Sluit alles goed aan, zet de voeding aan, upload dan de bovenstaande code naar het bord; je zult zien dat het relais twee seconden ingeschakeld is（ON verbonden, NC losgekoppeld）, daarna twee seconden uitgeschakeld is（NC gesloten,ON losgekoppeld）, herhaald en cyclisch.
 
-リレーがオンのとき外部LEDは点灯し、リレーがオフのとき外部LEDは消灯します。
+Wanneer het relais is ingeschakeld, is de externe LED aan. Als het relais is uitgeschakeld, is de externe LED uit.
 
 ---

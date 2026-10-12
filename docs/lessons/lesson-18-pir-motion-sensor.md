@@ -1,65 +1,65 @@
-# レッスン18：PIRモーションセンサー
+# Les 18: PIR-bewegingssensor
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328Pボード
+> **Set:** Keyestudio 48-in-1 Sensor Kit  
+> **Bord:** Keyestudio V4.0 / Arduino Uno-compatibel ATmega328P bord
 
-![プロジェクト18：PIRモーションセンサーのイラスト](../media/ce608db25742f19fdf6eceda756a59d9.png)
+![Project 18: PIR-bewegingssensor illustratie](../media/ce608db25742f19fdf6eceda756a59d9.png)
 
-## 説明
+## Beschrijving
 
-パイロ（熱）電気式赤外線モーションセンサーは、人や動物の動きによる赤外線を検出し、スイッチング信号を出力します。
+Pyro-elektrische infrarood bewegingssensor kan infraroodsignalen detecteren van een bewegend persoon of dier, en geeft schakelsignalen uit.
 
-人体の動きを検出するさまざまな用途に応用できます。
+Hij kan toegepast worden in verschillende situaties om de beweging van het menselijk lichaam te detecteren.
 
-従来のパイロ電気式赤外線センサーは、人体用パイロ電気赤外線検知素子や専用チップ、複雑な周辺回路を必要とするため、大きく、回路が複雑で信頼性が低い場合がありました。
+Conventionele pyro-elektrische infraroodsensoren vereisen een lichaams-pyro-elektrische infrarooddetector, professionele chip en complexe randcircuits, waardoor de grootte veel groter is, met complexe schakelingen en lagere betrouwbaarheid.
 
-そこでArduino向けに特別設計した新しいパイロ電気式赤外線モーションセンサーを発売しました。
+Nu brengen we deze nieuwe pyro-elektrische infrarood bewegingssensor op de markt, speciaal ontworpen voor Arduino.
 
-統合されたデジタル人体用パイロ電気赤外線センサーを採用しており、サイズが小さく、信頼性が高く、消費電力が低く、周辺回路も簡素です。
+Hij gebruikt een geïntegreerde digitale lichaams-pyro-elektrische infraroodsensor, met kleinere afmetingen, hogere betrouwbaarheid, lager stroomverbruik en eenvoudigere randcircuits.
 
-## 仕様
+## Specificatie
 
-- 入力電圧：3.3 \~ 5V、最大 6V
+- Ingangsspanning: 3.3 \~ 5V, maximum 6V
 
-- 動作電流：15uA
+- Werkstroom: 15uA
 
-- 動作温度：-20 \~ 85 ℃
+- Werktemperatuur: -20 \~ 85 ℃
 
-- 出力電圧：高 3V、低 0V
+- Uitgangsspanning: Hoog 3V, Laag 0V
 
-- 出力遅延時間（Highレベル）：約 2.3〜3 秒
+- Uitgangsvertraging (Hoog niveau): Ongeveer 2.3 tot 3 seconden
 
-- 検出角度：100 °
+- Detectiehoek: 100 °
 
-- 検出距離：7メートル
+- Detectieafstand: 7 meter
 
-- 出力表示LED（出力が HIGH のとき点灯）
+- Uitgangs-LED (als uitgang HIGH is, brandt deze)
 
-- ピンの制限電流：100mA
+- Limietstroom voor pin: 100mA
 
-- サイズ：30*20mm
+- Formaat: 30*20mm
 
-- 重量：4g
+- Gewicht: 4g
 
-## 接続図
+## Aansluitschema
 
-接続する前に、次の部品を準備してください：
+Bereid eerst de volgende onderdelen voor voordat je gaat aansluiten:
 
-- V4.0 ボード*1
+- V4.0-bord*1
 
-- PIRモーションセンサー*1
+- PIR bewegingssensor*1
 
-- USBケーブル*1
+- USB-kabel*1
 
-- ジャンパーワイヤ*3
+- Jumperkabel*3
 
-モジュールの S ピンを V4.0 ボードの Digital 3 に接続し、負（-）ピンを GND ポートに、正（+）ピンを 5V ポートに接続します。
+Verbind de S-pin van de module met Digital 3 van het V4.0-bord, verbind de negatieve pin met de GND-poort, de positieve pin met de 5V-poort.
 
-![接続図のイラスト](../media/01970d510c03a8c7aa3ef0c13ea70cff.jpeg)
+![Aansluitschema illustratie](../media/01970d510c03a8c7aa3ef0c13ea70cff.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードを Arduino ソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak de onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -83,14 +83,14 @@ void loop()
 ////////////////////////////////////////////////////////////////////
 ```
 
-## 実行結果
+## Voorbeeldresultaat
 
-配線と電源を接続し、コードを正常にアップロードすると、センサーが近くで人の動きを検出した場合、V4.0 ボード上の D13 インジケーターが点灯し、Arduino ソフトウェアのシリアルモニタに「誰かがこのエリアにいます！」と表示されます。
+Na het aansluiten en inschakelen en het succesvol uploaden van de code: als de sensor iemand in de buurt detecteert, zal de D13-indicator op het V4.0-bord oplichten en wordt "Iemand is in dit gebied!" weergegeven in de seriële monitor van de Arduino-software.
 
-動きを検出しない場合、V4.0 ボード上の D13 インジケーターは消灯し、シリアルモニタには「誰もいません！」と表示されます。
+Als er geen beweging wordt gedetecteerd, blijft de D13-indicator op het V4.0-bord uit en wordt "Niemand!" weergegeven in de seriële monitor.
 
-![実行結果のイラスト](../media/e25d28654311fa7820a1886a285353e5.png)
+![Voorbeeldresultaat illustratie](../media/e25d28654311fa7820a1886a285353e5.png)
 
-![実行結果のイラスト](../media/9b6209c8ce5b4be73f8378d21b639d28.jpeg)
+![Voorbeeldresultaat illustratie](../media/9b6209c8ce5b4be73f8378d21b639d28.jpeg)
 
 ---

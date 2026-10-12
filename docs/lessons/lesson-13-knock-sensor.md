@@ -1,43 +1,43 @@
-# レッスン13：ノックセンサー
+# Les 13: Klopsensor
 
-> **キット:** Keyestudio 48-in-1 センサーキット  
-> **ボード:** Keyestudio V4.0 / Arduino Uno互換 ATmega328P ボード
+> **Kit:** Keyestudio 48-in-1 Sensor Kit  
+> **Board:** Keyestudio V4.0 / Arduino Uno-compatibele ATmega328P board
 
-![プロジェクト13：ノックセンサーのイラスト](../media/cef729e5b57059bc14518b0e2fdd2817.png)
+![Project 13: Klopsensor illustratie](../media/cef729e5b57059bc14518b0e2fdd2817.png)
 
-## 説明
+## Beschrijving
 
-このモジュールはノックセンサーです。叩くと一時的な信号を送ります。
+Deze module is een klopsensor. Wanneer je erop klopt, kan hij een momentair signaal afgeven.
 
-Arduinoと組み合わせて、電子ドラムなどの面白い実験を行うことができます。
+Je kunt het combineren met een Arduino voor interessante experimenten, bijvoorbeeld een elektronische drum.
 
-## 仕様
+## Specificaties
 
-- 動作電圧: 5V
+- Werkspanning: 5V
 
-- サイズ: 30\*20mm
+- Afmeting: 30\*20mm
 
-- 重量: 3g
+- Gewicht: 3g
 
-## 接続図
+## Aansluitschema
 
-まず、接続する前に以下の部品を用意してください:
+Bereid eerst de volgende onderdelen voor voordat je aansluit:
 
-- V4.0 ボード\*1
+- V4.0 Board\*1
 
-- ノックセンサー \*1
+- Klopsensor \*1
 
-- USBケーブル\*1
+- USB-kabel\*1
 
-- ジャンパー線\*3
+- Jumperdraad\*3
 
-モジュールのSピンをV4.0ボードのDigital 3に接続し、負極ピンをGNDポート、正極ピンを5Vポートに接続します。
+Verbind de S pin van de module met Digital 3 van het V4.0 board, verbind de negatieve pin met de GND-poort en de positieve pin met de 5V-poort.
 
-![接続図のイラスト](../media/1b9c27f145275e7a38d06763114f1847.jpeg)
+![Aansluitschema illustratie](../media/1b9c27f145275e7a38d06763114f1847.jpeg)
 
-## サンプルコード
+## Voorbeeldcode
 
-以下のコードをArduinoソフトウェアにコピー＆ペーストしてください。
+Kopieer en plak onderstaande code in de Arduino-software.
 
 ```c
 ////////////////////////////////////////////////////////////////////
@@ -64,10 +64,10 @@ digitalWrite(Led,HIGH);
 ////////////////////////////////////////////////////////////////////
 ```
 
-![サンプルコードのイラスト](../media/c3fc14de7267b517a739268ed5b88674.png)
+![Voorbeeldcode illustratie](../media/c3fc14de7267b517a739268ed5b88674.png)
 
-## 実行結果
+## Voorbeeldresultaat
 
-上記の配線と電源供給が完了し、コードを正しくアップロードしたら、センサーを叩くとV4.0ボード上のD13 LEDとセンサー上のD1 LEDの両方が点灯します。
+Als de bedrading zoals hierboven is gemaakt en de voeding is aangesloten en je hebt de code succesvol geüpload, en je klopt op de sensor, zie je dat zowel de D13 led op het V4.0 board als de D1 led op de sensor aangaan.
 
 ---
